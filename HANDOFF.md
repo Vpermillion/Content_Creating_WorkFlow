@@ -41,3 +41,11 @@ For real/private jobs, restore your private application backup instead; see `doc
 ## Persistence and configuration record
 
 See the final checkpoint section below for verified remote branch/configuration outcomes. Never infer publication, fresh-task restoration or external connection status merely from a saved draft or local server.
+
+## Verified checkpoint
+
+- Source and safe demonstration artifacts were pushed successfully to `Vpermillion/Content_Creating_WorkFlow`, branch `codex/portable-workspace`. Initial implementation commit: `b0550fc`. Later handoff commits may advance that branch; use `git rev-parse HEAD` and the remote branch for the exact revision. No existing default branch was overwritten.
+- Environment draft persistence was confirmed for `install_script`, `start_skill`, and research network domains `science.nasa.gov` / `www.nigms.nih.gov`. Draft saving did not apply or publish these changes. Review/save environment settings and publish an environment snapshot through the product when ready; no public video posting is authorized.
+- `sh scripts/install.sh` and repeat n8n credential/workflow import completed successfully. Both service health requests returned HTTP 200 after container refresh. All three pilot resumes reused narration.
+- Safe demo restore and private backup restore both succeeded into separate fresh `/tmp` directories. This validates restoration in this machine, not a genuinely independent host or fresh cloud task.
+- No Kubernetes/cloud deployment, outside account creation, provider purchase, social posting or external private-data sync occurred.

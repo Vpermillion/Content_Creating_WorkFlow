@@ -43,4 +43,4 @@ Docker initially exposed source ownership incompatible with its non-root worker;
 
 ## Persistence
 
-Source, safe sample artifacts and the handoff are in this repository. Remote Git persistence and saved environment configuration are recorded in `HANDOFF.md` after verification. Local private backup: `backups/initial-private-state.tgz` (ignored; not remotely synced). Real/private deployments need user-owned external backup storage and separate secure n8n volume/key backup.
+Source, safe sample artifacts and the handoff are in this repository. Remote Git push to `codex/portable-workspace` succeeded. Saved `install_script`, `start_skill` and research-domain draft updates were confirmed; they are not applied/published configuration. Details are in `HANDOFF.md`. Local private backup: `backups/initial-private-state.tgz` (ignored; not remotely synced). Real/private deployments need user-owned external backup storage and separate secure n8n volume/key backup.
