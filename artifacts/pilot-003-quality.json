@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "pilot-003",
+  "automated_pass": true,
+  "checks": {
+    "resolution": true,
+    "aspect_9_16": true,
+    "codec_h264_aac": true,
+    "pixel_format": true,
+    "audio_present": true,
+    "duration_matches_speech": true,
+    "provisional_length_range": true,
+    "sentence_caption_coverage": true,
+    "peak_below_zero": true,
+    "all_scene_assets_exist": true
+  },
+  "duration_seconds": 33.605,
+  "peak_dbfs": -2.1,
+  "output_sha256": "695f126bde7eb7d995acdcedcfc37096aadaa619ce4cf973543a5396e52f140b",
+  "human_review": {
+    "visual": "pending",
+    "audible": "pending",
+    "pronunciation": "pending",
+    "factual": "pending",
+    "platform_safe_areas": "pending; provisional 720x1280 layout"
+  },
+  "publish_ready": false,
+  "limitations": [
+    "Synthetic prototype voice; sentence boundaries only",
+    "Original illustrative diagrams; not documentary footage",
+    "Sources and narration need editorial approval"
+  ]
+}

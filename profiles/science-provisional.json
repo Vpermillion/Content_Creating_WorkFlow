@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "science-provisional",
+  "provisional": true,
+  "topic": "accessible hypothetical science",
+  "audience": "curious general audience",
+  "language": "en",
+  "narrator": {
+    "provider": "ffmpeg-libflite",
+    "voice": "slt",
+    "prototype": true
+  },
+  "tone": "curious, clear, distinguish speculation",
+  "visual_style": "original dark-space vector diagrams",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "min_seconds": 30,
+  "max_seconds": 60,
+  "caption_style": {
+    "sentence_level": true,
+    "safe_margin_bottom_px": 190
+  },
+  "platforms": [
+    "youtube",
+    "tiktok",
+    "instagram",
+    "facebook"
+  ],
+  "publishing_frequency": null,
+  "publishing_enabled": false,
+  "timezone": "Asia/Ulaanbaatar",
+  "content_boundaries": [
+    "No imaginary event presented as actual news",
+    "No unsupported causal certainty",
+    "No publication without review and authorization"
+  ]
+}

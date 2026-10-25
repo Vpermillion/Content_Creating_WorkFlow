@@ -1,0 +1,126 @@
+{
+  "id": "whatifPreparedPilot",
+  "name": "What If - run a prepared pilot (draft only)",
+  "active": false,
+  "nodes": [
+    {
+      "id": "start",
+      "name": "Manual start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "run",
+      "name": "Enqueue pilot-002",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://worker:8090/jobs/pilot-002/run",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "whatifWorkerLocal",
+          "name": "WhatIf worker"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000
+    },
+    {
+      "id": "wait",
+      "name": "Wait five seconds",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "amount": 5,
+        "unit": "seconds"
+      },
+      "webhookId": "whatif-pilot-status"
+    },
+    {
+      "id": "status",
+      "name": "Read job checkpoint",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        0
+      ],
+      "parameters": {
+        "url": "http://worker:8090/jobs/pilot-002",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "whatifWorkerLocal",
+          "name": "WhatIf worker"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Manual start": {
+      "main": [
+        [
+          {
+            "node": "Enqueue pilot-002",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enqueue pilot-002": {
+      "main": [
+        [
+          {
+            "node": "Wait five seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait five seconds": {
+      "main": [
+        [
+          {
+            "node": "Read job checkpoint",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Ulaanbaatar"
+  },
+  "pinData": {},
+  "versionId": "31765151-1880-4e4b-a0c8-d377a865e65c"
+}

@@ -1,0 +1,42 @@
+name: whatif-workspace
+services:
+  worker:
+    build: .
+    environment:
+      WORKSPACE_DIR: /data
+      WORKER_TOKEN: ${WORKER_TOKEN:?Generate a worker token in .env}
+      NO_PROXY: ${NO_PROXY:-},worker,n8n,localhost,127.0.0.1
+      no_proxy: ${no_proxy:-},worker,n8n,localhost,127.0.0.1
+    volumes:
+      - ./data:/data
+    ports:
+      - "127.0.0.1:8090:8090"
+    init: true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8090/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+  n8n:
+    image: n8nio/n8n:2.44.6@sha256:d02752c6ab446ae9db8deec2f9cc887c378f77cdcad31650814df936b7386dfb
+    environment:
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY:?Generate and securely back up this key}
+      GENERIC_TIMEZONE: ${GENERIC_TIMEZONE:-Asia/Ulaanbaatar}
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+      N8N_DIAGNOSTICS_ENABLED: "false"
+      N8N_SECURE_COOKIE: "false" # Loopback development only. Enable HTTPS + secure cookies for production.
+      NO_PROXY: ${NO_PROXY:-},worker,n8n,localhost,127.0.0.1
+      no_proxy: ${no_proxy:-},worker,n8n,localhost,127.0.0.1
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./workflows:/exports:ro
+    ports:
+      - "127.0.0.1:5678:5678"
+    depends_on:
+      worker:
+        condition: service_healthy
+    init: true
+    restart: unless-stopped
+volumes:
+  n8n_data:

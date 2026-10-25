@@ -1,0 +1,16 @@
+test_archive_traversal_rejected (test_workspace.StateTests.test_archive_traversal_rejected) ... ok
+test_backup_restore_and_active_lease_refusal (test_workspace.StateTests.test_backup_restore_and_active_lease_refusal) ... ok
+test_bounded_retries (test_workspace.StateTests.test_bounded_retries) ... ok
+test_immutable_inputs_and_unique_topic_id (test_workspace.StateTests.test_immutable_inputs_and_unique_topic_id) ... ok
+test_kaggle_wrong_run_and_missing_outputs_rejected (test_workspace.StateTests.test_kaggle_wrong_run_and_missing_outputs_rejected) ... ok
+test_lease_exclusion_and_expired_worker_recovery (test_workspace.StateTests.test_lease_exclusion_and_expired_worker_recovery) ... ok
+test_publication_duplicates_uncertainty_and_platform_isolation (test_workspace.StateTests.test_publication_duplicates_uncertainty_and_platform_isolation) ... ok
+test_simultaneous_workers_have_one_winner (test_workspace.StateTests.test_simultaneous_workers_have_one_winner) ... ok
+test_validation_rejects_filter_and_path_control (test_workspace.StateTests.test_validation_rejects_filter_and_path_control) ... ok
+test_worker_authentication_and_functional_status (test_workspace.StateTests.test_worker_authentication_and_functional_status) ... ok
+test_render_failure_resume_preserves_speech_and_detects_corruption (test_workspace.MediaTests.test_render_failure_resume_preserves_speech_and_detects_corruption) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.947s
+
+OK

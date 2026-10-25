@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "pilot-001",
+  "channel_id": "science-provisional",
+  "language": "en",
+  "title": "What if the Moon vanished?",
+  "profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 30,
+    "max_seconds": 60
+  },
+  "platforms": [
+    "youtube",
+    "tiktok",
+    "instagram",
+    "facebook"
+  ],
+  "assumptions": [
+    "Impossible instantaneous removal; ignore energy and momentum consequences of removal",
+    "Qualitative effects; no claim of immediate climate catastrophe"
+  ],
+  "sources": [
+    {
+      "url": "https://science.nasa.gov/moon/facts/",
+      "publisher": "NASA Moon facts",
+      "supports": "Moon influence on Earth, tides and axial stability",
+      "checked_at": null,
+      "access_status": "not_verified_in_this_environment; NASA request received proxy 403 on 2026-10-25"
+    }
+  ],
+  "scenes": [
+    {
+      "visual": "earth-moon",
+      "label": "ONE IMPOSSIBLE CHANGE",
+      "text": "What if the Moon vanished tonight? Imagine it disappears without debris or an explosion."
+    },
+    {
+      "visual": "earth-alone",
+      "label": "THE EARTH KEEPS TURNING",
+      "text": "Earth would keep spinning. Losing the Moon would not suddenly switch off gravity or stop our orbit."
+    },
+    {
+      "visual": "tides",
+      "label": "THE SUN STILL MAKES TIDES",
+      "text": "Ocean tides would change, but they would not disappear. The Sun also pulls on the oceans."
+    },
+    {
+      "visual": "earth-alone",
+      "label": "DARKER NIGHTS",
+      "text": "Nights without moonlight would look darker, changing a familiar cue for many living things."
+    },
+    {
+      "visual": "rotation",
+      "label": "LONG TIMESCALES MATTER",
+      "text": "The Moon helps stabilize our axial tilt. Any long term consequences would need careful modeling."
+    },
+    {
+      "visual": "earth-alone",
+      "label": "CHANGE IS NOT INSTANT CHAOS",
+      "text": "So the first surprise is not instant chaos. It is a missing light, followed by a changed world."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:whatif:output:1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "job_id",
+    "automated_pass",
+    "checks",
+    "output_sha256",
+    "publish_ready",
+    "human_review"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "automated_pass": {
+      "type": "boolean"
+    },
+    "publish_ready": {
+      "type": "boolean"
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    }
+  }
+}

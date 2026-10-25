@@ -1,0 +1,114 @@
+{
+  "checked_date": "2026-10-25",
+  "pilots": [
+    {
+      "schema_version": 1,
+      "job_id": "pilot-001",
+      "automated_pass": true,
+      "checks": {
+        "resolution": true,
+        "aspect_9_16": true,
+        "codec_h264_aac": true,
+        "pixel_format": true,
+        "audio_present": true,
+        "duration_matches_speech": true,
+        "provisional_length_range": true,
+        "sentence_caption_coverage": true,
+        "peak_below_zero": true,
+        "all_scene_assets_exist": true
+      },
+      "duration_seconds": 33.375,
+      "peak_dbfs": -0.7,
+      "output_sha256": "a693946c4e62b8093822ea01c9171ea76d523d273b24e52a862ec64c63f45643",
+      "human_review": {
+        "visual": "pending",
+        "audible": "pending",
+        "pronunciation": "pending",
+        "factual": "pending",
+        "platform_safe_areas": "pending; provisional 720x1280 layout"
+      },
+      "publish_ready": false,
+      "limitations": [
+        "Synthetic prototype voice; sentence boundaries only",
+        "Original illustrative diagrams; not documentary footage",
+        "Sources and narration need editorial approval"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "job_id": "pilot-002",
+      "automated_pass": true,
+      "checks": {
+        "resolution": true,
+        "aspect_9_16": true,
+        "codec_h264_aac": true,
+        "pixel_format": true,
+        "audio_present": true,
+        "duration_matches_speech": true,
+        "provisional_length_range": true,
+        "sentence_caption_coverage": true,
+        "peak_below_zero": true,
+        "all_scene_assets_exist": true
+      },
+      "duration_seconds": 37.667,
+      "peak_dbfs": -1.5,
+      "output_sha256": "c42e832cd2f4ec9e71fe8626681ed729a13abf0941bfad586e183078d92b3524",
+      "human_review": {
+        "visual": "pending",
+        "audible": "pending",
+        "pronunciation": "pending",
+        "factual": "pending",
+        "platform_safe_areas": "pending; provisional 720x1280 layout"
+      },
+      "publish_ready": false,
+      "limitations": [
+        "Synthetic prototype voice; sentence boundaries only",
+        "Original illustrative diagrams; not documentary footage",
+        "Sources and narration need editorial approval"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "job_id": "pilot-003",
+      "automated_pass": true,
+      "checks": {
+        "resolution": true,
+        "aspect_9_16": true,
+        "codec_h264_aac": true,
+        "pixel_format": true,
+        "audio_present": true,
+        "duration_matches_speech": true,
+        "provisional_length_range": true,
+        "sentence_caption_coverage": true,
+        "peak_below_zero": true,
+        "all_scene_assets_exist": true
+      },
+      "duration_seconds": 33.605,
+      "peak_dbfs": -2.1,
+      "output_sha256": "695f126bde7eb7d995acdcedcfc37096aadaa619ce4cf973543a5396e52f140b",
+      "human_review": {
+        "visual": "pending",
+        "audible": "pending",
+        "pronunciation": "pending",
+        "factual": "pending",
+        "platform_safe_areas": "pending; provisional 720x1280 layout"
+      },
+      "publish_ready": false,
+      "limitations": [
+        "Synthetic prototype voice; sentence boundaries only",
+        "Original illustrative diagrams; not documentary footage",
+        "Sources and narration need editorial approval"
+      ]
+    }
+  ],
+  "tests": {
+    "runner": "python -m unittest discover -s tests -v",
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0
+  },
+  "n8n_workflow": "real container execution succeeded; pilot-002 reached quality_review",
+  "publications": "12 local draft records; no real posts, schedules or receipts",
+  "listening_review": "not performed; no audio audition tool available",
+  "source_verification": "blocked by research-site policy; candidate source URLs only"
+}

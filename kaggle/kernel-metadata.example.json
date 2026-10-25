@@ -1,0 +1,13 @@
+{
+  "id": "YOUR_KAGGLE_USERNAME/whatif-finite-tts",
+  "title": "What If finite speech batch",
+  "code_file": "finite-tts.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "YOUR_KAGGLE_USERNAME/whatif-batch"
+  ]
+}

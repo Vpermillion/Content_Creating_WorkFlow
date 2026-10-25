@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "pilot-003",
+  "channel_id": "science-provisional",
+  "language": "en",
+  "title": "What if sunlight switched off?",
+  "profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 30,
+    "max_seconds": 60
+  },
+  "platforms": [
+    "youtube",
+    "tiktok",
+    "instagram",
+    "facebook"
+  ],
+  "assumptions": [
+    "Sun stops electromagnetic radiation but mass and gravity remain",
+    "No physically realistic mechanism implied; no exact cooling timeline"
+  ],
+  "sources": [
+    {
+      "url": "https://science.nasa.gov/sun/facts/",
+      "publisher": "NASA Sun facts",
+      "supports": "Sunlight travel time and solar energy",
+      "checked_at": null,
+      "access_status": "not_verified_in_this_environment; NASA request received proxy 403 on 2026-10-25"
+    }
+  ],
+  "scenes": [
+    {
+      "visual": "sun",
+      "label": "AN IMPOSSIBLE SWITCH",
+      "text": "What if sunlight switched off? Imagine the Sun stays in place, but suddenly stops emitting light."
+    },
+    {
+      "visual": "light-delay",
+      "label": "LIGHT TAKES TIME",
+      "text": "We would not notice immediately. Light already on its way would still travel toward Earth."
+    },
+    {
+      "visual": "light-delay",
+      "label": "ABOUT EIGHT MINUTES",
+      "text": "Sunlight takes about eight minutes to reach us. Only after that delay would the sky change."
+    },
+    {
+      "visual": "orbit",
+      "label": "DARKNESS DOES NOT REMOVE MASS",
+      "text": "In this scenario the Sun still has its mass. Darkness alone would not fling Earth out of its orbit."
+    },
+    {
+      "visual": "freeze",
+      "label": "COOLING TAKES TIME TOO",
+      "text": "Earth would begin losing heat without its usual sunlight. Cooling and ecological effects would unfold over time."
+    },
+    {
+      "visual": "sun",
+      "label": "DEFINE THE QUESTION",
+      "text": "The lesson is to define the question. Turning off the light and removing the Sun are different experiments."
+    }
+  ]
+}

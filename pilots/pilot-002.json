@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "pilot-002",
+  "channel_id": "science-provisional",
+  "language": "en",
+  "title": "What if a day lasted 48 hours?",
+  "profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 30,
+    "max_seconds": 60
+  },
+  "platforms": [
+    "youtube",
+    "tiktok",
+    "instagram",
+    "facebook"
+  ],
+  "assumptions": [
+    "Gradual rotation change, no sudden stopping disaster",
+    "Orbit and atmosphere held broadly comparable; qualitative speculation only"
+  ],
+  "sources": [
+    {
+      "url": "https://science.nasa.gov/earth/facts/",
+      "publisher": "NASA Earth facts",
+      "supports": "Earth rotation and orbit",
+      "checked_at": null,
+      "access_status": "not_verified_in_this_environment; NASA request received proxy 403 on 2026-10-25"
+    },
+    {
+      "url": "https://www.nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx",
+      "publisher": "NIH circadian rhythms",
+      "supports": "Daily biological rhythms",
+      "checked_at": null,
+      "access_status": "not_verified_in_this_environment; NASA request received proxy 403 on 2026-10-25"
+    }
+  ],
+  "scenes": [
+    {
+      "visual": "rotation",
+      "label": "SLOW THE SPIN",
+      "text": "What if a day lasted forty eight hours? Imagine Earth gradually spinning more slowly, not stopping suddenly."
+    },
+    {
+      "visual": "day-night",
+      "label": "SAME YEAR, LONGER DAY",
+      "text": "Our trip around the Sun stays the same. The change in this thought experiment is the daily rotation."
+    },
+    {
+      "visual": "day-night",
+      "label": "MORE TIME IN SUNLIGHT",
+      "text": "A place could spend longer under sunlight, then longer in darkness, reshaping daily heating and cooling."
+    },
+    {
+      "visual": "rotation",
+      "label": "WEATHER GETS COMPLICATED",
+      "text": "Rotation also matters for weather. Predicting the new winds would require a model, not just a guess."
+    },
+    {
+      "visual": "day-night",
+      "label": "BIOLOGY HAS A CLOCK",
+      "text": "Living things follow biological rhythms. A longer light and dark cycle would challenge those familiar schedules."
+    },
+    {
+      "visual": "rotation",
+      "label": "DO NOT DOUBLE EVERYTHING",
+      "text": "A longer day would not simply double everything. The interesting question is how the whole system adapts."
+    }
+  ]
+}
