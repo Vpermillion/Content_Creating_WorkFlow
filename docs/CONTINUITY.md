@@ -64,3 +64,11 @@ References checked 2026-10-26:
 2. Inspect for an existing channel. If none, resolve name/handle and use supported signed-in creation, with manual identity/verification handoff where required.
 3. Save verified metadata and status in the registry; proceed sequentially for the remaining account labels.
 4. Restore/verify private job state and complete the existing pilots' factual and audiovisual review. Publication remains a separate authorization.
+
+## Private repository and authentication checkpoint — 2026-10-26
+
+The owner made the repository private and requested account/channel preparation with minimal manual work. Authenticated GitHub metadata confirms private=true and continued repository read/write access in this session. This does not grant Google-account access.
+
+YouTube connection lookup returned no active connection; the Alpha connection remained initializing. A direct cloud-browser visit to YouTube account settings redirected to Google sign-in. The browser requires the secure browserAuth flow for sign-in values; credentials previously pasted in chat cannot be entered through lower-level tools. The secure sign-in request was declined, so authentication was stopped without retry or a new handoff. No Google account was signed in, no channel was created and no video was published.
+
+Owner preference: the assistant should perform channel preparation and routine supported operations after authentication, with user involvement limited to required sign-in/consent/verification. Each intended account still needs independently authorized access. Do not claim unrestricted account control or automatic connection transfer to a replacement GPT. Next dependent step is a user-requested supported authentication attempt; respect the declined flow until the owner elects to resume.
