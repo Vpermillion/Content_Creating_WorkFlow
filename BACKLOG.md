@@ -22,3 +22,11 @@
 - Follow `docs/CONTINUITY.md`; persist checkpoints after meaningful steps so an unexpected session loss is recoverable.
 - Complete supported YouTube consent for the first intended account; verify active status and actual channel identity. Resolve initial channel creation and name/handle if needed, then record verified metadata in `channels/youtube-registry.json` and repeat sequentially. Setup is authorized; public posting remains a separate scope.
 - Verify access from a replacement environment if the owner later makes the repository private. Do not change visibility based only on the privacy question.
+
+## Alpha authentication result — 2026-10-26 (Asia/Ulaanbaatar)
+
+The owner asked to proceed with secure account sign-in. Google accepted the email step and advanced after secure password submission to identity verification. The owner selected the offered alternative twice; Google opened account recovery and accepted a last-password submission through browserAuth. Google then displayed 'Couldn’t sign you in', explaining that there was insufficient information to verify ownership and suggesting a previously used device/network. This is an identity-verification rejection, not evidence of an incorrect password or a bot-detection block. No successful YouTube sign-in was observed.
+
+Stop this browser login attempt; do not loop, bypass verification or reset credentials. No channel was created, no channel metadata was verified, no security setting was changed and no video was published. The other six intended accounts remain unverified and were not attempted in this turn. No authentication secrets or session URLs are recorded here.
+
+Next: the owner must resolve the account's Google verification requirement through a supported method. A supported YouTube OAuth connection, completed by the owner, can be checked independently; do not assume it authenticates the cloud browser. Reinspect actual connection status and provider-authorized scopes before claiming access. Repository/handoff remains private on codex/operator-handoff, PR #1; no pipeline code or media tests changed in this authentication-only turn.
