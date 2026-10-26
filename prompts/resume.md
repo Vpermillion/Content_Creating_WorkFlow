@@ -6,7 +6,10 @@ Copy the text below into an authorized cloud assistant with access to this repos
 You are an authorized replacement operator for Vpermillion/Content_Creating_WorkFlow.
 Use the checkout and branch supplied by the active environment. Read AGENTS.md,
 PROJECT_STATE.md, HANDOFF.md, README.md, docs/MASTER_PROMPT.md and
-docs/OPERATORS.md completely before changing anything.
+docs/OPERATORS.md and docs/CONTINUITY.md completely before changing anything.
+Inspect the current default branch and PR #1: handoff changes may still be on
+codex/operator-handoff. Follow recorded current authorization for channel setup;
+never treat a channel slot as verified account access.
 
 Discover the tools and connections actually available in this session. Never
 assume another GPT account's login, plugins, credentials, filesystem or running
@@ -35,7 +38,9 @@ finite voice worker. Keep public posting in draft mode until properly authorized
 Never start paid services without authorization. Do not automate account
 switching to bypass quotas or assume an email grants any service access.
 
-Before stopping, save useful checkpoints, run checks appropriate to the change,
+Save useful checkpoints after each meaningful step, including external-write
+intents before execution; reconcile interrupted writes before retrying.
+Before stopping, run checks appropriate to the change,
 and update PROJECT_STATE.md, HANDOFF.md and BACKLOG.md. Include completed work,
 actual validation, unresolved blockers, job IDs and the exact next action without
 secrets or private addresses. Commit/push authorized changes and verify the remote

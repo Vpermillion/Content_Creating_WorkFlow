@@ -4,8 +4,9 @@ Start by reading `AGENTS.md` and `PROJECT_STATE.md`. Use the existing checkout s
 
 ## Resume now
 
+First read [continuity and channel setup](docs/CONTINUITY.md). Inspect PR #1: these notes are on `codex/operator-handoff`, while the default branch was `codex/portable-workspace` at this checkpoint. Restore or locate authoritative private state before running status. After that, from the active repository root:
+
 ```sh
-# Run from the active repository root
 python -m whatif status
 docker compose ps
 ```
@@ -57,3 +58,11 @@ Seven interchangeable aliases and suggested focuses are documented in `docs/OPER
 This documentation update inspected the remote source and saved specification. It did not restore private job state, start containers, rerun media tests or verify prior runtime health. Runtime reports above describe the earlier implementation session. Before status checks on a new host, locate or restore the authoritative private data; avoid silently treating an empty new database as restored state.
 
 Next: use `prompts/alpha.md` or `prompts/resume.md` in an authorized environment, restore the correct state, inspect status, then verify the pilot claims and perform the pending audiovisual review. Real Kaggle, storage and publishing connections still require verification.
+
+## Continuity and channel setup checkpoint — 2026-10-26
+
+The owner requires every replacement GPT to understand and resume from durable records. Checkpoint after meaningful steps and record external write intents before execution; reconcile unfinished intents after interruption. See `docs/CONTINUITY.md`.
+
+The owner authorized supplied accounts for YouTube channel setup. Seven alias-only slots are in `channels/youtube-registry.json`; all actual channel identities remain unknown. Hosted Composio reported no active YouTube connection; the first consent flow was initiated and is pending. No channel was created. Next: finish consent, list active connections, verify actual account/channel identity, then resolve supported initial creation if needed. Do not store auth links or secrets in Git. Public video posting remains separately unauthorized.
+
+Repository privacy was discussed only; visibility is unchanged. This is a documentation update, not a runtime recovery or channel-creation test.

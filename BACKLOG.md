@@ -16,3 +16,9 @@
 
 - Use the new prompts in a separately authorized GPT environment; restore the correct private state and verify existing pilot checkpoints. A real cross-account/host handoff remains untested.
 - Configure secure private output/state backups and supported service connections before claiming unattended continuity. The operator registry is not a credential manager or account-switching service.
+
+## Latest owner instruction: continuity and YouTube setup
+
+- Follow `docs/CONTINUITY.md`; persist checkpoints after meaningful steps so an unexpected session loss is recoverable.
+- Complete supported YouTube consent for the first intended account; verify active status and actual channel identity. Resolve initial channel creation and name/handle if needed, then record verified metadata in `channels/youtube-registry.json` and repeat sequentially. Setup is authorized; public posting remains a separate scope.
+- Verify access from a replacement environment if the owner later makes the repository private. Do not change visibility based only on the privacy question.

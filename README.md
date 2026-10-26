@@ -67,3 +67,5 @@ The repository stores the software. A machine runs it. Development sessions stop
 ## Switch GPT accounts
 
 Start with [the operator guide](docs/OPERATORS.md). Seven public aliases have copy-ready prompts; each can resume the whole workspace. They are separate from video channel profiles. [The universal prompt](prompts/resume.md) works for any authorized replacement assistant. Reconnect repository access and restore private state on a new host; profiles do not log in or transfer personal connections automatically.
+
+See [continuity and channel setup](docs/CONTINUITY.md) for the latest owner instructions, unmerged branch checkpoint and private-repository considerations. [YouTube setup registry](channels/youtube-registry.json) records seven intended account slots; no live channel or connection is implied.

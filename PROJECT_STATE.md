@@ -52,3 +52,12 @@ Source, safe sample artifacts and the handoff are in this repository. Remote Git
 - Updated README/operator instructions and made the handoff independent of one absolute checkout path.
 - Scope is documentation/configuration only. JSON, prompt coverage, local link targets and candidate content were checked. The prior media/container/test results above were not rerun or reverified in this session.
 - Current GitHub repository access was verified. That does not establish access from the other seven GPT accounts or a live production deployment. Publishing remains unconfigured and unauthorized.
+
+## Continuity and YouTube setup — 2026-10-26
+
+- Owner requires durable takeover without prior chat. Added an explicit per-step checkpoint/external-intent protocol and branch/PR discovery instructions in `docs/CONTINUITY.md`.
+- Owner authorized the supplied accounts for YouTube channel setup; actual identity, name/handle, consent and supported setup remain prerequisites. Publication is a separate authorization.
+- Added seven intended channel slots in `channels/youtube-registry.json`, with null IDs/handles and unverified status. No emails, passwords, tokens or short-lived connection URLs were saved in Git.
+- This session discovered callable hosted Composio tools; earlier capability reports above describe another session. YouTube had no active connection. An initial supported consent request was initiated, awaiting user completion; no channel was created or inspected through an authenticated YouTube call.
+- Repository was public, with no Pages site. No visibility change was requested or made, and account billing plan was not inspected. Private-repository tradeoffs are documented.
+- Scope: documentation/configuration only. No media/worker/container tests rerun, no private state restored, no social post published. A genuinely independent takeover still needs verification.

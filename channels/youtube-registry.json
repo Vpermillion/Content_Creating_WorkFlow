@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "purpose": "Document intended YouTube channel setup; not credentials, live connections or executable publishing configuration.",
+  "checked_date": "2026-10-26",
+  "setup_authorization": "Owner authorized supplied accounts for channel setup; ownership and provider consent remain to be verified.",
+  "publishing_authorized": false,
+  "channels": [
+    {
+      "account_number": 1,
+      "owner_alias": "alpha",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null
+    },
+    {
+      "account_number": 2,
+      "owner_alias": "beta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null
+    },
+    {
+      "account_number": 3,
+      "owner_alias": "delta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null
+    },
+    {
+      "account_number": 4,
+      "owner_alias": "epsilon",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null
+    },
+    {
+      "account_number": 5,
+      "owner_alias": "zeta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null
+    },
+    {
+      "account_number": 6,
+      "owner_alias": "eta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null
+    },
+    {
+      "account_number": 7,
+      "owner_alias": "theta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null
+    }
+  ]
+}
