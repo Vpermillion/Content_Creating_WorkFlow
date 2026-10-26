@@ -13,8 +13,10 @@
       "url": null,
       "display_name": null,
       "topic": null,
-      "setup_status": "awaiting_verified_account_access",
-      "last_verified_at": null
+      "setup_status": "blocked_google_identity_verification",
+      "last_verified_at": null,
+      "last_setup_attempt_date": "2026-10-26",
+      "setup_blocker": "Google could not verify ownership in the cloud browser; no successful sign-in or channel creation."
     },
     {
       "account_number": 2,
