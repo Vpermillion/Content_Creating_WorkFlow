@@ -66,3 +66,11 @@ The owner requires every replacement GPT to understand and resume from durable r
 The owner authorized supplied accounts for YouTube channel setup. Seven alias-only slots are in `channels/youtube-registry.json`; all actual channel identities remain unknown. Hosted Composio reported no active YouTube connection; the first consent flow was initiated and is pending. No channel was created. Next: finish consent, list active connections, verify actual account/channel identity, then resolve supported initial creation if needed. Do not store auth links or secrets in Git. Public video posting remains separately unauthorized.
 
 Repository privacy was discussed only; visibility is unchanged. This is a documentation update, not a runtime recovery or channel-creation test.
+
+## Private repository and authentication checkpoint — 2026-10-26
+
+The owner made the repository private and requested account/channel preparation with minimal manual work. Authenticated GitHub metadata confirms private=true and continued repository read/write access in this session. This does not grant Google-account access.
+
+YouTube connection lookup returned no active connection; the Alpha connection remained initializing. A direct cloud-browser visit to YouTube account settings redirected to Google sign-in. The browser requires the secure browserAuth flow for sign-in values; credentials previously pasted in chat cannot be entered through lower-level tools. The secure sign-in request was declined, so authentication was stopped without retry or a new handoff. No Google account was signed in, no channel was created and no video was published.
+
+Owner preference: the assistant should perform channel preparation and routine supported operations after authentication, with user involvement limited to required sign-in/consent/verification. Each intended account still needs independently authorized access. Do not claim unrestricted account control or automatic connection transfer to a replacement GPT. Next dependent step is a user-requested supported authentication attempt; respect the declined flow until the owner elects to resume.
