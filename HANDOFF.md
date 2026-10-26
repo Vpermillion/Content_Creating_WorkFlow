@@ -1,11 +1,11 @@
 # Handoff
 
-Start by reading `AGENTS.md` and `PROJECT_STATE.md`. The authoritative code checkout is `/workspace/Content_Creating_WorkFlow`; use it directly, without a new worktree. The uploaded master prompt is in `docs/MASTER_PROMPT.md`.
+Start by reading `AGENTS.md` and `PROJECT_STATE.md`. Use the existing checkout supplied by the active environment; its absolute path can differ between accounts and hosts. The uploaded master prompt is in `docs/MASTER_PROMPT.md`.
 
 ## Resume now
 
 ```sh
-cd /workspace/Content_Creating_WorkFlow
+# Run from the active repository root
 python -m whatif status
 docker compose ps
 ```
@@ -49,3 +49,11 @@ See the final checkpoint section below for verified remote branch/configuration 
 - `sh scripts/install.sh` and repeat n8n credential/workflow import completed successfully. Both service health requests returned HTTP 200 after container refresh. All three pilot resumes reused narration.
 - Safe demo restore and private backup restore both succeeded into separate fresh `/tmp` directories. This validates restoration in this machine, not a genuinely independent host or fresh cloud task.
 - No Kubernetes/cloud deployment, outside account creation, provider purchase, social posting or external private-data sync occurred.
+
+## Operator prompt checkpoint — 2026-10-26
+
+Seven interchangeable aliases and suggested focuses are documented in `docs/OPERATORS.md`, `operators/registry.json` and `prompts/`. No real email, supplied secret, account login or automatic account rotation is part of this change. Each new assistant needs its own authorized access to the same workspace.
+
+This documentation update inspected the remote source and saved specification. It did not restore private job state, start containers, rerun media tests or verify prior runtime health. Runtime reports above describe the earlier implementation session. Before status checks on a new host, locate or restore the authoritative private data; avoid silently treating an empty new database as restored state.
+
+Next: use `prompts/alpha.md` or `prompts/resume.md` in an authorized environment, restore the correct state, inspect status, then verify the pilot claims and perform the pending audiovisual review. Real Kaggle, storage and publishing connections still require verification.

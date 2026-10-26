@@ -12,3 +12,6 @@ Read `PROJECT_STATE.md`, `HANDOFF.md`, `README.md`, then `docs/MASTER_PROMPT.md`
 - Current connected tools must be rediscovered by every replacement assistant. Subscription access, personal plugin connections, task files and tokens do not transfer automatically between accounts.
 - Run `python -m unittest discover -s tests -v` after behavioral changes. Exercise affected media operations and inspect a rendered frame for visual changes. Record tests and failures accurately.
 - Update `PROJECT_STATE.md`, `HANDOFF.md` and `BACKLOG.md` before ending substantial work. Preserve safe demonstration artifacts and push reviewed source changes to the configured user-owned repository when authorized. Do not claim an unpushed local commit is remotely saved.
+
+- For a replacement operator, read `docs/OPERATORS.md` and the selected `prompts/` file. Seven aliases are interchangeable labels, not authorization or live agents. Do not commit account addresses or secrets. Do not spawn agents merely because profiles exist.
+- Locate or restore authoritative private data before invoking status in a fresh clone; status can initialize an empty store. Do not confuse that with recovery of old state.

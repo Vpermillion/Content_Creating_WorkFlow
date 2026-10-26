@@ -1,8 +1,8 @@
-# Project state — 2026-10-25
+# Project state — 2026-10-26
 
 The full uploaded specification is preserved in `docs/MASTER_PROMPT.md`. This is a working on-demand prototype. It is not a continuous production deployment. Read this file together with `HANDOFF.md` before resuming.
 
-## Verified working
+## Prior implementation validation — 2026-10-25
 
 - Python standard-library worker and application SQLite database, distinct from n8n state.
 - Stable immutable job inputs/content hashes, per-channel topic-title history, worker leases/heartbeats, stale-owner checkpoint protection, explicit failures/backoff, verified checkpoints and intentional downstream rebuilds.
@@ -44,3 +44,11 @@ Docker initially exposed source ownership incompatible with its non-root worker;
 ## Persistence
 
 Source, safe sample artifacts and the handoff are in this repository. Remote Git push to `codex/portable-workspace` succeeded. Saved `install_script`, `start_skill` and research-domain draft updates were confirmed; they are not applied/published configuration. Details are in `HANDOFF.md`. Local private backup: `backups/initial-private-state.tgz` (ignored; not remotely synced). Real/private deployments need user-owned external backup storage and separate secure n8n volume/key backup.
+
+## Operator handoff documentation — 2026-10-26
+
+- Added seven account-number aliases (alpha, beta, delta, epsilon, zeta, eta, theta), interchangeable roles, a universal resume prompt and seven focused copy-ready prompts.
+- Added a public registry and a blank private-mapping example. Real addresses and supplied credentials are excluded. `private/` is ignored; no account connection was attempted.
+- Updated README/operator instructions and made the handoff independent of one absolute checkout path.
+- Scope is documentation/configuration only. JSON, prompt coverage, local link targets and candidate content were checked. The prior media/container/test results above were not rerun or reverified in this session.
+- Current GitHub repository access was verified. That does not establish access from the other seven GPT accounts or a live production deployment. Publishing remains unconfigured and unauthorized.

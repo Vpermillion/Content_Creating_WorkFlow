@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "purpose": "Interchangeable assistant operator labels; not social-channel accounts or authentication configuration.",
+  "authentication": "Each operator must separately obtain authorized workspace access.",
+  "default_mode": "single_active_operator",
+  "profiles": [
+    {
+      "account_number": 1,
+      "id": "alpha",
+      "focus": "Workspace coordination",
+      "prompt": "prompts/alpha.md",
+      "connection_status": "unverified",
+      "can_resume_full_workflow": true
+    },
+    {
+      "account_number": 2,
+      "id": "beta",
+      "focus": "Research and scripts",
+      "prompt": "prompts/beta.md",
+      "connection_status": "unverified",
+      "can_resume_full_workflow": true
+    },
+    {
+      "account_number": 3,
+      "id": "delta",
+      "focus": "Visuals and scene planning",
+      "prompt": "prompts/delta.md",
+      "connection_status": "unverified",
+      "can_resume_full_workflow": true
+    },
+    {
+      "account_number": 4,
+      "id": "epsilon",
+      "focus": "Voice and captions",
+      "prompt": "prompts/epsilon.md",
+      "connection_status": "unverified",
+      "can_resume_full_workflow": true
+    },
+    {
+      "account_number": 5,
+      "id": "zeta",
+      "focus": "Rendering and quality",
+      "prompt": "prompts/zeta.md",
+      "connection_status": "unverified",
+      "can_resume_full_workflow": true
+    },
+    {
+      "account_number": 6,
+      "id": "eta",
+      "focus": "Workflow and reliability",
+      "prompt": "prompts/eta.md",
+      "connection_status": "unverified",
+      "can_resume_full_workflow": true
+    },
+    {
+      "account_number": 7,
+      "id": "theta",
+      "focus": "Publishing drafts and analytics",
+      "prompt": "prompts/theta.md",
+      "connection_status": "unverified",
+      "can_resume_full_workflow": true
+    }
+  ]
+}

@@ -11,3 +11,8 @@
 9. Add actual analytics import, preserving unavailable metrics as null, before using performance feedback for editorial decisions.
 10. Harden and deploy on a chosen persistent host; review image updates, HTTPS/access controls, backup retention and service quotas. Test restored runtime on a genuinely separate host/task before claiming deployment portability is proven.
 11. Scale beyond the provisional brand only after the first channel's production/review/publishing path is reliable.
+
+## Operator portability follow-through
+
+- Use the new prompts in a separately authorized GPT environment; restore the correct private state and verify existing pilot checkpoints. A real cross-account/host handoff remains untested.
+- Configure secure private output/state backups and supported service connections before claiming unattended continuity. The operator registry is not a credential manager or account-switching service.
