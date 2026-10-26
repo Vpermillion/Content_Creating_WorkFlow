@@ -2,6 +2,12 @@
 
 The full uploaded specification is preserved in `docs/MASTER_PROMPT.md`. This is a working on-demand prototype. It is not a continuous production deployment. Read this file together with `HANDOFF.md` before resuming.
 
+## Latest Alpha connection attempt — 2026-10-26
+
+Actual result: **not connected**. On `codex/youtube-oauth`, the optional Google SDK was installed into `/workspace/scratch/youtube-oauth-venv` and all 23 tests passed. The real CLI reports no saved connections and `check alpha-anime` returns `not_connected`. No Desktop client JSON exists at the documented private path; no Alpha token is present. Google OAuth/token/YouTube endpoint probes returned proxy CONNECT 403, and no owner-browser-to-runtime callback route is verified (`callback_unreachable`). A local-only port-8765 listener test passed but does not establish that route.
+
+The required Google domains and `api.github.com` were saved in the environment draft, preserving NASA/NIH entries; the save did not apply or publish policy. No consent, token exchange, project/client creation or Google recovery/login retry was attempted. The registry is unchanged byte-for-byte, with no verified channel ID or binding. See `docs/YOUTUBE-CONNECTION-RESULT.md` and `channels/youtube-connection-checkpoint.json` for exact blockers, checks and continuation. Existing jobs/media/private configuration were preserved; no publishing scope was requested.
+
 
 ## YouTube connection implementation — 2026-10-26
 

@@ -2,6 +2,14 @@
 
 Start by reading `AGENTS.md` and `PROJECT_STATE.md`. Use the existing checkout supplied by the active environment; its absolute path can differ between accounts and hosts. The uploaded master prompt is in `docs/MASTER_PROMPT.md`.
 
+## Latest live setup result — 2026-10-26, Asia/Ulaanbaatar
+
+On `codex/youtube-oauth`, Alpha anime is **not connected**. The SDK is installed in `/workspace/scratch/youtube-oauth-venv`; 23 tests passed. CLI status has zero connections, and a real `check --connection alpha-anime` returns `not_connected`. No valid Desktop client exists at the documented private path. Required Google routes received proxy 403, and the owner's callback route is not established (`callback_unreachable`); a local listener test alone passed. No Google login, consent, token exchange or identity verification was retried. No actual channel ID was obtained; the original registry remains unchanged.
+
+Read `docs/YOUTUBE-CONNECTION-RESULT.md` and the non-secret operation checkpoint `channels/youtube-connection-checkpoint.json`. Next: obtain the user-owned Desktop client privately and choose a callback-capable owner runtime (prefer the owner's familiar Linux/WSL device/browser, or an existing approved SSH host). If continuing here, apply the saved network additions through environment settings and recheck the affected routes. No answer to the runtime/client-status questions had arrived at this checkpoint. Then complete read-only consent, live-check the returned identity and bind the actual channel ID to alpha-1. Do not save placeholder or inferred metadata.
+
+Default branch remains `codex/portable-workspace`; this feature corresponds to PR #2 by Git pull-ref evidence. API-based PR/visibility inspection was blocked, so no fresh open/merge/visibility claim is made. Existing media/private state and `.env` were preserved, and no PR was merged. Safe checkpoint changes are pushed on the requested feature branch; use `git rev-parse HEAD`/the remote branch for the exact final revision. There is no new token/private credential backup because no authorization completed.
+
 
 ## YouTube connection implementation — 2026-10-26
 

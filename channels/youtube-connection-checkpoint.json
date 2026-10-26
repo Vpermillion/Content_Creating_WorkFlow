@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "operation_id": "youtube-alpha-anime-connect-20261026-01",
-  "checked_at": "2026-10-26T20:14:16.404451+08:00",
+  "checked_at": "2026-10-26T20:17:15.425171+08:00",
   "branch": "codex/youtube-oauth",
   "starting_revision": "d0cb5ee09dfcca2aaece3c7303db48c9eeab71a8",
   "connection": "alpha-anime",
@@ -20,7 +20,8 @@
     "status": "callback_unreachable",
     "bind_host": "127.0.0.1",
     "port": 8765,
-    "reason": "No verified owner-browser-to-runtime tunnel or supported interactive same-machine browser route; no sshd process or available forwarding tool."
+    "reason": "No verified owner-browser-to-runtime tunnel or supported interactive same-machine browser route; no sshd process or available forwarding tool.",
+    "local_listener_test": "127.0.0.1:8765 served a local request successfully; this does not test the owner browser route"
   },
   "network": {
     "status": "blocked_by_proxy",
@@ -42,13 +43,30 @@
   "runtime": {
     "venv_path": "/workspace/scratch/youtube-oauth-venv",
     "google_auth_oauthlib": "1.5.0",
-    "google_auth": "2.62.0"
+    "google_auth": "2.62.0",
+    "tests": {
+      "command": "/workspace/scratch/youtube-oauth-venv/bin/python -m unittest discover -s tests -v",
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0
+    },
+    "status_result": {
+      "connections": [],
+      "live_checked": false,
+      "publishing_enabled": false
+    },
+    "check_result": {
+      "status": "blocked",
+      "code": "not_connected",
+      "publishing_enabled": false
+    },
+    "registry_unchanged": true
   },
   "external_write_intents": [
     {
       "target": "environment configuration draft network custom domains",
       "operation_id": "youtube-alpha-network-20261026-01",
-      "status": "prepared",
+      "status": "draft_saved_not_applied",
       "preserve_domains": [
         "science.nasa.gov",
         "www.nigms.nih.gov"
@@ -58,7 +76,15 @@
         "oauth2.googleapis.com",
         "www.googleapis.com",
         "api.github.com"
-      ]
+      ],
+      "requires_publish": true
+    },
+    {
+      "operation_id": "youtube-safe-checkpoint-push-20261026-02",
+      "target": "Vpermillion/Content_Creating_WorkFlow refs/heads/codex/youtube-oauth",
+      "desired_result": "Preserve safe connection result and handoff; no registry identity change, credentials or merge",
+      "status": "prepared",
+      "reconciliation": "Compare git rev-parse HEAD with git ls-remote origin refs/heads/codex/youtube-oauth"
     }
   ],
   "consent_started": false,
@@ -66,5 +92,12 @@
   "token_exchange_performed": false,
   "publishing_enabled": false,
   "next_action": "Configure the user-owned Desktop OAuth client privately and choose a callback-capable owner runtime; apply required network settings before cloud API calls.",
-  "registry_sha256_before": "2f5076bc5e0fd781a64627d4a92dfc3604bce1213e80168e71916c5fa56347c8"
+  "registry_sha256_before": "2f5076bc5e0fd781a64627d4a92dfc3604bce1213e80168e71916c5fa56347c8",
+  "github": {
+    "default_branch": "codex/portable-workspace",
+    "feature_pr": 2,
+    "feature_pr_url": "https://github.com/Vpermillion/Content_Creating_WorkFlow/pull/2",
+    "feature_pr_evidence": "Git pull ref matched current feature HEAD; API visibility/open-merge state could not be read because api.github.com was denied by proxy",
+    "merged": false
+  }
 }
