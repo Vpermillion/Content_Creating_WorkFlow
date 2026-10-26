@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "operation_id": "youtube-alpha-anime-connect-20261026-01",
+  "checked_at": "2026-10-26T20:14:16.404451+08:00",
+  "branch": "codex/youtube-oauth",
+  "starting_revision": "d0cb5ee09dfcca2aaece3c7303db48c9eeab71a8",
+  "connection": "alpha-anime",
+  "slot_id": "alpha-1",
+  "expected_handle": "@ifverse_anime",
+  "status": "blocked_prerequisites",
+  "actual_channel_id": null,
+  "live_channel_verified": false,
+  "registry_binding_saved": false,
+  "oauth_client": {
+    "status": "missing",
+    "expected_type": "desktop",
+    "expected_private_path": "private/youtube-client.json"
+  },
+  "callback": {
+    "status": "callback_unreachable",
+    "bind_host": "127.0.0.1",
+    "port": 8765,
+    "reason": "No verified owner-browser-to-runtime tunnel or supported interactive same-machine browser route; no sshd process or available forwarding tool."
+  },
+  "network": {
+    "status": "blocked_by_proxy",
+    "observed_errors": [
+      {
+        "host": "accounts.google.com",
+        "result": "proxy CONNECT 403 Forbidden"
+      },
+      {
+        "host": "oauth2.googleapis.com",
+        "result": "proxy CONNECT 403 Forbidden"
+      },
+      {
+        "host": "www.googleapis.com",
+        "result": "proxy CONNECT 403 Forbidden"
+      }
+    ]
+  },
+  "runtime": {
+    "venv_path": "/workspace/scratch/youtube-oauth-venv",
+    "google_auth_oauthlib": "1.5.0",
+    "google_auth": "2.62.0"
+  },
+  "external_write_intents": [
+    {
+      "target": "environment configuration draft network custom domains",
+      "operation_id": "youtube-alpha-network-20261026-01",
+      "status": "prepared",
+      "preserve_domains": [
+        "science.nasa.gov",
+        "www.nigms.nih.gov"
+      ],
+      "add_domains": [
+        "accounts.google.com",
+        "oauth2.googleapis.com",
+        "www.googleapis.com",
+        "api.github.com"
+      ]
+    }
+  ],
+  "consent_started": false,
+  "google_cloud_project_configured": false,
+  "token_exchange_performed": false,
+  "publishing_enabled": false,
+  "next_action": "Configure the user-owned Desktop OAuth client privately and choose a callback-capable owner runtime; apply required network settings before cloud API calls.",
+  "registry_sha256_before": "2f5076bc5e0fd781a64627d4a92dfc3604bce1213e80168e71916c5fa56347c8"
+}
