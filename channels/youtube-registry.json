@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "purpose": "Document intended YouTube channel setup; not credentials, live connections or executable publishing configuration.",
   "checked_date": "2026-10-26",
   "setup_authorization": "Owner authorized supplied accounts for channel setup; ownership and provider consent remain to be verified.",
@@ -19,9 +19,11 @@
       "setup_blocker": "Google could not verify ownership in the cloud browser; no successful sign-in or channel creation.",
       "slot": 1,
       "slot_id": "alpha-1",
-      "suggested_name": "Ifverse Space",
-      "suggested_handle": "@IfverseSpace",
-      "suggested_topic": "Space and cosmic scenarios"
+      "suggested_name": "ifverse_anime",
+      "suggested_handle": "@ifverse_anime",
+      "suggested_topic": "Anime what-if stories and alternate character/story outcomes",
+      "name_selection_status": "owner_selected",
+      "rollout_status": "active_planning"
     },
     {
       "account_number": 1,
@@ -37,9 +39,32 @@
       "setup_blocker": "Google could not verify ownership in the cloud browser; no successful sign-in or channel creation.",
       "slot": 2,
       "slot_id": "alpha-2",
-      "suggested_name": "Ifverse Physics",
-      "suggested_handle": "@IfversePhysics",
-      "suggested_topic": "Physical laws and hypothetical experiments"
+      "suggested_name": "ifverse_cartoon",
+      "suggested_handle": "@ifverse_cartoon",
+      "suggested_topic": "Cartoon what-if stories and alternate character/story outcomes",
+      "name_selection_status": "owner_selected",
+      "rollout_status": "active_planning"
+    },
+    {
+      "account_number": 1,
+      "owner_alias": "alpha",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "blocked_google_identity_verification",
+      "last_verified_at": null,
+      "last_setup_attempt_date": "2026-10-26",
+      "setup_blocker": "Google could not verify ownership in the cloud browser; no successful sign-in or channel creation.",
+      "slot": 3,
+      "slot_id": "alpha-3",
+      "suggested_name": "ifverse_marvel",
+      "suggested_handle": "@ifverse_marvel",
+      "suggested_topic": "Marvel what-if stories; confirm whether owner intends Marvel only or wider Hollywood/American entertainment",
+      "name_selection_status": "assistant_suggested_name",
+      "rollout_status": "active_planning",
+      "scope_note": "Owner said Marvel and mentioned Hollywood/American products. If the intended scope includes DC and other American films, ifverse_hollywood is a proposed broader name, not a confirmed rename."
     },
     {
       "account_number": 2,
@@ -55,7 +80,8 @@
       "slot_id": "beta-1",
       "suggested_name": "Ifverse Earth",
       "suggested_handle": "@IfverseEarth",
-      "suggested_topic": "Planetary changes"
+      "suggested_topic": "Planetary changes",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 2,
@@ -71,7 +97,8 @@
       "slot_id": "beta-2",
       "suggested_name": "Ifverse Oceans",
       "suggested_handle": "@IfverseOceans",
-      "suggested_topic": "Seas and underwater scenarios"
+      "suggested_topic": "Seas and underwater scenarios",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 3,
@@ -87,7 +114,8 @@
       "slot_id": "delta-1",
       "suggested_name": "Ifverse Wild",
       "suggested_handle": "@IfverseWild",
-      "suggested_topic": "Animals and ecosystems"
+      "suggested_topic": "Animals and ecosystems",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 3,
@@ -103,7 +131,8 @@
       "slot_id": "delta-2",
       "suggested_name": "Ifverse Evolution",
       "suggested_handle": "@IfverseEvolution",
-      "suggested_topic": "Alternate evolutionary paths"
+      "suggested_topic": "Alternate evolutionary paths",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 4,
@@ -119,7 +148,8 @@
       "slot_id": "epsilon-1",
       "suggested_name": "Ifverse Future",
       "suggested_handle": "@IfverseFuture",
-      "suggested_topic": "Future technology and societies"
+      "suggested_topic": "Future technology and societies",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 4,
@@ -135,7 +165,8 @@
       "slot_id": "epsilon-2",
       "suggested_name": "Ifverse Machines",
       "suggested_handle": "@IfverseMachines",
-      "suggested_topic": "Robots, engineering and inventions"
+      "suggested_topic": "Robots, engineering and inventions",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 5,
@@ -151,7 +182,8 @@
       "slot_id": "zeta-1",
       "suggested_name": "Ifverse Human",
       "suggested_handle": "@IfverseHuman",
-      "suggested_topic": "Human body and abilities"
+      "suggested_topic": "Human body and abilities",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 5,
@@ -167,7 +199,8 @@
       "slot_id": "zeta-2",
       "suggested_name": "Ifverse Mind",
       "suggested_handle": "@IfverseMind",
-      "suggested_topic": "Perception, memory and thought experiments"
+      "suggested_topic": "Perception, memory and thought experiments",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 6,
@@ -183,7 +216,8 @@
       "slot_id": "eta-1",
       "suggested_name": "Ifverse History",
       "suggested_handle": "@IfverseHistory",
-      "suggested_topic": "Alternate historical outcomes"
+      "suggested_topic": "Alternate historical outcomes",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 6,
@@ -199,7 +233,8 @@
       "slot_id": "eta-2",
       "suggested_name": "Ifverse Civilizations",
       "suggested_handle": "@IfverseCivilizations",
-      "suggested_topic": "Alternate development of societies"
+      "suggested_topic": "Alternate development of societies",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 7,
@@ -215,7 +250,8 @@
       "slot_id": "theta-1",
       "suggested_name": "Ifverse Worlds",
       "suggested_handle": "@IfverseWorlds",
-      "suggested_topic": "Impossible worlds and rules"
+      "suggested_topic": "Impossible worlds and rules",
+      "rollout_status": "deferred"
     },
     {
       "account_number": 7,
@@ -231,11 +267,19 @@
       "slot_id": "theta-2",
       "suggested_name": "Ifverse Myths",
       "suggested_handle": "@IfverseMyths",
-      "suggested_topic": "Mythical beings in hypothetical worlds"
+      "suggested_topic": "Mythical beings in hypothetical worlds",
+      "rollout_status": "deferred"
     }
   ],
-  "max_channels_per_account": 2,
-  "max_planned_channels": 14,
-  "plan_status": "proposed_names_no_channels_created",
-  "names_and_handles_availability": "unchecked"
+  "plan_status": "alpha_three_channel_pilot_no_channels_created",
+  "names_and_handles_availability": "unchecked",
+  "rollout_phase": "alpha_only_pilot",
+  "active_pilot_owner": "alpha",
+  "active_planned_channel_count": 3,
+  "previous_rollout_status": "Seven-account fourteen-channel expansion deferred; start with Alpha and one example video.",
+  "planning_limits": {
+    "active_account": "alpha",
+    "active_account_slots": 3,
+    "other_accounts": "deferred"
+  }
 }
