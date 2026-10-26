@@ -1,5 +1,10 @@
 # Backlog
 
+## Current next step: repository-owned YouTube OAuth
+
+Read `docs/YOUTUBE.md` and `prompts/youtube-connect.md` on `codex/youtube-oauth`. Connection code is implemented and offline-tested; configure the real Google Desktop client and reachable loopback callback, obtain the owner's read-only consent for the intended first Alpha channel, then live-check and bind the actual ID. OAuth alone does not implement uploading. Next implement a separately authorized private-test upload adapter with resumable delivery recovery and receipts. Other accounts remain deferred.
+
+
 1. Verify cited NASA/NIH facts when network settings apply; replace inaccurate or unsupported prose with new content versions.
 2. Complete full visual/listening/editorial review; tune narration and captions from actual feedback.
 3. Connect private durable storage and scheduled private backups, including n8n volume and encryption key.
@@ -46,3 +51,4 @@ The owner slowed the rollout and selected Alpha for an initial example: `ifverse
 Registry schema version 3 records Alpha's three active planning slots and preserves the other accounts' proposals as deferred. `ifverse_marvel` is a suggested name for the requested third category. The owner's Hollywood/American parenthetical may imply a broader entertainment scope: if so, `ifverse_hollywood` is a suggested alternative, not an approved rename. Do not treat Marvel as a label for all American movies. Names/handles remain unchecked; verified channel fields stay null.
 
 Next editorial example: one anime what-if video, proposed topic 'What if Naruto joined the Akatsuki?' Test one video before expanding. This topic is a proposal, not an approved script or publication. Alpha's Google identity-verification blocker remains unresolved. No sign-in retried, channel created, public post made or production job regenerated. JSON/unique slot IDs/three active slots checked; source behavior unchanged, no media tests rerun.
+

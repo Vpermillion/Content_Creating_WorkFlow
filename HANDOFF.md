@@ -2,6 +2,17 @@
 
 Start by reading `AGENTS.md` and `PROJECT_STATE.md`. Use the existing checkout supplied by the active environment; its absolute path can differ between accounts and hosts. The uploaded master prompt is in `docs/MASTER_PROMPT.md`.
 
+
+## YouTube connection implementation — 2026-10-26
+
+Feature branch: `codex/youtube-oauth`, based on `codex/operator-handoff` (which includes the current Alpha-only entertainment plan). `whatif/youtube.py` adds optional read-only Google OAuth: per-channel aliases, loopback consent with PKCE/offline access, restricted private credential files, refresh, `mine=true` channel-ID checks and explicit registry binding. Cached status is labeled as unverified until a live API check succeeds. Wrong-channel, insufficient-scope and provider failures do not claim success. The job DB is not initialized by these separate commands.
+
+Start with `prompts/youtube-connect.md` and `docs/YOUTUBE.md`. Prepare the user-owned Google Desktop OAuth client and a reachable loopback callback, then connect/check `alpha-anime` and bind its actual returned ID to `alpha-1`. Actual names/IDs remain unverified. If this cloud environment lacks a callback route, record that blocker and use a supported reachable runtime; do not substitute an OOB/code-paste flow. Other accounts remain deferred.
+
+Validation in a source snapshot matching the remote branch: 23 unit/integration tests passed (existing state/FFmpeg tests plus 12 new connection tests). An offline smoke check with real google-auth-oauthlib 1.5.0 and google-auth 2.62.0 verified PKCE S256, readonly/offline consent construction, loopback timeout support and fixture-token loading. No real Google client/token exchange, authenticated channel lookup or n8n call was performed. The callback route has not been exercised end-to-end with Google.
+
+Private tokens are permission-protected JSON, not application-encrypted. Preserve them through a private encrypted volume/secret deployment and separate backup. `.gitignore` and `.dockerignore` exclude default private credentials and common OAuth client filenames. Do not run interactive OAuth through Actions logs. The existing publisher stays draft-only; a separately authorized upload adapter/private test/resumable recovery/receipt reconciliation remains future work. No channel created, video published or service deployed.
+
 ## Resume now
 
 First read [continuity and channel setup](docs/CONTINUITY.md). Inspect PR #1: these notes are on `codex/operator-handoff`, while the default branch was `codex/portable-workspace` at this checkpoint. Restore or locate authoritative private state before running status. After that, from the active repository root:
@@ -98,3 +109,4 @@ The owner slowed the rollout and selected Alpha for an initial example: `ifverse
 Registry schema version 3 records Alpha's three active planning slots and preserves the other accounts' proposals as deferred. `ifverse_marvel` is a suggested name for the requested third category. The owner's Hollywood/American parenthetical may imply a broader entertainment scope: if so, `ifverse_hollywood` is a suggested alternative, not an approved rename. Do not treat Marvel as a label for all American movies. Names/handles remain unchecked; verified channel fields stay null.
 
 Next editorial example: one anime what-if video, proposed topic 'What if Naruto joined the Akatsuki?' Test one video before expanding. This topic is a proposal, not an approved script or publication. Alpha's Google identity-verification blocker remains unresolved. No sign-in retried, channel created, public post made or production job regenerated. JSON/unique slot IDs/three active slots checked; source behavior unchanged, no media tests rerun.
+
