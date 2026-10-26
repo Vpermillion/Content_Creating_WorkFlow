@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "note": "Optional private address mapping. Copy to private/operator-accounts.json; never add passwords or tokens. No program currently consumes this file.",
+  "accounts": [
+    {
+      "account_number": 1,
+      "operator_id": "alpha",
+      "email": null
+    },
+    {
+      "account_number": 2,
+      "operator_id": "beta",
+      "email": null
+    },
+    {
+      "account_number": 3,
+      "operator_id": "delta",
+      "email": null
+    },
+    {
+      "account_number": 4,
+      "operator_id": "epsilon",
+      "email": null
+    },
+    {
+      "account_number": 5,
+      "operator_id": "zeta",
+      "email": null
+    },
+    {
+      "account_number": 6,
+      "operator_id": "eta",
+      "email": null
+    },
+    {
+      "account_number": 7,
+      "operator_id": "theta",
+      "email": null
+    }
+  ]
+}

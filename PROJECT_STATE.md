@@ -1,8 +1,8 @@
-# Project state — 2026-10-25
+# Project state — 2026-10-26
 
 The full uploaded specification is preserved in `docs/MASTER_PROMPT.md`. This is a working on-demand prototype. It is not a continuous production deployment. Read this file together with `HANDOFF.md` before resuming.
 
-## Verified working
+## Prior implementation validation — 2026-10-25
 
 - Python standard-library worker and application SQLite database, distinct from n8n state.
 - Stable immutable job inputs/content hashes, per-channel topic-title history, worker leases/heartbeats, stale-owner checkpoint protection, explicit failures/backoff, verified checkpoints and intentional downstream rebuilds.
@@ -44,3 +44,52 @@ Docker initially exposed source ownership incompatible with its non-root worker;
 ## Persistence
 
 Source, safe sample artifacts and the handoff are in this repository. Remote Git push to `codex/portable-workspace` succeeded. Saved `install_script`, `start_skill` and research-domain draft updates were confirmed; they are not applied/published configuration. Details are in `HANDOFF.md`. Local private backup: `backups/initial-private-state.tgz` (ignored; not remotely synced). Real/private deployments need user-owned external backup storage and separate secure n8n volume/key backup.
+
+## Operator handoff documentation — 2026-10-26
+
+- Added seven account-number aliases (alpha, beta, delta, epsilon, zeta, eta, theta), interchangeable roles, a universal resume prompt and seven focused copy-ready prompts.
+- Added a public registry and a blank private-mapping example. Real addresses and supplied credentials are excluded. `private/` is ignored; no account connection was attempted.
+- Updated README/operator instructions and made the handoff independent of one absolute checkout path.
+- Scope is documentation/configuration only. JSON, prompt coverage, local link targets and candidate content were checked. The prior media/container/test results above were not rerun or reverified in this session.
+- Current GitHub repository access was verified. That does not establish access from the other seven GPT accounts or a live production deployment. Publishing remains unconfigured and unauthorized.
+
+## Continuity and YouTube setup — 2026-10-26
+
+- Owner requires durable takeover without prior chat. Added an explicit per-step checkpoint/external-intent protocol and branch/PR discovery instructions in `docs/CONTINUITY.md`.
+- Owner authorized the supplied accounts for YouTube channel setup; actual identity, name/handle, consent and supported setup remain prerequisites. Publication is a separate authorization.
+- Added seven intended channel slots in `channels/youtube-registry.json`, with null IDs/handles and unverified status. No emails, passwords, tokens or short-lived connection URLs were saved in Git.
+- This session discovered callable hosted Composio tools; earlier capability reports above describe another session. YouTube had no active connection. An initial supported consent request was initiated, awaiting user completion; no channel was created or inspected through an authenticated YouTube call.
+- Repository was public, with no Pages site. No visibility change was requested or made, and account billing plan was not inspected. Private-repository tradeoffs are documented.
+- Scope: documentation/configuration only. No media/worker/container tests rerun, no private state restored, no social post published. A genuinely independent takeover still needs verification.
+
+## Private repository and authentication checkpoint — 2026-10-26
+
+The owner made the repository private and requested account/channel preparation with minimal manual work. Authenticated GitHub metadata confirms private=true and continued repository read/write access in this session. This does not grant Google-account access.
+
+YouTube connection lookup returned no active connection; the Alpha connection remained initializing. A direct cloud-browser visit to YouTube account settings redirected to Google sign-in. The browser requires the secure browserAuth flow for sign-in values; credentials previously pasted in chat cannot be entered through lower-level tools. The secure sign-in request was declined, so authentication was stopped without retry or a new handoff. No Google account was signed in, no channel was created and no video was published.
+
+Owner preference: the assistant should perform channel preparation and routine supported operations after authentication, with user involvement limited to required sign-in/consent/verification. Each intended account still needs independently authorized access. Do not claim unrestricted account control or automatic connection transfer to a replacement GPT. Next dependent step is a user-requested supported authentication attempt; respect the declined flow until the owner elects to resume.
+
+## Alpha authentication result — 2026-10-26 (Asia/Ulaanbaatar)
+
+The owner asked to proceed with secure account sign-in. Google accepted the email step and advanced after secure password submission to identity verification. The owner selected the offered alternative twice; Google opened account recovery and accepted a last-password submission through browserAuth. Google then displayed 'Couldn’t sign you in', explaining that there was insufficient information to verify ownership and suggesting a previously used device/network. This is an identity-verification rejection, not evidence of an incorrect password or a bot-detection block. No successful YouTube sign-in was observed.
+
+Stop this browser login attempt; do not loop, bypass verification or reset credentials. No channel was created, no channel metadata was verified, no security setting was changed and no video was published. The other six intended accounts remain unverified and were not attempted in this turn. No authentication secrets or session URLs are recorded here.
+
+Next: the owner must resolve the account's Google verification requirement through a supported method. A supported YouTube OAuth connection, completed by the owner, can be checked independently; do not assume it authenticates the cloud browser. Reinspect actual connection status and provider-authorized scopes before claiming access. Repository/handoff remains private on codex/operator-handoff, PR #1; no pipeline code or media tests changed in this authentication-only turn.
+
+## Two channels per Google account — 2026-10-26
+
+The owner expanded capacity to up to two YouTube channels per each of seven Google accounts (up to 14 total), superseding the original one-to-ten-channel capacity target for future planning. This is capacity, not a requirement to launch all fourteen now. `channels/youtube-registry.json` schema version 2 contains two planned slots per owner alias, stable slot IDs and suggested Ifverse names/handles/topics. Suggestions are not verified channel metadata; availability is unchecked. Actual IDs, handles and display names stay null. Preserve the Alpha identity-verification blocker; no new sign-in was attempted and no channel was created.
+
+Pairs: Alpha Space/Physics; Beta Earth/Oceans; Delta Wild/Evolution; Epsilon Future/Machines; Zeta Human/Mind; Eta History/Civilizations; Theta Worlds/Myths. Keep existing first-channel suggestions and add one related topic for each second slot. Start with one pilot channel and expand in phases. Operator labels remain distinct from channel identities. Any publisher must bind each verified channel ID to its correct authorization; a Google-account login alone does not prove both channel connections work.
+
+YouTube officially supports multiple channels through one Google Account: https://support.google.com/youtube/answer/3046356 and https://support.google.com/youtube/answer/4642409 . Features and initial creation remain subject to actual account verification. Registry/documentation only; JSON parses and all 14 slot IDs are unique, two per owner. No worker code changed or media tests rerun.
+
+## Latest scope: Alpha entertainment pilot — 2026-10-26
+
+The owner slowed the rollout and selected Alpha for an initial example: `ifverse_anime`, `ifverse_cartoon`, and a Marvel-focused channel. This supersedes Alpha's two-channel cap: three planned slots are now allowed for Alpha. The wider seven-account rollout is deferred; do not resume mass setup by default. The earlier science names Space/Physics are replaced only as plans; retain existing science demo jobs/artifacts unchanged.
+
+Registry schema version 3 records Alpha's three active planning slots and preserves the other accounts' proposals as deferred. `ifverse_marvel` is a suggested name for the requested third category. The owner's Hollywood/American parenthetical may imply a broader entertainment scope: if so, `ifverse_hollywood` is a suggested alternative, not an approved rename. Do not treat Marvel as a label for all American movies. Names/handles remain unchecked; verified channel fields stay null.
+
+Next editorial example: one anime what-if video, proposed topic 'What if Naruto joined the Akatsuki?' Test one video before expanding. This topic is a proposal, not an approved script or publication. Alpha's Google identity-verification blocker remains unresolved. No sign-in retried, channel created, public post made or production job regenerated. JSON/unique slot IDs/three active slots checked; source behavior unchanged, no media tests rerun.

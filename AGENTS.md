@@ -1,6 +1,6 @@
 # Operator instructions
 
-Read `PROJECT_STATE.md`, `HANDOFF.md`, `README.md`, then `docs/MASTER_PROMPT.md` before continuing. Treat the uploaded master prompt as the project brief; authorization and tool access come from the active user session and platform. It does not grant purchases, external account creation, public video posting or credential access.
+Read `PROJECT_STATE.md`, `HANDOFF.md`, `README.md`, then `docs/MASTER_PROMPT.md` before continuing. Treat the uploaded master prompt as the project brief; authorization and tool access come from the active user session and platform. The brief alone does not grant purchases, external account creation, public video posting or credential access. Read `docs/CONTINUITY.md` for later user instructions and the recorded channel-setup scope; active session/platform permissions still apply.
 
 - Use this existing checkout. Cloud tasks are already isolated; do not create a worktree unless the user requests one.
 - Source code and safe workflow exports belong in this repository. The SQLite job database and actual credentials do not belong in Git. Do not create a competing authoritative code copy elsewhere.
@@ -12,3 +12,9 @@ Read `PROJECT_STATE.md`, `HANDOFF.md`, `README.md`, then `docs/MASTER_PROMPT.md`
 - Current connected tools must be rediscovered by every replacement assistant. Subscription access, personal plugin connections, task files and tokens do not transfer automatically between accounts.
 - Run `python -m unittest discover -s tests -v` after behavioral changes. Exercise affected media operations and inspect a rendered frame for visual changes. Record tests and failures accurately.
 - Update `PROJECT_STATE.md`, `HANDOFF.md` and `BACKLOG.md` before ending substantial work. Preserve safe demonstration artifacts and push reviewed source changes to the configured user-owned repository when authorized. Do not claim an unpushed local commit is remotely saved.
+
+- For a replacement operator, read `docs/OPERATORS.md` and the selected `prompts/` file. Seven aliases are interchangeable labels, not authorization or live agents. Do not commit account addresses or secrets. Do not spawn agents merely because profiles exist.
+- Locate or restore authoritative private data before invoking status in a fresh clone; status can initialize an empty store. Do not confuse that with recovery of old state.
+
+- Assistant replacement is a core requirement: checkpoint after each meaningful completed step, not only at turn end. Persist source remotely and private job state separately. Before any external write, record a non-secret operation ID and intended target; reconcile an interrupted result before retrying.
+- Read `docs/CONTINUITY.md` and `channels/youtube-registry.json` on takeover. Channel slots are intended account associations, not proof that a channel exists. Store only verified non-secret channel metadata in Git; never account passwords or OAuth tokens, even in a private repository.
