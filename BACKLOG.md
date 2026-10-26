@@ -1,5 +1,13 @@
 # Backlog
 
+## Latest priorities — first sample completed
+
+- Review `docs/ALPHA-ANIME-PILOT.md` and the saved sample. Tune narration/pronunciation and visual style from actual review; nothing is publish-ready.
+- Resolve the offline authorized Desktop Commander agent, then inspect/setup the real Google Desktop client and reachable callback through the supported local workflow. No automatic login bypass or repeat recovery loop.
+- Correct the generic Science draft hashtags/description for anime before any authorized delivery.
+- Preserve the new sample private-state/raw-audio backup on a verified user-owned durable route before claiming cross-host resume. Retain the original science state separately.
+- The render-tail integrity defect is fixed and covered by regression tests; 27 tests passed. No further broad test reruns are needed without a new change/failure.
+
 ## Current next step: repository-owned YouTube OAuth
 
 Owner may use a local agent; project/Desktop-client status is unknown to the owner. Follow `prompts/youtube-connect-local.md` to inspect existing Google setup and verify a local callback before consent. Do not infer that the proposed runtime is already available or that a missing cloud file means no project exists elsewhere.

@@ -1,5 +1,21 @@
 # Handoff
 
+## Autonomous continuation and first anime draft — 2026-10-26
+
+The owner authorized continued setup without routine questions. Actual account access remains blocked: the only linked Desktop Commander agent reports offline, no Google/YouTube credential bindings or Desktop client are present in this runtime's documented private paths, and no authorized Google Cloud setup connection was found. No failed Google login/recovery was retried, no project/client created and no OAuth consent/token exchange completed. These are access prerequisites, not missing software packages.
+
+Current-runtime unauthenticated network probes differ from the earlier cloud task: Google sign-in metadata returned HTTP 200, the token endpoint root returned HTTP 404, and the YouTube channels endpoint returned JSON HTTP 403/PERMISSION_DENIED/forbidden. These probes establish neither a successful token exchange nor authenticated API access. Do not reuse the earlier task's blanket proxy-block diagnosis for this runtime. Its saved network draft remains historical; this session did not apply environment settings.
+
+Independent work completed: a 46.975-second original storyboard review video for 'What if Naruto joined the Akatsuki?', internal job `alpha-anime-001`, internal channel `alpha-anime-provisional` (not a YouTube ID). It has eight original SVG scenes, prototype libflite narration, editable captions and a checked official-source premise with the invented alternate timeline labeled. Video: https://chatgpt.com/library?file_id=libfile_9922c2295e588191b8a12be471c82e88&account_id=personal . Artifact receipt: `artifacts/alpha-anime-001-artifact.json`. No official anime images, clips or music were copied.
+
+Frame inspection found a real defect missed by the prior checks: an invalid final clip left video ending before narration, despite zero FFmpeg exit and successful full-file decoding. The exact transient decoder failure was not established. The renderer now quantizes cumulative scene frame boundaries, verifies each clip's frames/duration, and verifies the final video track covers the audio. Rebuilt from render with an explicit reason, retaining existing speech. Final video track: 46.966667s; audio: 46.975s. New tests reject a corrupt scene despite zero tool exit and a missing video tail despite matching container/audio duration. All 27 tests pass. Resume reuses video and narration hashes/mtimes.
+
+Review limits: sampled first/scene/ending frames inspected and full output decoded; no complete audiovisual/pronunciation audition or editorial/publication approval. `quality_review`, `publish_ready=false`. Generic publication drafts still inherit Science hashtags; fix topic metadata before any delivery. Rendering and local drafts are not uploads.
+
+Local new sample state: `private/review-pilot-state/` in this source snapshot. It does not replace the other cloud runtime's existing private state or original science pilots. Code/input/script/captions/QC are in Git, finished video is saved above; a cross-host backup of this new private job database/raw narration has not been verified. Reproduction commands and limits are in `docs/ALPHA-ANIME-PILOT.md`.
+
+Next account-dependent step: bring the authorized local Desktop Commander agent online, verify its actual capabilities and use `prompts/youtube-connect-local.md` to inspect/setup the owner's Google project/client and callback. Google-required sign-in/consent/identity verification remains the owner's action. Other accounts stay deferred; registry channel IDs stay null. No purchases, public publishing, permission broadening, repository merge or visibility change occurred.
+
 Start by reading `AGENTS.md` and `PROJECT_STATE.md`. Use the existing checkout supplied by the active environment; its absolute path can differ between accounts and hosts. The uploaded master prompt is in `docs/MASTER_PROMPT.md`.
 
 ## Latest live setup result — 2026-10-26, Asia/Ulaanbaatar

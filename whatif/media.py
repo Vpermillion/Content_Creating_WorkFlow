@@ -32,6 +32,9 @@ def duration(path):
 def diagram(scene, index, count, title):
     """Original vector diagrams. No downloaded photography or implied real footage."""
     kind = scene["visual"]
+    if kind.startswith("anime-"):
+        from .anime_visuals import storyboard
+        return storyboard(scene, index, count, title)
     if kind not in {"earth-moon", "earth-alone", "tides", "rotation", "day-night", "sun", "light-delay", "orbit", "freeze"}:
         raise ValueError("Unsupported original diagram kind")
     svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280" viewBox="0 0 720 1280">',
@@ -145,12 +148,16 @@ def render(spec, folder):
         length = segment["end"]-segment["start"]
         name = f"clip-{i:02}.mp4"
         # SVG is authored locally. Modest zoom is centered; captions are added afterwards.
-        frames = math.ceil(length*fps)
+        # Quantize cumulative boundaries, so per-scene rounding cannot accumulate drift.
+        frames = max(1, round(segment["end"]*fps)-round(segment["start"]*fps))
         vf = f"scale={w}:{h},zoompan=z='min(zoom+0.00015,1.04)':d={frames}:s={w}x{h}:fps={fps},setsar=1"
-        ffmpeg(["-i", f"scene-{i:02}.svg", "-vf", vf, "-t", f"{length:.6f}", "-an", "-c:v", "libx264",
+        ffmpeg(["-i", f"scene-{i:02}.svg", "-vf", vf, "-frames:v", str(frames), "-an", "-c:v", "libx264",
                 "-threads", "2", "-preset", "veryfast", "-crf", "22", "-pix_fmt", "yuv420p", name], folder)
+        clip = next((s for s in probe(folder/name)["streams"] if s["codec_type"]=="video"), None)
+        if not clip or int(clip.get("nb_frames",0)) != frames or abs(float(clip.get("duration",0))-frames/fps) > 1/fps:
+            raise ValueError(f"Scene {i} did not render its expected frames; refusing an incomplete video")
         records.append({"scene":i,"duration":length,"visual":f"scene-{i:02}.svg","audio":segment.get("file","narration.wav"),
-                        "audio_start":segment["start"],"clip":name})
+                        "audio_start":segment["start"],"video_frames":frames,"clip":name})
     (folder/"video-concat.txt").write_text("\n".join(f"file 'clip-{i:02}.mp4'" for i in range(len(records))))
     ffmpeg(["-f", "concat", "-safe", "1", "-i", "video-concat.txt", "-i", "narration.wav", "-vf",
             "ass=captions.ass",
@@ -179,6 +186,8 @@ def validate_output(spec, folder):
               "codec_h264_aac":video["codec_name"]=="h264" and audio["codec_name"]=="aac",
               "pixel_format":video["pix_fmt"]=="yuv420p", "audio_present":float(audio.get("duration",0))>0,
               "duration_matches_speech":abs(actual-narr["duration"])<0.2,
+              "video_track_covers_speech":abs(float(video.get("duration",0))-narr["duration"])<0.2,
+              "video_audio_duration_match":abs(float(video.get("duration",0))-float(audio.get("duration",0)))<0.2,
               "provisional_length_range":spec["profile"]["min_seconds"] <= actual <= spec["profile"]["max_seconds"],
               "sentence_caption_coverage":abs(narr["segments"][-1]["end"]-actual)<0.2,
               "peak_below_zero": bool(peak) and float(peak[1])<0,
@@ -196,3 +205,4 @@ def validate_output(spec, folder):
     if not report["automated_pass"]:
         raise ValueError("Media validation failed: "+str([k for k,v in checks.items() if not v]))
     return [folder/"quality.json"]
+

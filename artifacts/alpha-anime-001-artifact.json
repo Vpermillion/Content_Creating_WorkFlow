@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "job_id": "alpha-anime-001",
+  "title": "What if Naruto joined the Akatsuki?",
+  "library_file_id": "libfile_9922c2295e588191b8a12be471c82e88",
+  "url": "https://chatgpt.com/library?file_id=libfile_9922c2295e588191b8a12be471c82e88&account_id=personal",
+  "sha256": "4b7aedc58ee6dd4a77188dc34f3507873de35c0001a0c97a381be1f0d59450b8",
+  "duration_seconds": 46.975,
+  "narration_sha256": "5d4e81bd15409c760e32fd9bab224038b2e5a86f1b34390c5b29827badaa3728",
+  "visual_style": "Original vector storyboard",
+  "voice": "ffmpeg-libflite/slt prototype",
+  "status": "quality_review",
+  "publish_ready": false,
+  "actual_youtube_channel_id": null,
+  "resume_verified_in_current_runtime": true,
+  "cross_host_private_state_backup_verified": false
+}

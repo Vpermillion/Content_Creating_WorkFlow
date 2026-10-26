@@ -115,5 +115,31 @@
     "owner_reported_google_project_client_status": "unknown",
     "prompt": "prompts/youtube-connect-local.md",
     "live_connection_result_changed": false
+  },
+  "autonomous_followup": {
+    "checked_at": "2026-10-26T12:55:59.956Z",
+    "linked_desktop_agent": "offline",
+    "desktop_oauth_client_present_in_current_runtime": false,
+    "google_or_youtube_environment_binding_names_present": false,
+    "network_probes": {
+      "accounts_google_metadata_http": 200,
+      "oauth_token_root_http": 404,
+      "youtube_channels_unauthenticated_http": 403,
+      "youtube_response_status": "PERMISSION_DENIED",
+      "authenticated_request": false
+    },
+    "consent_retried": false,
+    "actual_channel_id": null,
+    "registry_binding_saved": false,
+    "independent_sample": {
+      "job_id": "alpha-anime-001",
+      "library_file_id": "libfile_9922c2295e588191b8a12be471c82e88",
+      "video_sha256": "4b7aedc58ee6dd4a77188dc34f3507873de35c0001a0c97a381be1f0d59450b8",
+      "duration_seconds": 46.975,
+      "state": "quality_review",
+      "publishing_enabled": false
+    },
+    "tests_passed": 27,
+    "next_step": "Bring the authorized local Desktop Commander agent online and complete supported Google client setup/consent; sample review can proceed independently."
   }
 }
