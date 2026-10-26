@@ -2,6 +2,8 @@
 
 ## Current next step: repository-owned YouTube OAuth
 
+Owner may use a local agent; project/Desktop-client status is unknown to the owner. Follow `prompts/youtube-connect-local.md` to inspect existing Google setup and verify a local callback before consent. Do not infer that the proposed runtime is already available or that a missing cloud file means no project exists elsewhere.
+
 Latest runtime check: Alpha anime remains `not_connected`. Missing Desktop client, Google endpoint proxy 403, and `callback_unreachable` prevent consent. Optional dependencies are installed and 23 tests passed; original registry preserved. Resolve the private client and callback-capable owner runtime, then apply saved network requirements if using this cloud task. See `docs/YOUTUBE-CONNECTION-RESULT.md`; do not start uploads or other-account setup while the first connection is unverified.
 
 Read `docs/YOUTUBE.md` and `prompts/youtube-connect.md` on `codex/youtube-oauth`. Connection code is implemented and offline-tested; configure the real Google Desktop client and reachable loopback callback, obtain the owner's read-only consent for the intended first Alpha channel, then live-check and bind the actual ID. OAuth alone does not implement uploading. Next implement a separately authorized private-test upload adapter with resumable delivery recovery and receipts. Other accounts remain deferred.
