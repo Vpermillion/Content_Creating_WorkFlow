@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "purpose": "Document intended YouTube channel setup; not credentials, live connections or executable publishing configuration.",
   "checked_date": "2026-10-26",
   "setup_authorization": "Owner authorized supplied accounts for channel setup; ownership and provider consent remain to be verified.",
@@ -16,7 +16,30 @@
       "setup_status": "blocked_google_identity_verification",
       "last_verified_at": null,
       "last_setup_attempt_date": "2026-10-26",
-      "setup_blocker": "Google could not verify ownership in the cloud browser; no successful sign-in or channel creation."
+      "setup_blocker": "Google could not verify ownership in the cloud browser; no successful sign-in or channel creation.",
+      "slot": 1,
+      "slot_id": "alpha-1",
+      "suggested_name": "Ifverse Space",
+      "suggested_handle": "@IfverseSpace",
+      "suggested_topic": "Space and cosmic scenarios"
+    },
+    {
+      "account_number": 1,
+      "owner_alias": "alpha",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "blocked_google_identity_verification",
+      "last_verified_at": null,
+      "last_setup_attempt_date": "2026-10-26",
+      "setup_blocker": "Google could not verify ownership in the cloud browser; no successful sign-in or channel creation.",
+      "slot": 2,
+      "slot_id": "alpha-2",
+      "suggested_name": "Ifverse Physics",
+      "suggested_handle": "@IfversePhysics",
+      "suggested_topic": "Physical laws and hypothetical experiments"
     },
     {
       "account_number": 2,
@@ -27,7 +50,28 @@
       "display_name": null,
       "topic": null,
       "setup_status": "awaiting_verified_account_access",
-      "last_verified_at": null
+      "last_verified_at": null,
+      "slot": 1,
+      "slot_id": "beta-1",
+      "suggested_name": "Ifverse Earth",
+      "suggested_handle": "@IfverseEarth",
+      "suggested_topic": "Planetary changes"
+    },
+    {
+      "account_number": 2,
+      "owner_alias": "beta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null,
+      "slot": 2,
+      "slot_id": "beta-2",
+      "suggested_name": "Ifverse Oceans",
+      "suggested_handle": "@IfverseOceans",
+      "suggested_topic": "Seas and underwater scenarios"
     },
     {
       "account_number": 3,
@@ -38,7 +82,28 @@
       "display_name": null,
       "topic": null,
       "setup_status": "awaiting_verified_account_access",
-      "last_verified_at": null
+      "last_verified_at": null,
+      "slot": 1,
+      "slot_id": "delta-1",
+      "suggested_name": "Ifverse Wild",
+      "suggested_handle": "@IfverseWild",
+      "suggested_topic": "Animals and ecosystems"
+    },
+    {
+      "account_number": 3,
+      "owner_alias": "delta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null,
+      "slot": 2,
+      "slot_id": "delta-2",
+      "suggested_name": "Ifverse Evolution",
+      "suggested_handle": "@IfverseEvolution",
+      "suggested_topic": "Alternate evolutionary paths"
     },
     {
       "account_number": 4,
@@ -49,7 +114,28 @@
       "display_name": null,
       "topic": null,
       "setup_status": "awaiting_verified_account_access",
-      "last_verified_at": null
+      "last_verified_at": null,
+      "slot": 1,
+      "slot_id": "epsilon-1",
+      "suggested_name": "Ifverse Future",
+      "suggested_handle": "@IfverseFuture",
+      "suggested_topic": "Future technology and societies"
+    },
+    {
+      "account_number": 4,
+      "owner_alias": "epsilon",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null,
+      "slot": 2,
+      "slot_id": "epsilon-2",
+      "suggested_name": "Ifverse Machines",
+      "suggested_handle": "@IfverseMachines",
+      "suggested_topic": "Robots, engineering and inventions"
     },
     {
       "account_number": 5,
@@ -60,7 +146,28 @@
       "display_name": null,
       "topic": null,
       "setup_status": "awaiting_verified_account_access",
-      "last_verified_at": null
+      "last_verified_at": null,
+      "slot": 1,
+      "slot_id": "zeta-1",
+      "suggested_name": "Ifverse Human",
+      "suggested_handle": "@IfverseHuman",
+      "suggested_topic": "Human body and abilities"
+    },
+    {
+      "account_number": 5,
+      "owner_alias": "zeta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null,
+      "slot": 2,
+      "slot_id": "zeta-2",
+      "suggested_name": "Ifverse Mind",
+      "suggested_handle": "@IfverseMind",
+      "suggested_topic": "Perception, memory and thought experiments"
     },
     {
       "account_number": 6,
@@ -71,7 +178,28 @@
       "display_name": null,
       "topic": null,
       "setup_status": "awaiting_verified_account_access",
-      "last_verified_at": null
+      "last_verified_at": null,
+      "slot": 1,
+      "slot_id": "eta-1",
+      "suggested_name": "Ifverse History",
+      "suggested_handle": "@IfverseHistory",
+      "suggested_topic": "Alternate historical outcomes"
+    },
+    {
+      "account_number": 6,
+      "owner_alias": "eta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null,
+      "slot": 2,
+      "slot_id": "eta-2",
+      "suggested_name": "Ifverse Civilizations",
+      "suggested_handle": "@IfverseCivilizations",
+      "suggested_topic": "Alternate development of societies"
     },
     {
       "account_number": 7,
@@ -82,7 +210,32 @@
       "display_name": null,
       "topic": null,
       "setup_status": "awaiting_verified_account_access",
-      "last_verified_at": null
+      "last_verified_at": null,
+      "slot": 1,
+      "slot_id": "theta-1",
+      "suggested_name": "Ifverse Worlds",
+      "suggested_handle": "@IfverseWorlds",
+      "suggested_topic": "Impossible worlds and rules"
+    },
+    {
+      "account_number": 7,
+      "owner_alias": "theta",
+      "channel_id": null,
+      "handle": null,
+      "url": null,
+      "display_name": null,
+      "topic": null,
+      "setup_status": "awaiting_verified_account_access",
+      "last_verified_at": null,
+      "slot": 2,
+      "slot_id": "theta-2",
+      "suggested_name": "Ifverse Myths",
+      "suggested_handle": "@IfverseMyths",
+      "suggested_topic": "Mythical beings in hypothetical worlds"
     }
-  ]
+  ],
+  "max_channels_per_account": 2,
+  "max_planned_channels": 14,
+  "plan_status": "proposed_names_no_channels_created",
+  "names_and_handles_availability": "unchecked"
 }
