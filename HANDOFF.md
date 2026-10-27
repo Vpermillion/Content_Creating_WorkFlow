@@ -1,5 +1,11 @@
 # Handoff
 
+## Current review: video-only cut — 2026-10-27, Asia/Ulaanbaatar
+
+Owner feedback: the still-image edit was too static; use moving internet clips only, tied to the narration. Completed: 18 ordered MP4 anime excerpts from 15 sources, zero still shots, retained 46.975-second narration and overlaid sentence captions. Saved over the same pilot identity: Library `libfile_9922c2295e588191b8a12be471c82e88`, filename `Ifverse_Anime_Video_Only.mp4`, version 2. [Sources, checks and reproduction](docs/VIDEO-ONLY-EDIT.md); input is `edits/alpha-anime-video.v2.json`. Earlier still/storyboard plans remain historical.
+
+All 33 tests pass. Complete output decode and video/audio coverage pass; one frame per shot inspected and all source excerpts show sampled motion. A new single-pass option avoids damaged intermediate MP4s encountered during assembly. Captions are scene-segment timing, not word alignment. Full listening/editorial review and source reuse permission review remain pending. No publication or authentication change occurred. Await the owner's explanation of their connection fix; do not restart Google recovery.
+
 ## Online-media edit — 2026-10-27 UTC
 
 The latest owner request is a story-matched internet-media edit of the Naruto pilot. Completed: 12 official online stills, 16 ordered shots, camera motion and overlaid sentence captions; original 46.975-second narration retained. Actual sourced moving-video count is zero. The saved pilot was revised in place: Library `libfile_9922c2295e588191b8a12be471c82e88`. Source plan, provenance and commands are in [docs/ONLINE-MEDIA-EDIT.md](docs/ONLINE-MEDIA-EDIT.md); QA and subtitles are in `artifacts/alpha-anime-online-v1.*`.

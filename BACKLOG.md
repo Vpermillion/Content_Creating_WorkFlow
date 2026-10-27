@@ -1,5 +1,11 @@
 # Backlog
 
+## Current review: video-only cut — 2026-10-27, Asia/Ulaanbaatar
+
+Owner feedback: the still-image edit was too static; use moving internet clips only, tied to the narration. Completed: 18 ordered MP4 anime excerpts from 15 sources, zero still shots, retained 46.975-second narration and overlaid sentence captions. Saved over the same pilot identity: Library `libfile_9922c2295e588191b8a12be471c82e88`, filename `Ifverse_Anime_Video_Only.mp4`, version 2. [Sources, checks and reproduction](docs/VIDEO-ONLY-EDIT.md); input is `edits/alpha-anime-video.v2.json`. Earlier still/storyboard plans remain historical.
+
+All 33 tests pass. Complete output decode and video/audio coverage pass; one frame per shot inspected and all source excerpts show sampled motion. A new single-pass option avoids damaged intermediate MP4s encountered during assembly. Captions are scene-segment timing, not word alignment. Full listening/editorial review and source reuse permission review remain pending. No publication or authentication change occurred. Await the owner's explanation of their connection fix; do not restart Google recovery.
+
 ## Latest: review the ordered online-media cut — 2026-10-27 UTC
 
 Completed the Naruto review edit with 12 sourced stills, 16 ordered shots, camera motion, retained narration and sentence captions. [Result, source plan and checks](docs/ONLINE-MEDIA-EDIT.md). Full listening/editorial review and permission review remain. Moving-video imports are tested but no online moving footage was included. The owner will explain the connection issue they solved; await that information before resuming OAuth work. No publication or account changes occurred.

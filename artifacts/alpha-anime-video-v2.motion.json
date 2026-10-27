@@ -1,0 +1,151 @@
+{
+  "sample_fps": 6,
+  "basis": "Grayscale source excerpt differences; supports observed source animation, not semantic correctness",
+  "all_excerpts_have_motion": true,
+  "shots": [
+    {
+      "scene": 0,
+      "asset": "18786249",
+      "sample_frames": 16,
+      "changed_pairs": 15,
+      "mean_pixel_change": 9.541,
+      "motion_observed": true
+    },
+    {
+      "scene": 0,
+      "asset": "pain-naruto-10",
+      "sample_frames": 16,
+      "changed_pairs": 15,
+      "mean_pixel_change": 7.013,
+      "motion_observed": true
+    },
+    {
+      "scene": 1,
+      "asset": "18787233",
+      "sample_frames": 19,
+      "changed_pairs": 18,
+      "mean_pixel_change": 22.516,
+      "motion_observed": true
+    },
+    {
+      "scene": 1,
+      "asset": "18786244",
+      "sample_frames": 19,
+      "changed_pairs": 18,
+      "mean_pixel_change": 5.047,
+      "motion_observed": true
+    },
+    {
+      "scene": 2,
+      "asset": "18786193",
+      "sample_frames": 13,
+      "changed_pairs": 12,
+      "mean_pixel_change": 10.476,
+      "motion_observed": true
+    },
+    {
+      "scene": 2,
+      "asset": "naruto-team-7-0",
+      "sample_frames": 13,
+      "changed_pairs": 12,
+      "mean_pixel_change": 5.34,
+      "motion_observed": true
+    },
+    {
+      "scene": 2,
+      "asset": "18786238",
+      "sample_frames": 13,
+      "changed_pairs": 12,
+      "mean_pixel_change": 6.833,
+      "motion_observed": true
+    },
+    {
+      "scene": 3,
+      "asset": "18786256",
+      "sample_frames": 17,
+      "changed_pairs": 16,
+      "mean_pixel_change": 27.588,
+      "motion_observed": true
+    },
+    {
+      "scene": 3,
+      "asset": "sakura-8",
+      "sample_frames": 17,
+      "changed_pairs": 16,
+      "mean_pixel_change": 7.037,
+      "motion_observed": true
+    },
+    {
+      "scene": 4,
+      "asset": "pain-naruto-1",
+      "sample_frames": 14,
+      "changed_pairs": 13,
+      "mean_pixel_change": 7.454,
+      "motion_observed": true
+    },
+    {
+      "scene": 4,
+      "asset": "sakura-0",
+      "sample_frames": 14,
+      "changed_pairs": 13,
+      "mean_pixel_change": 17.625,
+      "motion_observed": true
+    },
+    {
+      "scene": 5,
+      "asset": "18787217",
+      "sample_frames": 20,
+      "changed_pairs": 19,
+      "mean_pixel_change": 3.991,
+      "motion_observed": true
+    },
+    {
+      "scene": 5,
+      "asset": "18787221",
+      "sample_frames": 20,
+      "changed_pairs": 19,
+      "mean_pixel_change": 3.011,
+      "motion_observed": true
+    },
+    {
+      "scene": 6,
+      "asset": "pain-naruto-10",
+      "sample_frames": 13,
+      "changed_pairs": 12,
+      "mean_pixel_change": 9.296,
+      "motion_observed": true
+    },
+    {
+      "scene": 6,
+      "asset": "sakura-8",
+      "sample_frames": 13,
+      "changed_pairs": 12,
+      "mean_pixel_change": 10.094,
+      "motion_observed": true
+    },
+    {
+      "scene": 6,
+      "asset": "18786249",
+      "sample_frames": 13,
+      "changed_pairs": 12,
+      "mean_pixel_change": 10.7,
+      "motion_observed": true
+    },
+    {
+      "scene": 7,
+      "asset": "18787218",
+      "sample_frames": 16,
+      "changed_pairs": 11,
+      "mean_pixel_change": 3.088,
+      "motion_observed": true
+    },
+    {
+      "scene": 7,
+      "asset": "18787224",
+      "sample_frames": 16,
+      "changed_pairs": 15,
+      "mean_pixel_change": 6.943,
+      "motion_observed": true
+    }
+  ]
+}

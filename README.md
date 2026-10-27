@@ -1,5 +1,7 @@
 # What If video workspace
 
+The current Alpha anime review cut uses **moving internet clips only**: 18 shots, retained narration and overlaid captions. [Watch and reproduce the video-only cut](docs/VIDEO-ONLY-EDIT.md). Earlier still-edit notes below describe the previous version.
+
 ## Review the anime online-media edit
 
 The latest Alpha sample uses 12 online Naruto stills in 16 ordered shots with camera motion, original narration and overlaid captions. See [the video and reproducible source plan](docs/ONLINE-MEDIA-EDIT.md). A separate image/video import editor is implemented and tested; this actual cut uses stills only. Source-still reuse permission is unverified and publication remains disabled.

@@ -41,6 +41,21 @@ class ImportedMediaTests(unittest.TestCase):
         (self.assets/'still.png').write_bytes(b'changed')
         with self.assertRaisesRegex(ValueError,'provenance or checksum'):validated_inputs(self.plan,self.assets,self.audio)
 
+    def test_video_only_requirement_and_credit_controls_are_enforced(self):
+        plan=copy.deepcopy(self.plan);plan['video_only']=True
+        with self.assertRaisesRegex(ValueError,'Video-only'):validated_inputs(plan,self.assets,self.audio)
+        plan=copy.deepcopy(self.plan);plan['source_credit']='Bad{control}'
+        with self.assertRaisesRegex(ValueError,'source credit'):validated_inputs(plan,self.assets,self.audio)
+
+    def test_single_pass_video_cut_has_complete_tracks_and_no_intermediate_mp4s(self):
+        plan=copy.deepcopy(self.plan);plan.update(video_only=True,single_pass=True,source_credit='GENERATED VIDEO FIXTURE')
+        plan['scenes'][0]['shots'][0]['asset']='movie'
+        result=render_edit(plan,self.assets,self.audio,self.root/'direct')
+        info=media.probe(result)
+        for stream in info['streams']:
+            self.assertAlmostEqual(float(stream['duration']),2,delta=.1)
+        self.assertEqual(list(result.parent.glob('shot-*.mp4')),[])
+
     def test_a_shot_truncated_before_concat_is_repaired_once(self):
         original=media.probe
         calls=0

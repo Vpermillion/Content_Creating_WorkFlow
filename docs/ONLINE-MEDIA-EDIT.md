@@ -1,5 +1,7 @@
 # Online-media anime review edit
 
+Historical still-edit record. The owner requested a moving-clips-only revision; the current output and source plan are in [VIDEO-ONLY-EDIT.md](VIDEO-ONLY-EDIT.md).
+
 Recorded 2026-10-27 UTC, branch `codex/youtube-oauth`.
 
 The owner requested internet images and videos matched to the story, ordered editing and overlaid captions. The resulting review cut uses **12 distinct official Naruto stills in 16 ordered shots**, subtle camera motion and sentence captions over the retained 46.975-second narration. It contains **no downloaded moving video footage**. Existing canon scenes illustrate an invented alternate timeline; they do not depict an actual episode where Naruto joins the Akatsuki.

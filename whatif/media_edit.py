@@ -9,7 +9,7 @@ import urllib.request
 from . import media
 from .store import atomic_json, digest
 
-DOWNLOAD_HOSTS = {"cmsapi-frontend.naruto-official.com"}
+DOWNLOAD_HOSTS = {"cmsapi-frontend.naruto-official.com", "media.tenor.com"}
 
 
 def local_asset(root, relative):
@@ -52,6 +52,9 @@ def validated_inputs(plan, root, narration):
     if w not in {360, 720, 1080} or w * 16 != h * 9 or fps not in {24, 30}:
         raise ValueError("Unsupported vertical profile")
     assets = {}
+    credit = plan.get('source_credit', 'SOURCE STILLS: NARUTO OFFICIAL')
+    if not isinstance(credit, str) or len(credit) > 70 or any(c in credit for c in '{}<>\\\n\r'):
+        raise ValueError('Invalid source credit')
     for asset in plan["assets"]:
         if asset["id"] in assets or asset["type"] not in {"image", "video"}:
             raise ValueError("Invalid or duplicate media asset")
@@ -70,6 +73,8 @@ def validated_inputs(plan, root, narration):
         for shot in scene["shots"]:
             if shot["asset"] not in assets or not 0 <= shot.get("focus_x", .5) <= 1:
                 raise ValueError("Unknown asset or invalid framing")
+            if plan.get('video_only') and assets[shot['asset']]['type'] != 'video':
+                raise ValueError('Video-only edit cannot include still images')
             if shot.get("fit", "cover") not in {"cover", "contain"}:
                 raise ValueError("Unknown framing mode")
             if not shot.get("match_reason"):
@@ -101,7 +106,7 @@ def write_captions(plan, output, w, h):
         header+=f"Style: {name},DejaVu Sans,{size*scale:.1f},{color},&H000000FF,&H00111111,&H80000000,{bold},0,0,0,100,100,0,0,1,2,1,{alignment},{int(48*scale)},{int(48*scale)},{int(margin*scale)},1\n"
     total=at(plan['scenes'][-1]['end'])
     events.extend([f"Dialogue: 1,0:00:00.00,{total},Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF",
-                   f"Dialogue: 1,0:00:00.00,{total},Credit,,0,0,0,,SOURCE STILLS: NARUTO OFFICIAL"])
+                   f"Dialogue: 1,0:00:00.00,{total},Credit,,0,0,0,,{plan.get('source_credit', 'SOURCE STILLS: NARUTO OFFICIAL')}"])
     (output/'captions.ass').write_text(header+"\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"+'\n'.join(events)+'\n')
     (output/'captions.srt').write_text('\n'.join(srt))
 
@@ -116,6 +121,8 @@ def render_edit(plan, root, narration, output):
     write_captions(plan,output,w,h)
     shots=[]
     commands=[]
+    direct_inputs=[]
+    direct_graphs=[]
     for scene in plan['scenes']:
         count=len(scene['shots'])
         for i,shot in enumerate(scene['shots']):
@@ -142,16 +149,24 @@ def render_edit(plan, root, narration, output):
                 graph+=f",fps={fps},setpts=PTS-STARTPTS,setsar=1[out]"
             command=[*inputs,'-filter_complex',graph,'-map','[out]','-frames:v',str(frames),'-an',
                      '-c:v','libx264','-threads','2','-preset','veryfast','-crf','21','-pix_fmt','yuv420p',name]
-            media.ffmpeg(command,output)
-            commands.append(command)
-            video=next(s for s in media.probe(output/name)['streams'] if s['codec_type']=='video')
-            if int(video.get('nb_frames',0))!=frames:raise ValueError('Incomplete ordered shot')
+            if plan.get('single_pass'):
+                direct_inputs.extend(['-threads','1',*inputs])
+                direct=graph.replace('[0:v]',f'[{number}:v]')
+                for label in ['b','f','b2','f2']:
+                    direct=direct.replace(f'[{label}]',f'[{label}_{number}]')
+                direct=direct.replace('[out]',f',trim=end_frame={frames},setpts=PTS-STARTPTS[v{number}]')
+                direct_graphs.append(direct)
+            else:
+                media.ffmpeg(command,output)
+                commands.append(command)
+                video=next(s for s in media.probe(output/name)['streams'] if s['codec_type']=='video')
+                if int(video.get('nb_frames',0))!=frames:raise ValueError('Incomplete ordered shot')
             shots.append({**shot,'file':name,'start':start,'end':end,'frames':frames})
     # Recheck every local file immediately before concatenation. A successful
     # command and earlier probe do not establish that the file is still valid.
     # Repair a deterministic local shot once, then fail closed if still invalid.
     repaired=[]
-    for i,shot in enumerate(shots):
+    for i,shot in enumerate([] if plan.get('single_pass') else shots):
         def complete():
             try:
                 v=next(s for s in media.probe(output/shot['file'])['streams'] if s['codec_type']=='video')
@@ -163,9 +178,14 @@ def render_edit(plan, root, narration, output):
             if not complete():raise ValueError('Shot repair failed; refusing a partial edit')
     (output/'shots.txt').write_text('\n'.join("file '"+s['file']+"'" for s in shots))
     total=plan['scenes'][-1]['end']
-    media.ffmpeg(['-f','concat','-safe','1','-i','shots.txt','-i',str(narration),'-vf','ass=captions.ass',
-                  '-af','alimiter=limit=0.89','-t',str(total),'-c:v','libx264','-threads','2','-preset','veryfast',
-                  '-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-movflags','+faststart','video.mp4'],output)
+    encoding=['-af','alimiter=limit=0.89','-t',str(total),'-c:v','libx264','-threads','2','-preset','veryfast',
+              '-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-movflags','+faststart','video.mp4']
+    if plan.get('single_pass'):
+        direct_graphs.append(''.join(f'[v{i}]' for i in range(len(shots)))+f'concat=n={len(shots)}:v=1:a=0,ass=captions.ass[edited]')
+        media.ffmpeg(['-filter_complex_threads','1',*direct_inputs,'-i',str(narration),
+                      '-filter_complex',';'.join(direct_graphs),'-map','[edited]','-map',f'{len(shots)}:a',*encoding],output)
+    else:
+        media.ffmpeg(['-f','concat','-safe','1','-i','shots.txt','-i',str(narration),'-vf','ass=captions.ass',*encoding],output)
     info=media.probe(output/'video.mp4')
     video=next(s for s in info['streams'] if s['codec_type']=='video')
     audio=next(s for s in info['streams'] if s['codec_type']=='audio')
@@ -176,6 +196,8 @@ def render_edit(plan, root, narration, output):
     report={'automated_pass':all(checks.values()),'checks':checks,'duration_seconds':float(info['format']['duration']),
             'shots':len(shots),'image_shots':sum(assets[s['asset']]['type']=='image' for s in shots),
             'video_shots':sum(assets[s['asset']]['type']=='video' for s in shots),'sha256':digest(output/'video.mp4'),
+            'video_only':all(assets[s['asset']]['type']=='video' for s in shots),
+            'single_pass':bool(plan.get('single_pass')),
             'repaired_local_shots':repaired,
             'publishing_enabled':False,'rights_review':'Source permissions not verified; commentary review cut',
             'caption_timing':'Original measured narration scene boundaries; not word-aligned'}
@@ -191,7 +213,7 @@ def main():
     parser.add_argument('--assets-root',required=True)
     parser.add_argument('--narration')
     parser.add_argument('--output')
-    parser.add_argument('--fetch',action='store_true',help='Download the checksum-pinned source images from the approved publisher')
+    parser.add_argument('--fetch',action='store_true',help='Download checksum-pinned media from the approved hosts')
     args=parser.parse_args()
     plan=json.loads(Path(args.plan).read_text())
     if args.fetch:fetch_assets(plan,args.assets_root)
