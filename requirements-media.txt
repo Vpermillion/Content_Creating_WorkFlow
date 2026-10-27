@@ -1,0 +1,2 @@
+# Optional downloader. FFmpeg/ffprobe are separate system dependencies.
+yt-dlp==2026.10.26

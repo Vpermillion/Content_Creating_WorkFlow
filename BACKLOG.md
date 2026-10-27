@@ -1,5 +1,11 @@
 # Backlog
 
+## Reusable media tools and workflow — 2026-10-27, Asia/Ulaanbaatar
+
+The owner clarified that tools should be reusable through this project and a personal workflow skill, including GitHub orchestration. Added labeled YouTube/Tenor search, bounded verified downloads, persistent SHA-256 footage catalog, cached keyword results/failure cooldown, non-AI FFmpeg enhancement and cached single-pass draft builds. `docs/MEDIA-TOOLS.md` is the compact operator guide. `docs/CURRENT.md` now supplies the short startup checkpoint; historical reports remain preserved and are loaded when relevant.
+
+All 43 tests passed. Real Tenor search/download and repeat-cache reuse succeeded; a real 4.6-second clip was enhanced from 640x480 to 960x720 with unchanged duration/no-audio status and a sampled frame inspected. Enhancement does not claim restored detail. The GitHub workflow and fixed-data request adapter are implemented, with YAML/triggers validated locally. Jobs require a user-owned self-hosted Linux runner labeled ifverse-media; no online runner or completed GitHub request run has been verified. No job was submitted merely to save the source. No public posting, OAuth change or merge occurred.
+
 ## Current review: video-only cut — 2026-10-27, Asia/Ulaanbaatar
 
 Owner feedback: the still-image edit was too static; use moving internet clips only, tied to the narration. Completed: 18 ordered MP4 anime excerpts from 15 sources, zero still shots, retained 46.975-second narration and overlaid sentence captions. Saved over the same pilot identity: Library `libfile_9922c2295e588191b8a12be471c82e88`, filename `Ifverse_Anime_Video_Only.mp4`, version 2. [Sources, checks and reproduction](docs/VIDEO-ONLY-EDIT.md); input is `edits/alpha-anime-video.v2.json`. Earlier still/storyboard plans remain historical.

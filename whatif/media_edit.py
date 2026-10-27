@@ -44,6 +44,9 @@ def fetch_assets(plan, root):
 
 
 def validated_inputs(plan, root, narration):
+    from .media_tools import PRESETS
+    if plan.get('enhancement', 'off') not in PRESETS:
+        raise ValueError('Unknown enhancement preset')
     if plan.get("schema_version") != 1 or not 1 <= len(plan.get("scenes", [])) <= 30:
         raise ValueError("Invalid edit plan")
     if digest(narration) != plan["narration_sha256"]:
@@ -112,6 +115,7 @@ def write_captions(plan, output, w, h):
 
 
 def render_edit(plan, root, narration, output):
+    from .media_tools import PRESETS
     narration = Path(narration).resolve()
     assets,w,h,fps = validated_inputs(plan,root,narration)
     output = Path(output).resolve()
@@ -138,6 +142,11 @@ def render_edit(plan, root, narration, output):
                        f"[f]scale={w}:{int(h*.73)}:force_original_aspect_ratio=decrease[f2];[b2][f2]overlay=(W-w)/2:(H-h)/2")
             else:
                 graph=f"[0:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h}:x='(iw-ow)*{focus}':y='(ih-oh)*0.45'"
+            enhancement = plan.get('enhancement', 'off')
+            if enhancement != 'off':
+                pre, post = PRESETS[enhancement]
+                graph = graph.replace('[0:v]', '[0:v]' + pre)
+                graph = graph.replace(':force_original_aspect_ratio=', ':flags=lanczos:force_original_aspect_ratio=') + post
             if asset['type']=='image':
                 graph+=f",zoompan=z='min(1.0+on*0.0005,1.08)':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d={frames}:s={w}x{h}:fps={fps},setsar=1[out]"
                 inputs=['-i',str(asset['path'])]
@@ -198,6 +207,7 @@ def render_edit(plan, root, narration, output):
             'video_shots':sum(assets[s['asset']]['type']=='video' for s in shots),'sha256':digest(output/'video.mp4'),
             'video_only':all(assets[s['asset']]['type']=='video' for s in shots),
             'single_pass':bool(plan.get('single_pass')),
+            'enhancement':plan.get('enhancement', 'off'),
             'repaired_local_shots':repaired,
             'publishing_enabled':False,'rights_review':'Source permissions not verified; commentary review cut',
             'caption_timing':'Original measured narration scene boundaries; not word-aligned'}

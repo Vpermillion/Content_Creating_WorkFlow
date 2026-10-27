@@ -1,5 +1,7 @@
 # What If video workspace
 
+Use [the current checkpoint](docs/CURRENT.md) to resume with minimal context. [Reusable media tools and GitHub workflow](docs/MEDIA-TOOLS.md) provide labeled search/download, a verified footage cache, mild non-AI enhancement and cached draft builds.
+
 The current Alpha anime review cut uses **moving internet clips only**: 18 shots, retained narration and overlaid captions. [Watch and reproduce the video-only cut](docs/VIDEO-ONLY-EDIT.md). Earlier still-edit notes below describe the previous version.
 
 ## Review the anime online-media edit

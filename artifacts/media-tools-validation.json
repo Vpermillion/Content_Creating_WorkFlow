@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "tests_passed": 43,
+  "tenor_search": "verified_live",
+  "tenor_download": "verified_live",
+  "repeat_collection": "verified_cache_hit",
+  "youtube_keyword_search": "verified_live",
+  "youtube_media_download": "not_reverified",
+  "enhancement": {
+    "input_dimensions": [
+      640,
+      480
+    ],
+    "output_dimensions": [
+      960,
+      720
+    ],
+    "duration_seconds": 4.6,
+    "audio_present": false,
+    "original_preserved": true,
+    "detail_restoration_claimed": false
+  },
+  "workflow_yaml": "validated_locally",
+  "github_runner_online": "unverified",
+  "github_run": "not_submitted",
+  "no_public_upload": true
+}

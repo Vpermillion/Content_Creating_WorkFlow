@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "operation": "collect",
+  "provider": "tenor",
+  "label": "Naruto running",
+  "min_height": 360
+}
