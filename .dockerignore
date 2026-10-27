@@ -6,3 +6,6 @@ artifacts
 backups
 __pycache__
 attachments
+private
+client_secret*.json
+youtube-token*.json

@@ -1,5 +1,42 @@
 # Backlog
 
+## GitHub-hosted trial — 2026-10-27, Asia/Ulaanbaatar
+
+The owner asked to test hosted execution and compare usage. The corrected media workflow now runs on ubuntu-24.04, restores/saves footage/tool caches, and supports a timed preview operation. GitHub run 40491183923 succeeded: job 36 seconds, media work 3.845 seconds, cached lookup 0.002 seconds. Tooling/footage caches saved; cross-run restoration not benchmarked. Zero model calls inside the worker; this chat still uses allowance and its percentage is inaccessible to the agent. The first hosted trial failed after six seconds due to missing FFmpeg; the pinned installer fixed it. All 47 local tests and actionlint passed. Full evidence: artifacts/hosted-media-trial-20261027.json and docs/MEDIA-TOOLS.md. No publication, OAuth change or merge.
+
+## Reusable media tools and workflow — 2026-10-27, Asia/Ulaanbaatar
+
+The owner clarified that tools should be reusable through this project and a personal workflow skill, including GitHub orchestration. Added labeled YouTube/Tenor search, bounded verified downloads, persistent SHA-256 footage catalog, cached keyword results/failure cooldown, non-AI FFmpeg enhancement and cached single-pass draft builds. `docs/MEDIA-TOOLS.md` is the compact operator guide. `docs/CURRENT.md` now supplies the short startup checkpoint; historical reports remain preserved and are loaded when relevant.
+
+All 43 tests passed. Real Tenor search/download and repeat-cache reuse succeeded; a real 4.6-second clip was enhanced from 640x480 to 960x720 with unchanged duration/no-audio status and a sampled frame inspected. Enhancement does not claim restored detail. The GitHub workflow and fixed-data request adapter are implemented, with YAML/triggers validated locally. Jobs require a user-owned self-hosted Linux runner labeled ifverse-media; no online runner or completed GitHub request run has been verified. No job was submitted merely to save the source. No public posting, OAuth change or merge occurred.
+
+## Current review: video-only cut — 2026-10-27, Asia/Ulaanbaatar
+
+Owner feedback: the still-image edit was too static; use moving internet clips only, tied to the narration. Completed: 18 ordered MP4 anime excerpts from 15 sources, zero still shots, retained 46.975-second narration and overlaid sentence captions. Saved over the same pilot identity: Library `libfile_9922c2295e588191b8a12be471c82e88`, filename `Ifverse_Anime_Video_Only.mp4`, version 2. [Sources, checks and reproduction](docs/VIDEO-ONLY-EDIT.md); input is `edits/alpha-anime-video.v2.json`. Earlier still/storyboard plans remain historical.
+
+All 33 tests pass. Complete output decode and video/audio coverage pass; one frame per shot inspected and all source excerpts show sampled motion. A new single-pass option avoids damaged intermediate MP4s encountered during assembly. Captions are scene-segment timing, not word alignment. Full listening/editorial review and source reuse permission review remain pending. No publication or authentication change occurred. Await the owner's explanation of their connection fix; do not restart Google recovery.
+
+## Latest: review the ordered online-media cut — 2026-10-27 UTC
+
+Completed the Naruto review edit with 12 sourced stills, 16 ordered shots, camera motion, retained narration and sentence captions. [Result, source plan and checks](docs/ONLINE-MEDIA-EDIT.md). Full listening/editorial review and permission review remain. Moving-video imports are tested but no online moving footage was included. The owner will explain the connection issue they solved; await that information before resuming OAuth work. No publication or account changes occurred.
+
+## Latest priorities — first sample completed
+
+- Review `docs/ALPHA-ANIME-PILOT.md` and the saved sample. Tune narration/pronunciation and visual style from actual review; nothing is publish-ready.
+- Resolve the offline authorized Desktop Commander agent, then inspect/setup the real Google Desktop client and reachable callback through the supported local workflow. No automatic login bypass or repeat recovery loop.
+- Correct the generic Science draft hashtags/description for anime before any authorized delivery.
+- Preserve the new sample private-state/raw-audio backup on a verified user-owned durable route before claiming cross-host resume. Retain the original science state separately.
+- The render-tail integrity defect is fixed and covered by regression tests; 27 tests passed. No further broad test reruns are needed without a new change/failure.
+
+## Current next step: repository-owned YouTube OAuth
+
+Owner may use a local agent; project/Desktop-client status is unknown to the owner. Follow `prompts/youtube-connect-local.md` to inspect existing Google setup and verify a local callback before consent. Do not infer that the proposed runtime is already available or that a missing cloud file means no project exists elsewhere.
+
+Latest runtime check: Alpha anime remains `not_connected`. Missing Desktop client, Google endpoint proxy 403, and `callback_unreachable` prevent consent. Optional dependencies are installed and 23 tests passed; original registry preserved. Resolve the private client and callback-capable owner runtime, then apply saved network requirements if using this cloud task. See `docs/YOUTUBE-CONNECTION-RESULT.md`; do not start uploads or other-account setup while the first connection is unverified.
+
+Read `docs/YOUTUBE.md` and `prompts/youtube-connect.md` on `codex/youtube-oauth`. Connection code is implemented and offline-tested; configure the real Google Desktop client and reachable loopback callback, obtain the owner's read-only consent for the intended first Alpha channel, then live-check and bind the actual ID. OAuth alone does not implement uploading. Next implement a separately authorized private-test upload adapter with resumable delivery recovery and receipts. Other accounts remain deferred.
+
+
 1. Verify cited NASA/NIH facts when network settings apply; replace inaccurate or unsupported prose with new content versions.
 2. Complete full visual/listening/editorial review; tune narration and captions from actual feedback.
 3. Connect private durable storage and scheduled private backups, including n8n volume and encryption key.
@@ -46,3 +83,5 @@ The owner slowed the rollout and selected Alpha for an initial example: `ifverse
 Registry schema version 3 records Alpha's three active planning slots and preserves the other accounts' proposals as deferred. `ifverse_marvel` is a suggested name for the requested third category. The owner's Hollywood/American parenthetical may imply a broader entertainment scope: if so, `ifverse_hollywood` is a suggested alternative, not an approved rename. Do not treat Marvel as a label for all American movies. Names/handles remain unchecked; verified channel fields stay null.
 
 Next editorial example: one anime what-if video, proposed topic 'What if Naruto joined the Akatsuki?' Test one video before expanding. This topic is a proposal, not an approved script or publication. Alpha's Google identity-verification blocker remains unresolved. No sign-in retried, channel created, public post made or production job regenerated. JSON/unique slot IDs/three active slots checked; source behavior unchanged, no media tests rerun.
+
+

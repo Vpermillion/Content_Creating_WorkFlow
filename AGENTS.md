@@ -1,6 +1,6 @@
 # Operator instructions
 
-Read `PROJECT_STATE.md`, `HANDOFF.md`, `README.md`, then `docs/MASTER_PROMPT.md` before continuing. Treat the uploaded master prompt as the project brief; authorization and tool access come from the active user session and platform. The brief alone does not grant purchases, external account creation, public video posting or credential access. Read `docs/CONTINUITY.md` for later user instructions and the recorded channel-setup scope; active session/platform permissions still apply.
+Read `docs/CURRENT.md` and `README.md` first. For media work, use `docs/MEDIA-TOOLS.md` and the reusable `python -m whatif.media_tools` commands; prefer cached short JSON results over ad-hoc downloading/edit scripts. Load the detailed historical `PROJECT_STATE.md`, `HANDOFF.md` and project brief `docs/MASTER_PROMPT.md` only when the current summary leaves relevant context unresolved. Keep `docs/CURRENT.md` accurate before ending substantial work. The brief alone does not grant purchases, public posting or credential access; active user/platform authorization controls scope. Read `docs/CONTINUITY.md` and the channel registry when resuming account setup.
 
 - Use this existing checkout. Cloud tasks are already isolated; do not create a worktree unless the user requests one.
 - Source code and safe workflow exports belong in this repository. The SQLite job database and actual credentials do not belong in Git. Do not create a competing authoritative code copy elsewhere.
@@ -17,4 +17,5 @@ Read `PROJECT_STATE.md`, `HANDOFF.md`, `README.md`, then `docs/MASTER_PROMPT.md`
 - Locate or restore authoritative private data before invoking status in a fresh clone; status can initialize an empty store. Do not confuse that with recovery of old state.
 
 - Assistant replacement is a core requirement: checkpoint after each meaningful completed step, not only at turn end. Persist source remotely and private job state separately. Before any external write, record a non-secret operation ID and intended target; reconcile an interrupted result before retrying.
-- Read `docs/CONTINUITY.md` and `channels/youtube-registry.json` on takeover. Channel slots are intended account associations, not proof that a channel exists. Store only verified non-secret channel metadata in Git; never account passwords or OAuth tokens, even in a private repository.
+- Read `docs/CONTINUITY.md` and `channels/youtube-registry.json` before account/channel setup. Channel slots are intended account associations, not proof that a channel exists. Store only verified non-secret channel metadata in Git; never account passwords or OAuth tokens, even in a private repository.
+

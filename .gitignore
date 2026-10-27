@@ -8,3 +8,7 @@ __pycache__/
 *.db
 backups/
 private/
+client_secret*.json
+youtube-token*.json
+channels/.youtube-registry.lock
+

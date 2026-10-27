@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "operation_id": "alpha-anime-video-v2-20261027",
+  "status": "saved",
+  "library_file_id": "libfile_9922c2295e588191b8a12be471c82e88",
+  "file_id": "file_00000000dcb882099ffad98a70759ead",
+  "library_version": 2,
+  "filename": "Ifverse_Anime_Video_Only.mp4",
+  "size_bytes": 8828870,
+  "sha256": "ab34a0d875bd719503d0b8b085f26ef6d47922abb2414674a5c8acd3bfa65d1c",
+  "plan": "edits/alpha-anime-video.v2.json",
+  "video_shots": 18,
+  "image_shots": 0,
+  "unique_source_clips": 15,
+  "published": false
+}

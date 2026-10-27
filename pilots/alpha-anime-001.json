@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "alpha-anime-001",
+  "channel_id": "alpha-anime-provisional",
+  "language": "en",
+  "title": "What if Naruto joined the Akatsuki?",
+  "profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 30,
+    "max_seconds": 75
+  },
+  "platforms": [
+    "youtube"
+  ],
+  "assumptions": [
+    "Fan-created alternate timeline set during the Shippuden era while Naruto hosts the Nine Tails; not a canon summary or official release.",
+    "Assume a temporary alliance is offered despite Akatsuki's conflicting objective. Deal, missions, demands and choices are invented for this scenario.",
+    "Channel ownership and final handle remain unverified. This internal channel label is not a YouTube channel ID."
+  ],
+  "sources": [
+    {
+      "url": "https://naruto-official.com/en/anime/naruto2",
+      "publisher": "NARUTO official site — Shippuden overview",
+      "supports": "Akatsuki seeks the tailed beasts; the Leaf opposes its actions.",
+      "checked_at": "2026-10-26",
+      "access_status": "Read official overview through web source; no episode footage or images copied."
+    },
+    {
+      "url": "https://naruto-official.com/en/news/01_1896",
+      "publisher": "NARUTO official site — Kurama database",
+      "supports": "Kurama, the Nine Tails, was sealed inside Naruto.",
+      "checked_at": "2026-10-26",
+      "access_status": "Read official database entry; only the historical premise is used, not later Boruto outcomes."
+    }
+  ],
+  "scenes": [
+    {
+      "visual": "anime-intro",
+      "label": "THE WRONG SIDE OF THE STORY",
+      "text": "What if Naruto joined the Akatsuki? The first surprise is that joining would not make him safe."
+    },
+    {
+      "visual": "anime-target",
+      "label": "THE RECRUIT IS ALSO THE TARGET",
+      "text": "He carries the Nine Tails, and the Akatsuki wants the tailed beasts. Their new recruit is also their target."
+    },
+    {
+      "visual": "anime-deal",
+      "label": "ONE DANGEROUS DEAL",
+      "text": "In this alternate timeline, Naruto offers a deal: his help, in exchange for protecting his friends."
+    },
+    {
+      "visual": "anime-mission",
+      "label": "TRUST COMES WITH A PRICE",
+      "text": "At first, the missions give him the respect he always wanted. But every favor comes with a price."
+    },
+    {
+      "visual": "anime-demand",
+      "label": "THEN COMES THE DEMAND",
+      "text": "The breaking point arrives when his new allies demand that he turn against the Hidden Leaf."
+    },
+    {
+      "visual": "anime-refuse",
+      "label": "HE REFUSES",
+      "text": "He refuses. Now both sides question his loyalty, and the deal that protected his friends falls apart."
+    },
+    {
+      "visual": "anime-choice",
+      "label": "CHOOSE A SIDE",
+      "text": "Naruto has to choose: prove himself to the organization, or protect the people who still believe in him."
+    },
+    {
+      "visual": "anime-ending",
+      "label": "WHO CHANGES WHOM?",
+      "text": "Could he change the Akatsuki from inside? Or would joining them change Naruto first?"
+    }
+  ]
+}

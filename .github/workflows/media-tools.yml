@@ -1,0 +1,112 @@
+name: Ifverse media tools
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        type: choice
+        options: [find, search, collect, enhance, build, preview]
+        default: find
+      label:
+        type: string
+        default: Naruto running
+      provider:
+        type: choice
+        options: [tenor, youtube]
+        default: tenor
+      asset_id:
+        type: string
+        default: ''
+      story_path:
+        type: string
+        default: ''
+      enhancement:
+        type: choice
+        options: [anime-light, clean-light, 'off']
+        default: anime-light
+  push:
+    branches: [codex/youtube-oauth]
+    paths: ['media-requests/*.json']
+permissions:
+  contents: read
+concurrency:
+  group: ifverse-hosted-media-bank
+  cancel-in-progress: false
+jobs:
+  media:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      IFVERSE_MEDIA_BANK: private/hosted-media-bank
+      IFVERSE_MEDIA_OUTPUT: private/hosted-media-output
+      MEDIA_OPERATION: ${{ inputs.operation }}
+      MEDIA_LABEL: ${{ inputs.label }}
+      MEDIA_PROVIDER: ${{ inputs.provider }}
+      MEDIA_ASSET_ID: ${{ inputs.asset_id }}
+      MEDIA_STORY_PATH: ${{ inputs.story_path }}
+      MEDIA_ENHANCEMENT: ${{ inputs.enhancement }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - name: Restore FFmpeg tooling
+        id: tools-cache
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: private/hosted-tools
+          key: ${{ runner.os }}-ifverse-ffmpeg-cd6219478e04
+      - name: Install verified FFmpeg tooling
+        id: bootstrap
+        timeout-minutes: 3
+        run: python3 scripts/bootstrap_media_tools.py
+      - name: Save FFmpeg tooling
+        if: steps.tools-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6.1.0
+        with:
+          path: private/hosted-tools
+          key: ${{ steps.tools-cache.outputs.cache-primary-key }}
+      - name: Check media dependencies
+        shell: bash
+        run: |
+          python3 --version
+          ffmpeg -version
+          ffprobe -version
+      - name: Restore footage cache
+        id: bank-cache
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: private/hosted-media-bank
+          key: ${{ runner.os }}-ifverse-tools-v1-${{ hashFiles('whatif/media_tools.py', 'whatif/media_edit.py', 'requirements-media.txt') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ runner.os }}-ifverse-tools-v1-${{ hashFiles('whatif/media_tools.py', 'whatif/media_edit.py', 'requirements-media.txt') }}-
+      - name: Install optional YouTube downloader
+        if: inputs.provider == 'youtube' || github.event_name == 'push'
+        run: python3 -m pip install --disable-pip-version-check -q -r requirements-media.txt
+      - name: Run committed request
+        if: github.event_name == 'push'
+        shell: bash
+        env:
+          IFVERSE_RESTORED_CACHE: ${{ steps.bank-cache.outputs.cache-matched-key }}
+        run: python3 scripts/run_media_workflow.py --from-commit
+      - name: Run manual request
+        if: github.event_name == 'workflow_dispatch'
+        shell: bash
+        env:
+          IFVERSE_RESTORED_CACHE: ${{ steps.bank-cache.outputs.cache-matched-key }}
+        run: python3 scripts/run_media_workflow.py
+      - name: Save footage cache
+        if: success()
+        uses: actions/cache/save@v6.1.0
+        with:
+          path: private/hosted-media-bank
+          key: ${{ steps.bank-cache.outputs.cache-primary-key }}
+      - name: Save compact result and review outputs
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: ifverse-media-result
+          path: private/hosted-media-output/
+          retention-days: 7
+          if-no-files-found: warn
+# Bounded on-demand project-tool test; no scheduler, account login or public upload.
+
