@@ -1,5 +1,9 @@
 # Backlog
 
+## Latest: review the ordered online-media cut — 2026-10-27 UTC
+
+Completed the Naruto review edit with 12 sourced stills, 16 ordered shots, camera motion, retained narration and sentence captions. [Result, source plan and checks](docs/ONLINE-MEDIA-EDIT.md). Full listening/editorial review and permission review remain. Moving-video imports are tested but no online moving footage was included. The owner will explain the connection issue they solved; await that information before resuming OAuth work. No publication or account changes occurred.
+
 ## Latest priorities — first sample completed
 
 - Review `docs/ALPHA-ANIME-PILOT.md` and the saved sample. Tune narration/pronunciation and visual style from actual review; nothing is publish-ready.
@@ -63,4 +67,5 @@ The owner slowed the rollout and selected Alpha for an initial example: `ifverse
 Registry schema version 3 records Alpha's three active planning slots and preserves the other accounts' proposals as deferred. `ifverse_marvel` is a suggested name for the requested third category. The owner's Hollywood/American parenthetical may imply a broader entertainment scope: if so, `ifverse_hollywood` is a suggested alternative, not an approved rename. Do not treat Marvel as a label for all American movies. Names/handles remain unchecked; verified channel fields stay null.
 
 Next editorial example: one anime what-if video, proposed topic 'What if Naruto joined the Akatsuki?' Test one video before expanding. This topic is a proposal, not an approved script or publication. Alpha's Google identity-verification blocker remains unresolved. No sign-in retried, channel created, public post made or production job regenerated. JSON/unique slot IDs/three active slots checked; source behavior unchanged, no media tests rerun.
+
 

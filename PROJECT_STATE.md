@@ -1,5 +1,11 @@
 # Project state — 2026-10-26
 
+## Online-media edit — 2026-10-27 UTC
+
+The latest owner request is a story-matched internet-media edit of the Naruto pilot. Completed: 12 official online stills, 16 ordered shots, camera motion and overlaid sentence captions; original 46.975-second narration retained. Actual sourced moving-video count is zero. The saved pilot was revised in place: Library `libfile_9922c2295e588191b8a12be471c82e88`. Source plan, provenance and commands are in [docs/ONLINE-MEDIA-EDIT.md](docs/ONLINE-MEDIA-EDIT.md); QA and subtitles are in `artifacts/alpha-anime-online-v1.*`.
+
+All 31 tests pass; final output fully decodes with complete video/audio coverage. Sampled frames inspected; full listening/editorial review pending. Copyrighted source-still reuse permission is unverified; no publication enabled. Preserve private narration and restore the matching hash before rendering on another host. The owner reports having found the prior connection issue and will explain later. No OAuth/channel changes were attempted in this edit; await their information instead of restarting authentication.
+
 ## Autonomous continuation and first anime draft — 2026-10-26
 
 The owner authorized continued setup without routine questions. Actual account access remains blocked: the only linked Desktop Commander agent reports offline, no Google/YouTube credential bindings or Desktop client are present in this runtime's documented private paths, and no authorized Google Cloud setup connection was found. No failed Google login/recovery was retried, no project/client created and no OAuth consent/token exchange completed. These are access prerequisites, not missing software packages.
@@ -128,4 +134,5 @@ The owner slowed the rollout and selected Alpha for an initial example: `ifverse
 Registry schema version 3 records Alpha's three active planning slots and preserves the other accounts' proposals as deferred. `ifverse_marvel` is a suggested name for the requested third category. The owner's Hollywood/American parenthetical may imply a broader entertainment scope: if so, `ifverse_hollywood` is a suggested alternative, not an approved rename. Do not treat Marvel as a label for all American movies. Names/handles remain unchecked; verified channel fields stay null.
 
 Next editorial example: one anime what-if video, proposed topic 'What if Naruto joined the Akatsuki?' Test one video before expanding. This topic is a proposal, not an approved script or publication. Alpha's Google identity-verification blocker remains unresolved. No sign-in retried, channel created, public post made or production job regenerated. JSON/unique slot IDs/three active slots checked; source behavior unchanged, no media tests rerun.
+
 

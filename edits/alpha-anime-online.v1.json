@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "id": "alpha-anime-online-v1",
+  "title": "What if Naruto joined the Akatsuki?",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "narration_sha256": "5d4e81bd15409c760e32fd9bab224038b2e5a86f1b34390c5b29827badaa3728",
+  "publishing_authorized": false,
+  "visual_basis": "Existing canon stills edited as illustrations for an original fan-made alternate story. These stills do not depict Naruto actually joining Akatsuki.",
+  "assets": [
+    {
+      "id": "01_606-0",
+      "source_url": "https://naruto-official.com/en/anime/naruto2/list/01_606",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=%2Fnaruto%2Fimport%2Fimages%2Fnaruto02%2F301%EF%BD%9E400%2F382%2FC217.jpg",
+      "file": "01_606-0.jpg",
+      "sha256": "011f9e8837e739154070100f82285021bf25060dba945622e3ab2c23a4d2733e",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "01_606-1",
+      "source_url": "https://naruto-official.com/en/anime/naruto2/list/01_606",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=%2Fnaruto%2Fimport%2Fimages%2Fnaruto02%2F301%EF%BD%9E400%2F382%2FC013.jpg",
+      "file": "01_606-1.jpg",
+      "sha256": "fecc0214ac5e102d5eaf7157d1beaed95d18c04069f35826d7cd3c3ca5a57089",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "01_609-0",
+      "source_url": "https://naruto-official.com/en/anime/naruto2/list/01_609",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=%2Fnaruto%2Fimport%2Fimages%2Fnaruto02%2F301%EF%BD%9E400%2F385%2FC048.jpg",
+      "file": "01_609-0.jpg",
+      "sha256": "7e7aa304600d3a4ca23184e468a31970f51686bbefe0edc619e5c4c9818e7d05",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "01_609-1",
+      "source_url": "https://naruto-official.com/en/anime/naruto2/list/01_609",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=%2Fnaruto%2Fimport%2Fimages%2Fnaruto02%2F301%EF%BD%9E400%2F385%2FC181.jpg",
+      "file": "01_609-1.jpg",
+      "sha256": "dc3f75595192c5a3c28642f0399dfa639fd715d55da68dc298b405f8ca936674",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "column-00",
+      "source_url": "https://naruto-official.com/en/news/01_1308",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/10/25/TaGuJE6FrmNkLXPu/001.jpg",
+      "file": "column-00.jpg",
+      "sha256": "173616960fc3f4a5c71d8477bb925dd38512565677bb802b87dcef5a510e3cff",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "column-04",
+      "file": "column-04.jpg",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/10/25/clRfg7JHkxT2jinK/005.jpg",
+      "source_url": "https://naruto-official.com/en/news/01_1308",
+      "sha256": "8f789fb137a09a39ee78e7914076099e57fe5133af9bb926bd2e062467bf8639",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Naruto rightsholders as credited at source",
+      "reuse_status": "Copyrighted source still; permission not verified; commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "column-05",
+      "source_url": "https://naruto-official.com/en/news/01_1308",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/10/25/Kity9CJYxvuVxUc5/006.jpg",
+      "file": "column-05.jpg",
+      "sha256": "1cc646334cc78745ce3c69ecbef4886fecdbe84bfa8abc859cfd37aae5e3fa52",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "column-20",
+      "source_url": "https://naruto-official.com/en/news/01_1308",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/10/25/tyLSImvP5awlelp6/022.jpg",
+      "file": "column-20.jpg",
+      "sha256": "876174744a9fafabb4c356befd3b47a068ae45da6b7e931218527dafd552405b",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "column-59",
+      "source_url": "https://naruto-official.com/en/news/01_1308",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/10/25/E3JRltC9Y8lYeVEX/062.jpg",
+      "file": "column-59.jpg",
+      "sha256": "92dfc7bf1686cc0a035d7b6652bf271bf91169ee0011436dfeb227ec85904560",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "column-61",
+      "file": "column-61.jpg",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/10/25/Uf7eogwmfRXOp743/064.jpg",
+      "source_url": "https://naruto-official.com/en/news/01_1308",
+      "sha256": "9b89c73069c72c3f38abc0574aabc9d7bdc843fb294111eb0425be3b2ae4a4dd",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Naruto rightsholders as credited at source",
+      "reuse_status": "Copyrighted source still; permission not verified; commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "column-70",
+      "source_url": "https://naruto-official.com/en/news/01_1308",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/10/25/S4nDOdE1yhsJveNr/075.jpg",
+      "file": "column-70.jpg",
+      "sha256": "10191d9cc94504cd47affade5bb9285e86cb9fa06ef6fd32830b96093e0f7026",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Masashi Kishimoto / Shueisha / Naruto production rights holders as credited at source",
+      "reuse_status": "Copyrighted promotional/episode still; reuse permission not verified; commentary review draft only",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "column-80",
+      "file": "column-80.jpg",
+      "download_url": "https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/10/25/LDtcNYoP8k6Fkbab/085.jpg",
+      "source_url": "https://naruto-official.com/en/news/01_1308",
+      "sha256": "39684ae7faac00542057b683d552c307008288987a16ed8af8b1bf2df38d322f",
+      "type": "image",
+      "publisher": "NARUTO OFFICIAL SITE",
+      "rights_holder": "Naruto rightsholders as credited at source",
+      "reuse_status": "Copyrighted source still; permission not verified; commentary review draft",
+      "accessed_at": "2026-10-27"
+    }
+  ],
+  "scenes": [
+    {
+      "start": 0.0,
+      "end": 5.445,
+      "text": "What if Naruto joined the Akatsuki? The first surprise is that joining would not make him safe.",
+      "label": "WHAT IF HE JOINED?",
+      "shots": [
+        {
+          "asset": "column-00",
+          "fit": "cover",
+          "focus_x": 0.5,
+          "match_reason": "Naruto establishes the central character"
+        },
+        {
+          "asset": "column-20",
+          "fit": "contain",
+          "focus_x": 0.5,
+          "match_reason": "Itachi represents Akatsuki and the opposing faction"
+        }
+      ]
+    },
+    {
+      "start": 5.445,
+      "end": 11.7,
+      "text": "He carries the Nine Tails, and the Akatsuki wants the tailed beasts. Their new recruit is also their target.",
+      "label": "RECRUIT OR TARGET?",
+      "shots": [
+        {
+          "asset": "column-61",
+          "fit": "contain",
+          "focus_x": 0.5,
+          "match_reason": "Nine-Tails transformation illustrates the power discussed"
+        },
+        {
+          "asset": "01_609-1",
+          "fit": "cover",
+          "focus_x": 0.53,
+          "match_reason": "Pain illustrates Akatsuki targeting Naruto"
+        }
+      ]
+    },
+    {
+      "start": 11.7,
+      "end": 18.375,
+      "text": "In this alternate timeline, Naruto offers a deal: his help, in exchange for protecting his friends.",
+      "label": "THE OFFER",
+      "shots": [
+        {
+          "asset": "column-04",
+          "fit": "contain",
+          "focus_x": 0.5,
+          "match_reason": "Naruto and Sakura illustrate the friends he wants to protect"
+        },
+        {
+          "asset": "01_609-0",
+          "fit": "cover",
+          "focus_x": 0.5,
+          "match_reason": "Hinata illustrates the personal stakes of protection"
+        }
+      ]
+    },
+    {
+      "start": 18.375,
+      "end": 23.89,
+      "text": "At first, the missions give him the respect he always wanted. But every favor comes with a price.",
+      "label": "EVERY FAVOR HAS A PRICE",
+      "shots": [
+        {
+          "asset": "column-00",
+          "fit": "cover",
+          "focus_x": 0.5,
+          "match_reason": "Naruto expression illustrates the imagined hope for respect"
+        },
+        {
+          "asset": "column-05",
+          "fit": "cover",
+          "focus_x": 0.5,
+          "match_reason": "An Akatsuki member illustrates missions for the organization"
+        }
+      ]
+    },
+    {
+      "start": 23.89,
+      "end": 28.515,
+      "text": "The breaking point arrives when his new allies demand that he turn against the Hidden Leaf.",
+      "label": "BETRAY THE LEAF?",
+      "shots": [
+        {
+          "asset": "01_606-0",
+          "fit": "cover",
+          "focus_x": 0.5,
+          "match_reason": "Tsunade and the village leadership illustrate the demand against the Leaf"
+        },
+        {
+          "asset": "01_606-1",
+          "fit": "contain",
+          "focus_x": 0.5,
+          "match_reason": "Akatsuki pressure on the village illustrates the threat"
+        }
+      ]
+    },
+    {
+      "start": 28.515,
+      "end": 35.135,
+      "text": "He refuses. Now both sides question his loyalty, and the deal that protected his friends falls apart.",
+      "label": "HE REFUSES",
+      "shots": [
+        {
+          "asset": "column-59",
+          "fit": "cover",
+          "focus_x": 0.5,
+          "match_reason": "Naruto determined expression illustrates refusal"
+        },
+        {
+          "asset": "01_609-1",
+          "fit": "cover",
+          "focus_x": 0.53,
+          "match_reason": "Pain reaction shot illustrates conflict with his imagined allies"
+        }
+      ]
+    },
+    {
+      "start": 35.135,
+      "end": 41.739999999999995,
+      "text": "Naruto has to choose: prove himself to the organization, or protect the people who still believe in him.",
+      "label": "WHO WOULD HE CHOOSE?",
+      "shots": [
+        {
+          "asset": "column-04",
+          "fit": "contain",
+          "focus_x": 0.5,
+          "match_reason": "Naruto and Sakura establish the loyalty choice"
+        },
+        {
+          "asset": "column-80",
+          "fit": "cover",
+          "focus_x": 0.44,
+          "match_reason": "Sakura illustrates the friends who still believe in him"
+        }
+      ]
+    },
+    {
+      "start": 41.739999999999995,
+      "end": 46.974999999999994,
+      "text": "Could he change the Akatsuki from inside? Or would joining them change Naruto first?",
+      "label": "WHO CHANGES WHOM?",
+      "shots": [
+        {
+          "asset": "column-20",
+          "fit": "contain",
+          "focus_x": 0.5,
+          "match_reason": "Itachi illustrates the question about changing Akatsuki"
+        },
+        {
+          "asset": "column-70",
+          "fit": "cover",
+          "focus_x": 0.5,
+          "match_reason": "Naruto contemplating illustrates the final question"
+        }
+      ]
+    }
+  ]
+}

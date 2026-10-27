@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "operation_id": "alpha-anime-online-v1-20261027",
+  "status": "saved",
+  "library_file_id": "libfile_9922c2295e588191b8a12be471c82e88",
+  "file_id": "file_00000000a324820991c8abe392e9c1fa",
+  "filename": "Ifverse_Anime_Online_Edit.mp4",
+  "bytes": 4380611,
+  "sha256": "46fb848df36649c5651d003642850f0dec2f5987b1147240608cbe69e48e5edb",
+  "plan": "edits/alpha-anime-online.v1.json",
+  "source_stills": 12,
+  "ordered_shots": 16,
+  "moving_footage_shots": 0,
+  "published": false
+}

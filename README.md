@@ -1,5 +1,9 @@
 # What If video workspace
 
+## Review the anime online-media edit
+
+The latest Alpha sample uses 12 online Naruto stills in 16 ordered shots with camera motion, original narration and overlaid captions. See [the video and reproducible source plan](docs/ONLINE-MEDIA-EDIT.md). A separate image/video import editor is implemented and tested; this actual cut uses stills only. Source-still reuse permission is unverified and publication remains disabled.
+
 A portable, on-demand workspace for original hypothetical science videos. Python owns the jobs, SQLite checkpoints the work, FFmpeg creates the media, and n8n can coordinate the worker through a private API. Your channel settings and progress live in files, not in a conversation.
 
 **Working prototype, not a production deployment.** Three provisional English pilots are included. They use original diagrams, a local synthetic voice, and sentence-level captions. Live research, stock search, Kaggle, Drive, social publishing and analytics are not connected. No post has been published or scheduled. See [PROJECT_STATE.md](PROJECT_STATE.md) for measured results and [HANDOFF.md](HANDOFF.md) to resume.
@@ -73,4 +77,5 @@ The repository stores the software. A machine runs it. Development sessions stop
 Start with [the operator guide](docs/OPERATORS.md). Seven public aliases have copy-ready prompts; each can resume the whole workspace. They are separate from video channel profiles. [The universal prompt](prompts/resume.md) works for any authorized replacement assistant. Reconnect repository access and restore private state on a new host; profiles do not log in or transfer personal connections automatically.
 
 See [continuity and channel setup](docs/CONTINUITY.md) for the latest owner instructions, unmerged branch checkpoint and private-repository considerations. [YouTube setup registry](channels/youtube-registry.json) records Alpha's three active planned channels and the deferred account proposals; no live channel or connection is implied.
+
 

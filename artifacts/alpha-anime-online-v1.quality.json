@@ -1,0 +1,22 @@
+{
+  "automated_pass": true,
+  "checks": {
+    "resolution": true,
+    "codec": true,
+    "video_covers_speech": true,
+    "audio_covers_speech": true,
+    "narration_unchanged": true
+  },
+  "duration_seconds": 46.975,
+  "shots": 16,
+  "image_shots": 16,
+  "video_shots": 0,
+  "sha256": "46fb848df36649c5651d003642850f0dec2f5987b1147240608cbe69e48e5edb",
+  "repaired_local_shots": [
+    "shot-007.mp4",
+    "shot-011.mp4"
+  ],
+  "publishing_enabled": false,
+  "rights_review": "Source permissions not verified; commentary review cut",
+  "caption_timing": "Original measured narration scene boundaries; not word-aligned"
+}
