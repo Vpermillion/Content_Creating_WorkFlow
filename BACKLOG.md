@@ -1,5 +1,9 @@
 # Backlog
 
+## GitHub-hosted trial — 2026-10-27, Asia/Ulaanbaatar
+
+The owner asked to test hosted execution and compare usage. The corrected media workflow now runs on ubuntu-24.04, restores/saves footage/tool caches, and supports a timed preview operation. GitHub run 40491183923 succeeded: job 36 seconds, media work 3.845 seconds, cached lookup 0.002 seconds. Tooling/footage caches saved; cross-run restoration not benchmarked. Zero model calls inside the worker; this chat still uses allowance and its percentage is inaccessible to the agent. The first hosted trial failed after six seconds due to missing FFmpeg; the pinned installer fixed it. All 47 local tests and actionlint passed. Full evidence: artifacts/hosted-media-trial-20261027.json and docs/MEDIA-TOOLS.md. No publication, OAuth change or merge.
+
 ## Reusable media tools and workflow — 2026-10-27, Asia/Ulaanbaatar
 
 The owner clarified that tools should be reusable through this project and a personal workflow skill, including GitHub orchestration. Added labeled YouTube/Tenor search, bounded verified downloads, persistent SHA-256 footage catalog, cached keyword results/failure cooldown, non-AI FFmpeg enhancement and cached single-pass draft builds. `docs/MEDIA-TOOLS.md` is the compact operator guide. `docs/CURRENT.md` now supplies the short startup checkpoint; historical reports remain preserved and are loaded when relevant.

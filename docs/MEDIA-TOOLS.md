@@ -45,13 +45,19 @@ Presets are off, anime-light and clean-light. Light presets use mild hqdn3d deno
 
 ## GitHub workflow and assistant entry
 
-.github/workflows/media-tools.yml accepts search, collect, find, enhance and build. It is on-demand, uses a user-owned self-hosted Linux x64 runner labeled ifverse-media, serializes bank access and has a ten-minute job timeout. No scheduler, Google account connection, paid provider or public upload is configured.
+.github/workflows/media-tools.yml accepts search, collect, find, enhance, build and preview. It now runs on GitHub-hosted ubuntu-24.04 with a five-minute job limit. No self-hosted runner or owner PC is required for this path. The old self-hosted configuration is historical.
 
-**Agent-triggered route:** commit exactly one unique JSON request under media-requests/ on codex/youtube-oauth. Copy the data structure in examples/media-request.json. The push event runs the workflow from that branch, so this route does not require merging the entire feature branch into the default branch. Record the request intent/commit; inspect that commit's workflow run and its ifverse-media-result artifact before retrying. Requests accept fixed operations/data, never shell commands.
+**Agent-triggered route:** commit exactly one unique JSON request under media-requests/ on codex/youtube-oauth, using examples/media-request.json as the data schema. The push runs the workflow from that branch without merging. Inspect the commit's workflow run/jobs and ifverse-media-result artifact before retrying. Requests accept fixed operations/data, never shell commands.
 
-**Manual route:** workflow_dispatch provides the same input fields. GitHub must first know the workflow on the default branch for this manual entry. No merge was performed.
+**Manual route:** workflow_dispatch offers the same operations. GitHub first requires the workflow on the default branch for that manual entry; no merge was performed.
 
-Runner prerequisites: current GitHub Actions runner (compatible with the pinned official v7 actions), Python 3.12 with venv, FFmpeg/ffprobe and fonts. Set repository variable IFVERSE_MEDIA_BANK to a persistent private path if desired; default cache is outside the cleaned checkout. For build, set IFVERSE_NARRATION_PATH to the matching private WAV on that runner. A build request supplies story_path under media-stories/ and may set download: true. Enhance requests supply an asset_id returned by find/collect. Do not commit secrets or narration tokens. Output artifacts contain compact results and generated review outputs, not the whole source bank.
+The preview operation collects one matching source, repeats collection to measure the verified cache, enhances the clip, and emits compact timing/result JSON. It does not generate a new narration or publish anything. Other operations keep their existing bounds. A hosted build still needs its private narration supplied securely; this trial did not set up narration transfer.
+
+Separate GitHub caches preserve the source bank and a checksum-pinned BtbN FFmpeg/ffprobe tool pair. The pinned dated archive is installed by scripts/bootstrap_media_tools.py, verified against its recorded SHA-256, and binaries are verified again before reuse. This avoids repeated apt installations on minimal images. Tool installation has a three-minute step limit. Cache keys include tool/code versions; a source-code change can intentionally invalidate an older footage-cache generation. Cache retention/availability is controlled by GitHub and is not a backup guarantee. The YouTube downloader is optional; this test used Tenor's direct public MP4 sources.
+
+**Measured GitHub result:** run [40491183923](https://github.com/Vpermillion/Content_Creating_WorkFlow/actions/runs/40491183923) succeeded. Job: 36 seconds; full workflow elapsed: 39 seconds. Media work: 3.845 seconds (1.377 collect, 0.002 cached lookup, 2.467 enhance). A 2,308,968-byte, 4.6-second source became a 4,802,868-byte 960x720 review clip. Tooling and footage caches were saved; cross-run restoration has not yet been benchmarked. Zero model calls occurred inside the job. This does not measure this chat's usage percentage, which the agent cannot read. The setup/debugging turn is not a fair estimate of a later steady-state request. Full measurements: artifacts/hosted-media-trial-20261027.json.
+
+An earlier six-second hosted job failed because the image lacked FFmpeg; no source was processed. The pinned installer fixed that prerequisite. A historical invalid workflow was also corrected; actionlint now validates the workflow expression contexts. All 47 local tests pass, including bootstrap checksum/cache confinement and preview cache timing. The separate GitHub Software checks run 40491191629 also completed successfully.
 
 The identical request adapter runs locally:
 
@@ -59,7 +65,7 @@ The identical request adapter runs locally:
 python scripts/run_media_workflow.py --request examples/media-request.json
 ```
 
-Current verification: real Tenor keyword search/download succeeded; the repeated collection returned cached. A real 4.6-second clip was enhanced from 640x480 to 960x720 while retaining duration/no-audio status; a rendered frame was inspected. All 43 tests passed, including bogus-download rejection, repeat-download prevention, enhancement audio/duration, cached rendering, request path confinement and the existing media/OAuth/state tests. Workflow YAML/triggers were checked locally. A successful GitHub Actions request execution or online self-hosted runner has **not** been verified. A live YouTube keyword search also returned a VIZ trailer candidate; YouTube media downloading was not reverified and must not be inferred from search metadata.
+Current verification includes live local YouTube/Tenor keyword search, local and GitHub Tenor download/enhancement, verified repeated-lookup reuse, actionlint validation, and 47 passing local tests. This was an on-demand project-tool trial; no public post, OAuth change, recurring job or production deployment occurred.
 
 The installed [Ifverse Media Workflow skill](https://chatgpt.com/skills?skill_id=6ae07b2505b881919bafe480e0d6b819) is a thin instruction layer over this repository. Replacement assistants can use these commands without that personal installation. Source/tool behavior belongs here, so switching assistants does not require rebuilding it. A fixed ChatGPT usage reduction has not been measured.
 

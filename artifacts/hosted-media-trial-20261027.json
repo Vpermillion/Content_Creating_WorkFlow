@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "operation_id": "hosted-preview-20261027-01",
+  "result": "success",
+  "run_id": 40491183923,
+  "job_id": 122145229310,
+  "url": "https://github.com/Vpermillion/Content_Creating_WorkFlow/actions/runs/40491183923",
+  "source_commit": "bf411e85300760d2cc1cdd45bd0af61ae25e5440",
+  "runner": "GitHub-hosted ubuntu-24.04",
+  "job_seconds": 36,
+  "workflow_elapsed_seconds": 39,
+  "media_seconds": {
+    "collect": 1.377,
+    "cached_lookup": 0.002,
+    "enhance": 2.467,
+    "total": 3.845
+  },
+  "source_bytes": 2308968,
+  "enhanced_bytes": 4802868,
+  "source_dimensions": [
+    640,
+    480
+  ],
+  "output_dimensions": [
+    960,
+    720
+  ],
+  "clip_duration_seconds": 4.6,
+  "initial_tool_archive_bytes": 156572396,
+  "cache_saved_on_github": true,
+  "cross_run_restore_measured": false,
+  "model_calls_inside_job": 0,
+  "chatgpt_allowance_percentage": "not_accessible_to_agent",
+  "initial_failed_trial": {
+    "run_id": 40490521350,
+    "job_seconds": 6,
+    "reason": "FFmpeg absent from hosted image; no video processing occurred"
+  },
+  "tests_passed_locally": 47,
+  "workflow_actionlint": "pass",
+  "published": false,
+  "github_software_checks": {
+    "run_id": 40491191629,
+    "conclusion": "success"
+  }
+}
