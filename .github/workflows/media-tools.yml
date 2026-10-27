@@ -4,7 +4,7 @@ on:
     inputs:
       operation:
         type: choice
-        options: [find, search, collect, enhance, build]
+        options: [find, search, collect, enhance, build, preview]
         default: find
       label:
         type: string
@@ -29,16 +29,15 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: ifverse-media-bank
+  group: ifverse-hosted-media-bank
   cancel-in-progress: false
 jobs:
   media:
-    runs-on: [self-hosted, linux, x64, ifverse-media]
-    timeout-minutes: 10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
     env:
-      IFVERSE_MEDIA_BANK: ${{ vars.IFVERSE_MEDIA_BANK || format('{0}/ifverse-media-bank', runner.workspace) }}
-      IFVERSE_MEDIA_OUTPUT: ${{ runner.temp }}/ifverse-media-output
-      IFVERSE_NARRATION_PATH: ${{ vars.IFVERSE_NARRATION_PATH }}
+      IFVERSE_MEDIA_BANK: private/hosted-media-bank
+      IFVERSE_MEDIA_OUTPUT: private/hosted-media-output
       MEDIA_OPERATION: ${{ inputs.operation }}
       MEDIA_LABEL: ${{ inputs.label }}
       MEDIA_PROVIDER: ${{ inputs.provider }}
@@ -50,33 +49,48 @@ jobs:
         with:
           fetch-depth: 2
           persist-credentials: false
-      - name: Prepare isolated media environment
+      - name: Check media dependencies
         shell: bash
         run: |
-          command -v python3
-          command -v ffmpeg
-          command -v ffprobe
-          mkdir -p "$IFVERSE_MEDIA_BANK"
-          if [ ! -x "$IFVERSE_MEDIA_BANK/venv/bin/python" ]; then
-            python3 -m venv "$IFVERSE_MEDIA_BANK/venv"
-          fi
-          "$IFVERSE_MEDIA_BANK/venv/bin/python" -m pip install --disable-pip-version-check -q -r requirements-media.txt
+          python3 --version
+          ffmpeg -version
+          ffprobe -version
+      - name: Restore footage cache
+        id: bank-cache
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: private/hosted-media-bank
+          key: ${{ runner.os }}-ifverse-tools-v1-${{ hashFiles('whatif/media_tools.py', 'whatif/media_edit.py', 'requirements-media.txt') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ runner.os }}-ifverse-tools-v1-${{ hashFiles('whatif/media_tools.py', 'whatif/media_edit.py', 'requirements-media.txt') }}-
+      - name: Install optional YouTube downloader
+        if: inputs.provider == 'youtube' || github.event_name == 'push'
+        run: python3 -m pip install --disable-pip-version-check -q -r requirements-media.txt
       - name: Run committed request
         if: github.event_name == 'push'
         shell: bash
-        run: '"$IFVERSE_MEDIA_BANK/venv/bin/python" scripts/run_media_workflow.py --from-commit'
+        env:
+          IFVERSE_RESTORED_CACHE: ${{ steps.bank-cache.outputs.cache-matched-key }}
+        run: python3 scripts/run_media_workflow.py --from-commit
       - name: Run manual request
         if: github.event_name == 'workflow_dispatch'
         shell: bash
-        run: '"$IFVERSE_MEDIA_BANK/venv/bin/python" scripts/run_media_workflow.py'
+        env:
+          IFVERSE_RESTORED_CACHE: ${{ steps.bank-cache.outputs.cache-matched-key }}
+        run: python3 scripts/run_media_workflow.py
+      - name: Save footage cache
+        if: success()
+        uses: actions/cache/save@v6.1.0
+        with:
+          path: private/hosted-media-bank
+          key: ${{ steps.bank-cache.outputs.cache-primary-key }}
       - name: Save compact result and review outputs
         if: always()
         uses: actions/upload-artifact@v7.0.2
         with:
           name: ifverse-media-result
-          path: ${{ runner.temp }}/ifverse-media-output/
+          path: private/hosted-media-output/
           retention-days: 7
           if-no-files-found: warn
-# On-demand media processing uses a user-owned runner and persistent footage cache.
-# No scheduler, public upload, Google credentials or hosted video-production job.
+# Bounded on-demand project-tool test; no scheduler, account login or public upload.
 

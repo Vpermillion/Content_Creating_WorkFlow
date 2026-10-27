@@ -13,6 +13,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - name: Ensure media dependencies
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            timeout 120 sudo apt-get update
+            timeout 120 sudo apt-get install -y ffmpeg fonts-dejavu-core
+          fi
       - run: python -m unittest discover -s tests -v
 # This tests software using short fixtures. It is not a recurring production-video job.
+

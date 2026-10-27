@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "operation": "preview",
+  "provider": "tenor",
+  "label": "Naruto running",
+  "min_height": 360,
+  "enhancement": "anime-light"
+}

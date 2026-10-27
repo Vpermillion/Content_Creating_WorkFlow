@@ -6,6 +6,7 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+import time
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
@@ -29,7 +30,7 @@ def request_from_commit():
 
 
 def execute(request, bank, output, narration=None):
-    if request.get('schema_version') != 1 or request.get('operation') not in {'search','collect','find','enhance','build'}:
+    if request.get('schema_version') != 1 or request.get('operation') not in {'search','collect','find','enhance','build','preview'}:
         raise ToolError('invalid_media_request')
     operation = request['operation']
     provider = request.get('provider', 'tenor')
@@ -40,6 +41,27 @@ def execute(request, bank, output, narration=None):
     output.mkdir(parents=True, exist_ok=True)
     if operation == 'search': result = bank.search(label, provider, 3)
     elif operation == 'collect': result = bank.collect([label], provider, min_height=int(request.get('min_height',360)))
+    elif operation == 'preview':
+        started = time.monotonic()
+        first = bank.collect([label], provider, min_height=int(request.get('min_height',360)))
+        collected = time.monotonic()
+        ids = first['results'][0].get('assets', [])
+        if not ids:
+            result = {'status':'blocked','stage':'collect','collection':first,
+                      'seconds':round(collected-started,3)}
+        else:
+            repeated = bank.collect([label], provider, min_height=int(request.get('min_height',360)))
+            checked = time.monotonic()
+            asset = bank.catalog()['assets'][ids[0]]
+            enhanced = enhance_file(bank.asset_path(asset),output/'enhanced.mp4',
+                                    request.get('enhancement','anime-light'),height=720)
+            result = {'status':'ok','operation':'preview','collection':first,'repeat_collection':repeated,
+                      'enhancement':enhanced,'source_bytes':asset['bytes'],
+                      'seconds':{'collect':round(collected-started,3),'cached_lookup':round(checked-collected,3),
+                                 'enhance':round(time.monotonic()-checked,3),'total':round(time.monotonic()-started,3)},
+                      'github_run_id':os.environ.get('GITHUB_RUN_ID'),
+                      'github_cache_restored':bool(os.environ.get('IFVERSE_RESTORED_CACHE')),
+                      'model_calls_inside_job':0,'publishing_enabled':False}
     elif operation == 'find':
         result = {'status':'ok','assets':[{k:a[k] for k in ['id','labels','width','height','duration']} for a in bank.find(label)]}
     elif operation == 'enhance':
