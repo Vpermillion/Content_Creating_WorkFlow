@@ -49,6 +49,22 @@ jobs:
         with:
           fetch-depth: 2
           persist-credentials: false
+      - name: Restore FFmpeg tooling
+        id: tools-cache
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: private/hosted-tools
+          key: ${{ runner.os }}-ifverse-ffmpeg-cd6219478e04
+      - name: Install verified FFmpeg tooling
+        id: bootstrap
+        timeout-minutes: 3
+        run: python3 scripts/bootstrap_media_tools.py
+      - name: Save FFmpeg tooling
+        if: steps.tools-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6.1.0
+        with:
+          path: private/hosted-tools
+          key: ${{ steps.tools-cache.outputs.cache-primary-key }}
       - name: Check media dependencies
         shell: bash
         run: |

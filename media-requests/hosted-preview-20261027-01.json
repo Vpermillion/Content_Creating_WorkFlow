@@ -4,5 +4,6 @@
   "provider": "tenor",
   "label": "Naruto running",
   "min_height": 360,
-  "enhancement": "anime-light"
+  "enhancement": "anime-light",
+  "attempt": 2
 }
