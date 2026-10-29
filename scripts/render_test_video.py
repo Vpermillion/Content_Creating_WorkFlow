@@ -170,6 +170,7 @@ def retime_plan(original, segments, root, narration):
 
 
 def run(request, output, models):
+    output = output.resolve()
     operation = identifier(request['id'])
     if request.get('channel') != 'ifverse_anime' or request.get('voice') not in {'af_heart', 'am_michael'}:
         raise ValueError('Unsupported test channel or voice')
