@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "error_type": "TypeError",
+  "error": "open() got an unexpected keyword argument 'metadata_errors'",
+  "github_run_id": "40844532557",
+  "publishing_enabled": false
+}
