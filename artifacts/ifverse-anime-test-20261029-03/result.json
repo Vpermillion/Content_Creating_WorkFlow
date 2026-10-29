@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "id": "ifverse-anime-test-20261029-03",
+  "video": "render/video.mp4",
+  "duration_seconds": 44.672,
+  "timings": {
+    "footage_seconds": 0.502,
+    "narration_seconds": 0.003,
+    "captioning_seconds": 5.155,
+    "render_and_decode_seconds": 28.859,
+    "pipeline_seconds": 35.422
+  },
+  "voice": {
+    "provider": "kokoro-onnx",
+    "voice": "af_heart",
+    "device": "cpu",
+    "reused_verified_audio": true
+  },
+  "captions": {
+    "engine": "faster-whisper",
+    "model": "tiny.en",
+    "compute_type": "int8",
+    "phrases": 35,
+    "script_token_agreement": 0.9925925925925926
+  },
+  "footage": "Existing traced online Naruto clip plan; reframed to retain source image",
+  "publishing_enabled": false,
+  "github_run_id": "40845704716",
+  "limitations": [
+    "Fan-made hypothetical review draft; source reuse permissions unverified",
+    "Pronunciation, character names and full audiovisual review remain required"
+  ]
+}

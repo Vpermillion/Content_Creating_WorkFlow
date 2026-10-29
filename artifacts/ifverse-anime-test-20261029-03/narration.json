@@ -1,0 +1,68 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "af_heart",
+  "device": "cpu",
+  "new_test_version": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.354666666666667,
+      "text": "What if Naruto joined the Akatsuki? The first surprise is that joining would not make him safe.",
+      "label": "THE WRONG SIDE OF THE STORY"
+    },
+    {
+      "start": 5.354666666666667,
+      "end": 11.392,
+      "text": "He carries the Nine Tails, and the Akatsuki wants the tailed beasts. Their new recruit is also their target.",
+      "label": "THE RECRUIT IS ALSO THE TARGET"
+    },
+    {
+      "start": 11.392,
+      "end": 17.514666666666667,
+      "text": "In this alternate timeline, Naruto offers a deal: his help, in exchange for protecting his friends.",
+      "label": "ONE DANGEROUS DEAL"
+    },
+    {
+      "start": 17.514666666666667,
+      "end": 22.784,
+      "text": "At first, the missions give him the respect he always wanted. But every favor comes with a price.",
+      "label": "TRUST COMES WITH A PRICE"
+    },
+    {
+      "start": 22.784,
+      "end": 27.605333333333334,
+      "text": "The breaking point arrives when his new allies demand that he turn against the Hidden Leaf.",
+      "label": "THEN COMES THE DEMAND"
+    },
+    {
+      "start": 27.605333333333334,
+      "end": 33.728,
+      "text": "He refuses. Now both sides question his loyalty, and the deal that protected his friends falls apart.",
+      "label": "HE REFUSES"
+    },
+    {
+      "start": 33.728,
+      "end": 39.95733333333333,
+      "text": "Naruto has to choose: prove himself to the organization, or protect the people who still believe in him.",
+      "label": "CHOOSE A SIDE"
+    },
+    {
+      "start": 39.95733333333333,
+      "end": 44.672,
+      "text": "Could he change the Akatsuki from inside? Or would joining them change Naruto first?",
+      "label": "WHO CHANGES WHOM?"
+    }
+  ],
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  },
+  "sha256": "2eea93b20f0187a0a7aa25444a49f439f2d00d5b276dfefdea68a3cb97bf8fcc"
+}

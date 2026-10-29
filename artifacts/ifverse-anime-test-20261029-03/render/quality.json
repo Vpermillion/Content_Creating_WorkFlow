@@ -1,0 +1,22 @@
+{
+  "automated_pass": true,
+  "checks": {
+    "resolution": true,
+    "codec": true,
+    "video_covers_speech": true,
+    "audio_covers_speech": true,
+    "narration_unchanged": true
+  },
+  "duration_seconds": 44.672,
+  "shots": 18,
+  "image_shots": 0,
+  "video_shots": 18,
+  "sha256": "c156574aba4c3ed93174adf50d23eb507e72503787e49b8b0248e1de05110195",
+  "video_only": true,
+  "single_pass": true,
+  "enhancement": "anime-light",
+  "repaired_local_shots": [],
+  "publishing_enabled": false,
+  "rights_review": "Source permissions not verified; commentary review cut",
+  "caption_timing": "Original measured narration scene boundaries; not word-aligned"
+}
