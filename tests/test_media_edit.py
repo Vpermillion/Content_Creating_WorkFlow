@@ -80,5 +80,29 @@ class ImportedMediaTests(unittest.TestCase):
             if change=='match':plan['scenes'][0]['shots'][0]['match_reason']=''
             with self.assertRaises(ValueError):validated_inputs(plan,self.assets,self.audio)
 
+    def test_recognized_caption_intervals_are_rendered_independently_of_scene_headings(self):
+        plan = copy.deepcopy(self.plan)
+        plan['caption_segments'] = [{'start': .2, 'end': .8, 'text': 'Actual spoken timing.'},
+                                    {'start': 1.2, 'end': 1.8, 'text': 'Another phrase.'}]
+        output = render_edit(plan, self.assets, self.audio, self.root/'recognized')
+        srt = (output.parent/'captions.srt').read_text()
+        self.assertIn('00:00:00,200 --> 00:00:00,800', srt)
+        self.assertIn('Actual spoken timing.', srt)
+        self.assertNotIn('A software test.', srt)
+        ass = (output.parent/'captions.ass').read_text()
+        self.assertIn('Heading,,0,0,0,,ONE', ass)
+
+    def test_recognized_captions_cannot_overlap_or_escape_audio_or_inject_ass(self):
+        for captions in [
+            [{'start': 0, 'end': 3, 'text': 'Too long.'}],
+            [{'start': 0, 'end': 1, 'text': 'First.'}, {'start': .5, 'end': 1.5, 'text': 'Overlap.'}],
+            [{'start': 0, 'end': 1, 'text': '{control}'}],
+            [{'start': float('nan'), 'end': 1, 'text': 'Invalid.'}],
+        ]:
+            plan = copy.deepcopy(self.plan)
+            plan['caption_segments'] = captions
+            with self.assertRaises(ValueError):
+                validated_inputs(plan, self.assets, self.audio)
+
 
 if __name__=='__main__':unittest.main()

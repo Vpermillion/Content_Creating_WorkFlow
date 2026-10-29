@@ -1,0 +1,70 @@
+name: Ifverse complete test video
+on:
+  push:
+    branches: [codex/ifverse-test-video-20261029-01]
+permissions:
+  contents: write
+concurrency:
+  group: ifverse-complete-test-20261029-01
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-test-video.txt
+      - name: Install trusted media prerequisites
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core espeak-ng
+          python -m pip install --disable-pip-version-check -r requirements-test-video.txt
+      - name: Restore models and verified source clips
+        uses: actions/cache@v6.1.0
+        with:
+          path: |
+            private/test-video/models
+            private/test-video/footage
+          key: ifverse-complete-cpu-test-v1-${{ hashFiles('requirements-test-video.txt', 'edits/alpha-anime-video.v2.json') }}
+      - name: Regression checks
+        run: python -m unittest discover -s tests -v
+      - name: Produce new captioned review video
+        run: |
+          python scripts/render_test_video.py \
+            --request test-requests/ifverse-anime-test-20261029-01.json \
+            --output private/test-video/output \
+            --models private/test-video/models
+      - name: Retain review result in a separate result branch
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib, shutil, subprocess
+          request = json.loads(pathlib.Path('test-requests/ifverse-anime-test-20261029-01.json').read_text())
+          source = pathlib.Path('private/test-video/output')
+          if not source.exists():
+              source.mkdir(parents=True)
+              (source/'result.json').write_text(json.dumps({'status':'failed','error':'Dependency or regression step failed','publishing_enabled':False}))
+          target = pathlib.Path('artifacts')/request['id']
+          shutil.copytree(source,target)
+          subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
+          subprocess.run(['git','add','--force',str(target)],check=True)
+          subprocess.run(['git','commit','-m','Save requested Ifverse test video and validation result'],check=True)
+          subprocess.run(['git','push','origin','HEAD:refs/heads/'+request['result_branch']],check=True)
+          PY
+      - name: Downloadable review artifacts
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: ifverse-anime-test-video
+          path: private/test-video/output/
+          retention-days: 7
+          if-no-files-found: warn

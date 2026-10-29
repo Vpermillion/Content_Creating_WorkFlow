@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import textwrap
 import urllib.parse
@@ -85,6 +86,21 @@ def validated_inputs(plan, root, narration):
         previous = scene["end"]
     if abs(media.duration(narration)-previous) > .1:
         raise ValueError("Scene plan does not cover the actual narration")
+    captions = plan.get('caption_segments')
+    if captions is not None:
+        if not isinstance(captions, list) or not 1 <= len(captions) <= 500:
+            raise ValueError('Invalid caption segments')
+        last = 0.0
+        for caption in captions:
+            start, end = caption['start'], caption['end']
+            if not all(isinstance(v, (int, float)) and math.isfinite(v) for v in [start, end]):
+                raise ValueError('Invalid caption timing')
+            if start < last - .001 or end <= start or end > previous + .1:
+                raise ValueError('Caption timings must be ordered and inside the narration')
+            text = caption['text']
+            if not isinstance(text, str) or not 1 <= len(text) <= 180 or any(c in text for c in '{}<>\\\n\r'):
+                raise ValueError('Invalid caption text')
+            last = end
     return assets, w, h, fps
 
 
@@ -94,14 +110,15 @@ def write_captions(plan, output, w, h):
         c=round(t*100)
         return f"{c//360000}:{c//6000%60:02}:{c//100%60:02}.{c%100:02}"
     events, srt = [], []
-    for i, scene in enumerate(plan["scenes"]):
-        caption="\\N".join(textwrap.wrap(scene["text"], width=32))
+    for i, scene in enumerate(plan.get('caption_segments', plan['scenes'])):
+        caption="\\N".join(textwrap.wrap(scene['text'], width=32))
         if len(caption.split("\\N")) > 4:
             raise ValueError("Caption is too long for the safe area")
         start,end=at(scene["start"]),at(scene["end"])
         events.append(f"Dialogue: 0,{start},{end},Caption,,0,0,0,,{caption}")
-        events.append(f"Dialogue: 1,{start},{end},Heading,,0,0,0,,{scene['label']}")
         srt.append(f"{i+1}\n{media.timestamp(scene['start'])} --> {media.timestamp(scene['end'])}\n"+caption.replace('\\N','\n')+'\n')
+    for scene in plan['scenes']:
+        events.append(f"Dialogue: 1,{at(scene['start'])},{at(scene['end'])},Heading,,0,0,0,,{scene['label']}")
     header=(f"[Script Info]\nScriptType: v4.00+\nPlayResX: {w}\nPlayResY: {h}\nWrapStyle: 2\n\n"
         "[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n")
     styles=[('Caption',36,'&H00FFFFFF',2,175,1),('Heading',32,'&H0057B4FF',8,135,1),('Brand',22,'&H00FFFFFF',7,62,1),('Credit',15,'&H00CCCCCC',2,65,0)]
