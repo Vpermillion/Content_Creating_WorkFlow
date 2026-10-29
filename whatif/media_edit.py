@@ -227,7 +227,9 @@ def render_edit(plan, root, narration, output):
             'enhancement':plan.get('enhancement', 'off'),
             'repaired_local_shots':repaired,
             'publishing_enabled':False,'rights_review':'Source permissions not verified; commentary review cut',
-            'caption_timing':'Original measured narration scene boundaries; not word-aligned'}
+            'caption_timing':('Recognized speech word timestamps grouped into readable phrases'
+                              if 'caption_segments' in plan else
+                              'Original measured narration scene boundaries; not word-aligned')}
     atomic_json(output/'quality.json',report)
     atomic_json(output/'edit.json',{'schema_version':1,'shots':shots,'assets':plan['assets'],'narration_sha256':plan['narration_sha256']})
     if not report['automated_pass']:raise ValueError('Imported-media edit failed validation')

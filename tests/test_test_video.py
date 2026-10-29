@@ -23,11 +23,27 @@ class TestVideoPlanTests(unittest.TestCase):
             self.assertEqual(digest(root / 'voice.wav'), original)
 
     def test_caption_phrases_keep_recognizer_timestamps(self):
-        words = [{'word': word, 'start': i * .3, 'end': (i + 1) * .3}
+        words = [{'word': word, 'start': i * .5, 'end': (i + 1) * .5}
                  for i, word in enumerate(['What', 'if', 'Naruto', 'joined', 'Akatsuki?', 'A', 'test.'])]
-        phrases = module.phrase_captions(words, 2.1)
-        self.assertEqual(phrases[0], {'start': 0, 'end': 1.5, 'text': 'What if Naruto joined Akatsuki?'})
-        self.assertEqual(phrases[1]['start'], 1.5)
+        phrases = module.phrase_captions(words, 3.5)
+        self.assertEqual(phrases[0], {'start': 0, 'end': 2.5, 'text': 'What if Naruto joined Akatsuki?'})
+        self.assertEqual(phrases[1]['start'], 2.5)
+
+    def test_short_final_words_stay_with_the_previous_phrase(self):
+        words = [{'word': word, 'start': i * .2, 'end': (i + 1) * .2}
+                 for i, word in enumerate(['What', 'if', 'Naruto', 'joined', 'the', 'Akatsuki?'])]
+        phrases = module.phrase_captions(words, 1.2)
+        self.assertEqual(len(phrases), 1)
+        self.assertEqual(phrases[0]['text'], 'What if Naruto joined the Akatsuki?')
+
+    def test_script_spelling_correction_preserves_recognized_time_and_original(self):
+        words = [{'word': ' the', 'start': .2, 'end': .4}, {'word': ' Akkitsuki?', 'start': .4, 'end': 1.1}]
+        fixed, changes = module.reconcile_words(words, 'the Akatsuki?')
+        self.assertEqual(fixed[1]['word'], 'Akatsuki?')
+        self.assertEqual(fixed[1]['start'], .4)
+        self.assertEqual(fixed[1]['end'], 1.1)
+        self.assertEqual(words[1]['word'], ' Akkitsuki?')
+        self.assertEqual(len(changes), 1)
 
     def test_retiming_preserves_original_plan_and_adds_only_matching_shots(self):
         original = {'scenes': [{'start': 0, 'end': 2, 'text': 'Old', 'label': 'TEST',

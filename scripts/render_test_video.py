@@ -102,10 +102,35 @@ def phrase_captions(words, duration):
         start, end = max(0, phrase[0]['start']), min(duration, phrase[-1]['end'])
         if end <= start:
             raise ValueError('Speech recognizer returned an empty caption interval')
-        captions.append({'start': start, 'end': end, 'text': ' '.join(w['word'] for w in phrase)})
+        text = ' '.join(w['word'] for w in phrase)
+        if captions and end - start < .65 and len(captions[-1]['text']) + len(text) < 90:
+            captions[-1]['text'] += ' ' + text
+            captions[-1]['end'] = end
+        else:
+            captions.append({'start': start, 'end': end, 'text': text})
     if not captions:
         raise ValueError('No speech recognized')
     return captions
+
+
+def reconcile_words(words, script):
+    """Correct known-script substitutions without changing any recognition timestamp."""
+    reference = script.split()
+    normalize = lambda text: re.sub(r'[^\w]', '', text.casefold())
+    expected = [normalize(word) for word in reference]
+    observed = [normalize(word['word']) for word in words]
+    corrected, changes = copy.deepcopy(words), []
+    for tag, a, b, c, d in difflib.SequenceMatcher(a=expected, b=observed, autojunk=False).get_opcodes():
+        if tag != 'replace' or b - a != d - c or b - a > 3:
+            continue
+        for i, j in zip(range(a, b), range(c, d)):
+            original = words[j]['word']
+            suffix = re.search(r'[^\w\s]+$', original)
+            replacement = re.sub(r'[^\w\s\x27-]', '', reference[i])
+            corrected[j]['word'] = replacement + (suffix.group() if suffix else '')
+            changes.append({'from': original.strip(), 'to': corrected[j]['word'],
+                            'start': words[j]['start'], 'end': words[j]['end']})
+    return corrected, changes
 
 
 def asr_audio(audio, output):
@@ -130,14 +155,17 @@ def transcribe(audio, output, models, spec):
     for segment in found:
         words.extend({'word': w.word, 'start': w.start, 'end': w.end, 'probability': w.probability}
                      for w in segment.words or [])
-    captions = phrase_captions(words, media.duration(audio))
     expected = re.findall(r'\w+', ' '.join(s['text'] for s in spec['scenes']).casefold())
     recognized = re.findall(r'\w+', ' '.join(w['word'] for w in words).casefold())
     agreement = difflib.SequenceMatcher(a=expected, b=recognized, autojunk=False).ratio()
     if agreement < .75:
         raise ValueError('Caption transcript differs substantially from the prepared script')
+    raw_words = words
+    words, corrections = reconcile_words(words, ' '.join(s['text'] for s in spec['scenes']))
+    captions = phrase_captions(words, media.duration(audio))
     atomic_json(output / 'transcription.json', {'engine': 'faster-whisper', 'model': 'tiny.en',
                 'device': 'cpu', 'compute_type': 'int8', 'words': words, 'captions': captions,
+                'raw_words': raw_words, 'script_corrections': corrections,
                 'script_token_agreement': agreement, 'review_names_required': True})
     return captions, agreement
 
