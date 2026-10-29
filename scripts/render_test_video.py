@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import sys
 import time
 import urllib.request
@@ -107,11 +108,22 @@ def phrase_captions(words, duration):
     return captions
 
 
+def asr_audio(audio, output):
+    """Use Whisper's supported waveform input, avoiding version-specific PyAV decoding."""
+    import numpy as np
+    media.ffmpeg(['-i', str(Path(audio).resolve()), '-ar', '16000', '-ac', '1',
+                  '-c:a', 'pcm_s16le', 'asr-input.wav'], output)
+    with wave.open(str(output / 'asr-input.wav'), 'rb') as wav:
+        if (wav.getnchannels(), wav.getsampwidth(), wav.getframerate()) != (1, 2, 16000):
+            raise ValueError('Unexpected caption audio format')
+        return np.frombuffer(wav.readframes(wav.getnframes()), dtype='<i2').astype(np.float32) / 32768
+
+
 def transcribe(audio, output, models, spec):
     from faster_whisper import WhisperModel
     engine = WhisperModel('tiny.en', device='cpu', compute_type='int8', cpu_threads=2, num_workers=1,
                           download_root=str(models / 'whisper'))
-    found, info = engine.transcribe(str(audio), language='en', beam_size=3, word_timestamps=True,
+    found, info = engine.transcribe(asr_audio(audio, output), language='en', beam_size=3, word_timestamps=True,
                                    initial_prompt='Naruto, Akatsuki, Nine Tails, Hidden Leaf.',
                                    condition_on_previous_text=False, vad_filter=False)
     words = []
@@ -176,7 +188,21 @@ def run(request, output, models):
         list(pool.map(lambda asset: media_edit.fetch_assets({'assets': [asset]}, assets), original['assets']))
     timings['footage_seconds'] = round(time.monotonic() - mark, 3)
     mark = time.monotonic()
-    segments = narrate(source, output, models, request['voice'])
+    retained = request.get('reuse_narration_from')
+    if retained:
+        prior = (ROOT / retained).resolve()
+        if not prior.is_relative_to(ROOT / 'artifacts'):
+            raise ValueError('Retained test narration must come from the repository artifacts')
+        receipt = json.loads((prior / 'narration.json').read_text())
+        if receipt['voice'] != request['voice'] or receipt['sha256'] != digest(prior / 'narration.wav'):
+            raise ValueError('Retained narration voice or checksum mismatch')
+        segments = receipt['segments']
+        if [s['text'] for s in segments] != [s['text'] for s in source['scenes']]:
+            raise ValueError('Retained narration belongs to another script')
+        for name in ['narration.wav', 'narration.json']:
+            shutil.copy2(prior / name, output / name)
+    else:
+        segments = narrate(source, output, models, request['voice'])
     timings['narration_seconds'] = round(time.monotonic() - mark, 3)
     mark = time.monotonic()
     captions, agreement = transcribe(output / 'narration.wav', output, models, source)
@@ -190,7 +216,8 @@ def run(request, output, models):
     timings['pipeline_seconds'] = round(time.monotonic() - started, 3)
     report = {'status': 'success', 'id': operation, 'video': str(video.relative_to(output)),
               'duration_seconds': media.duration(video), 'timings': timings,
-              'voice': {'provider': 'kokoro-onnx', 'voice': request['voice'], 'device': 'cpu'},
+              'voice': {'provider': 'kokoro-onnx', 'voice': request['voice'], 'device': 'cpu',
+                        'reused_verified_audio': bool(retained)},
               'captions': {'engine': 'faster-whisper', 'model': 'tiny.en', 'compute_type': 'int8',
                            'phrases': len(captions), 'script_token_agreement': agreement},
               'footage': 'Existing traced online Naruto clip plan; reframed to retain source image',

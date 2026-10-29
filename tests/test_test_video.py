@@ -10,6 +10,18 @@ spec.loader.exec_module(module)
 
 
 class TestVideoPlanTests(unittest.TestCase):
+    def test_caption_input_is_real_mono_16khz_waveform_and_keeps_original_audio(self):
+        from whatif.store import digest
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            module.media.ffmpeg(['-f', 'lavfi', '-i', 'sine=frequency=330:duration=1',
+                                 '-ar', '24000', 'voice.wav'], root)
+            original = digest(root / 'voice.wav')
+            waveform = module.asr_audio(root / 'voice.wav', root)
+            self.assertEqual(waveform.shape, (16000,))
+            self.assertGreater(float(abs(waveform).max()), .01)
+            self.assertEqual(digest(root / 'voice.wav'), original)
+
     def test_caption_phrases_keep_recognizer_timestamps(self):
         words = [{'word': word, 'start': i * .3, 'end': (i + 1) * .3}
                  for i, word in enumerate(['What', 'if', 'Naruto', 'joined', 'Akatsuki?', 'A', 'test.'])]
