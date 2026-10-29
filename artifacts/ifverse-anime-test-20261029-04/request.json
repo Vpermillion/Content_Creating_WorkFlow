@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-test-20261029-04",
+  "channel": "ifverse_anime",
+  "voice": "af_heart",
+  "purpose": "New review test with moving online footage, CPU Kokoro narration and faster-whisper captions",
+  "result_branch": "codex/ifverse-test-result-20261029-04",
+  "reuse_narration_from": "artifacts/ifverse-anime-test-20261029-01",
+  "publishing_enabled": false
+}
