@@ -19,3 +19,5 @@ Read `docs/CURRENT.md` and `README.md` first. For media work, use `docs/MEDIA-TO
 - Assistant replacement is a core requirement: checkpoint after each meaningful completed step, not only at turn end. Persist source remotely and private job state separately. Before any external write, record a non-secret operation ID and intended target; reconcile an interrupted result before retrying.
 - Read `docs/CONTINUITY.md` and `channels/youtube-registry.json` before account/channel setup. Channel slots are intended account associations, not proof that a channel exists. Store only verified non-secret channel metadata in Git; never account passwords or OAuth tokens, even in a private repository.
 
+
+- Latest confirmed scope: English ifverse_anime and ifverse_hollywood. Read docs/CONVERSATION_DECISIONS.md, docs/IFVERSE_BRIEF.md and docs/TEST_VIDEO.md for the final agreement and completed test. Reuse the hosted test and retained narration; do not rebuild existing tools or confuse old rollout plans with current channel scope.

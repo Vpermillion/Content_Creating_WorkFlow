@@ -1,5 +1,10 @@
 # Current checkpoint
 
+## Latest requested test video
+
+The user requested an actual sample after reviewing the complete shared conversation. The confirmed channels are ifverse_anime and ifverse_hollywood, both English. Final test ifverse-anime-test-20261029-04 succeeded in GitHub run 40846229359: 44.672 seconds, 18 moving shots, Kokoro-ONNX af_heart CPU narration, 27 faster-whisper CPU/int8 caption phrases, and complete media validation. Source branch codex/ifverse-test-video-20261029-01 at 0ddeaab; completed outputs are on this result branch under artifacts/ifverse-anime-test-20261029-04/. Read docs/TEST_VIDEO.md and docs/CONVERSATION_DECISIONS.md before rerunning. This is a fixed-story production test using the existing traced Naruto footage, not arbitrary-story semantic selection or live YouTube delivery. Narration was generated once and preserved through diagnosed decoder/reporting fixes. Current measured retained-audio media work was 33.255 seconds, excluding setup and first-time voice generation. Do not regenerate the existing test or revive old broader account plans. Keep source credentials/private state separate; no default branch merge or public posting occurred.
+
+
 Updated 2026-10-27, Asia/Ulaanbaatar. Read this concise state first; older detailed reports remain in PROJECT_STATE.md and HANDOFF.md.
 
 - Repository: Vpermillion/Content_Creating_WorkFlow, private. Working feature branch: codex/youtube-oauth, PR #2 based on codex/operator-handoff. Do not merge or discard existing work implicitly.

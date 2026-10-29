@@ -1,0 +1,128 @@
+{
+  "full_decode": "passed",
+  "duration_seconds": 44.672,
+  "audio_peak_dbfs": -0.5,
+  "motion_observed_shots": 18,
+  "total_video_shots": 18,
+  "motion": [
+    {
+      "start": 0.0,
+      "end": 2.6773333333333333,
+      "mean_pixel_change": 5.609,
+      "motion_observed": true
+    },
+    {
+      "start": 2.6773333333333333,
+      "end": 5.354666666666667,
+      "mean_pixel_change": 2.7,
+      "motion_observed": true
+    },
+    {
+      "start": 5.354666666666667,
+      "end": 8.373333333333333,
+      "mean_pixel_change": 16.866,
+      "motion_observed": true
+    },
+    {
+      "start": 8.373333333333333,
+      "end": 11.392,
+      "mean_pixel_change": 3.1,
+      "motion_observed": true
+    },
+    {
+      "start": 11.392,
+      "end": 13.432888888888888,
+      "mean_pixel_change": 8.859,
+      "motion_observed": true
+    },
+    {
+      "start": 13.432888888888888,
+      "end": 15.473777777777777,
+      "mean_pixel_change": 1.798,
+      "motion_observed": true
+    },
+    {
+      "start": 15.473777777777777,
+      "end": 17.514666666666667,
+      "mean_pixel_change": 5.22,
+      "motion_observed": true
+    },
+    {
+      "start": 17.514666666666667,
+      "end": 20.14933333333333,
+      "mean_pixel_change": 28.589,
+      "motion_observed": true
+    },
+    {
+      "start": 20.14933333333333,
+      "end": 22.784,
+      "mean_pixel_change": 4.126,
+      "motion_observed": true
+    },
+    {
+      "start": 22.784,
+      "end": 25.194666666666667,
+      "mean_pixel_change": 3.374,
+      "motion_observed": true
+    },
+    {
+      "start": 25.194666666666667,
+      "end": 27.605333333333334,
+      "mean_pixel_change": 12.288,
+      "motion_observed": true
+    },
+    {
+      "start": 27.605333333333334,
+      "end": 30.666666666666668,
+      "mean_pixel_change": 3.151,
+      "motion_observed": true
+    },
+    {
+      "start": 30.666666666666668,
+      "end": 33.728,
+      "mean_pixel_change": 1.676,
+      "motion_observed": true
+    },
+    {
+      "start": 33.728,
+      "end": 35.80444444444444,
+      "mean_pixel_change": 4.218,
+      "motion_observed": true
+    },
+    {
+      "start": 35.80444444444444,
+      "end": 37.88088888888889,
+      "mean_pixel_change": 6.67,
+      "motion_observed": true
+    },
+    {
+      "start": 37.88088888888889,
+      "end": 39.95733333333333,
+      "mean_pixel_change": 6.655,
+      "motion_observed": true
+    },
+    {
+      "start": 39.95733333333333,
+      "end": 42.31466666666667,
+      "mean_pixel_change": 4.843,
+      "motion_observed": true
+    },
+    {
+      "start": 42.31466666666667,
+      "end": 44.672,
+      "mean_pixel_change": 5.127,
+      "motion_observed": true
+    }
+  ],
+  "script_corrections": [
+    {
+      "from": "Akkitsuki",
+      "to": "Akatsuki",
+      "start": 40.84,
+      "end": 41.28
+    }
+  ],
+  "narration_preserved": true,
+  "sha256": "ecaf34229de3a645779c4b6518749b71a64e655079cdadd8803172c603f2d13a",
+  "human_listening_review": "pending"
+}

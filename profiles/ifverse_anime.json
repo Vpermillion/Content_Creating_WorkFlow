@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "ifverse_anime",
+  "configuration_status": "planning_only",
+  "topic_confirmed": true,
+  "topic": "anime what-if stories, characters and alternate scenarios",
+  "platforms": ["youtube"],
+  "connected_account_id": null,
+  "input_modes": ["supplied_script", "creative_directions"],
+  "language": "en",
+  "language_confirmed": true,
+  "narrator": {
+    "provider": null,
+    "voice": null,
+    "candidate_if_english": "kokoro",
+    "status": "not_configured"
+  },
+  "footage": {
+    "sources": [],
+    "source_selection": "online_video_search",
+    "implementation_branch": "codex/youtube-oauth",
+    "existing_providers": ["tenor", "youtube"],
+    "integration_status": "implemented_on_feature_branch_not_in_selected_checkout",
+    "matching": ["series", "character", "action", "narration_context"],
+    "provenance_required": true,
+    "unmatched_scene_action": "flag_for_review"
+  },
+  "render_preset": {
+    "provisional": true,
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 30,
+    "max_seconds": 60
+  },
+  "caption_timing": "actual_speech_timestamps_or_alignment",
+  "publishing_frequency": null,
+  "publishing_enabled": false,
+  "content_boundaries": [
+    "Distinguish canon from hypothetical events",
+    "Match footage to each narration beat",
+    "Retain source and usage basis for selected assets"
+  ]
+}
