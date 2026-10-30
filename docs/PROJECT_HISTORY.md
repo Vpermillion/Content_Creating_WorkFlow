@@ -35,3 +35,5 @@ The tested production path uses a prepared Naruto script and reviewed source pla
 ## Funny, teasing script tone and one-minute request — 2026-10-30
 
 The owner selected lively sarcastic fan commentary, exaggerated complaints and occasional clean substitutions such as motherflicker/mother father for both English channels. The durable addon is `prompts/script-style.md`, wired into new-agent entry points and both profiles. A new 196-word Naruto roast and reviewed footage plan were prepared for a 60-second example. See CURRENT for actual execution results. Earlier neutral prose remains historical rather than the preferred default.
+
+The one-minute example completed successfully in run `41047895853` on `codex/results/ifverse-anime-roast-20261030-04`: 24 moving shots, 50 captions, exact 60-second duration. After whole-audio and scene-window recognition attempts changed punchline words, the final pass used known-script forced alignment; the same generated voice was retained throughout. The safe style instructions and result checkpoint are saved on both default and current branches.

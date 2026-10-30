@@ -32,10 +32,10 @@ Footage should illustrate the actual narrated character, action, location or cho
 | Media tools | Tenor/optional YouTube lookup, bounded downloads, SHA-256/ffprobe validation and a reusable labeled clip bank. |
 | FFmpeg editor | Moving clips, source trims, contain/cover framing, mild denoise/resize/sharpen, single-pass rendering, readable captions and complete audio/video/decode checks. |
 | English voice | Kokoro-ONNX `af_heart`, tested on CPU; keep verified speech when revising pictures. |
-| Caption timing | faster-whisper `tiny.en`, CPU/int8, actual recognized word timestamps grouped into phrases; known-script spelling corrections preserve raw records and timestamps. |
+| Caption timing | faster-whisper `tiny.en`/`base.en`, CPU/int8; recognized-word timing or exact-known-script cross-attention/DTW alignment, grouped into readable phrases. Word times remain estimates and receipts are preserved. |
 | Continuity | Source history, safe generated examples, state/checkpoint docs and copy-ready prompts. Credentials and private production data remain separate. |
 
-The latest Naruto review is **44.672 seconds, 22 spoken-beat shots from 14 moving sources and 27 caption phrases**, from successful hosted run `41022041729`. [Watch the revised MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-visual-match-20261030-01/artifacts/ifverse-anime-visual-match-20261030-01/render/video.mp4). It preserves the prior voice/captions while aligning the pictures more closely to the words. All 22 shot samples were inspected; full decode, track coverage, retained-audio/caption checks and observed motion passed. See [CURRENT](docs/CURRENT.md) for exact receipts and next work.
+The latest owner-requested example is a **60-second Naruto roast**, with 24 moving shots, nine traced sources and 50 caption phrases, from successful hosted run `41047895853`. [Watch the one-minute MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-roast-20261030-04/artifacts/ifverse-anime-roast-20261030-04/render/video.mp4). It uses the new funny/teasing script preference, a single generated Kokoro voice version and Whisper forced alignment of the exact known script to the final audio. Complete decode, track/duration/hash checks and all shot samples were reviewed. The earlier 44.672-second visual revision remains preserved. See [CURRENT](docs/CURRENT.md) for exact receipts, review limits and next work.
 
 ## Current workflow entry
 

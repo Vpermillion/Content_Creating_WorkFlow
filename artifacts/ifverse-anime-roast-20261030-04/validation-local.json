@@ -1,0 +1,139 @@
+{
+  "complete_decode": true,
+  "duration_seconds": 60.0,
+  "shots": 24,
+  "caption_phrases": 50,
+  "clean_swear_spelling_checked": true,
+  "complete_script_caption_text_verified": true,
+  "narration_checksum_verified": true,
+  "video_sha256": "07fa6e096fadd49fe9e85111ec06b988dc7ad6e55b215f66cd675051ef6eec4b",
+  "bytes": 9258040,
+  "generated_contact_sheets": 3,
+  "full_listening_review_completed": false,
+  "publishing_enabled": false,
+  "all_shot_samples_visually_reviewed": true,
+  "shot_sample_review_method": "Viewed all 24 final-video midpoint frames in three contact sheets",
+  "motion_samples": [
+    {
+      "start": 0.0,
+      "end": 2.9032258202565138,
+      "mean_frame_difference": 5.7523
+    },
+    {
+      "start": 2.9032258202565138,
+      "end": 5.897748049955056,
+      "mean_frame_difference": 6.2498
+    },
+    {
+      "start": 5.897748049955056,
+      "end": 8.125380440340559,
+      "mean_frame_difference": 14.4692
+    },
+    {
+      "start": 8.125380440340559,
+      "end": 10.206938575618812,
+      "mean_frame_difference": 6.7039
+    },
+    {
+      "start": 10.206938575618812,
+      "end": 11.658551485747068,
+      "mean_frame_difference": 2.0051
+    },
+    {
+      "start": 11.658551485747068,
+      "end": 13.110164395875326,
+      "mean_frame_difference": 2.9784
+    },
+    {
+      "start": 13.110164395875326,
+      "end": 16.086427343685465,
+      "mean_frame_difference": 4.091
+    },
+    {
+      "start": 16.086427343685465,
+      "end": 18.953134600165164,
+      "mean_frame_difference": 5.7994
+    },
+    {
+      "start": 18.953134600165164,
+      "end": 21.63724903776081,
+      "mean_frame_difference": 7.7865
+    },
+    {
+      "start": 21.63724903776081,
+      "end": 26.074254536643405,
+      "mean_frame_difference": 5.4139
+    },
+    {
+      "start": 26.074254536643405,
+      "end": 29.160073175783978,
+      "mean_frame_difference": 4.6068
+    },
+    {
+      "start": 29.160073175783978,
+      "end": 31.369446284281075,
+      "mean_frame_difference": 6.7111
+    },
+    {
+      "start": 31.369446284281075,
+      "end": 33.706634365997004,
+      "mean_frame_difference": 4.1505
+    },
+    {
+      "start": 33.706634365997004,
+      "end": 36.628119468141925,
+      "mean_frame_difference": 4.4368
+    },
+    {
+      "start": 36.628119468141925,
+      "end": 39.421789597068006,
+      "mean_frame_difference": 13.6949
+    },
+    {
+      "start": 39.421789597068006,
+      "end": 41.86853337011438,
+      "mean_frame_difference": 5.4582
+    },
+    {
+      "start": 41.86853337011438,
+      "end": 44.22398073371872,
+      "mean_frame_difference": 4.1198
+    },
+    {
+      "start": 44.22398073371872,
+      "end": 46.57942809732307,
+      "mean_frame_difference": 4.0982
+    },
+    {
+      "start": 46.57942809732307,
+      "end": 47.82105926573466,
+      "mean_frame_difference": 2.1039
+    },
+    {
+      "start": 47.82105926573466,
+      "end": 49.06269043414625,
+      "mean_frame_difference": 2.7768
+    },
+    {
+      "start": 49.06269043414625,
+      "end": 51.50943420719261,
+      "mean_frame_difference": 6.9335
+    },
+    {
+      "start": 51.50943420719261,
+      "end": 54.17528936289985,
+      "mean_frame_difference": 5.0996
+    },
+    {
+      "start": 54.17528936289985,
+      "end": 57.224589438263614,
+      "mean_frame_difference": 4.6167
+    },
+    {
+      "start": 57.224589438263614,
+      "end": 60.0,
+      "mean_frame_difference": 4.3847
+    }
+  ],
+  "all_shots_show_measured_motion": true
+}

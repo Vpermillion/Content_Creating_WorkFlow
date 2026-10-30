@@ -1,0 +1,1450 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "d51d59a9fa616f88c1958437f4999740ea7fd7a60ef5c23682f23aa4ae76ba19",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.1,
+      "probability": 4.1808052628766745e-05
+    },
+    {
+      "word": "if",
+      "start": 0.1,
+      "end": 0.2,
+      "probability": 0.9833472371101379
+    },
+    {
+      "word": "Naruto",
+      "start": 0.2,
+      "end": 0.36,
+      "probability": 0.6241357326507568
+    },
+    {
+      "word": "joined",
+      "start": 0.36,
+      "end": 0.84,
+      "probability": 0.9489197134971619
+    },
+    {
+      "word": "the",
+      "start": 0.84,
+      "end": 0.94,
+      "probability": 0.9867706298828125
+    },
+    {
+      "word": "Akatsuki?",
+      "start": 0.94,
+      "end": 1.8,
+      "probability": 0.5236318111419678
+    },
+    {
+      "word": "Oh,",
+      "start": 1.8,
+      "end": 2.12,
+      "probability": 0.9005029201507568
+    },
+    {
+      "word": "fantastic.",
+      "start": 2.12,
+      "end": 2.98,
+      "probability": 0.9593808054924011
+    },
+    {
+      "word": "Our",
+      "start": 2.98,
+      "end": 2.98,
+      "probability": 0.8808034062385559
+    },
+    {
+      "word": "boy",
+      "start": 2.98,
+      "end": 3.12,
+      "probability": 0.8353085517883301
+    },
+    {
+      "word": "saw",
+      "start": 3.12,
+      "end": 3.36,
+      "probability": 0.9947656393051147
+    },
+    {
+      "word": "matching",
+      "start": 3.36,
+      "end": 3.64,
+      "probability": 0.9884109497070312
+    },
+    {
+      "word": "villain",
+      "start": 3.64,
+      "end": 3.86,
+      "probability": 0.965150773525238
+    },
+    {
+      "word": "cloaks",
+      "start": 3.86,
+      "end": 4.3,
+      "probability": 0.9585174918174744
+    },
+    {
+      "word": "and",
+      "start": 4.3,
+      "end": 4.42,
+      "probability": 0.7808029651641846
+    },
+    {
+      "word": "thought,",
+      "start": 4.42,
+      "end": 4.98,
+      "probability": 0.9961081147193909
+    },
+    {
+      "word": "career",
+      "start": 4.98,
+      "end": 5.14,
+      "probability": 0.4403758943080902
+    },
+    {
+      "word": "opportunity.",
+      "start": 5.14,
+      "end": 6.0,
+      "probability": 0.9885834455490112
+    },
+    {
+      "word": "Motherflicker,",
+      "start": 6.0,
+      "end": 6.6,
+      "probability": 0.6606778626640638
+    },
+    {
+      "word": "they",
+      "start": 6.6,
+      "end": 6.72,
+      "probability": 0.9871763586997986
+    },
+    {
+      "word": "are",
+      "start": 6.72,
+      "end": 6.8,
+      "probability": 0.980964720249176
+    },
+    {
+      "word": "hunting",
+      "start": 6.8,
+      "end": 6.96,
+      "probability": 0.9818571209907532
+    },
+    {
+      "word": "the",
+      "start": 6.96,
+      "end": 7.14,
+      "probability": 0.995335042476654
+    },
+    {
+      "word": "fox",
+      "start": 7.14,
+      "end": 7.28,
+      "probability": 0.8371220827102661
+    },
+    {
+      "word": "inside",
+      "start": 7.28,
+      "end": 7.64,
+      "probability": 0.9983755350112915
+    },
+    {
+      "word": "you.",
+      "start": 7.64,
+      "end": 8.12,
+      "probability": 0.9980473518371582
+    },
+    {
+      "word": "That",
+      "start": 8.12,
+      "end": 8.22,
+      "probability": 0.9907751679420471
+    },
+    {
+      "word": "is",
+      "start": 8.22,
+      "end": 8.32,
+      "probability": 0.9935941100120544
+    },
+    {
+      "word": "not",
+      "start": 8.32,
+      "end": 8.5,
+      "probability": 0.9994090795516968
+    },
+    {
+      "word": "a",
+      "start": 8.5,
+      "end": 8.58,
+      "probability": 0.9981082677841187
+    },
+    {
+      "word": "job",
+      "start": 8.58,
+      "end": 8.82,
+      "probability": 0.9989468455314636
+    },
+    {
+      "word": "interview.",
+      "start": 8.82,
+      "end": 9.48,
+      "probability": 0.993771493434906
+    },
+    {
+      "word": "You",
+      "start": 9.48,
+      "end": 9.58,
+      "probability": 0.99601149559021
+    },
+    {
+      "word": "are",
+      "start": 9.58,
+      "end": 9.68,
+      "probability": 0.9871705174446106
+    },
+    {
+      "word": "the",
+      "start": 9.68,
+      "end": 9.76,
+      "probability": 0.9847292304039001
+    },
+    {
+      "word": "lunch.",
+      "start": 9.76,
+      "end": 10.24,
+      "probability": 0.9898480772972107
+    },
+    {
+      "word": "In",
+      "start": 10.24,
+      "end": 10.26,
+      "probability": 0.9933428764343262
+    },
+    {
+      "word": "this",
+      "start": 10.26,
+      "end": 10.4,
+      "probability": 0.996046245098114
+    },
+    {
+      "word": "made",
+      "start": 10.4,
+      "end": 10.58,
+      "probability": 0.931195855140686
+    },
+    {
+      "word": "-up",
+      "start": 10.58,
+      "end": 10.78,
+      "probability": 0.7514561712741852
+    },
+    {
+      "word": "timeline,",
+      "start": 10.78,
+      "end": 11.58,
+      "probability": 0.9767754077911377
+    },
+    {
+      "word": "he",
+      "start": 11.58,
+      "end": 11.64,
+      "probability": 0.9803828001022339
+    },
+    {
+      "word": "bargains",
+      "start": 11.64,
+      "end": 12.02,
+      "probability": 0.9857029020786285
+    },
+    {
+      "word": "for",
+      "start": 12.02,
+      "end": 12.2,
+      "probability": 0.9980243444442749
+    },
+    {
+      "word": "his",
+      "start": 12.2,
+      "end": 12.32,
+      "probability": 0.9995114803314209
+    },
+    {
+      "word": "friends'",
+      "start": 12.32,
+      "end": 12.48,
+      "probability": 0.2266601324081421
+    },
+    {
+      "word": "safety.",
+      "start": 12.48,
+      "end": 13.32,
+      "probability": 0.9984586238861084
+    },
+    {
+      "word": "Fine.",
+      "start": 13.32,
+      "end": 13.7,
+      "probability": 0.9763339757919312
+    },
+    {
+      "word": "But",
+      "start": 13.7,
+      "end": 13.74,
+      "probability": 0.990374743938446
+    },
+    {
+      "word": "the",
+      "start": 13.74,
+      "end": 13.82,
+      "probability": 0.9856652021408081
+    },
+    {
+      "word": "cloak",
+      "start": 13.82,
+      "end": 13.96,
+      "probability": 0.9648064374923706
+    },
+    {
+      "word": "comes",
+      "start": 13.96,
+      "end": 14.28,
+      "probability": 0.9981073141098022
+    },
+    {
+      "word": "with",
+      "start": 14.28,
+      "end": 14.5,
+      "probability": 0.998310923576355
+    },
+    {
+      "word": "suspiciously",
+      "start": 14.5,
+      "end": 15.06,
+      "probability": 0.9989122450351715
+    },
+    {
+      "word": "aggressive",
+      "start": 15.06,
+      "end": 15.2,
+      "probability": 0.9622734189033508
+    },
+    {
+      "word": "management.",
+      "start": 15.2,
+      "end": 16.18,
+      "probability": 0.9933702945709229
+    },
+    {
+      "word": "Pain",
+      "start": 16.18,
+      "end": 16.22,
+      "probability": 0.3807547390460968
+    },
+    {
+      "word": "calls",
+      "start": 16.22,
+      "end": 16.52,
+      "probability": 0.9984012246131897
+    },
+    {
+      "word": "it",
+      "start": 16.52,
+      "end": 16.68,
+      "probability": 0.1651490032672882
+    },
+    {
+      "word": "peace.",
+      "start": 16.68,
+      "end": 17.32,
+      "probability": 0.9281956553459167
+    },
+    {
+      "word": "The",
+      "start": 17.32,
+      "end": 17.34,
+      "probability": 0.9881848096847534
+    },
+    {
+      "word": "village",
+      "start": 17.34,
+      "end": 17.48,
+      "probability": 0.9582135677337646
+    },
+    {
+      "word": "gets",
+      "start": 17.48,
+      "end": 17.8,
+      "probability": 0.9927901029586792
+    },
+    {
+      "word": "a",
+      "start": 17.8,
+      "end": 17.96,
+      "probability": 0.9988338351249695
+    },
+    {
+      "word": "demolition",
+      "start": 17.96,
+      "end": 18.16,
+      "probability": 0.9920307397842407
+    },
+    {
+      "word": "notice.",
+      "start": 18.16,
+      "end": 19.1,
+      "probability": 0.998703122138977
+    },
+    {
+      "word": "Naruto",
+      "start": 19.1,
+      "end": 19.1,
+      "probability": 0.9764976501464844
+    },
+    {
+      "word": "says,",
+      "start": 19.1,
+      "end": 19.9,
+      "probability": 0.9949350953102112
+    },
+    {
+      "word": "can",
+      "start": 19.9,
+      "end": 20.0,
+      "probability": 0.542319118976593
+    },
+    {
+      "word": "we",
+      "start": 20.0,
+      "end": 20.1,
+      "probability": 0.9985949397087097
+    },
+    {
+      "word": "maybe",
+      "start": 20.1,
+      "end": 20.24,
+      "probability": 0.9817964434623718
+    },
+    {
+      "word": "try",
+      "start": 20.24,
+      "end": 20.46,
+      "probability": 0.9966906309127808
+    },
+    {
+      "word": "a",
+      "start": 20.46,
+      "end": 20.6,
+      "probability": 0.9981807470321655
+    },
+    {
+      "word": "conversation",
+      "start": 20.6,
+      "end": 20.82,
+      "probability": 0.9992852807044983
+    },
+    {
+      "word": "first?",
+      "start": 20.82,
+      "end": 21.63724903776081,
+      "probability": 0.9978234767913818
+    },
+    {
+      "word": "And",
+      "start": 21.63724903776081,
+      "end": 21.69725,
+      "probability": 9.730546480568592e-06
+    },
+    {
+      "word": "Obito?",
+      "start": 21.69725,
+      "end": 22.477249999999998,
+      "probability": 0.06547761522233486
+    },
+    {
+      "word": "Mask",
+      "start": 22.477249999999998,
+      "end": 22.59725,
+      "probability": 0.4484556019306183
+    },
+    {
+      "word": "on.",
+      "start": 22.59725,
+      "end": 23.59725,
+      "probability": 0.9774399995803833
+    },
+    {
+      "word": "Accountability",
+      "start": 23.59725,
+      "end": 23.59725,
+      "probability": 0.9875227808952332
+    },
+    {
+      "word": "off.",
+      "start": 23.59725,
+      "end": 24.59725,
+      "probability": 0.9623295068740845
+    },
+    {
+      "word": "Absolutely",
+      "start": 24.59725,
+      "end": 24.59725,
+      "probability": 0.9378167986869812
+    },
+    {
+      "word": "excellent",
+      "start": 24.59725,
+      "end": 24.95725,
+      "probability": 0.9927257299423218
+    },
+    {
+      "word": "hiring",
+      "start": 24.95725,
+      "end": 25.35725,
+      "probability": 0.984994113445282
+    },
+    {
+      "word": "department.",
+      "start": 25.35725,
+      "end": 26.09725,
+      "probability": 0.9789658784866333
+    },
+    {
+      "word": "At",
+      "start": 26.09725,
+      "end": 26.157249999999998,
+      "probability": 0.9474201798439026
+    },
+    {
+      "word": "first,",
+      "start": 26.157249999999998,
+      "end": 26.53725,
+      "probability": 0.9839696884155273
+    },
+    {
+      "word": "missions",
+      "start": 26.53725,
+      "end": 26.73725,
+      "probability": 0.9656860828399658
+    },
+    {
+      "word": "go",
+      "start": 26.73725,
+      "end": 26.977249999999998,
+      "probability": 0.9966877102851868
+    },
+    {
+      "word": "well.",
+      "start": 26.977249999999998,
+      "end": 27.59725,
+      "probability": 0.9974357485771179
+    },
+    {
+      "word": "Our",
+      "start": 27.59725,
+      "end": 27.61725,
+      "probability": 0.9644215703010559
+    },
+    {
+      "word": "boy",
+      "start": 27.61725,
+      "end": 27.75725,
+      "probability": 0.9642913937568665
+    },
+    {
+      "word": "finally",
+      "start": 27.75725,
+      "end": 28.17725,
+      "probability": 0.9940787553787231
+    },
+    {
+      "word": "feels",
+      "start": 28.17725,
+      "end": 28.477249999999998,
+      "probability": 0.9978886246681213
+    },
+    {
+      "word": "respected.",
+      "start": 28.477249999999998,
+      "end": 29.25725,
+      "probability": 0.9983049631118774
+    },
+    {
+      "word": "Then",
+      "start": 29.25725,
+      "end": 29.25725,
+      "probability": 0.9197356104850769
+    },
+    {
+      "word": "comes",
+      "start": 29.25725,
+      "end": 29.457250000000002,
+      "probability": 0.9912576675415039
+    },
+    {
+      "word": "the",
+      "start": 29.457250000000002,
+      "end": 29.63725,
+      "probability": 0.9962069988250732
+    },
+    {
+      "word": "assignment:",
+      "start": 29.63725,
+      "end": 30.39725,
+      "probability": 0.9864787459373474
+    },
+    {
+      "word": "betray",
+      "start": 30.39725,
+      "end": 30.457250000000002,
+      "probability": 0.25212761759757996
+    },
+    {
+      "word": "the",
+      "start": 30.457250000000002,
+      "end": 30.75725,
+      "probability": 0.9938040971755981
+    },
+    {
+      "word": "Hidden",
+      "start": 30.75725,
+      "end": 30.93725,
+      "probability": 0.24474717676639557
+    },
+    {
+      "word": "Leaf.",
+      "start": 30.93725,
+      "end": 31.43725,
+      "probability": 0.9284127950668335
+    },
+    {
+      "word": "Brother.",
+      "start": 31.43725,
+      "end": 31.69725,
+      "probability": 0.967007040977478
+    },
+    {
+      "word": "That",
+      "start": 31.69725,
+      "end": 31.79725,
+      "probability": 0.9731013774871826
+    },
+    {
+      "word": "is",
+      "start": 31.79725,
+      "end": 31.91725,
+      "probability": 0.9796037077903748
+    },
+    {
+      "word": "your",
+      "start": 31.91725,
+      "end": 32.01725,
+      "probability": 0.998394787311554
+    },
+    {
+      "word": "home.",
+      "start": 32.01725,
+      "end": 32.63725,
+      "probability": 0.9991596937179565
+    },
+    {
+      "word": "Read",
+      "start": 32.63725,
+      "end": 32.65725,
+      "probability": 0.9895259141921997
+    },
+    {
+      "word": "the",
+      "start": 32.65725,
+      "end": 32.777249999999995,
+      "probability": 0.9666464328765869
+    },
+    {
+      "word": "stupid",
+      "start": 32.777249999999995,
+      "end": 32.93725,
+      "probability": 0.9080651998519897
+    },
+    {
+      "word": "contract.",
+      "start": 32.93725,
+      "end": 33.73725,
+      "probability": 0.9971883893013
+    },
+    {
+      "word": "He",
+      "start": 33.73725,
+      "end": 33.79725,
+      "probability": 0.9850419163703918
+    },
+    {
+      "word": "refuses.",
+      "start": 33.79725,
+      "end": 34.89725,
+      "probability": 0.9957285523414612
+    },
+    {
+      "word": "Suddenly",
+      "start": 34.89725,
+      "end": 34.89725,
+      "probability": 0.9965318441390991
+    },
+    {
+      "word": "the",
+      "start": 34.89725,
+      "end": 35.11725,
+      "probability": 0.6886999607086182
+    },
+    {
+      "word": "new",
+      "start": 35.11725,
+      "end": 35.21725,
+      "probability": 0.9883695840835571
+    },
+    {
+      "word": "team",
+      "start": 35.21725,
+      "end": 35.417249999999996,
+      "probability": 0.9891194105148315
+    },
+    {
+      "word": "questions",
+      "start": 35.417249999999996,
+      "end": 35.777249999999995,
+      "probability": 0.988197386264801
+    },
+    {
+      "word": "his",
+      "start": 35.777249999999995,
+      "end": 36.03725,
+      "probability": 0.9956997632980347
+    },
+    {
+      "word": "loyalty.",
+      "start": 36.03725,
+      "end": 36.65725,
+      "probability": 0.9159830808639526
+    },
+    {
+      "word": "Sakura",
+      "start": 36.65725,
+      "end": 36.81725,
+      "probability": 0.10022314637899399
+    },
+    {
+      "word": "is",
+      "start": 36.81725,
+      "end": 37.15725,
+      "probability": 0.9966233968734741
+    },
+    {
+      "word": "left",
+      "start": 37.15725,
+      "end": 37.29725,
+      "probability": 0.9967582821846008
+    },
+    {
+      "word": "picking",
+      "start": 37.29725,
+      "end": 37.557249999999996,
+      "probability": 0.9503612518310547
+    },
+    {
+      "word": "through",
+      "start": 37.557249999999996,
+      "end": 37.81725,
+      "probability": 0.995381772518158
+    },
+    {
+      "word": "rubble.",
+      "start": 37.81725,
+      "end": 38.45725,
+      "probability": 0.5309624075889587
+    },
+    {
+      "word": "Some",
+      "start": 38.45725,
+      "end": 38.53725,
+      "probability": 0.9918125867843628
+    },
+    {
+      "word": "protection",
+      "start": 38.53725,
+      "end": 38.777249999999995,
+      "probability": 0.992968738079071
+    },
+    {
+      "word": "plan.",
+      "start": 38.777249999999995,
+      "end": 39.45725,
+      "probability": 0.992378830909729
+    },
+    {
+      "word": "Even",
+      "start": 39.45725,
+      "end": 39.557249999999996,
+      "probability": 0.9958575367927551
+    },
+    {
+      "word": "his",
+      "start": 39.557249999999996,
+      "end": 39.71725,
+      "probability": 0.9961373209953308
+    },
+    {
+      "word": "old",
+      "start": 39.71725,
+      "end": 39.83725,
+      "probability": 0.9971503615379333
+    },
+    {
+      "word": "friends",
+      "start": 39.83725,
+      "end": 40.11725,
+      "probability": 0.9913263916969299
+    },
+    {
+      "word": "cannot",
+      "start": 40.11725,
+      "end": 40.557249999999996,
+      "probability": 0.8314475417137146
+    },
+    {
+      "word": "tell",
+      "start": 40.557249999999996,
+      "end": 40.877250000000004,
+      "probability": 0.9992996454238892
+    },
+    {
+      "word": "whose",
+      "start": 40.877250000000004,
+      "end": 41.057249999999996,
+      "probability": 0.47669535875320435
+    },
+    {
+      "word": "side",
+      "start": 41.057249999999996,
+      "end": 41.29725,
+      "probability": 0.998685896396637
+    },
+    {
+      "word": "he",
+      "start": 41.29725,
+      "end": 41.43725,
+      "probability": 0.9954414367675781
+    },
+    {
+      "word": "is",
+      "start": 41.43725,
+      "end": 41.53725,
+      "probability": 0.9673042893409729
+    },
+    {
+      "word": "on.",
+      "start": 41.53725,
+      "end": 41.86853337011438,
+      "probability": 0.9987635612487793
+    },
+    {
+      "word": "Congratulations,",
+      "start": 41.86853337011438,
+      "end": 42.368562499999996,
+      "probability": 2.513645449653268e-05
+    },
+    {
+      "word": "genius.",
+      "start": 42.368562499999996,
+      "end": 43.6685625,
+      "probability": 0.9266909956932068
+    },
+    {
+      "word": "Two",
+      "start": 43.6685625,
+      "end": 43.7085625,
+      "probability": 0.9580352902412415
+    },
+    {
+      "word": "teams,",
+      "start": 43.7085625,
+      "end": 44.2485625,
+      "probability": 0.9909267425537109
+    },
+    {
+      "word": "zero",
+      "start": 44.2485625,
+      "end": 44.408562499999995,
+      "probability": 0.9228667616844177
+    },
+    {
+      "word": "trust,",
+      "start": 44.408562499999995,
+      "end": 44.948562499999994,
+      "probability": 0.8991073966026306
+    },
+    {
+      "word": "absolutely",
+      "start": 44.948562499999994,
+      "end": 45.188562499999996,
+      "probability": 0.9946447610855103
+    },
+    {
+      "word": "no",
+      "start": 45.188562499999996,
+      "end": 45.548562499999996,
+      "probability": 0.9926540851593018
+    },
+    {
+      "word": "dental",
+      "start": 45.548562499999996,
+      "end": 45.7885625,
+      "probability": 0.9972695708274841
+    },
+    {
+      "word": "insurance.",
+      "start": 45.7885625,
+      "end": 46.6285625,
+      "probability": 0.9963233470916748
+    },
+    {
+      "word": "So",
+      "start": 46.6285625,
+      "end": 46.688562499999996,
+      "probability": 0.9828527569770813
+    },
+    {
+      "word": "he",
+      "start": 46.688562499999996,
+      "end": 46.7485625,
+      "probability": 0.9254369139671326
+    },
+    {
+      "word": "stops",
+      "start": 46.7485625,
+      "end": 47.0085625,
+      "probability": 0.9960150122642517
+    },
+    {
+      "word": "chasing",
+      "start": 47.0085625,
+      "end": 47.308562499999994,
+      "probability": 0.9708386659622192
+    },
+    {
+      "word": "approval",
+      "start": 47.308562499999994,
+      "end": 47.7085625,
+      "probability": 0.9994798302650452
+    },
+    {
+      "word": "and",
+      "start": 47.7085625,
+      "end": 48.1285625,
+      "probability": 0.871171772480011
+    },
+    {
+      "word": "chooses",
+      "start": 48.1285625,
+      "end": 48.3285625,
+      "probability": 0.9923810362815857
+    },
+    {
+      "word": "his",
+      "start": 48.3285625,
+      "end": 48.588562499999995,
+      "probability": 0.998712420463562
+    },
+    {
+      "word": "people.",
+      "start": 48.588562499999995,
+      "end": 49.1285625,
+      "probability": 0.9943944215774536
+    },
+    {
+      "word": "The",
+      "start": 49.1285625,
+      "end": 49.1285625,
+      "probability": 0.9846524596214294
+    },
+    {
+      "word": "Akatsuki",
+      "start": 49.1285625,
+      "end": 49.4285625,
+      "probability": 0.3245621919631958
+    },
+    {
+      "word": "wanted",
+      "start": 49.4285625,
+      "end": 49.8885625,
+      "probability": 0.9884169697761536
+    },
+    {
+      "word": "a",
+      "start": 49.8885625,
+      "end": 50.0085625,
+      "probability": 0.9984773993492126
+    },
+    {
+      "word": "weapon.",
+      "start": 50.0085625,
+      "end": 50.6085625,
+      "probability": 0.9965972304344177
+    },
+    {
+      "word": "They",
+      "start": 50.6085625,
+      "end": 50.66856249999999,
+      "probability": 0.987557053565979
+    },
+    {
+      "word": "got",
+      "start": 50.66856249999999,
+      "end": 50.808562499999994,
+      "probability": 0.9977214932441711
+    },
+    {
+      "word": "an",
+      "start": 50.808562499999994,
+      "end": 50.908562499999995,
+      "probability": 0.9988697171211243
+    },
+    {
+      "word": "argument.",
+      "start": 50.908562499999995,
+      "end": 51.5285625,
+      "probability": 0.9992986917495728
+    },
+    {
+      "word": "Could",
+      "start": 51.5285625,
+      "end": 51.588562499999995,
+      "probability": 0.9798641204833984
+    },
+    {
+      "word": "he",
+      "start": 51.588562499999995,
+      "end": 51.66856249999999,
+      "probability": 0.9975038170814514
+    },
+    {
+      "word": "actually",
+      "start": 51.66856249999999,
+      "end": 51.8885625,
+      "probability": 0.9995043277740479
+    },
+    {
+      "word": "change",
+      "start": 51.8885625,
+      "end": 52.2485625,
+      "probability": 0.9978917241096497
+    },
+    {
+      "word": "them?",
+      "start": 52.2485625,
+      "end": 52.7085625,
+      "probability": 0.9978682994842529
+    },
+    {
+      "word": "Maybe.",
+      "start": 52.7085625,
+      "end": 53.308562499999994,
+      "probability": 0.9869129657745361
+    },
+    {
+      "word": "This",
+      "start": 53.308562499999994,
+      "end": 53.3485625,
+      "probability": 0.9841939806938171
+    },
+    {
+      "word": "is",
+      "start": 53.3485625,
+      "end": 53.4885625,
+      "probability": 0.9944568872451782
+    },
+    {
+      "word": "Naruto.",
+      "start": 53.4885625,
+      "end": 54.2485625,
+      "probability": 0.5519815683364868
+    },
+    {
+      "word": "But",
+      "start": 54.2485625,
+      "end": 54.2485625,
+      "probability": 0.9883671402931213
+    },
+    {
+      "word": "friendship",
+      "start": 54.2485625,
+      "end": 54.408562499999995,
+      "probability": 0.911395788192749
+    },
+    {
+      "word": "speeches",
+      "start": 54.408562499999995,
+      "end": 54.8485625,
+      "probability": 0.9938182234764099
+    },
+    {
+      "word": "cannot",
+      "start": 54.8485625,
+      "end": 55.408562499999995,
+      "probability": 0.947297990322113
+    },
+    {
+      "word": "fix",
+      "start": 55.408562499999995,
+      "end": 55.688562499999996,
+      "probability": 0.9976887702941895
+    },
+    {
+      "word": "every",
+      "start": 55.688562499999996,
+      "end": 56.0085625,
+      "probability": 0.995964765548706
+    },
+    {
+      "word": "murderous",
+      "start": 56.0085625,
+      "end": 56.3285625,
+      "probability": 0.990853488445282
+    },
+    {
+      "word": "group",
+      "start": 56.3285625,
+      "end": 56.548562499999996,
+      "probability": 0.9966872334480286
+    },
+    {
+      "word": "project.",
+      "start": 56.548562499999996,
+      "end": 57.2685625,
+      "probability": 0.9972367286682129
+    },
+    {
+      "word": "Would",
+      "start": 57.2685625,
+      "end": 57.2885625,
+      "probability": 0.9930461049079895
+    },
+    {
+      "word": "you",
+      "start": 57.2885625,
+      "end": 57.3885625,
+      "probability": 0.9988110065460205
+    },
+    {
+      "word": "trust",
+      "start": 57.3885625,
+      "end": 57.588562499999995,
+      "probability": 0.9982739686965942
+    },
+    {
+      "word": "his",
+      "start": 57.588562499999995,
+      "end": 57.7485625,
+      "probability": 0.9943471550941467
+    },
+    {
+      "word": "plan,",
+      "start": 57.7485625,
+      "end": 58.308562499999994,
+      "probability": 0.9992546439170837
+    },
+    {
+      "word": "or",
+      "start": 58.308562499999994,
+      "end": 58.4885625,
+      "probability": 0.9988168478012085
+    },
+    {
+      "word": "confiscate",
+      "start": 58.4885625,
+      "end": 59.0085625,
+      "probability": 0.9989199340343475
+    },
+    {
+      "word": "the",
+      "start": 59.0085625,
+      "end": 59.0685625,
+      "probability": 0.9979368448257446
+    },
+    {
+      "word": "cloak",
+      "start": 59.0685625,
+      "end": 59.2085625,
+      "probability": 0.9874194264411926
+    },
+    {
+      "word": "immediately?",
+      "start": 59.2085625,
+      "end": 59.9685625,
+      "probability": 0.9805471301078796
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 0.94,
+      "text": "What if Naruto joined the"
+    },
+    {
+      "start": 0.94,
+      "end": 1.8,
+      "text": "Akatsuki?"
+    },
+    {
+      "start": 1.8,
+      "end": 2.98,
+      "text": "Oh, fantastic."
+    },
+    {
+      "start": 2.98,
+      "end": 3.86,
+      "text": "Our boy saw matching villain"
+    },
+    {
+      "start": 3.86,
+      "end": 6.0,
+      "text": "cloaks and thought, career opportunity."
+    },
+    {
+      "start": 6.0,
+      "end": 7.14,
+      "text": "Motherflicker, they are hunting the"
+    },
+    {
+      "start": 7.14,
+      "end": 8.12,
+      "text": "fox inside you."
+    },
+    {
+      "start": 8.12,
+      "end": 8.82,
+      "text": "That is not a job"
+    },
+    {
+      "start": 8.82,
+      "end": 9.48,
+      "text": "interview."
+    },
+    {
+      "start": 9.48,
+      "end": 10.24,
+      "text": "You are the lunch."
+    },
+    {
+      "start": 10.24,
+      "end": 11.58,
+      "text": "In this made -up timeline,"
+    },
+    {
+      "start": 11.58,
+      "end": 12.48,
+      "text": "he bargains for his friends'"
+    },
+    {
+      "start": 12.48,
+      "end": 13.7,
+      "text": "safety. Fine."
+    },
+    {
+      "start": 13.7,
+      "end": 14.5,
+      "text": "But the cloak comes with"
+    },
+    {
+      "start": 14.5,
+      "end": 16.18,
+      "text": "suspiciously aggressive management."
+    },
+    {
+      "start": 16.18,
+      "end": 17.32,
+      "text": "Pain calls it peace."
+    },
+    {
+      "start": 17.32,
+      "end": 18.16,
+      "text": "The village gets a demolition"
+    },
+    {
+      "start": 18.16,
+      "end": 19.1,
+      "text": "notice."
+    },
+    {
+      "start": 19.1,
+      "end": 20.24,
+      "text": "Naruto says, can we maybe"
+    },
+    {
+      "start": 20.24,
+      "end": 21.63724903776081,
+      "text": "try a conversation first?"
+    },
+    {
+      "start": 21.63724903776081,
+      "end": 22.477249999999998,
+      "text": "And Obito?"
+    },
+    {
+      "start": 22.477249999999998,
+      "end": 23.59725,
+      "text": "Mask on."
+    },
+    {
+      "start": 23.59725,
+      "end": 24.59725,
+      "text": "Accountability off."
+    },
+    {
+      "start": 24.59725,
+      "end": 26.09725,
+      "text": "Absolutely excellent hiring department."
+    },
+    {
+      "start": 26.09725,
+      "end": 27.59725,
+      "text": "At first, missions go well."
+    },
+    {
+      "start": 27.59725,
+      "end": 29.25725,
+      "text": "Our boy finally feels respected."
+    },
+    {
+      "start": 29.25725,
+      "end": 30.457250000000002,
+      "text": "Then comes the assignment: betray"
+    },
+    {
+      "start": 30.457250000000002,
+      "end": 31.69725,
+      "text": "the Hidden Leaf. Brother."
+    },
+    {
+      "start": 31.69725,
+      "end": 32.63725,
+      "text": "That is your home."
+    },
+    {
+      "start": 32.63725,
+      "end": 33.73725,
+      "text": "Read the stupid contract."
+    },
+    {
+      "start": 33.73725,
+      "end": 34.89725,
+      "text": "He refuses."
+    },
+    {
+      "start": 34.89725,
+      "end": 35.777249999999995,
+      "text": "Suddenly the new team questions"
+    },
+    {
+      "start": 35.777249999999995,
+      "end": 36.65725,
+      "text": "his loyalty."
+    },
+    {
+      "start": 36.65725,
+      "end": 38.45725,
+      "text": "Sakura is left picking through rubble."
+    },
+    {
+      "start": 38.45725,
+      "end": 39.45725,
+      "text": "Some protection plan."
+    },
+    {
+      "start": 39.45725,
+      "end": 40.557249999999996,
+      "text": "Even his old friends cannot"
+    },
+    {
+      "start": 40.557249999999996,
+      "end": 41.86853337011438,
+      "text": "tell whose side he is on."
+    },
+    {
+      "start": 41.86853337011438,
+      "end": 43.6685625,
+      "text": "Congratulations, genius."
+    },
+    {
+      "start": 43.6685625,
+      "end": 45.188562499999996,
+      "text": "Two teams, zero trust, absolutely"
+    },
+    {
+      "start": 45.188562499999996,
+      "end": 46.6285625,
+      "text": "no dental insurance."
+    },
+    {
+      "start": 46.6285625,
+      "end": 47.7085625,
+      "text": "So he stops chasing approval"
+    },
+    {
+      "start": 47.7085625,
+      "end": 49.1285625,
+      "text": "and chooses his people."
+    },
+    {
+      "start": 49.1285625,
+      "end": 50.6085625,
+      "text": "The Akatsuki wanted a weapon."
+    },
+    {
+      "start": 50.6085625,
+      "end": 51.5285625,
+      "text": "They got an argument."
+    },
+    {
+      "start": 51.5285625,
+      "end": 53.308562499999994,
+      "text": "Could he actually change them? Maybe."
+    },
+    {
+      "start": 53.308562499999994,
+      "end": 54.2485625,
+      "text": "This is Naruto."
+    },
+    {
+      "start": 54.2485625,
+      "end": 55.688562499999996,
+      "text": "But friendship speeches cannot fix"
+    },
+    {
+      "start": 55.688562499999996,
+      "end": 57.2685625,
+      "text": "every murderous group project."
+    },
+    {
+      "start": 57.2685625,
+      "end": 58.308562499999994,
+      "text": "Would you trust his plan,"
+    },
+    {
+      "start": 58.308562499999994,
+      "end": 59.9685625,
+      "text": "or confiscate the cloak immediately?"
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 8,
+  "review_names_required": true
+}
