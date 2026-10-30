@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "Caption transcript differs substantially from the prepared script",
+  "github_run_id": "41045956550",
+  "publishing_enabled": false
+}
