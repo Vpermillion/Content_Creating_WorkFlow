@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "id": "ifverse-anime-roast-20261030-02",
+  "video": "render/video.mp4",
+  "duration_seconds": 60.0,
+  "timings": {
+    "footage_seconds": 0.007,
+    "narration_seconds": 0.004,
+    "captioning_seconds": 18.911,
+    "render_and_decode_seconds": 32.854,
+    "pipeline_seconds": 52.961
+  },
+  "voice": {
+    "provider": "kokoro-onnx",
+    "voice": "af_heart",
+    "device": "cpu",
+    "reused_verified_audio": true
+  },
+  "captions": {
+    "engine": "faster-whisper",
+    "model": "tiny.en",
+    "compute_type": "int8",
+    "recognition_mode": "narration_scenes",
+    "phrases": 41,
+    "script_token_agreement": 0.9438775510204082,
+    "reused_verified_timing": false
+  },
+  "footage": "Traced online Naruto clips with reviewed narration-beat matching",
+  "edit_plan": "edits/ifverse-anime-roast-60-v1.json",
+  "script": "pilots/ifverse-anime-roast-60-v1.json",
+  "script_style": "ifverse-playful-roast-v1",
+  "explicit_beat_timing": false,
+  "publishing_enabled": false,
+  "github_run_id": "41046405500",
+  "limitations": [
+    "Fan-made hypothetical review draft; source reuse permissions unverified",
+    "Pronunciation, character names and full audiovisual review remain required"
+  ]
+}
