@@ -12,6 +12,35 @@ spec.loader.exec_module(module)
 
 
 class TestVideoPlanTests(unittest.TestCase):
+    def test_zero_duration_alignment_tokens_join_timed_phrases_without_losing_text(self):
+        words = [{'word': 'Oh!', 'start': 0, 'end': 0},
+                 {'word': 'Fantastic.', 'start': .1, 'end': .9},
+                 {'word': 'Fine.', 'start': 1, 'end': 1}]
+        captions = module.phrase_captions(words, 1.1)
+        self.assertEqual(captions, [{'start': 0, 'end': 1, 'text': 'Oh! Fantastic. Fine.'}])
+
+    def test_known_script_alignment_preserves_all_words_and_offsets_audio_windows(self):
+        import numpy as np
+        class Engine:
+            def feature_extractor(self, audio):
+                return audio
+            def encode(self, features):
+                return features
+            def find_alignment(self, tokenizer, tokens, encoded, frames):
+                return [[{'word': text, 'start': .5 + i * .3, 'end': .8 + i * .3,
+                          'probability': .8} for i, text in enumerate(tokens[0])]]
+        engine = Engine()
+        tokenizer = SimpleNamespace(encode=lambda text: text.split())
+        scenes = [{'start': 0, 'end': 20, 'text': 'First word.'},
+                  {'start': 20, 'end': 30, 'text': 'Second word.'}]
+        words = module.align_script_words(engine, tokenizer, np.zeros(480000), scenes, lambda f: f)
+        self.assertEqual([w['word'] for w in words], ['First', 'word.', 'Second', 'word.'])
+        self.assertAlmostEqual(words[2]['start'], 20.1)
+        with patch.object(engine, 'find_alignment', return_value=[[{
+                'word': 'Wrong', 'start': .5, 'end': .8, 'probability': .9}]]):
+            with self.assertRaisesRegex(ValueError, 'complete supplied script'):
+                module.align_script_words(engine, tokenizer, np.zeros(480000), scenes, lambda f: f)
+
     def test_request_rejects_unapproved_model_before_creating_output(self):
         with tempfile.TemporaryDirectory() as temp:
             output = Path(temp) / 'output'

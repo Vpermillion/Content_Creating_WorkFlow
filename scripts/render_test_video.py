@@ -123,8 +123,18 @@ def phrase_captions(words, duration):
             group = []
     if group:
         phrases.append(group)
-    captions = []
+    timed, pending = [], []
     for phrase in phrases:
+        pending.extend(phrase)
+        if pending[-1]['end'] > pending[0]['start']:
+            timed.append(pending)
+            pending = []
+    if pending:
+        if not timed:
+            raise ValueError('No positive caption interval was aligned')
+        timed[-1].extend(pending)
+    captions = []
+    for phrase in timed:
         start, end = max(0, phrase[0]['start']), min(duration, phrase[-1]['end'])
         if end <= start:
             raise ValueError('Speech recognizer returned an empty caption interval')
@@ -192,6 +202,66 @@ def recognize_words(engine, waveform, scenes=None):
                     words.append({'word': word.word, 'start': start, 'end': finish,
                                   'probability': word.probability})
     return words
+
+
+def align_script_words(engine, tokenizer, waveform, scenes, pad_features):
+    """Align supplied TTS text to audio with Whisper's cross-attention/DTW API."""
+    groups = []
+    for scene in scenes:
+        if not groups or scene['end'] - groups[-1]['start'] > 24:
+            groups.append({'start': scene['start'], 'end': scene['end'], 'text': scene['text']})
+        else:
+            groups[-1]['end'] = scene['end']
+            groups[-1]['text'] += ' ' + scene['text']
+    words = []
+    for group in groups:
+        offset = max(0, round((group['start'] - .4) * 16000))
+        stop = min(len(waveform), round((group['end'] + .4) * 16000))
+        features = engine.feature_extractor(waveform[offset:stop])
+        tokens = tokenizer.encode(group['text'])
+        if not tokens or len(tokens) > 400:
+            raise ValueError('Known-script alignment window exceeds token limit')
+        encoded = engine.encode(pad_features(features))
+        aligned = engine.find_alignment(tokenizer, [tokens], encoded, round((stop - offset) / 160))[0]
+        if not aligned:
+            raise ValueError('Known-script alignment returned no timing')
+        for word in aligned:
+            text = word['word'].strip()
+            if not text:
+                continue
+            start = max(group['start'], min(group['end'], offset / 16000 + float(word['start'])))
+            end = max(start, min(group['end'], offset / 16000 + float(word['end'])))
+            if words and not re.search(r'\w', text):
+                words[-1]['word'] += text
+                words[-1]['end'] = max(words[-1]['end'], end)
+            else:
+                words.append({'word': text, 'start': start, 'end': end,
+                              'probability': float(word['probability'])})
+    normalize = lambda text: re.findall(r'\w+', text.casefold())
+    expected = normalize(' '.join(s['text'] for s in scenes))
+    if normalize(' '.join(w['word'] for w in words)) != expected:
+        raise ValueError('Alignment did not preserve the complete supplied script')
+    return words
+
+
+def forced_align(audio, output, models, scenes, model):
+    from faster_whisper import WhisperModel
+    from faster_whisper.audio import pad_or_trim
+    from faster_whisper.tokenizer import Tokenizer
+    engine = WhisperModel(model, device='cpu', compute_type='int8', cpu_threads=2, num_workers=1,
+                          download_root=str(models / 'whisper'))
+    tokenizer = Tokenizer(engine.hf_tokenizer, engine.model.is_multilingual, task='transcribe', language='en')
+    words = align_script_words(engine, tokenizer, asr_audio(audio, output), scenes, pad_or_trim)
+    captions = phrase_captions(words, media.duration(audio))
+    receipt = {'engine': 'faster-whisper', 'model': model, 'device': 'cpu', 'compute_type': 'int8',
+               'recognition_mode': 'script_alignment', 'known_script': True,
+               'timing_basis': 'Whisper cross-attention DTW alignment to the final waveform; estimated word times',
+               'audio_sha256': digest(audio), 'words': words, 'captions': captions,
+               'script_token_agreement': None, 'independent_recognition_accuracy': None,
+               'zero_duration_words': sum(w['end'] <= w['start'] for w in words),
+               'review_names_required': True}
+    atomic_json(output / 'transcription.json', receipt)
+    return captions, None
 
 
 def transcribe(audio, output, models, spec, scenes=None, model='tiny.en'):
@@ -289,7 +359,7 @@ def run(request, output, models):
     operation = identifier(request['id'])
     if request.get('channel') != 'ifverse_anime' or request.get('voice') not in {'af_heart', 'am_michael'}:
         raise ValueError('Unsupported test channel or voice')
-    if request.get('caption_mode', 'whole_audio') not in {'whole_audio', 'narration_scenes'}:
+    if request.get('caption_mode', 'whole_audio') not in {'whole_audio', 'narration_scenes', 'script_alignment'}:
         raise ValueError('Unsupported caption recognition mode')
     if request.get('caption_model', 'tiny.en') not in {'tiny.en', 'base.en'}:
         raise ValueError('Unsupported caption recognition model')
@@ -337,6 +407,9 @@ def run(request, output, models):
         transcript = json.loads((prior / 'transcription.json').read_text())
         captions, agreement = transcript['captions'], transcript['script_token_agreement']
         shutil.copy2(prior / 'transcription.json', output / 'transcription.json')
+    elif request.get('caption_mode') == 'script_alignment':
+        captions, agreement = forced_align(output / 'narration.wav', output, models, segments,
+                                          request.get('caption_model', 'tiny.en'))
     else:
         captions, agreement = transcribe(output / 'narration.wav', output, models, source,
                                         segments if request.get('caption_mode') == 'narration_scenes' else None,
