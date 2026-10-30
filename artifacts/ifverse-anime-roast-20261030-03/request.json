@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-roast-20261030-03",
+  "channel": "ifverse_anime",
+  "voice": "af_heart",
+  "script": "pilots/ifverse-anime-roast-60-v1.json",
+  "edit_plan": "edits/ifverse-anime-roast-60-v1.json",
+  "result_branch": "codex/results/ifverse-anime-roast-20261030-03",
+  "publishing_enabled": false,
+  "reuse_narration_from": "artifacts/ifverse-anime-roast-20261030-01",
+  "caption_mode": "narration_scenes",
+  "caption_model": "base.en"
+}

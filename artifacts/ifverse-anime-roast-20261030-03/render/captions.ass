@@ -1,0 +1,73 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.70,Caption,,0,0,0,,What if Naruto joined the\NAkatsuki? Oh fantastic. Our.
+Dialogue: 0,0:00:02.98,0:00:04.30,Caption,,0,0,0,,boy saw matching villain cloaks
+Dialogue: 0,0:00:04.30,0:00:05.78,Caption,,0,0,0,,and thought, career opportunity.\Ncommunity.
+Dialogue: 0,0:00:05.90,0:00:07.14,Caption,,0,0,0,,Motherflicker, they are hunting\Nthe
+Dialogue: 0,0:00:07.14,0:00:07.98,Caption,,0,0,0,,fox inside you.
+Dialogue: 0,0:00:08.23,0:00:10.01,Caption,,0,0,0,,is not a job interview. You are\Nthe lunch.
+Dialogue: 0,0:00:10.01,0:00:11.17,Caption,,0,0,0,,in this made -up timeline,
+Dialogue: 0,0:00:11.61,0:00:13.33,Caption,,0,0,0,,he bargains for his friends'\Nsafety. Fine.
+Dialogue: 0,0:00:13.67,0:00:14.49,Caption,,0,0,0,,But the cloak comes with
+Dialogue: 0,0:00:14.49,0:00:15.83,Caption,,0,0,0,,suspiciously aggressive\Nmanagement. pain.
+Dialogue: 0,0:00:16.09,0:00:16.87,Caption,,0,0,0,,Pain calls it peace.
+Dialogue: 0,0:00:17.33,0:00:18.95,Caption,,0,0,0,,The village gets a demolition\Nnotice. No.
+Dialogue: 0,0:00:18.95,0:00:20.25,Caption,,0,0,0,,Naruto says, can we maybe
+Dialogue: 0,0:00:20.25,0:00:23.90,Caption,,0,0,0,,try a conversation first? And.\NObito? Mask on. off.
+Dialogue: 0,0:00:24.66,0:00:25.76,Caption,,0,0,0,,excellent hiring department.
+Dialogue: 0,0:00:25.76,0:00:27.15,Caption,,0,0,0,,At first, missions go well.
+Dialogue: 0,0:00:27.59,0:00:28.81,Caption,,0,0,0,,Our boy finally feels respected.
+Dialogue: 0,0:00:29.24,0:00:31.30,Caption,,0,0,0,,comes the assignment, betray the\NHidden Leaf. Breathe.
+Dialogue: 0,0:00:31.37,0:00:32.19,Caption,,0,0,0,,Brother, that is your home.
+Dialogue: 0,0:00:32.65,0:00:33.71,Caption,,0,0,0,,Read the stupid contract. He\Nrefuses.
+Dialogue: 0,0:00:33.71,0:00:36.49,Caption,,0,0,0,,Suddenly the new team questions\Nhis loyalty. right. right.
+Dialogue: 0,0:00:36.63,0:00:38.01,Caption,,0,0,0,,Sakura is left picking through\Nrubble.
+Dialogue: 0,0:00:38.47,0:00:39.25,Caption,,0,0,0,,Some protection plan Even.
+Dialogue: 0,0:00:39.54,0:00:40.88,Caption,,0,0,0,,his old friends cannot tell
+Dialogue: 0,0:00:40.88,0:00:41.72,Caption,,0,0,0,,whose side he is on. on.
+Dialogue: 0,0:00:41.87,0:00:42.91,Caption,,0,0,0,,Congratulations, genius.
+Dialogue: 0,0:00:43.69,0:00:45.21,Caption,,0,0,0,,Two teams, zero trust,\Nabsolutely
+Dialogue: 0,0:00:45.21,0:00:46.29,Caption,,0,0,0,,no dental insurance.
+Dialogue: 0,0:00:46.29,0:00:47.32,Caption,,0,0,0,,We'll the he stops chasing
+Dialogue: 0,0:00:47.32,0:00:49.06,Caption,,0,0,0,,approval and chooses his people.\NThe.
+Dialogue: 0,0:00:49.14,0:00:54.01,Caption,,0,0,0,,Akatsuki wanted a weapon. They\Ngot an argument. This is Naruto.\Nour rutto.
+Dialogue: 0,0:00:54.26,0:00:56.02,Caption,,0,0,0,,friendship speeches cannot fix\Nevery
+Dialogue: 0,0:00:56.02,0:00:57.04,Caption,,0,0,0,,murderous group project. next\Nreport.
+Dialogue: 0,0:00:57.28,0:00:58.48,Caption,,0,0,0,,you trust his plan, or
+Dialogue: 0,0:00:58.48,0:00:59.82,Caption,,0,0,0,,confiscate the cloak\Nimmediately? you later.
+Dialogue: 1,0:00:00.00,0:00:02.90,Heading,,0,0,0,,BAD CAREER MOVE
+Dialogue: 1,0:00:02.90,0:00:05.90,Heading,,0,0,0,,THE CLOAK IS A RED FLAG
+Dialogue: 1,0:00:05.90,0:00:08.13,Heading,,0,0,0,,YOU ARE THE TARGET
+Dialogue: 1,0:00:08.13,0:00:10.21,Heading,,0,0,0,,NOT AN INTERVIEW
+Dialogue: 1,0:00:10.21,0:00:13.11,Heading,,0,0,0,,A MADE-UP DEAL
+Dialogue: 1,0:00:13.11,0:00:16.09,Heading,,0,0,0,,SUSPICIOUS MANAGEMENT
+Dialogue: 1,0:00:16.09,0:00:18.95,Heading,,0,0,0,,PEACE WITH A DEMOLITION NOTICE
+Dialogue: 1,0:00:18.95,0:00:21.64,Heading,,0,0,0,,CAN WE TALK FIRST
+Dialogue: 1,0:00:21.64,0:00:26.07,Heading,,0,0,0,,ACCOUNTABILITY OFF
+Dialogue: 1,0:00:26.07,0:00:29.16,Heading,,0,0,0,,FINALLY SOME RESPECT
+Dialogue: 1,0:00:29.16,0:00:31.37,Heading,,0,0,0,,THE REAL ASSIGNMENT
+Dialogue: 1,0:00:31.37,0:00:33.71,Heading,,0,0,0,,READ THE CONTRACT
+Dialogue: 1,0:00:33.71,0:00:36.63,Heading,,0,0,0,,HE REFUSES
+Dialogue: 1,0:00:36.63,0:00:39.42,Heading,,0,0,0,,SOME PROTECTION PLAN
+Dialogue: 1,0:00:39.42,0:00:41.87,Heading,,0,0,0,,OLD FRIENDS, NEW DOUBTS
+Dialogue: 1,0:00:41.87,0:00:46.58,Heading,,0,0,0,,TWO TEAMS. ZERO TRUST.
+Dialogue: 1,0:00:46.58,0:00:49.06,Heading,,0,0,0,,CHOOSE YOUR PEOPLE
+Dialogue: 1,0:00:49.06,0:00:51.51,Heading,,0,0,0,,WEAPON OR ARGUMENT
+Dialogue: 1,0:00:51.51,0:00:54.18,Heading,,0,0,0,,COULD HE CHANGE THEM
+Dialogue: 1,0:00:54.18,0:00:57.22,Heading,,0,0,0,,THE GROUP PROJECT FROM HELL
+Dialogue: 1,0:00:57.22,0:01:00.00,Heading,,0,0,0,,KEEP OR CONFISCATE THE CLOAK
+Dialogue: 1,0:00:00.00,0:01:00.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:00.00,Credit,,0,0,0,,ONLINE ANIME EXCERPTS / REVIEW DRAFT
