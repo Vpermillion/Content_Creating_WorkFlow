@@ -31,3 +31,7 @@ Channel names, registry slots, mocked OAuth tests and old chat authorization lin
 ## What is still unfinished
 
 The tested production path uses a prepared Naruto script and reviewed source plan. Robust arbitrary-story intake, stronger automatic semantic selection, subject-aware crop/quality decisions, general two-channel branding, durable private production storage, live YouTube verification/delivery and analytics remain. Reuse the working components and completed results while advancing these specific gaps. Read `docs/CURRENT.md` and `BACKLOG.md` before choosing the next task.
+
+## Funny, teasing script tone and one-minute request — 2026-10-30
+
+The owner selected lively sarcastic fan commentary, exaggerated complaints and occasional clean substitutions such as motherflicker/mother father for both English channels. The durable addon is `prompts/script-style.md`, wired into new-agent entry points and both profiles. A new 196-word Naruto roast and reviewed footage plan were prepared for a 60-second example. See CURRENT for actual execution results. Earlier neutral prose remains historical rather than the preferred default.

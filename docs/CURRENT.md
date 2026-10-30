@@ -8,6 +8,12 @@ Read `START_HERE.md`, `README.md` and `AGENTS.md`. Current development is **`cod
 
 English YouTube what-if videos for `ifverse_anime` and `ifverse_hollywood`. One assistant production plan → one finite autonomous GitHub job → cached online footage, narration, caption timing, ordered rendering and validation → one compact result/review. Match actual spoken characters/actions/locations as closely as the available footage permits. Keep invented events explicitly illustrative.
 
+## Current owner style and one-minute request
+
+The owner requested funny, teasing, sarcastic fan narration, exaggerated complaints and occasional clean-swear wordplay such as “motherflicker” or “mother father.” This applies to **both English channels** and supersedes the older neutral writing tone. Read [the permanent addon](../prompts/script-style.md) before drafting. It is linked from the root guides, agent instructions, both continuation prompts and both channel profiles.
+
+New request `ifverse-anime-roast-20261030-01` targets **60 seconds** with a new 196-word, 21-beat Naruto/Akatsuki roast, selected from nine previously reviewed moving sources. Fresh narration/captions are required because the script changed. Existing approved videos and their exact audio remain preserved. The selected runner change accepts bounded `pilots/*.json` script input plus a matching supplied edit plan and can fit newly generated speech to a duration with bounded pitch-preserving retiming. Automatic new-story clip discovery/semantic matching and Hollywood rendering remain incomplete. Check the saved result branch `codex/results/ifverse-anime-roast-20261030-01` before any retry; execution/review status will be recorded here when completed.
+
 ## Latest completed video: closer visual matching
 
 - Request `ifverse-anime-visual-match-20261030-01` **succeeded** in hosted run `41022041729`, from source `86300d83e7d7b004747b3d21940199a3e933360e` on `codex/ifverse-workflow`.
