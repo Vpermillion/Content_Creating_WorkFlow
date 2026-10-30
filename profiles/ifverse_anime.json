@@ -4,24 +4,40 @@
   "configuration_status": "planning_only",
   "topic_confirmed": true,
   "topic": "anime what-if stories, characters and alternate scenarios",
-  "platforms": ["youtube"],
+  "platforms": [
+    "youtube"
+  ],
   "connected_account_id": null,
-  "input_modes": ["supplied_script", "creative_directions"],
+  "input_modes": [
+    "supplied_script",
+    "creative_directions"
+  ],
   "language": "en",
   "language_confirmed": true,
   "narrator": {
-    "provider": null,
-    "voice": null,
+    "provider": "kokoro-onnx",
+    "voice": "af_heart",
     "candidate_if_english": "kokoro",
-    "status": "not_configured"
+    "status": "tested_provisional_review_voice",
+    "version": "0.6.1",
+    "device": "cpu",
+    "voice_preference_confirmed": false
   },
   "footage": {
     "sources": [],
     "source_selection": "online_video_search",
-    "implementation_branch": "codex/youtube-oauth",
-    "existing_providers": ["tenor", "youtube"],
-    "integration_status": "implemented_on_feature_branch_not_in_selected_checkout",
-    "matching": ["series", "character", "action", "narration_context"],
+    "implementation_branch": "codex/ifverse-workflow",
+    "existing_providers": [
+      "tenor",
+      "youtube"
+    ],
+    "integration_status": "existing_tools_tested_on_anime_review",
+    "matching": [
+      "series",
+      "character",
+      "action",
+      "narration_context"
+    ],
     "provenance_required": true,
     "unmatched_scene_action": "flag_for_review"
   },

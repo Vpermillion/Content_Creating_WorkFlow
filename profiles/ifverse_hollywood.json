@@ -4,9 +4,14 @@
   "configuration_status": "planning_only",
   "topic_confirmed": true,
   "topic": "Hollywood film what-if stories, characters and alternate scenarios",
-  "platforms": ["youtube"],
+  "platforms": [
+    "youtube"
+  ],
   "connected_account_id": null,
-  "input_modes": ["supplied_script", "creative_directions"],
+  "input_modes": [
+    "supplied_script",
+    "creative_directions"
+  ],
   "language": "en",
   "language_confirmed": true,
   "narrator": {
@@ -18,10 +23,18 @@
   "footage": {
     "sources": [],
     "source_selection": "online_video_search",
-    "implementation_branch": "codex/youtube-oauth",
-    "existing_providers": ["tenor", "youtube"],
-    "integration_status": "implemented_on_feature_branch_not_in_selected_checkout",
-    "matching": ["film", "character", "action", "narration_context"],
+    "implementation_branch": "codex/ifverse-workflow",
+    "existing_providers": [
+      "tenor",
+      "youtube"
+    ],
+    "integration_status": "existing_tools_tested_on_anime_review",
+    "matching": [
+      "film",
+      "character",
+      "action",
+      "narration_context"
+    ],
     "provenance_required": true,
     "unmatched_scene_action": "flag_for_review"
   },

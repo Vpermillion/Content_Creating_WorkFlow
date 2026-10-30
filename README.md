@@ -33,7 +33,7 @@ Footage should illustrate the actual narrated character, action, location or cho
 | Caption timing | faster-whisper `tiny.en`, CPU/int8, actual recognized word timestamps grouped into phrases; known-script spelling corrections preserve raw records and timestamps. |
 | Continuity | Source history, safe generated examples, state/checkpoint docs and copy-ready prompts. Credentials and private production data remain separate. |
 
-The delivered Naruto test is **44.672 seconds, 18 moving shots and 27 caption phrases**, from successful hosted run `40846229359`. [Saved MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/artifacts/ifverse-anime-test-20261029-04/render/video.mp4). A closer visual-match revision uses 22 spoken-beat shots; consult [CURRENT](docs/CURRENT.md) for its actual completion status and latest result.
+The latest Naruto review is **44.672 seconds, 22 spoken-beat shots from 14 moving sources and 27 caption phrases**, from successful hosted run `41022041729`. [Watch the revised MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-visual-match-20261030-01/artifacts/ifverse-anime-visual-match-20261030-01/render/video.mp4). It preserves the prior voice/captions while aligning the pictures more closely to the words. All 22 shot samples were inspected; full decode, track coverage, retained-audio/caption checks and observed motion passed. See [CURRENT](docs/CURRENT.md) for exact receipts and next work.
 
 ## Current workflow entry
 

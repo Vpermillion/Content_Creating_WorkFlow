@@ -1,3 +1,5 @@
+> Current entry: read `START_HERE.md` and `docs/CURRENT.md` first. Development is on `codex/ifverse-workflow`. The latest 22-shot visual-match revision has completed in run `41022041729`; older branch pointers and earlier test milestones below are historical checkpoints.
+
 # Ifverse: current product brief
 
 Updated from the user's clarification on 2026-10-29. This brief takes priority over the provisional science-channel examples in the original `MASTER_PROMPT.md`.

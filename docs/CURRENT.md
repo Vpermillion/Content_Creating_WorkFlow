@@ -8,19 +8,23 @@ Read `START_HERE.md`, `README.md` and `AGENTS.md`. Current development is **`cod
 
 English YouTube what-if videos for `ifverse_anime` and `ifverse_hollywood`. One assistant production plan → one finite autonomous GitHub job → cached online footage, narration, caption timing, ordered rendering and validation → one compact result/review. Match actual spoken characters/actions/locations as closely as the available footage permits. Keep invented events explicitly illustrative.
 
-## Latest completed video
+## Latest completed video: closer visual matching
 
-- Naruto test: 44.672 seconds, 18 moving shots, Kokoro-ONNX `af_heart` CPU speech, 27 faster-whisper CPU/int8 phrase captions.
-- Hosted run `40846229359` succeeded. Completed MP4, captions, script, source plan and receipts are on `codex/ifverse-test-result-20261029-04`, under `artifacts/ifverse-anime-test-20261029-04/`.
-- Speech SHA-256: `2eea93b20f0187a0a7aa25444a49f439f2d00d5b276dfefdea68a3cb97bf8fcc`. Preserve it for visual-only revisions.
-- Final video SHA-256: `ecaf34229de3a645779c4b6518749b71a64e655079cdadd8803172c603f2d13a`. Full decode, track coverage, motion in all 18 shots and -0.5 dBFS peak were independently rechecked. Full listening/editorial/source-use approval remains pending.
-- Measured retained-audio media work: 33.255 seconds; excludes setup and first-time voice generation. See `docs/TEST_VIDEO.md` for failures/fixes and the complete record.
+- Request `ifverse-anime-visual-match-20261030-01` **succeeded** in hosted run `41022041729`, from source `86300d83e7d7b004747b3d21940199a3e933360e` on `codex/ifverse-workflow`.
+- Result branch: `codex/results/ifverse-anime-visual-match-20261030-01`; directory `artifacts/ifverse-anime-visual-match-20261030-01/`. [Watch/download the latest MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-visual-match-20261030-01/artifacts/ifverse-anime-visual-match-20261030-01/render/video.mp4).
+- **44.672 seconds, 22 moving shots from 14 traced online sources, 27 caption phrases.** Nine Tails appears on its name, Akatsuki on the organization/motive, the Leaf on the village threat, and friends on the protection alternative. See `docs/VISUAL_MATCHING.md` for every reviewed beat and source reason. Invented actions remain illustrative.
+- The exact Kokoro-ONNX `af_heart` speech and corrected faster-whisper caption timing were retained. Narration SHA-256: `2eea93b20f0187a0a7aa25444a49f439f2d00d5b276dfefdea68a3cb97bf8fcc`.
+- Video SHA-256: `87de8da1c8f43e8320d9364c8ce6af4d790e20b75bc322ae51c55fe93d877b7f`. Complete decoding, track coverage, byte-identical narration/captions, motion in all 22 shots and -0.5 dBFS peak reverified locally; all 22 shot-midpoint frames were visually reviewed. Full listening/editorial/source-use approval remains separate.
+- Media execution: **24.715 seconds**, including 1.084 footage, 0.003 retained voice, 0.004 retained captions, 22.867 render/decode. This excludes installation/queueing and reuses audio/captions; it is not a fresh TTS/ASR throughput benchmark. Local regression suite: **42 passed**. Hosted regression gate also passed before rendering.
+- Delivered cloud files: `/workspace/Ifverse_Anime_Script_Matched.mp4` and `.srt`. GitHub result branch and `ifverse-review-video` run artifact preserve the output independently of those machine paths. Read the existing result before rerunning.
 
-## Current visual revision
+## Earlier baseline
 
-The user approved that test and requested closer script-to-picture matching plus complete GitHub handoff instructions. `edits/ifverse-anime-naruto-visual-v3.json` contains **22 explicit spoken-beat shot intervals from 14 moving sources**. It replaces equal scene splitting: Nine Tails on its name, Akatsuki on the organization/motive, Leaf on the threatened village, friends on the protection alternative. The unchanged speech and captions are reused. Local suite: **42 passed** after interval/request changes.
+The prior delivered test (18 shots, same 44.672-second voice, 27 captions) remains on `codex/ifverse-test-result-20261029-04`, hosted run `40846229359`. Older 46.975-second edits and the science fixtures remain historical engineering stages. Do not overwrite or regenerate them to resume the current version.
 
-Request `ifverse-anime-visual-match-20261030-01` is prepared in `review-requests/`. It is not a completed new result until its `result.json` reports success. Expected result branch: `codex/results/ifverse-anime-visual-match-20261030-01`. Inspect that result before any resubmission.
+## Exact next work
+
+The tested runner still uses the prepared Naruto story. Generalize validated new-story/channel input and Hollywood branding, improve automated semantic clip selection without losing concrete beat reasons, and harden stage resume/private media storage. Do not rebuild working download, voice, ASR or render tools. Publishing/account setup is a separate task with no verified live binding here.
 
 ## Commands and status limits
 

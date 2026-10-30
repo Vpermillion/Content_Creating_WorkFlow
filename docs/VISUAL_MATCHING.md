@@ -34,3 +34,5 @@ Prioritize the actually named character/entity, then action/location, then tone 
 | 42.40–44.67 | Or would joining them change Naruto first | `18787224` | Return to Naruto in his inner space when the closing question shifts back to him. | hypothetical_illustration |
 
 All 22 entries use moving online excerpts from the retained traced source plan, with full-frame containment to avoid the heavy portrait crop that enlarged low-resolution footage. No original speech or caption bytes need regeneration for this visual-only revision. Existing captions and source ownership/editorial limitations remain. Inspect representative frames and cuts in the completed output; the rationale table alone is not proof that the whole video was reviewed.
+
+Completed output: hosted run `41022041729`, result `codex/results/ifverse-anime-visual-match-20261030-01`. All 22 shot-midpoint frames were inspected against the plan; complete decoding and observed movement in all 22 excerpts passed. This supports the reviewed draft and does not imply a general trained semantic selector or full listening/source-use approval.

@@ -1,20 +1,22 @@
+> Archived previous README; relative links now point to its saved result-branch version. Current instructions are in START_HERE.md.
+
 # What If video workspace
 
-Use [the current checkpoint](docs/CURRENT.md) to resume with minimal context. [Reusable media tools and GitHub workflow](docs/MEDIA-TOOLS.md) provide labeled search/download, a verified footage cache, mild non-AI enhancement and cached draft builds.
+Use [the current checkpoint](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/CURRENT.md) to resume with minimal context. [Reusable media tools and GitHub workflow](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/MEDIA-TOOLS.md) provide labeled search/download, a verified footage cache, mild non-AI enhancement and cached draft builds.
 
-The current Alpha anime review cut uses **moving internet clips only**: 18 shots, retained narration and overlaid captions. [Watch and reproduce the video-only cut](docs/VIDEO-ONLY-EDIT.md). Earlier still-edit notes below describe the previous version.
+The current Alpha anime review cut uses **moving internet clips only**: 18 shots, retained narration and overlaid captions. [Watch and reproduce the video-only cut](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/VIDEO-ONLY-EDIT.md). Earlier still-edit notes below describe the previous version.
 
 ## Review the anime online-media edit
 
-The latest Alpha sample uses 12 online Naruto stills in 16 ordered shots with camera motion, original narration and overlaid captions. See [the video and reproducible source plan](docs/ONLINE-MEDIA-EDIT.md). A separate image/video import editor is implemented and tested; this actual cut uses stills only. Source-still reuse permission is unverified and publication remains disabled.
+The latest Alpha sample uses 12 online Naruto stills in 16 ordered shots with camera motion, original narration and overlaid captions. See [the video and reproducible source plan](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/ONLINE-MEDIA-EDIT.md). A separate image/video import editor is implemented and tested; this actual cut uses stills only. Source-still reuse permission is unverified and publication remains disabled.
 
 A portable, on-demand workspace for original hypothetical science videos. Python owns the jobs, SQLite checkpoints the work, FFmpeg creates the media, and n8n can coordinate the worker through a private API. Your channel settings and progress live in files, not in a conversation.
 
-**Working prototype, not a production deployment.** Three provisional English pilots are included. They use original diagrams, a local synthetic voice, and sentence-level captions. Live research, stock search, Kaggle, Drive, social publishing and analytics are not connected. No post has been published or scheduled. See [PROJECT_STATE.md](PROJECT_STATE.md) for measured results and [HANDOFF.md](HANDOFF.md) to resume.
+**Working prototype, not a production deployment.** Three provisional English pilots are included. They use original diagrams, a local synthetic voice, and sentence-level captions. Live research, stock search, Kaggle, Drive, social publishing and analytics are not connected. No post has been published or scheduled. See [PROJECT_STATE.md](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/PROJECT_STATE.md) for measured results and [HANDOFF.md](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/HANDOFF.md) to resume.
 
 ## Connect YouTube when ready
 
-A separate optional read-only OAuth CLI is now implemented. See [YouTube setup](docs/YOUTUBE.md) and [the cloud-agent prompt](prompts/youtube-connect.md). It verifies an intended channel and can save its non-secret metadata; actual Google authorization is still required. Live uploads/publication remain disabled. Run `python -m whatif.youtube status` for cached connection metadata without initializing the job database.
+A separate optional read-only OAuth CLI is now implemented. See [YouTube setup](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/YOUTUBE.md) and [the cloud-agent prompt](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/prompts/youtube-connect.md). It verifies an intended channel and can save its non-secret metadata; actual Google authorization is still required. Live uploads/publication remain disabled. Run `python -m whatif.youtube status` for cached connection metadata without initializing the job database.
 
 ## Try it without accounts
 
@@ -56,7 +58,7 @@ Set up your local n8n owner through its editor if you want interactive editing. 
 
 The local editor listens on port 5678 and the worker on port 8090, both bound to loopback on the host. There is no user-facing preview link in this cloud task. The worker exposes `GET /health`, authenticated `GET /jobs/{id}`, and authenticated `POST /jobs/{id}/run`. It accepts only existing validated job IDs and cannot publish or execute arbitrary commands.
 
-`workflows/prepared-pilot.v1.json` submits pilot-002, waits five seconds, and reads its checkpoint. It is a finite manual starter, not an activated production scheduler. A returned `running` status requires another status check. Worker retries are bounded; the workflow retries transient request failures up to three times. See [docs/OPERATIONS.md](docs/OPERATIONS.md) before adding unattended schedules or remote access.
+`workflows/prepared-pilot.v1.json` submits pilot-002, waits five seconds, and reads its checkpoint. It is a finite manual starter, not an activated production scheduler. A returned `running` status requires another status check. Worker retries are bounded; the workflow retries transient request failures up to three times. See [docs/OPERATIONS.md](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/OPERATIONS.md) before adding unattended schedules or remote access.
 
 ## Channels, providers and approvals
 
@@ -70,16 +72,14 @@ The `approve` command records a human's explicit factual, audiovisual and platfo
 
 ## Speech batches and portability
 
-See [kaggle/README.md](kaggle/README.md) for the finite Kokoro notebook and matching-run import/export. It has **not** run on Kaggle. Account access, voice/model rights and actual CPU/GPU performance must be checked there. No paid fallback is enabled.
+See [kaggle/README.md](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/kaggle/README.md) for the finite Kokoro notebook and matching-run import/export. It has **not** run on Kaggle. Account access, voice/model rights and actual CPU/GPU performance must be checked there. No paid fallback is enabled.
 
-See [docs/BACKUP.md](docs/BACKUP.md) for private application backups, safe demonstration exports, n8n backups and migration. Keep real/private data and credentials outside Git. The bundled demonstration snapshot contains only the three public-test fixtures and generated media, with no SQLite database or secrets.
+See [docs/BACKUP.md](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/BACKUP.md) for private application backups, safe demonstration exports, n8n backups and migration. Keep real/private data and credentials outside Git. The bundled demonstration snapshot contains only the three public-test fixtures and generated media, with no SQLite database or secrets.
 
-The repository stores the software. A machine runs it. Development sessions stop when their machine stops. Continuous generation needs a suitable independent host and an available model/provider for new writing. Costs, quotas and remaining connections are in [docs/INTEGRATIONS.md](docs/INTEGRATIONS.md).
+The repository stores the software. A machine runs it. Development sessions stop when their machine stops. Continuous generation needs a suitable independent host and an available model/provider for new writing. Costs, quotas and remaining connections are in [docs/INTEGRATIONS.md](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/INTEGRATIONS.md).
 
 ## Switch GPT accounts
 
-Start with [the operator guide](docs/OPERATORS.md). Seven public aliases have copy-ready prompts; each can resume the whole workspace. They are separate from video channel profiles. [The universal prompt](prompts/resume.md) works for any authorized replacement assistant. Reconnect repository access and restore private state on a new host; profiles do not log in or transfer personal connections automatically.
+Start with [the operator guide](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/OPERATORS.md). Seven public aliases have copy-ready prompts; each can resume the whole workspace. They are separate from video channel profiles. [The universal prompt](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/prompts/resume.md) works for any authorized replacement assistant. Reconnect repository access and restore private state on a new host; profiles do not log in or transfer personal connections automatically.
 
-See [continuity and channel setup](docs/CONTINUITY.md) for the latest owner instructions, unmerged branch checkpoint and private-repository considerations. [YouTube setup registry](channels/youtube-registry.json) records Alpha's three active planned channels and the deferred account proposals; no live channel or connection is implied.
-
-
+See [continuity and channel setup](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/docs/CONTINUITY.md) for the latest owner instructions, unmerged branch checkpoint and private-repository considerations. [YouTube setup registry](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-test-result-20261029-04/channels/youtube-registry.json) records Alpha's three active planned channels and the deferred account proposals; no live channel or connection is implied.

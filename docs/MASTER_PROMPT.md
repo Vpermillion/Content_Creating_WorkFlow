@@ -1,4 +1,8 @@
+> Historical original brief. Current instructions are in `START_HERE.md`, `docs/CURRENT.md` and `docs/IFVERSE_BRIEF.md` on `codex/ifverse-workflow`. Two English channels and the tested one-job workflow take priority over earlier topic/account examples.
+
 # Independent “What If?” Video Workspace
+
+**Current requirements:** read [IFVERSE_BRIEF.md](IFVERSE_BRIEF.md) first. The user's 2026-10-29 clarification names `ifverse_anime` and `ifverse_hollywood` as the initial YouTube channels and requires script-matched online footage, automatic editing/enhancement, captions and workflow-integrated AI narration. That brief supersedes provisional science topics and the initial multi-platform rollout below. This file retains the original broader specification for reference.
 
 Complete project explanation and master prompt for a cloud-based GPT or coding assistant.
 Prepared 25 October 2026. Provider features, prices, quotas, and account access must be checked again during implementation.

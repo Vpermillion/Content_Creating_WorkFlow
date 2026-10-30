@@ -26,6 +26,8 @@ Current scope is two English channels: `ifverse_anime` and `ifverse_hollywood`. 
 
 ## What already works
 
+**Latest completed review:** 44.672 seconds, 22 explicitly timed visual beats from 14 moving sources, unchanged voice/captions, successful hosted run `41022041729`. Result branch `codex/results/ifverse-anime-visual-match-20261030-01`. All 22 shot samples and complete decode/track checks were reviewed. The current checkpoint has the download link and receipts.
+
 - `whatif/media_tools.py`: Tenor/optional YouTube discovery, bounded verified downloads, labeled clip bank, cache reuse, short JSON results and mild FFmpeg enhancement.
 - `whatif/media_edit.py`: selected moving clips, ordered single-pass H.264/AAC rendering, source trimming, full-frame containment, subtitles, complete stream/decode validation, and explicit per-shot narration-beat boundaries. Legacy equal scene splits remain supported.
 - `scripts/render_test_video.py`: tested finite Naruto production job with new/reused Kokoro-ONNX `af_heart` English CPU narration and faster-whisper `tiny.en` CPU/int8 phrase captions. Recognition spelling corrections retain raw words and original timestamps. Known audio/captions are checksum-verified and reused.
