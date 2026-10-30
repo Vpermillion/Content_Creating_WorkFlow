@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "ifverse_hollywood",
+  "configuration_status": "planning_only",
+  "topic_confirmed": true,
+  "topic": "Hollywood film what-if stories, characters and alternate scenarios",
+  "platforms": [
+    "youtube"
+  ],
+  "connected_account_id": null,
+  "input_modes": [
+    "supplied_script",
+    "creative_directions"
+  ],
+  "language": "en",
+  "language_confirmed": true,
+  "narrator": {
+    "provider": null,
+    "voice": null,
+    "candidate_if_english": "kokoro",
+    "status": "not_configured"
+  },
+  "footage": {
+    "sources": [],
+    "source_selection": "online_video_search",
+    "implementation_branch": "codex/ifverse-workflow",
+    "existing_providers": [
+      "tenor",
+      "youtube"
+    ],
+    "integration_status": "existing_tools_tested_on_anime_review",
+    "matching": [
+      "film",
+      "character",
+      "action",
+      "narration_context"
+    ],
+    "provenance_required": true,
+    "unmatched_scene_action": "flag_for_review"
+  },
+  "render_preset": {
+    "provisional": true,
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 30,
+    "max_seconds": 60
+  },
+  "caption_timing": "actual_speech_timestamps_or_alignment",
+  "publishing_frequency": null,
+  "publishing_enabled": false,
+  "content_boundaries": [
+    "Distinguish film plot facts from hypothetical events",
+    "Match footage to each narration beat",
+    "Retain source and usage basis for selected assets"
+  ]
+}

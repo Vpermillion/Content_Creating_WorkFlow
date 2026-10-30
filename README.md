@@ -1,65 +1,52 @@
-# What If video workspace
+# Ifverse automated video workspace
 
-A portable, on-demand workspace for original hypothetical science videos. Python owns the jobs, SQLite checkpoints the work, FFmpeg creates the media, and n8n can coordinate the worker through a private API. Your channel settings and progress live in files, not in a conversation.
+A portable, user-owned workflow for English what-if videos on **ifverse_anime** and **ifverse_hollywood**. An assistant provides one script and production plan; a finite GitHub-hosted job does the repetitive media work and returns a video plus one compact report.
 
-**Working prototype, not a production deployment.** Three provisional English pilots are included. They use original diagrams, a local synthetic voice, and sentence-level captions. Live research, stock search, Kaggle, Drive, social publishing and analytics are not connected. No post has been published or scheduled. See [PROJECT_STATE.md](PROJECT_STATE.md) for measured results and [HANDOFF.md](HANDOFF.md) to resume.
+**New session: read [START_HERE.md](START_HERE.md), [the current checkpoint](docs/CURRENT.md) and [AGENTS.md](AGENTS.md) first.** The current implementation is on **[codex/ifverse-workflow](https://github.com/Vpermillion/Content_Creating_WorkFlow/tree/codex/ifverse-workflow)**. The default `codex/portable-workspace` branch retains older code and routes agents to this branch. Inspect branch state before concluding a feature is missing.
 
-## Try it without accounts
+[Copy-ready new-agent prompt](docs/NEW_AGENT_PROMPT.md) · [Project history and decisions](docs/PROJECT_HISTORY.md) · [Original prototype README](docs/archive/README_BEFORE_START_GUIDE.md)
 
-Requirements: Python 3.12+, FFmpeg/ffprobe with `flite`, `libass`, `librsvg` and `libx264`, plus DejaVu Sans. No Python packages or model API key are needed for the local prototype. Debian/Ubuntu: install `ffmpeg fonts-dejavu-core` through your system package manager. The Docker worker packages these requirements.
+## Intended operation
 
-From this repository's root:
-
-```sh
-python -m whatif init
-python -m whatif pilots
-python -m whatif run pilot-001
-python -m whatif drafts pilot-001
-python -m whatif status
-python -m unittest discover -s tests -v
+```mermaid
+flowchart LR
+    A[One script and scene plan] --> B[Cached online moving footage]
+    B --> C[Light cleanup and ordered shots]
+    A --> D[Generated or retained narration]
+    D --> E[Timed captions]
+    C --> F[Render and validate]
+    E --> F
+    F --> G[Video and compact report]
+    G --> H[One assistant review]
 ```
 
-The rendered file is `data/jobs/pilot-001/video.mp4`. That folder also contains the script, research assumptions, SVG scene assets, narration, SRT/ASS captions, edit manifest and automated quality report. `data/jobs.sqlite3` is the application's private job store. It is separate from n8n's database.
+Footage should illustrate the actual narrated character, action, location or choice. Cuts now support explicit spoken-beat boundaries so an organization shot does not continue over a friends/protection alternative. Canon footage illustrates the invented what-if; it must not be presented as a real episode of that alternate story.
 
-Run the same job again to resume from verified checkpoints. Completed speech is retained after a rendering failure. Checksum mismatches stop a resume; they do not silently approve changed inputs. To intentionally regenerate downstream outputs during development:
+## Working components
 
-```sh
-python -m whatif rebuild pilot-001 --from-stage captions --reason 'Explain the layout change'
-```
+| Component | Verified role |
+| --- | --- |
+| GitHub review job | Finite hosted execution with data-only requests, dependency/model/source caches, validation and versioned results. A personal PC is not required for this path. |
+| Media tools | Tenor/optional YouTube lookup, bounded downloads, SHA-256/ffprobe validation and a reusable labeled clip bank. |
+| FFmpeg editor | Moving clips, source trims, contain/cover framing, mild denoise/resize/sharpen, single-pass rendering, readable captions and complete audio/video/decode checks. |
+| English voice | Kokoro-ONNX `af_heart`, tested on CPU; keep verified speech when revising pictures. |
+| Caption timing | faster-whisper `tiny.en`, CPU/int8, actual recognized word timestamps grouped into phrases; known-script spelling corrections preserve raw records and timestamps. |
+| Continuity | Source history, safe generated examples, state/checkpoint docs and copy-ready prompts. Credentials and private production data remain separate. |
 
-Rebuilding invalidates draft publication records and review approval. A job with an attempted remote delivery cannot be rebuilt under the same version. Edit approved content by creating a new job ID. Repeated topic titles within a channel are rejected.
+The latest Naruto review is **44.672 seconds, 22 spoken-beat shots from 14 moving sources and 27 caption phrases**, from successful hosted run `41022041729`. [Watch the revised MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-visual-match-20261030-01/artifacts/ifverse-anime-visual-match-20261030-01/render/video.mp4). It preserves the prior voice/captions while aligning the pictures more closely to the words. All 22 shot samples were inspected; full decode, track coverage, retained-audio/caption checks and observed motion passed. See [CURRENT](docs/CURRENT.md) for exact receipts and next work.
 
-## Start n8n and the worker
+## Current workflow entry
 
-Docker Compose is optional for direct CLI use. It is the tested way to run the coordinator and private worker together.
+On `codex/ifverse-workflow`, commit **exactly one** new `review-requests/*.json`. [review-video.yml](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-workflow/.github/workflows/review-video.yml) runs the request and writes its output to `codex/results/<request-id>` and the `ifverse-review-video` artifact. Documentation-only commits do not dispatch media. Request selection rejects unrelated result branches; do not resend an uncertain job before reading its saved result.
 
-```sh
-python scripts/configure_local.py  # only once; refuses to overwrite .env
-docker compose up -d --build
-python scripts/configure_n8n.py
-docker compose ps
-```
+The current tested runner uses the prepared Naruto story and a reviewed source plan. Generic arbitrary-story intake, stronger automatic semantic selection, automatic source-quality judgments and Hollywood branding are still work. Clip labels and successful file checks are not semantic approval. The original n8n/SQLite science prototype, Google connection work and wider account proposals remain in history; do not rebuild them or revive old rollout plans.
 
-Set up your local n8n owner through its editor if you want interactive editing. The imported workflow is inactive and contains no credentials. The helper separately imports a local worker credential into n8n's encrypted credential store and deletes the plaintext transfer file. Keep `.env` private. Reusing the same n8n encryption key is essential for restoring its credentials.
+For local development, use Python 3.12+, FFmpeg/ffprobe, DejaVu Sans and `requirements-test-video.txt`. Run `python -m unittest discover -s tests -v` after behavioral changes. Read the current branch's [media tools guide](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-workflow/docs/MEDIA-TOOLS.md) and [visual matching guide](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/ifverse-workflow/docs/VISUAL_MATCHING.md) for exact commands and timing contracts.
 
-The local editor listens on port 5678 and the worker on port 8090, both bound to loopback on the host. There is no user-facing preview link in this cloud task. The worker exposes `GET /health`, authenticated `GET /jobs/{id}`, and authenticated `POST /jobs/{id}/run`. It accepts only existing validated job IDs and cannot publish or execute arbitrary commands.
+## State, access and remaining limits
 
-`workflows/prepared-pilot.v1.json` submits pilot-002, waits five seconds, and reads its checkpoint. It is a finite manual starter, not an activated production scheduler. A returned `running` status requires another status check. Worker retries are bounded; the workflow retries transient request failures up to three times. See [docs/OPERATIONS.md](docs/OPERATIONS.md) before adding unattended schedules or remote access.
+The workspace must survive changing assistants. Save code, current branch, requests, output receipts and next actions; restore private state independently. Personal skills, credentials and signed-in accounts do not automatically transfer. Git proxy access does not prove GitHub API access. Preserve the managed runtime's proxy/CA and use supported network settings.
 
-## Channels, providers and approvals
+Kaggle is an optional unexecuted voice-batch template, and n8n is optional coordination. No live YouTube channel binding, public upload, continuous scheduler or production host was verified by the test. Keep publishing disabled until current authorization and provider access are verified. A successful MP4 remains a review draft until factual/plot, audiovisual, source-use and platform review. Source cleanup does not reconstruct missing detail or guarantee monetization.
 
-`profiles/science-provisional.json` is an editable demonstration profile, not your confirmed brand or language choice. `pilots/` contains three distinct assistant-prepared scripts. All sources require editorial verification before release. The local writer does not invent new queued content while no model is connected; `whatif/adapters.py` defines replacement boundaries for a model, licensed stock provider and publisher.
-
-The current implementation consumes prepared scripts and original diagrams. Stock footage import/crop, background music, sound effects, automatic research and richer model-driven planning remain backlog items. Language, narrator, tone, styles and platform choices are explicit configuration; the local voice path currently accepts English only.
-
-Drafts cover YouTube, TikTok, Instagram and Facebook as candidate targets. They contain per-platform metadata, null metrics and no provider receipts. Unsupported metrics remain `null`, never zero. Public posting is disabled even after quality approval. A future adapter needs a verified connection, platform eligibility, explicit authorization and reconciliation for uncertain uploads.
-
-The `approve` command records a human's explicit factual, audiovisual and platform review. Do not use it merely because automated checks passed. It does not grant publishing permission.
-
-## Speech batches and portability
-
-See [kaggle/README.md](kaggle/README.md) for the finite Kokoro notebook and matching-run import/export. It has **not** run on Kaggle. Account access, voice/model rights and actual CPU/GPU performance must be checked there. No paid fallback is enabled.
-
-See [docs/BACKUP.md](docs/BACKUP.md) for private application backups, safe demonstration exports, n8n backups and migration. Keep real/private data and credentials outside Git. The bundled demonstration snapshot contains only the three public-test fixtures and generated media, with no SQLite database or secrets.
-
-The repository stores the software. A machine runs it. Development sessions stop when their machine stops. Continuous generation needs a suitable independent host and an available model/provider for new writing. Costs, quotas and remaining connections are in [docs/INTEGRATIONS.md](docs/INTEGRATIONS.md).
+Never commit passwords, OAuth client/token files, account addresses, private databases or the raw conversation PDF. The committed test media/narration is a non-secret fictional review example; real/private jobs require configured private storage. GitHub caches are not backups. Full decisions, tested outcomes and exact next actions are in the entry guides, so a new session can continue without rereading the original chat.
