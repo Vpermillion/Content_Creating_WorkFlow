@@ -1,5 +1,7 @@
 # Start here: Ifverse project handoff
 
+**Script tone:** follow [the owner-approved style addon](prompts/script-style.md): funny, teasing, sarcastic fan commentary, exaggerated complaints and occasional clean-swear punchlines such as “motherflicker.” Keep the alternate story clear and match moving footage to the spoken beat. This applies to both English channels.
+
 This repository is the durable workspace for **ifverse_anime** and **ifverse_hollywood**, initially English YouTube what-if videos. The user owns the project; a new authorized assistant must resume it without requiring the old conversation or rebuilding working tools.
 
 ## Find the current implementation first
@@ -47,7 +49,7 @@ python scripts/render_test_video.py --request review-requests/ifverse-anime-visu
 
 The last command requires a fresh output directory and available source/model access; do not rerun it merely to see the existing video. Read its completed result first. FFmpeg/ffprobe, DejaVu Sans and Python 3.12+ are prerequisites; `requirements-test-video.txt` pins the speech/caption packages. The GitHub workflow installs its own prerequisites and caches verified sources/models. n8n/Docker are optional older coordination/development paths; the user's PC need not remain on for a GitHub-hosted review job.
 
-A review request contains `schema_version`, a unique `id`, `channel`, `voice`, `edit_plan`, `result_branch: codex/results/<id>`, and optional `reuse_narration_from` / `reuse_transcription_from` pointing to matching non-secret test artifacts. The currently tested runner still uses the prepared Naruto pilot; it is **not** a finished arbitrary-plain-script product. A new story needs validated script/profile input, an actual matching shot plan, fresh version IDs and correct speech/caption timing. Never quietly substitute another story's audio.
+A review request contains `schema_version`, a unique `id`, `channel`, `voice`, `edit_plan`, `result_branch: codex/results/<id>`, optional `script` under `pilots/`, and optional `reuse_narration_from` / `reuse_transcription_from` pointing to matching non-secret test artifacts. The runner accepts an optional `script` path under `pilots/` and checks its ordered scene text against the supplied edit plan. It is **not** a finished arbitrary-plain-script product. A new story needs validated script/profile input, an actual matching shot plan, fresh version IDs and correct speech/caption timing. Never quietly substitute another story's audio.
 
 When a source request is pushed, record its ID/commit/expected result branch. Read the final `result.json` once, inspect logs for failures, and reconcile a previous attempt before issuing another. Exit status, metadata and output must agree. A valid cached completed video should be reused. GitHub caches are conveniences, not durable private backups.
 

@@ -1,4 +1,5 @@
 import importlib.util
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -10,6 +11,48 @@ spec.loader.exec_module(module)
 
 
 class TestVideoPlanTests(unittest.TestCase):
+    def test_requested_script_rejects_outside_paths_and_caption_controls(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / 'pilots').mkdir()
+            source = {'schema_version': 1, 'language': 'en', 'title': 'Test',
+                      'scenes': [{'text': 'A new story.', 'label': 'INTRO'}]}
+            path = root / 'pilots/story.json'
+            path.write_text(json.dumps(source))
+            with patch.object(module, 'ROOT', root):
+                self.assertEqual(module.requested_script('pilots/story.json'), source)
+                with self.assertRaisesRegex(ValueError, 'under pilots'):
+                    module.requested_script('pilots/../../secret.json')
+                source['scenes'][0]['text'] = 'Injected {caption}'
+                path.write_text(json.dumps(source))
+                with self.assertRaisesRegex(ValueError, 'caption control'):
+                    module.requested_script('pilots/story.json')
+
+    def test_new_speech_retimes_to_exact_duration_and_preserves_original(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            module.media.ffmpeg(['-f', 'lavfi', '-i', 'sine=frequency=330:duration=31',
+                                 '-ar', '24000', '-ac', '1', 'narration.wav'], root)
+            original = module.digest(root / 'narration.wav')
+            segments = [{'start': 0, 'end': 15.5}, {'start': 15.5, 'end': 31}]
+            receipt = module.fit_narration_duration(root, segments, 30)
+            self.assertAlmostEqual(module.media.duration(root / 'narration.wav'), 30, places=3)
+            self.assertAlmostEqual(segments[0]['end'], 15, places=3)
+            self.assertEqual(segments[-1]['end'], 30)
+            self.assertEqual(receipt['original_sha256'], original)
+            self.assertEqual(module.digest(root / 'narration-unretimed.wav'), original)
+
+    def test_new_speech_rejects_excessive_or_invalid_duration_before_modifying_audio(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            module.media.ffmpeg(['-f', 'lavfi', '-i', 'sine=frequency=330:duration=1',
+                                 'narration.wav'], root)
+            original = module.digest(root / 'narration.wav')
+            for target in [True, float('nan'), 100, 60]:
+                with self.assertRaises(ValueError):
+                    module.fit_narration_duration(root, [{'start': 0, 'end': 1}], target)
+            self.assertEqual(module.digest(root / 'narration.wav'), original)
+
     def test_caption_input_is_real_mono_16khz_waveform_and_keeps_original_audio(self):
         from whatif.store import digest
         with tempfile.TemporaryDirectory() as temp:

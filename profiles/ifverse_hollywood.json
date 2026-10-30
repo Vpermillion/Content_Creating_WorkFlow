@@ -53,5 +53,18 @@
     "Distinguish film plot facts from hypothetical events",
     "Match footage to each narration beat",
     "Retain source and usage basis for selected assets"
-  ]
+  ],
+  "script_style": {
+    "id": "ifverse-playful-roast-v1",
+    "instructions": "prompts/script-style.md",
+    "owner_confirmed": true,
+    "language": "en",
+    "tone": [
+      "funny",
+      "teasing",
+      "sarcastic",
+      "exaggerated complaints"
+    ],
+    "profanity": "occasional mild or clean-swear wordplay; no platform-approval guarantee"
+  }
 }

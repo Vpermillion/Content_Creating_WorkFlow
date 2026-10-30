@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 import copy
 import difflib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -78,10 +79,35 @@ def narrate(spec, output, models, voice):
         wav.setsampwidth(2)
         wav.setframerate(24000)
         wav.writeframes((samples * 32767).astype('<i2').tobytes())
+    timing = fit_narration_duration(output, segments, spec.get('target_duration_seconds'))
     atomic_json(output / 'narration.json', {'provider': 'kokoro-onnx', 'version': '0.6.1', 'voice': voice,
                 'device': 'cpu', 'new_test_version': True, 'segments': segments, 'model_files': receipts,
+                'duration_adjustment': timing,
                 'sha256': digest(output / 'narration.wav')})
     return segments
+
+
+def fit_narration_duration(output, segments, target):
+    """Fit a newly generated version to its requested length without changing pitch."""
+    if target is None:
+        return None
+    if isinstance(target, bool) or not isinstance(target, (int, float)) or not math.isfinite(target) or not 30 <= target <= 75:
+        raise ValueError('Target duration must be between 30 and 75 seconds')
+    original = media.duration(output / 'narration.wav')
+    tempo = original / target
+    if not .7 <= tempo <= 1.35:
+        raise ValueError('Rewrite the script; requested length needs excessive speech retiming')
+    raw = output / 'narration-unretimed.wav'
+    (output / 'narration.wav').rename(raw)
+    media.ffmpeg(['-i', str(raw), '-af', f'atempo={tempo:.10f},apad,atrim=duration={target}',
+                  '-ar', '24000', '-ac', '1', '-c:a', 'pcm_s16le', 'narration.wav'], output)
+    actual = media.duration(output / 'narration.wav')
+    for scene in segments:
+        scene['start'] *= actual / original
+        scene['end'] *= actual / original
+    segments[-1]['end'] = actual
+    return {'original_seconds': original, 'target_seconds': target, 'actual_seconds': actual,
+            'tempo': tempo, 'original_sha256': digest(raw), 'pitch_preserved': True}
 
 
 def phrase_captions(words, duration):
@@ -215,6 +241,27 @@ def requested_plan(relative):
     return json.loads(path.read_text())
 
 
+def requested_script(relative):
+    if not isinstance(relative, str):
+        raise ValueError('Script path must be a string')
+    path = (ROOT / relative).resolve()
+    if not path.is_relative_to(ROOT / 'pilots') or path.suffix != '.json' or path.stat().st_size > 100_000:
+        raise ValueError('Script must be a bounded repository JSON file under pilots/')
+    spec = json.loads(path.read_text())
+    scenes = spec.get('scenes')
+    if spec.get('schema_version') != 1 or spec.get('language') != 'en' or not isinstance(scenes, list) or not 1 <= len(scenes) <= 30:
+        raise ValueError('Unsupported English script schema')
+    for scene in scenes:
+        for key, limit in [('text', 1500), ('label', 70)]:
+            value = scene.get(key)
+            if not isinstance(value, str) or not 1 <= len(value) <= limit or any(c in value for c in '{}<>\\\n\r'):
+                raise ValueError('Invalid script text or caption control character')
+    title = spec.get('title')
+    if not isinstance(title, str) or not 1 <= len(title) <= 200 or '\n' in title or '\r' in title:
+        raise ValueError('Invalid script title')
+    return spec
+
+
 def run(request, output, models):
     output = output.resolve()
     operation = identifier(request['id'])
@@ -223,8 +270,10 @@ def run(request, output, models):
     if output.exists() and any(output.iterdir()):
         raise ValueError('Use a fresh output directory for a new test version')
     output.mkdir(parents=True, exist_ok=True)
-    source = json.loads((ROOT / 'pilots/alpha-anime-001.json').read_text())
+    source = requested_script(request.get('script', 'pilots/alpha-anime-001.json'))
     original = requested_plan(request.get('edit_plan', 'edits/alpha-anime-video.v2.json'))
+    if [s['text'] for s in source['scenes']] != [s['text'] for s in original['scenes']]:
+        raise ValueError('Script and footage plan must describe the same ordered narration')
     started, timings = time.monotonic(), {}
     atomic_json(output / 'request.json', request)
     (output / 'script.md').write_text('# ' + source['title'] + '\n\n' +
@@ -281,6 +330,8 @@ def run(request, output, models):
                            'reused_verified_timing': bool(caption_source)},
               'footage': 'Traced online Naruto clips with reviewed narration-beat matching',
               'edit_plan': request.get('edit_plan', 'edits/alpha-anime-video.v2.json'),
+              'script': request.get('script', 'pilots/alpha-anime-001.json'),
+              'script_style': source.get('script_style'),
               'explicit_beat_timing': all('start' in shot and 'end' in shot
                                           for scene in plan['scenes'] for shot in scene['shots']),
               'publishing_enabled': False, 'github_run_id': os.environ.get('GITHUB_RUN_ID'),

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "language": "en",
+  "profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 30,
+    "max_seconds": 75
+  },
+  "platforms": [
+    "youtube"
+  ],
+  "sources": [
+    {
+      "url": "https://naruto-official.com/en/anime/naruto2",
+      "publisher": "NARUTO official site \u2014 Shippuden overview",
+      "supports": "Akatsuki seeks the tailed beasts; the Leaf opposes its actions.",
+      "checked_at": "2026-10-26",
+      "access_status": "Read official overview through web source; no episode footage or images copied."
+    },
+    {
+      "url": "https://naruto-official.com/en/news/01_1896",
+      "publisher": "NARUTO official site \u2014 Kurama database",
+      "supports": "Kurama, the Nine Tails, was sealed inside Naruto.",
+      "checked_at": "2026-10-26",
+      "access_status": "Read official database entry; only the historical premise is used, not later Boruto outcomes."
+    }
+  ],
+  "id": "ifverse-anime-roast-60-v1",
+  "channel_id": "ifverse_anime",
+  "title": "What if Naruto joined the Akatsuki? The worst career move.",
+  "target_duration_seconds": 60,
+  "script_style": "ifverse-playful-roast-v1",
+  "assumptions": [
+    "Fan-created alternate timeline set during the Shippuden era while Naruto hosts the Nine Tails; not a canon summary or official release.",
+    "Assume a temporary alliance is offered despite Akatsuki's conflicting objective. Deal, missions, demands and choices are invented for this scenario.",
+    "Exaggerated narrator commentary; employment, lunch and insurance comparisons are jokes, not canon claims."
+  ],
+  "scenes": [
+    {
+      "label": "BAD CAREER MOVE",
+      "text": "What if Naruto joined the Akatsuki? Oh, fantastic."
+    },
+    {
+      "label": "THE CLOAK IS A RED FLAG",
+      "text": "Our boy saw matching villain cloaks and thought, career opportunity."
+    },
+    {
+      "label": "YOU ARE THE TARGET",
+      "text": "Motherflicker, they are hunting the fox inside you."
+    },
+    {
+      "label": "NOT AN INTERVIEW",
+      "text": "That is not a job interview. You are the lunch."
+    },
+    {
+      "label": "A MADE-UP DEAL",
+      "text": "In this made-up timeline, he bargains for his friends' safety."
+    },
+    {
+      "label": "SUSPICIOUS MANAGEMENT",
+      "text": "Fine. But the cloak comes with suspiciously aggressive management."
+    },
+    {
+      "label": "PEACE WITH A DEMOLITION NOTICE",
+      "text": "Pain calls it peace. The village gets a demolition notice."
+    },
+    {
+      "label": "CAN WE TALK FIRST",
+      "text": "Naruto says, can we maybe try a conversation first?"
+    },
+    {
+      "label": "ACCOUNTABILITY OFF",
+      "text": "And Obito? Mask on. Accountability off. Absolutely excellent hiring department."
+    },
+    {
+      "label": "FINALLY SOME RESPECT",
+      "text": "At first, missions go well. Our boy finally feels respected."
+    },
+    {
+      "label": "THE REAL ASSIGNMENT",
+      "text": "Then comes the assignment: betray the Hidden Leaf."
+    },
+    {
+      "label": "READ THE CONTRACT",
+      "text": "Brother. That is your home. Read the stupid contract."
+    },
+    {
+      "label": "HE REFUSES",
+      "text": "He refuses. Suddenly the new team questions his loyalty."
+    },
+    {
+      "label": "SOME PROTECTION PLAN",
+      "text": "Sakura is left picking through rubble. Some protection plan."
+    },
+    {
+      "label": "OLD FRIENDS, NEW DOUBTS",
+      "text": "Even his old friends cannot tell whose side he is on."
+    },
+    {
+      "label": "TWO TEAMS. ZERO TRUST.",
+      "text": "Congratulations, genius. Two teams, zero trust, absolutely no dental insurance."
+    },
+    {
+      "label": "CHOOSE YOUR PEOPLE",
+      "text": "So he stops chasing approval and chooses his people."
+    },
+    {
+      "label": "WEAPON OR ARGUMENT",
+      "text": "The Akatsuki wanted a weapon. They got an argument."
+    },
+    {
+      "label": "COULD HE CHANGE THEM",
+      "text": "Could he actually change them? Maybe. This is Naruto."
+    },
+    {
+      "label": "THE GROUP PROJECT FROM HELL",
+      "text": "But friendship speeches cannot fix every murderous group project."
+    },
+    {
+      "label": "KEEP OR CONFISCATE THE CLOAK",
+      "text": "Would you trust his plan, or confiscate the cloak immediately?"
+    }
+  ]
+}
