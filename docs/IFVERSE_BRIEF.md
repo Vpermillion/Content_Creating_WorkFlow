@@ -6,6 +6,8 @@ Read [the final shared-conversation agreement](CONVERSATION_DECISIONS.md) for th
 
 **Latest tested result:** the requested 44.672-second Naruto sample now runs through the finite GitHub workflow with Kokoro-ONNX CPU narration and faster-whisper CPU/int8 phrase captions. It uses the existing selected moving-footage plan, not automatic semantic selection for an arbitrary new story. Final run `40846229359` succeeded; output is on `codex/ifverse-test-result-20261029-04`. See [TEST_VIDEO.md](TEST_VIDEO.md) for reproducible source/result checkpoints, validation and actual timings.
 
+Current continuation is `codex/ifverse-workflow`; `START_HERE.md` and `docs/CURRENT.md` take priority over historical branch-audit pointers below. The latest request is closer shot-to-script matching plus complete replacement-agent documentation. Explicit beat intervals and verified caption/audio reuse are implemented; see `docs/VISUAL_MATCHING.md` for the reviewed 22-shot plan.
+
 ## What we are building
 
 An automated YouTube video production workflow for two initial channels: **ifverse_anime** and **ifverse_hollywood**. The user provides a finished script or gives the assistant directions to turn into a script. The workflow should find footage that actually illustrates that script, download the selected material, assemble it in the correct narrative order, improve poor-looking footage where practical, add AI narration and synchronized captions, and produce a reviewable finished video. The intended experience is to supply the creative input and review the result, without manually assembling every shot.

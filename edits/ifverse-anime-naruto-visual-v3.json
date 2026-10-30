@@ -1,0 +1,610 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-visual-match-v3",
+  "title": "What if Naruto joined the Akatsuki?",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "narration_sha256": "2eea93b20f0187a0a7aa25444a49f439f2d00d5b276dfefdea68a3cb97bf8fcc",
+  "publishing_authorized": false,
+  "visual_basis": "Reviewed moving clips aligned to individual spoken entities, actions and choice beats. Invented actions remain explicitly illustrative; no claim that canon footage depicts Naruto literally joining Akatsuki.",
+  "assets": [
+    {
+      "id": "18786193",
+      "file": "tenor-18786193.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-naruto-shippuden-kakashi-nine-tails-gif-18786193",
+      "download_url": "https://media.tenor.com/mEUzzyeoQHsAAAPo/naruto-naruto-shippuden.mp4",
+      "sha256": "7ecdeef2334d7d03e0473b346befad2ea50a701db8b0e5b70d21e849bf465a82",
+      "duration": 4.4,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Naruto",
+        "Naruto Shippuden",
+        "Kakashi",
+        "Nine Tails"
+      ],
+      "description": "a black and white drawing of a naruto character with the number 6 on his head",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "18786238",
+      "file": "tenor-18786238.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-kakashi-naruto-shippuden-kurama-nine-tails-gif-18786238",
+      "download_url": "https://media.tenor.com/hbKzox0STTIAAAPo/naruto-kakashi.mp4",
+      "sha256": "f4220de5a2f70f1c3915440c362d5e04b6e03c8d93a9e836dc0efb034607e0b3",
+      "duration": 2.866667,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Naruto",
+        "Kakashi",
+        "Naruto Shippuden",
+        "Kurama",
+        "Nine Tails"
+      ],
+      "description": "a close up of a person wearing a mask and holding a sword in a cartoon .",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "18786244",
+      "file": "tenor-18786244.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/obito-tobi-naruto-naruto-shippuden-gif-18786244",
+      "download_url": "https://media.tenor.com/5wrj_181KAsAAAPo/obito-tobi.mp4",
+      "sha256": "63c3d819782f1212f5defb77eaabbe97c0162d15f6eb327c9718c79b8d8fee4c",
+      "duration": 4.866667,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Obito",
+        "Tobi",
+        "Naruto",
+        "Naruto Shippuden"
+      ],
+      "description": "a person wearing a mask with a circle on it covering their mouth",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "18786249",
+      "file": "tenor-18786249.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-naruto-shippuden-nine-tails-kurama-gif-18786249",
+      "download_url": "https://media.tenor.com/5DAr-taCqmkAAAPo/naruto-naruto-shippuden.mp4",
+      "sha256": "b7f8a4cdb33d65fa58c7754e0b701922426c1d97841b2e24a7ab7c5140a922d7",
+      "duration": 5.6,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Naruto",
+        "Naruto Shippuden",
+        "Nine Tails",
+        "Kurama"
+      ],
+      "description": "a cartoon character with a g on his head is pointing at the camera",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "18787217",
+      "file": "tenor-18787217.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-shippuden-naruto-anime-gif-18787217",
+      "download_url": "https://media.tenor.com/sUl_YhAfUScAAAPo/naruto-shippuden-naruto.mp4",
+      "sha256": "b77799e096767a39d027a843a67551be7804b4e17782b54b4b963322a8f65d93",
+      "duration": 3.866667,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Naruto Shippuden",
+        "Naruto",
+        "Anime"
+      ],
+      "description": "a close up of a person 's face with the letter g on their headband",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "18787221",
+      "file": "tenor-18787221.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-shippuden-naruto-obito-anime-gif-18787221",
+      "download_url": "https://media.tenor.com/C3xbCpXQbgUAAAPo/naruto-shippuden-naruto.mp4",
+      "sha256": "4450595dba5756c69c3d910b360901c75382af8d82ed888f6832fa0fdf77027d",
+      "duration": 4.333333,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Naruto Shippuden",
+        "Naruto",
+        "Obito",
+        "Anime"
+      ],
+      "description": "a cartoon drawing of a person with a mask on",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "18787224",
+      "file": "tenor-18787224.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-shippuden-naruto-anime-gif-18787224",
+      "download_url": "https://media.tenor.com/o0FXrK8hs0YAAAPo/naruto-shippuden-naruto.mp4",
+      "sha256": "f05a61e8668fe8902b6ce60f38a8789292eebf875510b09245335fbce3d37906",
+      "duration": 4.866667,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Naruto Shippuden",
+        "Naruto",
+        "Anime"
+      ],
+      "description": "a cartoon character is kneeling down in a circle",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "18787233",
+      "file": "tenor-18787233.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/anime-naruto-shippuden-naruto-nine-tails-kurama-gif-18787233",
+      "download_url": "https://media.tenor.com/9Q9u6fx9S8UAAAPo/anime-naruto-shippuden.mp4",
+      "sha256": "bb91fdee55cc15e1fb0b769a1af399427719c314381eff2044db1002053660da",
+      "duration": 4.333333,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Anime",
+        "Naruto Shippuden",
+        "Naruto",
+        "Nine Tails",
+        "Kurama"
+      ],
+      "description": "a cartoon of a fox with fire coming out of its mouth is running across a field .",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "naruto-team-7-0",
+      "file": "extra-naruto-team-7-0.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-team7-sasuke-sakura-fourth-shinobi-world-war-gif-26867445",
+      "download_url": "https://media.tenor.com/IPUE-R2q-9AAAAPo/naruto-team7.mp4",
+      "sha256": "28df46c46979a191badbbb43a2fd61083d87194a3f3172ed4f6ca644a30ca95d",
+      "duration": 2.5,
+      "dimensions": [
+        640,
+        360
+      ],
+      "description": "a group of anime characters including naruto and sasuke",
+      "uploader": "narutogifs",
+      "publisher": "Community-posted Naruto excerpt on Tenor; not verified rights holder",
+      "reuse_status": "Copyrighted anime excerpt; uploader and republication rights unverified; commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "pain-naruto-1",
+      "file": "extra-pain-naruto-1.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-pain-gif-21499623",
+      "download_url": "https://media.tenor.com/ZDOGDzRbv08AAAPo/naruto-pain.mp4",
+      "sha256": "20afd08ed43d8734c3d70029a8c914d7a00cdd170f46b8f51bbfa23c1da91979",
+      "duration": 7.1,
+      "dimensions": [
+        640,
+        350
+      ],
+      "description": "Naruto Pain GIF",
+      "uploader": "Idek_pain",
+      "publisher": "Community-posted Naruto excerpt on Tenor; not verified rights holder",
+      "reuse_status": "Copyrighted anime excerpt; uploader and republication rights unverified; commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "pain-naruto-10",
+      "file": "extra-pain-naruto-10.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/pain-we-are-naruto-six-gif-24826869",
+      "download_url": "https://media.tenor.com/DqHgeo_9zLMAAAPo/pain-we.mp4",
+      "sha256": "d4c6db8074434d8426895d712e6ea7722d5e4a250c6448125e860d6bcb84fd27",
+      "duration": 3.5,
+      "dimensions": [
+        640,
+        316
+      ],
+      "description": "a cartoon character with red hair is being attacked",
+      "uploader": "TheMyTHos",
+      "publisher": "Community-posted Naruto excerpt on Tenor; not verified rights holder",
+      "reuse_status": "Copyrighted anime excerpt; uploader and republication rights unverified; commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "sakura-0",
+      "file": "extra-sakura-0.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-naruto-shippuden-pain-arc-pains-assault-arc-sakura-haruno-gif-7571282990295546712",
+      "download_url": "https://media.tenor.com/aRKZw-qF-1gAAAPo/naruto-naruto-shippuden.mp4",
+      "sha256": "b584f41d2d65ba2f8fc10d6dc06dcee2a40228ac240b516a6f320453c94fbdcc",
+      "duration": 3.878875,
+      "dimensions": [
+        498,
+        282
+      ],
+      "description": "a cartoon of a girl with pink hair kneeling down in the dirt",
+      "uploader": "Moars",
+      "publisher": "Community-posted Naruto excerpt on Tenor; not verified rights holder",
+      "reuse_status": "Copyrighted anime excerpt; uploader and republication rights unverified; commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "sakura-8",
+      "file": "extra-sakura-8.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/sakura-e-naruto-naruto-sakura-laugh-anime-gif-15919205",
+      "download_url": "https://media.tenor.com/tVRpkdO1UnwAAAPo/sakura-e-naruto-naruto.mp4",
+      "sha256": "375bad2023d0971228f4bcb236c75164fdaba1e88336ceadf72c204eadd7ae8d",
+      "duration": 4.4,
+      "dimensions": [
+        640,
+        640
+      ],
+      "description": "a man and a woman are sitting on the floor in a cartoon .",
+      "uploader": "AnnaJulyaSimoes",
+      "publisher": "Community-posted Naruto excerpt on Tenor; not verified rights holder",
+      "reuse_status": "Copyrighted anime excerpt; uploader and republication rights unverified; commentary review draft",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "18786256",
+      "file": "tenor-18786256.mp4",
+      "type": "video",
+      "source_url": "https://tenor.com/view/naruto-shippuden-naruto-nine-tails-kurama-gif-18786256",
+      "download_url": "https://media.tenor.com/XejzZ4R41IsAAAPo/naruto-shippuden-naruto.mp4",
+      "sha256": "467940bb086b6e18d56445a3ff7ab31fb60454295d54275ae8ace214a0d60756",
+      "duration": 4.333333,
+      "dimensions": [
+        640,
+        360
+      ],
+      "tags": [
+        "Naruto Shippuden",
+        "Naruto",
+        "Nine Tails",
+        "Kurama"
+      ],
+      "description": "a close up of a person 's back with a fireball coming out of it and a yellow background .",
+      "publisher": "Naruto Shippuden official Tenor partner profile",
+      "profile_url": "https://tenor.com/official/narutoshippuden",
+      "reuse_status": "Copyrighted officially posted animated clip; republication permission not verified; fan commentary review draft",
+      "accessed_at": "2026-10-27"
+    }
+  ],
+  "scenes": [
+    {
+      "start": 0.0,
+      "end": 5.354666666666667,
+      "text": "What if Naruto joined the Akatsuki? The first surprise is that joining would not make him safe.",
+      "label": "THE WRONG SIDE OF THE STORY",
+      "shots": [
+        {
+          "start": 0,
+          "end": 1.44,
+          "asset": "18786249",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Naruto joined",
+          "match_reason": "Naruto is visible while the protagonist is named.",
+          "match_type": "direct_entity"
+        },
+        {
+          "start": 1.44,
+          "end": 3.84,
+          "asset": "pain-naruto-10",
+          "trim_start": 0.2,
+          "fit": "contain",
+          "narration_beat": "the Akatsuki; the first surprise",
+          "match_reason": "Show the cloaked organization when Akatsuki is named.",
+          "match_type": "direct_entity"
+        },
+        {
+          "start": 3.84,
+          "end": 5.354666666666667,
+          "asset": "18786244",
+          "trim_start": 0.2,
+          "fit": "contain",
+          "narration_beat": "joining would not make him safe",
+          "match_reason": "Masked Obito supplies a concrete antagonist for the danger; the alliance remains hypothetical.",
+          "match_type": "contextual_threat"
+        }
+      ]
+    },
+    {
+      "start": 5.354666666666667,
+      "end": 11.392,
+      "text": "He carries the Nine Tails, and the Akatsuki wants the tailed beasts. Their new recruit is also their target.",
+      "label": "THE RECRUIT IS ALSO THE TARGET",
+      "shots": [
+        {
+          "start": 5.354666666666667,
+          "end": 6.7,
+          "asset": "18787233",
+          "trim_start": 0.3,
+          "fit": "contain",
+          "narration_beat": "He carries the Nine Tails",
+          "match_reason": "The moving Nine-Tails avatar appears during the actual Nine Tails phrase.",
+          "match_type": "direct_entity"
+        },
+        {
+          "start": 6.7,
+          "end": 9.56,
+          "asset": "pain-naruto-10",
+          "trim_start": 0.1,
+          "fit": "contain",
+          "narration_beat": "the Akatsuki wants the tailed beasts",
+          "match_reason": "Cut to the organization during the stated motive, instead of continuing the fox shot.",
+          "match_type": "direct_entity"
+        },
+        {
+          "start": 9.56,
+          "end": 11.392,
+          "asset": "18786193",
+          "trim_start": 0.3,
+          "fit": "contain",
+          "narration_beat": "Their new recruit is also their target",
+          "match_reason": "Naruto close-up identifies the recruit/target being discussed.",
+          "match_type": "direct_entity"
+        }
+      ]
+    },
+    {
+      "start": 11.392,
+      "end": 17.514666666666667,
+      "text": "In this alternate timeline, Naruto offers a deal: his help, in exchange for protecting his friends.",
+      "label": "ONE DANGEROUS DEAL",
+      "shots": [
+        {
+          "start": 11.392,
+          "end": 14.84,
+          "asset": "18786193",
+          "trim_start": 0.2,
+          "fit": "contain",
+          "narration_beat": "Naruto offers a deal",
+          "match_reason": "Naruto speaks and gestures during the invented offer; this is illustrative canon footage.",
+          "match_type": "hypothetical_illustration"
+        },
+        {
+          "start": 14.84,
+          "end": 16.48,
+          "asset": "18786238",
+          "trim_start": 0.1,
+          "fit": "contain",
+          "narration_beat": "his help in exchange for",
+          "match_reason": "Kakashi moves into action to establish the help/protection context.",
+          "match_type": "contextual_action"
+        },
+        {
+          "start": 16.48,
+          "end": 17.514666666666667,
+          "asset": "naruto-team-7-0",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "protecting his friends",
+          "match_reason": "Team Seven is visible precisely during protecting his friends.",
+          "match_type": "direct_entity"
+        }
+      ]
+    },
+    {
+      "start": 17.514666666666667,
+      "end": 22.784,
+      "text": "At first, the missions give him the respect he always wanted. But every favor comes with a price.",
+      "label": "TRUST COMES WITH A PRICE",
+      "shots": [
+        {
+          "start": 17.514666666666667,
+          "end": 19.1,
+          "asset": "18786256",
+          "trim_start": 0.3,
+          "fit": "contain",
+          "narration_beat": "At first the missions give him",
+          "match_reason": "Naruto advances with chakra power to illustrate mission activity.",
+          "match_type": "contextual_action"
+        },
+        {
+          "start": 19.1,
+          "end": 21.04,
+          "asset": "sakura-8",
+          "trim_start": 0.3,
+          "fit": "contain",
+          "narration_beat": "the respect he always wanted",
+          "match_reason": "A friendly Naruto/Sakura moment illustrates belonging, not a literal Akatsuki approval scene.",
+          "match_type": "hypothetical_illustration"
+        },
+        {
+          "start": 21.04,
+          "end": 22.784,
+          "asset": "18787221",
+          "trim_start": 0.3,
+          "fit": "contain",
+          "narration_beat": "But every favor comes with a price",
+          "match_reason": "Replace the smiling-friend shot with the masked antagonist as the narration turns threatening.",
+          "match_type": "contextual_threat"
+        }
+      ]
+    },
+    {
+      "start": 22.784,
+      "end": 27.605333333333334,
+      "text": "The breaking point arrives when his new allies demand that he turn against the Hidden Leaf.",
+      "label": "THEN COMES THE DEMAND",
+      "shots": [
+        {
+          "start": 22.784,
+          "end": 25.82,
+          "asset": "18786244",
+          "trim_start": 0.2,
+          "fit": "contain",
+          "narration_beat": "his new allies demand",
+          "match_reason": "Show the Akatsuki representative during the demand.",
+          "match_type": "direct_entity"
+        },
+        {
+          "start": 25.82,
+          "end": 27.605333333333334,
+          "asset": "pain-naruto-1",
+          "trim_start": 1.0,
+          "fit": "contain",
+          "narration_beat": "turn against the Hidden Leaf",
+          "match_reason": "Pain overlooks the village, making the Hidden Leaf reference visually concrete.",
+          "match_type": "direct_location"
+        }
+      ]
+    },
+    {
+      "start": 27.605333333333334,
+      "end": 33.728,
+      "text": "He refuses. Now both sides question his loyalty, and the deal that protected his friends falls apart.",
+      "label": "HE REFUSES",
+      "shots": [
+        {
+          "start": 27.605333333333334,
+          "end": 28.45,
+          "asset": "18787217",
+          "trim_start": 0.2,
+          "fit": "contain",
+          "narration_beat": "He refuses",
+          "match_reason": "Naruto speaking forcefully is placed on the short refusal beat, not half of the entire scene.",
+          "match_type": "hypothetical_illustration"
+        },
+        {
+          "start": 28.45,
+          "end": 31.2,
+          "asset": "18787221",
+          "trim_start": 0.3,
+          "fit": "contain",
+          "narration_beat": "both sides question his loyalty",
+          "match_reason": "The opposing masked face accompanies distrust and divided loyalty.",
+          "match_type": "contextual_threat"
+        },
+        {
+          "start": 31.2,
+          "end": 33.728,
+          "asset": "sakura-0",
+          "trim_start": 0.3,
+          "fit": "contain",
+          "narration_beat": "the deal that protected his friends falls apart",
+          "match_reason": "Sakura in village rubble shows the friends and consequences as their protection collapses.",
+          "match_type": "contextual_consequence"
+        }
+      ]
+    },
+    {
+      "start": 33.728,
+      "end": 39.95733333333333,
+      "text": "Naruto has to choose: prove himself to the organization, or protect the people who still believe in him.",
+      "label": "CHOOSE A SIDE",
+      "shots": [
+        {
+          "start": 33.728,
+          "end": 35.64,
+          "asset": "18787224",
+          "trim_start": 1.6,
+          "fit": "contain",
+          "narration_beat": "Naruto has to choose",
+          "match_reason": "Naruto alone in the inner space frames his personal decision.",
+          "match_type": "hypothetical_illustration"
+        },
+        {
+          "start": 35.64,
+          "end": 37.8,
+          "asset": "pain-naruto-10",
+          "trim_start": 0.1,
+          "fit": "contain",
+          "narration_beat": "prove himself to the organization",
+          "match_reason": "Show Akatsuki during organization; the old equal split showed friends too early here.",
+          "match_type": "direct_entity"
+        },
+        {
+          "start": 37.8,
+          "end": 39.95733333333333,
+          "asset": "naruto-team-7-0",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "or protect the people who still believe in him",
+          "match_reason": "Switch to Team Seven on the actual alternative about protecting his people.",
+          "match_type": "direct_entity"
+        }
+      ]
+    },
+    {
+      "start": 39.95733333333333,
+      "end": 44.672,
+      "text": "Could he change the Akatsuki from inside? Or would joining them change Naruto first?",
+      "label": "WHO CHANGES WHOM?",
+      "shots": [
+        {
+          "start": 39.95733333333333,
+          "end": 42.4,
+          "asset": "pain-naruto-10",
+          "trim_start": 0.2,
+          "fit": "contain",
+          "narration_beat": "Could he change the Akatsuki from inside",
+          "match_reason": "Show Akatsuki during the organization question, replacing the unrelated Kurama close-up.",
+          "match_type": "direct_entity"
+        },
+        {
+          "start": 42.4,
+          "end": 44.672,
+          "asset": "18787224",
+          "trim_start": 1.6,
+          "fit": "contain",
+          "narration_beat": "Or would joining them change Naruto first",
+          "match_reason": "Return to Naruto in his inner space when the closing question shifts back to him.",
+          "match_type": "hypothetical_illustration"
+        }
+      ]
+    }
+  ],
+  "video_only": true,
+  "source_credit": "ONLINE ANIME EXCERPTS / REVIEW DRAFT",
+  "single_pass": true,
+  "enhancement": "anime-light",
+  "review_method": "Source-frame samples reviewed; beat anchors taken from retained recognized speech timestamps. Matching is editorially planned, not an automated plot-understanding score."
+}

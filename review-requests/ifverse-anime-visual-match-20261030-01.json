@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-visual-match-20261030-01",
+  "channel": "ifverse_anime",
+  "voice": "af_heart",
+  "edit_plan": "edits/ifverse-anime-naruto-visual-v3.json",
+  "reuse_narration_from": "artifacts/ifverse-anime-test-20261029-04",
+  "reuse_transcription_from": "artifacts/ifverse-anime-test-20261029-04",
+  "result_branch": "codex/results/ifverse-anime-visual-match-20261030-01",
+  "publishing_enabled": false
+}

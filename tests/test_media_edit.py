@@ -104,5 +104,31 @@ class ImportedMediaTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validated_inputs(plan, self.assets, self.audio)
 
+    def test_reviewed_shot_boundaries_survive_rendering_without_equal_resplit(self):
+        plan = copy.deepcopy(self.plan)
+        plan.update(single_pass=True, video_only=True)
+        plan['scenes'][0]['shots'] = [
+            {'asset': 'movie', 'start': 0, 'end': .25, 'match_reason': 'Short spoken beat'},
+            {'asset': 'movie', 'start': .25, 'end': 1, 'match_reason': 'Longer spoken beat'}]
+        result = render_edit(plan, self.assets, self.audio, self.root/'beats')
+        import json
+        shots = json.loads((result.parent/'edit.json').read_text())['shots']
+        self.assertEqual([(s['start'], s['end'], s['frames']) for s in shots[:2]],
+                         [(0, .25, 8), (.25, 1, 22)])
+        self.assertAlmostEqual(float(media.probe(result)['format']['duration']), 2, delta=.1)
+
+    def test_gapped_overlapping_partial_or_nonfinite_shot_timings_fail_before_render(self):
+        from whatif.media_edit import shot_intervals
+        for shots in [
+            [{'start': 0, 'end': .4}, {'start': .6, 'end': 1}],
+            [{'start': 0, 'end': .7}, {'start': .5, 'end': 1}],
+            [{'start': .1, 'end': 1}],
+            [{'start': 0, 'end': .9}],
+            [{'start': 0, 'end': float('nan')}],
+            [{'start': 0, 'end': .5}, {}],
+        ]:
+            with self.assertRaises(ValueError):
+                shot_intervals({'start': 0, 'end': 1, 'shots': shots})
+
 
 if __name__=='__main__':unittest.main()

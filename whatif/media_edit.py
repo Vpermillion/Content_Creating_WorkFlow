@@ -21,6 +21,29 @@ def local_asset(root, relative):
     return path
 
 
+def shot_intervals(scene):
+    """Keep reviewed beat timings; retain equal splits for legacy plans."""
+    shots = scene['shots']
+    if not any('start' in shot or 'end' in shot for shot in shots):
+        length = scene['end'] - scene['start']
+        return [(scene['start'] + length * i / len(shots),
+                 scene['start'] + length * (i + 1) / len(shots)) for i in range(len(shots))]
+    spans, previous = [], scene['start']
+    for shot in shots:
+        if not {'start', 'end'} <= shot.keys():
+            raise ValueError('Every shot needs start/end when explicit beat timing is used')
+        start, end = shot['start'], shot['end']
+        if not all(isinstance(v, (int, float)) and math.isfinite(v) for v in [start, end]):
+            raise ValueError('Invalid shot timing')
+        if abs(start - previous) > .001 or end <= start or end > scene['end'] + .001:
+            raise ValueError('Shot timings must cover each scene contiguously')
+        spans.append((start, end))
+        previous = end
+    if abs(previous - scene['end']) > .001:
+        raise ValueError('Shot timings do not cover the end of the scene')
+    return spans
+
+
 def fetch_assets(plan, root):
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
@@ -74,6 +97,7 @@ def validated_inputs(plan, root, narration):
             raise ValueError("Subtitle controls are not allowed")
         if not 1 <= len(scene["shots"]) <= 4:
             raise ValueError("Use one to four ordered shots per narration scene")
+        shot_intervals(scene)
         for shot in scene["shots"]:
             if shot["asset"] not in assets or not 0 <= shot.get("focus_x", .5) <= 1:
                 raise ValueError("Unknown asset or invalid framing")
@@ -145,10 +169,7 @@ def render_edit(plan, root, narration, output):
     direct_inputs=[]
     direct_graphs=[]
     for scene in plan['scenes']:
-        count=len(scene['shots'])
-        for i,shot in enumerate(scene['shots']):
-            start=scene['start']+(scene['end']-scene['start'])*i/count
-            end=scene['start']+(scene['end']-scene['start'])*(i+1)/count
+        for shot, (start, end) in zip(scene['shots'], shot_intervals(scene)):
             frames=round(end*fps)-round(start*fps)
             if frames<1:raise ValueError("Shot has no frames")
             asset=assets[shot['asset']]

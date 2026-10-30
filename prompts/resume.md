@@ -1,48 +1,11 @@
-# Universal operator prompt
+# Copy-ready prompt for a new agent
 
-Copy the text below into an authorized cloud assistant with access to this repository.
-
-```text
-You are an authorized replacement operator for Vpermillion/Content_Creating_WorkFlow.
-Use the checkout and branch supplied by the active environment. Read AGENTS.md,
-PROJECT_STATE.md, HANDOFF.md, README.md, docs/MASTER_PROMPT.md and
-docs/OPERATORS.md and docs/CONTINUITY.md completely before changing anything.
-Inspect the current default branch and PR #1: handoff changes may still be on
-codex/operator-handoff. Follow recorded current authorization for channel setup;
-never treat a channel slot as verified account access.
-
-Discover the tools and connections actually available in this session. Never
-assume another GPT account's login, plugins, credentials, filesystem or running
-services are present. Use approved connection flows; never ask for passwords in
-chat or place them in the repository. Keep real account addresses in private
-workspace configuration if needed. Operator profiles are labels, not logins.
-
-From the repository root, inspect git status and the current revision. Locate the
-authoritative private data store or restore its verified backup to a fresh
-directory before calling python -m whatif status: that command can initialize an
-empty store if data is absent. A fresh empty store is not proof prior jobs were
-lost. Use docs/BACKUP.md for private state, or the documented safe demo restore
-only for demonstration work. Never overwrite an existing data directory.
-Treat persisted job state as authoritative over prose notes.
-
-Resume the next useful unblocked task within the active user's authorization.
-Any operator can cover the full workflow; the suggested focus below is optional.
-Preserve approved scripts and speech; claim worker leases through pipeline.run.
-One writer should own a shared checkout. Use independent branches for concurrent
-code work; worker leases protect jobs, not Git files. Coordinate scope explicitly.
-Do not start other agents merely because these profiles exist.
-
-Keep the pipeline portable: n8n coordinates; a running machine executes; GitHub
-preserves software; private storage preserves job state. Kaggle is an optional
-finite voice worker. Keep public posting in draft mode until properly authorized.
-Never start paid services without authorization. Do not automate account
-switching to bypass quotas or assume an email grants any service access.
-
-Save useful checkpoints after each meaningful step, including external-write
-intents before execution; reconcile interrupted writes before retrying.
-Before stopping, run checks appropriate to the change,
-and update PROJECT_STATE.md, HANDOFF.md and BACKLOG.md. Include completed work,
-actual validation, unresolved blockers, job IDs and the exact next action without
-secrets or private addresses. Commit/push authorized changes and verify the remote
-result. Report working, blocked and unverified features separately.
-```
+> Continue `Vpermillion/Content_Creating_WorkFlow`. Read `START_HERE.md`, `docs/CURRENT.md`, `README.md` and `AGENTS.md` first. The current development branch is `codex/ifverse-workflow`; `codex/portable-workspace` is the older default-code snapshot and only routes you to the current work. Preserve changes before selecting the current branch. Do not create another worktree or merge/reset historical branches implicitly.
+>
+> We are building portable, user-owned automation for English YouTube channels `ifverse_anime` and `ifverse_hollywood`. The assistant supplies one script/ordered production plan; one GitHub-hosted job handles cached online moving footage, mild enhancement, generated/reused speech, timed captions, ordered rendering and validation, then saves the video and one compact report. Review once and inspect detailed logs only for failures. Keep state outside chat so another authorized account can continue. Do not rebuild existing downloader/editor/TTS/caption tools or revive older science/seven-account rollout plans.
+>
+> Reuse `whatif/media_tools.py`, `whatif/media_edit.py`, `scripts/render_test_video.py` and `.github/workflows/review-video.yml`. Actual Kokoro-ONNX CPU narration and faster-whisper CPU/int8 captions have produced a 44.672-second Naruto test. The latest visual revision aligns concrete shots to spoken beats with explicit start/end times. Check `docs/CURRENT.md` for its result branch and files before rerunning. Verify narration hashes and preserve audio/captions on visual-only revisions.
+>
+> The next priority is footage that actually illustrates named characters, actions and places, with explicit rationale per beat. Do not confuse lexical labels, motion or decoding success with semantic accuracy. Exact invented actions may have no canon footage: use relevant illustrative shots without claiming they depict the alternate storyline literally. General story intake and Hollywood branding are still incomplete; the tested runner uses the prepared Naruto story.
+>
+> Inspect current capabilities and credential names/status without exposing values. Never commit account secrets, the raw PDF/transcript, private databases or actual private media. No YouTube upload, account recovery, paid purchase or recurring deployment is authorized just by this prompt. Preserve previous outputs and user edits. Run appropriate existing tests after behavioral changes; inspect rendered frames for visual changes. Update current state/handoff/backlog and save authorized changes to GitHub so the next session can resume without this chat.

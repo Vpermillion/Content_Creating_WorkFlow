@@ -179,7 +179,16 @@ def retime_plan(original, segments, root, narration):
         original_shots = scene['shots']
         duration = speech['end'] - speech['start']
         selected = None
-        for count in range(len(original_shots), 5):
+        explicit = any('start' in shot or 'end' in shot for shot in original_shots)
+        if explicit:
+            if any(abs(scene[k] - speech[k]) > .001 for k in ['start', 'end']):
+                raise ValueError('Narration timing changed; re-align the reviewed visual beats')
+            for shot, (begin, end) in zip(original_shots, media_edit.shot_intervals(scene)):
+                available = media.duration(root / assets[shot['asset']]['file']) - shot.get('trim_start', 0)
+                if available < end - begin - .03:
+                    raise ValueError('Matching excerpt cannot cover its reviewed beat')
+            selected = copy.deepcopy(original_shots)
+        for count in ([] if explicit else range(len(original_shots), 5)):
             shots = [copy.deepcopy(original_shots[i % len(original_shots)]) for i in range(count)]
             if all(media.duration(root / assets[s['asset']]['file']) - s.get('trim_start', 0)
                    >= duration / count + .04 for s in shots):
@@ -197,6 +206,15 @@ def retime_plan(original, segments, root, narration):
     return plan
 
 
+def requested_plan(relative):
+    path = (ROOT / relative).resolve()
+    if not path.is_relative_to(ROOT / 'edits') or path.suffix != '.json':
+        raise ValueError('Edit plans must be repository JSON files under edits/')
+    if path.stat().st_size > 1_000_000:
+        raise ValueError('Edit plan exceeds size limit')
+    return json.loads(path.read_text())
+
+
 def run(request, output, models):
     output = output.resolve()
     operation = identifier(request['id'])
@@ -206,7 +224,7 @@ def run(request, output, models):
         raise ValueError('Use a fresh output directory for a new test version')
     output.mkdir(parents=True, exist_ok=True)
     source = json.loads((ROOT / 'pilots/alpha-anime-001.json').read_text())
-    original = json.loads((ROOT / 'edits/alpha-anime-video.v2.json').read_text())
+    original = requested_plan(request.get('edit_plan', 'edits/alpha-anime-video.v2.json'))
     started, timings = time.monotonic(), {}
     atomic_json(output / 'request.json', request)
     (output / 'script.md').write_text('# ' + source['title'] + '\n\n' +
@@ -234,7 +252,18 @@ def run(request, output, models):
         segments = narrate(source, output, models, request['voice'])
     timings['narration_seconds'] = round(time.monotonic() - mark, 3)
     mark = time.monotonic()
-    captions, agreement = transcribe(output / 'narration.wav', output, models, source)
+    caption_source = request.get('reuse_transcription_from')
+    if caption_source:
+        prior = (ROOT / caption_source).resolve()
+        if not prior.is_relative_to(ROOT / 'artifacts'):
+            raise ValueError('Retained captions must come from repository artifacts')
+        if digest(prior / 'narration.wav') != digest(output / 'narration.wav'):
+            raise ValueError('Retained captions belong to different narration')
+        transcript = json.loads((prior / 'transcription.json').read_text())
+        captions, agreement = transcript['captions'], transcript['script_token_agreement']
+        shutil.copy2(prior / 'transcription.json', output / 'transcription.json')
+    else:
+        captions, agreement = transcribe(output / 'narration.wav', output, models, source)
     timings['captioning_seconds'] = round(time.monotonic() - mark, 3)
     plan = retime_plan(original, segments, assets, output / 'narration.wav')
     plan.update(id=operation, caption_segments=captions)
@@ -248,8 +277,12 @@ def run(request, output, models):
               'voice': {'provider': 'kokoro-onnx', 'voice': request['voice'], 'device': 'cpu',
                         'reused_verified_audio': bool(retained)},
               'captions': {'engine': 'faster-whisper', 'model': 'tiny.en', 'compute_type': 'int8',
-                           'phrases': len(captions), 'script_token_agreement': agreement},
-              'footage': 'Existing traced online Naruto clip plan; reframed to retain source image',
+                           'phrases': len(captions), 'script_token_agreement': agreement,
+                           'reused_verified_timing': bool(caption_source)},
+              'footage': 'Traced online Naruto clips with reviewed narration-beat matching',
+              'edit_plan': request.get('edit_plan', 'edits/alpha-anime-video.v2.json'),
+              'explicit_beat_timing': all('start' in shot and 'end' in shot
+                                          for scene in plan['scenes'] for shot in scene['shots']),
               'publishing_enabled': False, 'github_run_id': os.environ.get('GITHUB_RUN_ID'),
               'limitations': ['Fan-made hypothetical review draft; source reuse permissions unverified',
                               'Pronunciation, character names and full audiovisual review remain required']}

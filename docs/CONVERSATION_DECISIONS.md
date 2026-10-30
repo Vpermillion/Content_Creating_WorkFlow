@@ -2,6 +2,8 @@
 
 Read from the user-supplied `Automated-Video-Workflow-Complete.pdf`: 38 pages, with a guide, 134 chronological messages and a source/link register. The final agreement is in messages 130–134 (pages 32–34). Earlier proposals are historical; the current user's two English channels, `ifverse_anime` and `ifverse_hollywood`, take priority over the older three-channel and seven-account plans.
 
+Subsequent implementation has now produced the voiced/captioned 44.672-second test and the current visual-beat revision. Continue on `codex/ifverse-workflow` and read `docs/CURRENT.md`; the remaining-work statements below describe the historical end of the supplied conversation, not a claim that later CPU TTS/caption work is absent.
+
 ## Operating contract
 
 The assistant prepares **one production-plan JSON**, submits **one autonomous GitHub job**, and reviews **one compact final result**. Ordinary software completes the intermediate work. The purpose is to reduce repeated agent interaction, not merely to move individual tool calls to GitHub while the assistant still directs every step.

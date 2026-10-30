@@ -1,5 +1,12 @@
 # Backlog
 
+## Current continuation entry
+
+Start with `START_HERE.md`, `docs/CURRENT.md` and `README.md`. Current development is `codex/ifverse-workflow`; the default `codex/portable-workspace` is the old code snapshot and now contains the same entry guides. User-approved scope is English ifverse_anime and ifverse_hollywood. The original 44.672-second voiced/captioned test is complete; a closer visual revision now uses 22 explicitly timed spoken beats from 14 moving sources, preserving the exact approved voice and caption record. See `docs/VISUAL_MATCHING.md`. Request ifverse-anime-visual-match-20261030-01 is prepared; completion must be confirmed from its result branch before claiming a new delivered cut. Local checks after interval/request changes: 42 passed. Current local media runner supports a supplied repository edit plan and verified audio/caption reuse. This remains a prepared-Naruto-story test, not an arbitrary-story semantic selection engine. No public upload or account operation is part of this task.
+
+The next agent should inspect the current request/result first, use one plan and one finite job, and update the concise checkpoint. Do not rebuild existing components, regenerate saved speech or continue older account rollout plans. Preserve all earlier result versions. The historical detail below is retained for diagnosis; current instructions above take priority.
+
+
 ## Latest requested test video
 
 The user requested an actual sample after reviewing the complete shared conversation. The confirmed channels are ifverse_anime and ifverse_hollywood, both English. Final test ifverse-anime-test-20261029-04 succeeded in GitHub run 40846229359: 44.672 seconds, 18 moving shots, Kokoro-ONNX af_heart CPU narration, 27 faster-whisper CPU/int8 caption phrases, and complete media validation. Source branch codex/ifverse-test-video-20261029-01 at 0ddeaab; completed outputs are on this result branch under artifacts/ifverse-anime-test-20261029-04/. Read docs/TEST_VIDEO.md and docs/CONVERSATION_DECISIONS.md before rerunning. This is a fixed-story production test using the existing traced Naruto footage, not arbitrary-story semantic selection or live YouTube delivery. Narration was generated once and preserved through diagnosed decoder/reporting fixes. Current measured retained-audio media work was 33.255 seconds, excluding setup and first-time voice generation. Do not regenerate the existing test or revive old broader account plans. Keep source credentials/private state separate; no default branch merge or public posting occurred.

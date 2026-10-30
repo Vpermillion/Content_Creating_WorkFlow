@@ -63,6 +63,17 @@ class TestVideoPlanTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'cannot cover'):
                 module.retime_plan(plan, [{'start': 0, 'end': 9}], Path('/assets'), Path('/voice.wav'))
 
+    def test_retime_keeps_reviewed_beats_and_requires_new_alignment_for_changed_audio(self):
+        plan = {'scenes': [{'start': 0, 'end': 2, 'shots': [
+                    {'asset': 'a', 'start': 0, 'end': .5}, {'asset': 'a', 'start': .5, 'end': 2}]}],
+                'assets': [{'id': 'a', 'file': 'a.mp4'}]}
+        speech = [{'start': 0, 'end': 2, 'text': 'Reviewed script', 'label': 'BEATS'}]
+        with patch.object(module.media, 'duration', return_value=3), patch.object(module, 'digest', return_value='hash'):
+            result = module.retime_plan(plan, speech, Path('/assets'), Path('/voice.wav'))
+            self.assertEqual([s['end'] for s in result['scenes'][0]['shots']], [.5, 2])
+            with self.assertRaisesRegex(ValueError, 're-align'):
+                module.retime_plan(plan, [{'start': 0, 'end': 3}], Path('/assets'), Path('/voice.wav'))
+
 
 if __name__ == '__main__':
     unittest.main()
