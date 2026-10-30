@@ -2,6 +2,7 @@ import importlib.util
 import json
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -11,6 +12,23 @@ spec.loader.exec_module(module)
 
 
 class TestVideoPlanTests(unittest.TestCase):
+    def test_scene_recognition_offsets_timestamps_and_excludes_neighbor_padding(self):
+        import numpy as np
+        class Engine:
+            def transcribe(self, waveform, **kwargs):
+                self.calls = getattr(self, 'calls', 0) + 1
+                # The second window begins .12 seconds before its scene boundary.
+                words = ([(' First.', .1, .8)] if self.calls == 1 else
+                         [(' Previous.', .01, .05), (' Second.', .22, .82)])
+                return [SimpleNamespace(words=[SimpleNamespace(word=t, start=a, end=b, probability=.9)
+                                               for t, a, b in words])], None
+        engine = Engine()
+        words = module.recognize_words(engine, np.zeros(32000), [{'start': 0, 'end': 1}, {'start': 1, 'end': 2}])
+        self.assertEqual(engine.calls, 2)
+        self.assertEqual([w['word'].strip() for w in words], ['First.', 'Second.'])
+        self.assertAlmostEqual(words[1]['start'], 1.1)
+        self.assertAlmostEqual(words[1]['end'], 1.7)
+
     def test_requested_script_rejects_outside_paths_and_caption_controls(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
