@@ -12,6 +12,14 @@ spec.loader.exec_module(module)
 
 
 class TestVideoPlanTests(unittest.TestCase):
+    def test_request_rejects_unapproved_model_before_creating_output(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / 'output'
+            with self.assertRaisesRegex(ValueError, 'recognition model'):
+                module.run({'id': 'model-test', 'channel': 'ifverse_anime', 'voice': 'af_heart',
+                            'caption_model': '../../untrusted'}, output, Path(temp) / 'models')
+            self.assertFalse(output.exists())
+
     def test_scene_recognition_offsets_timestamps_and_excludes_neighbor_padding(self):
         import numpy as np
         class Engine:

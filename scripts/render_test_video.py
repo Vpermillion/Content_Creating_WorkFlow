@@ -179,8 +179,8 @@ def recognize_words(engine, waveform, scenes=None):
         begin, end = scene['start'], scene['end']
         offset = max(0, int((begin - .12) * 16000))
         stop = min(len(waveform), int((end + .12) * 16000))
-        found, _ = engine.transcribe(waveform[offset:stop], language='en', beam_size=3, word_timestamps=True,
-                                    initial_prompt='Naruto, Akatsuki, Nine Tails, Hidden Leaf, Sakura, Obito, motherflicker.',
+        found, _ = engine.transcribe(waveform[offset:stop], language='en', beam_size=5, word_timestamps=True,
+                                    initial_prompt=scene.get('text', 'Naruto, Akatsuki, Nine Tails, Hidden Leaf, Sakura, Obito, motherflicker.'),
                                     condition_on_previous_text=False, vad_filter=False)
         for segment in found:
             for word in segment.words or []:
@@ -194,23 +194,23 @@ def recognize_words(engine, waveform, scenes=None):
     return words
 
 
-def transcribe(audio, output, models, spec, scenes=None):
+def transcribe(audio, output, models, spec, scenes=None, model='tiny.en'):
     from faster_whisper import WhisperModel
-    engine = WhisperModel('tiny.en', device='cpu', compute_type='int8', cpu_threads=2, num_workers=1,
+    engine = WhisperModel(model, device='cpu', compute_type='int8', cpu_threads=2, num_workers=1,
                           download_root=str(models / 'whisper'))
     words = recognize_words(engine, asr_audio(audio, output), scenes)
     expected = re.findall(r'\w+', ' '.join(s['text'] for s in spec['scenes']).casefold())
     recognized = re.findall(r'\w+', ' '.join(w['word'] for w in words).casefold())
     agreement = difflib.SequenceMatcher(a=expected, b=recognized, autojunk=False).ratio()
     mode = 'narration_scenes' if scenes is not None else 'whole_audio'
-    atomic_json(output / 'transcription-raw.json', {'words': words, 'script_token_agreement': agreement,
+    atomic_json(output / 'transcription-raw.json', {'words': words, 'model': model, 'script_token_agreement': agreement,
                 'mode': mode, 'audio_sha256': digest(audio)})
     if agreement < .75:
         raise ValueError('Caption transcript differs substantially from the prepared script')
     raw_words = words
     words, corrections = reconcile_words(words, ' '.join(s['text'] for s in spec['scenes']))
     captions = phrase_captions(words, media.duration(audio))
-    atomic_json(output / 'transcription.json', {'engine': 'faster-whisper', 'model': 'tiny.en',
+    atomic_json(output / 'transcription.json', {'engine': 'faster-whisper', 'model': model,
                 'device': 'cpu', 'compute_type': 'int8', 'words': words, 'captions': captions,
                 'raw_words': raw_words, 'script_corrections': corrections,
                 'recognition_mode': mode,
@@ -291,6 +291,8 @@ def run(request, output, models):
         raise ValueError('Unsupported test channel or voice')
     if request.get('caption_mode', 'whole_audio') not in {'whole_audio', 'narration_scenes'}:
         raise ValueError('Unsupported caption recognition mode')
+    if request.get('caption_model', 'tiny.en') not in {'tiny.en', 'base.en'}:
+        raise ValueError('Unsupported caption recognition model')
     if output.exists() and any(output.iterdir()):
         raise ValueError('Use a fresh output directory for a new test version')
     output.mkdir(parents=True, exist_ok=True)
@@ -337,7 +339,8 @@ def run(request, output, models):
         shutil.copy2(prior / 'transcription.json', output / 'transcription.json')
     else:
         captions, agreement = transcribe(output / 'narration.wav', output, models, source,
-                                        segments if request.get('caption_mode') == 'narration_scenes' else None)
+                                        segments if request.get('caption_mode') == 'narration_scenes' else None,
+                                        request.get('caption_model', 'tiny.en'))
     timings['captioning_seconds'] = round(time.monotonic() - mark, 3)
     plan = retime_plan(original, segments, assets, output / 'narration.wav')
     plan.update(id=operation, caption_segments=captions)
@@ -350,7 +353,7 @@ def run(request, output, models):
               'duration_seconds': media.duration(video), 'timings': timings,
               'voice': {'provider': 'kokoro-onnx', 'voice': request['voice'], 'device': 'cpu',
                         'reused_verified_audio': bool(retained)},
-              'captions': {'engine': 'faster-whisper', 'model': 'tiny.en', 'compute_type': 'int8',
+              'captions': {'engine': 'faster-whisper', 'model': request.get('caption_model', 'tiny.en'), 'compute_type': 'int8',
                            'recognition_mode': request.get('caption_mode', 'whole_audio'),
                            'phrases': len(captions), 'script_token_agreement': agreement,
                            'reused_verified_timing': bool(caption_source)},

@@ -39,7 +39,10 @@ jobs:
           path: |
             private/test-video/models
             private/test-video/footage
-          key: ifverse-review-cpu-v1-${{ hashFiles('requirements-test-video.txt', 'edits/ifverse-anime-naruto-visual-v3.json') }}
+          key: ifverse-review-cpu-v2-${{ hashFiles('requirements-test-video.txt', 'scripts/render_test_video.py') }}
+          restore-keys: |
+            ifverse-review-cpu-v2-
+            ifverse-review-cpu-v1-
       - name: Regression checks
         run: python -m unittest discover -s tests -v
       - name: Render the requested review version
