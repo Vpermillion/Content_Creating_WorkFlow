@@ -1,6 +1,6 @@
 # Ifverse automated video workspace
 
-**Script tone:** follow [the owner-approved style addon](prompts/script-style.md): funny, teasing, sarcastic fan commentary, exaggerated complaints and occasional clean-swear punchlines such as “motherflicker.” Keep the alternate story clear and match moving footage to the spoken beat. This applies to both English channels.
+**Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels.
 
 A portable, user-owned workflow for English what-if videos on **ifverse_anime** and **ifverse_hollywood**. An assistant provides one script and production plan; a finite GitHub-hosted job does the repetitive media work and returns a video plus one compact report.
 

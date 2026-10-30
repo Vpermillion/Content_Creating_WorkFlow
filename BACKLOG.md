@@ -1,5 +1,9 @@
 # Backlog
 
+## Latest style clarification — 2026-10-30
+
+The owner clarified the style after the first roast: **frequent, varied, creative roasts across the whole narration**, with modern Gen Z/millennial slang, streetwise banter, mock praise, comparisons and callbacks. A single recurring insult is insufficient. Roasts are frequent; mild/clean-swear profanity remains occasional. See `prompts/script-style.md` (preference v2). The completed 60-second video predates this density clarification; no new render was requested in this follow-up.
+
 ## Owner style update and new one-minute example — 2026-10-30
 
 Completed request `ifverse-anime-roast-20261030-04`, hosted run `41047895853`, result branch `codex/results/ifverse-anime-roast-20261030-04`: exactly 60.000 seconds, 24 moving shots, nine traced sources, 50 caption phrases. New speech was generated once; the first whole-audio ASR agreement gate failed, then the exact speech was retained for scene-window recognition; both tiny.en and base.en recognition drafts still altered words, so the final pass directly aligns the known script to the final waveform. All 67 current-source local regression tests passed. Local full decode/duration/track/hash checks, clean-swear caption check and every shot sample were reviewed. Full listening/editorial/source-use approval remains separate. Delivered `/workspace/Ifverse_Anime_60s_Roast.mp4`; no public upload. General repository script intake is now implemented; automatic new-story footage planning and Hollywood branding remain next work. Read CURRENT for exact receipts before retrying.

@@ -10,7 +10,7 @@ English YouTube what-if videos for `ifverse_anime` and `ifverse_hollywood`. One 
 
 ## Current owner style and one-minute request
 
-The owner requested funny, teasing, sarcastic fan narration, exaggerated complaints and occasional clean-swear wordplay such as “motherflicker” or “mother father.” This applies to **both English channels** and supersedes the older neutral writing tone. Read [the permanent addon](../prompts/script-style.md) before drafting. It is linked from the root guides, agent instructions, both continuation prompts and both channel profiles.
+The owner clarified the style after the first roast: **frequent, varied, creative roasts across the whole narration**, with modern Gen Z/millennial slang, streetwise banter, mock praise, comparisons and callbacks. A single recurring insult is insufficient. Roasts are frequent; mild/clean-swear profanity remains occasional. See `prompts/script-style.md` (preference v2). The completed 60-second video predates this density clarification; no new render was requested in this follow-up. The addon is linked from root guides, agent instructions, continuation prompts and both channel profiles.
 
 ## Latest completed video: one-minute roast example
 

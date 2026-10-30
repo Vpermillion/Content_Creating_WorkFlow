@@ -58,16 +58,20 @@
     "Retain source and usage basis for selected assets"
   ],
   "script_style": {
-    "id": "ifverse-playful-roast-v1",
+    "id": "ifverse-playful-roast-v2",
     "instructions": "prompts/script-style.md",
     "owner_confirmed": true,
     "language": "en",
     "tone": [
-      "funny",
-      "teasing",
-      "sarcastic",
-      "exaggerated complaints"
+      "frequent varied creative roasts",
+      "playful trash talk",
+      "Gen Z and millennial internet slang",
+      "streetwise banter",
+      "exaggerated complaints",
+      "mock praise and callbacks"
     ],
-    "profanity": "occasional mild or clean-swear wordplay; no platform-approval guarantee"
+    "profanity": "Roasts frequent; mild or clean-swear wordplay occasional; no platform-approval guarantee",
+    "comic_density": "A comic turn in most short beats, roughly every one or two sentences; keep story clear",
+    "variety": "Fresh character/scene-specific jokes; vary phrasing and do not rely on one repeated insult"
   }
 }
