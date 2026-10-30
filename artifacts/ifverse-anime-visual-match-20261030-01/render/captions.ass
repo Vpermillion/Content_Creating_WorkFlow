@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.80,Caption,,0,0,0,,What if Naruto joined the\NAkatsuki?
+Dialogue: 0,0:00:02.40,0:00:03.84,Caption,,0,0,0,,The first surprise is that
+Dialogue: 0,0:00:03.84,0:00:05.28,Caption,,0,0,0,,joining would not make him safe.
+Dialogue: 0,0:00:05.46,0:00:06.70,Caption,,0,0,0,,He carries the Nine Tails
+Dialogue: 0,0:00:06.70,0:00:09.00,Caption,,0,0,0,,and the Akatsuki wants the\NTailed Beasts.
+Dialogue: 0,0:00:09.56,0:00:11.28,Caption,,0,0,0,,Their new recruit is also their\Ntarget.
+Dialogue: 0,0:00:11.44,0:00:13.52,Caption,,0,0,0,,In this alternate timeline,\NNaruto
+Dialogue: 0,0:00:13.52,0:00:14.36,Caption,,0,0,0,,offers a deal.
+Dialogue: 0,0:00:14.84,0:00:16.48,Caption,,0,0,0,,His help in exchange for
+Dialogue: 0,0:00:16.48,0:00:17.44,Caption,,0,0,0,,protecting his friends.
+Dialogue: 0,0:00:17.68,0:00:18.92,Caption,,0,0,0,,At first, the missions give
+Dialogue: 0,0:00:18.92,0:00:20.58,Caption,,0,0,0,,him the respect he always\Nwanted.
+Dialogue: 0,0:00:21.04,0:00:22.70,Caption,,0,0,0,,But every favor comes with a\Nprice.
+Dialogue: 0,0:00:22.86,0:00:24.58,Caption,,0,0,0,,The breaking point arrives when
+Dialogue: 0,0:00:24.58,0:00:26.18,Caption,,0,0,0,,his new allies demand that
+Dialogue: 0,0:00:26.18,0:00:27.54,Caption,,0,0,0,,he turn against the Hidden Leaf.
+Dialogue: 0,0:00:27.58,0:00:28.26,Caption,,0,0,0,,He refuses.
+Dialogue: 0,0:00:28.26,0:00:30.52,Caption,,0,0,0,,Now, both sides question his
+Dialogue: 0,0:00:30.52,0:00:32.00,Caption,,0,0,0,,loyalty, and the deal that
+Dialogue: 0,0:00:32.00,0:00:33.68,Caption,,0,0,0,,protected his friends falls\Napart.
+Dialogue: 0,0:00:33.98,0:00:35.26,Caption,,0,0,0,,Naruto has to choose.
+Dialogue: 0,0:00:35.64,0:00:37.22,Caption,,0,0,0,,Prove himself to the\Norganization,
+Dialogue: 0,0:00:37.80,0:00:39.00,Caption,,0,0,0,,or protect the people who
+Dialogue: 0,0:00:39.00,0:00:40.00,Caption,,0,0,0,,still believe in him.
+Dialogue: 0,0:00:40.06,0:00:41.92,Caption,,0,0,0,,Could he change the Akatsuki\Nfrom inside?
+Dialogue: 0,0:00:42.40,0:00:43.74,Caption,,0,0,0,,Or would joining them change
+Dialogue: 0,0:00:43.74,0:00:44.60,Caption,,0,0,0,,Naruto first?
+Dialogue: 1,0:00:00.00,0:00:05.35,Heading,,0,0,0,,THE WRONG SIDE OF THE STORY
+Dialogue: 1,0:00:05.35,0:00:11.39,Heading,,0,0,0,,THE RECRUIT IS ALSO THE TARGET
+Dialogue: 1,0:00:11.39,0:00:17.51,Heading,,0,0,0,,ONE DANGEROUS DEAL
+Dialogue: 1,0:00:17.51,0:00:22.78,Heading,,0,0,0,,TRUST COMES WITH A PRICE
+Dialogue: 1,0:00:22.78,0:00:27.61,Heading,,0,0,0,,THEN COMES THE DEMAND
+Dialogue: 1,0:00:27.61,0:00:33.73,Heading,,0,0,0,,HE REFUSES
+Dialogue: 1,0:00:33.73,0:00:39.96,Heading,,0,0,0,,CHOOSE A SIDE
+Dialogue: 1,0:00:39.96,0:00:44.67,Heading,,0,0,0,,WHO CHANGES WHOM?
+Dialogue: 1,0:00:00.00,0:00:44.67,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:00:44.67,Credit,,0,0,0,,ONLINE ANIME EXCERPTS / REVIEW DRAFT

@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "id": "ifverse-anime-visual-match-20261030-01",
+  "video": "render/video.mp4",
+  "duration_seconds": 44.672,
+  "timings": {
+    "footage_seconds": 1.084,
+    "narration_seconds": 0.003,
+    "captioning_seconds": 0.004,
+    "render_and_decode_seconds": 22.867,
+    "pipeline_seconds": 24.715
+  },
+  "voice": {
+    "provider": "kokoro-onnx",
+    "voice": "af_heart",
+    "device": "cpu",
+    "reused_verified_audio": true
+  },
+  "captions": {
+    "engine": "faster-whisper",
+    "model": "tiny.en",
+    "compute_type": "int8",
+    "phrases": 27,
+    "script_token_agreement": 0.9925925925925926,
+    "reused_verified_timing": true
+  },
+  "footage": "Traced online Naruto clips with reviewed narration-beat matching",
+  "edit_plan": "edits/ifverse-anime-naruto-visual-v3.json",
+  "explicit_beat_timing": true,
+  "publishing_enabled": false,
+  "github_run_id": "41022041729",
+  "limitations": [
+    "Fan-made hypothetical review draft; source reuse permissions unverified",
+    "Pronunciation, character names and full audiovisual review remain required"
+  ]
+}
