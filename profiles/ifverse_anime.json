@@ -73,5 +73,14 @@
     "profanity": "Roasts frequent; mild or clean-swear wordplay occasional; no platform-approval guarantee",
     "comic_density": "A comic turn in most short beats, roughly every one or two sentences; keep story clear",
     "variety": "Fresh character/scene-specific jokes; vary phrasing and do not rely on one repeated insult"
+  },
+  "sound_effects": {
+    "mode": "scripted_comedy_cues",
+    "instructions": "docs/SOUND_EFFECTS.md",
+    "catalog": "assets/sfx/catalog.json",
+    "timing": "exact spoken-phrase anchors from the matching final-audio alignment receipt; word times estimated",
+    "speech_duck_db": 6,
+    "selection": "descriptions/tags plus an explicit script-specific reason; avoid every-sentence effects",
+    "status": "tested_in_hosted_anime_review"
   }
 }

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "description": "Searchable online-source effects for meme-style comedy editing; these are not claimed to be the original viral Vine/Roblox sound recordings.",
+  "assets": [
+    {
+      "id": "bass_impact",
+      "file": "explosion.wav",
+      "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/explosion.wav",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/explosion.wav",
+      "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+      "sha256": "e1c32d933377897517415b53ae804a4c30d79a6ea40e811bbefe51be33f20417",
+      "duration_seconds": 0.451995,
+      "publisher": "Brackeys",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+      "description": "Crunchy downloaded explosion pitched down and reinforced with a decaying 55 Hz sub pulse for a short meme-style bass-impact punchline.",
+      "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+      "tags": [
+        "boom",
+        "punchline",
+        "bad decision",
+        "realization",
+        "impact"
+      ],
+      "playback_rate": 0.65,
+      "sub_bass_hz": 55
+    },
+    {
+      "id": "error_buzz",
+      "file": "hurt.wav",
+      "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/hurt.wav",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/hurt.wav",
+      "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+      "sha256": "84615c874346a668028291833a99948f66480cba204d5ff175eab9180a524820",
+      "duration_seconds": 0.173061,
+      "publisher": "Brackeys",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+      "description": "Brief retro hurt/error buzz for confusion, a failed plan or a dumb question.",
+      "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+      "tags": [
+        "error",
+        "confusion",
+        "failed plan",
+        "awkward reaction"
+      ],
+      "playback_rate": 1
+    },
+    {
+      "id": "reward_ping",
+      "file": "coin.wav",
+      "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/coin.wav",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/coin.wav",
+      "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+      "sha256": "caa932c06548047f678e09226d910b7ed1382f927196b44a0f6da55583e2e56d",
+      "duration_seconds": 0.198209,
+      "publisher": "Brackeys",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+      "description": "Bright coin/reward ping for sarcastic praise, an unlock or a tiny victory.",
+      "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+      "tags": [
+        "ding",
+        "reward",
+        "mock praise",
+        "achievement"
+      ],
+      "playback_rate": 1
+    },
+    {
+      "id": "cartoon_boing",
+      "file": "jump.wav",
+      "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/jump.wav",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/jump.wav",
+      "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+      "sha256": "fd545eaa7e89360d08fe95d995747ae53a8159e26ec1b14cdb16b8239d08f0ab",
+      "duration_seconds": 0.091043,
+      "publisher": "Brackeys",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+      "description": "Rising jump/boing sound for an absurd claim or playful character reaction.",
+      "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+      "tags": [
+        "boing",
+        "absurd",
+        "surprise",
+        "reaction"
+      ],
+      "playback_rate": 0.9
+    },
+    {
+      "id": "power_up",
+      "file": "power_up.wav",
+      "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/power_up.wav",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/power_up.wav",
+      "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+      "sha256": "2577918958bc61a8bdb37c39f75018088196ae3ce69d5ed4c627152b9ec74e12",
+      "duration_seconds": 0.357551,
+      "publisher": "Brackeys",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+      "description": "Rising retro power-up flourish for exaggerated confidence or a supposed upgrade.",
+      "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+      "tags": [
+        "upgrade",
+        "confidence",
+        "aura",
+        "power up"
+      ],
+      "playback_rate": 1
+    },
+    {
+      "id": "tiny_click",
+      "file": "tap.wav",
+      "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/tap.wav",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/tap.wav",
+      "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+      "sha256": "3ca3241c3b3a5dc81b228a557c7cfc5af8a59544b2388b331d258a4fbe439659",
+      "duration_seconds": 0.03449,
+      "publisher": "Brackeys",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+      "description": "Dry tiny click for a quick decision, a red flag or a reaction beat.",
+      "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+      "tags": [
+        "click",
+        "decision",
+        "red flag",
+        "quick beat"
+      ],
+      "playback_rate": 1
+    }
+  ]
+}

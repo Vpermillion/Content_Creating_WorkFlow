@@ -41,3 +41,11 @@ The one-minute example completed successfully in run `41047895853` on `codex/res
 ## Denser, more varied comic narration — 2026-10-30
 
 The owner clarified the style after the first roast: **frequent, varied, creative roasts across the whole narration**, with modern Gen Z/millennial slang, streetwise banter, mock praise, comparisons and callbacks. A single recurring insult is insufficient. Roasts are frequent; mild/clean-swear profanity remains occasional. See `prompts/script-style.md` (preference v2). The completed 60-second video predates this density clarification; no new render was requested in this follow-up.
+
+## Downloaded comedy effects and scripted timing
+
+The owner requested modern meme-style sound cues keyed to a question, roast, impact or comeback. A described/tagged public-domain source catalog and reusable phrase-anchored mixer were added to the existing review pipeline, with cache, speech ducking, retained original voice/captions and separate mix receipts. The first test adds nine cues to the completed one-minute Naruto example. See CURRENT for actual hosted status. No modern reference video was claimed to have been analyzed.
+
+The sound-effects review completed in hosted run `41199650499` on `codex/results/ifverse-anime-sfx-review-01`: nine cues over the existing 60-second edit, four effect types, unchanged source voice/captions and copied picture stream. All 73 local tests passed; full decode, all cue waveform additions, source hashes and numeric level checks were verified. The SFX stage took 3.698 seconds. Listening/editorial judgment remains separate.
+
+Final-source support also accepts an ordered-script checksum for a voice that has not yet been generated; the runner binds the cue plan to the actual final waveform inside the same job. This binding/rejection path is unit-tested. The final complete local suite passed 74 tests; the earlier demonstrated media job passed its then-current 73 tests and reused saved speech/captions. ASR-generated receipts now also include their final-audio hash for downstream cue verification.
