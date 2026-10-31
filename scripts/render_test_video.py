@@ -16,7 +16,7 @@ import wave
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from whatif import media, media_edit
+from whatif import audio_fx, media, media_edit
 from whatif.store import atomic_json, digest, identifier
 
 MODEL_URLS = {
@@ -354,6 +354,19 @@ def requested_script(relative):
     return spec
 
 
+def requested_sound_effects(relative):
+    if not isinstance(relative, str):
+        raise ValueError('Sound effects plan path must be a string')
+    path = (ROOT / relative).resolve()
+    if not path.is_relative_to(ROOT / 'edits') or path.suffix != '.json' or path.stat().st_size > 100_000:
+        raise ValueError('Sound effects plans must be bounded JSON under edits/')
+    plan = json.loads(path.read_text())
+    catalog = (ROOT / plan['catalog']).resolve()
+    if not catalog.is_relative_to(ROOT / 'assets/sfx') or catalog.suffix != '.json' or catalog.stat().st_size > 200_000:
+        raise ValueError('Sound effects catalog must be bounded JSON under assets/sfx/')
+    return plan, json.loads(catalog.read_text())
+
+
 def run(request, output, models):
     output = output.resolve()
     operation = identifier(request['id'])
@@ -421,6 +434,16 @@ def run(request, output, models):
     mark = time.monotonic()
     video = media_edit.render_edit(plan, assets, output / 'narration.wav', output / 'render')
     timings['render_and_decode_seconds'] = round(time.monotonic() - mark, 3)
+    effects = None
+    if request.get('sound_effects_plan'):
+        mark = time.monotonic()
+        effect_plan, catalog = requested_sound_effects(request['sound_effects_plan'])
+        atomic_json(output / 'sound-effects-plan.json', effect_plan)
+        effects = audio_fx.mix_effects(video, output / 'narration.wav',
+                                      json.loads((output / 'transcription.json').read_text()),
+                                      effect_plan, catalog, models.parent / 'sound-effects', output / 'sound-effects')
+        video = output / 'sound-effects' / effects['video']
+        timings['sound_effects_seconds'] = round(time.monotonic() - mark, 3)
     timings['pipeline_seconds'] = round(time.monotonic() - started, 3)
     report = {'status': 'success', 'id': operation, 'video': str(video.relative_to(output)),
               'duration_seconds': media.duration(video), 'timings': timings,
@@ -434,6 +457,8 @@ def run(request, output, models):
               'edit_plan': request.get('edit_plan', 'edits/alpha-anime-video.v2.json'),
               'script': request.get('script', 'pilots/alpha-anime-001.json'),
               'script_style': source.get('script_style'),
+              'sound_effects': ({'count': effects['effects_count'], 'receipt': 'sound-effects/sound-effects.json',
+                                 'plan': request['sound_effects_plan']} if effects else None),
               'explicit_beat_timing': all('start' in shot and 'end' in shot
                                           for scene in plan['scenes'] for shot in scene['shots']),
               'publishing_enabled': False, 'github_run_id': os.environ.get('GITHUB_RUN_ID'),

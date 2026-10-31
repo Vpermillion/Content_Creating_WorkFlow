@@ -12,6 +12,23 @@ spec.loader.exec_module(module)
 
 
 class TestVideoPlanTests(unittest.TestCase):
+    def test_sound_plan_and_catalog_paths_are_confined_to_repository_data(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / 'edits').mkdir()
+            (root / 'assets/sfx').mkdir(parents=True)
+            (root / 'assets/sfx/catalog.json').write_text('{"assets": []}')
+            path = root / 'edits/effects.json'
+            path.write_text('{"catalog": "assets/sfx/catalog.json"}')
+            with patch.object(module, 'ROOT', root):
+                plan, catalog = module.requested_sound_effects('edits/effects.json')
+                self.assertEqual(catalog, {'assets': []})
+                with self.assertRaisesRegex(ValueError, 'under edits'):
+                    module.requested_sound_effects('../outside.json')
+                path.write_text('{"catalog": "../outside.json"}')
+                with self.assertRaisesRegex(ValueError, 'under assets/sfx'):
+                    module.requested_sound_effects('edits/effects.json')
+
     def test_zero_duration_alignment_tokens_join_timed_phrases_without_losing_text(self):
         words = [{'word': 'Oh!', 'start': 0, 'end': 0},
                  {'word': 'Fantastic.', 'start': .1, 'end': .9},

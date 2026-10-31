@@ -39,7 +39,8 @@ jobs:
           path: |
             private/test-video/models
             private/test-video/footage
-          key: ifverse-review-cpu-v2-${{ hashFiles('requirements-test-video.txt', 'scripts/render_test_video.py') }}
+            private/test-video/sound-effects
+          key: ifverse-review-cpu-v2-${{ hashFiles('requirements-test-video.txt', 'scripts/render_test_video.py', 'assets/sfx/catalog.json') }}
           restore-keys: |
             ifverse-review-cpu-v2-
             ifverse-review-cpu-v1-
