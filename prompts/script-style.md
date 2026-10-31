@@ -40,6 +40,12 @@ A continuous example of the intended density:
 
 These are hypothetical commentary examples, not official dialogue or claims about an actual alternate-timeline episode. Invent fresh, scene-specific jokes for each production; do not copy the bank verbatim into every video.
 
+## Sound design for comic timing
+
+Plan short modern meme-style effects along with the joke: question → skeptical reaction/roast → short impact → comeback. Use the catalog descriptions/tags in `assets/sfx/catalog.json` and the cue rules in `docs/SOUND_EFFECTS.md`. Choose effects that support a particular scripted beat: a bass impact after a roast/revelation, an error buzz after a bad plan, a sarcastic reward ping, or a cartoon boing at an absurd payoff. Vary the choices and keep dialogue intelligible. Several deliberate cues per minute are preferable to a sound after every sentence.
+
+Put sound directions in a separate cue plan with exact spoken phrase anchors and a reason; do not put “boom sound effect” into the spoken TTS text or invent recognized timestamps. On a new script, plan any short pause needed before the comeback; on an existing approved waveform preserve its timing and duck the effect during speech. Keep source/license/checksum metadata, original clean media and the final mix receipt. The current test uses public-domain game effects treated for meme-style editing; it does not claim they are the original viral recordings. Dialogue examples describe the desired rhythm; the tested review narrator still uses one voice for the whole script.
+
 ## Current example
 
 The already rendered one-minute **v1** example is `pilots/ifverse-anime-roast-60-v1.json`, paired with `edits/ifverse-anime-roast-60-v1.json`. It riffs on Naruto joining the Akatsuki and includes “Motherflicker, they are hunting the fox inside you” and “That is not a job interview. You are the lunch.” It predates the owner's request for denser, more varied Gen Z/millennial banter. This v2 clarification updates future script instructions; it does not mean that earlier video was rewritten or rendered again. See `docs/CURRENT.md` for execution and review status.

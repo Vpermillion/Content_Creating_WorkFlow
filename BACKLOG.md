@@ -1,5 +1,9 @@
 # Backlog
 
+## Completed sound-effects review
+
+Hosted request `ifverse-anime-sfx-review-01` succeeded in run `41199650499`, source `f85dbada1876fa222efdace47130f299dce6d0d8`, result branch `codex/results/ifverse-anime-sfx-review-01`. Delivered `/workspace/Ifverse_Anime_60s_Sound_Effects.mp4`: 60 seconds, nine phrase-anchored cues across four effect types, unchanged source voice/50 captions, 24 moving shots. Public-domain source catalog, cache, descriptions, cue reasons, speech ducking and saved mix receipts are implemented in the review pipeline. All 74 final-source local tests passed; the hosted demonstration passed its then-current 73 regression gates. Full decode, all cue-energy windows, unchanged waveform/transcript/SRT hashes, video-stream copying and decoded sample peak -0.510 dBFS were verified. Sound stage 3.698s; whole media run 28.181s excluding setup and reusing voice/captions. Full listening/editorial judgment remains separate. This SFX-only test retains the earlier v1 narration; new scripts must use denser v2 banter. Read CURRENT/SOUND_EFFECTS before retries. No public posting.
+
 ## Latest style clarification — 2026-10-30
 
 The owner clarified the style after the first roast: **frequent, varied, creative roasts across the whole narration**, with modern Gen Z/millennial slang, streetwise banter, mock praise, comparisons and callbacks. A single recurring insult is insufficient. Roasts are frequent; mild/clean-swear profanity remains occasional. See `prompts/script-style.md` (preference v2). The completed 60-second video predates this density clarification; no new render was requested in this follow-up.

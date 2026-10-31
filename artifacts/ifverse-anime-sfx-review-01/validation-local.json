@@ -1,0 +1,72 @@
+{
+  "duration_seconds": 60,
+  "complete_decode": true,
+  "effects_count": 9,
+  "effect_types": 4,
+  "all_cues_have_measured_effect_energy": true,
+  "cue_energy_measurements": [
+    {
+      "phrase": "career opportunity",
+      "start_seconds": 6.035,
+      "effect": "bass_impact",
+      "added_effect_rms_dbfs": -33.028915128000925
+    },
+    {
+      "phrase": "the lunch",
+      "start_seconds": 10.275,
+      "effect": "cartoon_boing",
+      "added_effect_rms_dbfs": -27.166408310390583
+    },
+    {
+      "phrase": "demolition notice",
+      "start_seconds": 19.135,
+      "effect": "bass_impact",
+      "added_effect_rms_dbfs": -32.64743060656785
+    },
+    {
+      "phrase": "Accountability off",
+      "start_seconds": 24.63225,
+      "effect": "error_buzz",
+      "added_effect_rms_dbfs": -30.784935844243257
+    },
+    {
+      "phrase": "excellent hiring department",
+      "start_seconds": 26.13225,
+      "effect": "reward_ping",
+      "added_effect_rms_dbfs": -35.349794811161445
+    },
+    {
+      "phrase": "stupid contract",
+      "start_seconds": 33.77225,
+      "effect": "error_buzz",
+      "added_effect_rms_dbfs": -31.7846463277643
+    },
+    {
+      "phrase": "dental insurance",
+      "start_seconds": 46.6635625,
+      "effect": "cartoon_boing",
+      "added_effect_rms_dbfs": -27.164869609906418
+    },
+    {
+      "phrase": "got an argument",
+      "start_seconds": 51.563562499999996,
+      "effect": "bass_impact",
+      "added_effect_rms_dbfs": -34.15694397983761
+    },
+    {
+      "phrase": "murderous group project",
+      "start_seconds": 57.3035625,
+      "effect": "error_buzz",
+      "added_effect_rms_dbfs": -31.785525383556312
+    }
+  ],
+  "encoded_audio_peak_dbfs": -0.509687,
+  "unchanged_dry_voice_sha256": "d51d59a9fa616f88c1958437f4999740ea7fd7a60ef5c23682f23aa4ae76ba19",
+  "transcript_and_srt_byte_identical": true,
+  "copied_video_stream_verified": true,
+  "outside_cue_pcm_difference_at_most_two_lsb": true,
+  "video_sha256": "6ff667d5cb28ef9bc0bda3813101557cee9cb9693d81befb209b14a84d9e4c80",
+  "video_bytes": 9248106,
+  "manual_listening_review_completed": false,
+  "publishing_enabled": false
+}

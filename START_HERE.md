@@ -1,6 +1,6 @@
 # Start here: Ifverse project handoff
 
-**Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels.
+**Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels. Sound design now supports described downloadable effects on specific joke/reaction anchors; see [SOUND_EFFECTS](docs/SOUND_EFFECTS.md).
 
 This repository is the durable workspace for **ifverse_anime** and **ifverse_hollywood**, initially English YouTube what-if videos. The user owns the project; a new authorized assistant must resume it without requiring the old conversation or rebuilding working tools.
 
@@ -28,12 +28,13 @@ Current scope is two English channels: `ifverse_anime` and `ifverse_hollywood`. 
 
 ## What already works
 
-**Latest completed review:** the owner-requested **60-second Naruto roast**, 24 moving shots from nine sources and 50 caption phrases, hosted run `41047895853`. Result branch `codex/results/ifverse-anime-roast-20261030-04`. Speech was generated once and preserved through the caption-gate fix. Complete decode/track/hash checks and every shot sample were reviewed. The current checkpoint links the output and receipts; the older 44.672-second version remains available.
+**Latest completed review:** the **60-second Naruto cut with nine timed sound effects**, 24 moving shots and 50 retained caption phrases, hosted run `41199650499`. Result branch `codex/results/ifverse-anime-sfx-review-01`. Original speech/captions and the SFX-stage picture stream were verified unchanged; all nine cue additions, full decoding and numeric levels passed. The clean cut remains preserved. Read CURRENT and SOUND_EFFECTS for actual receipts and listening-review limits.
 
 - `whatif/media_tools.py`: Tenor/optional YouTube discovery, bounded verified downloads, labeled clip bank, cache reuse, short JSON results and mild FFmpeg enhancement.
 - `whatif/media_edit.py`: selected moving clips, ordered single-pass H.264/AAC rendering, source trimming, full-frame containment, subtitles, complete stream/decode validation, and explicit per-shot narration-beat boundaries. Legacy equal scene splits remain supported.
 - `scripts/render_test_video.py`: finite anime review runner with validated repository script/plan intake and new/reused Kokoro-ONNX `af_heart` English CPU narration and faster-whisper CPU/int8 phrase captions (`tiny.en` recognition or `base.en` known-script forced alignment). Recognition spelling corrections retain raw words and original timestamps. Known audio/captions are checksum-verified and reused.
 - The prior delivered test is **44.672 seconds, 18 moving shots, 27 caption phrases**. Its completed output is on `codex/ifverse-test-result-20261029-04`, hosted run `40846229359`. This is actual tested work, not a design proposal.
+- `whatif/audio_fx.py`: searchable described/tagged public-domain effect catalog, source checksum cache, spoken-phrase anchors, fades, pitch/sub-bass treatment, speech ducking and a video-copy mix. The hosted review request can supply `sound_effects_plan`; see [SOUND_EFFECTS](docs/SOUND_EFFECTS.md).
 - `.github/workflows/review-video.yml` is the current finite review entry. A commit changing **exactly one** `review-requests/*.json` on `codex/ifverse-workflow` triggers it. It preserves output on `codex/results/<request-id>` and as the `ifverse-review-video` GitHub artifact. Documentation-only commits do not start rendering.
 
 ## Commands and request format

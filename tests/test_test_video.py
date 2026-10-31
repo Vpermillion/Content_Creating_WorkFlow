@@ -12,6 +12,22 @@ spec.loader.exec_module(module)
 
 
 class TestVideoPlanTests(unittest.TestCase):
+    def test_new_script_sound_plan_binds_to_final_audio_without_overriding_wrong_retained_audio(self):
+        with tempfile.TemporaryDirectory() as temp:
+            audio = Path(temp) / 'voice.wav'
+            audio.write_bytes(b'generated-waveform-fixture')
+            source = {'scenes': [{'text': 'First line.'}, {'text': 'Second line.'}]}
+            expected = module.hashlib.sha256(b'First line.\nSecond line.').hexdigest()
+            plan = {'script_sha256': expected, 'cues': []}
+            bound = module.bind_sound_plan(plan, source, audio)
+            self.assertEqual(bound['narration_sha256'], module.digest(audio))
+            self.assertNotIn('narration_sha256', plan)
+            self.assertEqual(module.bind_sound_plan(bound, source, audio), bound)
+            with self.assertRaisesRegex(ValueError, 'ordered script checksum'):
+                module.bind_sound_plan(plan, {'scenes': list(reversed(source['scenes']))}, audio)
+            with self.assertRaisesRegex(ValueError, 'another narration'):
+                module.bind_sound_plan({'narration_sha256': 'wrong'}, source, audio)
+
     def test_sound_plan_and_catalog_paths_are_confined_to_repository_data(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

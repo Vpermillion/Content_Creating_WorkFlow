@@ -3,6 +3,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor
 import copy
 import difflib
+import hashlib
 import json
 import math
 import os
@@ -282,6 +283,7 @@ def transcribe(audio, output, models, spec, scenes=None, model='tiny.en'):
     captions = phrase_captions(words, media.duration(audio))
     atomic_json(output / 'transcription.json', {'engine': 'faster-whisper', 'model': model,
                 'device': 'cpu', 'compute_type': 'int8', 'words': words, 'captions': captions,
+                'audio_sha256': digest(audio),
                 'raw_words': raw_words, 'script_corrections': corrections,
                 'recognition_mode': mode,
                 'script_token_agreement': agreement, 'review_names_required': True})
@@ -367,6 +369,22 @@ def requested_sound_effects(relative):
     return plan, json.loads(catalog.read_text())
 
 
+def bind_sound_plan(plan, source, narration):
+    """Allow a one-job new-script plan to bind to its as-yet ungenerated audio."""
+    bound = copy.deepcopy(plan)
+    checksum = digest(narration)
+    if bound.get('narration_sha256'):
+        if bound['narration_sha256'] != checksum:
+            raise ValueError('Sound plan belongs to another narration')
+    else:
+        script_hash = hashlib.sha256('\n'.join(s['text'] for s in source['scenes']).encode('utf-8')).hexdigest()
+        if bound.get('script_sha256') != script_hash:
+            raise ValueError('New-audio sound plan must match the ordered script checksum')
+        bound['narration_sha256'] = checksum
+        bound['narration_binding'] = 'Final waveform generated/reused for the matching ordered script checksum'
+    return bound
+
+
 def run(request, output, models):
     output = output.resolve()
     operation = identifier(request['id'])
@@ -438,6 +456,7 @@ def run(request, output, models):
     if request.get('sound_effects_plan'):
         mark = time.monotonic()
         effect_plan, catalog = requested_sound_effects(request['sound_effects_plan'])
+        effect_plan = bind_sound_plan(effect_plan, source, output / 'narration.wav')
         atomic_json(output / 'sound-effects-plan.json', effect_plan)
         effects = audio_fx.mix_effects(video, output / 'narration.wav',
                                       json.loads((output / 'transcription.json').read_text()),

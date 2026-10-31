@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "status": "success",
+  "video": "video-sfx.mp4",
+  "duration_seconds": 60.0,
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "career opportunity",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "bass_impact",
+      "reason": "Career-growth sarcasm lands immediately after the villain recruitment joke.",
+      "peak_dbfs": -13,
+      "max_seconds": 0.8,
+      "start_seconds": 6.035,
+      "end_seconds": 6.730416666666667,
+      "source_sha256": "e1c32d933377897517415b53ae804a4c30d79a6ea40e811bbefe51be33f20417",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/explosion.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 0.65
+    },
+    {
+      "anchor": {
+        "phrase": "the lunch",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "cartoon_boing",
+      "reason": "Cartoon reaction accents the target/recruit lunch punchline.",
+      "peak_dbfs": -14,
+      "max_seconds": 0.4,
+      "start_seconds": 10.275,
+      "end_seconds": 10.376166666666666,
+      "source_sha256": "fd545eaa7e89360d08fe95d995747ae53a8159e26ec1b14cdb16b8239d08f0ab",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/jump.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 0.9
+    },
+    {
+      "anchor": {
+        "phrase": "demolition notice",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "bass_impact",
+      "reason": "Impact accents Pain destroying the village during the demolition punchline.",
+      "peak_dbfs": -12.5,
+      "max_seconds": 0.8,
+      "start_seconds": 19.135,
+      "end_seconds": 19.830416666666668,
+      "source_sha256": "e1c32d933377897517415b53ae804a4c30d79a6ea40e811bbefe51be33f20417",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/explosion.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 0.65
+    },
+    {
+      "anchor": {
+        "phrase": "Accountability off",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "error_buzz",
+      "reason": "An error reaction follows the masked villain accountability joke.",
+      "peak_dbfs": -14,
+      "max_seconds": 0.4,
+      "start_seconds": 24.63225,
+      "end_seconds": 24.805333333333333,
+      "source_sha256": "84615c874346a668028291833a99948f66480cba204d5ff175eab9180a524820",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/hurt.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "excellent hiring department",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "reward_ping",
+      "reason": "A reward ping undercuts the sarcastic hiring-department praise.",
+      "peak_dbfs": -16,
+      "max_seconds": 0.35,
+      "start_seconds": 26.13225,
+      "end_seconds": 26.330458333333333,
+      "source_sha256": "caa932c06548047f678e09226d910b7ed1382f927196b44a0f6da55583e2e56d",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/coin.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "stupid contract",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "error_buzz",
+      "reason": "Error buzz punctuates the narrator complaining about the bad deal.",
+      "peak_dbfs": -15,
+      "max_seconds": 0.35,
+      "start_seconds": 33.77225,
+      "end_seconds": 33.94533333333333,
+      "source_sha256": "84615c874346a668028291833a99948f66480cba204d5ff175eab9180a524820",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/hurt.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "dental insurance",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "cartoon_boing",
+      "reason": "Absurd boing answers the unexpected insurance punchline.",
+      "peak_dbfs": -14,
+      "max_seconds": 0.35,
+      "start_seconds": 46.6635625,
+      "end_seconds": 46.76472916666666,
+      "source_sha256": "fd545eaa7e89360d08fe95d995747ae53a8159e26ec1b14cdb16b8239d08f0ab",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/jump.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 0.9
+    },
+    {
+      "anchor": {
+        "phrase": "got an argument",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "bass_impact",
+      "reason": "Impact lands after the weapon-versus-argument reversal.",
+      "peak_dbfs": -14,
+      "max_seconds": 0.8,
+      "start_seconds": 51.563562499999996,
+      "end_seconds": 52.25897916666666,
+      "source_sha256": "e1c32d933377897517415b53ae804a4c30d79a6ea40e811bbefe51be33f20417",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/explosion.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 0.65
+    },
+    {
+      "anchor": {
+        "phrase": "murderous group project",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "error_buzz",
+      "reason": "Error buzz punctuates the failed-group-project comparison.",
+      "peak_dbfs": -15,
+      "max_seconds": 0.35,
+      "start_seconds": 57.3035625,
+      "end_seconds": 57.47664583333333,
+      "source_sha256": "84615c874346a668028291833a99948f66480cba204d5ff175eab9180a524820",
+      "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/hurt.wav",
+      "license": "Unlicense / public domain",
+      "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+      "playback_rate": 1
+    }
+  ],
+  "effects_count": 9,
+  "effects_ducked_during_speech_db": -6.0206,
+  "mix_peak_dbfs": -0.5174220407856371,
+  "master_gain": 1.0,
+  "narration_sha256": "d51d59a9fa616f88c1958437f4999740ea7fd7a60ef5c23682f23aa4ae76ba19",
+  "source_video_sha256": "932af597e896c22d3a81f88a6f2fe25d622f48da0ba58fecc0ecbef25b8aabe8",
+  "video_sha256": "6ff667d5cb28ef9bc0bda3813101557cee9cb9693d81befb209b14a84d9e4c80",
+  "video_stream_copied": true,
+  "source_catalog": {
+    "schema_version": 1,
+    "description": "Searchable online-source effects for meme-style comedy editing; these are not claimed to be the original viral Vine/Roblox sound recordings.",
+    "assets": [
+      {
+        "id": "bass_impact",
+        "file": "explosion.wav",
+        "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/explosion.wav",
+        "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/explosion.wav",
+        "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+        "sha256": "e1c32d933377897517415b53ae804a4c30d79a6ea40e811bbefe51be33f20417",
+        "duration_seconds": 0.451995,
+        "publisher": "Brackeys",
+        "license": "Unlicense / public domain",
+        "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+        "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+        "description": "Crunchy downloaded explosion pitched down and reinforced with a decaying 55 Hz sub pulse for a short meme-style bass-impact punchline.",
+        "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+        "tags": [
+          "boom",
+          "punchline",
+          "bad decision",
+          "realization",
+          "impact"
+        ],
+        "playback_rate": 0.65,
+        "sub_bass_hz": 55
+      },
+      {
+        "id": "error_buzz",
+        "file": "hurt.wav",
+        "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/hurt.wav",
+        "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/hurt.wav",
+        "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+        "sha256": "84615c874346a668028291833a99948f66480cba204d5ff175eab9180a524820",
+        "duration_seconds": 0.173061,
+        "publisher": "Brackeys",
+        "license": "Unlicense / public domain",
+        "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+        "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+        "description": "Brief retro hurt/error buzz for confusion, a failed plan or a dumb question.",
+        "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+        "tags": [
+          "error",
+          "confusion",
+          "failed plan",
+          "awkward reaction"
+        ],
+        "playback_rate": 1
+      },
+      {
+        "id": "reward_ping",
+        "file": "coin.wav",
+        "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/coin.wav",
+        "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/coin.wav",
+        "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+        "sha256": "caa932c06548047f678e09226d910b7ed1382f927196b44a0f6da55583e2e56d",
+        "duration_seconds": 0.198209,
+        "publisher": "Brackeys",
+        "license": "Unlicense / public domain",
+        "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+        "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+        "description": "Bright coin/reward ping for sarcastic praise, an unlock or a tiny victory.",
+        "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+        "tags": [
+          "ding",
+          "reward",
+          "mock praise",
+          "achievement"
+        ],
+        "playback_rate": 1
+      },
+      {
+        "id": "cartoon_boing",
+        "file": "jump.wav",
+        "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/jump.wav",
+        "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/jump.wav",
+        "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+        "sha256": "fd545eaa7e89360d08fe95d995747ae53a8159e26ec1b14cdb16b8239d08f0ab",
+        "duration_seconds": 0.091043,
+        "publisher": "Brackeys",
+        "license": "Unlicense / public domain",
+        "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+        "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+        "description": "Rising jump/boing sound for an absurd claim or playful character reaction.",
+        "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+        "tags": [
+          "boing",
+          "absurd",
+          "surprise",
+          "reaction"
+        ],
+        "playback_rate": 0.9
+      },
+      {
+        "id": "power_up",
+        "file": "power_up.wav",
+        "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/power_up.wav",
+        "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/power_up.wav",
+        "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+        "sha256": "2577918958bc61a8bdb37c39f75018088196ae3ce69d5ed4c627152b9ec74e12",
+        "duration_seconds": 0.357551,
+        "publisher": "Brackeys",
+        "license": "Unlicense / public domain",
+        "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+        "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+        "description": "Rising retro power-up flourish for exaggerated confidence or a supposed upgrade.",
+        "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+        "tags": [
+          "upgrade",
+          "confidence",
+          "aura",
+          "power up"
+        ],
+        "playback_rate": 1
+      },
+      {
+        "id": "tiny_click",
+        "file": "tap.wav",
+        "download_url": "https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/tap.wav",
+        "source_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/tap.wav",
+        "source_commit": "388257461dbd07b1e5020270c72fca48b30c493d",
+        "sha256": "3ca3241c3b3a5dc81b228a557c7cfc5af8a59544b2388b331d258a4fbe439659",
+        "duration_seconds": 0.03449,
+        "publisher": "Brackeys",
+        "license": "Unlicense / public domain",
+        "license_url": "https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/LICENSE",
+        "usage_basis": "Repository README explicitly permits all contents including commercial use; repository LICENSE is the Unlicense.",
+        "description": "Dry tiny click for a quick decision, a red flag or a reaction beat.",
+        "description_origin": "Project-authored selection description; source filename identifies the original effect.",
+        "tags": [
+          "click",
+          "decision",
+          "red flag",
+          "quick beat"
+        ],
+        "playback_rate": 1
+      }
+    ]
+  },
+  "caption_timing_unchanged": true,
+  "publishing_enabled": false
+}

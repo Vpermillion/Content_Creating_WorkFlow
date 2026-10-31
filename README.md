@@ -1,6 +1,6 @@
 # Ifverse automated video workspace
 
-**Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels.
+**Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels. Sound design now supports described downloadable effects on specific joke/reaction anchors; see [SOUND_EFFECTS](docs/SOUND_EFFECTS.md).
 
 A portable, user-owned workflow for English what-if videos on **ifverse_anime** and **ifverse_hollywood**. An assistant provides one script and production plan; a finite GitHub-hosted job does the repetitive media work and returns a video plus one compact report.
 
@@ -33,9 +33,10 @@ Footage should illustrate the actual narrated character, action, location or cho
 | FFmpeg editor | Moving clips, source trims, contain/cover framing, mild denoise/resize/sharpen, single-pass rendering, readable captions and complete audio/video/decode checks. |
 | English voice | Kokoro-ONNX `af_heart`, tested on CPU; keep verified speech when revising pictures. |
 | Caption timing | faster-whisper `tiny.en`/`base.en`, CPU/int8; recognized-word timing or exact-known-script cross-attention/DTW alignment, grouped into readable phrases. Word times remain estimates and receipts are preserved. |
+| Sound design | Downloadable described/tagged public-domain sources, exact phrase-anchored cues, pitch/sub-bass treatment, speech ducking, unchanged pictures/caption timing and a saved mix receipt. |
 | Continuity | Source history, safe generated examples, state/checkpoint docs and copy-ready prompts. Credentials and private production data remain separate. |
 
-The latest owner-requested example is a **60-second Naruto roast**, with 24 moving shots, nine traced sources and 50 caption phrases, from successful hosted run `41047895853`. [Watch the one-minute MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-roast-20261030-04/artifacts/ifverse-anime-roast-20261030-04/render/video.mp4). It uses the new funny/teasing script preference, a single generated Kokoro voice version and Whisper forced alignment of the exact known script to the final audio. Complete decode, track/duration/hash checks and all shot samples were reviewed. The earlier 44.672-second visual revision remains preserved. See [CURRENT](docs/CURRENT.md) for exact receipts, review limits and next work.
+The latest review is the **60-second Naruto cut with nine timed comedy effects**: bass impacts, error buzzes, a sarcastic reward ping and cartoon boings at specific punchlines. [Watch the sound-effects MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-sfx-review-01/artifacts/ifverse-anime-sfx-review-01/sound-effects/video-sfx.mp4). Hosted run `41199650499` succeeded, preserving the prior voice, 24-shot edit and 50 captions. Complete decode, waveform/cue checks, retained-input hashes and exact picture-stream copying were verified. The original clean cut remains available; its narration predates the later denser v2 writing preference. See [CURRENT](docs/CURRENT.md) for receipts, review limits and next work.
 
 ## Current workflow entry
 
