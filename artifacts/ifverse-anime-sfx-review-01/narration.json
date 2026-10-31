@@ -1,0 +1,154 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "af_heart",
+  "device": "cpu",
+  "new_test_version": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.9032258202565138,
+      "text": "What if Naruto joined the Akatsuki? Oh, fantastic.",
+      "label": "BAD CAREER MOVE"
+    },
+    {
+      "start": 2.9032258202565138,
+      "end": 5.897748049955056,
+      "text": "Our boy saw matching villain cloaks and thought, career opportunity.",
+      "label": "THE CLOAK IS A RED FLAG"
+    },
+    {
+      "start": 5.897748049955056,
+      "end": 8.125380440340559,
+      "text": "Motherflicker, they are hunting the fox inside you.",
+      "label": "YOU ARE THE TARGET"
+    },
+    {
+      "start": 8.125380440340559,
+      "end": 10.206938575618812,
+      "text": "That is not a job interview. You are the lunch.",
+      "label": "NOT AN INTERVIEW"
+    },
+    {
+      "start": 10.206938575618812,
+      "end": 13.110164395875326,
+      "text": "In this made-up timeline, he bargains for his friends' safety.",
+      "label": "A MADE-UP DEAL"
+    },
+    {
+      "start": 13.110164395875326,
+      "end": 16.086427343685465,
+      "text": "Fine. But the cloak comes with suspiciously aggressive management.",
+      "label": "SUSPICIOUS MANAGEMENT"
+    },
+    {
+      "start": 16.086427343685465,
+      "end": 18.953134600165164,
+      "text": "Pain calls it peace. The village gets a demolition notice.",
+      "label": "PEACE WITH A DEMOLITION NOTICE"
+    },
+    {
+      "start": 18.953134600165164,
+      "end": 21.63724903776081,
+      "text": "Naruto says, can we maybe try a conversation first?",
+      "label": "CAN WE TALK FIRST"
+    },
+    {
+      "start": 21.63724903776081,
+      "end": 26.074254536643405,
+      "text": "And Obito? Mask on. Accountability off. Absolutely excellent hiring department.",
+      "label": "ACCOUNTABILITY OFF"
+    },
+    {
+      "start": 26.074254536643405,
+      "end": 29.160073175783978,
+      "text": "At first, missions go well. Our boy finally feels respected.",
+      "label": "FINALLY SOME RESPECT"
+    },
+    {
+      "start": 29.160073175783978,
+      "end": 31.369446284281075,
+      "text": "Then comes the assignment: betray the Hidden Leaf.",
+      "label": "THE REAL ASSIGNMENT"
+    },
+    {
+      "start": 31.369446284281075,
+      "end": 33.706634365997004,
+      "text": "Brother. That is your home. Read the stupid contract.",
+      "label": "READ THE CONTRACT"
+    },
+    {
+      "start": 33.706634365997004,
+      "end": 36.628119468141925,
+      "text": "He refuses. Suddenly the new team questions his loyalty.",
+      "label": "HE REFUSES"
+    },
+    {
+      "start": 36.628119468141925,
+      "end": 39.421789597068006,
+      "text": "Sakura is left picking through rubble. Some protection plan.",
+      "label": "SOME PROTECTION PLAN"
+    },
+    {
+      "start": 39.421789597068006,
+      "end": 41.86853337011438,
+      "text": "Even his old friends cannot tell whose side he is on.",
+      "label": "OLD FRIENDS, NEW DOUBTS"
+    },
+    {
+      "start": 41.86853337011438,
+      "end": 46.57942809732307,
+      "text": "Congratulations, genius. Two teams, zero trust, absolutely no dental insurance.",
+      "label": "TWO TEAMS. ZERO TRUST."
+    },
+    {
+      "start": 46.57942809732307,
+      "end": 49.06269043414625,
+      "text": "So he stops chasing approval and chooses his people.",
+      "label": "CHOOSE YOUR PEOPLE"
+    },
+    {
+      "start": 49.06269043414625,
+      "end": 51.50943420719261,
+      "text": "The Akatsuki wanted a weapon. They got an argument.",
+      "label": "WEAPON OR ARGUMENT"
+    },
+    {
+      "start": 51.50943420719261,
+      "end": 54.17528936289985,
+      "text": "Could he actually change them? Maybe. This is Naruto.",
+      "label": "COULD HE CHANGE THEM"
+    },
+    {
+      "start": 54.17528936289985,
+      "end": 57.224589438263614,
+      "text": "But friendship speeches cannot fix every murderous group project.",
+      "label": "THE GROUP PROJECT FROM HELL"
+    },
+    {
+      "start": 57.224589438263614,
+      "end": 60.0,
+      "text": "Would you trust his plan, or confiscate the cloak immediately?",
+      "label": "KEEP OR CONFISCATE THE CLOAK"
+    }
+  ],
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  },
+  "duration_adjustment": {
+    "original_seconds": 70.101333,
+    "target_seconds": 60,
+    "actual_seconds": 60.0,
+    "tempo": 1.16835555,
+    "original_sha256": "af19026b2f476468f65ca242db26d969280105c6db7a7dce2bbcfb8005e1b690",
+    "pitch_preserved": true
+  },
+  "sha256": "d51d59a9fa616f88c1958437f4999740ea7fd7a60ef5c23682f23aa4ae76ba19"
+}

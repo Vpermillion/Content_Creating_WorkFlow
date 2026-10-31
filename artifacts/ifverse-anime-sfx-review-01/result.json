@@ -1,0 +1,45 @@
+{
+  "status": "success",
+  "id": "ifverse-anime-sfx-review-01",
+  "video": "sound-effects/video-sfx.mp4",
+  "duration_seconds": 60.0,
+  "timings": {
+    "footage_seconds": 0.765,
+    "narration_seconds": 0.003,
+    "captioning_seconds": 0.003,
+    "render_and_decode_seconds": 22.708,
+    "sound_effects_seconds": 3.698,
+    "pipeline_seconds": 28.181
+  },
+  "voice": {
+    "provider": "kokoro-onnx",
+    "voice": "af_heart",
+    "device": "cpu",
+    "reused_verified_audio": true
+  },
+  "captions": {
+    "engine": "faster-whisper",
+    "model": "base.en",
+    "compute_type": "int8",
+    "recognition_mode": "script_alignment",
+    "phrases": 50,
+    "script_token_agreement": null,
+    "reused_verified_timing": true
+  },
+  "footage": "Traced online Naruto clips with reviewed narration-beat matching",
+  "edit_plan": "edits/ifverse-anime-roast-60-v1.json",
+  "script": "pilots/ifverse-anime-roast-60-v1.json",
+  "script_style": "ifverse-playful-roast-v1",
+  "sound_effects": {
+    "count": 9,
+    "receipt": "sound-effects/sound-effects.json",
+    "plan": "edits/ifverse-anime-roast-sfx-v1.json"
+  },
+  "explicit_beat_timing": false,
+  "publishing_enabled": false,
+  "github_run_id": "41199650499",
+  "limitations": [
+    "Fan-made hypothetical review draft; source reuse permissions unverified",
+    "Pronunciation, character names and full audiovisual review remain required"
+  ]
+}

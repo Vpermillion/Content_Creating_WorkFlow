@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-roast-sfx-v1",
+  "narration_sha256": "d51d59a9fa616f88c1958437f4999740ea7fd7a60ef5c23682f23aa4ae76ba19",
+  "catalog": "assets/sfx/catalog.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "career opportunity",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "bass_impact",
+      "reason": "Career-growth sarcasm lands immediately after the villain recruitment joke.",
+      "peak_dbfs": -13,
+      "max_seconds": 0.8
+    },
+    {
+      "anchor": {
+        "phrase": "the lunch",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "cartoon_boing",
+      "reason": "Cartoon reaction accents the target/recruit lunch punchline.",
+      "peak_dbfs": -14,
+      "max_seconds": 0.4
+    },
+    {
+      "anchor": {
+        "phrase": "demolition notice",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "bass_impact",
+      "reason": "Impact accents Pain destroying the village during the demolition punchline.",
+      "peak_dbfs": -12.5,
+      "max_seconds": 0.8
+    },
+    {
+      "anchor": {
+        "phrase": "Accountability off",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "error_buzz",
+      "reason": "An error reaction follows the masked villain accountability joke.",
+      "peak_dbfs": -14,
+      "max_seconds": 0.4
+    },
+    {
+      "anchor": {
+        "phrase": "excellent hiring department",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "reward_ping",
+      "reason": "A reward ping undercuts the sarcastic hiring-department praise.",
+      "peak_dbfs": -16,
+      "max_seconds": 0.35
+    },
+    {
+      "anchor": {
+        "phrase": "stupid contract",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "error_buzz",
+      "reason": "Error buzz punctuates the narrator complaining about the bad deal.",
+      "peak_dbfs": -15,
+      "max_seconds": 0.35
+    },
+    {
+      "anchor": {
+        "phrase": "dental insurance",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "cartoon_boing",
+      "reason": "Absurd boing answers the unexpected insurance punchline.",
+      "peak_dbfs": -14,
+      "max_seconds": 0.35
+    },
+    {
+      "anchor": {
+        "phrase": "got an argument",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "bass_impact",
+      "reason": "Impact lands after the weapon-versus-argument reversal.",
+      "peak_dbfs": -14,
+      "max_seconds": 0.8
+    },
+    {
+      "anchor": {
+        "phrase": "murderous group project",
+        "edge": "end"
+      },
+      "offset_seconds": 0.035,
+      "effect": "error_buzz",
+      "reason": "Error buzz punctuates the failed-group-project comparison.",
+      "peak_dbfs": -15,
+      "max_seconds": 0.35
+    }
+  ]
+}
