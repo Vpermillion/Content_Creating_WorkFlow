@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-goku-avengers-sources-02",
+  "status": "success",
+  "footage": [
+    {
+      "id": "hulk",
+      "file": "hulk.mp4",
+      "type": "video",
+      "query": "Hulk roar marvel",
+      "source_url": "https://tenor.com/view/the-incredible-hulk-hulk-roar-hulk-roar-mcu-gif-18494693",
+      "download_url": "https://media.tenor.com/qaB8il6fS2YAAAPo/the-incredible-hulk-hulk.mp4",
+      "sha256": "5ac76d363b6a21eb9965c4cbccbd13de9d03d7f472ec96d740e29554e3869e3b",
+      "duration": 3.6,
+      "dimensions": [
+        640,
+        270
+      ],
+      "description": "a hulk is standing in front of a burning building with a yellow sign that says hamburger hot sauce on it",
+      "publisher": "masoncarr2244",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "13336663238293088932",
+          "title": "a hulk is standing in front of a building that says fire drill",
+          "source_url": "https://tenor.com/view/hulk-roar-angry-superhero-the-incredible-hulk-gif-13336663238293088932",
+          "download_url": "https://media.tenor.com/uRVYjfd4aqQAAAPo/hulk-roar.mp4",
+          "duration": 2.1,
+          "width": 498,
+          "height": 212,
+          "publisher": "keitaro9202",
+          "provider": "tenor"
+        },
+        {
+          "id": "5754719230293012364",
+          "title": "hulk is giving a thumbs up and saying send it .",
+          "source_url": "https://tenor.com/view/hulk-roar-avengers-infinity-war-angry-gif-5754719230293012364",
+          "download_url": "https://media.tenor.com/T9zepm-5b4wAAAPo/hulk-roar.mp4",
+          "duration": 3.8,
+          "width": 250,
+          "height": 250,
+          "publisher": "shakachon",
+          "provider": "tenor"
+        },
+        {
+          "id": "10186484445545434225",
+          "title": "a close up of a hulk in a room .",
+          "source_url": "https://tenor.com/view/hulk-roar-what-come-on-marvel-gif-17932451",
+          "download_url": "https://media.tenor.com/jV2pogbHDHEAAAPo/hulk-roar.mp4",
+          "duration": 1.4,
+          "width": 640,
+          "height": 344,
+          "publisher": "Sephirock38",
+          "provider": "tenor"
+        },
+        {
+          "id": "11813801563277049152",
+          "title": "the hulk is angry and says yo .",
+          "source_url": "https://tenor.com/view/hulk-roar-avengers-infinity-war-angry-gif-11813801563277049152",
+          "download_url": "https://media.tenor.com/o_MN7foVPUAAAAPo/hulk-roar.mp4",
+          "duration": 3.8,
+          "width": 250,
+          "height": 250,
+          "publisher": "licona",
+          "provider": "tenor"
+        },
+        {
+          "id": "12222906322418355046",
+          "title": "a hulk is standing in front of a burning building with a yellow sign that says hamburger hot sauce on it",
+          "source_url": "https://tenor.com/view/the-incredible-hulk-hulk-roar-hulk-roar-mcu-gif-18494693",
+          "download_url": "https://media.tenor.com/qaB8il6fS2YAAAPo/the-incredible-hulk-hulk.mp4",
+          "duration": 3.6,
+          "width": 640,
+          "height": 270,
+          "publisher": "masoncarr2244",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "captain_america",
+      "file": "captain_america.mp4",
+      "type": "video",
+      "query": "Steve Rogers Captain America reaction",
+      "source_url": "https://tenor.com/view/mcu-marvel-avengers-captain-america-iron-man-gif-4586422665845991747",
+      "download_url": "https://media.tenor.com/P6Y_HVuM6UMAAAPo/mcu-marvel.mp4",
+      "sha256": "ba5367a295c528aad6212f378453b02de2e401ff1976ef6e28bfcc6597efbe57",
+      "duration": 5.44,
+      "dimensions": [
+        498,
+        208
+      ],
+      "description": "a close up of a man wearing a mask talking to another man in a dark room .",
+      "publisher": "joffeite",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "14309980213448058772",
+          "title": "a man in a captain america suit is asking if he is nuts",
+          "source_url": "https://tenor.com/view/captain-america-are-you-nuts-chris-evans-steve-rogers-marvel-gif-14309980213448058772",
+          "download_url": "https://media.tenor.com/xpdDL8Vwp5QAAAPo/captain-america-are-you-nuts.mp4",
+          "duration": 1.5,
+          "width": 200,
+          "height": 200,
+          "publisher": "Yerayfube",
+          "provider": "tenor"
+        },
+        {
+          "id": "13861293997121188517",
+          "title": "a man in a khaki shirt and tie is sitting in a crowd",
+          "source_url": "https://tenor.com/view/captain-america-chris-evans-cinema-watching-movie-smiling-gif-13861293997121188517",
+          "download_url": "https://media.tenor.com/wF01czmpsqUAAAPo/captain-america-chris-evans.mp4",
+          "duration": 2.1,
+          "width": 246,
+          "height": 210,
+          "publisher": "h0gard",
+          "provider": "tenor"
+        },
+        {
+          "id": "4586422665845991747",
+          "title": "a close up of a man wearing a mask talking to another man in a dark room .",
+          "source_url": "https://tenor.com/view/mcu-marvel-avengers-captain-america-iron-man-gif-4586422665845991747",
+          "download_url": "https://media.tenor.com/P6Y_HVuM6UMAAAPo/mcu-marvel.mp4",
+          "duration": 5.4,
+          "width": 498,
+          "height": 208,
+          "publisher": "joffeite",
+          "provider": "tenor"
+        },
+        {
+          "id": "12990699461656000601",
+          "title": "a man in a captain america costume is asking if he is nuts",
+          "source_url": "https://tenor.com/view/captain-america-are-you-nuts-chris-evans-steve-rogers-marvel-comics-gif-14924408",
+          "download_url": "https://media.tenor.com/tEg8VSvdOFkAAAPo/captain-america-are-you-nuts.mp4",
+          "duration": 1.5,
+          "width": 640,
+          "height": 640,
+          "publisher": "txhir",
+          "provider": "tenor"
+        },
+        {
+          "id": "2081061837016998806",
+          "title": "a close up of captain america 's face in a movie .",
+          "source_url": "https://tenor.com/view/chris-evans-captain-captain-america-capitan-america-cry-gif-13501916",
+          "download_url": "https://media.tenor.com/HOFqtv8FI5YAAAPo/chris-evans-captain.mp4",
+          "duration": 0.8,
+          "width": 480,
+          "height": 270,
+          "publisher": "DerLabPg",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "thanos_clean",
+      "file": "thanos_clean.mp4",
+      "type": "video",
+      "query": "Thanos smiling marvel",
+      "source_url": "https://tenor.com/view/thanos-enjoy-marvel-madtitan-titan-gif-14438482",
+      "download_url": "https://media.tenor.com/r1AaquMMdowAAAPo/thanos-enjoy.mp4",
+      "sha256": "7fda5e89a58bfcdb716f03f7b727f8594cc27ef6109fa259530319141f5208b4",
+      "duration": 5.85,
+      "dimensions": [
+        640,
+        360
+      ],
+      "description": "thanos from avengers endgame is going to enjoy it",
+      "publisher": "DEZtheDECIMATOR",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "4772029007212279454",
+          "title": "thanos sitting on a throne with a caption that says how it feels to play clash of clans in the big stall",
+          "source_url": "https://tenor.com/view/thanos-gif-4772029007212279454",
+          "download_url": "https://media.tenor.com/QjmnGUi_dp4AAAPo/thanos.mp4",
+          "duration": 0.1,
+          "width": 488,
+          "height": 498,
+          "publisher": "PenguinzPoo",
+          "provider": "tenor"
+        },
+        {
+          "id": "14028123696451029190",
+          "title": "thanos from avengers holding a hammer in his hand",
+          "source_url": "https://tenor.com/view/thanos-smile-meme-marvel-gif-14702911",
+          "download_url": "https://media.tenor.com/wq3oLYA0CMYAAAPo/thanos-smile.mp4",
+          "duration": 2,
+          "width": 640,
+          "height": 372,
+          "publisher": "DEZtheDECIMATOR",
+          "provider": "tenor"
+        },
+        {
+          "id": "316934126038232535",
+          "title": "a close up of thanos ' face with the letters fr below him",
+          "source_url": "https://tenor.com/view/thanos-thanos-fr-mcu-infinity-war-gif-316934126038232535",
+          "download_url": "https://media.tenor.com/BGX56I-1LdcAAAPo/thanos-thanos-fr.mp4",
+          "duration": 3.6,
+          "width": 498,
+          "height": 498,
+          "publisher": "tyrae",
+          "provider": "tenor"
+        },
+        {
+          "id": "9759064601632341468",
+          "title": "thanos from the movie avengers infinity war stands in front of a building",
+          "source_url": "https://tenor.com/view/infinity-war-mcu-thanos-thanos-smiling-thanos-laughing-gif-9759064601632341468",
+          "download_url": "https://media.tenor.com/h28pjKhifdwAAAPo/infinity-war-mcu.mp4",
+          "duration": 3.7,
+          "width": 498,
+          "height": 498,
+          "publisher": "tyrae",
+          "provider": "tenor"
+        },
+        {
+          "id": "12632626276030248588",
+          "title": "thanos from avengers endgame is going to enjoy it",
+          "source_url": "https://tenor.com/view/thanos-enjoy-marvel-madtitan-titan-gif-14438482",
+          "download_url": "https://media.tenor.com/r1AaquMMdowAAAPo/thanos-enjoy.mp4",
+          "duration": 5.8,
+          "width": 640,
+          "height": 360,
+          "publisher": "DEZtheDECIMATOR",
+          "provider": "tenor"
+        }
+      ]
+    }
+  ],
+  "sound_catalog": {
+    "schema_version": 1,
+    "assets": []
+  },
+  "publishing_enabled": false
+}
