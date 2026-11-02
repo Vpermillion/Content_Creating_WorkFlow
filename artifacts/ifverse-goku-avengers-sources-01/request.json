@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-goku-avengers-sources-01",
+  "result_branch": "codex/results/ifverse-goku-avengers-sources-01",
+  "footage": [
+    {
+      "id": "goku_smile",
+      "query": "Goku smiling Dragon Ball",
+      "required_terms": [
+        "goku"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "goku_fight",
+      "query": "Goku fighting Dragon Ball",
+      "required_terms": [
+        "goku"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "goku_scream",
+      "query": "Goku super saiyan screaming",
+      "required_terms": [
+        "goku"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "goku_food",
+      "query": "Goku eating food",
+      "required_terms": [
+        "goku"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "tony_stark",
+      "query": "Tony Stark reaction Iron Man",
+      "required_terms": [
+        "tony",
+        "iron-man",
+        "ironman"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "thor",
+      "query": "Thor lightning Avengers",
+      "required_terms": [
+        "thor"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "hulk",
+      "query": "Hulk angry Avengers",
+      "required_terms": [
+        "hulk"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "captain_america",
+      "query": "Captain America Avengers plan",
+      "required_terms": [
+        "captain",
+        "steve"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "thanos",
+      "query": "Thanos Avengers reaction",
+      "required_terms": [
+        "thanos"
+      ],
+      "min_seconds": 1.8
+    },
+    {
+      "id": "avengers_team",
+      "query": "Avengers team together",
+      "required_terms": [
+        "avengers"
+      ],
+      "min_seconds": 1.8
+    }
+  ],
+  "sound_ids": [
+    "dubbingai_vine_boom",
+    "dubbingai_faaah",
+    "dubbingai_rizz_effect"
+  ]
+}

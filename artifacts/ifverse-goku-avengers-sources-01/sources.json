@@ -1,0 +1,702 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-goku-avengers-sources-01",
+  "status": "failed",
+  "footage": [
+    {
+      "id": "goku_smile",
+      "file": "goku_smile.mp4",
+      "type": "video",
+      "query": "Goku smiling Dragon Ball",
+      "source_url": "https://tenor.com/view/goku-smile-smiling-dbz-dragon-ball-gif-11301976189496723891",
+      "download_url": "https://media.tenor.com/nNivdsLgCbMAAAPo/goku-smile.mp4",
+      "sha256": "2be844f5c16a10a45e0e817838f0b68ad269eac92e32100961b78b0cee8d9b43",
+      "duration": 3.64,
+      "dimensions": [
+        498,
+        374
+      ],
+      "description": "a close up of a cartoon character with a pink background .",
+      "publisher": "mook2001",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "10510702430466503019",
+          "title": "a close up of a cartoon character 's face with a surprised expression",
+          "source_url": "https://tenor.com/view/goku-kids-smile-gif-10510702430466503019",
+          "download_url": "https://media.tenor.com/kd2ELCPKcWsAAAPo/goku-kids-smile.mp4",
+          "duration": 1.4,
+          "width": 498,
+          "height": 116,
+          "publisher": "abullbaba1234",
+          "provider": "tenor"
+        },
+        {
+          "id": "11011439799098299241",
+          "title": "a close up of a cartoon character 's face with a white background .",
+          "source_url": "https://tenor.com/view/trolldudes-goku-sticker-gif-11011439799098299241",
+          "download_url": "https://media.tenor.com/mNB-J_raU2kAAAPo/trolldudes-goku-sticker.mp4",
+          "duration": 2.1,
+          "width": 400,
+          "height": 110,
+          "publisher": "Crimby",
+          "provider": "tenor"
+        },
+        {
+          "id": "14465376940269128437",
+          "title": "a close up of a cartoon character 's face with a blue sky in the background",
+          "source_url": "https://tenor.com/view/goku-son-goku-super-saiyan-goku-super-saiyan-3-ssj3-gif-14465376940269128437",
+          "download_url": "https://media.tenor.com/yL9Xr7LeSvUAAAPo/goku-son-goku.mp4",
+          "duration": 0.8,
+          "width": 480,
+          "height": 260,
+          "publisher": "PastaObesity",
+          "provider": "tenor"
+        },
+        {
+          "id": "11301976189496723891",
+          "title": "a close up of a cartoon character with a pink background .",
+          "source_url": "https://tenor.com/view/goku-smile-smiling-dbz-dragon-ball-gif-11301976189496723891",
+          "download_url": "https://media.tenor.com/nNivdsLgCbMAAAPo/goku-smile.mp4",
+          "duration": 3.6,
+          "width": 498,
+          "height": 374,
+          "publisher": "mook2001",
+          "provider": "tenor"
+        },
+        {
+          "id": "17475896124570291416",
+          "title": "a close up of a cartoon character 's face with a blue sky in the background",
+          "source_url": "https://tenor.com/view/goku-dragon-ball-smile-turn-serious-dragonball-gif-17475896124570291416",
+          "download_url": "https://media.tenor.com/8oba7xyjTNgAAAPo/goku-dragon-ball.mp4",
+          "duration": 2,
+          "width": 480,
+          "height": 270,
+          "publisher": "LuiShirosagii",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "goku_fight",
+      "file": "goku_fight.mp4",
+      "type": "video",
+      "query": "Goku fighting Dragon Ball",
+      "source_url": "https://tenor.com/view/goku-goku-angry-fight-me-fight-me-if-your-ready-to-die-dragon-ball-z-gif-794849038286226737",
+      "download_url": "https://media.tenor.com/Cwfe_TEchTEAAAPo/goku-goku-angry.mp4",
+      "sha256": "b776682d93101bf7826699308ff83a9fd19694e6c27bb4574d8249a147ce2ab5",
+      "duration": 4.166667,
+      "dimensions": [
+        498,
+        274
+      ],
+      "description": "a cartoon drawing of a man with yellow hair and a green background",
+      "publisher": "ofrxbii",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "17790026970161289483",
+          "title": "two cartoon characters with the words radi and forasterogg on them",
+          "source_url": "https://tenor.com/view/radiradiradi-vsvsvs-forastero-gif-17790026970161289483",
+          "download_url": "https://media.tenor.com/9uLfRhUVGQsAAAPo/radiradiradi-vsvsvs.mp4",
+          "duration": 1,
+          "width": 498,
+          "height": 238,
+          "publisher": "nxcho",
+          "provider": "tenor"
+        },
+        {
+          "id": "795326868319741707",
+          "title": "a close up of a cartoon character 's face with an angry look on it",
+          "source_url": "https://tenor.com/view/dbz-dragon-ball-dragon-ball-z-dragon-ball-super-goku-gif-795326868319741707",
+          "download_url": "https://media.tenor.com/CwmRkqqFpwsAAAPo/dbz-dragon-ball.mp4",
+          "duration": 3.9,
+          "width": 498,
+          "height": 282,
+          "publisher": "ofrxbii",
+          "provider": "tenor"
+        },
+        {
+          "id": "4920775268503496010",
+          "title": "a girl in a red outfit is surrounded by pink balls that say ' i love you '",
+          "source_url": "https://tenor.com/view/youridb-crypto-airdrop-trip-overtrip-gif-4920775268503496010",
+          "download_url": "https://media.tenor.com/REobCQqtpUoAAAPo/youridb-crypto.mp4",
+          "duration": 7.8,
+          "width": 498,
+          "height": 286,
+          "publisher": "YouriDB",
+          "provider": "tenor"
+        },
+        {
+          "id": "794849038286226737",
+          "title": "a cartoon drawing of a man with yellow hair and a green background",
+          "source_url": "https://tenor.com/view/goku-goku-angry-fight-me-fight-me-if-your-ready-to-die-dragon-ball-z-gif-794849038286226737",
+          "download_url": "https://media.tenor.com/Cwfe_TEchTEAAAPo/goku-goku-angry.mp4",
+          "duration": 4.2,
+          "width": 498,
+          "height": 274,
+          "publisher": "ofrxbii",
+          "provider": "tenor"
+        },
+        {
+          "id": "9188971651776414134",
+          "title": "a cartoon of goku and vegeta walking in a desert",
+          "source_url": "https://tenor.com/view/dragondragonballs-bujitasaiyanbals-pahlawangoku-animasijepang-gif-9188971651776414134",
+          "download_url": "https://media.tenor.com/f4XJCDNEgbYAAAPo/dragondragonballs-bujitasaiyanbals.mp4",
+          "duration": 1.1,
+          "width": 428,
+          "height": 132,
+          "publisher": "irgamaya",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "goku_scream",
+      "file": "goku_scream.mp4",
+      "type": "video",
+      "query": "Goku super saiyan screaming",
+      "source_url": "https://tenor.com/view/dragon-ball-z-fusion-reborn-goku-super-saiyan-anime-gif-1359432400602995029",
+      "download_url": "https://media.tenor.com/Et2skNYZGVUAAAPo/dragon-ball-z-fusion-reborn.mp4",
+      "sha256": "1c80714f53a2bbb5f7a25489f6054eb98b586c03a75cb6c906b9fd5f356c1e5a",
+      "duration": 6.2062,
+      "dimensions": [
+        498,
+        374
+      ],
+      "description": "a cartoon of a man with his mouth open and a bubble in the background",
+      "publisher": "DragonBallPerfectShots",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "1011796005706665599",
+          "title": "a close up of a cartoon character with his mouth open and lightning coming out of his mouth .",
+          "source_url": "https://tenor.com/view/ssj-gif-1011796005706665599",
+          "download_url": "https://media.tenor.com/DgqfG0FODn8AAAPo/ssj.mp4",
+          "duration": 0.1,
+          "width": 498,
+          "height": 282,
+          "publisher": "jaythoven",
+          "provider": "tenor"
+        },
+        {
+          "id": "4359502553581772194",
+          "title": "a poster of a cartoon character with the words mooshak using 0.0001% of its full power",
+          "source_url": "https://tenor.com/view/mooshak-gif-4359502553581772194",
+          "download_url": "https://media.tenor.com/PIAQeY-mXaIAAAPo/mooshak.mp4",
+          "duration": 0.4,
+          "width": 498,
+          "height": 498,
+          "publisher": "aboim7",
+          "provider": "tenor"
+        },
+        {
+          "id": "1359432400602995029",
+          "title": "a cartoon of a man with his mouth open and a bubble in the background",
+          "source_url": "https://tenor.com/view/dragon-ball-z-fusion-reborn-goku-super-saiyan-anime-gif-1359432400602995029",
+          "download_url": "https://media.tenor.com/Et2skNYZGVUAAAPo/dragon-ball-z-fusion-reborn.mp4",
+          "duration": 6.2,
+          "width": 498,
+          "height": 374,
+          "publisher": "DragonBallPerfectShots",
+          "provider": "tenor"
+        },
+        {
+          "id": "2391310676055451530",
+          "title": "a cartoon of goku screaming with the words maaaa",
+          "source_url": "https://tenor.com/view/dragon-ball-z-anime-goku-super-saiyan-power-gif-2391310676055451530",
+          "download_url": "https://media.tenor.com/IS-kY-HiZ4oAAAPo/dragon-ball-z-anime.mp4",
+          "duration": 0.5,
+          "width": 498,
+          "height": 274,
+          "publisher": "HarrytheWizard",
+          "provider": "tenor"
+        },
+        {
+          "id": "15095329295791183700",
+          "title": "a picture of a cartoon character with the words \" d-d-d-dead ... chaaaaaat \" on the bottom",
+          "source_url": "https://tenor.com/view/dead-chat-dead-chat-goku-dead-chat-super-saiyan-dead-chat-scream-dead-chat-namek-goku-gif-15095329295791183700",
+          "download_url": "https://media.tenor.com/0X1iBBsuV1QAAAPo/dead-chat-dead-chat-goku.mp4",
+          "duration": 5.9,
+          "width": 476,
+          "height": 498,
+          "publisher": "Mo2theSos",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "goku_food",
+      "file": "goku_food.mp4",
+      "type": "video",
+      "query": "Goku eating food",
+      "source_url": "https://tenor.com/view/goku-hungry-eating-food-dbz-gif-8252812",
+      "download_url": "https://media.tenor.com/lG-1MKautb0AAAPo/goku-hungry.mp4",
+      "sha256": "fb45c09cc7a15d6c34ebbc042baa9a2f76d262ef1d102425c06d053cb158ed46",
+      "duration": 2.7,
+      "dimensions": [
+        500,
+        270
+      ],
+      "description": "goku from dragon ball z is eating noodles with chopsticks from a bowl .",
+      "publisher": "fireray",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "4699020453591011516",
+          "title": "a cartoon of a man sitting at a table with plates of food and a bowl that says ' a ' on it",
+          "source_url": "https://tenor.com/view/goku-eating-food-hungry-gif-5054716",
+          "download_url": "https://media.tenor.com/QTZGNMCWULwAAAPo/goku-eating.mp4",
+          "duration": 0.3,
+          "width": 426,
+          "height": 640,
+          "publisher": "Unknown Tenor uploader",
+          "provider": "tenor"
+        },
+        {
+          "id": "10695966860587742653",
+          "title": "goku from dragon ball z is eating noodles with chopsticks from a bowl .",
+          "source_url": "https://tenor.com/view/goku-hungry-eating-food-dbz-gif-8252812",
+          "download_url": "https://media.tenor.com/lG-1MKautb0AAAPo/goku-hungry.mp4",
+          "duration": 2.7,
+          "width": 500,
+          "height": 270,
+          "publisher": "fireray",
+          "provider": "tenor"
+        },
+        {
+          "id": "1008504903319038255",
+          "title": "a cartoon character wearing glasses is eating noodles with chopsticks",
+          "source_url": "https://tenor.com/view/vrbie-vrbs-nft-nouns-farel-gif-1008504903319038255",
+          "download_url": "https://media.tenor.com/Df7t3cSSKS8AAAPo/vrbie-vrbs.mp4",
+          "duration": 2.6,
+          "width": 498,
+          "height": 270,
+          "publisher": "farel_",
+          "provider": "tenor"
+        },
+        {
+          "id": "12447768498674120789",
+          "title": "a cartoon character named goku is smiling while holding a piece of meat",
+          "source_url": "https://tenor.com/view/dragon-ball-eating-food-glutton-hungry-gif-23821380",
+          "download_url": "https://media.tenor.com/rL9bf5nEuFUAAAPo/dragon-ball-eating.mp4",
+          "duration": 1,
+          "width": 640,
+          "height": 478,
+          "publisher": "Juks_Fanterisen",
+          "provider": "tenor"
+        },
+        {
+          "id": "7646238521480089262",
+          "title": "a cartoon of a boy sitting in front of a table full of food with the word goku on the bottom left",
+          "source_url": "https://tenor.com/view/dragon-ball-goku-eating-gif-7646238521480089262",
+          "download_url": "https://media.tenor.com/ahzlbHy6jq4AAAPo/dragon-ball-goku.mp4",
+          "duration": 2.6,
+          "width": 498,
+          "height": 378,
+          "publisher": "DarthCzarr",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "tony_stark",
+      "file": "tony_stark.mp4",
+      "type": "video",
+      "query": "Tony Stark reaction Iron Man",
+      "source_url": "https://tenor.com/view/iron-man-rober-downey-jr-robert-downey-robert-kirk-gif-2650610139719901202",
+      "download_url": "https://media.tenor.com/JMjb4OgNoBIAAAPo/iron-man-rober-downey-jr.mp4",
+      "sha256": "e5bd71886545134843b11a34739fc86fc3957461fb62742ab20f33dca2c2d428",
+      "duration": 2.9,
+      "dimensions": [
+        400,
+        300
+      ],
+      "description": "a close up of a man wearing a superhero costume .",
+      "publisher": "Wingman143",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "4994217497346150401",
+          "title": "robert downey jr. is talking to another man in a dark room",
+          "source_url": "https://tenor.com/view/tony-stark-tony-stark-iron-man-gif-4994217497346150401",
+          "download_url": "https://media.tenor.com/RU8GWnRbkAEAAAPo/tony-stark.mp4",
+          "duration": 1.1,
+          "width": 498,
+          "height": 282,
+          "publisher": "vop7",
+          "provider": "tenor"
+        },
+        {
+          "id": "2650610139719901202",
+          "title": "a close up of a man wearing a superhero costume .",
+          "source_url": "https://tenor.com/view/iron-man-rober-downey-jr-robert-downey-robert-kirk-gif-2650610139719901202",
+          "download_url": "https://media.tenor.com/JMjb4OgNoBIAAAPo/iron-man-rober-downey-jr.mp4",
+          "duration": 2.9,
+          "width": 400,
+          "height": 300,
+          "publisher": "Wingman143",
+          "provider": "tenor"
+        },
+        {
+          "id": "7967892648491092553",
+          "title": "a man covering his face with his hand and the words \" i 'm surrounded by idiots \"",
+          "source_url": "https://tenor.com/view/civil-war-captain-america-tony-stark-iron-man-idiots-gif-7967892648491092553",
+          "download_url": "https://media.tenor.com/bpOkJenCCkkAAAPo/civil-war-captain-america.mp4",
+          "duration": 2.2,
+          "width": 498,
+          "height": 484,
+          "publisher": "bradscotford",
+          "provider": "tenor"
+        },
+        {
+          "id": "9552735634398827932",
+          "title": "a close up of a man 's face with the words \" dracoin wonderland \" on the bottom",
+          "source_url": "https://tenor.com/view/iron-man-meme-tony-stark-how-about-that-reaction-gif-9552735634398827932",
+          "download_url": "https://media.tenor.com/hJIicmmO1ZwAAAPo/iron-man-meme.mp4",
+          "duration": 2.3,
+          "width": 498,
+          "height": 274,
+          "publisher": "cerfr",
+          "provider": "tenor"
+        },
+        {
+          "id": "8570477407634113260",
+          "title": "a man in a blue sweater is standing in a dark room with his hands up .",
+          "source_url": "https://tenor.com/view/tony-stark-blue-sweater-time-travel-endgame-realization-gif-8570477407634113260",
+          "download_url": "https://media.tenor.com/dvBzyz2KwuwAAAPo/tony-stark-blue-sweater.mp4",
+          "duration": 2.3,
+          "width": 268,
+          "height": 268,
+          "publisher": "Amitnair",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "thor",
+      "file": "thor.mp4",
+      "type": "video",
+      "query": "Thor lightning Avengers",
+      "source_url": "https://tenor.com/view/thor-avengers-infinity-war-thunder-lightning-gif-15116476",
+      "download_url": "https://media.tenor.com/Aa66xUzSzSEAAAPo/thor-avengers.mp4",
+      "sha256": "88ff31fdeceae9ee8cdeaa950c3426006af04861ee16c77ae8b49c6f0bc6ceef",
+      "duration": 4.21,
+      "dimensions": [
+        640,
+        360
+      ],
+      "description": "thor is flying through the air with a lightning bolt behind him .",
+      "publisher": "ReidMeane",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "1900155787750653173",
+          "title": "a man holding a hammer surrounded by lightning",
+          "source_url": "https://tenor.com/view/lightning-thor-squad-up-marvel-gif-15170650",
+          "download_url": "https://media.tenor.com/Gl61nxrHvPUAAAPo/lightning-thor.mp4",
+          "duration": 1,
+          "width": 640,
+          "height": 414,
+          "publisher": "912kidd",
+          "provider": "tenor"
+        },
+        {
+          "id": "121239596545789217",
+          "title": "thor is flying through the air with a lightning bolt behind him .",
+          "source_url": "https://tenor.com/view/thor-avengers-infinity-war-thunder-lightning-gif-15116476",
+          "download_url": "https://media.tenor.com/Aa66xUzSzSEAAAPo/thor-avengers.mp4",
+          "duration": 4.2,
+          "width": 640,
+          "height": 360,
+          "publisher": "ReidMeane",
+          "provider": "tenor"
+        },
+        {
+          "id": "2671793640143223601",
+          "title": "a poster for the movie avengers endgame",
+          "source_url": "https://tenor.com/view/avengers-endgame-power-thor-lightning-gif-2671793640143223601",
+          "download_url": "https://media.tenor.com/JRQeKPHiezEAAAPo/avengers-endgame-power.mp4",
+          "duration": 1.4,
+          "width": 498,
+          "height": 498,
+          "publisher": "BMeagher13",
+          "provider": "tenor"
+        },
+        {
+          "id": "11161649519154648906",
+          "title": "a man holding a hammer is surrounded by lightning",
+          "source_url": "https://tenor.com/view/thor-thunder-marvel-avenger-gif-16404339",
+          "download_url": "https://media.tenor.com/muYlGcifV0oAAAPo/thor-thunder.mp4",
+          "duration": 3.4,
+          "width": 640,
+          "height": 566,
+          "publisher": "thatlong_yeuem54321",
+          "provider": "tenor"
+        },
+        {
+          "id": "13576752782820589867",
+          "title": "a man with a beard is surrounded by lightning and the caption lighting round",
+          "source_url": "https://tenor.com/view/fat-thor-endgame-lightning-power-gif-17900473",
+          "download_url": "https://media.tenor.com/vGpQuSdRQSsAAAPo/fat-thor.mp4",
+          "duration": 1.3,
+          "width": 640,
+          "height": 592,
+          "publisher": "eagle942",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "thanos",
+      "file": "thanos.mp4",
+      "type": "video",
+      "query": "Thanos Avengers reaction",
+      "source_url": "https://tenor.com/view/avengers-thanos-meme-reaction-gif-16857386143520535700",
+      "download_url": "https://media.tenor.com/6fF3Yh4iNJQAAAPo/avengers-thanos.mp4",
+      "sha256": "be3b0adc74d18f2913a490e68dd14cd3ea1832978ab0a9f261309d59cc3e1201",
+      "duration": 3.3,
+      "dimensions": [
+        498,
+        294
+      ],
+      "description": "thanos is saying `` and for that ... i am grateful '' in avengers infinity war .",
+      "publisher": "LordDeez",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "16081595972370832196",
+          "title": "a picture of thanos with the words this user react them below him",
+          "source_url": "https://tenor.com/view/joku-stare-this-user-joku-react-them-please-tenor-i-swear-this-gif-isn%27t-harmful-this-man-react-him-gif-16081595972370832196",
+          "download_url": "https://media.tenor.com/3y1OVTqEG0QAAAPo/joku-stare-this-user-joku-react-them.mp4",
+          "duration": 2.5,
+          "width": 498,
+          "height": 404,
+          "publisher": "OrangeNOrange",
+          "provider": "tenor"
+        },
+        {
+          "id": "5686120961551582564",
+          "title": "a picture of thanos from avengers endgame with the caption \" this man bear5 him \"",
+          "source_url": "https://tenor.com/view/shackcord-thanos-bear5-gif-5686120961551582564",
+          "download_url": "https://media.tenor.com/Tuko418vRWQAAAPo/shackcord-thanos.mp4",
+          "duration": 2.5,
+          "width": 498,
+          "height": 350,
+          "publisher": "bootysniffer420",
+          "provider": "tenor"
+        },
+        {
+          "id": "16857386143520535700",
+          "title": "thanos is saying `` and for that ... i am grateful '' in avengers infinity war .",
+          "source_url": "https://tenor.com/view/avengers-thanos-meme-reaction-gif-16857386143520535700",
+          "download_url": "https://media.tenor.com/6fF3Yh4iNJQAAAPo/avengers-thanos.mp4",
+          "duration": 3.3,
+          "width": 498,
+          "height": 294,
+          "publisher": "LordDeez",
+          "provider": "tenor"
+        },
+        {
+          "id": "9051769110596616496",
+          "title": "a picture of a man with the words this man fake react him written on it .",
+          "source_url": "https://tenor.com/view/fake-react-this-man-him-gif-9051769110596616496",
+          "download_url": "https://media.tenor.com/fZ5YDDn3ATAAAAPo/fake-react.mp4",
+          "duration": 2.5,
+          "width": 256,
+          "height": 256,
+          "publisher": "dimsas",
+          "provider": "tenor"
+        },
+        {
+          "id": "11441116246593490456",
+          "title": "a poster that says this man react him with a picture of thanos in the background",
+          "source_url": "https://tenor.com/view/this-man-british-react-him-gif-11441116246593490456",
+          "download_url": "https://media.tenor.com/nscCm9AnzhgAAAPo/this-man-british-react-him.mp4",
+          "duration": 2.6,
+          "width": 498,
+          "height": 304,
+          "publisher": "StarMage",
+          "provider": "tenor"
+        }
+      ]
+    },
+    {
+      "id": "avengers_team",
+      "file": "avengers_team.mp4",
+      "type": "video",
+      "query": "Avengers team together",
+      "source_url": "https://tenor.com/view/avengers-age-of-ultron-avengers-age-of-ultron-marvel-marvel-studios-gif-18162408",
+      "download_url": "https://media.tenor.com/HTi6qYzQ3eoAAAPo/avengers-age-of-ultron.mp4",
+      "sha256": "f0fc3637ccdff95e4f72ba36089f778c9a35da74cd1d2a0275433ba033338211",
+      "duration": 14.466667,
+      "dimensions": [
+        640,
+        360
+      ],
+      "description": "a group of people are fighting each other in a room with a fire coming out of the ceiling .",
+      "publisher": "MaxTacAgent",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "1582967458633759528",
+          "title": "a man in a blue shirt is saying `` we 're not a team . we 're a time bomb . ``",
+          "source_url": "https://tenor.com/view/were-not-a-team-were-a-time-bomb-bruce-banner-mark-ruffalo-avengers-not-a-team-gif-11786603",
+          "download_url": "https://media.tenor.com/FffUhEbeOygAAAPo/were-not-a-team-were-a-time-bomb-bruce-banner.mp4",
+          "duration": 1.1,
+          "width": 500,
+          "height": 270,
+          "publisher": "rihanha",
+          "provider": "tenor"
+        },
+        {
+          "id": "7076108941785691353",
+          "title": "a man wearing a black leather jacket and a black eye patch is talking to someone about the avenger initiative .",
+          "source_url": "https://tenor.com/view/avengers-i-am-tere-to-talk-to-you-nick-fury-gif-17148011",
+          "download_url": "https://media.tenor.com/YjNjl3sZ9NkAAAPo/avengers-i-am-tere-to-talk-to-you.mp4",
+          "duration": 2,
+          "width": 640,
+          "height": 272,
+          "publisher": "Sephirock38",
+          "provider": "tenor"
+        },
+        {
+          "id": "10227145700811612856",
+          "title": "a group of men are standing in a room with a raccoon in the background",
+          "source_url": "https://tenor.com/view/avengers-end-game-stand-up-gif-13969423",
+          "download_url": "https://media.tenor.com/je4e1EMKIrgAAAPo/avengers-end-game.mp4",
+          "duration": 1.5,
+          "width": 500,
+          "height": 230,
+          "publisher": "Spiderbat36",
+          "provider": "tenor"
+        },
+        {
+          "id": "10275414372017506735",
+          "title": "a picture of the hulk and iron man from the movie avengers",
+          "source_url": "https://tenor.com/view/getting-ready-for-battle-steve-rogers-captain-america-the-hulk-black-widow-gif-10275414372017506735",
+          "download_url": "https://media.tenor.com/jpma7gwMCa8AAAPo/getting-ready-for-battle-steve-rogers.mp4",
+          "duration": 6.1,
+          "width": 498,
+          "height": 282,
+          "publisher": "DisneyPlus",
+          "provider": "tenor"
+        },
+        {
+          "id": "2105638063170444778",
+          "title": "a group of people are fighting each other in a room with a fire coming out of the ceiling .",
+          "source_url": "https://tenor.com/view/avengers-age-of-ultron-avengers-age-of-ultron-marvel-marvel-studios-gif-18162408",
+          "download_url": "https://media.tenor.com/HTi6qYzQ3eoAAAPo/avengers-age-of-ultron.mp4",
+          "duration": 14.5,
+          "width": 640,
+          "height": 360,
+          "publisher": "MaxTacAgent",
+          "provider": "tenor"
+        }
+      ]
+    }
+  ],
+  "sound_catalog": {
+    "schema_version": 1,
+    "assets": [
+      {
+        "id": "dubbingai_vine_boom",
+        "title": "Vine boom sound effect",
+        "publisher": "Dubbing AI community",
+        "uploader_as_listed": "Parse",
+        "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918194306-4907017.mp3",
+        "description": "A deep impact for an insult landing, a sudden discovery or a dramatic reaction.",
+        "description_origin": "Project-authored paraphrase of the collection metadata",
+        "tags": [
+          "boom",
+          "roast",
+          "shock",
+          "punchline"
+        ],
+        "download_status": "downloaded_probed_hashed",
+        "sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+        "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+        "file": "dubbingai_vine_boom.mp3",
+        "duration_seconds": 3.004082,
+        "playback_rate": 1,
+        "license": "Community-hosted excerpt; reuse rights unverified",
+        "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+        "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+      },
+      {
+        "id": "dubbingai_faaah",
+        "title": "faaah",
+        "publisher": "Dubbing AI community",
+        "uploader_as_listed": "dubbing18102",
+        "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "download_url": "https://dvi.dubbingai.io/cs/20260713/1783923777332-8362441.mp3",
+        "description": "A vocal reaction for an unbelievable decision, frustration or a failed plan.",
+        "description_origin": "Project-authored paraphrase of the collection metadata",
+        "tags": [
+          "reaction",
+          "disbelief",
+          "fail",
+          "roast"
+        ],
+        "download_status": "downloaded_probed_hashed",
+        "sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
+        "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+        "file": "dubbingai_faaah.mp3",
+        "duration_seconds": 1.959184,
+        "playback_rate": 1,
+        "license": "Community-hosted excerpt; reuse rights unverified",
+        "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+        "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+      },
+      {
+        "id": "dubbingai_rizz_effect",
+        "title": "Rizz Effect",
+        "publisher": "Dubbing AI community",
+        "uploader_as_listed": "Parse",
+        "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918641890-1251662.mp3",
+        "description": "A brief romantic-sounding cue for swagger, flirting or sarcastic confidence.",
+        "description_origin": "Project-authored paraphrase of the collection metadata",
+        "tags": [
+          "rizz",
+          "confidence",
+          "flirting"
+        ],
+        "download_status": "downloaded_probed_hashed",
+        "sha256": "0bf4d137589d0c07243bf5ba104f40ceb78ef003fbee6dad4dea92ee348062fc",
+        "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+        "file": "dubbingai_rizz_effect.mp3",
+        "duration_seconds": 2.272653,
+        "playback_rate": 1,
+        "license": "Community-hosted excerpt; reuse rights unverified",
+        "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+        "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+      }
+    ]
+  },
+  "publishing_enabled": false,
+  "errors": [
+    {
+      "id": "hulk",
+      "error_type": "ValueError",
+      "error": "No sufficiently long, identified moving footage candidate"
+    },
+    {
+      "id": "captain_america",
+      "error_type": "ValueError",
+      "error": "No sufficiently long, identified moving footage candidate"
+    }
+  ]
+}
