@@ -85,7 +85,7 @@ def acquire_sound(record, output):
 def run(request, output):
     identifier(request['id'])
     footage, sound_ids = request.get('footage', []), request.get('sound_ids', [])
-    if request.get('schema_version') != 1 or not 1 <= len(footage) <= 16 or not 1 <= len(sound_ids) <= 4:
+    if request.get('schema_version') != 1 or not 1 <= len(footage) <= 16 or not 0 <= len(sound_ids) <= 4:
         raise ValueError('Invalid bounded source request')
     output = Path(output).resolve()
     if output.exists() and any(output.iterdir()):

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-goku-avengers-sources-02",
+  "result_branch": "codex/results/ifverse-goku-avengers-sources-02",
+  "footage": [
+    {
+      "id": "hulk",
+      "query": "Hulk roar marvel",
+      "required_terms": [
+        "hulk"
+      ],
+      "min_seconds": 1.1
+    },
+    {
+      "id": "captain_america",
+      "query": "Steve Rogers Captain America reaction",
+      "required_terms": [
+        "captain",
+        "steve"
+      ],
+      "min_seconds": 1.1
+    },
+    {
+      "id": "thanos_clean",
+      "query": "Thanos smiling marvel",
+      "required_terms": [
+        "thanos"
+      ],
+      "min_seconds": 1.1
+    }
+  ],
+  "sound_ids": []
+}

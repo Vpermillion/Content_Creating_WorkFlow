@@ -10,6 +10,21 @@ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 
 class SourceReviewTests(unittest.TestCase):
+    def test_footage_only_retry_preserves_finished_sources_when_another_query_fails(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);(root/'assets/sfx').mkdir(parents=True)
+            (root/'assets/sfx/dubbingai-discovery.json').write_text('{"discovered_recordings": []}')
+            def collect(spec, output):
+                if spec['id']=='bad':raise ValueError('No matching footage')
+                return {'id':'good','file':'good.mp4','duration':2}
+            with patch.object(module,'ROOT',root),patch.object(module,'acquire_footage',side_effect=collect),patch.object(module.media,'ffmpeg'):
+                with self.assertRaisesRegex(ValueError,'acquisitions failed'):
+                    module.run({'schema_version':1,'id':'retry','footage':[{'id':'good'},{'id':'bad'}],'sound_ids':[]},root/'output')
+            result=module.json.loads((root/'output/sources.json').read_text())
+            self.assertEqual(result['status'],'failed')
+            self.assertEqual(result['footage'][0]['id'],'good')
+            self.assertEqual(result['errors'][0]['id'],'bad')
+
     def candidate(self, name='Goku', length=3):
         return {'title':name,'source_url':'https://tenor.com/view/'+name,'download_url':'https://media.tenor.com/test.mp4',
                 'duration':length,'width':640,'height':360,'publisher':'Generated fixture'}
