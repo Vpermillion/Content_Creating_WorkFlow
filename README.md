@@ -1,5 +1,7 @@
 # Ifverse automated video workspace
 
+**Current audio request:** [voice choices](docs/VOICE_OPTIONS.md) and actual DubbingAI meme clips. The article is readable; its separate audio host needs the saved network-domain addition applied before download and a new sound cut. See [CURRENT](docs/CURRENT.md).
+
 **Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels. Sound design now supports described downloadable effects on specific joke/reaction anchors; see [SOUND_EFFECTS](docs/SOUND_EFFECTS.md).
 
 A portable, user-owned workflow for English what-if videos on **ifverse_anime** and **ifverse_hollywood**. An assistant provides one script and production plan; a finite GitHub-hosted job does the repetitive media work and returns a video plus one compact report.

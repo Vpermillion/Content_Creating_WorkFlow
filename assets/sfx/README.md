@@ -12,3 +12,7 @@ Public-domain Brackeys source recordings with project-authored selection descrip
 | `tiny_click` | Dry tiny click for a quick decision, a red flag or a reaction beat. | [Download](https://raw.githubusercontent.com/Brackeys/first-game-in-godot/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/tap.wav) · [Source](https://github.com/Brackeys/first-game-in-godot/blob/388257461dbd07b1e5020270c72fca48b30c493d/First%20Game/assets/sounds/tap.wav) |
 
 Searchable metadata: [catalog.json](catalog.json). Source terms: [BRACKEYS-LICENSE.txt](BRACKEYS-LICENSE.txt). These are not claimed to be the original viral Vine/Roblox/movie sound recordings. Derived pitch and sub-bass treatment are recorded in the catalog.
+
+## Requested recognizable meme recordings
+
+The owner supplied the DubbingAI collection as the desired sound reference. [Discovered track metadata](dubbingai-discovery.json) records 17 actual embedded MP3 URLs, titles, creators as listed and project-written use summaries. This is a discovery index, not a verified audio catalog: media-host access, downloads, checksums and probing are still pending. The older six public-domain game effects above remain the only downloaded/verified library here.

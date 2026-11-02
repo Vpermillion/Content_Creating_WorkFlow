@@ -1,5 +1,7 @@
 # Start here: Ifverse project handoff
 
+**Current audio request:** [voice choices](docs/VOICE_OPTIONS.md) and actual DubbingAI meme clips. The article is readable; its separate audio host needs the saved network-domain addition applied before download and a new sound cut. See [CURRENT](docs/CURRENT.md).
+
 **Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels. Sound design now supports described downloadable effects on specific joke/reaction anchors; see [SOUND_EFFECTS](docs/SOUND_EFFECTS.md).
 
 This repository is the durable workspace for **ifverse_anime** and **ifverse_hollywood**, initially English YouTube what-if videos. The user owns the project; a new authorized assistant must resume it without requiring the old conversation or rebuilding working tools.

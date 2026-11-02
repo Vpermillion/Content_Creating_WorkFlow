@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "provider": "kokoro-onnx",
+  "model_version": "1.0",
+  "voice_file_url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+  "voice_file_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+  "verification": "Voice IDs inspected from the exact bundle whose checksum matches the completed narration receipts. Voice characteristics require audition.",
+  "english_voices": [
+    {
+      "id": "af_alloy",
+      "name": "Alloy",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_aoede",
+      "name": "Aoede",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_bella",
+      "name": "Bella",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_heart",
+      "name": "Heart",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": true,
+      "completed_review_test": true
+    },
+    {
+      "id": "af_jessica",
+      "name": "Jessica",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_kore",
+      "name": "Kore",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_nicole",
+      "name": "Nicole",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_nova",
+      "name": "Nova",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_river",
+      "name": "River",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_sarah",
+      "name": "Sarah",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "af_sky",
+      "name": "Sky",
+      "locale": "en-US",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_adam",
+      "name": "Adam",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_echo",
+      "name": "Echo",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_eric",
+      "name": "Eric",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_fenrir",
+      "name": "Fenrir",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_liam",
+      "name": "Liam",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_michael",
+      "name": "Michael",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": true,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_onyx",
+      "name": "Onyx",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_puck",
+      "name": "Puck",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "am_santa",
+      "name": "Santa",
+      "locale": "en-US",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "bf_alice",
+      "name": "Alice",
+      "locale": "en-GB",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "bf_emma",
+      "name": "Emma",
+      "locale": "en-GB",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "bf_isabella",
+      "name": "Isabella",
+      "locale": "en-GB",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "bf_lily",
+      "name": "Lily",
+      "locale": "en-GB",
+      "voice_category": "female",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "bm_daniel",
+      "name": "Daniel",
+      "locale": "en-GB",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "bm_fable",
+      "name": "Fable",
+      "locale": "en-GB",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "bm_george",
+      "name": "George",
+      "locale": "en-GB",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    },
+    {
+      "id": "bm_lewis",
+      "name": "Lewis",
+      "locale": "en-GB",
+      "voice_category": "male",
+      "enabled_in_review_runner": false,
+      "completed_review_test": false
+    }
+  ]
+}
