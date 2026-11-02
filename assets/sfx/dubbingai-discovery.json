@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+  "article_access": "HTTP 200 using a browser-compatible standard request",
+  "source_html_sha256": "79f985e9841fb4a631f6462ad7d0aec3acceab2001d2bce9d9fd1fd24c5a230d",
+  "status": "discovery_only_not_a_verified_mix_catalog",
+  "required_audio_host": "dvi.dubbingai.io",
+  "discovered_recordings": [
+    {
+      "id": "dubbingai_vine_boom",
+      "title": "Vine boom sound effect",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "Parse",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918194306-4907017.mp3",
+      "description": "A deep impact for an insult landing, a sudden discovery or a dramatic reaction.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "boom",
+        "roast",
+        "shock",
+        "punchline"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_rizz_effect",
+      "title": "Rizz Effect",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "Parse",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918641890-1251662.mp3",
+      "description": "A brief romantic-sounding cue for swagger, flirting or sarcastic confidence.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "rizz",
+        "confidence",
+        "flirting"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_walter_family",
+      "title": "Walter White WERE A FAMILY!",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing65241",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783915695760-4947819.mp3",
+      "description": "A Breaking Bad family outburst for an exaggerated emotional reaction.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "family",
+        "irony",
+        "drama"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_lucifers_waltz",
+      "title": "Lucifers Waltz",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "Parse",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918579247-5763322.mp3",
+      "description": "Ominous string music for rising danger or a suspenseful setup.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "suspense",
+        "danger",
+        "music"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_cleared",
+      "title": "Cleared (TikTok version)",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "david",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783919083532-9045128.mp3",
+      "description": "An energetic music excerpt suited to a transition or quick montage.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "music",
+        "transition",
+        "energy"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_faaah",
+      "title": "faaah",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing18102",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783923777332-8362441.mp3",
+      "description": "A vocal reaction for an unbelievable decision, frustration or a failed plan.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "reaction",
+        "disbelief",
+        "fail",
+        "roast"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_stuka_siren",
+      "title": "stuka-siren-ju-87",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "spinalcordyy",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783927019439-3469774.mp3",
+      "description": "An escalating siren for approaching chaos or an obviously disastrous plan.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "siren",
+        "chaos",
+        "disaster"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_montagem_alquimia",
+      "title": "MONTAGEM ALQUIMIA (ULTRA SLOWED)",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing66250",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783920814749-2102771.mp3",
+      "description": "A slow phonk passage for a boastful reveal or a stylized montage.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "phonk",
+        "confidence",
+        "montage"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_nada_ainda",
+      "title": "nada ainda",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "kay",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783914092370-7926760.mp3",
+      "description": "A reaction for waiting and getting no useful result.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "waiting",
+        "no results",
+        "awkward"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_heo_edit",
+      "title": "𝙃𝙀𝙊 _ 𝙏𝙄𝙆𝙏𝙊𝙆 𝙀𝘿𝙄𝙏",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing66250",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783920862859-9683666.mp3",
+      "description": "A brisk gaming-edit segment for rapid cuts or montage energy.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "gaming",
+        "montage",
+        "transition"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_medaltv_roblox",
+      "title": "MedalTVRoblox20260713",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "sebastian",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783919473497-7310738.mp3",
+      "description": "A Roblox-session reaction clip for gaming-centered jokes.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "roblox",
+        "gaming",
+        "reaction"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_heartbeat",
+      "title": "Childish Gambino - Heartbeat",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing66250",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783920964959-2848049.mp3",
+      "description": "A synth-led Heartbeat excerpt for a forceful transition.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "music",
+        "synth",
+        "transition"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_rizz_she_goes_by",
+      "title": "rizz-she-goes-by",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "vortexzzzzzz",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783913639460-2353263.mp3",
+      "description": "A steady beat suggested for spoken storytelling or relaxed commentary.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "beat",
+        "storytelling",
+        "background"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_teiser_uno",
+      "title": "Teiser uno! LSPD GTAHUB",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "乇ㄥㄒㄖㄒㄖ1",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783920727113-7675137.mp3",
+      "description": "An animated GTA roleplay reaction suited to a chaotic gaming beat.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "gta",
+        "gaming",
+        "chaos"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_h",
+      "title": "H",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing66250",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783921100887-8394356.mp3",
+      "description": "A tiny vocal interjection for a deliberately strange reaction.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "surreal",
+        "reaction",
+        "quick"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_eren_mikasa",
+      "title": "Eren doesn't want to see Mikasa with another man",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing65241",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783914519349-1589112.mp3",
+      "description": "An Attack on Titan relationship outburst for a dramatic character reaction.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "anime",
+        "relationship",
+        "drama"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    },
+    {
+      "id": "dubbingai_sasuke_nandomo",
+      "title": "Sasuke NANDOMO",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing65241",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783914819228-5333856.mp3",
+      "description": "A Sasuke exclamation for an emotional Naruto-themed reaction.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "anime",
+        "naruto",
+        "sasuke",
+        "reaction"
+      ],
+      "download_status": "pending_media_host_access_and_checksum_verification",
+      "sha256": null,
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+    }
+  ],
+  "notes": "Do not treat ratings, popularity, ownership or commercial rights claimed by the article as independently verified. Only register an effect in the playable catalog after bounded download, SHA-256 and audio probing."
+}

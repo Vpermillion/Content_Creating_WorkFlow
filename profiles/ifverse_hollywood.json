@@ -18,7 +18,8 @@
     "provider": null,
     "voice": null,
     "candidate_if_english": "kokoro",
-    "status": "not_configured"
+    "status": "not_configured",
+    "options_catalog": "assets/voices/kokoro-options.json"
   },
   "footage": {
     "sources": [],
@@ -78,6 +79,8 @@
     "timing": "exact spoken-phrase anchors from the matching final-audio alignment receipt; word times estimated",
     "speech_duck_db": 6,
     "selection": "descriptions/tags plus an explicit script-specific reason; avoid every-sentence effects",
-    "status": "pipeline_component_available_not_hollywood_tested"
+    "status": "pipeline_component_available_not_hollywood_tested",
+    "requested_collection": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+    "requested_collection_status": "article_read_audio_host_activation_download_and_checksums_pending"
   }
 }

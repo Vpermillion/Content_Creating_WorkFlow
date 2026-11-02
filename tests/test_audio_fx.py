@@ -13,6 +13,25 @@ from whatif.store import digest
 
 
 class AudioEffectsTests(unittest.TestCase):
+    def test_published_dubbingai_mp3_is_supported_without_weakening_source_checks(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            asset, _, _ = self.fixture(root)
+            asset['download_url'] = 'https://dvi.dubbingai.io/cs/20260713/1783918194306-4907017.mp3'
+            response = io.BytesIO((root / 'source.wav').read_bytes())
+            response.url = asset['download_url']
+            with patch.object(audio_fx.urllib.request, 'urlopen', return_value=response):
+                self.assertEqual(audio_fx.fetch_effect(asset, root / 'cache').read_bytes(),
+                                 (root / 'source.wav').read_bytes())
+            for url in ['https://dvi.dubbingai.io.evil.invalid/cs/20260713/1-2.mp3',
+                        'http://dvi.dubbingai.io/cs/20260713/1-2.mp3',
+                        'https://dvi.dubbingai.io/download.exe',
+                        'https://dvi.dubbingai.io/cs/20260713/1-2.mp3?redirect=other']:
+                with self.assertRaises(ValueError):
+                    audio_fx.checked_effect_url(url)
+            with self.assertRaisesRegex(ValueError, 'verified SHA-256'):
+                audio_fx.fetch_effect({**asset, 'sha256': None}, root / 'other-cache')
+
     def test_anchors_follow_actual_words_and_repetition_requires_a_choice(self):
         words = [{'word': 'Oh,', 'start': 0, 'end': .2},
                  {'word': 'genius!', 'start': .2, 'end': .7},

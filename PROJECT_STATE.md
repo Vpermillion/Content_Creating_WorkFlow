@@ -1,5 +1,11 @@
 # Project state — 2026-10-26
 
+## Current voice and requested meme-source follow-up
+
+The pinned Kokoro voice bundle was inspected: 28 English IDs exist, Heart/Michael are enabled in the current review runner and only Heart has been review-rendered. VOICE_OPTIONS and the machine-readable options catalog distinguish available, enabled and tested. The owner has not chosen a replacement voice; approved speech is preserved.
+
+The supplied DubbingAI article was read successfully and its 17 embedded media URLs/descriptions indexed in assets/sfx/dubbingai-discovery.json. The real audio is on dvi.dubbingai.io, which returned a proxy tunnel 403. An additive saved network draft includes that exact media host, but requires user activation/publication. The decoder/download provider is prepared with strict HTTPS/source pattern/checksum checks; no actual DubbingAI audio or replacement video is falsely marked downloaded/rendered. After activation, download/probe/hash selected Vine Boom/faaah recordings and render a new review cut. See CURRENT for exact state; preserve the older video and all voice/caption hashes.
+
 ## Completed sound-effects review
 
 Hosted request `ifverse-anime-sfx-review-01` succeeded in run `41199650499`, source `f85dbada1876fa222efdace47130f299dce6d0d8`, result branch `codex/results/ifverse-anime-sfx-review-01`. Delivered `/workspace/Ifverse_Anime_60s_Sound_Effects.mp4`: 60 seconds, nine phrase-anchored cues across four effect types, unchanged source voice/50 captions, 24 moving shots. Public-domain source catalog, cache, descriptions, cue reasons, speech ducking and saved mix receipts are implemented in the review pipeline. All 74 final-source local tests passed; the hosted demonstration passed its then-current 73 regression gates. Full decode, all cue-energy windows, unchanged waveform/transcript/SRT hashes, video-stream copying and decoded sample peak -0.510 dBFS were verified. Sound stage 3.698s; whole media run 28.181s excluding setup and reusing voice/captions. Full listening/editorial judgment remains separate. This SFX-only test retains the earlier v1 narration; new scripts must use denser v2 banter. Read CURRENT/SOUND_EFFECTS before retries. No public posting.

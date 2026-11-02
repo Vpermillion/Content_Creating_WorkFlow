@@ -33,20 +33,31 @@ def search_effects(catalog, query):
     return sorted(found, key=lambda row: (-row['score'], row['id']))
 
 
+def checked_effect_url(value):
+    url = urllib.parse.urlparse(value)
+    pinned_git = url.hostname == 'raw.githubusercontent.com' and re.search(r'/[0-9a-f]{40}/', url.path)
+    published_mp3 = url.hostname == 'dvi.dubbingai.io' and re.fullmatch(r'/cs/[0-9]{8}/[0-9]+-[0-9]+\.mp3', url.path)
+    if (url.scheme != 'https' or url.username or url.password or url.port not in {None, 443}
+            or url.query or url.fragment or not (pinned_git or published_mp3)):
+        raise ValueError('Use a commit-pinned HTTPS GitHub source or a published DubbingAI MP3 source')
+    return url
+
+
 def fetch_effect(asset, cache):
     if not all(asset.get(k) for k in ['source_url', 'license', 'license_url', 'usage_basis', 'description']):
         raise ValueError('Sound effect provenance missing')
-    url = urllib.parse.urlparse(asset['download_url'])
-    if (url.scheme != 'https' or url.hostname != 'raw.githubusercontent.com' or url.username or url.password
-            or url.port not in {None, 443} or not re.search(r'/[0-9a-f]{40}/', url.path)):
-        raise ValueError('Use a commit-pinned HTTPS sound source from raw.githubusercontent.com')
+    if not isinstance(asset.get('sha256'), str) or not re.fullmatch(r'[0-9a-f]{64}', asset['sha256']):
+        raise ValueError('Sound effect needs a verified SHA-256 before mixing')
+    url = checked_effect_url(asset['download_url'])
     target = local_asset(cache, asset['file'])
     if target.exists():
         if digest(target) != asset['sha256']:
             raise ValueError('Cached sound effect checksum changed')
         return target
-    with urllib.request.urlopen(asset['download_url'], timeout=25) as response:
-        if urllib.parse.urlparse(response.url).hostname != url.hostname:
+    request = urllib.request.Request(asset['download_url'], headers={
+        'User-Agent': 'Mozilla/5.0 (compatible; IfverseSoundReader/1.0)'})
+    with urllib.request.urlopen(request, timeout=25) as response:
+        if checked_effect_url(response.url).hostname != url.hostname:
             raise ValueError('Unexpected sound-effect redirect')
         data = response.read(2_000_001)
     if len(data) > 2_000_000 or hashlib.sha256(data).hexdigest() != asset['sha256']:

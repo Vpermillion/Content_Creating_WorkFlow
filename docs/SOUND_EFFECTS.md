@@ -6,6 +6,14 @@ The first test overlays the existing 60-second Naruto roast. It preserves its or
 
 Completed request `ifverse-anime-sfx-review-01`, hosted run `41199650499`: [watch the nine-cue test](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-sfx-review-01/artifacts/ifverse-anime-sfx-review-01/sound-effects/video-sfx.mp4). All 74 final-source local tests passed; the demonstrated hosted run passed its then-current 73 regression tests and final media checks. Local final decode, cue-energy, preserved-input/video-stream and numeric level checks also passed. The final source voice and captions are retained; full listening/editorial approval remains separate.
 
+## Requested DubbingAI collection
+
+The owner asked to use the actual recordings from [this collection](https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects). The article was read successfully after using an ordinary browser-compatible request header. It lists 17 clips including Vine Boom, Rizz Effect and faaah, and supplies MP3 URLs on **`dvi.dubbingai.io`**. Metadata and project-authored description summaries are saved in `assets/sfx/dubbingai-discovery.json`.
+
+The article host is now allowed in the running environment. The separate audio host still returned a proxy tunnel 403 when checked; an additive configuration draft adds `dvi.dubbingai.io`, preserving the four existing custom domains and package presets. Saving that draft does not activate or publish it. Once the user applies it in Environment settings, retry the exact published audio URLs, bound the download, probe actual media and record SHA-256 before registering playable assets. The discovery file is deliberately not a verified mixing catalog, and no replacement DubbingAI video is claimed to have been rendered yet. Final-source regression suite: **75 tests passed**; the DubbingAI provider is tested with generated fixtures, while real clip downloads remain blocked pending media-host activation.
+
+The first useful replacement choices are the real Vine Boom at roast/revelation punchlines and faaah at disbelief/failure beats. Use Rizz Effect only where confidence/romantic swagger fits. The collection also includes music and character dialogue; do not select those arbitrarily, assume all clips are public-domain, or talk over narration with a long vocal/music excerpt. Existing source/usage records must describe what is actually verified.
+
 ## Library and selection
 
 `assets/sfx/catalog.json` contains six downloadable Brackeys effects with project-authored descriptions/tags, immutable upstream commit URLs, SHA-256, duration, license and source links. The pinned upstream README explicitly permits everything including commercial use; its LICENSE is the Unlicense/public-domain dedication, preserved in `assets/sfx/BRACKEYS-LICENSE.txt`. The test uses four effect types. These are modern meme-style **editing choices**, not claims to contain the original viral Vine boom, Roblox or movie sound recordings. The bass impact is a downloaded explosion pitched down and reinforced with a decaying 55 Hz sub pulse; the catalog records this derivative treatment.
@@ -17,7 +25,7 @@ python -m whatif.audio_fx search --query 'boom punchline bad decision'
 python -m whatif.audio_fx search --query 'confusion error'
 ```
 
-Selection is lexical lookup plus the assistant's explicit script reasoning; it is not an automated comedy-understanding model. Choose a sound based on the beat's meaning, not just a word like “boom” appearing in the dialogue. Keep the description honest about the actual recording. Future effects can be added with verified source/license/checksum metadata; this downloader currently accepts commit-pinned `raw.githubusercontent.com` sources only.
+Selection is lexical lookup plus the assistant's explicit script reasoning; it is not an automated comedy-understanding model. Choose a sound based on the beat's meaning, not just a word like “boom” appearing in the dialogue. Keep the description honest about the actual recording. Future effects can be added with verified source/license/checksum metadata; the downloader accepts commit-pinned `raw.githubusercontent.com` sources and the exact published `/cs/YYYYMMDD/id-id.mp3` pattern on `dvi.dubbingai.io`, with a verified SHA-256 required for both. Redirects must remain on the supported source host, and the runtime allowlist still applies.
 
 ## Cue timing and mix
 
