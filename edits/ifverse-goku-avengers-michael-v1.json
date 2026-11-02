@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-goku-avengers-michael-v1",
+  "title": "What if Goku joined the Avengers? The budget is cooked.",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "assets": [
+    {
+      "id": "avengers_team",
+      "file": "avengers_team.mp4",
+      "type": "video",
+      "query": "Avengers team together",
+      "source_url": "https://tenor.com/view/avengers-age-of-ultron-avengers-age-of-ultron-marvel-marvel-studios-gif-18162408",
+      "download_url": "https://media.tenor.com/HTi6qYzQ3eoAAAPo/avengers-age-of-ultron.mp4",
+      "sha256": "f0fc3637ccdff95e4f72ba36089f778c9a35da74cd1d2a0275433ba033338211",
+      "duration": 14.466667,
+      "dimensions": [
+        640,
+        360
+      ],
+      "description": "a group of people are fighting each other in a room with a fire coming out of the ceiling .",
+      "publisher": "MaxTacAgent",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "captain_america",
+      "file": "captain_america.mp4",
+      "type": "video",
+      "query": "Steve Rogers Captain America reaction",
+      "source_url": "https://tenor.com/view/mcu-marvel-avengers-captain-america-iron-man-gif-4586422665845991747",
+      "download_url": "https://media.tenor.com/P6Y_HVuM6UMAAAPo/mcu-marvel.mp4",
+      "sha256": "ba5367a295c528aad6212f378453b02de2e401ff1976ef6e28bfcc6597efbe57",
+      "duration": 5.44,
+      "dimensions": [
+        498,
+        208
+      ],
+      "description": "a close up of a man wearing a mask talking to another man in a dark room .",
+      "publisher": "joffeite",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "goku_fight",
+      "file": "goku_fight.mp4",
+      "type": "video",
+      "query": "Goku fighting Dragon Ball",
+      "source_url": "https://tenor.com/view/goku-goku-angry-fight-me-fight-me-if-your-ready-to-die-dragon-ball-z-gif-794849038286226737",
+      "download_url": "https://media.tenor.com/Cwfe_TEchTEAAAPo/goku-goku-angry.mp4",
+      "sha256": "b776682d93101bf7826699308ff83a9fd19694e6c27bb4574d8249a147ce2ab5",
+      "duration": 4.166667,
+      "dimensions": [
+        498,
+        274
+      ],
+      "description": "a cartoon drawing of a man with yellow hair and a green background",
+      "publisher": "ofrxbii",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "goku_food",
+      "file": "goku_food.mp4",
+      "type": "video",
+      "query": "Goku eating food",
+      "source_url": "https://tenor.com/view/goku-hungry-eating-food-dbz-gif-8252812",
+      "download_url": "https://media.tenor.com/lG-1MKautb0AAAPo/goku-hungry.mp4",
+      "sha256": "fb45c09cc7a15d6c34ebbc042baa9a2f76d262ef1d102425c06d053cb158ed46",
+      "duration": 2.7,
+      "dimensions": [
+        500,
+        270
+      ],
+      "description": "goku from dragon ball z is eating noodles with chopsticks from a bowl .",
+      "publisher": "fireray",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "goku_scream",
+      "file": "goku_scream.mp4",
+      "type": "video",
+      "query": "Goku super saiyan screaming",
+      "source_url": "https://tenor.com/view/dragon-ball-z-fusion-reborn-goku-super-saiyan-anime-gif-1359432400602995029",
+      "download_url": "https://media.tenor.com/Et2skNYZGVUAAAPo/dragon-ball-z-fusion-reborn.mp4",
+      "sha256": "1c80714f53a2bbb5f7a25489f6054eb98b586c03a75cb6c906b9fd5f356c1e5a",
+      "duration": 6.2062,
+      "dimensions": [
+        498,
+        374
+      ],
+      "description": "a cartoon of a man with his mouth open and a bubble in the background",
+      "publisher": "DragonBallPerfectShots",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "goku_smile",
+      "file": "goku_smile.mp4",
+      "type": "video",
+      "query": "Goku smiling Dragon Ball",
+      "source_url": "https://tenor.com/view/goku-smile-smiling-dbz-dragon-ball-gif-11301976189496723891",
+      "download_url": "https://media.tenor.com/nNivdsLgCbMAAAPo/goku-smile.mp4",
+      "sha256": "2be844f5c16a10a45e0e817838f0b68ad269eac92e32100961b78b0cee8d9b43",
+      "duration": 3.64,
+      "dimensions": [
+        498,
+        374
+      ],
+      "description": "a close up of a cartoon character with a pink background .",
+      "publisher": "mook2001",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "hulk",
+      "file": "hulk.mp4",
+      "type": "video",
+      "query": "Hulk roar marvel",
+      "source_url": "https://tenor.com/view/the-incredible-hulk-hulk-roar-hulk-roar-mcu-gif-18494693",
+      "download_url": "https://media.tenor.com/qaB8il6fS2YAAAPo/the-incredible-hulk-hulk.mp4",
+      "sha256": "5ac76d363b6a21eb9965c4cbccbd13de9d03d7f472ec96d740e29554e3869e3b",
+      "duration": 3.6,
+      "dimensions": [
+        640,
+        270
+      ],
+      "description": "a hulk is standing in front of a burning building with a yellow sign that says hamburger hot sauce on it",
+      "publisher": "masoncarr2244",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "thanos",
+      "file": "thanos_clean.mp4",
+      "type": "video",
+      "query": "Thanos smiling marvel",
+      "source_url": "https://tenor.com/view/thanos-enjoy-marvel-madtitan-titan-gif-14438482",
+      "download_url": "https://media.tenor.com/r1AaquMMdowAAAPo/thanos-enjoy.mp4",
+      "sha256": "7fda5e89a58bfcdb716f03f7b727f8594cc27ef6109fa259530319141f5208b4",
+      "duration": 5.85,
+      "dimensions": [
+        640,
+        360
+      ],
+      "description": "thanos from avengers endgame is going to enjoy it",
+      "publisher": "DEZtheDECIMATOR",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "thor",
+      "file": "thor.mp4",
+      "type": "video",
+      "query": "Thor lightning Avengers",
+      "source_url": "https://tenor.com/view/thor-avengers-infinity-war-thunder-lightning-gif-15116476",
+      "download_url": "https://media.tenor.com/Aa66xUzSzSEAAAPo/thor-avengers.mp4",
+      "sha256": "88ff31fdeceae9ee8cdeaa950c3426006af04861ee16c77ae8b49c6f0bc6ceef",
+      "duration": 4.21,
+      "dimensions": [
+        640,
+        360
+      ],
+      "description": "thor is flying through the air with a lightning bolt behind him .",
+      "publisher": "ReidMeane",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    },
+    {
+      "id": "tony_stark",
+      "file": "tony_stark.mp4",
+      "type": "video",
+      "query": "Tony Stark reaction Iron Man",
+      "source_url": "https://tenor.com/view/iron-man-rober-downey-jr-robert-downey-robert-kirk-gif-2650610139719901202",
+      "download_url": "https://media.tenor.com/JMjb4OgNoBIAAAPo/iron-man-rober-downey-jr.mp4",
+      "sha256": "e5bd71886545134843b11a34739fc86fc3957461fb62742ab20f33dca2c2d428",
+      "duration": 2.9,
+      "dimensions": [
+        400,
+        300
+      ],
+      "description": "a close up of a man wearing a superhero costume .",
+      "publisher": "Wingman143",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required"
+    }
+  ],
+  "source_credit": "ANIME / FILM EXCERPTS - FAN CROSSOVER REVIEW",
+  "enhancement": "clean-light",
+  "video_only": true,
+  "single_pass": true,
+  "visual_basis": "New character-specific moving footage with scene reasons; all crossover causality/dialogue remains hypothetical.",
+  "scenes": [
+    {
+      "start": 0.0,
+      "end": 3.1578947368421053,
+      "text": "What if Goku joined the Avengers? Earth's insurance company is cooked.",
+      "label": "EARTH IS FINANCIALLY COOKED",
+      "shots": [
+        {
+          "asset": "goku_smile",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "What if Goku joined the Avengers? Earth's insurance company is cooked.",
+          "match_reason": "Goku is the protagonist; his expression illustrates imagined confidence/reaction, not an actual MCU scene.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 3.1578947368421053,
+      "end": 6.315789473684211,
+      "text": "Tony sees the hair and asks, is that in the dress code?",
+      "label": "THE DRESS CODE",
+      "shots": [
+        {
+          "asset": "tony_stark",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Tony sees the hair and asks, is that in the dress code?",
+          "match_reason": "Tony Stark directly illustrates the named character reacting to appearance or hypothetical costs.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 6.315789473684211,
+      "end": 9.473684210526315,
+      "text": "Brother, your team hired a green rage fridge. Relax.",
+      "label": "THE GREEN RAGE FRIDGE",
+      "shots": [
+        {
+          "asset": "hulk",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Brother, your team hired a green rage fridge. Relax.",
+          "match_reason": "Hulk directly illustrates the green rage-fridge metaphor.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 9.473684210526315,
+      "end": 12.631578947368421,
+      "text": "In this crossover, Thor calls himself a god. Goku hears free training partner.",
+      "label": "FREE TRAINING PARTNER",
+      "shots": [
+        {
+          "asset": "thor",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "In this crossover, Thor calls himself a god. Goku hears free training partner.",
+          "match_reason": "Thor directly illustrates the god/training-partner and destructive welcome-party jokes.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 12.631578947368421,
+      "end": 15.789473684210526,
+      "text": "Congratulations. The welcome party now needs a demolition permit.",
+      "label": "THE WELCOME PARTY",
+      "shots": [
+        {
+          "asset": "thor",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Congratulations. The welcome party now needs a demolition permit.",
+          "match_reason": "Thor directly illustrates the god/training-partner and destructive welcome-party jokes.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 15.789473684210526,
+      "end": 18.94736842105263,
+      "text": "Captain America says they need a plan.",
+      "label": "CAPTAIN HAS A PLAN",
+      "shots": [
+        {
+          "asset": "captain_america",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Captain America says they need a plan.",
+          "match_reason": "Captain America directly illustrates the named leader and hypothetical plan discussion.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 18.94736842105263,
+      "end": 22.105263157894736,
+      "text": "My guy, this man thinks strategy means screaming until his hair updates.",
+      "label": "SCREAMING IS NOT A STRATEGY",
+      "shots": [
+        {
+          "asset": "goku_scream",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "My guy, this man thinks strategy means screaming until his hair updates.",
+          "match_reason": "Goku powering up directly illustrates the screaming/hair-change joke.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 22.105263157894736,
+      "end": 25.263157894736842,
+      "text": "Then they order lunch. Motherflicker, they need a second budget.",
+      "label": "LUNCH REQUIRES FUNDING",
+      "shots": [
+        {
+          "asset": "goku_food",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Then they order lunch. Motherflicker, they need a second budget.",
+          "match_reason": "Goku eating directly illustrates the lunch, food budget and grocery-card jokes.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 25.263157894736842,
+      "end": 28.42105263157895,
+      "text": "Goku calls it a snack. Tony calls his accountant.",
+      "label": "CALL THE ACCOUNTANT",
+      "shots": [
+        {
+          "asset": "tony_stark",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Goku calls it a snack. Tony calls his accountant.",
+          "match_reason": "Tony Stark directly illustrates the named character reacting to appearance or hypothetical costs.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 28.42105263157895,
+      "end": 31.57894736842105,
+      "text": "Thanos starts the usual galaxy speech.",
+      "label": "HERE COMES THE SPEECH",
+      "shots": [
+        {
+          "asset": "thanos",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Thanos starts the usual galaxy speech.",
+          "match_reason": "Thanos directly illustrates the purple villain and invented response to Goku; no original crossover fight is claimed. Crop the lower 20 percent to remove the source subtitle while retaining the face and upper body.",
+          "match_type": "fan_crossover_illustration",
+          "crop_bottom": 0.2
+        }
+      ]
+    },
+    {
+      "start": 31.57894736842105,
+      "end": 34.73684210526316,
+      "text": "Goku asks, are you strong, or just purple and unemployed?",
+      "label": "PURPLE AND UNEMPLOYED",
+      "shots": [
+        {
+          "asset": "thanos",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Goku asks, are you strong, or just purple and unemployed?",
+          "match_reason": "Thanos directly illustrates the purple villain and invented response to Goku; no original crossover fight is claimed. Crop the lower 20 percent to remove the source subtitle while retaining the face and upper body.",
+          "match_type": "fan_crossover_illustration",
+          "crop_bottom": 0.2
+        }
+      ]
+    },
+    {
+      "start": 34.73684210526316,
+      "end": 37.89473684210526,
+      "text": "All that villain aura. Suddenly he is getting checked like carry on luggage.",
+      "label": "AURA MEETS AIRPORT SECURITY",
+      "shots": [
+        {
+          "asset": "goku_fight",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "All that villain aura. Suddenly he is getting checked like carry on luggage.",
+          "match_reason": "Goku action footage illustrates his hypothetical fighting/protective role. No claim the original opponent is Thanos.",
+          "match_type": "fan_crossover_illustration"
+        },
+        {
+          "asset": "thanos",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "All that villain aura. Suddenly he is getting checked like carry on luggage.",
+          "match_reason": "Thanos directly illustrates the purple villain and invented response to Goku; no original crossover fight is claimed. Crop the lower 20 percent to remove the source subtitle while retaining the face and upper body.",
+          "match_type": "fan_crossover_illustration",
+          "crop_bottom": 0.2
+        }
+      ]
+    },
+    {
+      "start": 37.89473684210526,
+      "end": 41.05263157894737,
+      "text": "But Goku gives the bad guy a chance to power up.",
+      "label": "HE LETS THE VILLAIN POWER UP",
+      "shots": [
+        {
+          "asset": "goku_smile",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "But Goku gives the bad guy a chance to power up.",
+          "match_reason": "Goku is the protagonist; his expression illustrates imagined confidence/reaction, not an actual MCU scene.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 41.05263157894737,
+      "end": 44.21052631578947,
+      "text": "Oh, fantastic. Our emergency has a premium subscription.",
+      "label": "PREMIUM EMERGENCY",
+      "shots": [
+        {
+          "asset": "thanos",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Oh, fantastic. Our emergency has a premium subscription.",
+          "match_reason": "Thanos directly illustrates the purple villain and invented response to Goku; no original crossover fight is claimed. Crop the lower 20 percent to remove the source subtitle while retaining the face and upper body.",
+          "match_type": "fan_crossover_illustration",
+          "crop_bottom": 0.2
+        }
+      ]
+    },
+    {
+      "start": 44.21052631578947,
+      "end": 47.36842105263158,
+      "text": "The Avengers are begging him to finish the fight.",
+      "label": "PLEASE FINISH THE FIGHT",
+      "shots": [
+        {
+          "asset": "avengers_team",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "The Avengers are begging him to finish the fight.",
+          "match_reason": "Avengers group footage illustrates the team during its hypothetical reactions and final choice.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 47.36842105263158,
+      "end": 50.526315789473685,
+      "text": "He wants a rematch. This walking side quest needs adult supervision.",
+      "label": "WALKING SIDE QUEST",
+      "shots": [
+        {
+          "asset": "goku_smile",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "He wants a rematch. This walking side quest needs adult supervision.",
+          "match_reason": "Goku is the protagonist; his expression illustrates imagined confidence/reaction, not an actual MCU scene.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 50.526315789473685,
+      "end": 53.68421052631579,
+      "text": "Still, they would want him protecting Earth.",
+      "label": "EARTH STILL NEEDS A HERO",
+      "shots": [
+        {
+          "asset": "goku_fight",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Still, they would want him protecting Earth.",
+          "match_reason": "Goku action footage illustrates his hypothetical fighting/protective role. No claim the original opponent is Thanos.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 53.68421052631579,
+      "end": 56.8421052631579,
+      "text": "Just keep him away from mission planning and the grocery card.",
+      "label": "CONFISCATE THE GROCERY CARD",
+      "shots": [
+        {
+          "asset": "goku_food",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Just keep him away from mission planning and the grocery card.",
+          "match_reason": "Goku eating directly illustrates the lunch, food budget and grocery-card jokes.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    },
+    {
+      "start": 56.8421052631579,
+      "end": 60.0,
+      "text": "Would he save the team, or bankrupt it before the next invasion?",
+      "label": "SAVE THE TEAM OR BANKRUPT IT",
+      "shots": [
+        {
+          "asset": "avengers_team",
+          "trim_start": 0,
+          "fit": "contain",
+          "narration_beat": "Would he save the team, or bankrupt it before the next invasion?",
+          "match_reason": "Avengers group footage illustrates the team during its hypothetical reactions and final choice.",
+          "match_type": "fan_crossover_illustration"
+        }
+      ]
+    }
+  ]
+}

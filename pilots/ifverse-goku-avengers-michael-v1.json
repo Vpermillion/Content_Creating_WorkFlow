@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-goku-avengers-michael-v1",
+  "channel_id": "ifverse_anime",
+  "language": "en",
+  "title": "What if Goku joined the Avengers? The budget is cooked.",
+  "profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 45,
+    "max_seconds": 75
+  },
+  "platforms": [
+    "youtube"
+  ],
+  "target_duration_seconds": 60,
+  "script_style": "ifverse-playful-roast-v2",
+  "assumptions": [
+    "Fan-made Dragon Ball/Marvel crossover; this is an invented alternate scenario, not canon or an official trailer.",
+    "Quoted character reactions and power outcomes are invented comedic narration, not authentic movie dialogue.",
+    "Existing clips can show the named characters but cannot literally depict Goku fighting Thanos; such beats are illustrative juxtaposition."
+  ],
+  "scenes": [
+    {
+      "label": "EARTH IS FINANCIALLY COOKED",
+      "text": "What if Goku joined the Avengers? Earth's insurance company is cooked."
+    },
+    {
+      "label": "THE DRESS CODE",
+      "text": "Tony sees the hair and asks, is that in the dress code?"
+    },
+    {
+      "label": "THE GREEN RAGE FRIDGE",
+      "text": "Brother, your team hired a green rage fridge. Relax."
+    },
+    {
+      "label": "FREE TRAINING PARTNER",
+      "text": "In this crossover, Thor calls himself a god. Goku hears free training partner."
+    },
+    {
+      "label": "THE WELCOME PARTY",
+      "text": "Congratulations. The welcome party now needs a demolition permit."
+    },
+    {
+      "label": "CAPTAIN HAS A PLAN",
+      "text": "Captain America says they need a plan."
+    },
+    {
+      "label": "SCREAMING IS NOT A STRATEGY",
+      "text": "My guy, this man thinks strategy means screaming until his hair updates."
+    },
+    {
+      "label": "LUNCH REQUIRES FUNDING",
+      "text": "Then they order lunch. Motherflicker, they need a second budget."
+    },
+    {
+      "label": "CALL THE ACCOUNTANT",
+      "text": "Goku calls it a snack. Tony calls his accountant."
+    },
+    {
+      "label": "HERE COMES THE SPEECH",
+      "text": "Thanos starts the usual galaxy speech."
+    },
+    {
+      "label": "PURPLE AND UNEMPLOYED",
+      "text": "Goku asks, are you strong, or just purple and unemployed?"
+    },
+    {
+      "label": "AURA MEETS AIRPORT SECURITY",
+      "text": "All that villain aura. Suddenly he is getting checked like carry on luggage."
+    },
+    {
+      "label": "HE LETS THE VILLAIN POWER UP",
+      "text": "But Goku gives the bad guy a chance to power up."
+    },
+    {
+      "label": "PREMIUM EMERGENCY",
+      "text": "Oh, fantastic. Our emergency has a premium subscription."
+    },
+    {
+      "label": "PLEASE FINISH THE FIGHT",
+      "text": "The Avengers are begging him to finish the fight."
+    },
+    {
+      "label": "WALKING SIDE QUEST",
+      "text": "He wants a rematch. This walking side quest needs adult supervision."
+    },
+    {
+      "label": "EARTH STILL NEEDS A HERO",
+      "text": "Still, they would want him protecting Earth."
+    },
+    {
+      "label": "CONFISCATE THE GROCERY CARD",
+      "text": "Just keep him away from mission planning and the grocery card."
+    },
+    {
+      "label": "SAVE THE TEAM OR BANKRUPT IT",
+      "text": "Would he save the team, or bankrupt it before the next invasion?"
+    }
+  ]
+}

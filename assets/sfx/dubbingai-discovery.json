@@ -3,7 +3,7 @@
   "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
   "article_access": "HTTP 200 using a browser-compatible standard request",
   "source_html_sha256": "79f985e9841fb4a631f6462ad7d0aec3acceab2001d2bce9d9fd1fd24c5a230d",
-  "status": "discovery_only_not_a_verified_mix_catalog",
+  "status": "3_selected_clips_acquired_on_production_runner_14_discovery_only",
   "required_audio_host": "dvi.dubbingai.io",
   "discovered_recordings": [
     {
@@ -21,9 +21,10 @@
         "shock",
         "punchline"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed_on_production_runner",
+      "sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "duration_seconds": 3.004082
     },
     {
       "id": "dubbingai_rizz_effect",
@@ -39,9 +40,10 @@
         "confidence",
         "flirting"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed_on_production_runner",
+      "sha256": "0bf4d137589d0c07243bf5ba104f40ceb78ef003fbee6dad4dea92ee348062fc",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "duration_seconds": 2.272653
     },
     {
       "id": "dubbingai_walter_family",
@@ -112,9 +114,10 @@
         "fail",
         "roast"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed_on_production_runner",
+      "sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "duration_seconds": 1.959184
     },
     {
       "id": "dubbingai_stuka_siren",

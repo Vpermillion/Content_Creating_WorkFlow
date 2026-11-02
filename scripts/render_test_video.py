@@ -321,7 +321,8 @@ def retime_plan(original, segments, root, narration):
         scene.update(speech)
         scene['shots'] = selected
     plan.update(narration_sha256=digest(narration), video_only=True, single_pass=True,
-                enhancement='anime-light', source_credit='ONLINE ANIME EXCERPTS / REVIEW DRAFT',
+                enhancement=plan.get('enhancement', 'anime-light'),
+                source_credit=plan.get('source_credit', 'ONLINE ANIME EXCERPTS / REVIEW DRAFT'),
                 publishing_authorized=False)
     return plan
 
@@ -472,7 +473,7 @@ def run(request, output, models):
                            'recognition_mode': request.get('caption_mode', 'whole_audio'),
                            'phrases': len(captions), 'script_token_agreement': agreement,
                            'reused_verified_timing': bool(caption_source)},
-              'footage': 'Traced online Naruto clips with reviewed narration-beat matching',
+              'footage': 'Traced moving clips with per-scene narration reasons and recorded source provenance',
               'edit_plan': request.get('edit_plan', 'edits/alpha-anime-video.v2.json'),
               'script': request.get('script', 'pilots/alpha-anime-001.json'),
               'script_style': source.get('script_style'),

@@ -105,6 +105,9 @@ def validated_inputs(plan, root, narration):
                 raise ValueError('Video-only edit cannot include still images')
             if shot.get("fit", "cover") not in {"cover", "contain"}:
                 raise ValueError("Unknown framing mode")
+            crop = shot.get('crop_bottom', 0)
+            if isinstance(crop, bool) or not isinstance(crop, (int, float)) or not math.isfinite(crop) or not 0 <= crop <= .25:
+                raise ValueError('Invalid source-bottom crop')
             if not shot.get("match_reason"):
                 raise ValueError("Every shot must explain its narration match")
         previous = scene["end"]
@@ -180,6 +183,9 @@ def render_edit(plan, root, narration, output):
                        f"[f]scale={w}:{int(h*.73)}:force_original_aspect_ratio=decrease[f2];[b2][f2]overlay=(W-w)/2:(H-h)/2")
             else:
                 graph=f"[0:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h}:x='(iw-ow)*{focus}':y='(ih-oh)*0.45'"
+            bottom = shot.get('crop_bottom', 0)
+            if bottom:
+                graph = graph.replace('[0:v]', f'[0:v]crop=iw:trunc(ih*(1-{bottom})/2)*2:0:0,')
             enhancement = plan.get('enhancement', 'off')
             if enhancement != 'off':
                 pre, post = PRESETS[enhancement]

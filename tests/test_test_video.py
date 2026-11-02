@@ -179,13 +179,16 @@ class TestVideoPlanTests(unittest.TestCase):
     def test_retiming_preserves_original_plan_and_adds_only_matching_shots(self):
         original = {'scenes': [{'start': 0, 'end': 2, 'text': 'Old', 'label': 'TEST',
                                'shots': [{'asset': 'a', 'fit': 'cover', 'match_reason': 'Narrative match'}]}],
-                    'assets': [{'id': 'a', 'file': 'source.mp4'}]}
+                    'assets': [{'id': 'a', 'file': 'source.mp4'}],
+                    'source_credit': 'ANIME AND FILM / CROSSOVER REVIEW', 'enhancement': 'clean-light'}
         speech = [{'start': 0, 'end': 5, 'text': 'New narration', 'label': 'TEST'}]
         with patch.object(module.media, 'duration', return_value=2), patch.object(module, 'digest', return_value='checksum'):
             result = module.retime_plan(original, speech, Path('/assets'), Path('/speech.wav'))
         self.assertEqual(len(result['scenes'][0]['shots']), 3)
         self.assertEqual(result['scenes'][0]['text'], 'New narration')
         self.assertEqual(original['scenes'][0]['end'], 2)
+        self.assertEqual(result['source_credit'], original['source_credit'])
+        self.assertEqual(result['enhancement'], 'clean-light')
         self.assertTrue(all(s['asset'] == 'a' and s['fit'] == 'contain' for s in result['scenes'][0]['shots']))
 
     def test_inadequate_matching_footage_fails_instead_of_inserting_other_clips(self):

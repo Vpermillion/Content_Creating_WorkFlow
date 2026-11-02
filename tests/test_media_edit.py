@@ -50,6 +50,7 @@ class ImportedMediaTests(unittest.TestCase):
     def test_single_pass_video_cut_has_complete_tracks_and_no_intermediate_mp4s(self):
         plan=copy.deepcopy(self.plan);plan.update(video_only=True,single_pass=True,source_credit='GENERATED VIDEO FIXTURE')
         plan['scenes'][0]['shots'][0]['asset']='movie'
+        plan['scenes'][0]['shots'][0]['crop_bottom']=.2
         result=render_edit(plan,self.assets,self.audio,self.root/'direct')
         info=media.probe(result)
         for stream in info['streams']:
