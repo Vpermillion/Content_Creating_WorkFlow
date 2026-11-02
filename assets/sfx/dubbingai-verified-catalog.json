@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "dubbingai_vine_boom",
+      "title": "Vine boom sound effect",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "Parse",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918194306-4907017.mp3",
+      "description": "A deep impact for an insult landing, a sudden discovery or a dramatic reaction.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "boom",
+        "roast",
+        "shock",
+        "punchline"
+      ],
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_vine_boom.mp3",
+      "duration_seconds": 3.004082,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+      "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+    },
+    {
+      "id": "dubbingai_faaah",
+      "title": "faaah",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "dubbing18102",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783923777332-8362441.mp3",
+      "description": "A vocal reaction for an unbelievable decision, frustration or a failed plan.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "reaction",
+        "disbelief",
+        "fail",
+        "roast"
+      ],
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_faaah.mp3",
+      "duration_seconds": 1.959184,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+      "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+    },
+    {
+      "id": "dubbingai_rizz_effect",
+      "title": "Rizz Effect",
+      "publisher": "Dubbing AI community",
+      "uploader_as_listed": "Parse",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918641890-1251662.mp3",
+      "description": "A brief romantic-sounding cue for swagger, flirting or sarcastic confidence.",
+      "description_origin": "Project-authored paraphrase of the collection metadata",
+      "tags": [
+        "rizz",
+        "confidence",
+        "flirting"
+      ],
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "0bf4d137589d0c07243bf5ba104f40ceb78ef003fbee6dad4dea92ee348062fc",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_rizz_effect.mp3",
+      "duration_seconds": 2.272653,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+      "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+    }
+  ]
+}

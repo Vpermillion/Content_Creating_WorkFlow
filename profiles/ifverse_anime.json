@@ -16,12 +16,12 @@
   "language_confirmed": true,
   "narrator": {
     "provider": "kokoro-onnx",
-    "voice": "af_heart",
+    "voice": "am_michael",
     "candidate_if_english": "kokoro",
-    "status": "tested_provisional_review_voice",
+    "status": "owner_selected_tested_in_new_story_review",
     "version": "0.6.1",
     "device": "cpu",
-    "voice_preference_confirmed": false,
+    "voice_preference_confirmed": true,
     "options_catalog": "assets/voices/kokoro-options.json"
   },
   "footage": {
@@ -78,12 +78,12 @@
   "sound_effects": {
     "mode": "scripted_comedy_cues",
     "instructions": "docs/SOUND_EFFECTS.md",
-    "catalog": "assets/sfx/catalog.json",
+    "catalog": "assets/sfx/dubbingai-verified-catalog.json",
     "timing": "exact spoken-phrase anchors from the matching final-audio alignment receipt; word times estimated",
     "speech_duck_db": 6,
     "selection": "descriptions/tags plus an explicit script-specific reason; avoid every-sentence effects",
     "status": "tested_in_hosted_anime_review",
     "requested_collection": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
-    "requested_collection_status": "article_read_audio_host_activation_download_and_checksums_pending"
+    "requested_collection_status": "three_actual_clips_acquired_hashed_and_used_in_michael_crossover_review"
   }
 }

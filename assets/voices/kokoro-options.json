@@ -12,7 +12,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_aoede",
@@ -20,7 +21,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_bella",
@@ -28,7 +30,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_heart",
@@ -36,7 +39,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": true,
-      "completed_review_test": true
+      "completed_review_test": true,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_jessica",
@@ -44,7 +48,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_kore",
@@ -52,7 +57,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_nicole",
@@ -60,7 +66,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_nova",
@@ -68,7 +75,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_river",
@@ -76,7 +84,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_sarah",
@@ -84,7 +93,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "af_sky",
@@ -92,7 +102,8 @@
       "locale": "en-US",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "am_adam",
@@ -100,7 +111,8 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "am_echo",
@@ -108,7 +120,8 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "am_eric",
@@ -116,7 +129,8 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "am_fenrir",
@@ -124,7 +138,8 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "am_liam",
@@ -132,7 +147,8 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "am_michael",
@@ -140,7 +156,9 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": true,
-      "completed_review_test": false
+      "completed_review_test": true,
+      "selected_default_by_owner": true,
+      "completed_review_request": "ifverse-michael-goku-avengers-01"
     },
     {
       "id": "am_onyx",
@@ -148,7 +166,8 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "am_puck",
@@ -156,7 +175,8 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "am_santa",
@@ -164,7 +184,8 @@
       "locale": "en-US",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "bf_alice",
@@ -172,7 +193,8 @@
       "locale": "en-GB",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "bf_emma",
@@ -180,7 +202,8 @@
       "locale": "en-GB",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "bf_isabella",
@@ -188,7 +211,8 @@
       "locale": "en-GB",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "bf_lily",
@@ -196,7 +220,8 @@
       "locale": "en-GB",
       "voice_category": "female",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "bm_daniel",
@@ -204,7 +229,8 @@
       "locale": "en-GB",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "bm_fable",
@@ -212,7 +238,8 @@
       "locale": "en-GB",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "bm_george",
@@ -220,7 +247,8 @@
       "locale": "en-GB",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     },
     {
       "id": "bm_lewis",
@@ -228,7 +256,8 @@
       "locale": "en-GB",
       "voice_category": "male",
       "enabled_in_review_runner": false,
-      "completed_review_test": false
+      "completed_review_test": false,
+      "selected_default_by_owner": false
     }
   ]
 }
