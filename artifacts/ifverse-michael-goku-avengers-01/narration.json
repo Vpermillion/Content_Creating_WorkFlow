@@ -1,0 +1,142 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "device": "cpu",
+  "new_test_version": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.8221381267738885,
+      "text": "What if Goku joined the Avengers? Earth's insurance company is cooked.",
+      "label": "EARTH IS FINANCIALLY COOKED"
+    },
+    {
+      "start": 3.8221381267738885,
+      "end": 6.773888363292338,
+      "text": "Tony sees the hair and asks, is that in the dress code?",
+      "label": "THE DRESS CODE"
+    },
+    {
+      "start": 6.773888363292338,
+      "end": 9.801324503311259,
+      "text": "Brother, your team hired a green rage fridge. Relax.",
+      "label": "THE GREEN RAGE FRIDGE"
+    },
+    {
+      "start": 9.801324503311259,
+      "end": 14.153263954588459,
+      "text": "In this crossover, Thor calls himself a god. Goku hears free training partner.",
+      "label": "FREE TRAINING PARTNER"
+    },
+    {
+      "start": 14.153263954588459,
+      "end": 17.956480605487233,
+      "text": "Congratulations. The welcome party now needs a demolition permit.",
+      "label": "THE WELCOME PARTY"
+    },
+    {
+      "start": 17.956480605487233,
+      "end": 19.962157048249768,
+      "text": "Captain America says they need a plan.",
+      "label": "CAPTAIN HAS A PLAN"
+    },
+    {
+      "start": 19.962157048249768,
+      "end": 23.784295175023654,
+      "text": "My guy, this man thinks strategy means screaming until his hair updates.",
+      "label": "SCREAMING IS NOT A STRATEGY"
+    },
+    {
+      "start": 23.784295175023654,
+      "end": 26.88741721854305,
+      "text": "Then they order lunch. Motherflicker, they need a second budget.",
+      "label": "LUNCH REQUIRES FUNDING"
+    },
+    {
+      "start": 26.88741721854305,
+      "end": 29.706717123935668,
+      "text": "Goku calls it a snack. Tony calls his accountant.",
+      "label": "CALL THE ACCOUNTANT"
+    },
+    {
+      "start": 29.706717123935668,
+      "end": 31.95837275307474,
+      "text": "Thanos starts the usual galaxy speech.",
+      "label": "HERE COMES THE SPEECH"
+    },
+    {
+      "start": 31.95837275307474,
+      "end": 35.13718070009461,
+      "text": "Goku asks, are you strong, or just purple and unemployed?",
+      "label": "PURPLE AND UNEMPLOYED"
+    },
+    {
+      "start": 35.13718070009461,
+      "end": 38.99716177861874,
+      "text": "All that villain aura. Suddenly he is getting checked like carry on luggage.",
+      "label": "AURA MEETS AIRPORT SECURITY"
+    },
+    {
+      "start": 38.99716177861874,
+      "end": 41.627246925260174,
+      "text": "But Goku gives the bad guy a chance to power up.",
+      "label": "HE LETS THE VILLAIN POWER UP"
+    },
+    {
+      "start": 41.627246925260174,
+      "end": 45.108798486281934,
+      "text": "Oh, fantastic. Our emergency has a premium subscription.",
+      "label": "PREMIUM EMERGENCY"
+    },
+    {
+      "start": 45.108798486281934,
+      "end": 47.56859035004731,
+      "text": "The Avengers are begging him to finish the fight.",
+      "label": "PLEASE FINISH THE FIGHT"
+    },
+    {
+      "start": 47.56859035004731,
+      "end": 51.371807000946085,
+      "text": "He wants a rematch. This walking side quest needs adult supervision.",
+      "label": "WALKING SIDE QUEST"
+    },
+    {
+      "start": 51.371807000946085,
+      "end": 53.358561967833495,
+      "text": "Still, they would want him protecting Earth.",
+      "label": "EARTH STILL NEEDS A HERO"
+    },
+    {
+      "start": 53.358561967833495,
+      "end": 56.537369914853365,
+      "text": "Just keep him away from mission planning and the grocery card.",
+      "label": "CONFISCATE THE GROCERY CARD"
+    },
+    {
+      "start": 56.537369914853365,
+      "end": 60.0,
+      "text": "Would he save the team, or bankrupt it before the next invasion?",
+      "label": "SAVE THE TEAM OR BANKRUPT IT"
+    }
+  ],
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  },
+  "duration_adjustment": {
+    "original_seconds": 67.648,
+    "target_seconds": 60,
+    "actual_seconds": 60.0,
+    "tempo": 1.1274666666666666,
+    "original_sha256": "7c9af812a9dfe8b9f3b0e1a4324d0ed293b02a40c33b1649bffb290b47a08731",
+    "pitch_preserved": true
+  },
+  "sha256": "429a3378da2b9bb64533666f233e8ce8d663864ddbe6939fa59d34f0de71324c"
+}

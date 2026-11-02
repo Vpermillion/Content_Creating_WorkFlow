@@ -1,0 +1,84 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.04,Caption,,0,0,0,,What if Goku joined the
+Dialogue: 0,0:00:01.04,0:00:01.98,Caption,,0,0,0,,Avengers?
+Dialogue: 0,0:00:01.98,0:00:04.06,Caption,,0,0,0,,Earth's insurance company is\Ncooked.
+Dialogue: 0,0:00:04.06,0:00:04.80,Caption,,0,0,0,,Tony sees the hair and
+Dialogue: 0,0:00:04.80,0:00:05.98,Caption,,0,0,0,,asks, is that in the
+Dialogue: 0,0:00:05.98,0:00:06.92,Caption,,0,0,0,,dress code?
+Dialogue: 0,0:00:06.92,0:00:07.78,Caption,,0,0,0,,Brother, your team hired a
+Dialogue: 0,0:00:07.78,0:00:09.84,Caption,,0,0,0,,green rage fridge. Relax.
+Dialogue: 0,0:00:09.84,0:00:11.18,Caption,,0,0,0,,In this crossover, Thor calls
+Dialogue: 0,0:00:11.18,0:00:12.62,Caption,,0,0,0,,himself a god.
+Dialogue: 0,0:00:12.62,0:00:14.52,Caption,,0,0,0,,Goku hears free training\Npartner.
+Dialogue: 0,0:00:14.52,0:00:15.60,Caption,,0,0,0,,Congratulations.
+Dialogue: 0,0:00:15.60,0:00:16.88,Caption,,0,0,0,,The welcome party now needs
+Dialogue: 0,0:00:16.88,0:00:18.20,Caption,,0,0,0,,a demolition permit.
+Dialogue: 0,0:00:18.20,0:00:19.32,Caption,,0,0,0,,Captain America says they need
+Dialogue: 0,0:00:19.32,0:00:20.04,Caption,,0,0,0,,a plan.
+Dialogue: 0,0:00:20.04,0:00:21.20,Caption,,0,0,0,,My guy, this man thinks
+Dialogue: 0,0:00:21.20,0:00:22.96,Caption,,0,0,0,,strategy means screaming until\Nhis
+Dialogue: 0,0:00:22.96,0:00:23.78,Caption,,0,0,0,,hair updates.
+Dialogue: 0,0:00:23.78,0:00:25.18,Caption,,0,0,0,,Then they order lunch.
+Dialogue: 0,0:00:25.18,0:00:26.96,Caption,,0,0,0,,Motherflicker, they need a\Nsecond budget.
+Dialogue: 0,0:00:26.96,0:00:28.56,Caption,,0,0,0,,Goku calls it a snack.
+Dialogue: 0,0:00:28.56,0:00:29.76,Caption,,0,0,0,,Tony calls his accountant.
+Dialogue: 0,0:00:29.76,0:00:31.14,Caption,,0,0,0,,Thanos starts the usual galaxy
+Dialogue: 0,0:00:31.14,0:00:32.04,Caption,,0,0,0,,speech.
+Dialogue: 0,0:00:32.04,0:00:33.62,Caption,,0,0,0,,Goku asks, are you strong,
+Dialogue: 0,0:00:33.62,0:00:35.16,Caption,,0,0,0,,or just purple and unemployed?
+Dialogue: 0,0:00:35.16,0:00:36.62,Caption,,0,0,0,,All that villain aura.
+Dialogue: 0,0:00:36.62,0:00:37.64,Caption,,0,0,0,,Suddenly he is getting checked
+Dialogue: 0,0:00:37.64,0:00:39.02,Caption,,0,0,0,,like carry on luggage.
+Dialogue: 0,0:00:39.02,0:00:40.00,Caption,,0,0,0,,But Goku gives the bad
+Dialogue: 0,0:00:40.00,0:00:41.70,Caption,,0,0,0,,guy a chance to power up.
+Dialogue: 0,0:00:41.70,0:00:43.00,Caption,,0,0,0,,Oh, fantastic.
+Dialogue: 0,0:00:43.00,0:00:44.18,Caption,,0,0,0,,Our emergency has a premium
+Dialogue: 0,0:00:44.18,0:00:45.18,Caption,,0,0,0,,subscription.
+Dialogue: 0,0:00:45.18,0:00:46.56,Caption,,0,0,0,,The Avengers are begging him
+Dialogue: 0,0:00:46.56,0:00:47.57,Caption,,0,0,0,,to finish the fight.
+Dialogue: 0,0:00:47.57,0:00:48.87,Caption,,0,0,0,,He wants a rematch.
+Dialogue: 0,0:00:48.87,0:00:50.19,Caption,,0,0,0,,This walking side quest needs
+Dialogue: 0,0:00:50.19,0:00:51.43,Caption,,0,0,0,,adult supervision.
+Dialogue: 0,0:00:51.43,0:00:52.31,Caption,,0,0,0,,Still, they would want him
+Dialogue: 0,0:00:52.31,0:00:53.41,Caption,,0,0,0,,protecting Earth.
+Dialogue: 0,0:00:53.41,0:00:54.37,Caption,,0,0,0,,Just keep him away from
+Dialogue: 0,0:00:54.37,0:00:55.77,Caption,,0,0,0,,mission planning and the grocery
+Dialogue: 0,0:00:55.77,0:00:56.59,Caption,,0,0,0,,card.
+Dialogue: 0,0:00:56.59,0:00:57.77,Caption,,0,0,0,,Would he save the team,
+Dialogue: 0,0:00:57.77,0:00:59.11,Caption,,0,0,0,,or bankrupt it before the
+Dialogue: 0,0:00:59.11,0:00:59.97,Caption,,0,0,0,,next invasion?
+Dialogue: 1,0:00:00.00,0:00:03.82,Heading,,0,0,0,,EARTH IS FINANCIALLY COOKED
+Dialogue: 1,0:00:03.82,0:00:06.77,Heading,,0,0,0,,THE DRESS CODE
+Dialogue: 1,0:00:06.77,0:00:09.80,Heading,,0,0,0,,THE GREEN RAGE FRIDGE
+Dialogue: 1,0:00:09.80,0:00:14.15,Heading,,0,0,0,,FREE TRAINING PARTNER
+Dialogue: 1,0:00:14.15,0:00:17.96,Heading,,0,0,0,,THE WELCOME PARTY
+Dialogue: 1,0:00:17.96,0:00:19.96,Heading,,0,0,0,,CAPTAIN HAS A PLAN
+Dialogue: 1,0:00:19.96,0:00:23.78,Heading,,0,0,0,,SCREAMING IS NOT A STRATEGY
+Dialogue: 1,0:00:23.78,0:00:26.89,Heading,,0,0,0,,LUNCH REQUIRES FUNDING
+Dialogue: 1,0:00:26.89,0:00:29.71,Heading,,0,0,0,,CALL THE ACCOUNTANT
+Dialogue: 1,0:00:29.71,0:00:31.96,Heading,,0,0,0,,HERE COMES THE SPEECH
+Dialogue: 1,0:00:31.96,0:00:35.14,Heading,,0,0,0,,PURPLE AND UNEMPLOYED
+Dialogue: 1,0:00:35.14,0:00:39.00,Heading,,0,0,0,,AURA MEETS AIRPORT SECURITY
+Dialogue: 1,0:00:39.00,0:00:41.63,Heading,,0,0,0,,HE LETS THE VILLAIN POWER UP
+Dialogue: 1,0:00:41.63,0:00:45.11,Heading,,0,0,0,,PREMIUM EMERGENCY
+Dialogue: 1,0:00:45.11,0:00:47.57,Heading,,0,0,0,,PLEASE FINISH THE FIGHT
+Dialogue: 1,0:00:47.57,0:00:51.37,Heading,,0,0,0,,WALKING SIDE QUEST
+Dialogue: 1,0:00:51.37,0:00:53.36,Heading,,0,0,0,,EARTH STILL NEEDS A HERO
+Dialogue: 1,0:00:53.36,0:00:56.54,Heading,,0,0,0,,CONFISCATE THE GROCERY CARD
+Dialogue: 1,0:00:56.54,0:01:00.00,Heading,,0,0,0,,SAVE THE TEAM OR BANKRUPT IT
+Dialogue: 1,0:00:00.00,0:01:00.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:00.00,Credit,,0,0,0,,ANIME / FILM EXCERPTS - FAN CROSSOVER REVIEW

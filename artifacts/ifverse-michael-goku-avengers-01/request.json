@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-michael-goku-avengers-01",
+  "channel": "ifverse_anime",
+  "voice": "am_michael",
+  "script": "pilots/ifverse-goku-avengers-michael-v1.json",
+  "edit_plan": "edits/ifverse-goku-avengers-michael-v1.json",
+  "caption_mode": "script_alignment",
+  "caption_model": "base.en",
+  "sound_effects_plan": "edits/ifverse-goku-avengers-sfx-v1.json",
+  "result_branch": "codex/results/ifverse-michael-goku-avengers-01",
+  "publishing_enabled": false
+}
