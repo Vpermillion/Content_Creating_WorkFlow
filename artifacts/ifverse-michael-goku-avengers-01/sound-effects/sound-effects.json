@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "status": "success",
+  "video": "video-sfx.mp4",
+  "duration_seconds": 60.0,
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "insurance company is cooked",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -13,
+      "max_seconds": 1.0,
+      "reason": "A short impact punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 4.1,
+      "end_seconds": 5.1,
+      "source_sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "dress code",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_rizz_effect",
+      "peak_dbfs": -17,
+      "max_seconds": 0.9,
+      "reason": "A short sarcastic swagger cue punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 6.96,
+      "end_seconds": 7.86,
+      "source_sha256": "0bf4d137589d0c07243bf5ba104f40ceb78ef003fbee6dad4dea92ee348062fc",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "green rage fridge",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -16,
+      "max_seconds": 0.8,
+      "reason": "A short reaction punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 9.34,
+      "end_seconds": 10.14,
+      "source_sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "free training partner",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -14,
+      "max_seconds": 0.9,
+      "reason": "A short impact punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 14.559999999999999,
+      "end_seconds": 15.459999999999999,
+      "source_sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "hair updates",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_rizz_effect",
+      "peak_dbfs": -17,
+      "max_seconds": 0.9,
+      "reason": "A short sarcastic swagger cue punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 23.824295175023654,
+      "end_seconds": 24.724295175023652,
+      "source_sha256": "0bf4d137589d0c07243bf5ba104f40ceb78ef003fbee6dad4dea92ee348062fc",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "a second budget",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -13,
+      "max_seconds": 1.0,
+      "reason": "A short impact punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 27.004312499999997,
+      "end_seconds": 28.004312499999997,
+      "source_sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "usual galaxy speech",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.8,
+      "reason": "A short reaction punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 32.0843125,
+      "end_seconds": 32.8843125,
+      "source_sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "purple and unemployed",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -13,
+      "max_seconds": 1.0,
+      "reason": "A short impact punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 35.2043125,
+      "end_seconds": 36.2043125,
+      "source_sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "premium subscription",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.8,
+      "reason": "A short reaction punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 45.2243125,
+      "end_seconds": 46.0243125,
+      "source_sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "adult supervision",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -15,
+      "max_seconds": 0.9,
+      "reason": "A short impact punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 51.4685625,
+      "end_seconds": 52.368562499999996,
+      "source_sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    },
+    {
+      "anchor": {
+        "phrase": "grocery card",
+        "edge": "end"
+      },
+      "offset_seconds": 0.04,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -14,
+      "max_seconds": 0.9,
+      "reason": "A short impact punctuates this specific comic beat without speaking the sound direction.",
+      "start_seconds": 56.6285625,
+      "end_seconds": 57.5285625,
+      "source_sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "playback_rate": 1
+    }
+  ],
+  "effects_count": 11,
+  "effects_ducked_during_speech_db": -6.0206,
+  "mix_peak_dbfs": -1.7259084575654158,
+  "master_gain": 1.0,
+  "narration_sha256": "429a3378da2b9bb64533666f233e8ce8d663864ddbe6939fa59d34f0de71324c",
+  "source_video_sha256": "9477e610b0809b560f25eed68dfedfc23aec5a708f0ff1c5fe7b6b20f1ef4a9b",
+  "video_sha256": "570541c183163dec5de432ed488982866c2f549b965ca8a01ea6694131f6106c",
+  "video_stream_copied": true,
+  "source_catalog": {
+    "schema_version": 1,
+    "assets": [
+      {
+        "id": "dubbingai_vine_boom",
+        "title": "Vine boom sound effect",
+        "publisher": "Dubbing AI community",
+        "uploader_as_listed": "Parse",
+        "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918194306-4907017.mp3",
+        "description": "A deep impact for an insult landing, a sudden discovery or a dramatic reaction.",
+        "description_origin": "Project-authored paraphrase of the collection metadata",
+        "tags": [
+          "boom",
+          "roast",
+          "shock",
+          "punchline"
+        ],
+        "download_status": "downloaded_probed_hashed",
+        "sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+        "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+        "file": "dubbingai_vine_boom.mp3",
+        "duration_seconds": 3.004082,
+        "playback_rate": 1,
+        "license": "Community-hosted excerpt; reuse rights unverified",
+        "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+        "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+      },
+      {
+        "id": "dubbingai_faaah",
+        "title": "faaah",
+        "publisher": "Dubbing AI community",
+        "uploader_as_listed": "dubbing18102",
+        "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "download_url": "https://dvi.dubbingai.io/cs/20260713/1783923777332-8362441.mp3",
+        "description": "A vocal reaction for an unbelievable decision, frustration or a failed plan.",
+        "description_origin": "Project-authored paraphrase of the collection metadata",
+        "tags": [
+          "reaction",
+          "disbelief",
+          "fail",
+          "roast"
+        ],
+        "download_status": "downloaded_probed_hashed",
+        "sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
+        "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+        "file": "dubbingai_faaah.mp3",
+        "duration_seconds": 1.959184,
+        "playback_rate": 1,
+        "license": "Community-hosted excerpt; reuse rights unverified",
+        "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+        "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+      },
+      {
+        "id": "dubbingai_rizz_effect",
+        "title": "Rizz Effect",
+        "publisher": "Dubbing AI community",
+        "uploader_as_listed": "Parse",
+        "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "download_url": "https://dvi.dubbingai.io/cs/20260713/1783918641890-1251662.mp3",
+        "description": "A brief romantic-sounding cue for swagger, flirting or sarcastic confidence.",
+        "description_origin": "Project-authored paraphrase of the collection metadata",
+        "tags": [
+          "rizz",
+          "confidence",
+          "flirting"
+        ],
+        "download_status": "downloaded_probed_hashed",
+        "sha256": "0bf4d137589d0c07243bf5ba104f40ceb78ef003fbee6dad4dea92ee348062fc",
+        "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+        "file": "dubbingai_rizz_effect.mp3",
+        "duration_seconds": 2.272653,
+        "playback_rate": 1,
+        "license": "Community-hosted excerpt; reuse rights unverified",
+        "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+        "usage_basis": "Owner-requested collection recording for a fictional private review; no publication authorization",
+        "checksum_origin": "First acquisition from the published HTTPS source; frozen for subsequent cache/mix verification"
+      }
+    ]
+  },
+  "caption_timing_unchanged": true,
+  "publishing_enabled": false
+}

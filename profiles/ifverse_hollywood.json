@@ -18,7 +18,7 @@
     "provider": "kokoro-onnx",
     "voice": "am_michael",
     "candidate_if_english": "kokoro",
-    "status": "owner_selected_default_not_hollywood_tested",
+    "status": "owner_selected_default_not_hollywood_channel_tested",
     "options_catalog": "assets/voices/kokoro-options.json",
     "voice_preference_confirmed": true
   },
@@ -76,12 +76,12 @@
   "sound_effects": {
     "mode": "scripted_comedy_cues",
     "instructions": "docs/SOUND_EFFECTS.md",
-    "catalog": "assets/sfx/catalog.json",
+    "catalog": "assets/sfx/dubbingai-verified-catalog.json",
     "timing": "exact spoken-phrase anchors from the matching final-audio alignment receipt; word times estimated",
     "speech_duck_db": 6,
     "selection": "descriptions/tags plus an explicit script-specific reason; avoid every-sentence effects",
     "status": "pipeline_component_available_not_hollywood_tested",
     "requested_collection": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
-    "requested_collection_status": "article_read_audio_host_activation_download_and_checksums_pending"
+    "requested_collection_status": "three_actual_clips_acquired_hashed_and_used_in_michael_crossover_review"
   }
 }

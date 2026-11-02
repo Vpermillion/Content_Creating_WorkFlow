@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "duration_seconds": 60,
+  "voice": "am_michael",
+  "fresh_narration_sha256": "429a3378da2b9bb64533666f233e8ce8d663864ddbe6939fa59d34f0de71324c",
+  "shots": 26,
+  "sources": 10,
+  "caption_phrases": 48,
+  "complete_script_in_captions": true,
+  "effects_count": 11,
+  "actual_website_source_hashes_verified": true,
+  "cue_energy_measurements": [
+    {
+      "phrase": "insurance company is cooked",
+      "start": 4.1,
+      "effect": "dubbingai_vine_boom",
+      "rms_dbfs": -26.445347967612555
+    },
+    {
+      "phrase": "dress code",
+      "start": 6.96,
+      "effect": "dubbingai_rizz_effect",
+      "rms_dbfs": -33.00529565457391
+    },
+    {
+      "phrase": "green rage fridge",
+      "start": 9.34,
+      "effect": "dubbingai_faaah",
+      "rms_dbfs": -34.162976561394714
+    },
+    {
+      "phrase": "free training partner",
+      "start": 14.559999999999999,
+      "effect": "dubbingai_vine_boom",
+      "rms_dbfs": -24.14305520050311
+    },
+    {
+      "phrase": "hair updates",
+      "start": 23.824295175023654,
+      "effect": "dubbingai_rizz_effect",
+      "rms_dbfs": -33.00495579572912
+    },
+    {
+      "phrase": "a second budget",
+      "start": 27.004312499999997,
+      "effect": "dubbingai_vine_boom",
+      "rms_dbfs": -26.44525282666249
+    },
+    {
+      "phrase": "usual galaxy speech",
+      "start": 32.0843125,
+      "effect": "dubbingai_faaah",
+      "rms_dbfs": -35.82279614727362
+    },
+    {
+      "phrase": "purple and unemployed",
+      "start": 35.2043125,
+      "effect": "dubbingai_vine_boom",
+      "rms_dbfs": -26.41908856033958
+    },
+    {
+      "phrase": "premium subscription",
+      "start": 45.2243125,
+      "effect": "dubbingai_faaah",
+      "rms_dbfs": -35.02875699790556
+    },
+    {
+      "phrase": "adult supervision",
+      "start": 51.4685625,
+      "effect": "dubbingai_vine_boom",
+      "rms_dbfs": -28.249427027935987
+    },
+    {
+      "phrase": "grocery card",
+      "start": 56.6285625,
+      "effect": "dubbingai_vine_boom",
+      "rms_dbfs": -27.24800462855567
+    }
+  ],
+  "full_decode": true,
+  "video_copy_verified": true,
+  "encoded_audio_peak_dbfs": -1.726897,
+  "outside_cue_pcm_difference_within_two_lsb": true,
+  "video_sha256": "570541c183163dec5de432ed488982866c2f549b965ca8a01ea6694131f6106c",
+  "video_bytes": 15079115,
+  "contact_sheets": 3,
+  "manual_listening_completed": false,
+  "publishing_enabled": false,
+  "all_shot_midpoint_samples_visually_reviewed": true,
+  "thanos_embedded_subtitle_bottom_crop_reviewed": true,
+  "visual_review_note": "All 26 shot midpoints reviewed. Sources identify the named characters; crossover actions/dialogue are illustrative. The Goku challenge clip includes a baked-in FIGHT graphic; Thanos bottom subtitle is removed by the recorded crop."
+}

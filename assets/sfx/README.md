@@ -13,6 +13,6 @@ Public-domain Brackeys source recordings with project-authored selection descrip
 
 Searchable metadata: [catalog.json](catalog.json). Source terms: [BRACKEYS-LICENSE.txt](BRACKEYS-LICENSE.txt). These are not claimed to be the original viral Vine/Roblox/movie sound recordings. Derived pitch and sub-bass treatment are recorded in the catalog.
 
-## Requested recognizable meme recordings
+## Actual requested meme recordings
 
-The owner supplied the DubbingAI collection as the desired sound reference. [Discovered track metadata](dubbingai-discovery.json) records 17 actual embedded MP3 URLs, titles, creators as listed and project-written use summaries. This is a discovery index, not a verified audio catalog: media-host access, downloads, checksums and probing are still pending. The older six public-domain game effects above remain the only downloaded/verified library here.
+The new [Michael/Goku test](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-michael-goku-avengers-01/artifacts/ifverse-michael-goku-avengers-01/sound-effects/video-sfx.mp4) uses the real Vine Boom, faaah and Rizz Effect MP3s from the supplied collection. [Frozen playable metadata](dubbingai-verified-catalog.json) records the actual first-download hashes, durations and source/usage status; [discovery metadata](dubbingai-discovery.json) retains all 17 titles and URLs, with only three marked acquired. These community clips are not relabeled public-domain. The earlier Brackeys catalog remains available for comparison/fallback.

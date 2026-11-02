@@ -7,7 +7,7 @@ The workflow uses Kokoro-ONNX 0.6.1 with the pinned Kokoro v1.0 model and voice 
 | Voice | ID | Category | Evidence |
 | --- | --- | --- | --- |
 | Heart | `af_heart` | American English, female | Used in the completed Naruto review videos. |
-| Michael | `am_michael` | American English, male | Accepted by the runner and present in the pinned bundle; a review with this voice has not yet been generated here. |
+| Michael | `am_michael` | American English, male | Owner-selected default; used in the completed Goku/Avengers review, run 41468364961. |
 
 Other built-in choices include **Adam** (`am_adam`), **Puck** (`am_puck`), **Emma** (`bf_emma`) and **George** (`bm_george`). Their IDs are verified in the same file, but the current request validator has not enabled them. A selection can be enabled without changing TTS providers or buying a service. Do not describe an unauditioned voice as having a particular emotional performance merely from its name.
 
@@ -15,7 +15,7 @@ The full English set comprises 11 American female IDs, nine American male IDs, f
 
 ## Choosing and preserving narration
 
-A useful first comparison is the existing Heart voice against Michael, since both are already accepted. Preserve the approved Heart WAV and render comparison clips into a new version. Do not silently replace a channel's voice preference: the profile still records that a final voice choice is unconfirmed.
+The owner explicitly selected Michael, and the new Goku/Avengers review is the first completed production with it. Both Michael and the earlier Heart voice now have saved review examples. Preserve their WAVs and receipts; do not silently switch the chosen default back to Heart. Additional model voices still require selection/enabling/audition.
 
 Changing voice requires new speech, new final-waveform caption alignment, revised scene timing and newly bound sound-effect cues. Reusing another voice's waveform or timestamps is invalid. For new productions, `script_sha256` can bind the cue plan to the final generated waveform within the same job; for retained speech use the exact waveform hash. The current test uses one voice for the whole narration, not separate character voices for a dialogue.
 

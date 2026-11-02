@@ -1,6 +1,6 @@
 # Ifverse automated video workspace
 
-**Current audio request:** [voice choices](docs/VOICE_OPTIONS.md) and actual DubbingAI meme clips. The article is readable; its separate audio host needs the saved network-domain addition applied before download and a new sound cut. See [CURRENT](docs/CURRENT.md).
+**Current voice and test:** the owner chose `am_michael`. The new **60-second Goku/Avengers roast** uses fresh footage, denser v2 jokes and actual Vine Boom/faaah/Rizz recordings. [Watch the new test](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-michael-goku-avengers-01/artifacts/ifverse-michael-goku-avengers-01/sound-effects/video-sfx.mp4) · [CURRENT](docs/CURRENT.md) · [voice options](docs/VOICE_OPTIONS.md).
 
 **Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels. Sound design now supports described downloadable effects on specific joke/reaction anchors; see [SOUND_EFFECTS](docs/SOUND_EFFECTS.md).
 
@@ -38,7 +38,7 @@ Footage should illustrate the actual narrated character, action, location or cho
 | Sound design | Downloadable described/tagged public-domain sources, exact phrase-anchored cues, pitch/sub-bass treatment, speech ducking, unchanged pictures/caption timing and a saved mix receipt. |
 | Continuity | Source history, safe generated examples, state/checkpoint docs and copy-ready prompts. Credentials and private production data remain separate. |
 
-The latest review is the **60-second Naruto cut with nine timed comedy effects**: bass impacts, error buzzes, a sarcastic reward ping and cartoon boings at specific punchlines. [Watch the sound-effects MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-anime-sfx-review-01/artifacts/ifverse-anime-sfx-review-01/sound-effects/video-sfx.mp4). Hosted run `41199650499` succeeded, preserving the prior voice, 24-shot edit and 50 captions. Complete decode, waveform/cue checks, retained-input hashes and exact picture-stream copying were verified. The original clean cut remains available; its narration predates the later denser v2 writing preference. See [CURRENT](docs/CURRENT.md) for receipts, review limits and next work.
+The latest test is **“What if Goku joined the Avengers?”**: Michael narration, 26 shots from ten new clips, 48 caption phrases and 11 actual DubbingAI-collection sound cues. Hosted run `41468364961` succeeded; all 80 local tests passed. Final decode/track/caption/source/voice and cue-energy checks passed, with every shot sample reviewed. The first generated Michael waveform and earlier Heart videos remain preserved. Full listening/editorial/source-use review remains separate; see [CURRENT](docs/CURRENT.md) for receipts and limits.
 
 ## Current workflow entry
 

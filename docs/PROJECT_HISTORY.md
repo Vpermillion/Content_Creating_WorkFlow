@@ -53,3 +53,11 @@ Final-source support also accepts an ordered-script checksum for a voice that ha
 ## Actual meme collection and verified voice inventory — 2026-11-02
 
 The owner supplied the DubbingAI TikTok meme collection and requested its actual sounds, then asked about voice options. The article became readable after the Google/DubbingAI root-domain network change and an ordinary browser-compatible request header. Seventeen real media URLs were discovered on the separate dvi.dubbingai.io host; its proxy-denied request led to an additive saved network draft. Downloads/checksums and a replacement cut remain pending activation, with no new audio output claimed. The exact Kokoro bundle was inspected and its checksum matched existing receipts: 28 English voice IDs exist, two are currently enabled, one has been review-rendered.
+
+## Owner-selected Michael and a different crossover production
+
+## Completed new Michael/crossover test
+
+Owner-selected `am_michael` is now preferred and tested in `ifverse-michael-goku-avengers-01`, hosted run `41468364961`, source `c491b62c4d25372f91185cd2b9049ebe7f96e879`, result branch `codex/results/ifverse-michael-goku-avengers-01`. Delivered `/workspace/Ifverse_Michael_Goku_Avengers_Test.mp4`: a new 190-word, 19-beat Goku/Avengers roast, 60 seconds, 26 shots from ten new sources, 48 caption phrases and 11 actual DubbingAI Vine Boom/faaah/Rizz cues. Fresh Michael speech/caption alignment were generated; this is not reused Heart audio or the old Naruto script. Voice SHA `429a3378da2b9bb64533666f233e8ce8d663864ddbe6939fa59d34f0de71324c`; video SHA `570541c183163dec5de432ed488982866c2f549b965ca8a01ea6694131f6106c`.
+
+All 80 local tests and hosted regression gates passed. Full decode/coverage, complete caption wording, real-source fingerprints, cue timing/energy and SFX-stage picture copying were verified; all 26 shot samples were reviewed. Decoded sample peak -1.727 dBFS. Full listening/editorial/source-use review remains separate. First-source preparation preserved eight clips/three sounds but rejected two searches; the bounded retry completed the missing characters and Thanos replacement. All partial/retry records and prior Heart versions are retained. See CURRENT before reruns and reuse the saved Michael voice/captions for visual-only revisions. No YouTube posting.
