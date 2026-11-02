@@ -16,12 +16,12 @@
   "language_confirmed": true,
   "narrator": {
     "provider": "kokoro-onnx",
-    "voice": "af_heart",
+    "voice": "am_michael",
     "candidate_if_english": "kokoro",
-    "status": "tested_provisional_review_voice",
+    "status": "owner_selected_am_michael_new_test_pending",
     "version": "0.6.1",
     "device": "cpu",
-    "voice_preference_confirmed": false,
+    "voice_preference_confirmed": true,
     "options_catalog": "assets/voices/kokoro-options.json"
   },
   "footage": {

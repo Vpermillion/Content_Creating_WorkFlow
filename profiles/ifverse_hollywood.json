@@ -15,11 +15,12 @@
   "language": "en",
   "language_confirmed": true,
   "narrator": {
-    "provider": null,
-    "voice": null,
+    "provider": "kokoro-onnx",
+    "voice": "am_michael",
     "candidate_if_english": "kokoro",
-    "status": "not_configured",
-    "options_catalog": "assets/voices/kokoro-options.json"
+    "status": "owner_selected_default_not_hollywood_tested",
+    "options_catalog": "assets/voices/kokoro-options.json",
+    "voice_preference_confirmed": true
   },
   "footage": {
     "sources": [],

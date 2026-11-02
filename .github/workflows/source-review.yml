@@ -1,0 +1,68 @@
+name: Ifverse source review
+on:
+  push:
+    branches: [codex/ifverse-workflow]
+    paths: ['source-requests/*.json']
+permissions:
+  contents: write
+concurrency:
+  group: ifverse-source-review
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Select one bounded source request
+        id: request
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, re, subprocess
+          names=subprocess.check_output(['git','diff-tree','--no-commit-id','--name-only','-r','HEAD'],text=True).splitlines()
+          selected=[n for n in names if n.startswith('source-requests/') and n.endswith('.json')]
+          if len(selected)!=1 or not re.fullmatch(r'source-requests/[a-z0-9-]{1,80}\.json',selected[0]):raise ValueError('Commit exactly one safe source request')
+          request=json.loads(pathlib.Path(selected[0]).read_text())
+          if not re.fullmatch(r'[a-z0-9-]{1,80}',request['id']) or request['result_branch']!='codex/results/'+request['id']:raise ValueError('Invalid result branch')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as output:output.write('path='+selected[0]+'\n')
+          PY
+      - name: Install media prerequisites
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
+      - name: Source-selection regression checks
+        run: python -m unittest discover -s tests -p test_source_review.py -v
+      - name: Collect requested production sources
+        env:
+          REQUEST_PATH: ${{ steps.request.outputs.path }}
+        run: python scripts/prepare_review_sources.py --request "$REQUEST_PATH" --output private/source-review/output
+      - name: Preserve source review results
+        if: always() && steps.request.outcome == 'success'
+        env:
+          REQUEST_PATH: ${{ steps.request.outputs.path }}
+        run: |
+          python - <<'PY'
+          import json,pathlib,shutil,subprocess,os
+          request=json.loads(pathlib.Path(os.environ['REQUEST_PATH']).read_text())
+          source=pathlib.Path('private/source-review/output')
+          if not source.exists():
+              source.mkdir(parents=True)
+              (source/'sources.json').write_text(json.dumps({'status':'failed','error':'Prerequisite check failed'}))
+          target=pathlib.Path('artifacts')/request['id'];shutil.copytree(source,target)
+          subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
+          subprocess.run(['git','add','--force',str(target)],check=True)
+          subprocess.run(['git','commit','-m','Save acquired production sources and review receipts'],check=True)
+          subprocess.run(['git','push','origin','HEAD:refs/heads/'+request['result_branch']],check=True)
+          PY
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: ifverse-source-review
+          path: private/source-review/output/
+          retention-days: 7
