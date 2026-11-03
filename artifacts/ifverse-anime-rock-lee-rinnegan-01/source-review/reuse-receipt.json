@@ -1,0 +1,11 @@
+{
+  "branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01",
+  "commit": "d5db165d085111478d9a5fd6524d1915b70503af",
+  "reused_source_keys": [
+    "lee",
+    "eye",
+    "guy",
+    "train"
+  ],
+  "new_source_searches_avoided": 4
+}
