@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-vegeta-visual-final-01",
+  "channel": "ifverse_anime",
+  "voice": "am_michael",
+  "target_duration_seconds": 61,
+  "minimum_duration_seconds": 60,
+  "episodes": [
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01",
+      "topic_key": "vegeta-peaceful-week",
+      "title": "What if Vegeta had one peaceful week?",
+      "franchise": "Dragon Ball",
+      "characters": [
+        "Vegeta",
+        "Bulma",
+        "Goku",
+        "Trunks"
+      ],
+      "premise": "Vegeta gets a week without a world-ending enemy and must decide what his strength is for when nobody needs defeating.",
+      "distinctive_development": "Compulsive training meets family time; rivalry habit interrupts peace; he learns intentional restraint while retaining competitive personality.",
+      "sources": [
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "key": "vegeta",
+          "query": "Vegeta Dragon Ball angry",
+          "required_terms": [
+            "vegeta"
+          ],
+          "visual_intent": "Vegeta reacting with pride"
+        },
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-train",
+          "key": "train",
+          "query": "Vegeta gravity training",
+          "required_terms": [
+            "vegeta"
+          ],
+          "visual_intent": "Vegeta choosing intense training"
+        },
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-bulma",
+          "key": "bulma",
+          "query": "Bulma reaction Dragon Ball",
+          "required_terms": [
+            "bulma"
+          ],
+          "visual_intent": "Bulma and family context",
+          "reject_terms": [
+            "trunks",
+            "nsfw",
+            "sexy",
+            "vegeta",
+            "popo"
+          ]
+        },
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-trunks",
+          "key": "trunks",
+          "query": "Vegeta Trunks family",
+          "required_terms": [
+            "vegeta",
+            "trunks"
+          ],
+          "visual_intent": "Vegeta interacting around family"
+        },
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "key": "goku",
+          "query": "Goku Dragon Ball smiling",
+          "required_terms": [
+            "goku"
+          ],
+          "visual_intent": "Goku as Vegeta rivalry trigger"
+        }
+      ],
+      "scenes": [
+        {
+          "source": "vegeta",
+          "label": "NO VILLAIN JUST FEELINGS",
+          "text": "What if Vegeta got one peaceful week? No invasion. A prince underqualified for normal Tuesday activities.",
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "train",
+          "label": "DAY ONE OF RELAXING",
+          "text": "He begins by training harder. Naturally. Bro treats relaxation like a security vulnerability in his system.",
+          "match_reason": "Vegeta choosing intense training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "bulma",
+          "label": "BULMA SETS THE CHALLENGE",
+          "text": "Bulma requests family time. Vegeta asks for the objective. Sir, the objective is being present.",
+          "match_reason": "Bulma and family context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "trunks",
+          "label": "NOT EVERYTHING IS A DRILL",
+          "text": "Trunks shows him a drawing. Vegeta corrects his stance. My guy, that's artwork, not an enemy combatant.",
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "vegeta",
+          "label": "WHAT IS STRENGTH FOR",
+          "text": "Without a threat, strength needs another purpose. Can he enjoy people he protects?",
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "goku",
+          "label": "THE RIVALRY NOTIFICATION",
+          "text": "Goku visits. Vegeta immediately suspects secret training. A friendly hello triggers a competitive investigation.",
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "train",
+          "label": "PUT THE GRAVITY DOWN",
+          "text": "He wants gravity training again. Instead, he promises a short session and leaves on time.",
+          "match_reason": "Vegeta choosing intense training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "bulma",
+          "label": "A RARE CONFIRMED WIN",
+          "text": "Bulma is shocked. A grown man correctly estimated his arrival time. Historic scenes at Capsule Corporation today.",
+          "match_reason": "Bulma and family context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "trunks",
+          "label": "THE SMALL MOMENT",
+          "text": "He listens to Trunks explain the drawing. It's their family. Nobody's fighting. Vegeta needs a moment.",
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "vegeta",
+          "label": "KEEP THE PRIDE LOSE THE EXCUSE",
+          "text": "He keeps his pride, but stops dodging tender conversations. An actual emotional upgrade.",
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "goku",
+          "label": "THE FLEX STILL EXISTS",
+          "text": "Goku asks if peace made him soft. Vegeta schedules tomorrow's beating. Healthy boundaries, absolutely horrible phrasing.",
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "trunks",
+          "label": "A DIFFERENT KIND OF POWER",
+          "text": "No new transformation appears. He still grows. Motherflicker, the breakthrough was dinner together and one sincere compliment.",
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ],
+      "cues": [
+        {
+          "scene": 0,
+          "phrase": "normal Tuesday activities",
+          "effect": "bass_impact"
+        },
+        {
+          "scene": 3,
+          "phrase": "an enemy combatant",
+          "effect": "error_buzz"
+        },
+        {
+          "scene": 7,
+          "phrase": "Historic scenes",
+          "effect": "reward_ping"
+        },
+        {
+          "scene": 10,
+          "phrase": "absolutely horrible phrasing",
+          "effect": "cartoon_boing"
+        }
+      ],
+      "reuse_result": {
+        "branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r2",
+        "commit": "915081581a0cecb3ae3f9c56c87a4bc1111c0680",
+        "script_sha256": "1d1e920eca0ac5219244d5107a0e1a4603ae7c3407bfdfe344cd2291467a673a"
+      },
+      "posting": {
+        "title": "What if Vegeta had one peaceful week?",
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "DragonBall"
+        ],
+        "tags": [
+          "anime what if",
+          "Dragon Ball",
+          "Vegeta",
+          "Bulma",
+          "Goku",
+          "Trunks",
+          "Ifverse Anime"
+        ],
+        "description": "Vegeta gets a week without a world-ending enemy and must decide what his strength is for when nobody needs defeating.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #DragonBall",
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en",
+        "requested_privacy": "public",
+        "audience_proposal": "not_made_for_kids",
+        "audience_basis": "Teen/adult-oriented hypothetical character commentary; review actual imagery and all audience factors, not animation alone",
+        "synthetic_disclosure_proposal": false,
+        "synthetic_disclosure_basis": "Generic synthetic narrator and commentary over stylized fictional excerpts; no cloned real-person voice or newly fabricated realistic event; confirm actual upload criteria",
+        "music": {
+          "embedded": false,
+          "owner_will_add_in_youtube": true,
+          "requested_track": "Meaningful Love - Silo",
+          "optional_not_a_publication_blocker": true,
+          "permitted_length": "Check available allowance in YouTube; no universal 60-second license assumed"
+        },
+        "metadata_review": "draft_complete_text_checked_actual_audiovisual_and_source_use_review_pending"
+      },
+      "exclude_retained_sources": [
+        "bulma"
+      ]
+    }
+  ],
+  "publishing_authorization": {
+    "source": "Owner explicitly requested these ten Shorts be posted to ifverse_anime in this chat",
+    "scope": "Only these ten completed videos on the verified ifverse_anime channel; no recurring schedule",
+    "upload_connection_status": "not_configured_owner_confirmed_no_auto_posting_yet",
+    "requested_privacy": "public"
+  },
+  "publication_clearance": "not_established_source_use_and_audiovisual_review_pending",
+  "attempt": 4,
+  "duration_mode": "fixed",
+  "posting_note": "Owner will handle requested piano in YouTube. If API posting is unavailable, prepare completed videos and posting packets in GitHub; do not wait for owner at keyboard.",
+  "goal_batch": "batch-requests/ifverse-anime-ten-61s-20261103-01.json",
+  "revision_reason": "Source review found that the second Bulma match depicts Vegeta shouting her name. Exclude those contextual matches; the saved candidate receipt includes an actual Bulma everyday-life clip. Keep exact 61-second voice and captions.",
+  "retry_reason": "Prior repair outputs existed as Actions artifacts but result-branch preservation collided with the temporary retained-voice input folder; keep the existing 61-second speech/captions and use a separate temporary input path."
+}

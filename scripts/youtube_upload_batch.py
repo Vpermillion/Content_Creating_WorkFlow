@@ -38,7 +38,7 @@ def load_request(relative):
             raise ValueError('Pin the exact completed result commit')
         if not re.fullmatch(r'[a-f0-9]{64}', item.get('video_sha256', '')):
             raise ValueError('Pin the final video SHA-256')
-        if not re.fullmatch(re.escape('codex/results/' + item['id']) + r'(?:-r[23])?', item.get('result_branch','')):
+        if not re.fullmatch(re.escape('codex/results/' + item['id']) + r'(?:-r[234])?', item.get('result_branch','')):
             raise ValueError('Use the exact episode-specific result branch')
         if item.get('video', '').startswith('artifacts/' + item['id'] + '/') is not True:
             raise ValueError('Video must belong to this episode')

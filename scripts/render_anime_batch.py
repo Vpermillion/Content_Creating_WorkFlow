@@ -25,8 +25,8 @@ def load_batch(relative):
         raise ValueError('Use a bounded batch JSON under batch-requests/')
     batch = json.loads(path.read_text())
     identifier(batch['id'])
-    if type(batch.get('attempt', 1)) is not int or not 1 <= batch.get('attempt', 1) <= 3:
-        raise ValueError('At most three explicit saved attempts per batch')
+    if type(batch.get('attempt', 1)) is not int or not 1 <= batch.get('attempt', 1) <= 4:
+        raise ValueError('At most four explicit saved attempts per batch')
     if batch.get('duration_mode', 'fixed') not in ('fixed', 'natural_short'):
         raise ValueError('Unknown batch duration mode')
     if batch.get('schema_version') != 1 or batch.get('channel') != 'ifverse_anime' or batch.get('voice') != 'am_michael':
