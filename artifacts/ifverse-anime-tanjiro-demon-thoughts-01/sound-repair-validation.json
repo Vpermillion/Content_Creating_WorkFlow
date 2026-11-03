@@ -19,5 +19,7 @@
   "caption_timing_unchanged": true,
   "old_soundtrack_used": false,
   "narration_receipt_retained": true,
-  "source_result_commit": "e70153a984700f566c0099024cccfe94341b5308"
+  "source_result_commit": "e70153a984700f566c0099024cccfe94341b5308",
+  "selected_old_sound_version_picture_identical": true,
+  "michael_receipt_hash_verified": true
 }
