@@ -85,5 +85,17 @@
     "status": "tested_in_hosted_anime_review",
     "requested_collection": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
     "requested_collection_status": "three_actual_clips_acquired_hashed_and_used_in_michael_crossover_review"
+  },
+  "monetization_review": {
+    "instructions": "docs/MONETIZATION_REVIEW.md",
+    "editorial_brief": "prompts/editorial-brief.md",
+    "owner_context": "prepublication_concern_no_actual_notice_supplied",
+    "goal": "distinct_original_comedy_commentary_with_documented_source_use",
+    "youtube_decision": "not_assessed",
+    "actual_channel_eligibility": "unverified",
+    "latest_demo_publication_clearance": "not_established",
+    "automated_approval": false,
+    "profile_is_not_an_executable_publisher_gate": true,
+    "known_cleared_sound_alternative": "assets/sfx/catalog.json"
   }
 }

@@ -40,6 +40,10 @@ A continuous example of the intended density:
 
 These are hypothetical commentary examples, not official dialogue or claims about an actual alternate-timeline episode. Invent fresh, scene-specific jokes for each production; do not copy the bank verbatim into every video.
 
+## Originality for a channel intended to earn revenue
+
+Read `docs/MONETIZATION_REVIEW.md` and prepare the short `prompts/editorial-brief.md` before a commercial-publication candidate. Keep the selected Michael voice and funny v2 style. Make each episode's actual premise, causal development, commentary and jokes substantially its own; do not churn out name-swapped scripts. A comic story is allowed to entertain rather than teach, but captions, clean swears, sound effects and zooms are not substitutes for original substance or source-use clearance. Use original visual explanations and documented cleared material where suitable. Do not use mirroring/pitch changes to evade scanners, invent licenses or human-review evidence, or claim a video passes YPP. Treat the existing versions as demonstrations until editorial/source and channel requirements are actually reviewed.
+
 ## Sound design for comic timing
 
 Plan short modern meme-style effects along with the joke: question → skeptical reaction/roast → short impact → comeback. Use the catalog descriptions/tags in `assets/sfx/catalog.json` and the cue rules in `docs/SOUND_EFFECTS.md`. Choose effects that support a particular scripted beat: a bass impact after a roast/revelation, an error buzz after a bad plan, a sarcastic reward ping, or a cartoon boing at an absurd payoff. Vary the choices and keep dialogue intelligible. Several deliberate cues per minute are preferable to a sound after every sentence.

@@ -1,5 +1,11 @@
 # Handoff
 
+## Monetization preparation concern — 2026-11-03
+
+The owner supplied an AI overview about low-effort channels and clarified there is no actual YouTube rejection notice being addressed. Added MONETIZATION_REVIEW and an episode editorial-brief template, preserving Michael/v2 humor and the existing automation. Corrected the human-voice mandate, fixed safe-clip-duration/scanner-evasion claims, assumed trailer/raw-source permission and unsupported 2027 threshold prediction. The current Goku test has original script/commentary evidence but ten footage assets and three community sound recordings with unverified source-use rights, no recorded full human listening/editorial approval and no verified channel Earn eligibility. Its evidence audit is saved with the test. It is a technical demonstration, not certified monetization-ready content.
+
+No code, renderer, saved speech/video or publishing behavior was changed; publishing flags remain false. The new guide/profile fields are planning/review metadata, not an executable policy gate or YouTube decision. Direct official Help reads were blocked; a saved network draft adds support.google.com for live verification once the user activates/publishes it. Do not encode the third-party future threshold claim as official policy. Next: distinct episode development and original/licensed or genuinely reviewed case-specific source-use evidence, followed by actual audiovisual/editorial and channel review before commercial publication.
+
 ## Completed new Michael/crossover test
 
 Owner-selected `am_michael` is now preferred and tested in `ifverse-michael-goku-avengers-01`, hosted run `41468364961`, source `c491b62c4d25372f91185cd2b9049ebe7f96e879`, result branch `codex/results/ifverse-michael-goku-avengers-01`. Delivered `/workspace/Ifverse_Michael_Goku_Avengers_Test.mp4`: a new 190-word, 19-beat Goku/Avengers roast, 60 seconds, 26 shots from ten new sources, 48 caption phrases and 11 actual DubbingAI Vine Boom/faaah/Rizz cues. Fresh Michael speech/caption alignment were generated; this is not reused Heart audio or the old Naruto script. Voice SHA `429a3378da2b9bb64533666f233e8ce8d663864ddbe6939fa59d34f0de71324c`; video SHA `570541c183163dec5de432ed488982866c2f549b965ca8a01ea6694131f6106c`.
