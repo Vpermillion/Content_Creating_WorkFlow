@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-03",
+  "review_type": "prepublication_house_assessment_not_youtube_decision",
+  "owner_context": "Owner reports general concern from others; no actual YouTube notice supplied",
+  "video_id": "ifverse-michael-goku-avengers-01",
+  "video_sha256": "570541c183163dec5de432ed488982866c2f549b965ca8a01ea6694131f6106c",
+  "technical_checks": "Passed existing automated media checks; 80 code tests in producing source",
+  "originality_evidence": {
+    "new_script": true,
+    "words": 190,
+    "new_premise": "Goku joins the Avengers; comic consequences and food-budget callback",
+    "not_reading_a_supplied_article_or_reuploading_without_narration": true,
+    "editorial_ypp_originality_judgment": "not_certified",
+    "channel_level_variation_review": "not_performed"
+  },
+  "footage_assets": [
+    {
+      "id": "avengers_team",
+      "source_url": "https://tenor.com/view/avengers-age-of-ultron-avengers-age-of-ultron-marvel-marvel-studios-gif-18162408",
+      "sha256": "f0fc3637ccdff95e4f72ba36089f778c9a35da74cd1d2a0275433ba033338211",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "captain_america",
+      "source_url": "https://tenor.com/view/mcu-marvel-avengers-captain-america-iron-man-gif-4586422665845991747",
+      "sha256": "ba5367a295c528aad6212f378453b02de2e401ff1976ef6e28bfcc6597efbe57",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "goku_fight",
+      "source_url": "https://tenor.com/view/goku-goku-angry-fight-me-fight-me-if-your-ready-to-die-dragon-ball-z-gif-794849038286226737",
+      "sha256": "b776682d93101bf7826699308ff83a9fd19694e6c27bb4574d8249a147ce2ab5",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "goku_food",
+      "source_url": "https://tenor.com/view/goku-hungry-eating-food-dbz-gif-8252812",
+      "sha256": "fb45c09cc7a15d6c34ebbc042baa9a2f76d262ef1d102425c06d053cb158ed46",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "goku_scream",
+      "source_url": "https://tenor.com/view/dragon-ball-z-fusion-reborn-goku-super-saiyan-anime-gif-1359432400602995029",
+      "sha256": "1c80714f53a2bbb5f7a25489f6054eb98b586c03a75cb6c906b9fd5f356c1e5a",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "goku_smile",
+      "source_url": "https://tenor.com/view/goku-smile-smiling-dbz-dragon-ball-gif-11301976189496723891",
+      "sha256": "2be844f5c16a10a45e0e817838f0b68ad269eac92e32100961b78b0cee8d9b43",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "hulk",
+      "source_url": "https://tenor.com/view/the-incredible-hulk-hulk-roar-hulk-roar-mcu-gif-18494693",
+      "sha256": "5ac76d363b6a21eb9965c4cbccbd13de9d03d7f472ec96d740e29554e3869e3b",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "thanos",
+      "source_url": "https://tenor.com/view/thanos-enjoy-marvel-madtitan-titan-gif-14438482",
+      "sha256": "7fda5e89a58bfcdb716f03f7b727f8594cc27ef6109fa259530319141f5208b4",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "thor",
+      "source_url": "https://tenor.com/view/thor-avengers-infinity-war-thunder-lightning-gif-15116476",
+      "sha256": "88ff31fdeceae9ee8cdeaa950c3426006af04861ee16c77ae8b49c6f0bc6ceef",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    },
+    {
+      "id": "tony_stark",
+      "source_url": "https://tenor.com/view/iron-man-rober-downey-jr-robert-downey-robert-kirk-gif-2650610139719901202",
+      "sha256": "e5bd71886545134843b11a34739fc86fc3957461fb62742ab20f33dca2c2d428",
+      "existing_usage_declaration": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "publication_rights_status": "unresolved_no_permission_or_case_specific_exception_review_recorded"
+    }
+  ],
+  "distinct_sound_recordings": [
+    {
+      "id": "dubbingai_vine_boom",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
+      "existing_license_declaration": "Community-hosted excerpt; reuse rights unverified",
+      "publication_rights_status": "unresolved"
+    },
+    {
+      "id": "dubbingai_rizz_effect",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "sha256": "0bf4d137589d0c07243bf5ba104f40ceb78ef003fbee6dad4dea92ee348062fc",
+      "existing_license_declaration": "Community-hosted excerpt; reuse rights unverified",
+      "publication_rights_status": "unresolved"
+    },
+    {
+      "id": "dubbingai_faaah",
+      "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
+      "existing_license_declaration": "Community-hosted excerpt; reuse rights unverified",
+      "publication_rights_status": "unresolved"
+    }
+  ],
+  "voice": {
+    "id": "am_michael",
+    "owner_selected": true,
+    "ai_narration_automatic_ypp_disqualification": false
+  },
+  "human_full_listening_editorial_approval": "not_recorded",
+  "advertiser_suitability": "not_certified_review_actual_audio_and_metadata",
+  "altered_synthetic_disclosure": "contextual_review_required_no_automatic_exemption_or_blanket_requirement_claim",
+  "actual_channel_ypp_eligibility": "unverified_no_earn_tab_or_live_channel_binding_checked",
+  "copyright_clearance": "not_established",
+  "publication_clearance": "not_established",
+  "youtube_monetization_decision": "not_assessed_by_youtube",
+  "monetization_guaranteed": false,
+  "publishing_enabled": false,
+  "future_2027_threshold_claim": "unverified_do_not_treat_as_official",
+  "official_live_policy_fetch": "blocked_support.google.com_not_yet_in_active_runtime_allowlist",
+  "instructions": "docs/MONETIZATION_REVIEW.md"
+}

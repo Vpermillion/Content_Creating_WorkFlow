@@ -12,6 +12,16 @@ English YouTube what-if videos for `ifverse_anime` and `ifverse_hollywood`. One 
 
 The owner clarified the style after the first roast: **frequent, varied, creative roasts across the whole narration**, with modern Gen Z/millennial slang, streetwise banter, mock praise, comparisons and callbacks. A single recurring insult is insufficient. Roasts are frequent; mild/clean-swear profanity remains occasional. See `prompts/script-style.md` (preference v2). The new Michael/Goku crossover implements the denser v2 tone; earlier Heart/Naruto versions remain historical comparisons. The addon is linked from root guides, agent instructions, continuation prompts and both channel profiles.
 
+## Current business request: prepare for monetization
+
+The owner heard that low-effort channels can lose monetization and supplied a third-party AI overview. They clarified that no actual rejection/claim/limited-ads notice is being addressed. Read [MONETIZATION_REVIEW](MONETIZATION_REVIEW.md) for corrections, source links and our house practice; use [the editorial brief](../prompts/editorial-brief.md) for future publication candidates. This is not a request to appeal, delete videos, change voice, bulk upload or activate a publisher.
+
+We can retain `am_michael`, the v2 roast style and automated production while making each episode substantively distinct original entertainment/commentary. The latest Goku test has a new script and premise, but **all ten footage assets and three distinct community sounds have unresolved reuse rights**. A full listening/editorial approval and actual channel Earn eligibility have not been recorded. Its 80 technical tests do not certify YPP or copyright/ad approval. [Evidence audit](../artifacts/ifverse-michael-goku-avengers-01/monetization-review.json) records that status without modifying the saved video/audio or executable publishing behavior. Both profile publishing flags stay false.
+
+Direct official Help fetches were blocked by the active runtime allowlist; a verified saved environment draft adds `support.google.com` while preserving the five current custom domains/preset. It still needs user activation/publication for live policy reads. Do not treat the pasted claim of a February 2027 threshold increase as verified official policy, or invent current metrics/eligibility from the chat timezone. The planning guide separates established policy concepts, proposed house standards and the live-verification gap.
+
+Next business work: decide/document an original/licensed or genuinely reviewed case-specific source-use route, add purpose-built visual explanations and episode-specific development, and perform a real audiovisual/editorial/channel review before commercial publication. Preserve prototype variants as drafts rather than publishing each near-duplicate engineering cut.
+
 ## Latest completed test: Michael, Goku joins the Avengers
 
 - The owner explicitly chose **`am_michael`** and requested a different script/story with effects. That is now the preferred English workflow voice; Heart remains preserved in earlier versions. Request `ifverse-michael-goku-avengers-01` **succeeded** in hosted run `41468364961`, source `c491b62c4d25372f91185cd2b9049ebe7f96e879` on `codex/ifverse-workflow`. Result branch `codex/results/ifverse-michael-goku-avengers-01`. [Watch/download the new MP4](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-michael-goku-avengers-01/artifacts/ifverse-michael-goku-avengers-01/sound-effects/video-sfx.mp4).
@@ -58,7 +68,7 @@ The prior delivered test (18 shots, same 44.672-second voice, 27 captions) remai
 
 ## Exact next work
 
-The runner now accepts bounded English repository scripts and checks them against a supplied ordered footage plan; the demonstrated stories remain Naruto scenarios. Complete free-form creative intake/channel support and Hollywood branding, improve automated semantic clip selection without losing concrete beat reasons, and harden stage resume/private media storage. Do not rebuild working download, voice, ASR or render tools. Publishing/account setup is a separate task with no verified live binding here.
+The runner now accepts bounded English repository scripts and checks them against a supplied ordered footage plan; the demonstrated prepared stories include Naruto and the Goku/Avengers crossover. Complete free-form creative intake/channel support and Hollywood branding, improve automated semantic clip selection without losing concrete beat reasons, and harden stage resume/private media storage. Do not rebuild working download, voice, ASR or render tools. Publishing/account setup is a separate task with no verified live binding here.
 
 ## Commands and status limits
 

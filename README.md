@@ -1,5 +1,7 @@
 # Ifverse automated video workspace
 
+**Monetization goal:** produce distinct original comedy/commentary with editorial and source-use review. The saved videos are technical demonstrations, not certified monetization-ready uploads. Read [the review standard](docs/MONETIZATION_REVIEW.md) and [episode brief](prompts/editorial-brief.md). Michael and the working production tools remain the chosen setup.
+
 **Current voice and test:** the owner chose `am_michael`. The new **60-second Goku/Avengers roast** uses fresh footage, denser v2 jokes and actual Vine Boom/faaah/Rizz recordings. [Watch the new test](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-michael-goku-avengers-01/artifacts/ifverse-michael-goku-avengers-01/sound-effects/video-sfx.mp4) · [CURRENT](docs/CURRENT.md) · [voice options](docs/VOICE_OPTIONS.md).
 
 **Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels. Sound design now supports described downloadable effects on specific joke/reaction anchors; see [SOUND_EFFECTS](docs/SOUND_EFFECTS.md).
