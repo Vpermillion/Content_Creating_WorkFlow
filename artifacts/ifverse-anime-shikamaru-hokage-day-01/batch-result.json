@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-shikamaru-hokage-day-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "adf98bfe2f8ffff3af80b494aa3f5cf2e9038eb64b309efed0b11b41e42709a7",
+  "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Rewrite the script; requested length needs excessive speech retiming"
+}
