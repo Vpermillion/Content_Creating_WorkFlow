@@ -1,0 +1,671 @@
+[
+  {
+    "id": "ifverse-anime-naruto-clone-strike-01",
+    "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-dubbingai-01",
+    "result_commit": "f74e39efb6ab363cd1e833f517a8348824492fc9",
+    "video_sha256": "8c606b713bd4ed3346e131a8e4dc81232ebf7e7750d5a26db94bd681f766556e",
+    "prior": {
+      "id": "ifverse-anime-naruto-clone-strike-01",
+      "topic_key": "naruto-clone-strike",
+      "title": "What if Naruto's shadow clones went on strike?",
+      "premise": "Naruto must negotiate with his own shadow clones instead of treating them as disposable labor.",
+      "franchise": "Naruto",
+      "characters": [
+        "Naruto",
+        "Kakashi"
+      ],
+      "aliases": [],
+      "distinctive_development": "Work stoppage interrupts missions; clones share his exhaustion and grievances; negotiation changes tactical training; the original joins his own strike.",
+      "script_sha256": "355cfa475e6b5bc6141a195e49d96b6ee74ff5e269758fad2e60fabf85ea0d78",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.869812+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "f75e3004f87643ec42bce41867cb51e9ba10a74b2f36c7a97914e8a5b656edfa",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "b5e909f2e6f9ce9e0ff15ebb26bfe6a72cda9f7f76b50de25b80cc6ecbcd3dda",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r3",
+      "result_commit": "941e648fe9c6557e96883980e0744cd451d7f682",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-naruto-clone-strike-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=6172502ff5abc8416e6a89fe5fface7c21c3da377e4bf220a780c25e1112a6ac",
+      "retained_inputs_sha256": {
+        "narration.wav": "4221a2c3bf5398423290257ec39799062965ebb806dffc6b4a62f04571a7097f",
+        "narration.json": "52d9ea2fdcdd30ab7a3e2c4423305e6210bc05d7d1e9ab761d18ae34e1167b9d",
+        "transcription.json": "def02b08837f7f22f0194b2fe0f9668e6a8cbb54b68b4d6e6f3fc1eaf0399a4d"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "941e648fe9c6557e96883980e0744cd451d7f682",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-naruto-clone-strike-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-naruto-clone-strike-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-rock-lee-rinnegan-01",
+    "result_branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01-dubbingai-01",
+    "result_commit": "af7e8a4c08edc0f925208734ea7a1e7302116a49",
+    "video_sha256": "f1d5bcce63bc856aefc6a02ed7b524e6be5f1b5eded76d69b35cf669f2e8034a",
+    "prior": {
+      "id": "ifverse-anime-rock-lee-rinnegan-01",
+      "topic_key": "rock-lee-rinnegan",
+      "title": "What if Rock Lee woke up with the Rinnegan?",
+      "premise": "Rock Lee receives unfamiliar ocular powers but discovers that discipline and restraint matter more than collecting abilities.",
+      "franchise": "Naruto",
+      "characters": [
+        "Rock Lee",
+        "Might Guy"
+      ],
+      "aliases": [],
+      "distinctive_development": "Accidental attraction disrupts training; Guy insists on control; Lee practices precision and saves teammates rather than stacking maximal powers.",
+      "script_sha256": "eafa14c24d15f109513c2d3b2518174fbccd4fd8388fdb3783676e65ed8fb4e8",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.872274+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "fc3df3e086969ea7cf004b72d6683991059a5a5091b012a7023b67e0ac807081",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "ab8e54a5f51aef9ea5de7b77c711be01e0f3278c361d600e0bd5985553fbb4e8",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01-r2",
+      "result_commit": "60b330056bc653801955ae86944136ea2d1e2c36",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-rock-lee-rinnegan-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=6dd9ef5c13b44c6cd90ba348d01578b2fccfa9a80433a4eb570932a3419f424b",
+      "retained_inputs_sha256": {
+        "narration.wav": "97001357cf55be6d6c353c980a60a32cf36dadbb7afc80fe20dd2424566ddc5e",
+        "narration.json": "f5d80101a861c3a30ec10611c051e18a58b91833e2b355f3e94c58830fa3360e",
+        "transcription.json": "b3f0ceb58638a8cc00d980cc16210e872046573834db533581d67c2c55b15248"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "60b330056bc653801955ae86944136ea2d1e2c36",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-rock-lee-rinnegan-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-rock-lee-rinnegan-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-shikamaru-hokage-day-01",
+    "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-dubbingai-01",
+    "result_commit": "b30e74462b80c971bf7d2fb4ffcca3dfd6469260",
+    "video_sha256": "02db20a5b19eef16a4a8730a99b909a0671706ac4e0e144d945a42dbc16b8898",
+    "prior": {
+      "id": "ifverse-anime-shikamaru-hokage-day-01",
+      "topic_key": "shikamaru-hokage-day",
+      "title": "What if Shikamaru had ONE day to fix Konoha?",
+      "premise": "Shikamaru runs the village for one day and solves mundane bottlenecks instead of searching for a flashy new attack.",
+      "franchise": "Naruto",
+      "characters": [
+        "Shikamaru",
+        "Naruto",
+        "Tsunade"
+      ],
+      "aliases": [],
+      "distinctive_development": "Visible crisis becomes logistics problem; assignment timing and supply chains improve; apparent laziness is prevention; leadership also demands listening.",
+      "script_sha256": "7234d1dda3323003eaf9c87cd104418eacfd2981f495bda12f91dda288375622",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.874594+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "adf98bfe2f8ffff3af80b494aa3f5cf2e9038eb64b309efed0b11b41e42709a7",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "766b2bbcc1903af2918d7e06524ad5b4c5fc96edd8c35b47c01dcaac9797ab1c",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-r2",
+      "result_commit": "e4c31c237fc6fe4ac4f55d76b0c9083af0a49fe2",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-shikamaru-hokage-day-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=3b36f0b5d2cc7005cdeaf67befd13696f6ad4c6ee0d2c4e54562f045fee615e8",
+      "retained_inputs_sha256": {
+        "narration.wav": "e33300d9eabb1747973d94cf5cbdac24d84cf08908b92f9b35e3b53ebb618758",
+        "narration.json": "08f67a643652ae5f57de9dccbf86ce97e2dde304c0903b168f8347eaa966efab",
+        "transcription.json": "84cdf7d34d6e57afd511b938c872fae5dca6b00889ca68d4ac519834ba4fc6b5"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "e4c31c237fc6fe4ac4f55d76b0c9083af0a49fe2",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-shikamaru-hokage-day-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-shikamaru-hokage-day-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-luffy-no-devil-fruit-01",
+    "result_branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01-dubbingai-01",
+    "result_commit": "d5c742bb30ca8f8f1f3f23eb9c3d53d2deaf9616",
+    "video_sha256": "ae593f8f6d05d84d0514f4590262adb7171f93a34e9dd86ab44367a32513105c",
+    "prior": {
+      "id": "ifverse-anime-luffy-no-devil-fruit-01",
+      "topic_key": "luffy-no-devil-fruit",
+      "title": "What if Luffy NEVER ate a Devil Fruit?",
+      "premise": "Luffy pursues his pirate dream without rubber powers and must learn rescue, crew dependence and a different fighting style.",
+      "franchise": "One Piece",
+      "characters": [
+        "Luffy",
+        "Shanks",
+        "Zoro"
+      ],
+      "aliases": [],
+      "distinctive_development": "Remove powers without erasing ambition; swimming gives one advantage but fists lose protection; teamwork and equipment become necessary; no automatic victory claim.",
+      "script_sha256": "cadb1dc56b75716ee65fa7846b42fa65fe3f2fbd96158199b4c9f92329bd325f",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.877910+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "1ce562d7bf869a6526ccc51f8fcbfc51ae2f8db6878d71a3d8ba7374839cc73c",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "05546741701689ff2293d36c27b40c75e7e2b2406b7729a26888f940548b3ae0",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01-r2",
+      "result_commit": "cac2626ab6bf06639eee0b8a9d2123601ff723e8",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-luffy-no-devil-fruit-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=cb332c0971eb8f8d2d5ac627ea3c79d38b43449271fb7fa0183d6b0d88645150",
+      "retained_inputs_sha256": {
+        "narration.wav": "2ccd7bac0d0275779b7fb254cc1f3d9aee3932912ee14556637e03c7fa69af3f",
+        "narration.json": "67254e8a2517b7cf5e84e080842e4ce2ed7133c6b1e761b890c7ddc3376e05a7",
+        "transcription.json": "15e2aba801e45d8d36a7885bab890b474a72a69befca4c43456915b3e8da2de6"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "cac2626ab6bf06639eee0b8a9d2123601ff723e8",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-luffy-no-devil-fruit-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-luffy-no-devil-fruit-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-zoro-perfect-directions-01",
+    "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-dubbingai-01",
+    "result_commit": "a0102bc103d8c8cbefd8c1fd15b3cf3e58791527",
+    "video_sha256": "7152b5bcce362a969afa455227fce0cc0a4ae8dda4c35008d2198f8b00f006f4",
+    "prior": {
+      "id": "ifverse-anime-zoro-perfect-directions-01",
+      "topic_key": "zoro-perfect-directions",
+      "title": "What if Zoro finally learned directions?",
+      "premise": "Zoro stops getting lost, reaches threats before his crew and learns that arriving first can be a tactical disadvantage.",
+      "franchise": "One Piece",
+      "characters": [
+        "Zoro",
+        "Luffy",
+        "Nami"
+      ],
+      "aliases": [],
+      "distinctive_development": "Navigation gag becomes timing problem; early arrival exposes ambush; retreat and rendezvous beat reckless solo fighting; map is a sword joke payoff.",
+      "script_sha256": "97f8b4ac4f76eba4ab33627fa4f11ad2a235d543a78fc134ad4b147a4edf153d",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.878598+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "e5a8916197cc19b2522c4bfd7627b32418bf87ffe600059a4faf97d55e7090ca",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "d1afa559d6ab6fa206f1e3ca4be737e5230837d3a546b93273f761f685404133",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-r2",
+      "result_commit": "e764c72b2da7756c3265ef78ea51d1d60661ff1c",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-zoro-perfect-directions-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=2805638b31d1ace50f78f128f6686a93b6ae26ebbdfe8af47eb87d9c33eb452e",
+      "retained_inputs_sha256": {
+        "narration.wav": "2fbe713efcd353e9671e6dc9eea095c110dfeb13001142f87835cedbf13c623c",
+        "narration.json": "ae49b38d22b6eb888a6bd8ec3767f76aa7102dd0368211c6b25faded15b7ffd9",
+        "transcription.json": "8fd58a6cc749f852c64380d268c55ee2bd2af27baac546d898c839230a25de3b"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "e764c72b2da7756c3265ef78ea51d1d60661ff1c",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-zoro-perfect-directions-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-zoro-perfect-directions-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-light-explains-every-name-01",
+    "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-dubbingai-01",
+    "result_commit": "2b3060a685b1a9c2a7c44f2b546b4444a38724bf",
+    "video_sha256": "624cc8677638b278a0c62f2bbd1a3fbf33e87b6e4fcf3a232011cafa1a597d4c",
+    "prior": {
+      "id": "ifverse-anime-light-explains-every-name-01",
+      "topic_key": "light-explains-every-name",
+      "title": "What if Light had to explain EVERY name to L?",
+      "premise": "A supernatural rule forces Light to defend each proposed notebook entry to L before it can take effect.",
+      "franchise": "Death Note",
+      "characters": [
+        "Light",
+        "L",
+        "Ryuk"
+      ],
+      "aliases": [],
+      "distinctive_development": "Forced justification exposes missing evidence and arrogance; accusation becomes investigation; L challenges selective justice; satire ends on documentation.",
+      "script_sha256": "17c8667a0acff83d83bd133e78c2852857971168de1b8cd187c6945398291ef0",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879310+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "1530d0428739ebe8c837c7e8d2763c93960741c13264af3a97e46ec7cf86999c",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "156b2f1fab574b1ed6989d6f11721793d97ccdff3ff6e796fbe1ed14dd83bc6a",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-r2",
+      "result_commit": "f2a0eadd6dc8f5601138d15410449804fb905cd8",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-light-explains-every-name-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=050503981b75bd4b14fd9d2db4fb4dc74e6f5f3ff9d4c0c69c399338e02f7ee3",
+      "retained_inputs_sha256": {
+        "narration.wav": "e06b0a286fe3bcad1d0ae723b1d59bb0ec276b000f25f64fb3cbf27b71d0eaff",
+        "narration.json": "f02521a43e3f3013824ddd75a373ecd25003776dc888b78aed63b99d112ecdb2",
+        "transcription.json": "0216f4fdaa3c69d852d294b2990ca6be5661a80d46707e2531b6f67c01247795"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "f2a0eadd6dc8f5601138d15410449804fb905cd8",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-light-explains-every-name-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-light-explains-every-name-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-vegeta-peaceful-week-01",
+    "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-dubbingai-01",
+    "result_commit": "74cf55138c93a3449650ee3e294e46bb7aa22f9b",
+    "video_sha256": "9d4da4292af972dc71fde4d0db10b5728cfe3a281c36d87c8de574d9f701c90f",
+    "prior": {
+      "id": "ifverse-anime-vegeta-peaceful-week-01",
+      "topic_key": "vegeta-peaceful-week",
+      "title": "What if Vegeta had one peaceful week?",
+      "premise": "Vegeta gets a week without a world-ending enemy and must decide what his strength is for when nobody needs defeating.",
+      "franchise": "Dragon Ball",
+      "characters": [
+        "Vegeta",
+        "Bulma",
+        "Goku",
+        "Trunks"
+      ],
+      "aliases": [],
+      "distinctive_development": "Compulsive training meets family time; rivalry habit interrupts peace; he learns intentional restraint while retaining competitive personality.",
+      "script_sha256": "1d1e920eca0ac5219244d5107a0e1a4603ae7c3407bfdfe344cd2291467a673a",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879395+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "2e48e8d704d868d9b1033347b388b99d4eceb6231e051a695ce704026516e215",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "3e07fc6a2fccc37c44547c53e6502df22a4d647942120660d2393219e1c18d2c",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r4",
+      "result_commit": "6fa309c601384ad2a5e14da8da8444248fd197c4",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-vegeta-peaceful-week-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=aafa6f4a2eede2389f95d553367814d343c62280093d272c30f2f977d0cf048a",
+      "retained_inputs_sha256": {
+        "narration.wav": "5cd56713f3478a51a61033dbd59ed345c34638f53759e075b78b207b503cc05d",
+        "narration.json": "f369dfcb3f3fd85f95ab3ac589483006b0979084c51edc0b78f87ad4293e1230",
+        "transcription.json": "3a025502cd0178e165427cfa659f2dd0e0b10d116577213cda783760b86a8c46"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "6fa309c601384ad2a5e14da8da8444248fd197c4",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-vegeta-peaceful-week-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-vegeta-peaceful-week-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-levi-cleaning-drill-01",
+    "result_branch": "codex/results/ifverse-anime-levi-cleaning-drill-01-dubbingai-01",
+    "result_commit": "dbf4e72f90005204409143ee88d6a58fa877430d",
+    "video_sha256": "dbec9bd21eda6f6970566682e591828438a633943ea789d8af540ff31d9391d3",
+    "prior": {
+      "id": "ifverse-anime-levi-cleaning-drill-01",
+      "topic_key": "levi-cleaning-drill",
+      "title": "What if Levi's cleaning day became a survival drill?",
+      "premise": "Levi converts an apparently petty cleaning inspection into practical equipment checks and team safety training.",
+      "franchise": "Attack on Titan",
+      "characters": [
+        "Levi",
+        "Armin",
+        "Eren"
+      ],
+      "aliases": [],
+      "distinctive_development": "Complaints about chores reveal frayed gear; checking equipment and communication improve odds without removing the danger; darkest humor stays non-graphic.",
+      "script_sha256": "00eb69ed18a4bd745285aa49b2eea13181b1ef60d6b1bd3d891322a2a2d219c0",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879473+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "0d39e841d2c7c028665f1bd96c5dd8a66fb05efff77465297f09d670813eb79b",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "ed0032edfa56259f9baeacef488677f85dbaee870e0056cb7a11eb07c84f8011",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-levi-cleaning-drill-01-r2",
+      "result_commit": "f3256c656bdd7d8912f2d85a068407055ae84bfb",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-levi-cleaning-drill-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=c397e049725ef704424e9269b622d0f27b10c4d909fac76ca4549e30c465c4b8",
+      "retained_inputs_sha256": {
+        "narration.wav": "caf19df8df84377c3a2756b83191b655388295a5e2506619db7b6b3b88318d1d",
+        "narration.json": "2b37e853967675f169232fd878d83752f33bb03f958d2b7695d69531ce6639ab",
+        "transcription.json": "a4189b6751a1ceb38705b9e6105418928a03a05f34784f98365ceb29a2227270"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "f3256c656bdd7d8912f2d85a068407055ae84bfb",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-levi-cleaning-drill-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-levi-cleaning-drill-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-gojo-no-powers-day-01",
+    "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-dubbingai-01",
+    "result_commit": "ca40228b58b801964e94e8f0d6cb0bea9bceab78",
+    "video_sha256": "3b79c976e48dfcebc39a702ad28b119d3f0789037f515da9f422bf7ebe7e4bd5",
+    "prior": {
+      "id": "ifverse-anime-gojo-no-powers-day-01",
+      "topic_key": "gojo-no-powers-day",
+      "title": "What if Gojo lost his powers for 24 hours?",
+      "premise": "Gojo temporarily loses his technique and must protect students through planning, restraint and collaboration.",
+      "franchise": "Jujutsu Kaisen",
+      "characters": [
+        "Gojo",
+        "Yuji",
+        "Megumi"
+      ],
+      "aliases": [],
+      "distinctive_development": "An invented one-day limit removes usual tools; students disagree about rescue; decoy and evacuation replace overpowering; weakness reveals teaching habits.",
+      "script_sha256": "5d15923cac847eab6ca2da142a47d55a06f2335de92013f85b752e03e3c8f9d6",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879547+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "ab1cef406e6cea07578200283fa4f292bbd51154651a200fb69e3c102dbcf604",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "2036c520d7f1bb272b32f2f2f36ea0d55db85676c99b032f81e0756b6a38ba2c",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r3",
+      "result_commit": "2a17c45aad30a9b04b961217972228101a3fa626",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-gojo-no-powers-day-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=95e3d45893e310613e0bde08101bbbb66c2144490e42b1a2e75c3d4005633814",
+      "retained_inputs_sha256": {
+        "narration.wav": "9419ae67a2c91e36e4d03bfb37bf9dbcf7e36295527e5c4856ad3f5342cd1f27",
+        "narration.json": "781c60c433c8e84afbbc1d9e05db4b843814f799ca03dcb33ebe379d1f5003f7",
+        "transcription.json": "2656605e3f070d8c61e3a08cc0172b68680f354eddd81758c9c9486f35b8d4fb"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "2a17c45aad30a9b04b961217972228101a3fa626",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-gojo-no-powers-day-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-gojo-no-powers-day-01/post-settings-dubbingai.json"
+  },
+  {
+    "id": "ifverse-anime-tanjiro-demon-thoughts-01",
+    "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-dubbingai-01",
+    "result_commit": "347f4149b72ad40cd89ed4bf3aef5347705cf460",
+    "video_sha256": "c3aa5b322350a634b5a4e7ea73de75f9e2da728146fdd6bc491b0cfd6ef49ded",
+    "prior": {
+      "id": "ifverse-anime-tanjiro-demon-thoughts-01",
+      "topic_key": "tanjiro-demon-thoughts",
+      "title": "What if Tanjiro could hear demons' thoughts?",
+      "premise": "Tanjiro gains hypothetical access to demon thoughts and learns that empathy is useful but thoughts do not guarantee honesty or harmlessness.",
+      "franchise": "Demon Slayer",
+      "characters": [
+        "Tanjiro",
+        "Nezuko",
+        "Zenitsu"
+      ],
+      "aliases": [],
+      "distinctive_development": "New information creates sensory overload; a deceptive thought challenges naive trust; corroboration and boundaries allow compassion with protection.",
+      "script_sha256": "ffa0c94df15acca3d6f6a1f7c1be949ca41d1a28376bb301cc7300d2e5849d19",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879623+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "71c86bf02878b6fc96835486660a1fad77ac96c4c5db38fe14d5e4263044f5c4",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "cfdee66e22a2034cc127082fe52cd2dfa3c65f17081bc4af05380a679d563828",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-r2",
+      "result_commit": "e70153a984700f566c0099024cccfe94341b5308",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-tanjiro-demon-thoughts-01/batch-result.json"
+    },
+    "validation": {
+      "status": "passed",
+      "duration_seconds": 61,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "complete_decode": "passed_ffmpeg_xerror",
+      "h264_stream_sha256": "SHA256=8a521be9f473adde7f00d16c9d76ae7866fd3fa97b2ab218a18afeeb606ffaf4",
+      "retained_inputs_sha256": {
+        "narration.wav": "f79d9e1497c3c5e142e2b8f6fa02fc817d48edf738bc4e0ae80d5b66c6b3868d",
+        "narration.json": "efc5ce9ff0e4a213492ee58e57839b0f02279ca6752233bc96bcee0d882a3479",
+        "transcription.json": "2ec3f588f73d7b79eb69050b1a4c2cc5e1eb2c580793381c266012a1b37ff3ee"
+      },
+      "voice_master_gain": 1,
+      "outside_cues_max_pcm_delta": 3.0517578125e-05,
+      "all_cues_have_measured_energy": true,
+      "source_hashes_verified": true,
+      "caption_timing_unchanged": true,
+      "old_soundtrack_used": false,
+      "narration_receipt_retained": true,
+      "source_result_commit": "e70153a984700f566c0099024cccfe94341b5308",
+      "selected_old_sound_version_picture_identical": true,
+      "michael_receipt_hash_verified": true
+    },
+    "video": "artifacts/ifverse-anime-tanjiro-demon-thoughts-01/production/sound-effects-dubbingai/video-sfx.mp4",
+    "posting_packet": "artifacts/ifverse-anime-tanjiro-demon-thoughts-01/post-settings-dubbingai.json"
+  }
+]

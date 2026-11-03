@@ -50,6 +50,11 @@ def fetch_effect(asset, cache):
         raise ValueError('Sound effect needs a verified SHA-256 before mixing')
     url = checked_effect_url(asset['download_url'])
     target = local_asset(cache, asset['file'])
+    saved = Path(__file__).resolve().parents[1] / 'assets/sfx/bank' / asset['file']
+    if asset['id'].startswith('dubbingai_') and saved.exists():
+        if digest(saved) != asset['sha256']:
+            raise ValueError('Saved DubbingAI bank checksum changed')
+        return saved
     if target.exists():
         if digest(target) != asset['sha256']:
             raise ValueError('Cached sound effect checksum changed')
@@ -59,8 +64,8 @@ def fetch_effect(asset, cache):
     with urllib.request.urlopen(request, timeout=25) as response:
         if checked_effect_url(response.url).hostname != url.hostname:
             raise ValueError('Unexpected sound-effect redirect')
-        data = response.read(2_000_001)
-    if len(data) > 2_000_000 or hashlib.sha256(data).hexdigest() != asset['sha256']:
+        data = response.read(16 * 1024 * 1024 + 1)
+    if len(data) > 16 * 1024 * 1024 or hashlib.sha256(data).hexdigest() != asset['sha256']:
         raise ValueError('Sound effect size/checksum mismatch')
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_bytes(data)
@@ -206,7 +211,7 @@ def mix_effects(video, narration, transcript, plan, catalog, cache, output):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('operation', choices=['search', 'mix'])
-    parser.add_argument('--catalog', default='assets/sfx/catalog.json')
+    parser.add_argument('--catalog', default='assets/sfx/dubbingai-bank.json')
     parser.add_argument('--query')
     for name in ['video', 'narration', 'transcript', 'plan', 'output']:
         parser.add_argument('--' + name)

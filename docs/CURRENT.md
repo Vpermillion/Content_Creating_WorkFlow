@@ -1,4 +1,12 @@
-# Current checkpoint
+## Current repair checkpoint — 2026-11-03
+
+The ten 61-second anime Shorts now have **sound-only DubbingAI corrections**. [Batch videos and posting packets](BATCH_61S.md) · [Topic review board](TOPIC_REVIEW_BOARD.md) · [Platform dashboard](PLATFORM_DASHBOARD.md) · [Repair handoff and validation](SOUND_REPAIR_HANDOFF.md).
+
+Final regression suite: **112 passed**; all 17 bank recordings and all ten corrected media paths passed real decoding/integrity checks. [Validation report](REPAIR_VALIDATION.md).
+
+All 17 actual collection recordings are cached, hashed and fully decoded in the saved bank. All ten corrections preserve Michael narration, H.264 pictures and caption timing. Older Brackeys versions remain history. No music, new TTS, footage search or story regeneration was used. The owner must choose/review topics before new full renders or posting; all proposals remain unapproved. No accounts/OAuth connections or public posts are verified; no scheduler is enabled. This checkpoint supersedes historical posting authorization and old sound-default claims below.
+
+# Earlier checkpoint (historical)
 
 ## Ten-video batch and optional upload automation — 2026-11-03
 

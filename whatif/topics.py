@@ -30,8 +30,20 @@ def topic_record(episode, batch_id):
             'characters': episode['characters'], 'aliases': episode.get('aliases', []),
             'distinctive_development': episode['distinctive_development'],
             'script_sha256': script_hash(episode['scenes']), 'batch_id': batch_id,
-            'state': 'reserved', 'video_id': None, 'youtube_url': None,
+            'state': 'proposed', 'owner_topic_choice': {'status': 'pending_owner_choice'},
+            'video_id': None, 'youtube_url': None,
             'reserved_at': datetime.now(timezone.utc).isoformat()}
+
+
+def require_owner_choice(registry, episode_id, ordered_script_sha256=None):
+    """Use only a recorded real owner decision; assistants must not self-approve."""
+    entry = next((t for t in registry['topics'] if t['id'] == episode_id), {})
+    choice = entry.get('owner_topic_choice', {})
+    if (choice.get('status') != 'approved' or choice.get('selected_by') != 'owner'
+            or not choice.get('decision_reference') or not choice.get('selected_at')
+            or (ordered_script_sha256 is not None and choice.get('script_sha256') != ordered_script_sha256)):
+        raise ValueError('Actual owner topic choice and matching script review are required')
+    return entry
 
 
 def conflicts(registry, candidate):

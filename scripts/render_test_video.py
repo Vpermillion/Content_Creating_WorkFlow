@@ -410,6 +410,10 @@ def run(request, output, models):
         raise ValueError('Unsupported caption recognition model')
     if output.exists() and any(output.iterdir()):
         raise ValueError('Use a fresh output directory for a new test version')
+    from whatif.topics import require_owner_choice, script_hash
+    registry = json.loads((ROOT / 'channels/ifverse_anime-topics.json').read_text())
+    source_for_review = requested_script(request.get('script', 'pilots/alpha-anime-001.json'))
+    require_owner_choice(registry, request.get('topic_id', request['id']), script_hash(source_for_review['scenes']))
     output.mkdir(parents=True, exist_ok=True)
     source = requested_script(request.get('script', 'pilots/alpha-anime-001.json'))
     original = requested_plan(request.get('edit_plan', 'edits/alpha-anime-video.v2.json'))

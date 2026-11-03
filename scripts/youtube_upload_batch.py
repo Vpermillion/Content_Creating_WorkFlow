@@ -38,7 +38,7 @@ def load_request(relative):
             raise ValueError('Pin the exact completed result commit')
         if not re.fullmatch(r'[a-f0-9]{64}', item.get('video_sha256', '')):
             raise ValueError('Pin the final video SHA-256')
-        if not re.fullmatch(re.escape('codex/results/' + item['id']) + r'(?:-r[234])?', item.get('result_branch','')):
+        if not re.fullmatch(re.escape('codex/results/' + item['id']) + r'(?:-r[234]|-dubbingai-01)?', item.get('result_branch','')):
             raise ValueError('Use the exact episode-specific result branch')
         if item.get('video', '').startswith('artifacts/' + item['id'] + '/') is not True:
             raise ValueError('Video must belong to this episode')
@@ -51,7 +51,7 @@ def fetch_result(item):
     commit = subprocess.check_output(['git','rev-parse','FETCH_HEAD'],cwd=ROOT,text=True).strip()
     if commit != item['result_commit']:
         raise ValueError('Result branch differs from reviewed commit')
-    receipt_name = 'artifacts/' + item['id'] + '/batch-result.json'
+    receipt_name = 'artifacts/' + item['id'] + ('/batch-result-dubbingai.json' if branch.endswith('-dubbingai-01') else '/batch-result.json')
     result = json.loads(subprocess.check_output(['git','show',commit+':'+receipt_name],cwd=ROOT))
     if result.get('status') != 'success' or result.get('video_sha256') != item['video_sha256']:
         raise ValueError('Saved result did not establish the expected video')
@@ -73,6 +73,9 @@ def run(relative, expected_channel_id, execute=False):
     if not execute:
         return {'status':'planned','episodes':[i['id'] for i in request['items']],
                 'uploaded':False,'note':'Plan only; --publish performs verified uploads'}
+    for item in request['items']:
+        entry = next((t for t in registry['topics'] if t['id'] == item['id']), {})
+        topics.require_owner_choice(registry, item['id'], entry.get('script_sha256'))
     youtube.require_channel_id(expected_channel_id)
     ready = []
     for item in request['items']:

@@ -40,6 +40,7 @@ def merge_outcomes(registry,records):
     for result in records:
         entry=next(e for e in registry['topics'] if e['id']==result['id'])
         if entry['state']=='published' or entry.get('video_id'):continue
+        if entry.get('sound_repair') and result.get('branch') != entry.get('result_branch'):continue
         if result.get('script_sha256')!=entry['script_sha256']:
             continue  # A later requested script revision must not be replaced.
         if result['status']=='success':
@@ -54,15 +55,15 @@ def merge_outcomes(registry,records):
 
 def index_text(registry,goal):
     text=['# Ten Ifverse Anime Shorts — 61-second cuts','',
-          'Each completed cut is 720×1280, English, with Michael narration, aligned burned-in captions and four phrase-anchored public-domain effects. No piano is embedded; the owner will handle optional Meaningful Love - Silo music in YouTube.','',
+          'Each completed cut is 720×1280, English, with Michael narration, aligned burned-in captions and four phrase-anchored actual DubbingAI recording cues (community excerpt rights unverified). No piano is embedded; the owner will handle optional Meaningful Love - Silo music in YouTube.','',
           '**Publication:** this render job does not establish any YouTube uploads. Consult actual publication receipts and topic status. Source-use clearance and full listening/editorial approval are separate from rendering. A GitHub link is not a YouTube post.','',
           '| Topic | State | Length | Video | Posting details |','| --- | --- | --- | --- | --- |']
     for episode in goal['episodes']:
         entry=next(e for e in registry['topics'] if e['id']==episode['id'])
         base='https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/'+entry.get('result_branch','codex/results/'+entry['id']+'-r2')+'/artifacts/'+entry['id']+'/'
         ready=entry['state'] in ('rendered','published','uploaded_status_pending')
-        video='[MP4]('+base+'production/sound-effects/video-sfx.mp4)' if ready else 'Pending'
-        packet='[Title, description, hashtags and settings]('+base+'post-settings.json)' if ready else 'Pending'
+        video='[MP4]('+base+entry.get('video_path','production/sound-effects/video-sfx.mp4')+')' if ready else 'Pending'
+        packet='[Title, description, hashtags and settings]('+base+entry.get('posting_packet_path','post-settings.json')+')' if ready else 'Pending'
         duration=str(entry.get('duration_seconds','—'))+' s' if ready else '—'
         text.append('| '+episode['title'].replace('|','/')+' | '+entry['state']+' | '+duration+' | '+video+' | '+packet+' |')
     text += ['', 'Every result branch also preserves its script, English SRT, exact waveform/caption/source/mix receipts and a contact sheet. Earlier attempts remain versioned. The first 75-second engineering batch exposed a final-cue boundary issue and overly long scripts; the final scripts were shortened for 61 seconds and use frozen footage. Subsequent visual repairs retain the completed voice and caption timing.', '',

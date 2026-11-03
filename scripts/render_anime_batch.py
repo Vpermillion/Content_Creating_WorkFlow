@@ -16,7 +16,7 @@ from scripts import prepare_review_sources as sources
 from scripts import render_test_video as renderer
 from whatif import media
 from whatif.store import atomic_json, digest, identifier
-from whatif.topics import script_hash, topic_record, conflicts
+from whatif.topics import script_hash, topic_record, conflicts, require_owner_choice
 
 
 def load_batch(relative):
@@ -150,6 +150,12 @@ def collect_episode(episode, output):
 
 
 def render_episode(batch, episode, output, models):
+    registry = json.loads((ROOT / 'channels/ifverse_anime-topics.json').read_text())
+    require_owner_choice(registry, episode['id'], script_hash(episode['scenes']))
+    bank = json.loads((ROOT / 'assets/sfx/dubbingai-bank.json').read_text())
+    allowed = {a['id'] for a in bank['assets']}
+    if any(c['effect'] not in allowed for c in episode['cues']):
+        raise ValueError('Select actual DubbingAI bank recordings explicitly')
     output = output.resolve(); models = models.resolve()
     if output.exists() and any(output.iterdir()):
         raise ValueError('Use a fresh output; inspect saved result before retrying')
@@ -185,9 +191,9 @@ def render_episode(batch, episode, output, models):
                 'width': 720, 'height': 1280, 'fps': 30, 'assets': assets, 'scenes': scenes,
                 'video_only': True, 'single_pass': True, 'enhancement': 'anime-light',
                 'source_credit': 'IFVERSE ANIME / FAN-MADE WHAT-IF', 'publishing_authorized': False}
-        # Explicitly choose documented public-domain effects for this publication-oriented batch.
+        # Require explicit actual-recording choices; never substitute legacy effects.
         effects = {'schema_version': 1, 'id': episode['id'],
-                   'script_sha256': result['script_sha256'], 'catalog': 'assets/sfx/catalog.json',
+                   'script_sha256': result['script_sha256'], 'catalog': 'assets/sfx/dubbingai-bank.json',
                    'cues': [{'anchor': {'phrase': c['phrase'], 'edge': 'end'}, 'offset_seconds': .03,
                              'effect': c['effect'], 'peak_dbfs': -17, 'max_seconds': .75,
                              'reason': 'Punctuate the specific scripted joke without covering the next phrase.'}
@@ -230,7 +236,7 @@ def render_episode(batch, episode, output, models):
                       video_sha256=digest(video), duration_seconds=duration,
                       frame_size=[track['width'], track['height']],
                       source_count=len(assets), source_use_status='unverified',
-                      sound_catalog='assets/sfx/catalog.json', sound_rights='documented_public_domain',
+                      sound_catalog='assets/sfx/dubbingai-bank.json', sound_rights='community_excerpt_rights_unverified',
                       technical_receipt='production/result.json',
                       audiovisual_editorial_review='pending',
                       metadata={'title': episode['title'], 'description':
@@ -239,6 +245,9 @@ def render_episode(batch, episode, output, models):
                                 '#Shorts #Anime #WhatIf', 'categoryId': '24', 'defaultLanguage': 'en'})
         if episode.get('posting'):
             settings = copy.deepcopy(episode['posting'])
+            settings['description'] = settings['description'].replace(
+                'Sound effects: Brackeys, public domain.',
+                'Sound effects: actual DubbingAI collection recordings; community excerpt reuse rights unverified.')
             metadata = {k: settings[k] for k in ('title','description','tags','hashtags','categoryId',
                                                'defaultLanguage','defaultAudioLanguage')}
             metadata['description'] += '\n\nIllustrative clip sources:\n' + '\n'.join(a['source_url'] for a in assets)

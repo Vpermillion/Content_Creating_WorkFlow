@@ -1,3 +1,11 @@
+# Current sound defaults — 2026-11-03
+
+Use `assets/sfx/dubbingai-bank.json` and the saved `assets/sfx/bank/` recordings. All 17 were downloaded, hashed and fully decoded; the download cap is 16 MiB each. The three frozen historical hashes match. No CDN-access blocker remains in this environment. Long music/vocal excerpts need audition; do not assume short-effect content or public-domain rights.
+
+[Corrected ten-video batch](BATCH_61S.md) · [Repair provenance and commands](SOUND_REPAIR_HANDOFF.md). Production defaults select actual recordings and reject legacy cue IDs rather than substitute. Preserve historical plans explicitly; do not use custom bass or Brackeys for these repairs. No music is embedded.
+
+The following records are historical and do not describe the current defaults or bank completion.
+
 # Script-timed comedy sound effects
 
 Use the current implementation on `codex/ifverse-workflow`. The owner requested downloadable modern meme-style sound effects at specific scripted reactions and punchlines, with reusable descriptions so future agents can choose suitable sounds. The user’s example describes **question → roast → impact → comeback** timing. Write playful clean dialogue consistent with `prompts/script-style.md`.

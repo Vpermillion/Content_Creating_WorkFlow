@@ -3,7 +3,7 @@
   "source_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
   "article_access": "HTTP 200 using a browser-compatible standard request",
   "source_html_sha256": "79f985e9841fb4a631f6462ad7d0aec3acceab2001d2bce9d9fd1fd24c5a230d",
-  "status": "3_selected_clips_acquired_on_production_runner_14_discovery_only",
+  "status": "all_17_downloaded_decoded_hashed",
   "required_audio_host": "dvi.dubbingai.io",
   "discovered_recordings": [
     {
@@ -21,10 +21,22 @@
         "shock",
         "punchline"
       ],
-      "download_status": "downloaded_probed_hashed_on_production_runner",
+      "download_status": "downloaded_probed_hashed",
       "sha256": "3ab9f5231ab8d8cad22f1064305911e680bdddc6620b8a0d23662ad834e8d327",
       "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
-      "duration_seconds": 3.004082
+      "duration_seconds": 3.004082,
+      "file": "dubbingai_vine_boom.mp3",
+      "bytes": 48411,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "short_effect",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_rizz_effect",
@@ -40,10 +52,22 @@
         "confidence",
         "flirting"
       ],
-      "download_status": "downloaded_probed_hashed_on_production_runner",
+      "download_status": "downloaded_probed_hashed",
       "sha256": "0bf4d137589d0c07243bf5ba104f40ceb78ef003fbee6dad4dea92ee348062fc",
       "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
-      "duration_seconds": 2.272653
+      "duration_seconds": 2.272653,
+      "file": "dubbingai_rizz_effect.mp3",
+      "bytes": 36663,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "short_effect",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_walter_family",
@@ -59,9 +83,22 @@
         "irony",
         "drama"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "e432f89e7ec713e5f5fef92ba6cc8f758d40f94672f99922eb376eb1182f077b",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_walter_family.mp3",
+      "bytes": 200548,
+      "duration_seconds": 12.512653,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_lucifers_waltz",
@@ -77,9 +114,22 @@
         "danger",
         "music"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "be849976c46adcd59b48e0fee01f34986e5cbcd7eb8f7941abe24b47ea23ffe0",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_lucifers_waltz.mp3",
+      "bytes": 2943987,
+      "duration_seconds": 183.980408,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_cleared",
@@ -95,9 +145,22 @@
         "transition",
         "energy"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "212fbd89caac7b6b2d90188ba4bd806a1d20999c3cb21b9fe7179617ae7cebbe",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_cleared.mp3",
+      "bytes": 367341,
+      "duration_seconds": 22.944,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 48000,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_faaah",
@@ -114,10 +177,22 @@
         "fail",
         "roast"
       ],
-      "download_status": "downloaded_probed_hashed_on_production_runner",
+      "download_status": "downloaded_probed_hashed",
       "sha256": "1068d99c558931be8b673b541a524c5417f3592991f100ebdb88b7207493e800",
       "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
-      "duration_seconds": 1.959184
+      "duration_seconds": 1.959184,
+      "file": "dubbingai_faaah.mp3",
+      "bytes": 31692,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "short_effect",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_stuka_siren",
@@ -133,9 +208,22 @@
         "chaos",
         "disaster"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "945a9266152abdf4150a272b7a6699b16caf7ca414990e986641d0a1b622c385",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_stuka_siren.mp3",
+      "bytes": 249356,
+      "duration_seconds": 15.56898,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_montagem_alquimia",
@@ -151,9 +239,22 @@
         "confidence",
         "montage"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "f8b1a46f05394b29342938fee87d769a01e865cd922c7a03ebec6f1f87918e0d",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_montagem_alquimia.mp3",
+      "bytes": 3370170,
+      "duration_seconds": 138.72,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 48000,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_nada_ainda",
@@ -169,9 +270,22 @@
         "no results",
         "awkward"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "61424e43c4672ef65c7655e5f58b4ae9bf269766399435aa591c7540714dc460",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_nada_ainda.mp3",
+      "bytes": 84709,
+      "duration_seconds": 5.172245,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_heo_edit",
@@ -187,9 +301,22 @@
         "montage",
         "transition"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "98629be98f48e6083c0cf739eddf03c39ac450d02fe5c2d439c5d698f08bfe3c",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_heo_edit.mp3",
+      "bytes": 2777939,
+      "duration_seconds": 128.568,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 48000,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_medaltv_roblox",
@@ -205,9 +332,22 @@
         "gaming",
         "reaction"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "5c63f3f120eefe56e469fb7a9e80b4d5320d7c55b7b037d8d32862d5c45c1f4a",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_medaltv_roblox.mp3",
+      "bytes": 486868,
+      "duration_seconds": 30.408,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 48000,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_heartbeat",
@@ -223,9 +363,22 @@
         "synth",
         "transition"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "8e9ee87492309a4d1fef9980c1bd05ef0cff8c594ae5e29ff59950cbbc59a81e",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_heartbeat.mp3",
+      "bytes": 3399608,
+      "duration_seconds": 212.453878,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_rizz_she_goes_by",
@@ -241,9 +394,22 @@
         "storytelling",
         "background"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "902507808280eef5f7993e575669ab1499af87ed4c0b8bc4e1fd396d85ca7771",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_rizz_she_goes_by.mp3",
+      "bytes": 276199,
+      "duration_seconds": 17.240816,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_teiser_uno",
@@ -259,9 +425,22 @@
         "gaming",
         "chaos"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "37beba870afef7d941186f65e441594aaad95f9217d03a0aea637ae594259d70",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_teiser_uno.mp3",
+      "bytes": 196786,
+      "duration_seconds": 12.277551,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_h",
@@ -277,9 +456,22 @@
         "reaction",
         "quick"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "49d55cfd9eb88b0d91bc27d0ab8b8edb3c3fc2d10a31c0218a07a79a9624403f",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_h.mp3",
+      "bytes": 2825935,
+      "duration_seconds": 161.568,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 48000,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_eren_mikasa",
@@ -295,9 +487,22 @@
         "relationship",
         "drama"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "b9bd6ca15b409b2818b7199652a72bf1573e8f4cf52fcf676b897a8803edfbcd",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_eren_mikasa.mp3",
+      "bytes": 237328,
+      "duration_seconds": 14.811429,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     },
     {
       "id": "dubbingai_sasuke_nandomo",
@@ -314,9 +519,22 @@
         "sasuke",
         "reaction"
       ],
-      "download_status": "pending_media_host_access_and_checksum_verification",
-      "sha256": null,
-      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing"
+      "download_status": "downloaded_probed_hashed",
+      "sha256": "5d4325c20e677825eaad0347495129a82693a7e6d203dc13fa9f798e5d2aa1fb",
+      "license_status": "Community-uploaded clip; commercial reuse rights not established by this listing",
+      "file": "dubbingai_sasuke_nandomo.mp3",
+      "bytes": 302112,
+      "duration_seconds": 18.860408,
+      "decode_check": "passed_complete_ffmpeg_xerror",
+      "sample_rate": 44100,
+      "channels": 2,
+      "playback_rate": 1,
+      "license": "Community-hosted excerpt; reuse rights unverified",
+      "license_url": "https://dubbingai.io/articles/en/collection/tiktok-meme-sound-effects",
+      "usage_basis": "Owner-requested sound-only repair and review; publication not authorized",
+      "checksum_origin": "Published HTTPS acquisition; frozen for subsequent verification",
+      "media_kind": "music_or_vocal_excerpt_requires_audition",
+      "selection_note": "Audition actual duration/content; descriptions are discovery summaries, not a short-effect guarantee."
     }
   ],
   "notes": "Do not treat ratings, popularity, ownership or commercial rights claimed by the article as independently verified. Only register an effect in the playable catalog after bounded download, SHA-256 and audio probing."
