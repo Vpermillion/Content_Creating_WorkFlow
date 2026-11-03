@@ -1,0 +1,76 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.18,Caption,,0,0,0,,What if Naruto's shadow clones
+Dialogue: 0,0:00:01.18,0:00:02.42,Caption,,0,0,0,,went on strike?
+Dialogue: 0,0:00:02.42,0:00:03.32,Caption,,0,0,0,,Bro got canceled by his
+Dialogue: 0,0:00:03.32,0:00:04.56,Caption,,0,0,0,,own unpaid staff.
+Dialogue: 0,0:00:04.56,0:00:05.80,Caption,,0,0,0,,Two hundred Narutos cross their
+Dialogue: 0,0:00:05.80,0:00:06.72,Caption,,0,0,0,,arms.
+Dialogue: 0,0:00:06.72,0:00:08.22,Caption,,0,0,0,,Same face, same trauma.
+Dialogue: 0,0:00:08.22,0:00:09.64,Caption,,0,0,0,,Terrifying customer service.
+Dialogue: 0,0:00:09.64,0:00:10.32,Caption,,0,0,0,,He says, we're the same
+Dialogue: 0,0:00:10.32,0:00:11.12,Caption,,0,0,0,,person.
+Dialogue: 0,0:00:11.12,0:00:12.04,Caption,,0,0,0,,Exactly, boss.
+Dialogue: 0,0:00:12.04,0:00:13.24,Caption,,0,0,0,,We know you'll volunteer us.
+Dialogue: 0,0:00:13.24,0:00:14.40,Caption,,0,0,0,,Training stops.
+Dialogue: 0,0:00:14.40,0:00:15.60,Caption,,0,0,0,,Missions fall behind.
+Dialogue: 0,0:00:15.60,0:00:17.22,Caption,,0,0,0,,Konoha discovers its\Nproductivity plan
+Dialogue: 0,0:00:17.22,0:00:18.94,Caption,,0,0,0,,was one exhausted teenager.
+Dialogue: 0,0:00:18.94,0:00:19.94,Caption,,0,0,0,,Kakashi looks up.
+Dialogue: 0,0:00:19.94,0:00:20.70,Caption,,0,0,0,,He's never seen a meeting
+Dialogue: 0,0:00:20.70,0:00:21.53,Caption,,0,0,0,,this orange.
+Dialogue: 0,0:00:21.53,0:00:22.65,Caption,,0,0,0,,The clones explain that their
+Dialogue: 0,0:00:22.65,0:00:24.91,Caption,,0,0,0,,painful memories return to\NNaruto.
+Dialogue: 0,0:00:24.91,0:00:26.11,Caption,,0,0,0,,He's exploiting himself with\Nextra
+Dialogue: 0,0:00:26.11,0:00:26.83,Caption,,0,0,0,,steps.
+Dialogue: 0,0:00:26.83,0:00:28.39,Caption,,0,0,0,,He proposes shorter rotations\Nand
+Dialogue: 0,0:00:28.39,0:00:29.41,Caption,,0,0,0,,actual breaks.
+Dialogue: 0,0:00:29.41,0:00:30.77,Caption,,0,0,0,,Character development gets a\Nlunch
+Dialogue: 0,0:00:30.77,0:00:31.89,Caption,,0,0,0,,schedule attached.
+Dialogue: 0,0:00:31.89,0:00:33.53,Caption,,0,0,0,,Smaller squads test strategies\Nbefore
+Dialogue: 0,0:00:33.53,0:00:34.85,Caption,,0,0,0,,everyone commits.
+Dialogue: 0,0:00:34.85,0:00:36.87,Caption,,0,0,0,,Fewer bodies, better\Ninformation.
+Dialogue: 0,0:00:36.87,0:00:38.67,Caption,,0,0,0,,An actual tactical upgrade\Nappears.
+Dialogue: 0,0:00:38.67,0:00:40.07,Caption,,0,0,0,,They still split his chakra.
+Dialogue: 0,0:00:40.07,0:00:41.55,Caption,,0,0,0,,This union negotiates breaks,\Nnot
+Dialogue: 0,0:00:41.55,0:00:42.71,Caption,,0,0,0,,a physics refund.
+Dialogue: 0,0:00:42.71,0:00:43.73,Caption,,0,0,0,,Please stay serious.
+Dialogue: 0,0:00:43.73,0:00:45.33,Caption,,0,0,0,,Opponents now face coordinated\Nscouts
+Dialogue: 0,0:00:45.33,0:00:46.93,Caption,,0,0,0,,and decoys instead of orange
+Dialogue: 0,0:00:46.93,0:00:49.01,Caption,,0,0,0,,dudes arguing over who gets\Npunched.
+Dialogue: 0,0:00:49.01,0:00:49.97,Caption,,0,0,0,,One clone asks who elected
+Dialogue: 0,0:00:49.97,0:00:51.43,Caption,,0,0,0,,the original leader.
+Dialogue: 0,0:00:51.43,0:00:52.19,Caption,,0,0,0,,Mother father.
+Dialogue: 0,0:00:52.19,0:00:53.49,Caption,,0,0,0,,His entire forehead just lost
+Dialogue: 0,0:00:53.49,0:00:54.37,Caption,,0,0,0,,confidence.
+Dialogue: 0,0:00:54.37,0:00:56.21,Caption,,0,0,0,,Naruto joins the strike.
+Dialogue: 0,0:00:56.21,0:00:57.51,Caption,,0,0,0,,Everyone demands ramen.
+Dialogue: 0,0:00:57.51,0:00:59.53,Caption,,0,0,0,,Unfortunately, their\Nrevolutionary movement still
+Dialogue: 0,0:00:59.53,0:01:00.97,Caption,,0,0,0,,shares exactly one wallet.
+Dialogue: 1,0:00:00.00,0:00:04.50,Heading,,0,0,0,,THE CLONES HAVE DEMANDS
+Dialogue: 1,0:00:04.50,0:00:09.55,Heading,,0,0,0,,TWO HUNDRED IDENTICAL COMPLAINTS
+Dialogue: 1,0:00:09.55,0:00:13.16,Heading,,0,0,0,,THE ORIGINAL IS CONFUSED
+Dialogue: 1,0:00:13.16,0:00:18.88,Heading,,0,0,0,,TRAINING IS NOW DELAYED
+Dialogue: 1,0:00:18.88,0:00:21.53,Heading,,0,0,0,,MANAGEMENT HAS LOGGED OFF
+Dialogue: 1,0:00:21.53,0:00:26.78,Heading,,0,0,0,,MEMORIES COME BACK TOO
+Dialogue: 1,0:00:26.78,0:00:31.86,Heading,,0,0,0,,AN ACTUAL CONCESSION
+Dialogue: 1,0:00:31.86,0:00:38.63,Heading,,0,0,0,,SMALLER SQUAD SMARTER PLAN
+Dialogue: 1,0:00:38.63,0:00:43.73,Heading,,0,0,0,,THEY STILL SHARE CHAKRA
+Dialogue: 1,0:00:43.73,0:00:48.91,Heading,,0,0,0,,THE ENEMY MEETS A TEAM
+Dialogue: 1,0:00:48.91,0:00:54.30,Heading,,0,0,0,,WHO APPROVED THE LEADER
+Dialogue: 1,0:00:54.30,0:01:01.00,Heading,,0,0,0,,THE BOSS JOINS THE PICKET
+Dialogue: 1,0:00:00.00,0:01:01.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:01.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF

@@ -1,0 +1,11 @@
+{
+  "branch": "codex/results/ifverse-anime-naruto-clone-strike-01",
+  "commit": "97116ab71612c9f49e0300264bb3b2fb21f22df6",
+  "reused_source_keys": [
+    "clones",
+    "naruto",
+    "kakashi",
+    "train"
+  ],
+  "new_source_searches_avoided": 4
+}
