@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-levi-cleaning-drill-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "0d39e841d2c7c028665f1bd96c5dd8a66fb05efff77465297f09d670813eb79b",
+  "result_branch": "codex/results/ifverse-anime-levi-cleaning-drill-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Rewrite the script; requested length needs excessive speech retiming"
+}
