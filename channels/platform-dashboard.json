@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-03",
+  "live_connections_verified": false,
+  "secrets_policy": "Never commit passwords, tokens, OAuth secrets or private account details.",
+  "recurring_scheduler": "disabled",
+  "accounts": [
+    {
+      "brand": "ifverse_anime",
+      "platform": "youtube",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "upload_code_exists_live_path_unverified",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_anime",
+      "platform": "tiktok",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "not_established",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_anime",
+      "platform": "instagram",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "not_established",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_anime",
+      "platform": "facebook",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "not_established",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_anime",
+      "platform": "snapchat",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "not_established",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_hollywood",
+      "platform": "youtube",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "upload_code_exists_live_path_unverified",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_hollywood",
+      "platform": "tiktok",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "not_established",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_hollywood",
+      "platform": "instagram",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "not_established",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_hollywood",
+      "platform": "facebook",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "not_established",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    },
+    {
+      "brand": "ifverse_hollywood",
+      "platform": "snapchat",
+      "account_existence": "unverified",
+      "public_handle": null,
+      "public_account_id": null,
+      "account_verified_at": null,
+      "oauth_connection": "not_verified",
+      "oauth_verified_at": null,
+      "integration_support": "not_established",
+      "publishing_status": "blocked_prerequisites_pending",
+      "last_publication_verified_at": null,
+      "publication_receipts": [],
+      "pending_tasks": [
+        "Owner creates or confirms account privately",
+        "Record public handle and stable ID with verification date",
+        "Connect OAuth privately and verify correct account/scopes",
+        "Approve topic, script, audiovisual and source use",
+        "Verify platform integration and upload settings before any posting"
+      ]
+    }
+  ]
+}

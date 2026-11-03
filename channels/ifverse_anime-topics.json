@@ -27,7 +27,16 @@
       "references": [
         "pilots/ifverse-anime-roast-60-v1.json",
         "artifacts/ifverse-anime-sfx-review-01/result.json"
-      ]
+      ],
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": []
     },
     {
       "id": "ifverse-michael-goku-avengers-01",
@@ -54,7 +63,16 @@
       "video_id": null,
       "youtube_url": null,
       "publication_clearance": "not_established",
-      "result_branch": "codex/results/ifverse-michael-goku-avengers-01"
+      "result_branch": "codex/results/ifverse-michael-goku-avengers-01",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": []
     },
     {
       "id": "ifverse-anime-naruto-clone-strike-01",
@@ -80,14 +98,34 @@
           "script_sha256": "f75e3004f87643ec42bce41867cb51e9ba10a74b2f36c7a97914e8a5b656edfa",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "355cfa475e6b5bc6141a195e49d96b6ee74ff5e269758fad2e60fabf85ea0d78",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r3",
+          "result_commit": "941e648fe9c6557e96883980e0744cd451d7f682",
+          "video_sha256": "b5e909f2e6f9ce9e0ff15ebb26bfe6a72cda9f7f76b50de25b80cc6ecbcd3dda"
         }
       ],
-      "video_sha256": "b5e909f2e6f9ce9e0ff15ebb26bfe6a72cda9f7f76b50de25b80cc6ecbcd3dda",
+      "video_sha256": "8c606b713bd4ed3346e131a8e4dc81232ebf7e7750d5a26db94bd681f766556e",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r3",
-      "result_commit": "941e648fe9c6557e96883980e0744cd451d7f682",
+      "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-dubbingai-01",
+      "result_commit": "f74e39efb6ab363cd1e833f517a8348824492fc9",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-naruto-clone-strike-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-naruto-clone-strike-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-rock-lee-rinnegan-01",
@@ -113,14 +151,34 @@
           "script_sha256": "fc3df3e086969ea7cf004b72d6683991059a5a5091b012a7023b67e0ac807081",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "eafa14c24d15f109513c2d3b2518174fbccd4fd8388fdb3783676e65ed8fb4e8",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01-r2",
+          "result_commit": "60b330056bc653801955ae86944136ea2d1e2c36",
+          "video_sha256": "ab8e54a5f51aef9ea5de7b77c711be01e0f3278c361d600e0bd5985553fbb4e8"
         }
       ],
-      "video_sha256": "ab8e54a5f51aef9ea5de7b77c711be01e0f3278c361d600e0bd5985553fbb4e8",
+      "video_sha256": "f1d5bcce63bc856aefc6a02ed7b524e6be5f1b5eded76d69b35cf669f2e8034a",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01-r2",
-      "result_commit": "60b330056bc653801955ae86944136ea2d1e2c36",
+      "result_branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01-dubbingai-01",
+      "result_commit": "af7e8a4c08edc0f925208734ea7a1e7302116a49",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-rock-lee-rinnegan-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-rock-lee-rinnegan-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-shikamaru-hokage-day-01",
@@ -147,14 +205,34 @@
           "script_sha256": "adf98bfe2f8ffff3af80b494aa3f5cf2e9038eb64b309efed0b11b41e42709a7",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "7234d1dda3323003eaf9c87cd104418eacfd2981f495bda12f91dda288375622",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-r2",
+          "result_commit": "e4c31c237fc6fe4ac4f55d76b0c9083af0a49fe2",
+          "video_sha256": "766b2bbcc1903af2918d7e06524ad5b4c5fc96edd8c35b47c01dcaac9797ab1c"
         }
       ],
-      "video_sha256": "766b2bbcc1903af2918d7e06524ad5b4c5fc96edd8c35b47c01dcaac9797ab1c",
+      "video_sha256": "02db20a5b19eef16a4a8730a99b909a0671706ac4e0e144d945a42dbc16b8898",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-r2",
-      "result_commit": "e4c31c237fc6fe4ac4f55d76b0c9083af0a49fe2",
+      "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-dubbingai-01",
+      "result_commit": "b30e74462b80c971bf7d2fb4ffcca3dfd6469260",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-shikamaru-hokage-day-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-shikamaru-hokage-day-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-luffy-no-devil-fruit-01",
@@ -181,14 +259,34 @@
           "script_sha256": "1ce562d7bf869a6526ccc51f8fcbfc51ae2f8db6878d71a3d8ba7374839cc73c",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "cadb1dc56b75716ee65fa7846b42fa65fe3f2fbd96158199b4c9f92329bd325f",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01-r2",
+          "result_commit": "cac2626ab6bf06639eee0b8a9d2123601ff723e8",
+          "video_sha256": "05546741701689ff2293d36c27b40c75e7e2b2406b7729a26888f940548b3ae0"
         }
       ],
-      "video_sha256": "05546741701689ff2293d36c27b40c75e7e2b2406b7729a26888f940548b3ae0",
+      "video_sha256": "ae593f8f6d05d84d0514f4590262adb7171f93a34e9dd86ab44367a32513105c",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01-r2",
-      "result_commit": "cac2626ab6bf06639eee0b8a9d2123601ff723e8",
+      "result_branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01-dubbingai-01",
+      "result_commit": "d5c742bb30ca8f8f1f3f23eb9c3d53d2deaf9616",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-luffy-no-devil-fruit-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-luffy-no-devil-fruit-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-zoro-perfect-directions-01",
@@ -215,14 +313,34 @@
           "script_sha256": "e5a8916197cc19b2522c4bfd7627b32418bf87ffe600059a4faf97d55e7090ca",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "97f8b4ac4f76eba4ab33627fa4f11ad2a235d543a78fc134ad4b147a4edf153d",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-r2",
+          "result_commit": "e764c72b2da7756c3265ef78ea51d1d60661ff1c",
+          "video_sha256": "d1afa559d6ab6fa206f1e3ca4be737e5230837d3a546b93273f761f685404133"
         }
       ],
-      "video_sha256": "d1afa559d6ab6fa206f1e3ca4be737e5230837d3a546b93273f761f685404133",
+      "video_sha256": "7152b5bcce362a969afa455227fce0cc0a4ae8dda4c35008d2198f8b00f006f4",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-r2",
-      "result_commit": "e764c72b2da7756c3265ef78ea51d1d60661ff1c",
+      "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-dubbingai-01",
+      "result_commit": "a0102bc103d8c8cbefd8c1fd15b3cf3e58791527",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-zoro-perfect-directions-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-zoro-perfect-directions-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-light-explains-every-name-01",
@@ -249,14 +367,34 @@
           "script_sha256": "1530d0428739ebe8c837c7e8d2763c93960741c13264af3a97e46ec7cf86999c",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "17c8667a0acff83d83bd133e78c2852857971168de1b8cd187c6945398291ef0",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-r2",
+          "result_commit": "f2a0eadd6dc8f5601138d15410449804fb905cd8",
+          "video_sha256": "156b2f1fab574b1ed6989d6f11721793d97ccdff3ff6e796fbe1ed14dd83bc6a"
         }
       ],
-      "video_sha256": "156b2f1fab574b1ed6989d6f11721793d97ccdff3ff6e796fbe1ed14dd83bc6a",
+      "video_sha256": "624cc8677638b278a0c62f2bbd1a3fbf33e87b6e4fcf3a232011cafa1a597d4c",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-r2",
-      "result_commit": "f2a0eadd6dc8f5601138d15410449804fb905cd8",
+      "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-dubbingai-01",
+      "result_commit": "2b3060a685b1a9c2a7c44f2b546b4444a38724bf",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-light-explains-every-name-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-light-explains-every-name-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-vegeta-peaceful-week-01",
@@ -284,14 +422,34 @@
           "script_sha256": "2e48e8d704d868d9b1033347b388b99d4eceb6231e051a695ce704026516e215",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "1d1e920eca0ac5219244d5107a0e1a4603ae7c3407bfdfe344cd2291467a673a",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r4",
+          "result_commit": "6fa309c601384ad2a5e14da8da8444248fd197c4",
+          "video_sha256": "3e07fc6a2fccc37c44547c53e6502df22a4d647942120660d2393219e1c18d2c"
         }
       ],
-      "video_sha256": "3e07fc6a2fccc37c44547c53e6502df22a4d647942120660d2393219e1c18d2c",
+      "video_sha256": "9d4da4292af972dc71fde4d0db10b5728cfe3a281c36d87c8de574d9f701c90f",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r4",
-      "result_commit": "6fa309c601384ad2a5e14da8da8444248fd197c4",
+      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-dubbingai-01",
+      "result_commit": "74cf55138c93a3449650ee3e294e46bb7aa22f9b",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-vegeta-peaceful-week-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-vegeta-peaceful-week-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-levi-cleaning-drill-01",
@@ -318,14 +476,34 @@
           "script_sha256": "0d39e841d2c7c028665f1bd96c5dd8a66fb05efff77465297f09d670813eb79b",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "00eb69ed18a4bd745285aa49b2eea13181b1ef60d6b1bd3d891322a2a2d219c0",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-levi-cleaning-drill-01-r2",
+          "result_commit": "f3256c656bdd7d8912f2d85a068407055ae84bfb",
+          "video_sha256": "ed0032edfa56259f9baeacef488677f85dbaee870e0056cb7a11eb07c84f8011"
         }
       ],
-      "video_sha256": "ed0032edfa56259f9baeacef488677f85dbaee870e0056cb7a11eb07c84f8011",
+      "video_sha256": "dbec9bd21eda6f6970566682e591828438a633943ea789d8af540ff31d9391d3",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-levi-cleaning-drill-01-r2",
-      "result_commit": "f3256c656bdd7d8912f2d85a068407055ae84bfb",
+      "result_branch": "codex/results/ifverse-anime-levi-cleaning-drill-01-dubbingai-01",
+      "result_commit": "dbf4e72f90005204409143ee88d6a58fa877430d",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-levi-cleaning-drill-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-levi-cleaning-drill-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-gojo-no-powers-day-01",
@@ -352,14 +530,34 @@
           "script_sha256": "ab1cef406e6cea07578200283fa4f292bbd51154651a200fb69e3c102dbcf604",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "5d15923cac847eab6ca2da142a47d55a06f2335de92013f85b752e03e3c8f9d6",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r3",
+          "result_commit": "2a17c45aad30a9b04b961217972228101a3fa626",
+          "video_sha256": "2036c520d7f1bb272b32f2f2f36ea0d55db85676c99b032f81e0756b6a38ba2c"
         }
       ],
-      "video_sha256": "2036c520d7f1bb272b32f2f2f36ea0d55db85676c99b032f81e0756b6a38ba2c",
+      "video_sha256": "3b79c976e48dfcebc39a702ad28b119d3f0789037f515da9f422bf7ebe7e4bd5",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r3",
-      "result_commit": "2a17c45aad30a9b04b961217972228101a3fa626",
+      "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-dubbingai-01",
+      "result_commit": "ca40228b58b801964e94e8f0d6cb0bea9bceab78",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-gojo-no-powers-day-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-gojo-no-powers-day-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
     },
     {
       "id": "ifverse-anime-tanjiro-demon-thoughts-01",
@@ -386,14 +584,99 @@
           "script_sha256": "71c86bf02878b6fc96835486660a1fad77ac96c4c5db38fe14d5e4263044f5c4",
           "state": "reserved",
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        },
+        {
+          "batch_id": "ifverse-anime-ten-61s-20261103-01",
+          "script_sha256": "ffa0c94df15acca3d6f6a1f7c1be949ca41d1a28376bb301cc7300d2e5849d19",
+          "state": "rendered",
+          "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-r2",
+          "result_commit": "e70153a984700f566c0099024cccfe94341b5308",
+          "video_sha256": "cfdee66e22a2034cc127082fe52cd2dfa3c65f17081bc4af05380a679d563828"
         }
       ],
-      "video_sha256": "cfdee66e22a2034cc127082fe52cd2dfa3c65f17081bc4af05380a679d563828",
+      "video_sha256": "c3aa5b322350a634b5a4e7ea73de75f9e2da728146fdd6bc491b0cfd6ef49ded",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-r2",
-      "result_commit": "e70153a984700f566c0099024cccfe94341b5308",
+      "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-dubbingai-01",
+      "result_commit": "347f4149b72ad40cd89ed4bf3aef5347705cf460",
       "publication_clearance": "not_established",
-      "result_receipt": "artifacts/ifverse-anime-tanjiro-demon-thoughts-01/batch-result.json"
+      "result_receipt": "artifacts/ifverse-anime-tanjiro-demon-thoughts-01/batch-result-dubbingai.json",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice",
+        "selected_by": null,
+        "decision_reference": null,
+        "selected_at": null,
+        "script_sha256": null
+      },
+      "topic_review": "pending_owner_review",
+      "publication_receipts": [],
+      "sound_repair": "actual_dubbingai_recordings_from_clean_narration",
+      "video_path": "production/sound-effects-dubbingai/video-sfx.mp4",
+      "posting_packet_path": "post-settings-dubbingai.json"
+    },
+    {
+      "id": "proposal-kakashi-valley-earlier",
+      "topic_key": "kakashi-valley-earlier",
+      "title": "Kakashi reaches the Valley earlier",
+      "premise": "End of Part I: Kakashi changes pursuit route and interrupts the final clash; no later abilities.",
+      "franchise": "Naruto",
+      "characters": [
+        "Kakashi",
+        "Naruto",
+        "Sasuke"
+      ],
+      "aliases": [],
+      "distinctive_development": "See docs/TOPIC_REVIEW_BOARD.md for timing, costs and bounded consequences.",
+      "state": "proposed",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice"
+      },
+      "publication_clearance": "not_established",
+      "video_id": null,
+      "youtube_url": null,
+      "publication_receipts": []
+    },
+    {
+      "id": "proposal-itachi-truth-before-fight",
+      "topic_key": "itachi-truth-before-fight",
+      "title": "Itachi tells the truth before the final fight",
+      "premise": "Before the final Itachi/Sasuke fight: disclosure replaces the staged villain performance; illness and distrust remain.",
+      "franchise": "Naruto",
+      "characters": [
+        "Itachi",
+        "Sasuke"
+      ],
+      "aliases": [],
+      "distinctive_development": "See docs/TOPIC_REVIEW_BOARD.md for timing, costs and bounded consequences.",
+      "state": "proposed",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice"
+      },
+      "publication_clearance": "not_established",
+      "video_id": null,
+      "youtube_url": null,
+      "publication_receipts": []
+    },
+    {
+      "id": "proposal-jiraiya-retreat-partial-intel",
+      "topic_key": "jiraiya-retreat-partial-intel",
+      "title": "Jiraiya retreats with incomplete intelligence",
+      "premise": "Rain infiltration: withdraw before the final verification attempt; partial Pain intelligence leaves Konoha vulnerable.",
+      "franchise": "Naruto",
+      "characters": [
+        "Jiraiya",
+        "Pain",
+        "Fukasaku"
+      ],
+      "aliases": [],
+      "distinctive_development": "See docs/TOPIC_REVIEW_BOARD.md for timing, costs and bounded consequences.",
+      "state": "proposed",
+      "owner_topic_choice": {
+        "status": "pending_owner_choice"
+      },
+      "publication_clearance": "not_established",
+      "video_id": null,
+      "youtube_url": null,
+      "publication_receipts": []
     }
   ]
 }
