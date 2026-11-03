@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "narration_sha256": "2ccd7bac0d0275779b7fb254cc1f3d9aee3932912ee14556637e03c7fa69af3f",
+  "catalog": "assets/sfx/dubbingai-bank.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "childproofing on the plot",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Plot-childproofing roast lands"
+    },
+    {
+      "anchor": {
+        "phrase": "Be serious",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Be-serious rebuke rejects the easy solution"
+    },
+    {
+      "anchor": {
+        "phrase": "single brain cell",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Single-brain-cell roast"
+    },
+    {
+      "anchor": {
+        "phrase": "second rescue objective",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Second rescue objective exposes failure"
+    }
+  ]
+}
