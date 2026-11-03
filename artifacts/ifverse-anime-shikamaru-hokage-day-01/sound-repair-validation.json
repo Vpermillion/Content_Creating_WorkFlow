@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "duration_seconds": 61,
+  "frame_size": [
+    720,
+    1280
+  ],
+  "complete_decode": "passed_ffmpeg_xerror",
+  "h264_stream_sha256": "SHA256=3b36f0b5d2cc7005cdeaf67befd13696f6ad4c6ee0d2c4e54562f045fee615e8",
+  "retained_inputs_sha256": {
+    "narration.wav": "e33300d9eabb1747973d94cf5cbdac24d84cf08908b92f9b35e3b53ebb618758",
+    "narration.json": "08f67a643652ae5f57de9dccbf86ce97e2dde304c0903b168f8347eaa966efab",
+    "transcription.json": "84cdf7d34d6e57afd511b938c872fae5dca6b00889ca68d4ac519834ba4fc6b5"
+  },
+  "voice_master_gain": 1,
+  "outside_cues_max_pcm_delta": 3.0517578125e-05,
+  "all_cues_have_measured_energy": true,
+  "source_hashes_verified": true,
+  "caption_timing_unchanged": true,
+  "old_soundtrack_used": false,
+  "narration_receipt_retained": true,
+  "source_result_commit": "e4c31c237fc6fe4ac4f55d76b0c9083af0a49fe2"
+}
