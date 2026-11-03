@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-light-explains-every-name-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "1530d0428739ebe8c837c7e8d2763c93960741c13264af3a97e46ec7cf86999c",
+  "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Rewrite the script; requested length needs excessive speech retiming"
+}
