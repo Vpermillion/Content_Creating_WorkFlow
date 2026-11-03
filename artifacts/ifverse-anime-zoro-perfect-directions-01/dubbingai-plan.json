@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "narration_sha256": "2fbe713efcd353e9671e6dc9eea095c110dfeb13001142f87835cedbf13c623c",
+  "catalog": "assets/sfx/dubbingai-bank.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "most shopping carts",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Shopping-cart navigation comparison lands"
+    },
+    {
+      "anchor": {
+        "phrase": "zero emotional support",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Unsupported early arrival is a failed plan"
+    },
+    {
+      "anchor": {
+        "phrase": "refusing eye contact",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Refusing eye contact is an awkward reaction"
+    },
+    {
+      "anchor": {
+        "phrase": "damage stat",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Damage-stat payoff lands"
+    }
+  ]
+}
