@@ -1,0 +1,75 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.66,Caption,,0,0,0,,What if Light had to
+Dialogue: 0,0:00:00.66,0:00:01.84,Caption,,0,0,0,,explain every name to L
+Dialogue: 0,0:00:01.84,0:00:03.24,Caption,,0,0,0,,before the notebook worked?
+Dialogue: 0,0:00:03.24,0:00:04.54,Caption,,0,0,0,,Mandatory peer review.
+Dialogue: 0,0:00:04.54,0:00:05.98,Caption,,0,0,0,,This rule pauses entries.
+Dialogue: 0,0:00:05.98,0:00:07.04,Caption,,0,0,0,,Light gives a reason.
+Dialogue: 0,0:00:07.04,0:00:07.98,Caption,,0,0,0,,L can challenge it.
+Dialogue: 0,0:00:07.98,0:00:09.34,Caption,,0,0,0,,Terrible news for arrogance.
+Dialogue: 0,0:00:09.34,0:00:10.78,Caption,,0,0,0,,Light says someone looks guilty.
+Dialogue: 0,0:00:10.78,0:00:12.42,Caption,,0,0,0,,My guy, cheekbone analysis isn't
+Dialogue: 0,0:00:12.42,0:00:13.62,Caption,,0,0,0,,a criminal justice system.
+Dialogue: 0,0:00:13.62,0:00:15.24,Caption,,0,0,0,,Then he cites online agreement.
+Dialogue: 0,0:00:15.24,0:00:15.98,Caption,,0,0,0,,L asks for the original
+Dialogue: 0,0:00:15.98,0:00:17.02,Caption,,0,0,0,,report.
+Dialogue: 0,0:00:17.02,0:00:18.10,Caption,,0,0,0,,The god complex needs a
+Dialogue: 0,0:00:18.10,0:00:19.00,Caption,,0,0,0,,bibliography.
+Dialogue: 0,0:00:19.00,0:00:20.52,Caption,,0,0,0,,Ryuk watches humans recreate a
+Dialogue: 0,0:00:20.52,0:00:22.66,Caption,,0,0,0,,terrible university group\Nproject.
+Dialogue: 0,0:00:22.66,0:00:23.62,Caption,,0,0,0,,Somebody pass the apples.
+Dialogue: 0,0:00:23.62,0:00:25.26,Caption,,0,0,0,,Light tries a longer speech.
+Dialogue: 0,0:00:25.26,0:00:26.54,Caption,,0,0,0,,Dramatic breathing doesn't make\Nguesses
+Dialogue: 0,0:00:26.54,0:00:27.28,Caption,,0,0,0,,facts.
+Dialogue: 0,0:00:27.28,0:00:28.42,Caption,,0,0,0,,Incredible discovery.
+Dialogue: 0,0:00:28.42,0:00:29.94,Caption,,0,0,0,,L compares the explanations.
+Dialogue: 0,0:00:29.94,0:00:31.20,Caption,,0,0,0,,Why does criticism suddenly\Ncount
+Dialogue: 0,0:00:31.20,0:00:32.06,Caption,,0,0,0,,as guilt?
+Dialogue: 0,0:00:32.06,0:00:33.44,Caption,,0,0,0,,Why is evidence optional?
+Dialogue: 0,0:00:33.44,0:00:34.66,Caption,,0,0,0,,Light's justice bends around his
+Dialogue: 0,0:00:34.66,0:00:35.46,Caption,,0,0,0,,ego.
+Dialogue: 0,0:00:35.46,0:00:36.90,Caption,,0,0,0,,Very convenient weather system.
+Dialogue: 0,0:00:36.90,0:00:38.08,Caption,,0,0,0,,Bro appointed himself the whole
+Dialogue: 0,0:00:38.08,0:00:38.86,Caption,,0,0,0,,forecast.
+Dialogue: 0,0:00:38.86,0:00:40.84,Caption,,0,0,0,,L isn't automatically correct\Neither.
+Dialogue: 0,0:00:40.84,0:00:42.60,Caption,,0,0,0,,Both geniuses can miss evidence.
+Dialogue: 0,0:00:42.60,0:00:44.23,Caption,,0,0,0,,The notebook doesn't delete\Nuncertainty.
+Dialogue: 0,0:00:44.23,0:00:45.61,Caption,,0,0,0,,Their duel becomes defending\Nconclusions
+Dialogue: 0,0:00:45.61,0:00:47.61,Caption,,0,0,0,,instead of delivering smug\Nindoor
+Dialogue: 0,0:00:47.61,0:00:49.23,Caption,,0,0,0,,monologues with stationery.
+Dialogue: 0,0:00:49.23,0:00:50.83,Caption,,0,0,0,,Ryuk asks when they'll finish.
+Dialogue: 0,0:00:50.83,0:00:52.61,Caption,,0,0,0,,L requests supporting documents.
+Dialogue: 0,0:00:52.61,0:00:53.89,Caption,,0,0,0,,Supernatural horror has become\Nan
+Dialogue: 0,0:00:53.89,0:00:54.85,Caption,,0,0,0,,academic hearing.
+Dialogue: 0,0:00:54.85,0:00:56.61,Caption,,0,0,0,,Light wanted unquestioned\Nauthority.
+Dialogue: 0,0:00:56.61,0:00:57.59,Caption,,0,0,0,,His final boss is somebody
+Dialogue: 0,0:00:57.59,0:00:59.57,Caption,,0,0,0,,calmly asking for evidence.
+Dialogue: 0,0:00:59.57,0:01:00.97,Caption,,0,0,0,,Source, bro. Show the source.
+Dialogue: 1,0:00:00.00,0:00:04.45,Heading,,0,0,0,,JUSTICE NEEDS A SOURCE
+Dialogue: 1,0:00:04.45,0:00:09.22,Heading,,0,0,0,,A DIFFERENT NOTEBOOK RULE
+Dialogue: 1,0:00:09.22,0:00:13.57,Heading,,0,0,0,,THE FIRST EXCUSE
+Dialogue: 1,0:00:13.57,0:00:18.88,Heading,,0,0,0,,THE FOLLOW UP QUESTION
+Dialogue: 1,0:00:18.88,0:00:23.62,Heading,,0,0,0,,RYUK BOUGHT FRONT ROW SEATS
+Dialogue: 1,0:00:23.62,0:00:28.31,Heading,,0,0,0,,CONFIDENCE IS NOT PROOF
+Dialogue: 1,0:00:28.31,0:00:33.38,Heading,,0,0,0,,FOLLOW THE CONTRADICTION
+Dialogue: 1,0:00:33.38,0:00:38.79,Heading,,0,0,0,,THE MASK STARTS SLIPPING
+Dialogue: 1,0:00:38.79,0:00:44.23,Heading,,0,0,0,,THE REAL CHANGE
+Dialogue: 1,0:00:44.23,0:00:49.20,Heading,,0,0,0,,A DIFFERENT KIND OF DUEL
+Dialogue: 1,0:00:49.20,0:00:54.78,Heading,,0,0,0,,EVEN THE SHINIGAMI IS TIRED
+Dialogue: 1,0:00:54.78,0:01:01.00,Heading,,0,0,0,,THE FINAL BOSS IS CITATIONS
+Dialogue: 1,0:00:00.00,0:01:01.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:01.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF

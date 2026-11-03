@@ -1,0 +1,90 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.525333333333333,
+      "text": "What if Light had to explain every name to L before the notebook worked? Mandatory peer review.",
+      "label": "JUSTICE NEEDS A SOURCE"
+    },
+    {
+      "start": 5.525333333333333,
+      "end": 11.456,
+      "text": "This rule pauses entries. Light gives a reason. L can challenge it. Terrible news for arrogance.",
+      "label": "A DIFFERENT NOTEBOOK RULE"
+    },
+    {
+      "start": 11.456,
+      "end": 16.85333333333333,
+      "text": "Light says someone looks guilty. My guy, cheekbone analysis isn't a criminal justice system.",
+      "label": "THE FIRST EXCUSE"
+    },
+    {
+      "start": 16.85333333333333,
+      "end": 23.445333333333334,
+      "text": "Then he cites online agreement. L asks for the original report. The god complex needs a bibliography.",
+      "label": "THE FOLLOW UP QUESTION"
+    },
+    {
+      "start": 23.445333333333334,
+      "end": 29.333333333333332,
+      "text": "Ryuk watches humans recreate a terrible university group project. Somebody pass the apples.",
+      "label": "RYUK BOUGHT FRONT ROW SEATS"
+    },
+    {
+      "start": 29.333333333333332,
+      "end": 35.157333333333334,
+      "text": "Light tries a longer speech. Dramatic breathing doesn't make guesses facts. Incredible discovery.",
+      "label": "CONFIDENCE IS NOT PROOF"
+    },
+    {
+      "start": 35.157333333333334,
+      "end": 41.45066666666666,
+      "text": "L compares the explanations. Why does criticism suddenly count as guilt? Why is evidence optional?",
+      "label": "FOLLOW THE CONTRADICTION"
+    },
+    {
+      "start": 41.45066666666666,
+      "end": 48.17066666666667,
+      "text": "Light's justice bends around his ego. Very convenient weather system. Bro appointed himself the whole forecast.",
+      "label": "THE MASK STARTS SLIPPING"
+    },
+    {
+      "start": 48.17066666666667,
+      "end": 54.93333333333333,
+      "text": "L isn't automatically correct either. Both geniuses can miss evidence. The notebook doesn't delete uncertainty.",
+      "label": "THE REAL CHANGE"
+    },
+    {
+      "start": 54.93333333333333,
+      "end": 61.09866666666667,
+      "text": "Their duel becomes defending conclusions instead of delivering smug indoor monologues with stationery.",
+      "label": "A DIFFERENT KIND OF DUEL"
+    },
+    {
+      "start": 61.09866666666667,
+      "end": 68.032,
+      "text": "Ryuk asks when they'll finish. L requests supporting documents. Supernatural horror has become an academic hearing.",
+      "label": "EVEN THE SHINIGAMI IS TIRED"
+    },
+    {
+      "start": 68.032,
+      "end": 75.75466666666667,
+      "text": "Light wanted unquestioned authority. His final boss is somebody calmly asking for evidence. Source, bro. Show the source.",
+      "label": "THE FINAL BOSS IS CITATIONS"
+    }
+  ],
+  "sha256": "ba29ef8c1d549eeb30f86a122375e6c82d3065e3ebe13d82d6597e6b8caf148f",
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  }
+}

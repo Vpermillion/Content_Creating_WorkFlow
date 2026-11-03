@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-light-explains-every-name-01",
+  "script_sha256": "17c8667a0acff83d83bd133e78c2852857971168de1b8cd187c6945398291ef0",
+  "catalog": "assets/sfx/catalog.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "Mandatory peer review",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "bass_impact",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "needs a bibliography",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "error_buzz",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "the whole forecast",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "reward_ping",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "academic hearing",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "cartoon_boing",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    }
+  ],
+  "narration_sha256": "e06b0a286fe3bcad1d0ae723b1d59bb0ec276b000f25f64fb3cbf27b71d0eaff",
+  "narration_binding": "Final waveform generated/reused for the matching ordered script checksum"
+}

@@ -1,0 +1,1346 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "e06b0a286fe3bcad1d0ae723b1d59bb0ec276b000f25f64fb3cbf27b71d0eaff",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.1,
+      "probability": 0.00010707476758398116
+    },
+    {
+      "word": "if",
+      "start": 0.1,
+      "end": 0.18,
+      "probability": 0.8853811025619507
+    },
+    {
+      "word": "Light",
+      "start": 0.18,
+      "end": 0.34,
+      "probability": 0.6637246012687683
+    },
+    {
+      "word": "had",
+      "start": 0.34,
+      "end": 0.52,
+      "probability": 0.9659929871559143
+    },
+    {
+      "word": "to",
+      "start": 0.52,
+      "end": 0.66,
+      "probability": 0.9982873797416687
+    },
+    {
+      "word": "explain",
+      "start": 0.66,
+      "end": 0.94,
+      "probability": 0.9947212934494019
+    },
+    {
+      "word": "every",
+      "start": 0.94,
+      "end": 1.26,
+      "probability": 0.9777936339378357
+    },
+    {
+      "word": "name",
+      "start": 1.26,
+      "end": 1.54,
+      "probability": 0.9969738721847534
+    },
+    {
+      "word": "to",
+      "start": 1.54,
+      "end": 1.7,
+      "probability": 0.9955938458442688
+    },
+    {
+      "word": "L",
+      "start": 1.7,
+      "end": 1.84,
+      "probability": 0.01032324880361557
+    },
+    {
+      "word": "before",
+      "start": 1.84,
+      "end": 2.08,
+      "probability": 0.9742386937141418
+    },
+    {
+      "word": "the",
+      "start": 2.08,
+      "end": 2.2,
+      "probability": 0.9813282489776611
+    },
+    {
+      "word": "notebook",
+      "start": 2.2,
+      "end": 2.4,
+      "probability": 0.9259305000305176
+    },
+    {
+      "word": "worked?",
+      "start": 2.4,
+      "end": 3.24,
+      "probability": 0.9962155222892761
+    },
+    {
+      "word": "Mandatory",
+      "start": 3.24,
+      "end": 3.48,
+      "probability": 0.6017643213272095
+    },
+    {
+      "word": "peer",
+      "start": 3.48,
+      "end": 3.9,
+      "probability": 0.9771155118942261
+    },
+    {
+      "word": "review.",
+      "start": 3.9,
+      "end": 4.54,
+      "probability": 0.9870468378067017
+    },
+    {
+      "word": "This",
+      "start": 4.54,
+      "end": 4.54,
+      "probability": 0.8740915656089783
+    },
+    {
+      "word": "rule",
+      "start": 4.54,
+      "end": 4.72,
+      "probability": 0.9920530319213867
+    },
+    {
+      "word": "pauses",
+      "start": 4.72,
+      "end": 5.08,
+      "probability": 0.9694021344184875
+    },
+    {
+      "word": "entries.",
+      "start": 5.08,
+      "end": 5.98,
+      "probability": 0.9838424921035767
+    },
+    {
+      "word": "Light",
+      "start": 5.98,
+      "end": 5.98,
+      "probability": 0.8499858975410461
+    },
+    {
+      "word": "gives",
+      "start": 5.98,
+      "end": 6.16,
+      "probability": 0.9921858310699463
+    },
+    {
+      "word": "a",
+      "start": 6.16,
+      "end": 6.32,
+      "probability": 0.996123731136322
+    },
+    {
+      "word": "reason.",
+      "start": 6.32,
+      "end": 7.04,
+      "probability": 0.9988247752189636
+    },
+    {
+      "word": "L",
+      "start": 7.04,
+      "end": 7.04,
+      "probability": 0.7093521952629089
+    },
+    {
+      "word": "can",
+      "start": 7.04,
+      "end": 7.18,
+      "probability": 0.9975987076759338
+    },
+    {
+      "word": "challenge",
+      "start": 7.18,
+      "end": 7.48,
+      "probability": 0.991685152053833
+    },
+    {
+      "word": "it.",
+      "start": 7.48,
+      "end": 7.98,
+      "probability": 0.9941695928573608
+    },
+    {
+      "word": "Terrible",
+      "start": 7.98,
+      "end": 8.18,
+      "probability": 0.969095766544342
+    },
+    {
+      "word": "news",
+      "start": 8.18,
+      "end": 8.36,
+      "probability": 0.9969758987426758
+    },
+    {
+      "word": "for",
+      "start": 8.36,
+      "end": 8.66,
+      "probability": 0.9983336329460144
+    },
+    {
+      "word": "arrogance.",
+      "start": 8.66,
+      "end": 9.34,
+      "probability": 0.9941056966781616
+    },
+    {
+      "word": "Light",
+      "start": 9.34,
+      "end": 9.34,
+      "probability": 0.9697736501693726
+    },
+    {
+      "word": "says",
+      "start": 9.34,
+      "end": 9.54,
+      "probability": 0.934750497341156
+    },
+    {
+      "word": "someone",
+      "start": 9.54,
+      "end": 9.74,
+      "probability": 0.9914295077323914
+    },
+    {
+      "word": "looks",
+      "start": 9.74,
+      "end": 10.02,
+      "probability": 0.9905338287353516
+    },
+    {
+      "word": "guilty.",
+      "start": 10.02,
+      "end": 10.78,
+      "probability": 0.9990153312683105
+    },
+    {
+      "word": "My",
+      "start": 10.78,
+      "end": 10.8,
+      "probability": 0.8745625615119934
+    },
+    {
+      "word": "guy,",
+      "start": 10.8,
+      "end": 11.32,
+      "probability": 0.8985993266105652
+    },
+    {
+      "word": "cheekbone",
+      "start": 11.32,
+      "end": 11.62,
+      "probability": 0.9245996177196503
+    },
+    {
+      "word": "analysis",
+      "start": 11.62,
+      "end": 11.84,
+      "probability": 0.9679438471794128
+    },
+    {
+      "word": "isn't",
+      "start": 11.84,
+      "end": 12.42,
+      "probability": 0.5142391622066498
+    },
+    {
+      "word": "a",
+      "start": 12.42,
+      "end": 12.46,
+      "probability": 0.9968059062957764
+    },
+    {
+      "word": "criminal",
+      "start": 12.46,
+      "end": 12.68,
+      "probability": 0.998363196849823
+    },
+    {
+      "word": "justice",
+      "start": 12.68,
+      "end": 12.96,
+      "probability": 0.9935072660446167
+    },
+    {
+      "word": "system.",
+      "start": 12.96,
+      "end": 13.62,
+      "probability": 0.9990726709365845
+    },
+    {
+      "word": "Then",
+      "start": 13.62,
+      "end": 13.66,
+      "probability": 0.963317334651947
+    },
+    {
+      "word": "he",
+      "start": 13.66,
+      "end": 13.72,
+      "probability": 0.9677680730819702
+    },
+    {
+      "word": "cites",
+      "start": 13.72,
+      "end": 13.88,
+      "probability": 0.888260543346405
+    },
+    {
+      "word": "online",
+      "start": 13.88,
+      "end": 14.2,
+      "probability": 0.9709486365318298
+    },
+    {
+      "word": "agreement.",
+      "start": 14.2,
+      "end": 15.24,
+      "probability": 0.995708703994751
+    },
+    {
+      "word": "L",
+      "start": 15.24,
+      "end": 15.24,
+      "probability": 0.9492120146751404
+    },
+    {
+      "word": "asks",
+      "start": 15.24,
+      "end": 15.56,
+      "probability": 0.9854298830032349
+    },
+    {
+      "word": "for",
+      "start": 15.56,
+      "end": 15.74,
+      "probability": 0.9954751133918762
+    },
+    {
+      "word": "the",
+      "start": 15.74,
+      "end": 15.84,
+      "probability": 0.9964054822921753
+    },
+    {
+      "word": "original",
+      "start": 15.84,
+      "end": 15.98,
+      "probability": 0.9941794872283936
+    },
+    {
+      "word": "report.",
+      "start": 15.98,
+      "end": 17.02,
+      "probability": 0.9980300068855286
+    },
+    {
+      "word": "The",
+      "start": 17.02,
+      "end": 17.04,
+      "probability": 0.9041991233825684
+    },
+    {
+      "word": "god",
+      "start": 17.04,
+      "end": 17.2,
+      "probability": 0.0838751345872879
+    },
+    {
+      "word": "complex",
+      "start": 17.2,
+      "end": 17.62,
+      "probability": 0.9562846422195435
+    },
+    {
+      "word": "needs",
+      "start": 17.62,
+      "end": 17.9,
+      "probability": 0.9856599569320679
+    },
+    {
+      "word": "a",
+      "start": 17.9,
+      "end": 18.1,
+      "probability": 0.9100852608680725
+    },
+    {
+      "word": "bibliography.",
+      "start": 18.1,
+      "end": 19.0,
+      "probability": 0.994557648897171
+    },
+    {
+      "word": "Ryuk",
+      "start": 19.0,
+      "end": 19.14,
+      "probability": 0.46777647733688354
+    },
+    {
+      "word": "watches",
+      "start": 19.14,
+      "end": 19.4,
+      "probability": 0.9682623744010925
+    },
+    {
+      "word": "humans",
+      "start": 19.4,
+      "end": 19.74,
+      "probability": 0.9697274565696716
+    },
+    {
+      "word": "recreate",
+      "start": 19.74,
+      "end": 20.08,
+      "probability": 0.9536252021789551
+    },
+    {
+      "word": "a",
+      "start": 20.08,
+      "end": 20.52,
+      "probability": 0.9927310347557068
+    },
+    {
+      "word": "terrible",
+      "start": 20.52,
+      "end": 20.8,
+      "probability": 0.9797807931900024
+    },
+    {
+      "word": "university",
+      "start": 20.8,
+      "end": 21.24,
+      "probability": 0.8869488835334778
+    },
+    {
+      "word": "group",
+      "start": 21.24,
+      "end": 21.54,
+      "probability": 0.9692558646202087
+    },
+    {
+      "word": "project.",
+      "start": 21.54,
+      "end": 22.66,
+      "probability": 0.9972368478775024
+    },
+    {
+      "word": "Somebody",
+      "start": 22.66,
+      "end": 22.66,
+      "probability": 0.9831843972206116
+    },
+    {
+      "word": "pass",
+      "start": 22.66,
+      "end": 22.92,
+      "probability": 0.7835671901702881
+    },
+    {
+      "word": "the",
+      "start": 22.92,
+      "end": 23.14,
+      "probability": 0.9969513416290283
+    },
+    {
+      "word": "apples.",
+      "start": 23.14,
+      "end": 23.620106908176805,
+      "probability": 0.9428329467773438
+    },
+    {
+      "word": "Light",
+      "start": 23.620106908176805,
+      "end": 23.760125,
+      "probability": 6.889767064421903e-06
+    },
+    {
+      "word": "tries",
+      "start": 23.760125,
+      "end": 24.000125,
+      "probability": 0.9348081946372986
+    },
+    {
+      "word": "a",
+      "start": 24.000125,
+      "end": 24.160125,
+      "probability": 0.9969670176506042
+    },
+    {
+      "word": "longer",
+      "start": 24.160125,
+      "end": 24.360125,
+      "probability": 0.9952723383903503
+    },
+    {
+      "word": "speech.",
+      "start": 24.360125,
+      "end": 25.260125,
+      "probability": 0.9982851147651672
+    },
+    {
+      "word": "Dramatic",
+      "start": 25.260125,
+      "end": 25.500125,
+      "probability": 0.9790531992912292
+    },
+    {
+      "word": "breathing",
+      "start": 25.500125,
+      "end": 25.700125,
+      "probability": 0.9924345016479492
+    },
+    {
+      "word": "doesn't",
+      "start": 25.700125,
+      "end": 26.140124999999998,
+      "probability": 0.9963995218276978
+    },
+    {
+      "word": "make",
+      "start": 26.140124999999998,
+      "end": 26.260125,
+      "probability": 0.9981448650360107
+    },
+    {
+      "word": "guesses",
+      "start": 26.260125,
+      "end": 26.540125,
+      "probability": 0.9350613951683044
+    },
+    {
+      "word": "facts.",
+      "start": 26.540125,
+      "end": 27.280124999999998,
+      "probability": 0.8524206876754761
+    },
+    {
+      "word": "Incredible",
+      "start": 27.280124999999998,
+      "end": 27.480125,
+      "probability": 0.9621363282203674
+    },
+    {
+      "word": "discovery.",
+      "start": 27.480125,
+      "end": 28.420125,
+      "probability": 0.9974416494369507
+    },
+    {
+      "word": "L",
+      "start": 28.420125,
+      "end": 28.420125,
+      "probability": 0.1460457295179367
+    },
+    {
+      "word": "compares",
+      "start": 28.420125,
+      "end": 28.680125,
+      "probability": 0.9268966913223267
+    },
+    {
+      "word": "the",
+      "start": 28.680125,
+      "end": 28.880125,
+      "probability": 0.9958678483963013
+    },
+    {
+      "word": "explanations.",
+      "start": 28.880125,
+      "end": 29.940125,
+      "probability": 0.9928581714630127
+    },
+    {
+      "word": "Why",
+      "start": 29.940125,
+      "end": 29.960124999999998,
+      "probability": 0.9609231352806091
+    },
+    {
+      "word": "does",
+      "start": 29.960124999999998,
+      "end": 30.140124999999998,
+      "probability": 0.9975963234901428
+    },
+    {
+      "word": "criticism",
+      "start": 30.140124999999998,
+      "end": 30.360125,
+      "probability": 0.9579920172691345
+    },
+    {
+      "word": "suddenly",
+      "start": 30.360125,
+      "end": 31.020125,
+      "probability": 0.9900959730148315
+    },
+    {
+      "word": "count",
+      "start": 31.020125,
+      "end": 31.200125,
+      "probability": 0.9993166923522949
+    },
+    {
+      "word": "as",
+      "start": 31.200125,
+      "end": 31.480125,
+      "probability": 0.9958404898643494
+    },
+    {
+      "word": "guilt?",
+      "start": 31.480125,
+      "end": 32.060125,
+      "probability": 0.9891561269760132
+    },
+    {
+      "word": "Why",
+      "start": 32.060125,
+      "end": 32.260125,
+      "probability": 0.9948962330818176
+    },
+    {
+      "word": "is",
+      "start": 32.260125,
+      "end": 32.400125,
+      "probability": 0.9984682202339172
+    },
+    {
+      "word": "evidence",
+      "start": 32.400125,
+      "end": 32.580124999999995,
+      "probability": 0.9819908738136292
+    },
+    {
+      "word": "optional?",
+      "start": 32.580124999999995,
+      "end": 33.440125,
+      "probability": 0.9965325593948364
+    },
+    {
+      "word": "Light's",
+      "start": 33.440125,
+      "end": 33.620125,
+      "probability": 0.8855852484703064
+    },
+    {
+      "word": "justice",
+      "start": 33.620125,
+      "end": 33.940125,
+      "probability": 0.9731683731079102
+    },
+    {
+      "word": "bends",
+      "start": 33.940125,
+      "end": 34.180125000000004,
+      "probability": 0.977884829044342
+    },
+    {
+      "word": "around",
+      "start": 34.180125000000004,
+      "end": 34.480125,
+      "probability": 0.997523844242096
+    },
+    {
+      "word": "his",
+      "start": 34.480125,
+      "end": 34.660125,
+      "probability": 0.9883714318275452
+    },
+    {
+      "word": "ego.",
+      "start": 34.660125,
+      "end": 35.460125,
+      "probability": 0.9984824061393738
+    },
+    {
+      "word": "Very",
+      "start": 35.460125,
+      "end": 35.460125,
+      "probability": 0.9928297400474548
+    },
+    {
+      "word": "convenient",
+      "start": 35.460125,
+      "end": 35.740125,
+      "probability": 0.99400395154953
+    },
+    {
+      "word": "weather",
+      "start": 35.740125,
+      "end": 36.160125,
+      "probability": 0.9951752424240112
+    },
+    {
+      "word": "system.",
+      "start": 36.160125,
+      "end": 36.900125,
+      "probability": 0.9973600506782532
+    },
+    {
+      "word": "Bro",
+      "start": 36.900125,
+      "end": 37.060125,
+      "probability": 0.8133270740509033
+    },
+    {
+      "word": "appointed",
+      "start": 37.060125,
+      "end": 37.340125,
+      "probability": 0.8762443661689758
+    },
+    {
+      "word": "himself",
+      "start": 37.340125,
+      "end": 37.700125,
+      "probability": 0.998770534992218
+    },
+    {
+      "word": "the",
+      "start": 37.700125,
+      "end": 37.940125,
+      "probability": 0.9915072917938232
+    },
+    {
+      "word": "whole",
+      "start": 37.940125,
+      "end": 38.080124999999995,
+      "probability": 0.9903979301452637
+    },
+    {
+      "word": "forecast.",
+      "start": 38.080124999999995,
+      "end": 38.860125,
+      "probability": 0.9846087694168091
+    },
+    {
+      "word": "L",
+      "start": 38.860125,
+      "end": 38.880125,
+      "probability": 0.9837881326675415
+    },
+    {
+      "word": "isn't",
+      "start": 38.880125,
+      "end": 39.140125,
+      "probability": 0.9912883341312408
+    },
+    {
+      "word": "automatically",
+      "start": 39.140125,
+      "end": 39.460125,
+      "probability": 0.9933769106864929
+    },
+    {
+      "word": "correct",
+      "start": 39.460125,
+      "end": 39.900125,
+      "probability": 0.9973976612091064
+    },
+    {
+      "word": "either.",
+      "start": 39.900125,
+      "end": 40.840125,
+      "probability": 0.9009349346160889
+    },
+    {
+      "word": "Both",
+      "start": 40.840125,
+      "end": 40.840125,
+      "probability": 0.996508777141571
+    },
+    {
+      "word": "geniuses",
+      "start": 40.840125,
+      "end": 41.320125000000004,
+      "probability": 0.993386834859848
+    },
+    {
+      "word": "can",
+      "start": 41.320125000000004,
+      "end": 41.600125,
+      "probability": 0.9968258142471313
+    },
+    {
+      "word": "miss",
+      "start": 41.600125,
+      "end": 41.740125,
+      "probability": 0.8967905044555664
+    },
+    {
+      "word": "evidence.",
+      "start": 41.740125,
+      "end": 42.600125,
+      "probability": 0.9940821528434753
+    },
+    {
+      "word": "The",
+      "start": 42.600125,
+      "end": 42.600125,
+      "probability": 0.9848368763923645
+    },
+    {
+      "word": "notebook",
+      "start": 42.600125,
+      "end": 42.780125,
+      "probability": 0.9304823279380798
+    },
+    {
+      "word": "doesn't",
+      "start": 42.780125,
+      "end": 43.180125000000004,
+      "probability": 0.9989816844463348
+    },
+    {
+      "word": "delete",
+      "start": 43.180125000000004,
+      "end": 43.400125,
+      "probability": 0.9908022880554199
+    },
+    {
+      "word": "uncertainty.",
+      "start": 43.400125,
+      "end": 44.23401839167656,
+      "probability": 0.9849748015403748
+    },
+    {
+      "word": "Their",
+      "start": 44.23401839167656,
+      "end": 44.314,
+      "probability": 5.0766055210260674e-05
+    },
+    {
+      "word": "duel",
+      "start": 44.314,
+      "end": 44.514,
+      "probability": 0.16659584641456604
+    },
+    {
+      "word": "becomes",
+      "start": 44.514,
+      "end": 44.914,
+      "probability": 0.962853193283081
+    },
+    {
+      "word": "defending",
+      "start": 44.914,
+      "end": 45.214000000000006,
+      "probability": 0.9902737736701965
+    },
+    {
+      "word": "conclusions",
+      "start": 45.214000000000006,
+      "end": 45.614000000000004,
+      "probability": 0.9896433353424072
+    },
+    {
+      "word": "instead",
+      "start": 45.614000000000004,
+      "end": 46.474000000000004,
+      "probability": 0.1717851608991623
+    },
+    {
+      "word": "of",
+      "start": 46.474000000000004,
+      "end": 46.614000000000004,
+      "probability": 0.9950555562973022
+    },
+    {
+      "word": "delivering",
+      "start": 46.614000000000004,
+      "end": 46.934000000000005,
+      "probability": 0.9957299828529358
+    },
+    {
+      "word": "smug",
+      "start": 46.934000000000005,
+      "end": 47.274,
+      "probability": 0.9797149300575256
+    },
+    {
+      "word": "indoor",
+      "start": 47.274,
+      "end": 47.614000000000004,
+      "probability": 0.9555028676986694
+    },
+    {
+      "word": "monologues",
+      "start": 47.614000000000004,
+      "end": 48.434000000000005,
+      "probability": 0.975072979927063
+    },
+    {
+      "word": "with",
+      "start": 48.434000000000005,
+      "end": 48.494,
+      "probability": 0.9907070398330688
+    },
+    {
+      "word": "stationery.",
+      "start": 48.494,
+      "end": 49.234,
+      "probability": 0.5813765823841095
+    },
+    {
+      "word": "Ryuk",
+      "start": 49.234,
+      "end": 49.454,
+      "probability": 0.7205185890197754
+    },
+    {
+      "word": "asks",
+      "start": 49.454,
+      "end": 49.694,
+      "probability": 0.9947540760040283
+    },
+    {
+      "word": "when",
+      "start": 49.694,
+      "end": 49.914,
+      "probability": 0.9846998453140259
+    },
+    {
+      "word": "they'll",
+      "start": 49.914,
+      "end": 50.034000000000006,
+      "probability": 0.986232340335846
+    },
+    {
+      "word": "finish.",
+      "start": 50.034000000000006,
+      "end": 50.834,
+      "probability": 0.9975613355636597
+    },
+    {
+      "word": "L",
+      "start": 50.834,
+      "end": 50.834,
+      "probability": 0.21368728578090668
+    },
+    {
+      "word": "requests",
+      "start": 50.834,
+      "end": 51.054,
+      "probability": 0.9646511077880859
+    },
+    {
+      "word": "supporting",
+      "start": 51.054,
+      "end": 51.594,
+      "probability": 0.9869613647460938
+    },
+    {
+      "word": "documents.",
+      "start": 51.594,
+      "end": 52.614000000000004,
+      "probability": 0.9966997504234314
+    },
+    {
+      "word": "Supernatural",
+      "start": 52.614000000000004,
+      "end": 52.81400000000001,
+      "probability": 0.9725878536701202
+    },
+    {
+      "word": "horror",
+      "start": 52.81400000000001,
+      "end": 53.294000000000004,
+      "probability": 0.7787774801254272
+    },
+    {
+      "word": "has",
+      "start": 53.294000000000004,
+      "end": 53.534000000000006,
+      "probability": 0.9967175126075745
+    },
+    {
+      "word": "become",
+      "start": 53.534000000000006,
+      "end": 53.754000000000005,
+      "probability": 0.9955266118049622
+    },
+    {
+      "word": "an",
+      "start": 53.754000000000005,
+      "end": 53.894000000000005,
+      "probability": 0.9931279420852661
+    },
+    {
+      "word": "academic",
+      "start": 53.894000000000005,
+      "end": 54.214000000000006,
+      "probability": 0.9984253644943237
+    },
+    {
+      "word": "hearing.",
+      "start": 54.214000000000006,
+      "end": 54.854,
+      "probability": 0.9971157312393188
+    },
+    {
+      "word": "Light",
+      "start": 54.854,
+      "end": 54.914,
+      "probability": 0.9323896169662476
+    },
+    {
+      "word": "wanted",
+      "start": 54.914,
+      "end": 55.214000000000006,
+      "probability": 0.9803444147109985
+    },
+    {
+      "word": "unquestioned",
+      "start": 55.214000000000006,
+      "end": 55.734,
+      "probability": 0.9752290646235148
+    },
+    {
+      "word": "authority.",
+      "start": 55.734,
+      "end": 56.614000000000004,
+      "probability": 0.9903269410133362
+    },
+    {
+      "word": "His",
+      "start": 56.614000000000004,
+      "end": 56.654,
+      "probability": 0.990858256816864
+    },
+    {
+      "word": "final",
+      "start": 56.654,
+      "end": 56.81400000000001,
+      "probability": 0.998106837272644
+    },
+    {
+      "word": "boss",
+      "start": 56.81400000000001,
+      "end": 57.17400000000001,
+      "probability": 0.9967758059501648
+    },
+    {
+      "word": "is",
+      "start": 57.17400000000001,
+      "end": 57.354,
+      "probability": 0.9975284934043884
+    },
+    {
+      "word": "somebody",
+      "start": 57.354,
+      "end": 57.594,
+      "probability": 0.9929735660552979
+    },
+    {
+      "word": "calmly",
+      "start": 57.594,
+      "end": 57.954,
+      "probability": 0.7989567518234253
+    },
+    {
+      "word": "asking",
+      "start": 57.954,
+      "end": 58.374,
+      "probability": 0.9987791180610657
+    },
+    {
+      "word": "for",
+      "start": 58.374,
+      "end": 58.594,
+      "probability": 0.9990918636322021
+    },
+    {
+      "word": "evidence.",
+      "start": 58.594,
+      "end": 59.574000000000005,
+      "probability": 0.9982911944389343
+    },
+    {
+      "word": "Source,",
+      "start": 59.574000000000005,
+      "end": 59.834,
+      "probability": 0.9107944369316101
+    },
+    {
+      "word": "bro.",
+      "start": 59.834,
+      "end": 60.354,
+      "probability": 0.8770448565483093
+    },
+    {
+      "word": "Show",
+      "start": 60.354,
+      "end": 60.394000000000005,
+      "probability": 0.9850989580154419
+    },
+    {
+      "word": "the",
+      "start": 60.394000000000005,
+      "end": 60.554,
+      "probability": 0.9894183278083801
+    },
+    {
+      "word": "source.",
+      "start": 60.554,
+      "end": 60.974000000000004,
+      "probability": 0.9681063890457153
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 0.66,
+      "text": "What if Light had to"
+    },
+    {
+      "start": 0.66,
+      "end": 1.84,
+      "text": "explain every name to L"
+    },
+    {
+      "start": 1.84,
+      "end": 3.24,
+      "text": "before the notebook worked?"
+    },
+    {
+      "start": 3.24,
+      "end": 4.54,
+      "text": "Mandatory peer review."
+    },
+    {
+      "start": 4.54,
+      "end": 5.98,
+      "text": "This rule pauses entries."
+    },
+    {
+      "start": 5.98,
+      "end": 7.04,
+      "text": "Light gives a reason."
+    },
+    {
+      "start": 7.04,
+      "end": 7.98,
+      "text": "L can challenge it."
+    },
+    {
+      "start": 7.98,
+      "end": 9.34,
+      "text": "Terrible news for arrogance."
+    },
+    {
+      "start": 9.34,
+      "end": 10.78,
+      "text": "Light says someone looks guilty."
+    },
+    {
+      "start": 10.78,
+      "end": 12.42,
+      "text": "My guy, cheekbone analysis isn't"
+    },
+    {
+      "start": 12.42,
+      "end": 13.62,
+      "text": "a criminal justice system."
+    },
+    {
+      "start": 13.62,
+      "end": 15.24,
+      "text": "Then he cites online agreement."
+    },
+    {
+      "start": 15.24,
+      "end": 15.98,
+      "text": "L asks for the original"
+    },
+    {
+      "start": 15.98,
+      "end": 17.02,
+      "text": "report."
+    },
+    {
+      "start": 17.02,
+      "end": 18.1,
+      "text": "The god complex needs a"
+    },
+    {
+      "start": 18.1,
+      "end": 19.0,
+      "text": "bibliography."
+    },
+    {
+      "start": 19.0,
+      "end": 20.52,
+      "text": "Ryuk watches humans recreate a"
+    },
+    {
+      "start": 20.52,
+      "end": 22.66,
+      "text": "terrible university group project."
+    },
+    {
+      "start": 22.66,
+      "end": 23.620106908176805,
+      "text": "Somebody pass the apples."
+    },
+    {
+      "start": 23.620106908176805,
+      "end": 25.260125,
+      "text": "Light tries a longer speech."
+    },
+    {
+      "start": 25.260125,
+      "end": 26.540125,
+      "text": "Dramatic breathing doesn't make guesses"
+    },
+    {
+      "start": 26.540125,
+      "end": 27.280124999999998,
+      "text": "facts."
+    },
+    {
+      "start": 27.280124999999998,
+      "end": 28.420125,
+      "text": "Incredible discovery."
+    },
+    {
+      "start": 28.420125,
+      "end": 29.940125,
+      "text": "L compares the explanations."
+    },
+    {
+      "start": 29.940125,
+      "end": 31.200125,
+      "text": "Why does criticism suddenly count"
+    },
+    {
+      "start": 31.200125,
+      "end": 32.060125,
+      "text": "as guilt?"
+    },
+    {
+      "start": 32.060125,
+      "end": 33.440125,
+      "text": "Why is evidence optional?"
+    },
+    {
+      "start": 33.440125,
+      "end": 34.660125,
+      "text": "Light's justice bends around his"
+    },
+    {
+      "start": 34.660125,
+      "end": 35.460125,
+      "text": "ego."
+    },
+    {
+      "start": 35.460125,
+      "end": 36.900125,
+      "text": "Very convenient weather system."
+    },
+    {
+      "start": 36.900125,
+      "end": 38.080124999999995,
+      "text": "Bro appointed himself the whole"
+    },
+    {
+      "start": 38.080124999999995,
+      "end": 38.860125,
+      "text": "forecast."
+    },
+    {
+      "start": 38.860125,
+      "end": 40.840125,
+      "text": "L isn't automatically correct either."
+    },
+    {
+      "start": 40.840125,
+      "end": 42.600125,
+      "text": "Both geniuses can miss evidence."
+    },
+    {
+      "start": 42.600125,
+      "end": 44.23401839167656,
+      "text": "The notebook doesn't delete uncertainty."
+    },
+    {
+      "start": 44.23401839167656,
+      "end": 45.614000000000004,
+      "text": "Their duel becomes defending conclusions"
+    },
+    {
+      "start": 45.614000000000004,
+      "end": 47.614000000000004,
+      "text": "instead of delivering smug indoor"
+    },
+    {
+      "start": 47.614000000000004,
+      "end": 49.234,
+      "text": "monologues with stationery."
+    },
+    {
+      "start": 49.234,
+      "end": 50.834,
+      "text": "Ryuk asks when they'll finish."
+    },
+    {
+      "start": 50.834,
+      "end": 52.614000000000004,
+      "text": "L requests supporting documents."
+    },
+    {
+      "start": 52.614000000000004,
+      "end": 53.894000000000005,
+      "text": "Supernatural horror has become an"
+    },
+    {
+      "start": 53.894000000000005,
+      "end": 54.854,
+      "text": "academic hearing."
+    },
+    {
+      "start": 54.854,
+      "end": 56.614000000000004,
+      "text": "Light wanted unquestioned authority."
+    },
+    {
+      "start": 56.614000000000004,
+      "end": 57.594,
+      "text": "His final boss is somebody"
+    },
+    {
+      "start": 57.594,
+      "end": 59.574000000000005,
+      "text": "calmly asking for evidence."
+    },
+    {
+      "start": 59.574000000000005,
+      "end": 60.974000000000004,
+      "text": "Source, bro. Show the source."
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 11,
+  "review_names_required": true
+}

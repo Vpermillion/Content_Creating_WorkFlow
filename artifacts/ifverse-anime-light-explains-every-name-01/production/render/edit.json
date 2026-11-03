@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "shots": [
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-light",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Light planning and reacting; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-000.mp4",
+      "start": 0.0,
+      "end": 4.449169228522031,
+      "frames": 133
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-book",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Notebook context, not graphic harm; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-001.mp4",
+      "start": 4.449169228522031,
+      "end": 6.836947308694086,
+      "frames": 72
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-book",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Notebook context, not graphic harm; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-002.mp4",
+      "start": 6.836947308694086,
+      "end": 9.22472538886614,
+      "frames": 72
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-light",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Light planning and reacting; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-003.mp4",
+      "start": 9.22472538886614,
+      "end": 13.570825059970671,
+      "frames": 130
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-l",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "L examining a deduction; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-004.mp4",
+      "start": 13.570825059970671,
+      "end": 16.224866163471265,
+      "frames": 80
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-l",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "L examining a deduction; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-005.mp4",
+      "start": 16.224866163471265,
+      "end": 18.87890726697186,
+      "frames": 79
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-ryuk",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Ryuk observing human behavior; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-006.mp4",
+      "start": 18.87890726697186,
+      "end": 23.620106908176805,
+      "frames": 143
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-light",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Light planning and reacting; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-007.mp4",
+      "start": 23.620106908176805,
+      "end": 28.309771770673,
+      "frames": 140
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-l",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "L examining a deduction; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-008.mp4",
+      "start": 28.309771770673,
+      "end": 30.84356505718651,
+      "frames": 76
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-l",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "L examining a deduction; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-009.mp4",
+      "start": 30.84356505718651,
+      "end": 33.377358343700024,
+      "frames": 76
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-light",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Light planning and reacting; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-010.mp4",
+      "start": 33.377358343700024,
+      "end": 38.788510108118714,
+      "frames": 163
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-book",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Notebook context, not graphic harm; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-011.mp4",
+      "start": 38.788510108118714,
+      "end": 41.511264249897636,
+      "frames": 81
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-book",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Notebook context, not graphic harm; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-012.mp4",
+      "start": 41.511264249897636,
+      "end": 44.23401839167656,
+      "frames": 82
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-l",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "L examining a deduction; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-013.mp4",
+      "start": 44.23401839167656,
+      "end": 46.71627689948132,
+      "frames": 74
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-l",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "L examining a deduction; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-014.mp4",
+      "start": 46.71627689948132,
+      "end": 49.19853540728609,
+      "frames": 75
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-ryuk",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Ryuk observing human behavior; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-015.mp4",
+      "start": 49.19853540728609,
+      "end": 54.7814697674006,
+      "frames": 167
+    },
+    {
+      "asset": "ifverse-anime-light-explains-every-name-01-light",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Light planning and reacting; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-016.mp4",
+      "start": 54.7814697674006,
+      "end": 61.0,
+      "frames": 187
+    }
+  ],
+  "assets": [
+    {
+      "id": "ifverse-anime-light-explains-every-name-01-light",
+      "file": "ifverse-anime-light-explains-every-name-01-light.mp4",
+      "type": "video",
+      "query": "Light Yagami Death Note thinking",
+      "source_url": "https://tenor.com/view/death-note-light-yagami-l-death-note-l-death-note-meme-gif-10906403005566039796",
+      "download_url": "https://media.tenor.com/l1tTv7wENvQAAAPo/death-note-light-yagami.mp4",
+      "sha256": "26348e90ec70fdec1271d7307a0de101a19cde428e6fe8f1871bae39c3894bcc",
+      "duration": 11.3,
+      "dimensions": [
+        498,
+        282
+      ],
+      "description": "a close up of a person 's face with a sign in the background that says exit",
+      "publisher": "gruilty",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "1717597574206118918",
+          "title": "a close up of a person 's face with a smile on their face in a black and white photo .",
+          "source_url": "https://tenor.com/view/light-yagami-gif-1717597574206118918",
+          "download_url": "https://media.tenor.com/F9Yh5L2g3AYAAAPo/light-yagami.mp4",
+          "duration": 2.7,
+          "width": 480,
+          "height": 216,
+          "publisher": "samox",
+          "provider": "tenor"
+        },
+        {
+          "id": "10906403005566039796",
+          "title": "a close up of a person 's face with a sign in the background that says exit",
+          "source_url": "https://tenor.com/view/death-note-light-yagami-l-death-note-l-death-note-meme-gif-10906403005566039796",
+          "download_url": "https://media.tenor.com/l1tTv7wENvQAAAPo/death-note-light-yagami.mp4",
+          "duration": 11.3,
+          "width": 498,
+          "height": 282,
+          "publisher": "gruilty",
+          "provider": "tenor"
+        },
+        {
+          "id": "8045907827512654704",
+          "title": "a close up of a person 's face with their hand resting on their chin",
+          "source_url": "https://tenor.com/view/death-note-anime-light-kira-gif-22099552",
+          "download_url": "https://media.tenor.com/b6jOikJtO3AAAAPo/death-note-anime.mp4",
+          "duration": 4,
+          "width": 640,
+          "height": 398,
+          "publisher": "DeathNoteMafia",
+          "provider": "tenor"
+        },
+        {
+          "id": "8397129955842844940",
+          "title": "a man in a white shirt and brown tie is standing in front of a blue curtain",
+          "source_url": "https://tenor.com/view/light-death-note-light-yagami-facepalm-anime-gif-19147401",
+          "download_url": "https://media.tenor.com/dIiZNHbN6QwAAAPo/light-death-note.mp4",
+          "duration": 2.9,
+          "width": 640,
+          "height": 426,
+          "publisher": "DeathNoteTaskForce",
+          "provider": "tenor"
+        },
+        {
+          "id": "7712283671939884666",
+          "title": "a close up of a person 's eye with a red glow",
+          "source_url": "https://tenor.com/view/kira-light-yagami-yagami-stare-red-eyes-gif-7712283671939884666",
+          "download_url": "https://media.tenor.com/aweJI2EFpnoAAAPo/kira-light-yagami.mp4",
+          "duration": 6.8,
+          "width": 498,
+          "height": 282,
+          "publisher": "Sligonje",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "light",
+      "visual_intent": "Light planning and reacting"
+    },
+    {
+      "id": "ifverse-anime-light-explains-every-name-01-l",
+      "file": "ifverse-anime-light-explains-every-name-01-l.mp4",
+      "type": "video",
+      "query": "L Lawliet Death Note thinking",
+      "source_url": "https://tenor.com/view/l-l-lawliet-death-note-confused-thinking-gif-11490947184345386785",
+      "download_url": "https://media.tenor.com/n3gLlR-ujyEAAAPo/l-l-lawliet.mp4",
+      "sha256": "046ffc24fddd19a4d0c725db916b1681525e57195885d5aa3706ccf4d0df4817",
+      "duration": 3.05,
+      "dimensions": [
+        498,
+        498
+      ],
+      "description": "a cartoon drawing of a person with question marks above their head",
+      "publisher": "poupeee",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "11490947184345386785",
+          "title": "a cartoon drawing of a person with question marks above their head",
+          "source_url": "https://tenor.com/view/l-l-lawliet-death-note-confused-thinking-gif-11490947184345386785",
+          "download_url": "https://media.tenor.com/n3gLlR-ujyEAAAPo/l-l-lawliet.mp4",
+          "duration": 3,
+          "width": 498,
+          "height": 498,
+          "publisher": "poupeee",
+          "provider": "tenor"
+        },
+        {
+          "id": "11508524308668885098",
+          "title": "majingoofy is written above a picture of a person with blue hair",
+          "source_url": "https://tenor.com/view/thinking-majingoofy-death-note-l-lawliet-thinking-ryuzaki-l-gif-11508524308668885098",
+          "download_url": "https://media.tenor.com/n7Z94ksoKGoAAAPo/thinking-majingoofy.mp4",
+          "duration": 2.5,
+          "width": 498,
+          "height": 402,
+          "publisher": "bawlsjaws",
+          "provider": "tenor"
+        },
+        {
+          "id": "3803851779306073083",
+          "title": "a close up of a person 's face with the word neogahara on the bottom",
+          "source_url": "https://tenor.com/view/l-thinking-gif-3803851779306073083",
+          "download_url": "https://media.tenor.com/NMn_CiPGq_sAAAPo/l-thinking.mp4",
+          "duration": 1.2,
+          "width": 498,
+          "height": 280,
+          "publisher": "brojustjump22134",
+          "provider": "tenor"
+        },
+        {
+          "id": "15269233987015074640",
+          "title": "a close up of a person 's face with a finger on their mouth .",
+          "source_url": "https://tenor.com/view/l-deathnote-gif-15269233987015074640",
+          "download_url": "https://media.tenor.com/0-c3aUxa41AAAAPo/l-deathnote.mp4",
+          "duration": 2.8,
+          "width": 320,
+          "height": 180,
+          "publisher": "L_ahuel",
+          "provider": "tenor"
+        },
+        {
+          "id": "9574585806740030222",
+          "title": "a picture of a person with the word majingoofy on it",
+          "source_url": "https://tenor.com/view/majingoofy-death-note-l-l-death-note-ryuzaki-gif-9574585806740030222",
+          "download_url": "https://media.tenor.com/hN_DEBo8gw4AAAPo/majingoofy-death-note.mp4",
+          "duration": 2.8,
+          "width": 400,
+          "height": 306,
+          "publisher": "bawlsjaws",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "l",
+      "visual_intent": "L examining a deduction"
+    },
+    {
+      "id": "ifverse-anime-light-explains-every-name-01-ryuk",
+      "file": "ifverse-anime-light-explains-every-name-01-ryuk.mp4",
+      "type": "video",
+      "query": "Ryuk Death Note apple",
+      "source_url": "https://tenor.com/view/death-note-anime-ryuk-shinigami-apple-gif-22100243",
+      "download_url": "https://media.tenor.com/adObek4g7UkAAAPo/death-note-anime.mp4",
+      "sha256": "6cec06f74befc606c209dd694d59f0fe7c8e665fb16540742dc66f0399df086d",
+      "duration": 6.54,
+      "dimensions": [
+        640,
+        426
+      ],
+      "description": "Death Note Anime GIF",
+      "publisher": "DeathNoteMafia",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "6178859206159565434",
+          "title": "a blurry picture of a person dancing in front of a large letter h",
+          "source_url": "https://tenor.com/view/death-note-ryuk-apple-dance-gif-6178859206159565434",
+          "download_url": "https://media.tenor.com/Vb-3tgRLAnoAAAPo/death-note-ryuk.mp4",
+          "duration": 1.5,
+          "width": 498,
+          "height": 282,
+          "publisher": "VeryVernon",
+          "provider": "tenor"
+        },
+        {
+          "id": "11694508402409783648",
+          "title": "a cartoon character is holding a red heart in his hands",
+          "source_url": "https://tenor.com/view/death-note-ryuk-shinigami-apple-eat-gif-22098418",
+          "download_url": "https://media.tenor.com/oks9box0wWAAAAPo/death-note-ryuk.mp4",
+          "duration": 3.4,
+          "width": 640,
+          "height": 400,
+          "publisher": "DeathNoteMafia",
+          "provider": "tenor"
+        },
+        {
+          "id": "7625609543667477833",
+          "title": "Death Note Anime GIF",
+          "source_url": "https://tenor.com/view/death-note-anime-ryuk-shinigami-apple-gif-22100243",
+          "download_url": "https://media.tenor.com/adObek4g7UkAAAPo/death-note-anime.mp4",
+          "duration": 6.5,
+          "width": 640,
+          "height": 426,
+          "publisher": "DeathNoteMafia",
+          "provider": "tenor"
+        },
+        {
+          "id": "15014244547707735608",
+          "title": "a black and white drawing of a clown with the words k-kurosecchi below it",
+          "source_url": "https://tenor.com/view/havart-yablocko-gif-15014244547707735608",
+          "download_url": "https://media.tenor.com/0F1P3gT3DjgAAAPo/havart-yablocko.mp4",
+          "duration": 3.4,
+          "width": 498,
+          "height": 280,
+          "publisher": "brojustjump22134",
+          "provider": "tenor"
+        },
+        {
+          "id": "10193699326971252446",
+          "title": "a cartoon character says \" my body twists around wildly and i 'll do handstands .. \"",
+          "source_url": "https://tenor.com/view/death-note-ryuk-apple-apples-gif-10193699326971252446",
+          "download_url": "https://media.tenor.com/jXdLh4NCjt4AAAPo/death-note-ryuk.mp4",
+          "duration": 4.9,
+          "width": 498,
+          "height": 300,
+          "publisher": "misaamanespigtails",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "ryuk",
+      "visual_intent": "Ryuk observing human behavior"
+    },
+    {
+      "id": "ifverse-anime-light-explains-every-name-01-book",
+      "file": "ifverse-anime-light-explains-every-name-01-book.mp4",
+      "type": "video",
+      "query": "Death Note notebook writing Light",
+      "source_url": "https://tenor.com/view/fairysoobs-death-note-gif-22234436",
+      "download_url": "https://media.tenor.com/tmamIjMzRAcAAAPo/fairysoobs-death-note.mp4",
+      "sha256": "25ff7e24a627e99a93a4bdee5f1d61378fa98dd1d69cdc82f3db4ec489b1602d",
+      "duration": 3.866667,
+      "dimensions": [
+        640,
+        354
+      ],
+      "description": "a close up of a person holding a microphone .",
+      "publisher": "fairysoobs",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "11890867457543019141",
+          "title": "a close up of a person holding a pen with a metal tip",
+          "source_url": "https://tenor.com/view/dn-gif-11890867457543019141",
+          "download_url": "https://media.tenor.com/pQTY874amoUAAAPo/dn.mp4",
+          "duration": 7.4,
+          "width": 498,
+          "height": 280,
+          "publisher": "JagamiLight",
+          "provider": "tenor"
+        },
+        {
+          "id": "13143375228345467911",
+          "title": "a close up of a person holding a microphone .",
+          "source_url": "https://tenor.com/view/fairysoobs-death-note-gif-22234436",
+          "download_url": "https://media.tenor.com/tmamIjMzRAcAAAPo/fairysoobs-death-note.mp4",
+          "duration": 3.9,
+          "width": 640,
+          "height": 354,
+          "publisher": "fairysoobs",
+          "provider": "tenor"
+        },
+        {
+          "id": "12513758934508976270",
+          "title": "a shadow of a person is cast on the wall",
+          "source_url": "https://tenor.com/view/popopo-gif-24095684",
+          "download_url": "https://media.tenor.com/ranNc0BHOI4AAAPo/popopo.mp4",
+          "duration": 1.6,
+          "width": 640,
+          "height": 400,
+          "publisher": "KeshawnKINg",
+          "provider": "tenor"
+        },
+        {
+          "id": "4473043475378545417",
+          "title": "a close up of a person holding a silver object",
+          "source_url": "https://tenor.com/view/death-note-light-kira-anime-gif-22098653",
+          "download_url": "https://media.tenor.com/PhNxV3bRIwkAAAPo/death-note-light.mp4",
+          "duration": 3.6,
+          "width": 640,
+          "height": 400,
+          "publisher": "DeathNoteMafia",
+          "provider": "tenor"
+        },
+        {
+          "id": "14718683564991866067",
+          "title": "a man in a white shirt and tie is holding a gun in his hand .",
+          "source_url": "https://tenor.com/view/light-death-note-sign-ballpen-pen-gif-4899316",
+          "download_url": "https://media.tenor.com/zENEuCy4ZNMAAAPo/light-death-note.mp4",
+          "duration": 0.8,
+          "width": 500,
+          "height": 278,
+          "publisher": "Unknown Tenor uploader",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "book",
+      "visual_intent": "Notebook context, not graphic harm"
+    }
+  ],
+  "narration_sha256": "e06b0a286fe3bcad1d0ae723b1d59bb0ec276b000f25f64fb3cbf27b71d0eaff"
+}
