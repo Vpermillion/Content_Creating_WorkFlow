@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "narration_sha256": "97001357cf55be6d6c353c980a60a32cf36dadbb7afc80fe20dd2424566ddc5e",
+  "catalog": "assets/sfx/dubbingai-bank.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "damn mind",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Guy reacts to the impossible eye reveal"
+    },
+    {
+      "anchor": {
+        "phrase": "zero installed drivers",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Missing drivers mocks lack of control"
+    },
+    {
+      "anchor": {
+        "phrase": "motivational brand",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_rizz_effect",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Motivational-brand line mocks confident swagger"
+    },
+    {
+      "anchor": {
+        "phrase": "a different department",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Different department undercuts the boast"
+    }
+  ]
+}
