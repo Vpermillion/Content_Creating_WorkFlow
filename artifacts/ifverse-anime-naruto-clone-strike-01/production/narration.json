@@ -1,0 +1,101 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "tts_speed": 1.18,
+  "device": "cpu",
+  "new_test_version": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.4958417178799905,
+      "text": "What if Naruto's shadow clones went on strike? Bro got canceled by his own unpaid staff.",
+      "label": "THE CLONES HAVE DEMANDS"
+    },
+    {
+      "start": 4.4958417178799905,
+      "end": 9.551476957052431,
+      "text": "Two hundred Narutos cross their arms. Same face, same trauma. Terrifying customer service.",
+      "label": "TWO HUNDRED IDENTICAL COMPLAINTS"
+    },
+    {
+      "start": 9.551476957052431,
+      "end": 13.15514775037258,
+      "text": "He says, we're the same person. Exactly, boss. We know you'll volunteer us.",
+      "label": "THE ORIGINAL IS CONFUSED"
+    },
+    {
+      "start": 13.15514775037258,
+      "end": 18.875537796079808,
+      "text": "Training stops. Missions fall behind. Konoha discovers its productivity plan was one exhausted teenager .",
+      "label": "TRAINING IS NOW DELAYED"
+    },
+    {
+      "start": 18.875537796079808,
+      "end": 21.534557022218944,
+      "text": "Kakashi looks up. He's never seen a meeting this orange.",
+      "label": "MANAGEMENT HAS LOGGED OFF"
+    },
+    {
+      "start": 21.534557022218944,
+      "end": 26.78262128433566,
+      "text": "The clones explain that their painful memories return to Naruto. He's exploiting himself with extra steps.",
+      "label": "MEMORIES COME BACK TOO"
+    },
+    {
+      "start": 26.78262128433566,
+      "end": 31.855750071048494,
+      "text": "He proposes shorter rotations and actual breaks. Character development gets a lunch schedule attached.",
+      "label": "AN ACTUAL CONCESSION"
+    },
+    {
+      "start": 31.855750071048494,
+      "end": 38.62575296917906,
+      "text": "Smaller squads test strategies before everyone commits. Fewer bodies, better information. An actual tactical upgrade appears.",
+      "label": "SMALLER SQUAD SMARTER PLAN"
+    },
+    {
+      "start": 38.62575296917906,
+      "end": 43.73386885097268,
+      "text": "They still split his chakra. This union negotiates breaks, not a physics refund. Please stay serious.",
+      "label": "THEY STILL SHARE CHAKRA"
+    },
+    {
+      "start": 43.73386885097268,
+      "end": 48.91195892292784,
+      "text": "Opponents now face coordinated scouts and decoys instead of orange dudes arguing over who gets punched.",
+      "label": "THE ENEMY MEETS A TEAM"
+    },
+    {
+      "start": 48.91195892292784,
+      "end": 54.29997156536767,
+      "text": "One clone asks who elected the original leader. Mother father. His entire forehead just lost confidence.",
+      "label": "WHO APPROVED THE LEADER"
+    },
+    {
+      "start": 54.29997156536767,
+      "end": 61.0,
+      "text": "Naruto joins the strike. Everyone demands ramen. Unfortunately, their revolutionary movement still shares exactly one wallet.",
+      "label": "THE BOSS JOINS THE PICKET"
+    }
+  ],
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  },
+  "duration_adjustment": {
+    "original_seconds": 74.389333,
+    "target_seconds": 61,
+    "actual_seconds": 61.0,
+    "tempo": 1.219497262295082,
+    "original_sha256": "53f2f6c84472e90d22a6a4c6ea3f63a816835ecf9d4773aba84dd13ef9f90f0c",
+    "pitch_preserved": true
+  },
+  "sha256": "4221a2c3bf5398423290257ec39799062965ebb806dffc6b4a62f04571a7097f"
+}

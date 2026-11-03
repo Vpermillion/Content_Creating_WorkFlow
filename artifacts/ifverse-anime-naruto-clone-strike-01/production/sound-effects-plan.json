@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-naruto-clone-strike-01",
+  "script_sha256": "355cfa475e6b5bc6141a195e49d96b6ee74ff5e269758fad2e60fabf85ea0d78",
+  "catalog": "assets/sfx/catalog.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "unpaid staff",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "bass_impact",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "one exhausted teenager",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "error_buzz",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "lunch schedule attached",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "reward_ping",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "His entire forehead",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "cartoon_boing",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    }
+  ],
+  "narration_sha256": "4221a2c3bf5398423290257ec39799062965ebb806dffc6b4a62f04571a7097f",
+  "narration_binding": "Final waveform generated/reused for the matching ordered script checksum"
+}
