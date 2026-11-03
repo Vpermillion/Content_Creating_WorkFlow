@@ -1,0 +1,78 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.96,Caption,,0,0,0,,What if Gojo lost his
+Dialogue: 0,0:00:00.96,0:00:01.98,Caption,,0,0,0,,powers for a day?
+Dialogue: 0,0:00:01.98,0:00:03.16,Caption,,0,0,0,,The confidence stays.
+Dialogue: 0,0:00:03.16,0:00:04.40,Caption,,0,0,0,,The backup plan has vanished.
+Dialogue: 0,0:00:04.40,0:00:05.72,Caption,,0,0,0,,This hypothetical disables his\Ntechnique
+Dialogue: 0,0:00:05.72,0:00:07.30,Caption,,0,0,0,,for twenty -four hours.
+Dialogue: 0,0:00:07.30,0:00:08.14,Caption,,0,0,0,,No upgrade.
+Dialogue: 0,0:00:08.14,0:00:09.04,Caption,,0,0,0,,Use the syllabus.
+Dialogue: 0,0:00:09.04,0:00:10.44,Caption,,0,0,0,,Yuji suggests hiding him.
+Dialogue: 0,0:00:10.44,0:00:11.74,Caption,,0,0,0,,Gojo calls it a lesson.
+Dialogue: 0,0:00:11.74,0:00:13.12,Caption,,0,0,0,,My guy, impressive rebrand for
+Dialogue: 0,0:00:13.12,0:00:13.78,Caption,,0,0,0,,embarrassment.
+Dialogue: 0,0:00:13.78,0:00:14.76,Caption,,0,0,0,,Megumi asks who knows he's
+Dialogue: 0,0:00:14.76,0:00:15.56,Caption,,0,0,0,,vulnerable.
+Dialogue: 0,0:00:15.56,0:00:16.32,Caption,,0,0,0,,Announcing it?
+Dialogue: 0,0:00:16.32,0:00:18.12,Caption,,0,0,0,,A beautifully stupid marketing\Ncampaign.
+Dialogue: 0,0:00:18.12,0:00:20.10,Caption,,0,0,0,,Gojo keeps experience and\Njudgment.
+Dialogue: 0,0:00:20.10,0:00:21.16,Caption,,0,0,0,,We removed a technique, not
+Dialogue: 0,0:00:21.16,0:00:21.96,Caption,,0,0,0,,his brain.
+Dialogue: 0,0:00:21.96,0:00:23.44,Caption,,0,0,0,,No personality factory reset.
+Dialogue: 0,0:00:23.44,0:00:24.68,Caption,,0,0,0,,They change the objective.
+Dialogue: 0,0:00:24.68,0:00:26.42,Caption,,0,0,0,,Evacuate people, limit exposure,\Navoid
+Dialogue: 0,0:00:26.42,0:00:27.52,Caption,,0,0,0,,direct fights.
+Dialogue: 0,0:00:27.52,0:00:28.70,Caption,,0,0,0,,Reach tomorrow intact.
+Dialogue: 0,0:00:28.70,0:00:29.78,Caption,,0,0,0,,Yuji wants to rescue everyone
+Dialogue: 0,0:00:29.78,0:00:30.60,Caption,,0,0,0,,alone.
+Dialogue: 0,0:00:30.60,0:00:32.04,Caption,,0,0,0,,Strong instincts, brother.
+Dialogue: 0,0:00:32.04,0:00:33.40,Caption,,0,0,0,,Terrible delivery policy for\Nhanding
+Dialogue: 0,0:00:33.40,0:00:34.54,Caption,,0,0,0,,yourself to enemies.
+Dialogue: 0,0:00:34.54,0:00:35.44,Caption,,0,0,0,,A threat appears.
+Dialogue: 0,0:00:35.44,0:00:36.46,Caption,,0,0,0,,Instead of overpowering it, they
+Dialogue: 0,0:00:36.46,0:00:37.94,Caption,,0,0,0,,use a decoy and escape route.
+Dialogue: 0,0:00:37.94,0:00:39.28,Caption,,0,0,0,,Megumi handles the route.
+Dialogue: 0,0:00:39.28,0:00:40.40,Caption,,0,0,0,,Yuji moves people.
+Dialogue: 0,0:00:40.40,0:00:41.88,Caption,,0,0,0,,Gojo calls timing.
+Dialogue: 0,0:00:41.88,0:00:43.57,Caption,,0,0,0,,Students become participants,\Nnot spectators.
+Dialogue: 0,0:00:43.57,0:00:45.45,Caption,,0,0,0,,Gojo must trust his teaching.
+Dialogue: 0,0:00:45.45,0:00:46.35,Caption,,0,0,0,,Incredible.
+Dialogue: 0,0:00:46.35,0:00:47.35,Caption,,0,0,0,,Education has reached its\Nterrifying
+Dialogue: 0,0:00:47.35,0:00:48.93,Caption,,0,0,0,,practical application.
+Dialogue: 0,0:00:48.93,0:00:50.19,Caption,,0,0,0,,Somebody check the syllabus.
+Dialogue: 0,0:00:50.19,0:00:51.69,Caption,,0,0,0,,The powers return tomorrow.
+Dialogue: 0,0:00:51.69,0:00:53.01,Caption,,0,0,0,,The lesson remains: your team
+Dialogue: 0,0:00:53.01,0:00:54.23,Caption,,0,0,0,,shouldn't collapse because its\Nstrongest
+Dialogue: 0,0:00:54.23,0:00:55.15,Caption,,0,0,0,,member struggles.
+Dialogue: 0,0:00:55.15,0:00:57.31,Caption,,0,0,0,,Gojo claims everything was\Nintentional.
+Dialogue: 0,0:00:57.31,0:00:59.03,Caption,,0,0,0,,Megumi requests the lesson plan.
+Dialogue: 0,0:00:59.03,0:00:59.83,Caption,,0,0,0,,The receipts have entered the
+Dialogue: 0,0:00:59.83,0:01:00.97,Caption,,0,0,0,,domain, undefeated.
+Dialogue: 1,0:00:00.00,0:00:04.32,Heading,,0,0,0,,THE CONFIDENCE STILL WORKS
+Dialogue: 1,0:00:04.32,0:00:08.95,Heading,,0,0,0,,ONE INVENTED BAD DAY
+Dialogue: 1,0:00:08.95,0:00:13.69,Heading,,0,0,0,,YUJI GETS WORRIED
+Dialogue: 1,0:00:13.69,0:00:18.09,Heading,,0,0,0,,MEGUMI READS THE ROOM
+Dialogue: 1,0:00:18.09,0:00:23.44,Heading,,0,0,0,,POWER IS NOT ALL HE KNOWS
+Dialogue: 1,0:00:23.44,0:00:28.64,Heading,,0,0,0,,CHANGE THE OBJECTIVE
+Dialogue: 1,0:00:28.64,0:00:34.44,Heading,,0,0,0,,NO HEROIC DETOUR
+Dialogue: 1,0:00:34.44,0:00:37.86,Heading,,0,0,0,,THE WRONG BATTLE
+Dialogue: 1,0:00:37.86,0:00:43.57,Heading,,0,0,0,,THE PLAN NEEDS EVERYBODY
+Dialogue: 1,0:00:43.57,0:00:50.15,Heading,,0,0,0,,THE TEACHER HAS TO TRUST
+Dialogue: 1,0:00:50.15,0:00:55.14,Heading,,0,0,0,,THE CLOCK IS NOT THE STORY
+Dialogue: 1,0:00:55.14,0:01:01.00,Heading,,0,0,0,,THE DEBRIEF IS COOKED
+Dialogue: 1,0:00:00.00,0:01:01.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:01.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF
