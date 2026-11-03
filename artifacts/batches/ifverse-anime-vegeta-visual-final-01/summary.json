@@ -1,0 +1,56 @@
+{
+  "id": "ifverse-anime-vegeta-visual-final-01",
+  "results": [
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01",
+      "batch_id": "ifverse-anime-vegeta-visual-final-01",
+      "status": "success",
+      "script_sha256": "1d1e920eca0ac5219244d5107a0e1a4603ae7c3407bfdfe344cd2291467a673a",
+      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r4",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "3e07fc6a2fccc37c44547c53e6502df22a4d647942120660d2393219e1c18d2c",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 5,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Vegeta had one peaceful week?",
+        "description": "Vegeta gets a week without a world-ending enemy and must decide what his strength is for when nobody needs defeating.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #DragonBall\n\nIllustrative clip sources:\nhttps://tenor.com/view/that%27s-my-bulma-remaster-remake-vegeta-dbs-gif-4027124219711535825\nhttps://tenor.com/view/vegeta-push-ups-one-finger-one-hand-push-up-one-finger-push-up-gravity-gif-18222610528316135644\nhttps://tenor.com/view/bulma-dragon-ball-cepillando-los-dientes-chica-pijama-gif-3594875758800956848\nhttps://tenor.com/view/vegeta-bulma-trunks-family-family-day-gif-13281431\nhttps://tenor.com/view/goku-dragon-ball-smile-turn-serious-dragonball-gif-17475896124570291416",
+        "tags": [
+          "anime what if",
+          "Dragon Ball",
+          "Vegeta",
+          "Bulma",
+          "Goku",
+          "Trunks",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "DragonBall"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r4",
+      "commit": "6fa309c601384ad2a5e14da8da8444248fd197c4"
+    }
+  ],
+  "uploaded_by_this_job": false,
+  "publication_clearance": "not_established",
+  "publishing_connection": "not_assessed_by_render_job"
+}

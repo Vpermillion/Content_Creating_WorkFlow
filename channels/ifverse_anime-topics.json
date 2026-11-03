@@ -286,10 +286,10 @@
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
         }
       ],
-      "video_sha256": "e9dda17c548dc60c8ccee03eeac0e135b5559230eb7809eea9011b551476eadd",
+      "video_sha256": "3e07fc6a2fccc37c44547c53e6502df22a4d647942120660d2393219e1c18d2c",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r3",
-      "result_commit": "85d32f7e0c10d3d2d1686a11857f932ce37d89b0",
+      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r4",
+      "result_commit": "6fa309c601384ad2a5e14da8da8444248fd197c4",
       "publication_clearance": "not_established",
       "result_receipt": "artifacts/ifverse-anime-vegeta-peaceful-week-01/batch-result.json"
     },
