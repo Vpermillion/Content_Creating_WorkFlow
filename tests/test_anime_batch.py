@@ -11,7 +11,7 @@ from whatif.topics import topic_record
 
 class AnimeBatchTests(unittest.TestCase):
     def test_real_batch_is_reserved_distinct_and_long_enough(self):
-        value=batch.load_batch('batch-requests/ifverse-anime-ten-20261103-01.json')
+        value=batch.load_batch('batch-requests/ifverse-anime-ten-61s-20261103-01.json')
         self.assertEqual(len(value['episodes']),10)
         self.assertGreaterEqual(value['target_duration_seconds'],60)
         self.assertEqual(len({e['topic_key'] for e in value['episodes']}),10)
@@ -31,7 +31,7 @@ class AnimeBatchTests(unittest.TestCase):
             self.assertEqual(len(receipt['results'][1]['attempts']),2)
 
     def test_invalid_cue_and_already_published_reservation_fail_before_render(self):
-        original=batch.load_batch('batch-requests/ifverse-anime-ten-20261103-01.json')
+        original=batch.load_batch('batch-requests/ifverse-anime-ten-61s-20261103-01.json')
         for mutation, message in [('cue','Sound cue'),('published','not already published')]:
             value=copy.deepcopy(original);value['episodes']=value['episodes'][:1]
             if mutation=='cue':value['episodes'][0]['cues'][0]['phrase']='This phrase does not exist'

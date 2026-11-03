@@ -107,6 +107,35 @@ def record_result(path, episode_id, result, receipt_path):
         atomic_json(path, registry)
 
 
+def revise_batch(path, batch, reason):
+    """Explicitly revise unpublished cuts of the same topics, preserving history."""
+    if not isinstance(reason, str) or not reason.strip():
+        raise ValueError('Record the requested revision reason')
+    with locked(path):
+        registry = json.loads(Path(path).read_text())
+        if registry['channel'] != batch['channel']:
+            raise ValueError('Registry channel mismatch')
+        replacements = []
+        for episode in batch['episodes']:
+            candidate = topic_record(episode, batch['id'])
+            matches = [t for t in registry['topics'] if t['id'] == candidate['id']]
+            if len(matches) != 1 or matches[0]['topic_key'] != candidate['topic_key']:
+                raise ValueError('Revision must refer to one existing identical topic key')
+            old = matches[0]
+            if old.get('video_id') or old['state'] == 'published':
+                raise ValueError('Do not replace a published topic with another upload')
+            others = {'topics': [t for t in registry['topics'] if t['id'] != old['id']]}
+            if conflicts(others, candidate):
+                raise ValueError('Revision overlaps a different topic')
+            history = old.get('versions', []) + [{k: old[k] for k in
+                       ('batch_id','script_sha256','state','result_branch','video_sha256') if k in old} | {'revision_reason':reason}]
+            replacements.append({**candidate, 'versions': history})
+        for candidate in replacements:
+            registry['topics'] = [candidate if t['id'] == candidate['id'] else t for t in registry['topics']]
+        atomic_json(path, registry)
+    return registry
+
+
 def mark_published(path, episode_id, receipt):
     if not re.fullmatch(r'[A-Za-z0-9_-]{11}', receipt.get('video_id', '')) or not receipt.get('verified_channel_id'):
         raise ValueError('Actual provider video ID and verified channel are required')

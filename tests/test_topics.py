@@ -69,3 +69,16 @@ class TopicTests(unittest.TestCase):
             self.assertEqual(value['state'],'rendered');self.assertIsNone(value['video_id'])
             with self.assertRaisesRegex(ValueError,'provider video ID'):
                 topics.mark_published(path,'first',{})
+
+    def test_requested_revision_preserves_history_and_published_topic_cannot_be_revised(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'topics.json';topics.atomic_json(path,self.registry())
+            batch={'id':'batch','channel':'ifverse_anime','episodes':[self.episode]}
+            topics.reserve(path,batch)
+            batch['episodes'][0]['scenes'][0]['text']='A shorter authorized script.'
+            value=topics.revise_batch(path,batch,'Owner requested a 61-second cut')
+            self.assertEqual(len(value['topics'][0]['versions']),1)
+            self.assertEqual(value['topics'][0]['script_sha256'],topics.script_hash(batch['episodes'][0]['scenes']))
+            value['topics'][0]['state']='published';topics.atomic_json(path,value)
+            with self.assertRaisesRegex(ValueError,'published topic'):
+                topics.revise_batch(path,batch,'Another cut')

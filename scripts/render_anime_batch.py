@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import sys
 import traceback
 
@@ -24,6 +25,10 @@ def load_batch(relative):
         raise ValueError('Use a bounded batch JSON under batch-requests/')
     batch = json.loads(path.read_text())
     identifier(batch['id'])
+    if type(batch.get('attempt', 1)) is not int or not 1 <= batch.get('attempt', 1) <= 3:
+        raise ValueError('At most three explicit saved attempts per batch')
+    if batch.get('duration_mode', 'fixed') not in ('fixed', 'natural_short'):
+        raise ValueError('Unknown batch duration mode')
     if batch.get('schema_version') != 1 or batch.get('channel') != 'ifverse_anime' or batch.get('voice') != 'am_michael':
         raise ValueError('Unsupported batch schema, channel or voice')
     if not 60 <= batch['target_duration_seconds'] <= 75 or isinstance(batch['target_duration_seconds'], bool):
@@ -33,6 +38,10 @@ def load_batch(relative):
         raise ValueError('Use one to ten unique episode IDs')
     registry = json.loads((ROOT / 'channels/ifverse_anime-topics.json').read_text())
     for episode in episodes:
+        if episode.get('reuse_result'):
+            prior = episode['reuse_result']
+            if not re.fullmatch(r'[a-f0-9]{40}', prior.get('commit', '')) or prior.get('branch') != 'codex/results/' + episode['id'] or not re.fullmatch(r'[a-f0-9]{64}',prior.get('script_sha256','')):
+                raise ValueError('Source reuse must pin this episode\'s original result')
         record = topic_record(episode, batch['id'])
         reserved = [t for t in registry['topics'] if t['id'] == episode['id']]
         if len(reserved) != 1 or reserved[0]['script_sha256'] != record['script_sha256'] or reserved[0]['state'] == 'published':
@@ -63,9 +72,59 @@ def load_batch(relative):
     return batch
 
 
+def result_branch(batch, episode):
+    return 'codex/results/' + episode['id'] + (f"-r{batch['attempt']}" if batch.get('attempt', 1) > 1 else '')
+
+
+def previous_assets(episode, output):
+    prior = episode.get('reuse_result')
+    if not prior:
+        return {}
+    subprocess.run(['git','fetch','--quiet','--depth=1','origin','refs/heads/'+prior['branch']],cwd=ROOT,check=True)
+    actual = subprocess.check_output(['git','rev-parse','FETCH_HEAD'],cwd=ROOT,text=True).strip()
+    if actual != prior['commit']:
+        raise ValueError('Saved source result changed; inspect before retry')
+    prefix = 'artifacts/' + episode['id'] + '/'
+    def read(name): return subprocess.check_output(['git','show',actual+':'+prefix+name],cwd=ROOT)
+    receipt = json.loads(read('batch-result.json'))
+    if receipt['script_sha256'] != prior['script_sha256']:
+        raise ValueError('Source reuse receipt differs from the pinned previous script')
+    records = json.loads(read('source-review/sources.json'))['results']
+    assets = {}
+    for record in records:
+        if 'asset' not in record: continue
+        asset = record['asset']
+        if asset['id'] not in {s['id'] for s in episode['sources']} or Path(asset['file']).name != asset['file']:
+            raise ValueError('Unexpected retained source asset')
+        path = output / 'footage' / asset['file']; path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(read('source-review/footage/' + asset['file']))
+        if digest(path) != asset['sha256']:
+            raise ValueError('Retained source checksum changed')
+        assets[asset['source_key']] = asset
+    reuse = {'branch': prior['branch'], 'commit': actual,
+             'reused_source_keys': list(assets), 'new_source_searches_avoided': len(assets)}
+    if receipt['script_sha256'] == script_hash(episode['scenes']) and subprocess.run(['git','cat-file','-e',actual+':'+prefix+'production/narration.json'],cwd=ROOT,capture_output=True).returncode == 0:
+        narration = json.loads(read('production/narration.json'))
+        if narration['voice'] != 'am_michael' or [s['text'] for s in narration['segments']] != [s['text'] for s in episode['scenes']]:
+            raise ValueError('Retained voice receipt belongs to different speech')
+        retained = ROOT / 'artifacts' / episode['id'] / 'retained'
+        retained.mkdir(parents=True, exist_ok=True)
+        for name in ('narration.wav','narration.json','transcription.json'):
+            (retained/name).write_bytes(read('production/'+name))
+        if digest(retained/'narration.wav') != narration['sha256']:
+            raise ValueError('Retained narration checksum changed')
+        reuse['reuse_narration_from'] = str(retained.relative_to(ROOT))
+        reuse['reuse_transcription_from'] = str(retained.relative_to(ROOT))
+    atomic_json(output / 'reuse-receipt.json', reuse)
+    return assets
+
+
 def collect_episode(episode, output):
     """Keep successful downloads across a bounded fallback; never relabel failures."""
+    retained = previous_assets(episode, output)
     def acquire(spec):
+        if spec['key'] in retained:
+            return {'asset': retained[spec['key']], 'attempts': [], 'reused_verified_source': True}
         attempts = []
         queries = [spec['query'], spec['required_terms'][0].replace('-', ' ') + ' ' + episode['franchise']]
         for query in dict.fromkeys(queries):
@@ -93,7 +152,7 @@ def render_episode(batch, episode, output, models):
     output.mkdir(parents=True, exist_ok=True)
     result = {'id': episode['id'], 'batch_id': batch['id'], 'status': 'running',
               'script_sha256': script_hash(episode['scenes']),
-              'result_branch': 'codex/results/' + episode['id'],
+              'result_branch': result_branch(batch, episode),
               'publication_clearance': 'not_established', 'uploaded': False}
     atomic_json(output / 'batch-result.json', result)
     try:
@@ -115,6 +174,8 @@ def render_episode(batch, episode, output, models):
                 'language': 'en', 'title': episode['title'], 'scenes': scenes,
                 'script_style': 'ifverse-playful-roast-v2',
                 'target_duration_seconds': batch['target_duration_seconds'],
+                'tts_speed': 1.18,
+                'duration_mode': batch.get('duration_mode', 'fixed'),
                 'assumptions': ['Fan-made alternate scenario, not canon or an official episode.']}
         plan = {'schema_version': 1, 'id': episode['id'], 'title': episode['title'],
                 'width': 720, 'height': 1280, 'fps': 30, 'assets': assets, 'scenes': scenes,
@@ -138,6 +199,10 @@ def render_episode(batch, episode, output, models):
                    'script': script_path, 'edit_plan': plan_path, 'sound_effects_plan': sfx_path,
                    'caption_mode': 'script_alignment', 'caption_model': 'base.en',
                    'result_branch': result['result_branch'], 'publishing_enabled': False}
+        reuse_receipt = output / 'source-review/reuse-receipt.json'
+        if reuse_receipt.exists():
+            reuse = json.loads(reuse_receipt.read_text())
+            request.update({k: reuse[k] for k in ('reuse_narration_from','reuse_transcription_from') if k in reuse})
         atomic_json(output / 'request.json', request)
         rendered = renderer.run(request, output / 'production', models)
         video = output / 'production' / rendered['video']
@@ -168,6 +233,23 @@ def render_episode(batch, episode, output, models):
                                 'An original fan-made alternate scenario and comedic commentary by Ifverse Anime. '
                                 'Hypothetical events and dialogue are invented, not canon. AI-assisted narration (Kokoro am_michael). '
                                 '#Shorts #Anime #WhatIf', 'categoryId': '24', 'defaultLanguage': 'en'})
+        if episode.get('posting'):
+            settings = copy.deepcopy(episode['posting'])
+            metadata = {k: settings[k] for k in ('title','description','tags','hashtags','categoryId',
+                                               'defaultLanguage','defaultAudioLanguage')}
+            metadata['description'] += '\n\nIllustrative clip sources:\n' + '\n'.join(a['source_url'] for a in assets)
+            if len(metadata['title']) > 100 or len(metadata['description'].encode()) > 5000 or len(metadata['hashtags']) > 15:
+                raise ValueError('Posting metadata exceeds YouTube limits')
+            if any(not re.fullmatch(r'[A-Za-z0-9]+', t) for t in metadata['hashtags']):
+                raise ValueError('Invalid hashtag')
+            settings.update(metadata=metadata, duration_seconds=duration, video_sha256=result['video_sha256'],
+                            technical_metadata_checks='passed', publication_clearance='not_established',
+                            actual_upload_status='not_uploaded',
+                            source_use_review='pending', audiovisual_review='pending')
+            atomic_json(output / 'post-settings.json', settings)
+            result['metadata'] = metadata
+            result['posting_packet'] = 'post-settings.json'
+            result['music_embedded'] = False
     except Exception as exc:
         result.update(status='failed', error_type=type(exc).__name__, error=str(exc)[:500])
         traceback.print_exc()

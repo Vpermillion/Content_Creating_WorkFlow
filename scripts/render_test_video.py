@@ -51,6 +51,9 @@ def model_files(folder):
 
 
 def narrate(spec, output, models, voice):
+    speed = spec.get('tts_speed', 1.08)
+    if isinstance(speed, bool) or not isinstance(speed, (int,float)) or not math.isfinite(speed) or not 1 <= speed <= 1.2:
+        raise ValueError('Speech speed must be between 1.0 and 1.2')
     import numpy as np
     import onnxruntime as ort
     from kokoro_onnx import Kokoro
@@ -63,7 +66,7 @@ def narrate(spec, output, models, voice):
     engine = Kokoro.from_session(session, str(models / 'kokoro/voices-v1.0.bin'))
     parts, segments, cursor = [], [], 0
     for scene in spec['scenes']:
-        samples, rate = engine.create(scene['text'], voice=voice, speed=1.08, lang='en-us')
+        samples, rate = engine.create(scene['text'], voice=voice, speed=speed, lang='en-us')
         samples = np.asarray(samples, dtype=np.float32).reshape(-1)
         if rate != 24000 or not np.isfinite(samples).all() or not .5 < len(samples) / rate < 25:
             raise ValueError('Invalid generated speech')
@@ -80,20 +83,30 @@ def narrate(spec, output, models, voice):
         wav.setsampwidth(2)
         wav.setframerate(24000)
         wav.writeframes((samples * 32767).astype('<i2').tobytes())
-    timing = fit_narration_duration(output, segments, spec.get('target_duration_seconds'))
+    raw_receipt = {'provider': 'kokoro-onnx', 'version': '0.6.1', 'voice': voice,
+                   'segments': copy.deepcopy(segments), 'sha256': digest(output / 'narration.wav'),
+                   'model_files': receipts}
+    atomic_json(output / 'narration-raw.json', raw_receipt)
+    natural_short = spec.get('duration_mode') == 'natural_short'
+    target = (max(60, min(180, math.ceil(media.duration(output / 'narration.wav'))))
+              if natural_short else spec.get('target_duration_seconds'))
+    timing = fit_narration_duration(output, segments, target, max_target_seconds=180 if natural_short else 75)
     atomic_json(output / 'narration.json', {'provider': 'kokoro-onnx', 'version': '0.6.1', 'voice': voice,
+                'tts_speed': speed,
                 'device': 'cpu', 'new_test_version': True, 'segments': segments, 'model_files': receipts,
                 'duration_adjustment': timing,
                 'sha256': digest(output / 'narration.wav')})
     return segments
 
 
-def fit_narration_duration(output, segments, target):
+def fit_narration_duration(output, segments, target, max_target_seconds=75):
     """Fit a newly generated version to its requested length without changing pitch."""
     if target is None:
         return None
-    if isinstance(target, bool) or not isinstance(target, (int, float)) or not math.isfinite(target) or not 30 <= target <= 75:
-        raise ValueError('Target duration must be between 30 and 75 seconds')
+    if max_target_seconds not in (75, 180):
+        raise ValueError('Unsupported duration bound')
+    if isinstance(target, bool) or not isinstance(target, (int, float)) or not math.isfinite(target) or not 30 <= target <= max_target_seconds:
+        raise ValueError(f'Target duration must be between 30 and {max_target_seconds} seconds')
     original = media.duration(output / 'narration.wav')
     tempo = original / target
     if not .7 <= tempo <= 1.35:

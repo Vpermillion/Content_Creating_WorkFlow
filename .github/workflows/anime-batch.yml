@@ -52,7 +52,8 @@ jobs:
       - uses: actions/checkout@v7.0.1
       - name: Refuse regeneration when a saved result already exists
         run: |
-          if git ls-remote --exit-code origin "refs/heads/codex/results/$EPISODE_ID"; then
+          RESULT_BRANCH=$(python3 -c 'import os; from scripts.render_anime_batch import load_batch,result_branch; b=load_batch(os.environ["BATCH_PATH"]); print(result_branch(b,next(e for e in b["episodes"] if e["id"]==os.environ["EPISODE_ID"])))')
+          if git ls-remote --exit-code origin "refs/heads/$RESULT_BRANCH"; then
             echo 'Saved result exists. Inspect it and reconcile before another attempt.'
             exit 1
           fi
@@ -80,9 +81,10 @@ jobs:
           python3 - <<'PY'
           import json, os, pathlib, shutil, subprocess
           from whatif.topics import script_hash
+          from scripts.render_anime_batch import result_branch
           batch=json.loads(pathlib.Path(os.environ['BATCH_PATH']).read_text())
           episode=next(e for e in batch['episodes'] if e['id']==os.environ['EPISODE_ID'])
-          branch='codex/results/'+episode['id']
+          branch=result_branch(batch,episode)
           if subprocess.run(['git','ls-remote','--exit-code','origin','refs/heads/'+branch],capture_output=True).returncode==0:
               raise SystemExit('Saved result exists; no overwrite')
           source=pathlib.Path('private/anime-batch/output')
