@@ -1,0 +1,101 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "tts_speed": 1.18,
+  "device": "cpu",
+  "new_test_version": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.438957475994513,
+      "text": "What if Vegeta got one peaceful week? No invasion. A prince underqualified for normal Tuesday activities.",
+      "label": "NO VILLAIN JUST FEELINGS"
+    },
+    {
+      "start": 5.438957475994513,
+      "end": 10.710562414266118,
+      "text": "He begins by training harder. Naturally. Bro treats relaxation like a security vulnerability in his system.",
+      "label": "DAY ONE OF RELAXING"
+    },
+    {
+      "start": 10.710562414266118,
+      "end": 15.54705075445816,
+      "text": "Bulma requests family time. Vegeta asks for the objective. Sir, the objective is being present.",
+      "label": "BULMA SETS THE CHALLENGE"
+    },
+    {
+      "start": 15.54705075445816,
+      "end": 20.46721536351166,
+      "text": "Trunks shows him a drawing. Vegeta corrects his stance. My guy, that's artwork, not an enemy combatant.",
+      "label": "NOT EVERYTHING IS A DRILL"
+    },
+    {
+      "start": 20.46721536351166,
+      "end": 24.04855967078189,
+      "text": "Without a threat, strength needs another purpose. Can he enjoy people he protects?",
+      "label": "WHAT IS STRENGTH FOR"
+    },
+    {
+      "start": 24.04855967078189,
+      "end": 29.671604938271603,
+      "text": "Goku visits. Vegeta immediately suspects secret training. A friendly hello triggers a competitive investigation.",
+      "label": "THE RIVALRY NOTIFICATION"
+    },
+    {
+      "start": 29.671604938271603,
+      "end": 33.80521262002743,
+      "text": "He wants gravity training again. Instead, he promises a short session and leaves on time.",
+      "label": "PUT THE GRAVITY DOWN"
+    },
+    {
+      "start": 33.80521262002743,
+      "end": 39.813168724279834,
+      "text": "Bulma is shocked. A grown man correctly estimated his arrival time. Historic scenes at Capsule Corporation today.",
+      "label": "A RARE CONFIRMED WIN"
+    },
+    {
+      "start": 39.813168724279834,
+      "end": 44.59945130315501,
+      "text": "He listens to Trunks explain the drawing. It's their family. Nobody's fighting. Vegeta needs a moment.",
+      "label": "THE SMALL MOMENT"
+    },
+    {
+      "start": 44.59945130315501,
+      "end": 49.03429355281207,
+      "text": "He keeps his pride, but stops dodging tender conversations. An actual emotional upgrade.",
+      "label": "KEEP THE PRIDE LOSE THE EXCUSE"
+    },
+    {
+      "start": 49.03429355281207,
+      "end": 55.34348422496571,
+      "text": "Goku asks if peace made him soft. Vegeta schedules tomorrow's beating. Healthy boundaries, absolutely horrible phrasing.",
+      "label": "THE FLEX STILL EXISTS"
+    },
+    {
+      "start": 55.34348422496571,
+      "end": 61.0,
+      "text": "No new transformation appears. He still grows. Motherflicker, the breakthrough was dinner together and one sincere compliment.",
+      "label": "A DIFFERENT KIND OF POWER"
+    }
+  ],
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  },
+  "duration_adjustment": {
+    "original_seconds": 77.76,
+    "target_seconds": 61,
+    "actual_seconds": 61.0,
+    "tempo": 1.2747540983606558,
+    "original_sha256": "52071b4d1d71733f7487af77348021c8f9e7a566eab0d307860bd47346587cb0",
+    "pitch_preserved": true
+  },
+  "sha256": "5cd56713f3478a51a61033dbd59ed345c34638f53759e075b78b207b503cc05d"
+}

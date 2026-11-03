@@ -1,0 +1,1358 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "5cd56713f3478a51a61033dbd59ed345c34638f53759e075b78b207b503cc05d",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.08,
+      "probability": 0.0001365942880511284
+    },
+    {
+      "word": "if",
+      "start": 0.08,
+      "end": 0.16,
+      "probability": 0.9284955263137817
+    },
+    {
+      "word": "Vegeta",
+      "start": 0.16,
+      "end": 0.32,
+      "probability": 0.192085862159729
+    },
+    {
+      "word": "got",
+      "start": 0.32,
+      "end": 0.68,
+      "probability": 0.9913363456726074
+    },
+    {
+      "word": "one",
+      "start": 0.68,
+      "end": 0.86,
+      "probability": 0.9412248134613037
+    },
+    {
+      "word": "peaceful",
+      "start": 0.86,
+      "end": 1.1,
+      "probability": 0.8144136667251587
+    },
+    {
+      "word": "week?",
+      "start": 1.1,
+      "end": 1.92,
+      "probability": 0.9488564133644104
+    },
+    {
+      "word": "No",
+      "start": 1.92,
+      "end": 1.96,
+      "probability": 0.9111525416374207
+    },
+    {
+      "word": "invasion.",
+      "start": 1.96,
+      "end": 2.92,
+      "probability": 0.966533362865448
+    },
+    {
+      "word": "A",
+      "start": 2.92,
+      "end": 2.92,
+      "probability": 0.9354948997497559
+    },
+    {
+      "word": "prince",
+      "start": 2.92,
+      "end": 3.08,
+      "probability": 0.9159919023513794
+    },
+    {
+      "word": "underqualified",
+      "start": 3.08,
+      "end": 3.7,
+      "probability": 0.7457648813724518
+    },
+    {
+      "word": "for",
+      "start": 3.7,
+      "end": 4.06,
+      "probability": 0.9976845979690552
+    },
+    {
+      "word": "normal",
+      "start": 4.06,
+      "end": 4.3,
+      "probability": 0.9684818387031555
+    },
+    {
+      "word": "Tuesday",
+      "start": 4.3,
+      "end": 4.56,
+      "probability": 0.989516019821167
+    },
+    {
+      "word": "activities.",
+      "start": 4.56,
+      "end": 5.5,
+      "probability": 0.9886553287506104
+    },
+    {
+      "word": "He",
+      "start": 5.5,
+      "end": 5.5,
+      "probability": 0.9357894062995911
+    },
+    {
+      "word": "begins",
+      "start": 5.5,
+      "end": 5.7,
+      "probability": 0.9843569397926331
+    },
+    {
+      "word": "by",
+      "start": 5.7,
+      "end": 6.0,
+      "probability": 0.9959659576416016
+    },
+    {
+      "word": "training",
+      "start": 6.0,
+      "end": 6.2,
+      "probability": 0.9915987253189087
+    },
+    {
+      "word": "harder.",
+      "start": 6.2,
+      "end": 7.28,
+      "probability": 0.985228955745697
+    },
+    {
+      "word": "Naturally.",
+      "start": 7.28,
+      "end": 7.9,
+      "probability": 0.985325038433075
+    },
+    {
+      "word": "Bro",
+      "start": 7.9,
+      "end": 7.9,
+      "probability": 0.9623884558677673
+    },
+    {
+      "word": "treats",
+      "start": 7.9,
+      "end": 8.12,
+      "probability": 0.7209914922714233
+    },
+    {
+      "word": "relaxation",
+      "start": 8.12,
+      "end": 8.38,
+      "probability": 0.9644949436187744
+    },
+    {
+      "word": "like",
+      "start": 8.38,
+      "end": 9.0,
+      "probability": 0.993517279624939
+    },
+    {
+      "word": "a",
+      "start": 9.0,
+      "end": 9.08,
+      "probability": 0.9861473441123962
+    },
+    {
+      "word": "security",
+      "start": 9.08,
+      "end": 9.36,
+      "probability": 0.9983782768249512
+    },
+    {
+      "word": "vulnerability",
+      "start": 9.36,
+      "end": 9.74,
+      "probability": 0.9910888671875
+    },
+    {
+      "word": "in",
+      "start": 9.74,
+      "end": 10.18,
+      "probability": 0.9949001669883728
+    },
+    {
+      "word": "his",
+      "start": 10.18,
+      "end": 10.26,
+      "probability": 0.9906210899353027
+    },
+    {
+      "word": "system.",
+      "start": 10.26,
+      "end": 10.82,
+      "probability": 0.9960451722145081
+    },
+    {
+      "word": "Bulma",
+      "start": 10.82,
+      "end": 10.96,
+      "probability": 0.765774667263031
+    },
+    {
+      "word": "requests",
+      "start": 10.96,
+      "end": 11.2,
+      "probability": 0.9936489462852478
+    },
+    {
+      "word": "family",
+      "start": 11.2,
+      "end": 11.52,
+      "probability": 0.975741982460022
+    },
+    {
+      "word": "time.",
+      "start": 11.52,
+      "end": 12.48,
+      "probability": 0.9832936525344849
+    },
+    {
+      "word": "Vegeta",
+      "start": 12.48,
+      "end": 12.48,
+      "probability": 0.9036729335784912
+    },
+    {
+      "word": "asks",
+      "start": 12.48,
+      "end": 12.92,
+      "probability": 0.9882610440254211
+    },
+    {
+      "word": "for",
+      "start": 12.92,
+      "end": 13.08,
+      "probability": 0.9963506460189819
+    },
+    {
+      "word": "the",
+      "start": 13.08,
+      "end": 13.18,
+      "probability": 0.9964215755462646
+    },
+    {
+      "word": "objective.",
+      "start": 13.18,
+      "end": 13.96,
+      "probability": 0.9565005302429199
+    },
+    {
+      "word": "Sir,",
+      "start": 13.96,
+      "end": 14.3,
+      "probability": 0.9136173725128174
+    },
+    {
+      "word": "the",
+      "start": 14.3,
+      "end": 14.34,
+      "probability": 0.9889183640480042
+    },
+    {
+      "word": "objective",
+      "start": 14.34,
+      "end": 14.52,
+      "probability": 0.9731177687644958
+    },
+    {
+      "word": "is",
+      "start": 14.52,
+      "end": 14.92,
+      "probability": 0.9944915771484375
+    },
+    {
+      "word": "being",
+      "start": 14.92,
+      "end": 15.06,
+      "probability": 0.9925606846809387
+    },
+    {
+      "word": "present.",
+      "start": 15.06,
+      "end": 15.64,
+      "probability": 0.9988089799880981
+    },
+    {
+      "word": "Trunks",
+      "start": 15.64,
+      "end": 15.72,
+      "probability": 0.8100157678127289
+    },
+    {
+      "word": "shows",
+      "start": 15.72,
+      "end": 15.94,
+      "probability": 0.9866466522216797
+    },
+    {
+      "word": "him",
+      "start": 15.94,
+      "end": 16.08,
+      "probability": 0.9990352392196655
+    },
+    {
+      "word": "a",
+      "start": 16.08,
+      "end": 16.12,
+      "probability": 0.9931308627128601
+    },
+    {
+      "word": "drawing.",
+      "start": 16.12,
+      "end": 17.1,
+      "probability": 0.9982095956802368
+    },
+    {
+      "word": "Vegeta",
+      "start": 17.1,
+      "end": 17.1,
+      "probability": 0.9499666094779968
+    },
+    {
+      "word": "corrects",
+      "start": 17.1,
+      "end": 17.5,
+      "probability": 0.9868335425853729
+    },
+    {
+      "word": "his",
+      "start": 17.5,
+      "end": 17.56,
+      "probability": 0.9922783374786377
+    },
+    {
+      "word": "stance.",
+      "start": 17.56,
+      "end": 18.32,
+      "probability": 0.9918208122253418
+    },
+    {
+      "word": "My",
+      "start": 18.32,
+      "end": 18.36,
+      "probability": 0.8197252750396729
+    },
+    {
+      "word": "guy,",
+      "start": 18.36,
+      "end": 18.78,
+      "probability": 0.9459097981452942
+    },
+    {
+      "word": "that's",
+      "start": 18.78,
+      "end": 18.94,
+      "probability": 0.9758151173591614
+    },
+    {
+      "word": "artwork,",
+      "start": 18.94,
+      "end": 19.44,
+      "probability": 0.9507247805595398
+    },
+    {
+      "word": "not",
+      "start": 19.44,
+      "end": 19.52,
+      "probability": 0.9907930493354797
+    },
+    {
+      "word": "an",
+      "start": 19.52,
+      "end": 19.62,
+      "probability": 0.9685001373291016
+    },
+    {
+      "word": "enemy",
+      "start": 19.62,
+      "end": 19.86,
+      "probability": 0.9930130839347839
+    },
+    {
+      "word": "combatant.",
+      "start": 19.86,
+      "end": 20.46721536351166,
+      "probability": 0.9808183908462524
+    },
+    {
+      "word": "Without",
+      "start": 20.46721536351166,
+      "end": 20.5871875,
+      "probability": 2.5349558200105093e-05
+    },
+    {
+      "word": "a",
+      "start": 20.5871875,
+      "end": 20.6871875,
+      "probability": 0.9898041486740112
+    },
+    {
+      "word": "threat,",
+      "start": 20.6871875,
+      "end": 21.2071875,
+      "probability": 0.99399733543396
+    },
+    {
+      "word": "strength",
+      "start": 21.2071875,
+      "end": 21.307187499999998,
+      "probability": 0.6337888836860657
+    },
+    {
+      "word": "needs",
+      "start": 21.307187499999998,
+      "end": 21.6471875,
+      "probability": 0.9899144172668457
+    },
+    {
+      "word": "another",
+      "start": 21.6471875,
+      "end": 21.9071875,
+      "probability": 0.9967472553253174
+    },
+    {
+      "word": "purpose.",
+      "start": 21.9071875,
+      "end": 22.6871875,
+      "probability": 0.9967871904373169
+    },
+    {
+      "word": "Can",
+      "start": 22.6871875,
+      "end": 22.7671875,
+      "probability": 0.7436772584915161
+    },
+    {
+      "word": "he",
+      "start": 22.7671875,
+      "end": 22.8271875,
+      "probability": 0.9850453734397888
+    },
+    {
+      "word": "enjoy",
+      "start": 22.8271875,
+      "end": 23.0871875,
+      "probability": 0.9928026795387268
+    },
+    {
+      "word": "people",
+      "start": 23.0871875,
+      "end": 23.4271875,
+      "probability": 0.9863433837890625
+    },
+    {
+      "word": "he",
+      "start": 23.4271875,
+      "end": 23.5471875,
+      "probability": 0.9844130873680115
+    },
+    {
+      "word": "protects?",
+      "start": 23.5471875,
+      "end": 24.0871875,
+      "probability": 0.9889709949493408
+    },
+    {
+      "word": "Goku",
+      "start": 24.0871875,
+      "end": 24.1471875,
+      "probability": 0.7827377319335938
+    },
+    {
+      "word": "visits.",
+      "start": 24.1471875,
+      "end": 25.0271875,
+      "probability": 0.9830151796340942
+    },
+    {
+      "word": "Vegeta",
+      "start": 25.0271875,
+      "end": 25.1071875,
+      "probability": 0.326774924993515
+    },
+    {
+      "word": "immediately",
+      "start": 25.1071875,
+      "end": 25.7271875,
+      "probability": 0.9742287993431091
+    },
+    {
+      "word": "suspects",
+      "start": 25.7271875,
+      "end": 26.127187499999998,
+      "probability": 0.995991051197052
+    },
+    {
+      "word": "secret",
+      "start": 26.127187499999998,
+      "end": 26.4671875,
+      "probability": 0.9742554426193237
+    },
+    {
+      "word": "training.",
+      "start": 26.4671875,
+      "end": 27.3271875,
+      "probability": 0.9983976483345032
+    },
+    {
+      "word": "A",
+      "start": 27.3271875,
+      "end": 27.3471875,
+      "probability": 0.9609071612358093
+    },
+    {
+      "word": "friendly",
+      "start": 27.3471875,
+      "end": 27.5671875,
+      "probability": 0.9875131249427795
+    },
+    {
+      "word": "hello",
+      "start": 27.5671875,
+      "end": 27.8471875,
+      "probability": 0.4417761564254761
+    },
+    {
+      "word": "triggers",
+      "start": 27.8471875,
+      "end": 28.2071875,
+      "probability": 0.9831550121307373
+    },
+    {
+      "word": "a",
+      "start": 28.2071875,
+      "end": 28.4271875,
+      "probability": 0.9953536987304688
+    },
+    {
+      "word": "competitive",
+      "start": 28.4271875,
+      "end": 28.6471875,
+      "probability": 0.9842442870140076
+    },
+    {
+      "word": "investigation.",
+      "start": 28.6471875,
+      "end": 29.7071875,
+      "probability": 0.9970593452453613
+    },
+    {
+      "word": "He",
+      "start": 29.7071875,
+      "end": 29.7271875,
+      "probability": 0.9906519651412964
+    },
+    {
+      "word": "wants",
+      "start": 29.7271875,
+      "end": 29.8671875,
+      "probability": 0.9903184175491333
+    },
+    {
+      "word": "gravity",
+      "start": 29.8671875,
+      "end": 30.1071875,
+      "probability": 0.9768174290657043
+    },
+    {
+      "word": "training",
+      "start": 30.1071875,
+      "end": 30.5071875,
+      "probability": 0.9961223006248474
+    },
+    {
+      "word": "again.",
+      "start": 30.5071875,
+      "end": 31.167187499999997,
+      "probability": 0.9949171543121338
+    },
+    {
+      "word": "Instead,",
+      "start": 31.167187499999997,
+      "end": 31.7671875,
+      "probability": 0.9943085312843323
+    },
+    {
+      "word": "he",
+      "start": 31.7671875,
+      "end": 31.8271875,
+      "probability": 0.994246780872345
+    },
+    {
+      "word": "promises",
+      "start": 31.8271875,
+      "end": 32.0871875,
+      "probability": 0.9936425685882568
+    },
+    {
+      "word": "a",
+      "start": 32.0871875,
+      "end": 32.2671875,
+      "probability": 0.9893156290054321
+    },
+    {
+      "word": "short",
+      "start": 32.2671875,
+      "end": 32.4671875,
+      "probability": 0.9968153834342957
+    },
+    {
+      "word": "session",
+      "start": 32.4671875,
+      "end": 32.8271875,
+      "probability": 0.9959104061126709
+    },
+    {
+      "word": "and",
+      "start": 32.8271875,
+      "end": 33.0071875,
+      "probability": 0.9830477833747864
+    },
+    {
+      "word": "leaves",
+      "start": 33.0071875,
+      "end": 33.1471875,
+      "probability": 0.987466037273407
+    },
+    {
+      "word": "on",
+      "start": 33.1471875,
+      "end": 33.3671875,
+      "probability": 0.9974727034568787
+    },
+    {
+      "word": "time.",
+      "start": 33.3671875,
+      "end": 33.8671875,
+      "probability": 0.9980599284172058
+    },
+    {
+      "word": "Bulma",
+      "start": 33.8671875,
+      "end": 34.0471875,
+      "probability": 0.7951338589191437
+    },
+    {
+      "word": "is",
+      "start": 34.0471875,
+      "end": 34.1871875,
+      "probability": 0.9977031350135803
+    },
+    {
+      "word": "shocked.",
+      "start": 34.1871875,
+      "end": 34.9671875,
+      "probability": 0.996609091758728
+    },
+    {
+      "word": "A",
+      "start": 34.9671875,
+      "end": 34.9871875,
+      "probability": 0.9871399998664856
+    },
+    {
+      "word": "grown",
+      "start": 34.9871875,
+      "end": 35.107187499999995,
+      "probability": 0.9810499548912048
+    },
+    {
+      "word": "man",
+      "start": 35.107187499999995,
+      "end": 35.5271875,
+      "probability": 0.9956010580062866
+    },
+    {
+      "word": "correctly",
+      "start": 35.5271875,
+      "end": 35.8271875,
+      "probability": 0.9926379919052124
+    },
+    {
+      "word": "estimated",
+      "start": 35.8271875,
+      "end": 36.2271875,
+      "probability": 0.981040894985199
+    },
+    {
+      "word": "his",
+      "start": 36.2271875,
+      "end": 36.5871875,
+      "probability": 0.9975839853286743
+    },
+    {
+      "word": "arrival",
+      "start": 36.5871875,
+      "end": 36.7871875,
+      "probability": 0.9965938925743103
+    },
+    {
+      "word": "time.",
+      "start": 36.7871875,
+      "end": 37.6871875,
+      "probability": 0.9965897798538208
+    },
+    {
+      "word": "Historic",
+      "start": 37.6871875,
+      "end": 37.7671875,
+      "probability": 0.9687927961349487
+    },
+    {
+      "word": "scenes",
+      "start": 37.7671875,
+      "end": 38.2071875,
+      "probability": 0.9852424263954163
+    },
+    {
+      "word": "at",
+      "start": 38.2071875,
+      "end": 38.487187500000005,
+      "probability": 0.9939488172531128
+    },
+    {
+      "word": "Capsule",
+      "start": 38.487187500000005,
+      "end": 38.8271875,
+      "probability": 0.6729950159788132
+    },
+    {
+      "word": "Corporation",
+      "start": 38.8271875,
+      "end": 39.107187499999995,
+      "probability": 0.9222314357757568
+    },
+    {
+      "word": "today.",
+      "start": 39.107187499999995,
+      "end": 39.813168724279834,
+      "probability": 0.9720887541770935
+    },
+    {
+      "word": "He",
+      "start": 39.813168724279834,
+      "end": 39.813168724279834,
+      "probability": 1.244355553353671e-05
+    },
+    {
+      "word": "listens",
+      "start": 39.813168724279834,
+      "end": 40.0531875,
+      "probability": 0.8752502799034119
+    },
+    {
+      "word": "to",
+      "start": 40.0531875,
+      "end": 40.2731875,
+      "probability": 0.9905539155006409
+    },
+    {
+      "word": "Trunks",
+      "start": 40.2731875,
+      "end": 40.5131875,
+      "probability": 0.7778819501399994
+    },
+    {
+      "word": "explain",
+      "start": 40.5131875,
+      "end": 40.8331875,
+      "probability": 0.9875916242599487
+    },
+    {
+      "word": "the",
+      "start": 40.8331875,
+      "end": 41.0331875,
+      "probability": 0.9925228953361511
+    },
+    {
+      "word": "drawing.",
+      "start": 41.0331875,
+      "end": 41.6731875,
+      "probability": 0.9952448010444641
+    },
+    {
+      "word": "It's",
+      "start": 41.6731875,
+      "end": 41.7331875,
+      "probability": 0.8606410622596741
+    },
+    {
+      "word": "their",
+      "start": 41.7331875,
+      "end": 41.8331875,
+      "probability": 0.9869094491004944
+    },
+    {
+      "word": "family.",
+      "start": 41.8331875,
+      "end": 42.5931875,
+      "probability": 0.9948295950889587
+    },
+    {
+      "word": "Nobody's",
+      "start": 42.5931875,
+      "end": 42.8531875,
+      "probability": 0.8673432469367981
+    },
+    {
+      "word": "fighting.",
+      "start": 42.8531875,
+      "end": 43.5931875,
+      "probability": 0.9970645308494568
+    },
+    {
+      "word": "Vegeta",
+      "start": 43.5931875,
+      "end": 43.6931875,
+      "probability": 0.10076192021369934
+    },
+    {
+      "word": "needs",
+      "start": 43.6931875,
+      "end": 44.0731875,
+      "probability": 0.9934114813804626
+    },
+    {
+      "word": "a",
+      "start": 44.0731875,
+      "end": 44.2131875,
+      "probability": 0.994278073310852
+    },
+    {
+      "word": "moment.",
+      "start": 44.2131875,
+      "end": 44.6731875,
+      "probability": 0.9985456466674805
+    },
+    {
+      "word": "He",
+      "start": 44.6731875,
+      "end": 44.6731875,
+      "probability": 0.960742175579071
+    },
+    {
+      "word": "keeps",
+      "start": 44.6731875,
+      "end": 44.8331875,
+      "probability": 0.9977419376373291
+    },
+    {
+      "word": "his",
+      "start": 44.8331875,
+      "end": 44.9931875,
+      "probability": 0.9936832189559937
+    },
+    {
+      "word": "pride,",
+      "start": 44.9931875,
+      "end": 45.1931875,
+      "probability": 0.9943037033081055
+    },
+    {
+      "word": "but",
+      "start": 45.1931875,
+      "end": 45.4731875,
+      "probability": 0.9849073886871338
+    },
+    {
+      "word": "stops",
+      "start": 45.4731875,
+      "end": 45.6931875,
+      "probability": 0.9925198554992676
+    },
+    {
+      "word": "dodging",
+      "start": 45.6931875,
+      "end": 46.0731875,
+      "probability": 0.9844873547554016
+    },
+    {
+      "word": "tender",
+      "start": 46.0731875,
+      "end": 46.2931875,
+      "probability": 0.9361234903335571
+    },
+    {
+      "word": "conversations.",
+      "start": 46.2931875,
+      "end": 47.5331875,
+      "probability": 0.9924359917640686
+    },
+    {
+      "word": "An",
+      "start": 47.5331875,
+      "end": 47.5531875,
+      "probability": 0.9438674449920654
+    },
+    {
+      "word": "actual",
+      "start": 47.5531875,
+      "end": 47.8731875,
+      "probability": 0.9940301179885864
+    },
+    {
+      "word": "emotional",
+      "start": 47.8731875,
+      "end": 48.0931875,
+      "probability": 0.9804198145866394
+    },
+    {
+      "word": "upgrade.",
+      "start": 48.0931875,
+      "end": 49.0531875,
+      "probability": 0.9899842739105225
+    },
+    {
+      "word": "Goku",
+      "start": 49.0531875,
+      "end": 49.113187499999995,
+      "probability": 0.987511396408081
+    },
+    {
+      "word": "asks",
+      "start": 49.113187499999995,
+      "end": 49.5331875,
+      "probability": 0.9857292175292969
+    },
+    {
+      "word": "if",
+      "start": 49.5331875,
+      "end": 49.7331875,
+      "probability": 0.9791239500045776
+    },
+    {
+      "word": "peace",
+      "start": 49.7331875,
+      "end": 49.893187499999996,
+      "probability": 0.7229928374290466
+    },
+    {
+      "word": "made",
+      "start": 49.893187499999996,
+      "end": 50.1531875,
+      "probability": 0.9885318279266357
+    },
+    {
+      "word": "him",
+      "start": 50.1531875,
+      "end": 50.2731875,
+      "probability": 0.9504700303077698
+    },
+    {
+      "word": "soft.",
+      "start": 50.2731875,
+      "end": 51.0131875,
+      "probability": 0.9791968464851379
+    },
+    {
+      "word": "Vegeta",
+      "start": 51.0131875,
+      "end": 51.213187500000004,
+      "probability": 0.8935250639915466
+    },
+    {
+      "word": "schedules",
+      "start": 51.213187500000004,
+      "end": 51.6531875,
+      "probability": 0.9738637208938599
+    },
+    {
+      "word": "tomorrow's",
+      "start": 51.6531875,
+      "end": 52.2331875,
+      "probability": 0.9700527787208557
+    },
+    {
+      "word": "beating.",
+      "start": 52.2331875,
+      "end": 53.1331875,
+      "probability": 0.8934146761894226
+    },
+    {
+      "word": "Healthy",
+      "start": 53.1331875,
+      "end": 53.1331875,
+      "probability": 0.9774797558784485
+    },
+    {
+      "word": "boundaries,",
+      "start": 53.1331875,
+      "end": 53.893187499999996,
+      "probability": 0.9725258350372314
+    },
+    {
+      "word": "absolutely",
+      "start": 53.893187499999996,
+      "end": 54.1731875,
+      "probability": 0.9623152613639832
+    },
+    {
+      "word": "horrible",
+      "start": 54.1731875,
+      "end": 54.5531875,
+      "probability": 0.9898523688316345
+    },
+    {
+      "word": "phrasing.",
+      "start": 54.5531875,
+      "end": 55.4331875,
+      "probability": 0.9778502285480499
+    },
+    {
+      "word": "No",
+      "start": 55.4331875,
+      "end": 55.4531875,
+      "probability": 0.9863060712814331
+    },
+    {
+      "word": "new",
+      "start": 55.4531875,
+      "end": 55.5731875,
+      "probability": 0.989840030670166
+    },
+    {
+      "word": "transformation",
+      "start": 55.5731875,
+      "end": 55.9131875,
+      "probability": 0.9966744184494019
+    },
+    {
+      "word": "appears.",
+      "start": 55.9131875,
+      "end": 56.973187499999995,
+      "probability": 0.9957314133644104
+    },
+    {
+      "word": "He",
+      "start": 56.973187499999995,
+      "end": 56.9931875,
+      "probability": 0.9815318584442139
+    },
+    {
+      "word": "still",
+      "start": 56.9931875,
+      "end": 57.1531875,
+      "probability": 0.9928478002548218
+    },
+    {
+      "word": "grows.",
+      "start": 57.1531875,
+      "end": 58.1531875,
+      "probability": 0.981479823589325
+    },
+    {
+      "word": "Motherflicker,",
+      "start": 58.1531875,
+      "end": 58.5931875,
+      "probability": 0.6538077642520269
+    },
+    {
+      "word": "the",
+      "start": 58.5931875,
+      "end": 58.6331875,
+      "probability": 0.9607418775558472
+    },
+    {
+      "word": "breakthrough",
+      "start": 58.6331875,
+      "end": 58.7931875,
+      "probability": 0.9706767797470093
+    },
+    {
+      "word": "was",
+      "start": 58.7931875,
+      "end": 59.1331875,
+      "probability": 0.8567867279052734
+    },
+    {
+      "word": "dinner",
+      "start": 59.1331875,
+      "end": 59.2731875,
+      "probability": 0.965573251247406
+    },
+    {
+      "word": "together",
+      "start": 59.2731875,
+      "end": 59.5731875,
+      "probability": 0.9704962968826294
+    },
+    {
+      "word": "and",
+      "start": 59.5731875,
+      "end": 59.8331875,
+      "probability": 0.7219318151473999
+    },
+    {
+      "word": "one",
+      "start": 59.8331875,
+      "end": 60.0131875,
+      "probability": 0.6297341585159302
+    },
+    {
+      "word": "sincere",
+      "start": 60.0131875,
+      "end": 60.2731875,
+      "probability": 0.9850907325744629
+    },
+    {
+      "word": "compliment.",
+      "start": 60.2731875,
+      "end": 60.973187499999995,
+      "probability": 0.9187238812446594
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 0.86,
+      "text": "What if Vegeta got one"
+    },
+    {
+      "start": 0.86,
+      "end": 1.92,
+      "text": "peaceful week?"
+    },
+    {
+      "start": 1.92,
+      "end": 2.92,
+      "text": "No invasion."
+    },
+    {
+      "start": 2.92,
+      "end": 4.3,
+      "text": "A prince underqualified for normal"
+    },
+    {
+      "start": 4.3,
+      "end": 5.5,
+      "text": "Tuesday activities."
+    },
+    {
+      "start": 5.5,
+      "end": 7.9,
+      "text": "He begins by training harder. Naturally."
+    },
+    {
+      "start": 7.9,
+      "end": 9.08,
+      "text": "Bro treats relaxation like a"
+    },
+    {
+      "start": 9.08,
+      "end": 10.82,
+      "text": "security vulnerability in his system."
+    },
+    {
+      "start": 10.82,
+      "end": 12.48,
+      "text": "Bulma requests family time."
+    },
+    {
+      "start": 12.48,
+      "end": 13.96,
+      "text": "Vegeta asks for the objective."
+    },
+    {
+      "start": 13.96,
+      "end": 15.64,
+      "text": "Sir, the objective is being present."
+    },
+    {
+      "start": 15.64,
+      "end": 17.1,
+      "text": "Trunks shows him a drawing."
+    },
+    {
+      "start": 17.1,
+      "end": 18.32,
+      "text": "Vegeta corrects his stance."
+    },
+    {
+      "start": 18.32,
+      "end": 19.52,
+      "text": "My guy, that's artwork, not"
+    },
+    {
+      "start": 19.52,
+      "end": 20.46721536351166,
+      "text": "an enemy combatant."
+    },
+    {
+      "start": 20.46721536351166,
+      "end": 21.6471875,
+      "text": "Without a threat, strength needs"
+    },
+    {
+      "start": 21.6471875,
+      "end": 22.6871875,
+      "text": "another purpose."
+    },
+    {
+      "start": 22.6871875,
+      "end": 24.0871875,
+      "text": "Can he enjoy people he protects?"
+    },
+    {
+      "start": 24.0871875,
+      "end": 25.0271875,
+      "text": "Goku visits."
+    },
+    {
+      "start": 25.0271875,
+      "end": 27.3271875,
+      "text": "Vegeta immediately suspects secret training."
+    },
+    {
+      "start": 27.3271875,
+      "end": 28.4271875,
+      "text": "A friendly hello triggers a"
+    },
+    {
+      "start": 28.4271875,
+      "end": 29.7071875,
+      "text": "competitive investigation."
+    },
+    {
+      "start": 29.7071875,
+      "end": 31.167187499999997,
+      "text": "He wants gravity training again."
+    },
+    {
+      "start": 31.167187499999997,
+      "end": 32.4671875,
+      "text": "Instead, he promises a short"
+    },
+    {
+      "start": 32.4671875,
+      "end": 33.8671875,
+      "text": "session and leaves on time."
+    },
+    {
+      "start": 33.8671875,
+      "end": 34.9671875,
+      "text": "Bulma is shocked."
+    },
+    {
+      "start": 34.9671875,
+      "end": 36.2271875,
+      "text": "A grown man correctly estimated"
+    },
+    {
+      "start": 36.2271875,
+      "end": 37.6871875,
+      "text": "his arrival time."
+    },
+    {
+      "start": 37.6871875,
+      "end": 39.107187499999995,
+      "text": "Historic scenes at Capsule Corporation"
+    },
+    {
+      "start": 39.107187499999995,
+      "end": 39.813168724279834,
+      "text": "today."
+    },
+    {
+      "start": 39.813168724279834,
+      "end": 40.8331875,
+      "text": "He listens to Trunks explain"
+    },
+    {
+      "start": 40.8331875,
+      "end": 41.6731875,
+      "text": "the drawing."
+    },
+    {
+      "start": 41.6731875,
+      "end": 42.5931875,
+      "text": "It's their family."
+    },
+    {
+      "start": 42.5931875,
+      "end": 43.5931875,
+      "text": "Nobody's fighting."
+    },
+    {
+      "start": 43.5931875,
+      "end": 44.6731875,
+      "text": "Vegeta needs a moment."
+    },
+    {
+      "start": 44.6731875,
+      "end": 45.4731875,
+      "text": "He keeps his pride, but"
+    },
+    {
+      "start": 45.4731875,
+      "end": 47.5331875,
+      "text": "stops dodging tender conversations."
+    },
+    {
+      "start": 47.5331875,
+      "end": 49.0531875,
+      "text": "An actual emotional upgrade."
+    },
+    {
+      "start": 49.0531875,
+      "end": 50.1531875,
+      "text": "Goku asks if peace made"
+    },
+    {
+      "start": 50.1531875,
+      "end": 51.0131875,
+      "text": "him soft."
+    },
+    {
+      "start": 51.0131875,
+      "end": 53.1331875,
+      "text": "Vegeta schedules tomorrow's beating."
+    },
+    {
+      "start": 53.1331875,
+      "end": 55.4331875,
+      "text": "Healthy boundaries, absolutely horrible phrasing."
+    },
+    {
+      "start": 55.4331875,
+      "end": 56.973187499999995,
+      "text": "No new transformation appears."
+    },
+    {
+      "start": 56.973187499999995,
+      "end": 58.1531875,
+      "text": "He still grows."
+    },
+    {
+      "start": 58.1531875,
+      "end": 59.2731875,
+      "text": "Motherflicker, the breakthrough was dinner"
+    },
+    {
+      "start": 59.2731875,
+      "end": 60.973187499999995,
+      "text": "together and one sincere compliment."
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 8,
+  "review_names_required": true
+}
