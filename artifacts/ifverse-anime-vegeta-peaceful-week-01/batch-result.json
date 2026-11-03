@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-vegeta-peaceful-week-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "2e48e8d704d868d9b1033347b388b99d4eceb6231e051a695ce704026516e215",
+  "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Rewrite the script; requested length needs excessive speech retiming"
+}

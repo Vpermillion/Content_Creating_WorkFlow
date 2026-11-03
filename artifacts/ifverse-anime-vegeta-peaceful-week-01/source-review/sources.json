@@ -1,0 +1,406 @@
+{
+  "episode_id": "ifverse-anime-vegeta-peaceful-week-01",
+  "results": [
+    {
+      "asset": {
+        "id": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+        "file": "ifverse-anime-vegeta-peaceful-week-01-vegeta.mp4",
+        "type": "video",
+        "query": "Vegeta Dragon Ball angry",
+        "source_url": "https://tenor.com/view/that%27s-my-bulma-remaster-remake-vegeta-dbs-gif-4027124219711535825",
+        "download_url": "https://media.tenor.com/N-M4JCZHOtEAAAPo/that%27s-my-bulma-remaster.mp4",
+        "sha256": "67176a50af31ce9af27de82767d8a951ab6105147bca6ad0add10b0fd553dd5a",
+        "duration": 2.127125,
+        "dimensions": [
+          444,
+          498
+        ],
+        "description": "a close up of a person 's face with a hand on it",
+        "publisher": "VegYT",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "17695378321758353219",
+            "title": "a cartoon character from dragon ball z is flying through the air with his arms outstretched .",
+            "source_url": "https://tenor.com/view/vegeta-super-saiyan-dbz-dragon-ball-gif-17695378321758353219",
+            "download_url": "https://media.tenor.com/9ZKc1FqN90MAAAPo/vegeta-super-saiyan.mp4",
+            "duration": 1.8,
+            "width": 384,
+            "height": 216,
+            "publisher": "tokyoboy",
+            "provider": "tenor"
+          },
+          {
+            "id": "13655241837524526274",
+            "title": "a cartoon drawing of a man in a blue and yellow outfit",
+            "source_url": "https://tenor.com/view/lr-teq-vegeta-giant-ape-furious-last-resort-overwhelming-combat-final-bullet-attack-hyper-explosive-wave-gif-13655241837524526274",
+            "download_url": "https://media.tenor.com/vYEqGkezpMIAAAPo/lr-teq-vegeta-giant-ape-furious-last-resort.mp4",
+            "duration": 0.8,
+            "width": 374,
+            "height": 498,
+            "publisher": "Lance57",
+            "provider": "tenor"
+          },
+          {
+            "id": "4943456234092085584",
+            "title": "a close up of a cartoon character 's face with a very angry expression",
+            "source_url": "https://tenor.com/view/dragon-ball-z-dokkan-battle-gif-4943456234092085584",
+            "download_url": "https://media.tenor.com/RJqvQNu_wVAAAAPo/dragon-ball.mp4",
+            "duration": 2.2,
+            "width": 498,
+            "height": 374,
+            "publisher": "proton10mg",
+            "provider": "tenor"
+          },
+          {
+            "id": "10978505005508510858",
+            "title": "a cartoon drawing of a man with a blue shirt",
+            "source_url": "https://tenor.com/view/dragon-ball-z-dokkan-battle-gif-10978505005508510858",
+            "download_url": "https://media.tenor.com/mFt8IsouxIoAAAPo/dragon-ball.mp4",
+            "duration": 0.7,
+            "width": 498,
+            "height": 374,
+            "publisher": "proton10mg",
+            "provider": "tenor"
+          },
+          {
+            "id": "4027124219711535825",
+            "title": "a close up of a person 's face with a hand on it",
+            "source_url": "https://tenor.com/view/that%27s-my-bulma-remaster-remake-vegeta-dbs-gif-4027124219711535825",
+            "download_url": "https://media.tenor.com/N-M4JCZHOtEAAAPo/that%27s-my-bulma-remaster.mp4",
+            "duration": 2.1,
+            "width": 444,
+            "height": 498,
+            "publisher": "VegYT",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "vegeta",
+        "visual_intent": "Vegeta reacting with pride"
+      },
+      "attempts": []
+    },
+    {
+      "asset": {
+        "id": "ifverse-anime-vegeta-peaceful-week-01-train",
+        "file": "ifverse-anime-vegeta-peaceful-week-01-train.mp4",
+        "type": "video",
+        "query": "Vegeta gravity training",
+        "source_url": "https://tenor.com/view/vegeta-push-ups-one-finger-one-hand-push-up-one-finger-push-up-gravity-gif-18222610528316135644",
+        "download_url": "https://media.tenor.com/_OO3ulyTmNwAAAPo/vegeta-push-ups-one-finger.mp4",
+        "sha256": "7e38f8007cdc39c4b1e11c78f1b89a820947368f587f50cf6c8529e301c4efb3",
+        "duration": 4.533333,
+        "dimensions": [
+          498,
+          374
+        ],
+        "description": "a drawing of a person with a bandage around their head",
+        "publisher": "StrongestBubble",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "4037900047730293356",
+            "title": "a cartoon character is standing in front of a red pillar",
+            "source_url": "https://tenor.com/view/vegeta-gif-21635922",
+            "download_url": "https://media.tenor.com/OAmAsx9_OmwAAAPo/vegeta.mp4",
+            "duration": 1.2,
+            "width": 640,
+            "height": 476,
+            "publisher": "PrinceVegeta62",
+            "provider": "tenor"
+          },
+          {
+            "id": "11429158708441970776",
+            "title": "a cartoon character with a bandage on his head is standing in a room .",
+            "source_url": "https://tenor.com/view/vegeta-training-punch-dragon-ball-gif-15914284",
+            "download_url": "https://media.tenor.com/npyHSoI--FgAAAPo/vegeta-training.mp4",
+            "duration": 2.3,
+            "width": 640,
+            "height": 352,
+            "publisher": "Spiderbat36",
+            "provider": "tenor"
+          },
+          {
+            "id": "18222610528316135644",
+            "title": "a drawing of a person with a bandage around their head",
+            "source_url": "https://tenor.com/view/vegeta-push-ups-one-finger-one-hand-push-up-one-finger-push-up-gravity-gif-18222610528316135644",
+            "download_url": "https://media.tenor.com/_OO3ulyTmNwAAAPo/vegeta-push-ups-one-finger.mp4",
+            "duration": 4.5,
+            "width": 498,
+            "height": 374,
+            "publisher": "StrongestBubble",
+            "provider": "tenor"
+          },
+          {
+            "id": "9678019585917017874",
+            "title": "a cartoon of a man doing a handstand in a boxing ring",
+            "source_url": "https://tenor.com/view/vegeta-training-dragon-ball-z-gravity-training-anime-gif-26624125",
+            "download_url": "https://media.tenor.com/hk87iXvbXxIAAAPo/vegeta-training.mp4",
+            "duration": 4,
+            "width": 640,
+            "height": 480,
+            "publisher": "CrazyCrispGifs",
+            "provider": "tenor"
+          },
+          {
+            "id": "14734458587088602125",
+            "title": "a picture of a person with the words add 4 above them",
+            "source_url": "https://tenor.com/view/add-4-mge-gif-14734458587088602125",
+            "download_url": "https://media.tenor.com/zHtQBLkexA0AAAPo/add-4-mge.mp4",
+            "duration": 1.2,
+            "width": 498,
+            "height": 450,
+            "publisher": "nillionare",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "train",
+        "visual_intent": "Vegeta choosing intense training"
+      },
+      "attempts": []
+    },
+    {
+      "asset": {
+        "id": "ifverse-anime-vegeta-peaceful-week-01-bulma",
+        "file": "ifverse-anime-vegeta-peaceful-week-01-bulma.mp4",
+        "type": "video",
+        "query": "Bulma Vegeta Dragon Ball",
+        "source_url": "https://tenor.com/view/dragon-ball-daima-vegeta-bulma-bath-funny-gif-10513855207912368661",
+        "download_url": "https://media.tenor.com/kei3m1eB6hUAAAPo/dragon-ball-daima-vegeta.mp4",
+        "sha256": "ae4cfd895f277308e750fa97e6a3599af9bf58000a66f49c940c8557d7ff4c0b",
+        "duration": 3.0,
+        "dimensions": [
+          498,
+          282
+        ],
+        "description": "a cartoon character with blue hair and a red shirt has her mouth wide open",
+        "publisher": "MouriKogoro96",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "4027124219711535825",
+            "title": "a close up of a person 's face with a hand on it",
+            "source_url": "https://tenor.com/view/that%27s-my-bulma-remaster-remake-vegeta-dbs-gif-4027124219711535825",
+            "download_url": "https://media.tenor.com/N-M4JCZHOtEAAAPo/that%27s-my-bulma-remaster.mp4",
+            "duration": 2.1,
+            "width": 444,
+            "height": 498,
+            "publisher": "VegYT",
+            "provider": "tenor"
+          },
+          {
+            "id": "10513855207912368661",
+            "title": "a cartoon character with blue hair and a red shirt has her mouth wide open",
+            "source_url": "https://tenor.com/view/dragon-ball-daima-vegeta-bulma-bath-funny-gif-10513855207912368661",
+            "download_url": "https://media.tenor.com/kei3m1eB6hUAAAPo/dragon-ball-daima-vegeta.mp4",
+            "duration": 3,
+            "width": 498,
+            "height": 282,
+            "publisher": "MouriKogoro96",
+            "provider": "tenor"
+          },
+          {
+            "id": "5857587510326388985",
+            "title": "a girl with blue hair is wearing a yellow jacket and orange boots",
+            "source_url": "https://tenor.com/view/terima-kasih-gif-5857587510326388985",
+            "download_url": "https://media.tenor.com/UUpUzknE6PkAAAPo/terima-kasih.mp4",
+            "duration": 1,
+            "width": 220,
+            "height": 498,
+            "publisher": "Maspaijo",
+            "provider": "tenor"
+          },
+          {
+            "id": "15530189875351632069",
+            "title": "a cartoon of a boy screaming at another boy with the words me and you written on the bottom",
+            "source_url": "https://tenor.com/view/me-yelling-at-you-vegeta-yelling-at-goku-vegeta-yelling-buu-saga-kai-planet-gif-15530189875351632069",
+            "download_url": "https://media.tenor.com/14ZRaL6zuMUAAAPo/me-yelling-at-you-vegeta-yelling-at-goku.mp4",
+            "duration": 0.7,
+            "width": 400,
+            "height": 224,
+            "publisher": "Mazezen",
+            "provider": "tenor"
+          },
+          {
+            "id": "4853848951438447129",
+            "title": "a cartoon character is sitting in a chair with his arms crossed and says please",
+            "source_url": "https://tenor.com/view/vegeta-kid-vegeta-embarrassed-blushing-awkward-gif-4853848951438447129",
+            "download_url": "https://media.tenor.com/Q1xV54_kEhkAAAPo/vegeta-kid-vegeta.mp4",
+            "duration": 7,
+            "width": 498,
+            "height": 280,
+            "publisher": "jaysondez",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "bulma",
+        "visual_intent": "Bulma and family context"
+      },
+      "attempts": []
+    },
+    {
+      "asset": {
+        "id": "ifverse-anime-vegeta-peaceful-week-01-trunks",
+        "file": "ifverse-anime-vegeta-peaceful-week-01-trunks.mp4",
+        "type": "video",
+        "query": "Vegeta Trunks family",
+        "source_url": "https://tenor.com/view/vegeta-bulma-trunks-family-family-day-gif-13281431",
+        "download_url": "https://media.tenor.com/ExgKbDWBw7wAAAPo/vegeta-bulma.mp4",
+        "sha256": "12130dd348cf39f221f579fcad8cc3b215dfa653749f09eb9b401143e4618ea4",
+        "duration": 5.68,
+        "dimensions": [
+          640,
+          358
+        ],
+        "description": "a group of cartoon characters eating ice cream in a store",
+        "publisher": "jaysondez",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "11272496428276097915",
+            "title": "a cartoon of a man carrying a baby and a woman standing next to him",
+            "source_url": "https://tenor.com/view/family-man-gif-24055148",
+            "download_url": "https://media.tenor.com/nG_zxvtBo3sAAAPo/family-man.mp4",
+            "duration": 2.2,
+            "width": 640,
+            "height": 462,
+            "publisher": "edeboo",
+            "provider": "tenor"
+          },
+          {
+            "id": "1375861146032128956",
+            "title": "a group of cartoon characters eating ice cream in a store",
+            "source_url": "https://tenor.com/view/vegeta-bulma-trunks-family-family-day-gif-13281431",
+            "download_url": "https://media.tenor.com/ExgKbDWBw7wAAAPo/vegeta-bulma.mp4",
+            "duration": 5.7,
+            "width": 640,
+            "height": 358,
+            "publisher": "jaysondez",
+            "provider": "tenor"
+          },
+          {
+            "id": "2139030369579283964",
+            "title": "a cartoon of a man standing next to a boy with blonde hair",
+            "source_url": "https://tenor.com/view/int-majin-vegeta-brief-paternal-moment-vegetas-resolve-final-impact-final-explosion-gif-2139030369579283964",
+            "download_url": "https://media.tenor.com/Ha9cyb6LtfwAAAPo/int-majin-vegeta-brief-paternal-moment.mp4",
+            "duration": 2.3,
+            "width": 374,
+            "height": 498,
+            "publisher": "Lance57",
+            "provider": "tenor"
+          },
+          {
+            "id": "17485139691029580305",
+            "title": "a group of dragon ball characters are standing together on a blue background",
+            "source_url": "https://tenor.com/view/dragon-ball-dragon-team-goku-dragonball-dbz-gif-17485139691029580305",
+            "download_url": "https://media.tenor.com/8qex6KPmyhEAAAPo/dragon-ball-dragon-team.mp4",
+            "duration": 2.2,
+            "width": 480,
+            "height": 270,
+            "publisher": "LuiShirosagii",
+            "provider": "tenor"
+          },
+          {
+            "id": "6276899642502418748",
+            "title": "a cartoon of piccolo and vegeta from dragon ball",
+            "source_url": "https://tenor.com/view/vegeta-goku-songoku-songohan-gohan-gif-16504982",
+            "download_url": "https://media.tenor.com/VxwG9-oiETwAAAPo/vegeta-goku.mp4",
+            "duration": 5.7,
+            "width": 640,
+            "height": 378,
+            "publisher": "jaysondez",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "trunks",
+        "visual_intent": "Vegeta interacting around family"
+      },
+      "attempts": []
+    },
+    {
+      "asset": {
+        "id": "ifverse-anime-vegeta-peaceful-week-01-goku",
+        "file": "ifverse-anime-vegeta-peaceful-week-01-goku.mp4",
+        "type": "video",
+        "query": "Goku Dragon Ball smiling",
+        "source_url": "https://tenor.com/view/goku-dragon-ball-smile-turn-serious-dragonball-gif-17475896124570291416",
+        "download_url": "https://media.tenor.com/8oba7xyjTNgAAAPo/goku-dragon-ball.mp4",
+        "sha256": "349091fae2b66cbbf0f829a548577f923be1f4c009efa74318d7caf5e94b0412",
+        "duration": 2.0,
+        "dimensions": [
+          480,
+          270
+        ],
+        "description": "a close up of a cartoon character 's face with a blue sky in the background",
+        "publisher": "LuiShirosagii",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "14465376940269128437",
+            "title": "a close up of a cartoon character 's face with a blue sky in the background",
+            "source_url": "https://tenor.com/view/goku-son-goku-super-saiyan-goku-super-saiyan-3-ssj3-gif-14465376940269128437",
+            "download_url": "https://media.tenor.com/yL9Xr7LeSvUAAAPo/goku-son-goku.mp4",
+            "duration": 0.8,
+            "width": 480,
+            "height": 260,
+            "publisher": "PastaObesity",
+            "provider": "tenor"
+          },
+          {
+            "id": "10510702430466503019",
+            "title": "a close up of a cartoon character 's face with a surprised expression",
+            "source_url": "https://tenor.com/view/goku-kids-smile-gif-10510702430466503019",
+            "download_url": "https://media.tenor.com/kd2ELCPKcWsAAAPo/goku-kids-smile.mp4",
+            "duration": 1.4,
+            "width": 498,
+            "height": 116,
+            "publisher": "abullbaba1234",
+            "provider": "tenor"
+          },
+          {
+            "id": "17475896124570291416",
+            "title": "a close up of a cartoon character 's face with a blue sky in the background",
+            "source_url": "https://tenor.com/view/goku-dragon-ball-smile-turn-serious-dragonball-gif-17475896124570291416",
+            "download_url": "https://media.tenor.com/8oba7xyjTNgAAAPo/goku-dragon-ball.mp4",
+            "duration": 2,
+            "width": 480,
+            "height": 270,
+            "publisher": "LuiShirosagii",
+            "provider": "tenor"
+          },
+          {
+            "id": "11011439799098299241",
+            "title": "a close up of a cartoon character 's face with a white background .",
+            "source_url": "https://tenor.com/view/trolldudes-goku-sticker-gif-11011439799098299241",
+            "download_url": "https://media.tenor.com/mNB-J_raU2kAAAPo/trolldudes-goku-sticker.mp4",
+            "duration": 2.1,
+            "width": 400,
+            "height": 110,
+            "publisher": "Crimby",
+            "provider": "tenor"
+          },
+          {
+            "id": "1178938287696363924",
+            "title": "a close up of a cartoon character with the female rose written on the bottom right",
+            "source_url": "https://tenor.com/view/goku-black-goku-black-smile-smiling-dragon-ball-super-dbs-gif-1178938287696363924",
+            "download_url": "https://media.tenor.com/EFxuIFo_wZQAAAPo/goku-black-goku-black-smile.mp4",
+            "duration": 1.6,
+            "width": 498,
+            "height": 284,
+            "publisher": "The_Female_Rose",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "goku",
+        "visual_intent": "Goku as Vegeta rivalry trigger"
+      },
+      "attempts": []
+    }
+  ],
+  "rights_status": "unverified_publicly_posted_excerpts"
+}
