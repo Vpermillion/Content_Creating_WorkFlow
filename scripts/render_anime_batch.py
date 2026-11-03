@@ -40,7 +40,8 @@ def load_batch(relative):
     for episode in episodes:
         if episode.get('reuse_result'):
             prior = episode['reuse_result']
-            if not re.fullmatch(r'[a-f0-9]{40}', prior.get('commit', '')) or prior.get('branch') != 'codex/results/' + episode['id'] or not re.fullmatch(r'[a-f0-9]{64}',prior.get('script_sha256','')):
+            expected = 'codex/results/' + episode['id']
+            if not re.fullmatch(r'[a-f0-9]{40}', prior.get('commit', '')) or prior.get('branch') not in (expected,expected+'-r2') or not re.fullmatch(r'[a-f0-9]{64}',prior.get('script_sha256','')):
                 raise ValueError('Source reuse must pin this episode\'s original result')
         record = topic_record(episode, batch['id'])
         reserved = [t for t in registry['topics'] if t['id'] == episode['id']]
@@ -94,7 +95,9 @@ def previous_assets(episode, output):
     for record in records:
         if 'asset' not in record: continue
         asset = record['asset']
-        if asset['id'] not in {s['id'] for s in episode['sources']} or Path(asset['file']).name != asset['file']:
+        if asset['id'] not in {s['id'] for s in episode['sources']} or asset['source_key'] in episode.get('exclude_retained_sources',[]):
+            continue
+        if Path(asset['file']).name != asset['file']:
             raise ValueError('Unexpected retained source asset')
         path = output / 'footage' / asset['file']; path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(read('source-review/footage/' + asset['file']))

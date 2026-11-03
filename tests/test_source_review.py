@@ -35,6 +35,11 @@ class SourceReviewTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'identified'):
             module.choose_candidate([self.candidate('Other',4)],['goku'])
 
+    def test_rejected_meme_or_wrong_character_terms_cannot_win_on_duration(self):
+        wrong=self.candidate('Bulma Trunks meme',8)
+        right=self.candidate('Bulma reaction',3)
+        self.assertEqual(module.choose_candidate([wrong,right],['bulma'],rejected=['trunks','meme']),right)
+
     def test_footage_acquisition_probes_and_records_downloaded_bytes(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)

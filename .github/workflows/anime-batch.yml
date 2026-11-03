@@ -108,3 +108,13 @@ jobs:
           path: private/anime-batch/output/
           retention-days: 7
           if-no-files-found: warn
+  summarize:
+    needs: [select, render]
+    if: always() && needs.select.result == 'success'
+    runs-on: ubuntu-24.04
+    env:
+      BATCH_PATH: ${{ needs.select.outputs.batch }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Save topic outcomes and one compact batch index
+        run: python3 scripts/finalize_anime_batch.py --batch "$BATCH_PATH" --save-to-github

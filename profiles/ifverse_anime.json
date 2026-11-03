@@ -97,5 +97,21 @@
     "automated_approval": false,
     "profile_is_not_an_executable_publisher_gate": true,
     "known_cleared_sound_alternative": "assets/sfx/catalog.json"
+  },
+  "topic_registry": "channels/ifverse_anime-topics.json",
+  "latest_batch": {
+    "request": "batch-requests/ifverse-anime-ten-61s-20261103-01.json",
+    "index": "docs/BATCH_61S.md",
+    "count": 10,
+    "target_seconds": 61,
+    "status": "rendered_with_targeted_visual_repairs",
+    "piano_embedded": false,
+    "optional_music_added_by_owner_in_youtube": "Meaningful Love - Silo"
+  },
+  "publication_authorization": {
+    "scope": "Owner authorized these ten batch episodes; GitHub delivery accepted if publishing unavailable",
+    "batch": "ifverse-anime-ten-61s-20261103-01",
+    "upload_connection": "not_configured_at_last_check",
+    "recurring_schedule_authorized": false
   }
 }

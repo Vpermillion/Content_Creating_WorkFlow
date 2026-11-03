@@ -139,6 +139,8 @@ def revise_batch(path, batch, reason):
 def mark_published(path, episode_id, receipt):
     if not re.fullmatch(r'[A-Za-z0-9_-]{11}', receipt.get('video_id', '')) or not receipt.get('verified_channel_id'):
         raise ValueError('Actual provider video ID and verified channel are required')
+    if receipt.get('publicly_posted') is not True:
+        raise ValueError('A private or processing upload is not a verified public post')
     with locked(path):
         registry = json.loads(Path(path).read_text())
         entry = next(e for e in registry['topics'] if e['id'] == episode_id)

@@ -10,8 +10,18 @@ from whatif.topics import topic_record
 
 
 class AnimeBatchTests(unittest.TestCase):
+    def load_fixture_batch(self):
+        relative='batch-requests/ifverse-anime-ten-61s-20261103-01.json'
+        value=json.loads((Path(__file__).resolve().parents[1]/relative).read_text())
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);(root/'batch-requests').mkdir();(root/'channels').mkdir()
+            (root/relative).write_text(json.dumps(value))
+            registry={'topics':[topic_record(e,value['id']) for e in value['episodes']]}
+            (root/'channels/ifverse_anime-topics.json').write_text(json.dumps(registry))
+            with patch.object(batch,'ROOT',root):return batch.load_batch(relative)
+
     def test_real_batch_is_reserved_distinct_and_long_enough(self):
-        value=batch.load_batch('batch-requests/ifverse-anime-ten-61s-20261103-01.json')
+        value=self.load_fixture_batch()
         self.assertEqual(len(value['episodes']),10)
         self.assertGreaterEqual(value['target_duration_seconds'],60)
         self.assertEqual(len({e['topic_key'] for e in value['episodes']}),10)
@@ -31,7 +41,7 @@ class AnimeBatchTests(unittest.TestCase):
             self.assertEqual(len(receipt['results'][1]['attempts']),2)
 
     def test_invalid_cue_and_already_published_reservation_fail_before_render(self):
-        original=batch.load_batch('batch-requests/ifverse-anime-ten-61s-20261103-01.json')
+        original=self.load_fixture_batch()
         for mutation, message in [('cue','Sound cue'),('published','not already published')]:
             value=copy.deepcopy(original);value['episodes']=value['episodes'][:1]
             if mutation=='cue':value['episodes'][0]['cues'][0]['phrase']='This phrase does not exist'

@@ -16,10 +16,12 @@ from whatif import audio_fx, media, media_tools
 from whatif.store import atomic_json, digest, identifier
 
 
-def choose_candidate(candidates, required, min_seconds=1.8):
+def choose_candidate(candidates, required, min_seconds=1.8, rejected=None):
     matches = []
     for candidate in candidates:
         haystack = (candidate.get('title', '') + ' ' + candidate.get('source_url', '')).casefold()
+        if any(term.casefold() in haystack for term in (rejected or [])):
+            continue
         if required and not any(term.casefold() in haystack for term in required):
             continue
         if candidate.get('duration', 0) < min_seconds or candidate.get('width', 0) < 300 or candidate.get('height', 0) < 160:
@@ -37,7 +39,10 @@ def acquire_footage(spec, output):
     if not isinstance(terms, list) or not terms or not all(isinstance(t, str) and 1 <= len(t) <= 50 for t in terms):
         raise ValueError('Footage selection needs bounded identifying terms')
     candidates = media_tools.search_web(query, 'tenor', 5)
-    selected = choose_candidate(candidates, terms, spec.get('min_seconds', 1.8))
+    rejected = spec.get('reject_terms', [])
+    if not isinstance(rejected,list) or len(rejected)>16 or not all(isinstance(t,str) and 1<=len(t)<=50 for t in rejected):
+        raise ValueError('Invalid excluded source terms')
+    selected = choose_candidate(candidates, terms, spec.get('min_seconds', 1.8), rejected)
     data = media_tools.public_bytes(selected['download_url'], media_tools.MEDIA_HOSTS, 15_000_000)
     path = output / 'footage' / (name + '.mp4')
     path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(data)

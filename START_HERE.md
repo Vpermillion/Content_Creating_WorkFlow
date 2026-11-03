@@ -1,5 +1,7 @@
 # Start here: Ifverse project handoff
 
+**Current batch:** ten rendered **61-second anime Shorts**, with per-video posting details and persistent topic history. [Open the batch index](docs/BATCH_61S.md) · [Automation/setup](docs/AUTOMATION.md) · [Taken/reserved topics](channels/ifverse_anime-topics.json). Read the registry before choosing a premise. The owner authorized these ten posts and accepts GitHub delivery if the upload connection is unavailable; optional piano will be added by the owner in YouTube. Current connection status and selected cut versions are in CURRENT.
+
 **Monetization goal:** produce distinct original comedy/commentary with editorial and source-use review. The saved videos are technical demonstrations, not certified monetization-ready uploads. Read [the review standard](docs/MONETIZATION_REVIEW.md) and [episode brief](prompts/editorial-brief.md). Michael and the working production tools remain the chosen setup.
 
 **Current voice and test:** the owner chose `am_michael`. The new **60-second Goku/Avengers roast** uses fresh footage, denser v2 jokes and actual Vine Boom/faaah/Rizz recordings. [Watch the new test](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-michael-goku-avengers-01/artifacts/ifverse-michael-goku-avengers-01/sound-effects/video-sfx.mp4) · [CURRENT](docs/CURRENT.md) · [voice options](docs/VOICE_OPTIONS.md).

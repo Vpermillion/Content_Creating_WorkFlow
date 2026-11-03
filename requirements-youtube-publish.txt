@@ -1,0 +1,2 @@
+# Encrypted upload journals; credentials/session URLs never enter plaintext Git.
+cryptography==46.0.1

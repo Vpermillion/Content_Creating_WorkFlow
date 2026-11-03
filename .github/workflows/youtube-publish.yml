@@ -1,0 +1,60 @@
+name: Ifverse reviewed YouTube uploads
+on:
+  push:
+    branches: [codex/ifverse-workflow]
+    paths: ['publish-requests/*.json']
+permissions:
+  contents: write
+concurrency:
+  group: ifverse-youtube-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      IFVERSE_ANIME_CHANNEL_ID: ${{ vars.IFVERSE_ANIME_CHANNEL_ID }}
+      YOUTUBE_UPLOAD_STATE_KEY: ${{ secrets.YOUTUBE_UPLOAD_STATE_KEY }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install upload dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python -m pip install --disable-pip-version-check -r requirements-youtube.txt -r requirements-youtube-publish.txt
+      - name: Load the private upload connection without printing it
+        env:
+          UPLOAD_CONNECTION: ${{ secrets.YOUTUBE_UPLOAD_CONNECTION }}
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          from whatif.youtube import atomic_json, require_channel_id
+          require_channel_id(os.environ['IFVERSE_ANIME_CHANNEL_ID'])
+          if not os.environ.get('UPLOAD_CONNECTION') or not os.environ.get('YOUTUBE_UPLOAD_STATE_KEY'):
+              raise SystemExit('Configure upload connection and state-key repository secrets first')
+          record=json.loads(os.environ['UPLOAD_CONNECTION'])
+          if record.get('connection')!='ifverse-anime' or record.get('channel',{}).get('id')!=os.environ['IFVERSE_ANIME_CHANNEL_ID']:
+              raise SystemExit('Upload connection does not match the intended channel')
+          folder=pathlib.Path('private/youtube-publish');folder.mkdir(parents=True,mode=0o700)
+          atomic_json(folder/'ifverse-anime.json',record)
+          PY
+      - name: Restore encrypted retry checkpoints
+        id: state
+        run: python scripts/youtube_upload_state.py restore
+      - name: Upload the single reviewed request
+        run: |
+          python - <<'PY'
+          import json, subprocess, sys
+          changed=subprocess.check_output(['git','diff-tree','--no-commit-id','--name-only','-r','HEAD'],text=True).splitlines()
+          names=[p for p in changed if p.startswith('publish-requests/') and p.endswith('.json')]
+          if len(names)!=1:raise SystemExit('Commit exactly one reviewed publication request')
+          subprocess.run([sys.executable,'scripts/youtube_upload_batch.py','--request',names[0],'--publish'],check=True)
+          PY
+      - name: Preserve encrypted checkpoints and non-secret publication receipts
+        if: always() && steps.state.outcome == 'success'
+        run: python scripts/youtube_upload_state.py save
