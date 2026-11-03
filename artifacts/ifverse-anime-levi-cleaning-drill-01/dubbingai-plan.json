@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "narration_sha256": "caf19df8df84377c3a2756b83191b655388295a5e2506619db7b6b3b88318d1d",
+  "catalog": "assets/sfx/dubbingai-bank.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "bucket beside him",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Bucket reveal lands"
+    },
+    {
+      "anchor": {
+        "phrase": "replacement safety equipment",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Safety-equipment failure"
+    },
+    {
+      "anchor": {
+        "phrase": "squad's problem",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Squad responsibility punchline"
+    },
+    {
+      "anchor": {
+        "phrase": "aggressive eye contact",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Aggressive-eye-contact absurdity"
+    }
+  ]
+}
