@@ -104,9 +104,10 @@
     "index": "docs/BATCH_61S.md",
     "count": 10,
     "target_seconds": 61,
-    "status": "rendered_with_targeted_visual_repairs",
+    "status": "rendered_all_ten_selected_final_cuts",
     "piano_embedded": false,
-    "optional_music_added_by_owner_in_youtube": "Meaningful Love - Silo"
+    "optional_music_added_by_owner_in_youtube": "Meaningful Love - Silo",
+    "validation": "artifacts/batches/ifverse-anime-ten-61s-20261103-01/validation-local.json"
   },
   "publication_authorization": {
     "scope": "Owner authorized these ten batch episodes; GitHub delivery accepted if publishing unavailable",
