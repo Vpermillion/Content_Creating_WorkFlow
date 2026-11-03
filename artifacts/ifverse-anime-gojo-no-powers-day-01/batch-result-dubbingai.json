@@ -1,0 +1,79 @@
+{
+  "id": "ifverse-anime-gojo-no-powers-day-01",
+  "batch_id": "ifverse-anime-61s-visual-repair-02",
+  "status": "success",
+  "script_sha256": "5d15923cac847eab6ca2da142a47d55a06f2335de92013f85b752e03e3c8f9d6",
+  "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-dubbingai-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "video": "production/sound-effects-dubbingai/video-sfx.mp4",
+  "video_sha256": "3b79c976e48dfcebc39a702ad28b119d3f0789037f515da9f422bf7ebe7e4bd5",
+  "duration_seconds": 61.0,
+  "frame_size": [
+    720,
+    1280
+  ],
+  "source_count": 4,
+  "source_use_status": "unverified",
+  "sound_catalog": "assets/sfx/dubbingai-bank.json",
+  "sound_rights": "community_excerpt_rights_unverified",
+  "technical_receipt": "production/result.json",
+  "audiovisual_editorial_review": "pending",
+  "metadata": {
+    "title": "What if Gojo lost his powers for 24 hours?",
+    "description": "Gojo temporarily loses his technique and must protect students through planning, restraint and collaboration.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #JujutsuKaisen\n\nIllustrative clip sources:\nhttps://tenor.com/view/gojo-satoru-gojo-gojo-satoru-nah-id-win-nah-id-goon-gif-7118230710159232267\nhttps://tenor.com/view/gojo-satoru-satoru-gojo-gojo-satoru-infinito-gif-4116424331080566890\nhttps://tenor.com/view/yuji-yuji-itadori-jujutsu-kaisen-anime-jjk-gif-6463768782008108386\nhttps://tenor.com/view/megumi-megumi-fushiguro-jujutsu-kaisen-anime-megumi-domain-gif-14646960972427729715",
+    "tags": [
+      "anime what if",
+      "Jujutsu Kaisen",
+      "Gojo",
+      "Yuji",
+      "Megumi",
+      "Ifverse Anime"
+    ],
+    "hashtags": [
+      "Shorts",
+      "Anime",
+      "WhatIf",
+      "JujutsuKaisen"
+    ],
+    "categoryId": "24",
+    "defaultLanguage": "en",
+    "defaultAudioLanguage": "en"
+  },
+  "posting_packet": "post-settings.json",
+  "music_embedded": false,
+  "sound_repair_source": {
+    "id": "ifverse-anime-gojo-no-powers-day-01",
+    "topic_key": "gojo-no-powers-day",
+    "title": "What if Gojo lost his powers for 24 hours?",
+    "premise": "Gojo temporarily loses his technique and must protect students through planning, restraint and collaboration.",
+    "franchise": "Jujutsu Kaisen",
+    "characters": [
+      "Gojo",
+      "Yuji",
+      "Megumi"
+    ],
+    "aliases": [],
+    "distinctive_development": "An invented one-day limit removes usual tools; students disagree about rescue; decoy and evacuation replace overpowering; weakness reveals teaching habits.",
+    "script_sha256": "5d15923cac847eab6ca2da142a47d55a06f2335de92013f85b752e03e3c8f9d6",
+    "batch_id": "ifverse-anime-ten-61s-20261103-01",
+    "state": "rendered",
+    "video_id": null,
+    "youtube_url": null,
+    "reserved_at": "2026-11-03T02:44:44.879547+00:00",
+    "versions": [
+      {
+        "batch_id": "ifverse-anime-ten-20261103-01",
+        "script_sha256": "ab1cef406e6cea07578200283fa4f292bbd51154651a200fb69e3c102dbcf604",
+        "state": "reserved",
+        "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+      }
+    ],
+    "video_sha256": "2036c520d7f1bb272b32f2f2f36ea0d55db85676c99b032f81e0756b6a38ba2c",
+    "duration_seconds": 61.0,
+    "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r3",
+    "result_commit": "2a17c45aad30a9b04b961217972228101a3fa626",
+    "publication_clearance": "not_established",
+    "result_receipt": "artifacts/ifverse-anime-gojo-no-powers-day-01/batch-result.json"
+  }
+}

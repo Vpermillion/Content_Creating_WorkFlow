@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "narration_sha256": "9419ae67a2c91e36e4d03bfb37bf9dbcf7e36295527e5c4856ad3f5342cd1f27",
+  "catalog": "assets/sfx/dubbingai-bank.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "backup plan has vanished",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Vanished backup stakes reveal"
+    },
+    {
+      "anchor": {
+        "phrase": "stupid marketing campaign",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Marketing-campaign insult"
+    },
+    {
+      "anchor": {
+        "phrase": "No personality factory reset",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_rizz_effect",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Personality-reset line preserves Gojo swagger"
+    },
+    {
+      "anchor": {
+        "phrase": "terrifying practical application",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Practical-application payoff"
+    }
+  ]
+}
