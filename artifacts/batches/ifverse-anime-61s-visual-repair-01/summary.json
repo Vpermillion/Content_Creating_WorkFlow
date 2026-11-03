@@ -1,0 +1,23 @@
+{
+  "id": "ifverse-anime-61s-visual-repair-01",
+  "results": [
+    {
+      "id": "ifverse-anime-naruto-clone-strike-01",
+      "status": "result_missing",
+      "branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r3"
+    },
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01",
+      "status": "result_missing",
+      "branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r3"
+    },
+    {
+      "id": "ifverse-anime-gojo-no-powers-day-01",
+      "status": "result_missing",
+      "branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r3"
+    }
+  ],
+  "uploaded_by_this_job": false,
+  "publication_clearance": "not_established",
+  "publishing_connection": "not_assessed_by_render_job"
+}
