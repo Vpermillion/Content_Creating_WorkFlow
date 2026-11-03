@@ -1,0 +1,28 @@
+{
+  "id": "ifverse-anime-naruto-clone-strike-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "success",
+  "script_sha256": "f75e3004f87643ec42bce41867cb51e9ba10a74b2f36c7a97914e8a5b656edfa",
+  "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "video": "production/sound-effects/video-sfx.mp4",
+  "video_sha256": "0f30642d9b13ec43dd6e7bf2e5985bae5843c5fbde423b5bc16c45f015a502de",
+  "duration_seconds": 75.0,
+  "frame_size": [
+    720,
+    1280
+  ],
+  "source_count": 4,
+  "source_use_status": "unverified",
+  "sound_catalog": "assets/sfx/catalog.json",
+  "sound_rights": "documented_public_domain",
+  "technical_receipt": "production/result.json",
+  "audiovisual_editorial_review": "pending",
+  "metadata": {
+    "title": "What if Naruto's shadow clones went on strike?",
+    "description": "An original fan-made alternate scenario and comedic commentary by Ifverse Anime. Hypothetical events and dialogue are invented, not canon. AI-assisted narration (Kokoro am_michael). #Shorts #Anime #WhatIf",
+    "categoryId": "24",
+    "defaultLanguage": "en"
+  }
+}

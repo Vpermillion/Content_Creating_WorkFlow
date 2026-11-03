@@ -1,0 +1,84 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.30,Caption,,0,0,0,,What if Naruto's shadow clones
+Dialogue: 0,0:00:01.30,0:00:02.70,Caption,,0,0,0,,went on strike?
+Dialogue: 0,0:00:02.70,0:00:04.76,Caption,,0,0,0,,Congratulations, bro got\Ncanceled by
+Dialogue: 0,0:00:04.76,0:00:06.18,Caption,,0,0,0,,his own unpaid staff.
+Dialogue: 0,0:00:06.18,0:00:07.50,Caption,,0,0,0,,In this alternate timeline, two
+Dialogue: 0,0:00:07.50,0:00:09.60,Caption,,0,0,0,,hundred Narutos cross their\Narms.
+Dialogue: 0,0:00:09.60,0:00:10.76,Caption,,0,0,0,,Same face.
+Dialogue: 0,0:00:10.76,0:00:11.62,Caption,,0,0,0,,Same trauma.
+Dialogue: 0,0:00:11.62,0:00:13.52,Caption,,0,0,0,,Terrifying customer service\Ndepartment.
+Dialogue: 0,0:00:13.52,0:00:14.50,Caption,,0,0,0,,He says, we're literally the
+Dialogue: 0,0:00:14.50,0:00:15.56,Caption,,0,0,0,,same person.
+Dialogue: 0,0:00:15.56,0:00:17.32,Caption,,0,0,0,,Exactly, boss. We know you were\Nabout
+Dialogue: 0,0:00:17.32,0:00:18.54,Caption,,0,0,0,,to volunteer us again.
+Dialogue: 0,0:00:18.54,0:00:20.26,Caption,,0,0,0,,Rasengan practice stops.
+Dialogue: 0,0:00:20.26,0:00:21.62,Caption,,0,0,0,,Missions fall behind.
+Dialogue: 0,0:00:21.62,0:00:23.02,Caption,,0,0,0,,Suddenly the village discovers\Nits
+Dialogue: 0,0:00:23.02,0:00:24.80,Caption,,0,0,0,,entire productivity plan was one
+Dialogue: 0,0:00:24.80,0:00:26.18,Caption,,0,0,0,,exhausted teenager.
+Dialogue: 0,0:00:26.18,0:00:27.14,Caption,,0,0,0,,Kakashi looks up from his
+Dialogue: 0,0:00:27.14,0:00:27.90,Caption,,0,0,0,,book.
+Dialogue: 0,0:00:27.90,0:00:28.84,Caption,,0,0,0,,My guy has never seen
+Dialogue: 0,0:00:28.84,0:00:30.30,Caption,,0,0,0,,a meeting this aggressively\Norange
+Dialogue: 0,0:00:30.30,0:00:31.04,Caption,,0,0,0,,before.
+Dialogue: 0,0:00:31.04,0:00:32.30,Caption,,0,0,0,,The clones explain their real
+Dialogue: 0,0:00:32.30,0:00:34.44,Caption,,0,0,0,,complaint: every painful\Ntraining memory
+Dialogue: 0,0:00:34.44,0:00:36.20,Caption,,0,0,0,,comes back to Naruto.
+Dialogue: 0,0:00:36.20,0:00:37.48,Caption,,0,0,0,,He's exploiting himself with\Nextra
+Dialogue: 0,0:00:37.48,0:00:38.16,Caption,,0,0,0,,steps.
+Dialogue: 0,0:00:38.16,0:00:39.74,Caption,,0,0,0,,So he proposes shorter rotations
+Dialogue: 0,0:00:39.74,0:00:41.16,Caption,,0,0,0,,and actual breaks.
+Dialogue: 0,0:00:41.16,0:00:41.90,Caption,,0,0,0,,Look at that.
+Dialogue: 0,0:00:41.90,0:00:43.10,Caption,,0,0,0,,Character development with a\Nlunch
+Dialogue: 0,0:00:43.10,0:00:44.26,Caption,,0,0,0,,schedule attached.
+Dialogue: 0,0:00:44.26,0:00:45.46,Caption,,0,0,0,,Instead of flooding every\Nproblem
+Dialogue: 0,0:00:45.46,0:00:47.28,Caption,,0,0,0,,with bodies, smaller clone\Nsquads
+Dialogue: 0,0:00:47.28,0:00:49.14,Caption,,0,0,0,,test strategies and report what
+Dialogue: 0,0:00:49.14,0:00:50.34,Caption,,0,0,0,,actually worked first.
+Dialogue: 0,0:00:50.34,0:00:52.00,Caption,,0,0,0,,That doesn't create free chakra.
+Dialogue: 0,0:00:52.00,0:00:53.56,Caption,,0,0,0,,They still split his supply.
+Dialogue: 0,0:00:53.56,0:00:55.34,Caption,,0,0,0,,This union negotiates breaks,\Nnot
+Dialogue: 0,0:00:55.34,0:00:56.31,Caption,,0,0,0,,a physics refund.
+Dialogue: 0,0:00:56.31,0:00:58.03,Caption,,0,0,0,,Now opponents face coordinated\Nscouts
+Dialogue: 0,0:00:58.03,0:00:59.59,Caption,,0,0,0,,and decoys instead of a
+Dialogue: 0,0:00:59.59,0:01:01.49,Caption,,0,0,0,,thousand orange dudes arguing\Nover
+Dialogue: 0,0:01:01.49,0:01:02.51,Caption,,0,0,0,,who gets punched.
+Dialogue: 0,0:01:02.51,0:01:03.55,Caption,,0,0,0,,One clone asks who elected
+Dialogue: 0,0:01:03.55,0:01:04.95,Caption,,0,0,0,,the original leader.
+Dialogue: 0,0:01:04.95,0:01:05.83,Caption,,0,0,0,,Mother father.
+Dialogue: 0,0:01:05.83,0:01:07.07,Caption,,0,0,0,,The confidence just left his
+Dialogue: 0,0:01:07.07,0:01:08.15,Caption,,0,0,0,,entire forehead.
+Dialogue: 0,0:01:08.15,0:01:09.73,Caption,,0,0,0,,Naruto joins the strike.
+Dialogue: 0,0:01:09.73,0:01:11.01,Caption,,0,0,0,,The clones cheer.
+Dialogue: 0,0:01:11.01,0:01:12.53,Caption,,0,0,0,,Konoha's biggest labor dispute\Nends
+Dialogue: 0,0:01:12.53,0:01:14.17,Caption,,0,0,0,,with everyone demanding ramen\Nfrom
+Dialogue: 0,0:01:14.17,0:01:14.97,Caption,,0,0,0,,the same wallet.
+Dialogue: 1,0:00:00.00,0:00:06.12,Heading,,0,0,0,,THE CLONES HAVE DEMANDS
+Dialogue: 1,0:00:06.12,0:00:13.47,Heading,,0,0,0,,TWO HUNDRED IDENTICAL COMPLAINTS
+Dialogue: 1,0:00:13.47,0:00:18.54,Heading,,0,0,0,,THE ORIGINAL IS CONFUSED
+Dialogue: 1,0:00:18.54,0:00:26.16,Heading,,0,0,0,,TRAINING IS NOW DELAYED
+Dialogue: 1,0:00:26.16,0:00:30.99,Heading,,0,0,0,,MANAGEMENT HAS LOGGED OFF
+Dialogue: 1,0:00:30.99,0:00:38.16,Heading,,0,0,0,,MEMORIES COME BACK TOO
+Dialogue: 1,0:00:38.16,0:00:44.23,Heading,,0,0,0,,AN ACTUAL CONCESSION
+Dialogue: 1,0:00:44.23,0:00:50.32,Heading,,0,0,0,,SMALLER SQUAD SMARTER PLAN
+Dialogue: 1,0:00:50.32,0:00:56.31,Heading,,0,0,0,,THEY STILL SHARE CHAKRA
+Dialogue: 1,0:00:56.31,0:01:02.39,Heading,,0,0,0,,THE ENEMY MEETS A TEAM
+Dialogue: 1,0:01:02.39,0:01:08.09,Heading,,0,0,0,,WHO APPROVED THE LEADER
+Dialogue: 1,0:01:08.09,0:01:15.00,Heading,,0,0,0,,THE BOSS JOINS THE PICKET
+Dialogue: 1,0:00:00.00,0:01:15.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:15.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF

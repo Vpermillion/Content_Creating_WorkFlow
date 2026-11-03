@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-naruto-clone-strike-01",
+  "channel": "ifverse_anime",
+  "voice": "am_michael",
+  "script": "pilots/ifverse-anime-naruto-clone-strike-01.json",
+  "edit_plan": "edits/ifverse-anime-naruto-clone-strike-01.json",
+  "sound_effects_plan": "edits/ifverse-anime-naruto-clone-strike-01-sfx.json",
+  "caption_mode": "script_alignment",
+  "caption_model": "base.en",
+  "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01",
+  "publishing_enabled": false
+}
