@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-luffy-no-devil-fruit-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "1ce562d7bf869a6526ccc51f8fcbfc51ae2f8db6878d71a3d8ba7374839cc73c",
+  "result_branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Rewrite the script; requested length needs excessive speech retiming"
+}
