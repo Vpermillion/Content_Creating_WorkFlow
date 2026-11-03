@@ -1,0 +1,86 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.84,Caption,,0,0,0,,What if Rock Lee woke
+Dialogue: 0,0:00:00.84,0:00:02.06,Caption,,0,0,0,,up with the Rinnegan?
+Dialogue: 0,0:00:02.06,0:00:03.32,Caption,,0,0,0,,The character creator just lost
+Dialogue: 0,0:00:03.32,0:00:05.66,Caption,,0,0,0,,its damn mind completely. This\Nis a fan -made
+Dialogue: 0,0:00:05.66,0:00:07.26,Caption,,0,0,0,,upgrade, not canon.
+Dialogue: 0,0:00:07.26,0:00:08.56,Caption,,0,0,0,,Lee gets gravity powers before
+Dialogue: 0,0:00:08.56,0:00:10.58,Caption,,0,0,0,,he gets an instruction manual.
+Dialogue: 0,0:00:10.58,0:00:12.00,Caption,,0,0,0,,Excellent parenting, universe.
+Dialogue: 0,0:00:12.00,0:00:13.58,Caption,,0,0,0,,He tries a normal warm -up.
+Dialogue: 0,0:00:13.58,0:00:14.70,Caption,,0,0,0,,The training weights fly toward
+Dialogue: 0,0:00:14.70,0:00:15.86,Caption,,0,0,0,,his face.
+Dialogue: 0,0:00:15.86,0:00:17.06,Caption,,0,0,0,,Brother ordered express shipping\Non
+Dialogue: 0,0:00:17.06,0:00:18.01,Caption,,0,0,0,,his own concussion.
+Dialogue: 0,0:00:18.01,0:00:18.99,Caption,,0,0,0,,Guy says the power of
+Dialogue: 0,0:00:18.99,0:00:20.55,Caption,,0,0,0,,youth requires control.
+Dialogue: 0,0:00:20.55,0:00:22.15,Caption,,0,0,0,,Sir, your student just\Nmagnetized
+Dialogue: 0,0:00:22.15,0:00:23.11,Caption,,0,0,0,,the furniture.
+Dialogue: 0,0:00:23.11,0:00:24.49,Caption,,0,0,0,,Start with eye safety.
+Dialogue: 0,0:00:24.49,0:00:25.57,Caption,,0,0,0,,Having the eyes wouldn't\Ninstantly
+Dialogue: 0,0:00:25.57,0:00:27.13,Caption,,0,0,0,,teach every technique.
+Dialogue: 0,0:00:27.13,0:00:28.83,Caption,,0,0,0,,Chakra demand and concentration\Nstill
+Dialogue: 0,0:00:28.83,0:00:29.85,Caption,,0,0,0,,matter.
+Dialogue: 0,0:00:29.85,0:00:32.33,Caption,,0,0,0,,Premium hardware, zero installed\Ndrivers.
+Dialogue: 0,0:00:32.33,0:00:33.69,Caption,,0,0,0,,Lee experiments with pulling\Nopponents
+Dialogue: 0,0:00:33.69,0:00:35.45,Caption,,0,0,0,,off balance before a kick.
+Dialogue: 0,0:00:35.45,0:00:36.57,Caption,,0,0,0,,Strong idea.
+Dialogue: 0,0:00:36.57,0:00:37.53,Caption,,0,0,0,,Horrific first day for the
+Dialogue: 0,0:00:37.53,0:00:38.32,Caption,,0,0,0,,practice dummy.
+Dialogue: 0,0:00:38.32,0:00:39.40,Caption,,0,0,0,,Then he realizes the harder
+Dialogue: 0,0:00:39.40,0:00:41.78,Caption,,0,0,0,,lesson: when teammates stand\Nnearby,
+Dialogue: 0,0:00:41.78,0:00:42.84,Caption,,0,0,0,,a wild push can hurt
+Dialogue: 0,0:00:42.84,0:00:44.10,Caption,,0,0,0,,the people he's protecting.
+Dialogue: 0,0:00:44.10,0:00:45.64,Caption,,0,0,0,,So Guy sets a challenge.
+Dialogue: 0,0:00:45.64,0:00:46.62,Caption,,0,0,0,,Move one falling leaf with
+Dialogue: 0,0:00:46.62,0:00:47.48,Caption,,0,0,0,,the new power.
+Dialogue: 0,0:00:47.48,0:00:48.34,Caption,,0,0,0,,Not the tree.
+Dialogue: 0,0:00:48.34,0:00:49.20,Caption,,0,0,0,,Not the neighborhood.
+Dialogue: 0,0:00:49.20,0:00:50.70,Caption,,0,0,0,,Lee struggles because precision\Ndoesn't
+Dialogue: 0,0:00:50.70,0:00:52.20,Caption,,0,0,0,,care how inspirational your\Nspeech
+Dialogue: 0,0:00:52.20,0:00:53.20,Caption,,0,0,0,,sounds.
+Dialogue: 0,0:00:53.20,0:00:54.74,Caption,,0,0,0,,The leaf remains deeply\Nunimpressed
+Dialogue: 0,0:00:54.74,0:00:55.80,Caption,,0,0,0,,by his grindset.
+Dialogue: 0,0:00:55.80,0:00:56.84,Caption,,0,0,0,,He stops chasing the biggest
+Dialogue: 0,0:00:56.84,0:00:58.46,Caption,,0,0,0,,attack and uses tiny pulls
+Dialogue: 0,0:00:58.46,0:01:00.06,Caption,,0,0,0,,to create openings.
+Dialogue: 0,0:01:00.06,0:01:01.24,Caption,,0,0,0,,The punches finally have a
+Dialogue: 0,0:01:01.24,0:01:01.92,Caption,,0,0,0,,group chat.
+Dialogue: 0,0:01:01.92,0:01:03.26,Caption,,0,0,0,,When a teammate falls, Lee
+Dialogue: 0,0:01:03.26,0:01:04.72,Caption,,0,0,0,,catches them with controlled\Nforce
+Dialogue: 0,0:01:04.72,0:01:06.02,Caption,,0,0,0,,instead of flexing.
+Dialogue: 0,0:01:06.02,0:01:07.10,Caption,,0,0,0,,That rescue is the actual
+Dialogue: 0,0:01:07.10,0:01:08.02,Caption,,0,0,0,,upgrade here.
+Dialogue: 0,0:01:08.02,0:01:09.54,Caption,,0,0,0,,Guy cries with pride.
+Dialogue: 0,0:01:09.54,0:01:10.68,Caption,,0,0,0,,Lee cries too.
+Dialogue: 0,0:01:10.68,0:01:12.16,Caption,,0,0,0,,The leaf floats perfectly.
+Dialogue: 0,0:01:12.16,0:01:13.30,Caption,,0,0,0,,Three episodes of training, and
+Dialogue: 0,0:01:13.30,0:01:14.98,Caption,,0,0,0,,the final boss was landscaping.
+Dialogue: 1,0:00:00.00,0:00:04.87,Heading,,0,0,0,,THE BUILD IS ILLEGAL
+Dialogue: 1,0:00:04.87,0:00:11.95,Heading,,0,0,0,,HYPOTHETICAL UPGRADE
+Dialogue: 1,0:00:11.95,0:00:18.01,Heading,,0,0,0,,THE FIRST ACCIDENT
+Dialogue: 1,0:00:18.01,0:00:24.37,Heading,,0,0,0,,GUY HAS CONCERNS
+Dialogue: 1,0:00:24.37,0:00:32.20,Heading,,0,0,0,,EYES ARE NOT A TUTORIAL
+Dialogue: 1,0:00:32.20,0:00:38.32,Heading,,0,0,0,,KICKS WITH CONSEQUENCES
+Dialogue: 1,0:00:38.32,0:00:44.05,Heading,,0,0,0,,THE RESTRAINT TEST
+Dialogue: 1,0:00:44.05,0:00:49.10,Heading,,0,0,0,,THAT IS THE REAL TRAINING
+Dialogue: 1,0:00:49.10,0:00:55.75,Heading,,0,0,0,,ONE LEAF BRO
+Dialogue: 1,0:00:55.75,0:01:01.92,Heading,,0,0,0,,NO MAXIMUM POWER COMBO
+Dialogue: 1,0:01:01.92,0:01:08.01,Heading,,0,0,0,,THE RESCUE MATTERS
+Dialogue: 1,0:01:08.01,0:01:15.00,Heading,,0,0,0,,THE LEAF WINS
+Dialogue: 1,0:00:00.00,0:01:15.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:15.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF

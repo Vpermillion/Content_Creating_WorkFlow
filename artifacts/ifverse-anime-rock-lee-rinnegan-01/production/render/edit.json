@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "shots": [
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-lee",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rock Lee moving through taijutsu; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-000.mp4",
+      "start": 0.0,
+      "end": 4.86745884916498,
+      "frames": 146
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-eye",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rinnegan reference for the hypothetical borrowed eye ability; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-001.mp4",
+      "start": 4.86745884916498,
+      "end": 8.406649878575433,
+      "frames": 106
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-eye",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rinnegan reference for the hypothetical borrowed eye ability; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-002.mp4",
+      "start": 8.406649878575433,
+      "end": 11.945840907985884,
+      "frames": 106
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-train",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Lee training with physical discipline; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-003.mp4",
+      "start": 11.945840907985884,
+      "end": 18.013025529832372,
+      "frames": 182
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Might Guy encouraging Lee; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-004.mp4",
+      "start": 18.013025529832372,
+      "end": 20.132541061569704,
+      "frames": 64
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Might Guy encouraging Lee; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-005.mp4",
+      "start": 20.132541061569704,
+      "end": 22.25205659330704,
+      "frames": 64
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Might Guy encouraging Lee; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-006.mp4",
+      "start": 22.25205659330704,
+      "end": 24.37157212504437,
+      "frames": 63
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-eye",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rinnegan reference for the hypothetical borrowed eye ability; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-007.mp4",
+      "start": 24.37157212504437,
+      "end": 26.98240392559413,
+      "frames": 78
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-eye",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rinnegan reference for the hypothetical borrowed eye ability; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-008.mp4",
+      "start": 26.98240392559413,
+      "end": 29.593235726143888,
+      "frames": 79
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-eye",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rinnegan reference for the hypothetical borrowed eye ability; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-009.mp4",
+      "start": 29.593235726143888,
+      "end": 32.20406752669365,
+      "frames": 78
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-lee",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rock Lee moving through taijutsu; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-010.mp4",
+      "start": 32.20406752669365,
+      "end": 38.322668967369346,
+      "frames": 184
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-train",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Lee training with physical discipline; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-011.mp4",
+      "start": 38.322668967369346,
+      "end": 44.047074797021125,
+      "frames": 171
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Might Guy encouraging Lee; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-012.mp4",
+      "start": 44.047074797021125,
+      "end": 46.57506838945716,
+      "frames": 76
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Might Guy encouraging Lee; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-013.mp4",
+      "start": 46.57506838945716,
+      "end": 49.10306198189319,
+      "frames": 76
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-eye",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rinnegan reference for the hypothetical borrowed eye ability; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-014.mp4",
+      "start": 49.10306198189319,
+      "end": 52.42801626618195,
+      "frames": 100
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-eye",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rinnegan reference for the hypothetical borrowed eye ability; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-015.mp4",
+      "start": 52.42801626618195,
+      "end": 55.75297055047071,
+      "frames": 100
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-lee",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Rock Lee moving through taijutsu; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-016.mp4",
+      "start": 55.75297055047071,
+      "end": 61.92298880997561,
+      "frames": 185
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-train",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Lee training with physical discipline; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-017.mp4",
+      "start": 61.92298880997561,
+      "end": 68.00731237143184,
+      "frames": 182
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Might Guy encouraging Lee; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-018.mp4",
+      "start": 68.00731237143184,
+      "end": 70.33820824762122,
+      "frames": 70
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Might Guy encouraging Lee; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-019.mp4",
+      "start": 70.33820824762122,
+      "end": 72.66910412381061,
+      "frames": 70
+    },
+    {
+      "asset": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Might Guy encouraging Lee; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-020.mp4",
+      "start": 72.66910412381061,
+      "end": 75.0,
+      "frames": 70
+    }
+  ],
+  "assets": [
+    {
+      "id": "ifverse-anime-rock-lee-rinnegan-01-lee",
+      "file": "ifverse-anime-rock-lee-rinnegan-01-lee.mp4",
+      "type": "video",
+      "query": "Rock Lee Naruto fighting",
+      "source_url": "https://tenor.com/view/rock-lee-eight-gates-naruto-8gates-super-saiyan-gif-26469465",
+      "download_url": "https://media.tenor.com/je8QTVGkYTcAAAPo/rock-lee-eight-gates.mp4",
+      "sha256": "e88edd0b7acd9ea1d1fbc2b027fcbad13488333fd86b3d02399dc924ca9aad5e",
+      "duration": 12.2,
+      "dimensions": [
+        640,
+        482
+      ],
+      "description": "a blurry picture of a person in a green costume holding a sword .",
+      "publisher": "narutogifs",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "7927102605777048595",
+          "title": "leaf hurricane is written on a cartoon character 's shirt",
+          "source_url": "https://tenor.com/view/rock-lee-naruto-ready-to-fight-ready-to-go-chunin-exams-gif-7927102605777048595",
+          "download_url": "https://media.tenor.com/bgK50gNqFBMAAAPo/rock-lee-naruto.mp4",
+          "duration": 5.6,
+          "width": 498,
+          "height": 376,
+          "publisher": "god_luverrr",
+          "provider": "tenor"
+        },
+        {
+          "id": "3559695925048753428",
+          "title": "a close up of a cartoon character 's face with a crescent moon on his eye",
+          "source_url": "https://tenor.com/view/rock-lee-naruto-team-3-neji-tenten-gif-3559695925048753428",
+          "download_url": "https://media.tenor.com/MWaUlXDvvRQAAAPo/rock-lee-naruto.mp4",
+          "duration": 1.9,
+          "width": 498,
+          "height": 374,
+          "publisher": "HoneyStallion7",
+          "provider": "tenor"
+        },
+        {
+          "id": "10885036048742703000",
+          "title": "a cartoon character with a green turtleneck and a black headband with the letter i on it",
+          "source_url": "https://tenor.com/view/rock-lee-naruto-ready-to-fight-ready-to-go-chunin-exams-gif-26427548",
+          "download_url": "https://media.tenor.com/lw9qnWyhX5gAAAPo/rock-lee-naruto.mp4",
+          "duration": 5.6,
+          "width": 640,
+          "height": 482,
+          "publisher": "narutogifs",
+          "provider": "tenor"
+        },
+        {
+          "id": "10227411203049939255",
+          "title": "a blurry picture of a person in a green costume holding a sword .",
+          "source_url": "https://tenor.com/view/rock-lee-eight-gates-naruto-8gates-super-saiyan-gif-26469465",
+          "download_url": "https://media.tenor.com/je8QTVGkYTcAAAPo/rock-lee-eight-gates.mp4",
+          "duration": 12.2,
+          "width": 640,
+          "height": 482,
+          "publisher": "narutogifs",
+          "provider": "tenor"
+        },
+        {
+          "id": "1457157515719433625",
+          "title": "a drawing of a person pointing at something",
+          "source_url": "https://tenor.com/view/rock-lee-gaara-naruto-og-naruto-gaara-vs-lee-gif-25020788",
+          "download_url": "https://media.tenor.com/FDjdCko_XZkAAAPo/rock-lee-gaara.mp4",
+          "duration": 1.9,
+          "width": 640,
+          "height": 480,
+          "publisher": "RyukoProp",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "lee",
+      "visual_intent": "Rock Lee moving through taijutsu"
+    },
+    {
+      "id": "ifverse-anime-rock-lee-rinnegan-01-eye",
+      "file": "ifverse-anime-rock-lee-rinnegan-01-eye.mp4",
+      "type": "video",
+      "query": "Rinnegan eye Naruto",
+      "source_url": "https://tenor.com/view/rinnegan-gif-18927417",
+      "download_url": "https://media.tenor.com/Rd9F8JclesgAAAPo/rinnegan.mp4",
+      "sha256": "862c48d2d36b729fbc9ce27419dab03a49ddad8aa339c122947666353ade0e63",
+      "duration": 3.6,
+      "dimensions": [
+        640,
+        314
+      ],
+      "description": "a close up of a person 's eye with a purple circle in the middle .",
+      "publisher": "WeebStaticz",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "10054658396583263328",
+          "title": "a close up of a person 's eyes with a circle in the middle",
+          "source_url": "https://tenor.com/view/obito-naruto-obito-uchiha-naruto-shippuden-tobi-gif-10054658396583263328",
+          "download_url": "https://media.tenor.com/i4lSijI-fGAAAAPo/obito-naruto.mp4",
+          "duration": 4.6,
+          "width": 498,
+          "height": 498,
+          "publisher": "obitoslove",
+          "provider": "tenor"
+        },
+        {
+          "id": "4482850424895790397",
+          "title": "a picture of a man with purple eyes and the words hustle1337 on the bottom",
+          "source_url": "https://tenor.com/view/hustle-hustle1337-sasuke-sasuke-uchiha-naruto-gif-4482850424895790397",
+          "download_url": "https://media.tenor.com/PjZItdUfXT0AAAPo/hustle-hustle1337.mp4",
+          "duration": 3.1,
+          "width": 498,
+          "height": 418,
+          "publisher": "hustle1337",
+          "provider": "tenor"
+        },
+        {
+          "id": "11741978953992300534",
+          "title": "a close up of a person 's eye with a purple pupil and a circle in it .",
+          "source_url": "https://tenor.com/view/genjutsu-gif-7771561",
+          "download_url": "https://media.tenor.com/ovPjpaDS5_YAAAPo/genjutsu.mp4",
+          "duration": 5.9,
+          "width": 500,
+          "height": 280,
+          "publisher": "Unknown Tenor uploader",
+          "provider": "tenor"
+        },
+        {
+          "id": "5034819808053787336",
+          "title": "a close up of a person 's eye with a purple circle in the middle .",
+          "source_url": "https://tenor.com/view/rinnegan-gif-18927417",
+          "download_url": "https://media.tenor.com/Rd9F8JclesgAAAPo/rinnegan.mp4",
+          "duration": 3.6,
+          "width": 640,
+          "height": 314,
+          "publisher": "WeebStaticz",
+          "provider": "tenor"
+        },
+        {
+          "id": "4305676586850744060",
+          "title": "a close up of a person 's eye with a circle in the middle",
+          "source_url": "https://tenor.com/view/sasuke-rinnegan-suprmo-kyuubi-gif-21136655",
+          "download_url": "https://media.tenor.com/O8DWCxT0dvwAAAPo/sasuke-rinnegan-suprmo.mp4",
+          "duration": 1.7,
+          "width": 640,
+          "height": 360,
+          "publisher": "RelâmpagoMarquinhos245",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "eye",
+      "visual_intent": "Rinnegan reference for the hypothetical borrowed eye ability"
+    },
+    {
+      "id": "ifverse-anime-rock-lee-rinnegan-01-guy",
+      "file": "ifverse-anime-rock-lee-rinnegan-01-guy.mp4",
+      "type": "video",
+      "query": "Might Guy Naruto thumbs up",
+      "source_url": "https://tenor.com/view/naruto-might-mightguy-guy-guysensei-gif-23170358",
+      "download_url": "https://media.tenor.com/9DAxNLzqSJoAAAPo/naruto-might.mp4",
+      "sha256": "d74c56fe8bff4c248a39612b03f45db173ab595b6a5b822c70eb688287d4632a",
+      "duration": 3.0,
+      "dimensions": [
+        640,
+        356
+      ],
+      "description": "Naruto Might GIF",
+      "publisher": "tsans",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "2895778571601073651",
+          "title": "a cartoon character with a hat that says ' i ' on it",
+          "source_url": "https://tenor.com/view/might-guy-maito-gai-naruto-happy-thumbs-up-gif-2895778571601073651",
+          "download_url": "https://media.tenor.com/KC_fRLR4VfMAAAPo/might-guy-maito-gai.mp4",
+          "duration": 2.9,
+          "width": 270,
+          "height": 202,
+          "publisher": "fallofiicarus",
+          "provider": "tenor"
+        },
+        {
+          "id": "3047408783997224534",
+          "title": "a man wearing a green jacket and a headband with the letter t on it",
+          "source_url": "https://tenor.com/view/nice-gif-3047408783997224534",
+          "download_url": "https://media.tenor.com/KkqSJKePRlYAAAPo/nice.mp4",
+          "duration": 2.1,
+          "width": 498,
+          "height": 278,
+          "publisher": "Ffripoff",
+          "provider": "tenor"
+        },
+        {
+          "id": "1285146479267640179",
+          "title": "a cartoon of a man giving a thumbs up sign",
+          "source_url": "https://tenor.com/view/guy-might-guy-motivational-guy-might-naruto-gif-1285146479267640179",
+          "download_url": "https://media.tenor.com/EdXB6fUXc3MAAAPo/guy-might-guy.mp4",
+          "duration": 2.5,
+          "width": 498,
+          "height": 340,
+          "publisher": "dumplingdump",
+          "provider": "tenor"
+        },
+        {
+          "id": "17595617846714058906",
+          "title": "Naruto Might GIF",
+          "source_url": "https://tenor.com/view/naruto-might-mightguy-guy-guysensei-gif-23170358",
+          "download_url": "https://media.tenor.com/9DAxNLzqSJoAAAPo/naruto-might.mp4",
+          "duration": 3,
+          "width": 640,
+          "height": 356,
+          "publisher": "tsans",
+          "provider": "tenor"
+        },
+        {
+          "id": "14326005356568224018",
+          "title": "a cartoon character from naruto is flexing his muscles and saying oh yeah !",
+          "source_url": "https://tenor.com/view/yeah-gif-25758282",
+          "download_url": "https://media.tenor.com/xtAx-CiXoRIAAAPo/yeah.mp4",
+          "duration": 3.1,
+          "width": 640,
+          "height": 354,
+          "publisher": "Queserasera",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "guy",
+      "visual_intent": "Might Guy encouraging Lee"
+    },
+    {
+      "id": "ifverse-anime-rock-lee-rinnegan-01-train",
+      "file": "ifverse-anime-rock-lee-rinnegan-01-train.mp4",
+      "type": "video",
+      "query": "Rock Lee training weights",
+      "source_url": "https://tenor.com/view/rock-lee-weights-naruto-chunin-exams-flex-gif-26433140",
+      "download_url": "https://media.tenor.com/abfF-YQ167UAAAPo/rock-lee-weights.mp4",
+      "sha256": "50b110ce5f2fce15d1a0c838794b1c1b36bf1e121b790f128732dfe2436fae37",
+      "duration": 11.7,
+      "dimensions": [
+        640,
+        482
+      ],
+      "description": "a cartoon character is standing on top of a rock with his foot on it",
+      "publisher": "narutogifs",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "7617774970176138165",
+          "title": "a cartoon character is standing on top of a rock with his foot on it",
+          "source_url": "https://tenor.com/view/rock-lee-weights-naruto-chunin-exams-flex-gif-26433140",
+          "download_url": "https://media.tenor.com/abfF-YQ167UAAAPo/rock-lee-weights.mp4",
+          "duration": 11.7,
+          "width": 640,
+          "height": 482,
+          "publisher": "narutogifs",
+          "provider": "tenor"
+        },
+        {
+          "id": "2914218508555663000",
+          "title": "a man and a woman are standing next to each other in a cartoon scene .",
+          "source_url": "https://tenor.com/view/rock-lee-anime-naruto-take-off-weights-gif-12719553",
+          "download_url": "https://media.tenor.com/KHFiSxhUNpgAAAPo/rock-lee-anime.mp4",
+          "duration": 6.4,
+          "width": 244,
+          "height": 200,
+          "publisher": "JimboSlice42",
+          "provider": "tenor"
+        },
+        {
+          "id": "5416812605139156979",
+          "title": "a cartoon of a man standing on top of a mountain with the words xinyueg shows up",
+          "source_url": "https://tenor.com/view/rock-lee-reverse-weights-gif-5416812605139156979",
+          "download_url": "https://media.tenor.com/SyxiXWgtf_MAAAPo/rock-lee-reverse.mp4",
+          "duration": 11.7,
+          "width": 498,
+          "height": 376,
+          "publisher": "zurakunikida",
+          "provider": "tenor"
+        },
+        {
+          "id": "9042845635479423709",
+          "title": "a row of labels with chinese characters on them are hanging from a person 's neck .",
+          "source_url": "https://tenor.com/view/lee-naruto-lee-lee-soltando-peso-lee-peso-lee-weight-gif-19904438",
+          "download_url": "https://media.tenor.com/fX6kMcVxSt0AAAPo/lee-naruto-lee.mp4",
+          "duration": 6.5,
+          "width": 640,
+          "height": 524,
+          "publisher": "letuno",
+          "provider": "tenor"
+        },
+        {
+          "id": "8930734933231839104",
+          "title": "a cartoon character is sitting on a rock with the words vp22 is ready below him",
+          "source_url": "https://tenor.com/view/vp22-call-of-dragons-cod-naruto-rock-lee-gif-8930734933231839104",
+          "download_url": "https://media.tenor.com/e_BYGs50p4AAAAPo/vp22-call-of-dragons.mp4",
+          "duration": 11.7,
+          "width": 498,
+          "height": 376,
+          "publisher": "Angelitos1",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "train",
+      "visual_intent": "Lee training with physical discipline"
+    }
+  ],
+  "narration_sha256": "544dbccf6f4e17af9b4c20f8752aeb7f4c1bbb0a88141876b76b1f452155c98c"
+}

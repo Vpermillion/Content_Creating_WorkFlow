@@ -1,0 +1,1713 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "544dbccf6f4e17af9b4c20f8752aeb7f4c1bbb0a88141876b76b1f452155c98c",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.12,
+      "probability": 0.00010444342478876933
+    },
+    {
+      "word": "if",
+      "start": 0.12,
+      "end": 0.2,
+      "probability": 0.9407051205635071
+    },
+    {
+      "word": "Rock",
+      "start": 0.2,
+      "end": 0.44,
+      "probability": 0.78794926404953
+    },
+    {
+      "word": "Lee",
+      "start": 0.44,
+      "end": 0.68,
+      "probability": 0.9456600546836853
+    },
+    {
+      "word": "woke",
+      "start": 0.68,
+      "end": 0.84,
+      "probability": 0.9948042035102844
+    },
+    {
+      "word": "up",
+      "start": 0.84,
+      "end": 1.04,
+      "probability": 0.9962450861930847
+    },
+    {
+      "word": "with",
+      "start": 1.04,
+      "end": 1.2,
+      "probability": 0.9961380362510681
+    },
+    {
+      "word": "the",
+      "start": 1.2,
+      "end": 1.26,
+      "probability": 0.8530682325363159
+    },
+    {
+      "word": "Rinnegan?",
+      "start": 1.26,
+      "end": 2.06,
+      "probability": 0.618000919620196
+    },
+    {
+      "word": "The",
+      "start": 2.06,
+      "end": 2.1,
+      "probability": 0.8895341753959656
+    },
+    {
+      "word": "character",
+      "start": 2.1,
+      "end": 2.3,
+      "probability": 0.9669495224952698
+    },
+    {
+      "word": "creator",
+      "start": 2.3,
+      "end": 2.7,
+      "probability": 0.9588987231254578
+    },
+    {
+      "word": "just",
+      "start": 2.7,
+      "end": 3.08,
+      "probability": 0.9858549237251282
+    },
+    {
+      "word": "lost",
+      "start": 3.08,
+      "end": 3.32,
+      "probability": 0.9968260526657104
+    },
+    {
+      "word": "its",
+      "start": 3.32,
+      "end": 3.54,
+      "probability": 0.8194323778152466
+    },
+    {
+      "word": "damn",
+      "start": 3.54,
+      "end": 3.78,
+      "probability": 0.5497623085975647
+    },
+    {
+      "word": "mind",
+      "start": 3.78,
+      "end": 4.08,
+      "probability": 0.9977558255195618
+    },
+    {
+      "word": "completely.",
+      "start": 4.08,
+      "end": 5.02,
+      "probability": 0.9850285053253174
+    },
+    {
+      "word": "This",
+      "start": 5.02,
+      "end": 5.02,
+      "probability": 0.8682594299316406
+    },
+    {
+      "word": "is",
+      "start": 5.02,
+      "end": 5.12,
+      "probability": 0.9907139539718628
+    },
+    {
+      "word": "a",
+      "start": 5.12,
+      "end": 5.2,
+      "probability": 0.9941834807395935
+    },
+    {
+      "word": "fan",
+      "start": 5.2,
+      "end": 5.42,
+      "probability": 0.9711247086524963
+    },
+    {
+      "word": "-made",
+      "start": 5.42,
+      "end": 5.66,
+      "probability": 0.7997423708438873
+    },
+    {
+      "word": "upgrade,",
+      "start": 5.66,
+      "end": 5.9,
+      "probability": 0.9937194585800171
+    },
+    {
+      "word": "not",
+      "start": 5.9,
+      "end": 6.44,
+      "probability": 0.9878007173538208
+    },
+    {
+      "word": "canon.",
+      "start": 6.44,
+      "end": 7.26,
+      "probability": 0.7798940539360046
+    },
+    {
+      "word": "Lee",
+      "start": 7.26,
+      "end": 7.36,
+      "probability": 0.9948118925094604
+    },
+    {
+      "word": "gets",
+      "start": 7.36,
+      "end": 7.58,
+      "probability": 0.9885993003845215
+    },
+    {
+      "word": "gravity",
+      "start": 7.58,
+      "end": 7.8,
+      "probability": 0.9764591455459595
+    },
+    {
+      "word": "powers",
+      "start": 7.8,
+      "end": 8.24,
+      "probability": 0.984915018081665
+    },
+    {
+      "word": "before",
+      "start": 8.24,
+      "end": 8.56,
+      "probability": 0.9930537343025208
+    },
+    {
+      "word": "he",
+      "start": 8.56,
+      "end": 8.74,
+      "probability": 0.9975199103355408
+    },
+    {
+      "word": "gets",
+      "start": 8.74,
+      "end": 8.88,
+      "probability": 0.9873380661010742
+    },
+    {
+      "word": "an",
+      "start": 8.88,
+      "end": 9.0,
+      "probability": 0.9813034534454346
+    },
+    {
+      "word": "instruction",
+      "start": 9.0,
+      "end": 9.28,
+      "probability": 0.9812450408935547
+    },
+    {
+      "word": "manual.",
+      "start": 9.28,
+      "end": 10.58,
+      "probability": 0.9993171691894531
+    },
+    {
+      "word": "Excellent",
+      "start": 10.58,
+      "end": 10.58,
+      "probability": 0.947797417640686
+    },
+    {
+      "word": "parenting,",
+      "start": 10.58,
+      "end": 11.38,
+      "probability": 0.9937363862991333
+    },
+    {
+      "word": "universe.",
+      "start": 11.38,
+      "end": 12.0,
+      "probability": 0.8866040706634521
+    },
+    {
+      "word": "He",
+      "start": 12.0,
+      "end": 12.0,
+      "probability": 0.9893032312393188
+    },
+    {
+      "word": "tries",
+      "start": 12.0,
+      "end": 12.24,
+      "probability": 0.9964461922645569
+    },
+    {
+      "word": "a",
+      "start": 12.24,
+      "end": 12.36,
+      "probability": 0.995930016040802
+    },
+    {
+      "word": "normal",
+      "start": 12.36,
+      "end": 12.58,
+      "probability": 0.9830548763275146
+    },
+    {
+      "word": "warm",
+      "start": 12.58,
+      "end": 12.96,
+      "probability": 0.9915859699249268
+    },
+    {
+      "word": "-up.",
+      "start": 12.96,
+      "end": 13.58,
+      "probability": 0.6912972182035446
+    },
+    {
+      "word": "The",
+      "start": 13.58,
+      "end": 13.6,
+      "probability": 0.9914523363113403
+    },
+    {
+      "word": "training",
+      "start": 13.6,
+      "end": 13.8,
+      "probability": 0.9947216510772705
+    },
+    {
+      "word": "weights",
+      "start": 13.8,
+      "end": 14.1,
+      "probability": 0.46757739782333374
+    },
+    {
+      "word": "fly",
+      "start": 14.1,
+      "end": 14.4,
+      "probability": 0.9976136684417725
+    },
+    {
+      "word": "toward",
+      "start": 14.4,
+      "end": 14.7,
+      "probability": 0.9086961150169373
+    },
+    {
+      "word": "his",
+      "start": 14.7,
+      "end": 14.88,
+      "probability": 0.9964801669120789
+    },
+    {
+      "word": "face.",
+      "start": 14.88,
+      "end": 15.86,
+      "probability": 0.9988104104995728
+    },
+    {
+      "word": "Brother",
+      "start": 15.86,
+      "end": 15.86,
+      "probability": 0.9589696526527405
+    },
+    {
+      "word": "ordered",
+      "start": 15.86,
+      "end": 16.1,
+      "probability": 0.97755366563797
+    },
+    {
+      "word": "express",
+      "start": 16.1,
+      "end": 16.46,
+      "probability": 0.7703850269317627
+    },
+    {
+      "word": "shipping",
+      "start": 16.46,
+      "end": 16.8,
+      "probability": 0.9921892881393433
+    },
+    {
+      "word": "on",
+      "start": 16.8,
+      "end": 17.06,
+      "probability": 0.9970470070838928
+    },
+    {
+      "word": "his",
+      "start": 17.06,
+      "end": 17.18,
+      "probability": 0.9984561204910278
+    },
+    {
+      "word": "own",
+      "start": 17.18,
+      "end": 17.38,
+      "probability": 0.9960556030273438
+    },
+    {
+      "word": "concussion.",
+      "start": 17.38,
+      "end": 18.013025529832372,
+      "probability": 0.9906546473503113
+    },
+    {
+      "word": "Guy",
+      "start": 18.013025529832372,
+      "end": 18.113,
+      "probability": 7.109983471309533e-06
+    },
+    {
+      "word": "says",
+      "start": 18.113,
+      "end": 18.433,
+      "probability": 0.9341536164283752
+    },
+    {
+      "word": "the",
+      "start": 18.433,
+      "end": 18.573,
+      "probability": 0.9632038474082947
+    },
+    {
+      "word": "power",
+      "start": 18.573,
+      "end": 18.773,
+      "probability": 0.9741597175598145
+    },
+    {
+      "word": "of",
+      "start": 18.773,
+      "end": 18.993,
+      "probability": 0.996853768825531
+    },
+    {
+      "word": "youth",
+      "start": 18.993,
+      "end": 19.153,
+      "probability": 0.9807348847389221
+    },
+    {
+      "word": "requires",
+      "start": 19.153,
+      "end": 19.553,
+      "probability": 0.9943236112594604
+    },
+    {
+      "word": "control.",
+      "start": 19.553,
+      "end": 20.553,
+      "probability": 0.9898235201835632
+    },
+    {
+      "word": "Sir,",
+      "start": 20.553,
+      "end": 20.913,
+      "probability": 0.8967164754867554
+    },
+    {
+      "word": "your",
+      "start": 20.913,
+      "end": 21.053,
+      "probability": 0.9737275242805481
+    },
+    {
+      "word": "student",
+      "start": 21.053,
+      "end": 21.293,
+      "probability": 0.9897582530975342
+    },
+    {
+      "word": "just",
+      "start": 21.293,
+      "end": 21.493,
+      "probability": 0.9913018941879272
+    },
+    {
+      "word": "magnetized",
+      "start": 21.493,
+      "end": 22.153,
+      "probability": 0.9111080467700958
+    },
+    {
+      "word": "the",
+      "start": 22.153,
+      "end": 22.253,
+      "probability": 0.9945492148399353
+    },
+    {
+      "word": "furniture.",
+      "start": 22.253,
+      "end": 23.113,
+      "probability": 0.9758811593055725
+    },
+    {
+      "word": "Start",
+      "start": 23.113,
+      "end": 23.273,
+      "probability": 0.9538567066192627
+    },
+    {
+      "word": "with",
+      "start": 23.273,
+      "end": 23.512999999999998,
+      "probability": 0.9973359704017639
+    },
+    {
+      "word": "eye",
+      "start": 23.512999999999998,
+      "end": 23.713,
+      "probability": 0.8693234324455261
+    },
+    {
+      "word": "safety.",
+      "start": 23.713,
+      "end": 24.493,
+      "probability": 0.98592609167099
+    },
+    {
+      "word": "Having",
+      "start": 24.493,
+      "end": 24.533,
+      "probability": 0.9891095161437988
+    },
+    {
+      "word": "the",
+      "start": 24.533,
+      "end": 24.673,
+      "probability": 0.9871812462806702
+    },
+    {
+      "word": "eyes",
+      "start": 24.673,
+      "end": 24.933,
+      "probability": 0.9848760366439819
+    },
+    {
+      "word": "wouldn't",
+      "start": 24.933,
+      "end": 25.273,
+      "probability": 0.7924353182315826
+    },
+    {
+      "word": "instantly",
+      "start": 25.273,
+      "end": 25.573,
+      "probability": 0.9976818561553955
+    },
+    {
+      "word": "teach",
+      "start": 25.573,
+      "end": 25.893,
+      "probability": 0.9880751967430115
+    },
+    {
+      "word": "every",
+      "start": 25.893,
+      "end": 26.173000000000002,
+      "probability": 0.9804623126983643
+    },
+    {
+      "word": "technique.",
+      "start": 26.173000000000002,
+      "end": 27.133,
+      "probability": 0.9959484934806824
+    },
+    {
+      "word": "Chakra",
+      "start": 27.133,
+      "end": 27.293,
+      "probability": 0.7815446257591248
+    },
+    {
+      "word": "demand",
+      "start": 27.293,
+      "end": 27.552999999999997,
+      "probability": 0.933959424495697
+    },
+    {
+      "word": "and",
+      "start": 27.552999999999997,
+      "end": 27.913,
+      "probability": 0.9910526871681213
+    },
+    {
+      "word": "concentration",
+      "start": 27.913,
+      "end": 28.273,
+      "probability": 0.9745122194290161
+    },
+    {
+      "word": "still",
+      "start": 28.273,
+      "end": 28.833,
+      "probability": 0.9905509948730469
+    },
+    {
+      "word": "matter.",
+      "start": 28.833,
+      "end": 29.853,
+      "probability": 0.9958745837211609
+    },
+    {
+      "word": "Premium",
+      "start": 29.853,
+      "end": 29.853,
+      "probability": 0.9231207966804504
+    },
+    {
+      "word": "hardware,",
+      "start": 29.853,
+      "end": 30.793,
+      "probability": 0.9158644676208496
+    },
+    {
+      "word": "zero",
+      "start": 30.793,
+      "end": 30.853,
+      "probability": 0.7709067463874817
+    },
+    {
+      "word": "installed",
+      "start": 30.853,
+      "end": 31.213,
+      "probability": 0.8140188455581665
+    },
+    {
+      "word": "drivers.",
+      "start": 31.213,
+      "end": 32.333,
+      "probability": 0.9739363193511963
+    },
+    {
+      "word": "Lee",
+      "start": 32.333,
+      "end": 32.333,
+      "probability": 0.4690839648246765
+    },
+    {
+      "word": "experiments",
+      "start": 32.333,
+      "end": 32.693,
+      "probability": 0.9892348647117615
+    },
+    {
+      "word": "with",
+      "start": 32.693,
+      "end": 33.033,
+      "probability": 0.9934180974960327
+    },
+    {
+      "word": "pulling",
+      "start": 33.033,
+      "end": 33.213,
+      "probability": 0.998204231262207
+    },
+    {
+      "word": "opponents",
+      "start": 33.213,
+      "end": 33.693,
+      "probability": 0.9977431297302246
+    },
+    {
+      "word": "off",
+      "start": 33.693,
+      "end": 33.873000000000005,
+      "probability": 0.9907620549201965
+    },
+    {
+      "word": "balance",
+      "start": 33.873000000000005,
+      "end": 34.153,
+      "probability": 0.8437696695327759
+    },
+    {
+      "word": "before",
+      "start": 34.153,
+      "end": 34.513,
+      "probability": 0.9980973601341248
+    },
+    {
+      "word": "a",
+      "start": 34.513,
+      "end": 34.613,
+      "probability": 0.9976804256439209
+    },
+    {
+      "word": "kick.",
+      "start": 34.613,
+      "end": 35.453,
+      "probability": 0.9976162910461426
+    },
+    {
+      "word": "Strong",
+      "start": 35.453,
+      "end": 35.453,
+      "probability": 0.9853611588478088
+    },
+    {
+      "word": "idea.",
+      "start": 35.453,
+      "end": 36.573,
+      "probability": 0.9852458834648132
+    },
+    {
+      "word": "Horrific",
+      "start": 36.573,
+      "end": 36.813,
+      "probability": 0.9699299335479736
+    },
+    {
+      "word": "first",
+      "start": 36.813,
+      "end": 37.053,
+      "probability": 0.9770323038101196
+    },
+    {
+      "word": "day",
+      "start": 37.053,
+      "end": 37.293,
+      "probability": 0.9924339056015015
+    },
+    {
+      "word": "for",
+      "start": 37.293,
+      "end": 37.473,
+      "probability": 0.9935435056686401
+    },
+    {
+      "word": "the",
+      "start": 37.473,
+      "end": 37.533,
+      "probability": 0.9858253598213196
+    },
+    {
+      "word": "practice",
+      "start": 37.533,
+      "end": 37.793,
+      "probability": 0.9588306546211243
+    },
+    {
+      "word": "dummy.",
+      "start": 37.793,
+      "end": 38.322668967369346,
+      "probability": 0.9495687484741211
+    },
+    {
+      "word": "Then",
+      "start": 38.322668967369346,
+      "end": 38.322668967369346,
+      "probability": 9.145230251306202e-06
+    },
+    {
+      "word": "he",
+      "start": 38.322668967369346,
+      "end": 38.5426875,
+      "probability": 0.944007158279419
+    },
+    {
+      "word": "realizes",
+      "start": 38.5426875,
+      "end": 38.842687500000004,
+      "probability": 0.9118087887763977
+    },
+    {
+      "word": "the",
+      "start": 38.842687500000004,
+      "end": 39.2226875,
+      "probability": 0.9823274612426758
+    },
+    {
+      "word": "harder",
+      "start": 39.2226875,
+      "end": 39.4026875,
+      "probability": 0.9523528814315796
+    },
+    {
+      "word": "lesson:",
+      "start": 39.4026875,
+      "end": 40.2626875,
+      "probability": 0.9958329796791077
+    },
+    {
+      "word": "when",
+      "start": 40.2626875,
+      "end": 40.3226875,
+      "probability": 0.35933366417884827
+    },
+    {
+      "word": "teammates",
+      "start": 40.3226875,
+      "end": 40.5026875,
+      "probability": 0.9892728328704834
+    },
+    {
+      "word": "stand",
+      "start": 40.5026875,
+      "end": 40.9226875,
+      "probability": 0.9546036124229431
+    },
+    {
+      "word": "nearby,",
+      "start": 40.9226875,
+      "end": 41.7826875,
+      "probability": 0.9792343378067017
+    },
+    {
+      "word": "a",
+      "start": 41.7826875,
+      "end": 41.8626875,
+      "probability": 0.9732967019081116
+    },
+    {
+      "word": "wild",
+      "start": 41.8626875,
+      "end": 42.1026875,
+      "probability": 0.9627640247344971
+    },
+    {
+      "word": "push",
+      "start": 42.1026875,
+      "end": 42.442687500000005,
+      "probability": 0.993506669998169
+    },
+    {
+      "word": "can",
+      "start": 42.442687500000005,
+      "end": 42.662687500000004,
+      "probability": 0.996397078037262
+    },
+    {
+      "word": "hurt",
+      "start": 42.662687500000004,
+      "end": 42.842687500000004,
+      "probability": 0.9993404746055603
+    },
+    {
+      "word": "the",
+      "start": 42.842687500000004,
+      "end": 43.0026875,
+      "probability": 0.9956843852996826
+    },
+    {
+      "word": "people",
+      "start": 43.0026875,
+      "end": 43.2426875,
+      "probability": 0.9967905879020691
+    },
+    {
+      "word": "he's",
+      "start": 43.2426875,
+      "end": 43.4626875,
+      "probability": 0.9665943384170532
+    },
+    {
+      "word": "protecting.",
+      "start": 43.4626875,
+      "end": 44.1026875,
+      "probability": 0.9920808672904968
+    },
+    {
+      "word": "So",
+      "start": 44.1026875,
+      "end": 44.162687500000004,
+      "probability": 0.6826902627944946
+    },
+    {
+      "word": "Guy",
+      "start": 44.162687500000004,
+      "end": 44.302687500000005,
+      "probability": 0.12228600680828094
+    },
+    {
+      "word": "sets",
+      "start": 44.302687500000005,
+      "end": 44.582687500000006,
+      "probability": 0.9758061170578003
+    },
+    {
+      "word": "a",
+      "start": 44.582687500000006,
+      "end": 44.7226875,
+      "probability": 0.9832339286804199
+    },
+    {
+      "word": "challenge.",
+      "start": 44.7226875,
+      "end": 45.6426875,
+      "probability": 0.9976769089698792
+    },
+    {
+      "word": "Move",
+      "start": 45.6426875,
+      "end": 45.6826875,
+      "probability": 0.9148609638214111
+    },
+    {
+      "word": "one",
+      "start": 45.6826875,
+      "end": 45.8826875,
+      "probability": 0.9909225106239319
+    },
+    {
+      "word": "falling",
+      "start": 45.8826875,
+      "end": 46.2026875,
+      "probability": 0.9921959638595581
+    },
+    {
+      "word": "leaf",
+      "start": 46.2026875,
+      "end": 46.442687500000005,
+      "probability": 0.9676663875579834
+    },
+    {
+      "word": "with",
+      "start": 46.442687500000005,
+      "end": 46.6226875,
+      "probability": 0.992825984954834
+    },
+    {
+      "word": "the",
+      "start": 46.6226875,
+      "end": 46.7026875,
+      "probability": 0.31878021359443665
+    },
+    {
+      "word": "new",
+      "start": 46.7026875,
+      "end": 46.802687500000005,
+      "probability": 0.9790219664573669
+    },
+    {
+      "word": "power.",
+      "start": 46.802687500000005,
+      "end": 47.482687500000004,
+      "probability": 0.994142472743988
+    },
+    {
+      "word": "Not",
+      "start": 47.482687500000004,
+      "end": 47.6226875,
+      "probability": 0.9564437866210938
+    },
+    {
+      "word": "the",
+      "start": 47.6226875,
+      "end": 47.7626875,
+      "probability": 0.9892867803573608
+    },
+    {
+      "word": "tree.",
+      "start": 47.7626875,
+      "end": 48.342687500000004,
+      "probability": 0.9737790822982788
+    },
+    {
+      "word": "Not",
+      "start": 48.342687500000004,
+      "end": 48.3826875,
+      "probability": 0.9870414733886719
+    },
+    {
+      "word": "the",
+      "start": 48.3826875,
+      "end": 48.5226875,
+      "probability": 0.9959173798561096
+    },
+    {
+      "word": "neighborhood.",
+      "start": 48.5226875,
+      "end": 49.2026875,
+      "probability": 0.9542197585105896
+    },
+    {
+      "word": "Lee",
+      "start": 49.2026875,
+      "end": 49.2026875,
+      "probability": 0.5175535082817078
+    },
+    {
+      "word": "struggles",
+      "start": 49.2026875,
+      "end": 49.4626875,
+      "probability": 0.9851353764533997
+    },
+    {
+      "word": "because",
+      "start": 49.4626875,
+      "end": 49.9226875,
+      "probability": 0.8803372979164124
+    },
+    {
+      "word": "precision",
+      "start": 49.9226875,
+      "end": 50.3226875,
+      "probability": 0.9612492918968201
+    },
+    {
+      "word": "doesn't",
+      "start": 50.3226875,
+      "end": 50.7026875,
+      "probability": 0.9979483485221863
+    },
+    {
+      "word": "care",
+      "start": 50.7026875,
+      "end": 50.8826875,
+      "probability": 0.9963387250900269
+    },
+    {
+      "word": "how",
+      "start": 50.8826875,
+      "end": 51.162687500000004,
+      "probability": 0.9960727691650391
+    },
+    {
+      "word": "inspirational",
+      "start": 51.162687500000004,
+      "end": 51.4626875,
+      "probability": 0.9902172684669495
+    },
+    {
+      "word": "your",
+      "start": 51.4626875,
+      "end": 52.0026875,
+      "probability": 0.9974527955055237
+    },
+    {
+      "word": "speech",
+      "start": 52.0026875,
+      "end": 52.2026875,
+      "probability": 0.9963730573654175
+    },
+    {
+      "word": "sounds.",
+      "start": 52.2026875,
+      "end": 53.2026875,
+      "probability": 0.9972026348114014
+    },
+    {
+      "word": "The",
+      "start": 53.2026875,
+      "end": 53.2626875,
+      "probability": 0.9700862169265747
+    },
+    {
+      "word": "leaf",
+      "start": 53.2626875,
+      "end": 53.4026875,
+      "probability": 0.9776597619056702
+    },
+    {
+      "word": "remains",
+      "start": 53.4026875,
+      "end": 53.7626875,
+      "probability": 0.9975653886795044
+    },
+    {
+      "word": "deeply",
+      "start": 53.7626875,
+      "end": 54.1026875,
+      "probability": 0.9970189332962036
+    },
+    {
+      "word": "unimpressed",
+      "start": 54.1026875,
+      "end": 54.7426875,
+      "probability": 0.9868817130724589
+    },
+    {
+      "word": "by",
+      "start": 54.7426875,
+      "end": 55.0026875,
+      "probability": 0.9968571662902832
+    },
+    {
+      "word": "his",
+      "start": 55.0026875,
+      "end": 55.1226875,
+      "probability": 0.9971808195114136
+    },
+    {
+      "word": "grindset.",
+      "start": 55.1226875,
+      "end": 55.802687500000005,
+      "probability": 0.6116788238286972
+    },
+    {
+      "word": "He",
+      "start": 55.802687500000005,
+      "end": 55.8226875,
+      "probability": 0.9756731986999512
+    },
+    {
+      "word": "stops",
+      "start": 55.8226875,
+      "end": 56.0026875,
+      "probability": 0.9968116879463196
+    },
+    {
+      "word": "chasing",
+      "start": 56.0026875,
+      "end": 56.3226875,
+      "probability": 0.9918477535247803
+    },
+    {
+      "word": "the",
+      "start": 56.3226875,
+      "end": 56.6226875,
+      "probability": 0.9967415928840637
+    },
+    {
+      "word": "biggest",
+      "start": 56.6226875,
+      "end": 56.842687500000004,
+      "probability": 0.9969778060913086
+    },
+    {
+      "word": "attack",
+      "start": 56.842687500000004,
+      "end": 57.1826875,
+      "probability": 0.9920459985733032
+    },
+    {
+      "word": "and",
+      "start": 57.1826875,
+      "end": 57.6226875,
+      "probability": 0.8161675333976746
+    },
+    {
+      "word": "uses",
+      "start": 57.6226875,
+      "end": 57.802687500000005,
+      "probability": 0.9695224761962891
+    },
+    {
+      "word": "tiny",
+      "start": 57.802687500000005,
+      "end": 58.1226875,
+      "probability": 0.9888829588890076
+    },
+    {
+      "word": "pulls",
+      "start": 58.1226875,
+      "end": 58.4626875,
+      "probability": 0.07645613700151443
+    },
+    {
+      "word": "to",
+      "start": 58.4626875,
+      "end": 58.7626875,
+      "probability": 0.9978057742118835
+    },
+    {
+      "word": "create",
+      "start": 58.7626875,
+      "end": 58.9826875,
+      "probability": 0.9988746047019958
+    },
+    {
+      "word": "openings.",
+      "start": 58.9826875,
+      "end": 60.0626875,
+      "probability": 0.9954894185066223
+    },
+    {
+      "word": "The",
+      "start": 60.0626875,
+      "end": 60.082687500000006,
+      "probability": 0.9812987446784973
+    },
+    {
+      "word": "punches",
+      "start": 60.082687500000006,
+      "end": 60.2426875,
+      "probability": 0.9669626355171204
+    },
+    {
+      "word": "finally",
+      "start": 60.2426875,
+      "end": 60.7626875,
+      "probability": 0.9748948216438293
+    },
+    {
+      "word": "have",
+      "start": 60.7626875,
+      "end": 61.1826875,
+      "probability": 0.9983684420585632
+    },
+    {
+      "word": "a",
+      "start": 61.1826875,
+      "end": 61.2426875,
+      "probability": 0.9966205358505249
+    },
+    {
+      "word": "group",
+      "start": 61.2426875,
+      "end": 61.4226875,
+      "probability": 0.9635059833526611
+    },
+    {
+      "word": "chat.",
+      "start": 61.4226875,
+      "end": 61.92298880997561,
+      "probability": 0.9963144659996033
+    },
+    {
+      "word": "When",
+      "start": 61.92298880997561,
+      "end": 61.983000000000004,
+      "probability": 7.975153130246326e-05
+    },
+    {
+      "word": "a",
+      "start": 61.983000000000004,
+      "end": 62.063,
+      "probability": 0.9834147095680237
+    },
+    {
+      "word": "teammate",
+      "start": 62.063,
+      "end": 62.263000000000005,
+      "probability": 0.9558776021003723
+    },
+    {
+      "word": "falls,",
+      "start": 62.263000000000005,
+      "end": 63.243,
+      "probability": 0.9926034808158875
+    },
+    {
+      "word": "Lee",
+      "start": 63.243,
+      "end": 63.263000000000005,
+      "probability": 0.8964857459068298
+    },
+    {
+      "word": "catches",
+      "start": 63.263000000000005,
+      "end": 63.523,
+      "probability": 0.9958304762840271
+    },
+    {
+      "word": "them",
+      "start": 63.523,
+      "end": 63.843,
+      "probability": 0.9938735961914062
+    },
+    {
+      "word": "with",
+      "start": 63.843,
+      "end": 63.983000000000004,
+      "probability": 0.994640588760376
+    },
+    {
+      "word": "controlled",
+      "start": 63.983000000000004,
+      "end": 64.263,
+      "probability": 0.9090538620948792
+    },
+    {
+      "word": "force",
+      "start": 64.263,
+      "end": 64.723,
+      "probability": 0.9991920590400696
+    },
+    {
+      "word": "instead",
+      "start": 64.723,
+      "end": 65.023,
+      "probability": 0.983853816986084
+    },
+    {
+      "word": "of",
+      "start": 65.023,
+      "end": 65.24300000000001,
+      "probability": 0.9971542358398438
+    },
+    {
+      "word": "flexing.",
+      "start": 65.24300000000001,
+      "end": 66.023,
+      "probability": 0.9988296926021576
+    },
+    {
+      "word": "That",
+      "start": 66.023,
+      "end": 66.203,
+      "probability": 0.5976062417030334
+    },
+    {
+      "word": "rescue",
+      "start": 66.203,
+      "end": 66.38300000000001,
+      "probability": 0.9866951704025269
+    },
+    {
+      "word": "is",
+      "start": 66.38300000000001,
+      "end": 66.74300000000001,
+      "probability": 0.9974890947341919
+    },
+    {
+      "word": "the",
+      "start": 66.74300000000001,
+      "end": 66.843,
+      "probability": 0.993310809135437
+    },
+    {
+      "word": "actual",
+      "start": 66.843,
+      "end": 67.10300000000001,
+      "probability": 0.9950805902481079
+    },
+    {
+      "word": "upgrade",
+      "start": 67.10300000000001,
+      "end": 67.483,
+      "probability": 0.9886237382888794
+    },
+    {
+      "word": "here.",
+      "start": 67.483,
+      "end": 68.023,
+      "probability": 0.9825723171234131
+    },
+    {
+      "word": "Guy",
+      "start": 68.023,
+      "end": 68.183,
+      "probability": 0.6122028827667236
+    },
+    {
+      "word": "cries",
+      "start": 68.183,
+      "end": 68.343,
+      "probability": 0.9611957669258118
+    },
+    {
+      "word": "with",
+      "start": 68.343,
+      "end": 68.723,
+      "probability": 0.9981420040130615
+    },
+    {
+      "word": "pride.",
+      "start": 68.723,
+      "end": 69.543,
+      "probability": 0.9889357686042786
+    },
+    {
+      "word": "Lee",
+      "start": 69.543,
+      "end": 69.563,
+      "probability": 0.942406177520752
+    },
+    {
+      "word": "cries",
+      "start": 69.563,
+      "end": 69.763,
+      "probability": 0.9973030090332031
+    },
+    {
+      "word": "too.",
+      "start": 69.763,
+      "end": 70.683,
+      "probability": 0.8109768033027649
+    },
+    {
+      "word": "The",
+      "start": 70.683,
+      "end": 70.703,
+      "probability": 0.9606388807296753
+    },
+    {
+      "word": "leaf",
+      "start": 70.703,
+      "end": 70.82300000000001,
+      "probability": 0.9030330181121826
+    },
+    {
+      "word": "floats",
+      "start": 70.82300000000001,
+      "end": 71.083,
+      "probability": 0.9728490710258484
+    },
+    {
+      "word": "perfectly.",
+      "start": 71.083,
+      "end": 72.16300000000001,
+      "probability": 0.9958563446998596
+    },
+    {
+      "word": "Three",
+      "start": 72.16300000000001,
+      "end": 72.223,
+      "probability": 0.8241759538650513
+    },
+    {
+      "word": "episodes",
+      "start": 72.223,
+      "end": 72.583,
+      "probability": 0.9958482980728149
+    },
+    {
+      "word": "of",
+      "start": 72.583,
+      "end": 72.803,
+      "probability": 0.9977467656135559
+    },
+    {
+      "word": "training,",
+      "start": 72.803,
+      "end": 73.16300000000001,
+      "probability": 0.9989209175109863
+    },
+    {
+      "word": "and",
+      "start": 73.16300000000001,
+      "end": 73.303,
+      "probability": 0.9710739850997925
+    },
+    {
+      "word": "the",
+      "start": 73.303,
+      "end": 73.403,
+      "probability": 0.9958451390266418
+    },
+    {
+      "word": "final",
+      "start": 73.403,
+      "end": 73.563,
+      "probability": 0.9979352951049805
+    },
+    {
+      "word": "boss",
+      "start": 73.563,
+      "end": 73.903,
+      "probability": 0.9938002228736877
+    },
+    {
+      "word": "was",
+      "start": 73.903,
+      "end": 74.143,
+      "probability": 0.9956802129745483
+    },
+    {
+      "word": "landscaping.",
+      "start": 74.143,
+      "end": 74.983,
+      "probability": 0.9989586472511292
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 0.84,
+      "text": "What if Rock Lee woke"
+    },
+    {
+      "start": 0.84,
+      "end": 2.06,
+      "text": "up with the Rinnegan?"
+    },
+    {
+      "start": 2.06,
+      "end": 3.32,
+      "text": "The character creator just lost"
+    },
+    {
+      "start": 3.32,
+      "end": 5.66,
+      "text": "its damn mind completely. This is a fan -made"
+    },
+    {
+      "start": 5.66,
+      "end": 7.26,
+      "text": "upgrade, not canon."
+    },
+    {
+      "start": 7.26,
+      "end": 8.56,
+      "text": "Lee gets gravity powers before"
+    },
+    {
+      "start": 8.56,
+      "end": 10.58,
+      "text": "he gets an instruction manual."
+    },
+    {
+      "start": 10.58,
+      "end": 12.0,
+      "text": "Excellent parenting, universe."
+    },
+    {
+      "start": 12.0,
+      "end": 13.58,
+      "text": "He tries a normal warm -up."
+    },
+    {
+      "start": 13.58,
+      "end": 14.7,
+      "text": "The training weights fly toward"
+    },
+    {
+      "start": 14.7,
+      "end": 15.86,
+      "text": "his face."
+    },
+    {
+      "start": 15.86,
+      "end": 17.06,
+      "text": "Brother ordered express shipping on"
+    },
+    {
+      "start": 17.06,
+      "end": 18.013025529832372,
+      "text": "his own concussion."
+    },
+    {
+      "start": 18.013025529832372,
+      "end": 18.993,
+      "text": "Guy says the power of"
+    },
+    {
+      "start": 18.993,
+      "end": 20.553,
+      "text": "youth requires control."
+    },
+    {
+      "start": 20.553,
+      "end": 22.153,
+      "text": "Sir, your student just magnetized"
+    },
+    {
+      "start": 22.153,
+      "end": 23.113,
+      "text": "the furniture."
+    },
+    {
+      "start": 23.113,
+      "end": 24.493,
+      "text": "Start with eye safety."
+    },
+    {
+      "start": 24.493,
+      "end": 25.573,
+      "text": "Having the eyes wouldn't instantly"
+    },
+    {
+      "start": 25.573,
+      "end": 27.133,
+      "text": "teach every technique."
+    },
+    {
+      "start": 27.133,
+      "end": 28.833,
+      "text": "Chakra demand and concentration still"
+    },
+    {
+      "start": 28.833,
+      "end": 29.853,
+      "text": "matter."
+    },
+    {
+      "start": 29.853,
+      "end": 32.333,
+      "text": "Premium hardware, zero installed drivers."
+    },
+    {
+      "start": 32.333,
+      "end": 33.693,
+      "text": "Lee experiments with pulling opponents"
+    },
+    {
+      "start": 33.693,
+      "end": 35.453,
+      "text": "off balance before a kick."
+    },
+    {
+      "start": 35.453,
+      "end": 36.573,
+      "text": "Strong idea."
+    },
+    {
+      "start": 36.573,
+      "end": 37.533,
+      "text": "Horrific first day for the"
+    },
+    {
+      "start": 37.533,
+      "end": 38.322668967369346,
+      "text": "practice dummy."
+    },
+    {
+      "start": 38.322668967369346,
+      "end": 39.4026875,
+      "text": "Then he realizes the harder"
+    },
+    {
+      "start": 39.4026875,
+      "end": 41.7826875,
+      "text": "lesson: when teammates stand nearby,"
+    },
+    {
+      "start": 41.7826875,
+      "end": 42.842687500000004,
+      "text": "a wild push can hurt"
+    },
+    {
+      "start": 42.842687500000004,
+      "end": 44.1026875,
+      "text": "the people he's protecting."
+    },
+    {
+      "start": 44.1026875,
+      "end": 45.6426875,
+      "text": "So Guy sets a challenge."
+    },
+    {
+      "start": 45.6426875,
+      "end": 46.6226875,
+      "text": "Move one falling leaf with"
+    },
+    {
+      "start": 46.6226875,
+      "end": 47.482687500000004,
+      "text": "the new power."
+    },
+    {
+      "start": 47.482687500000004,
+      "end": 48.342687500000004,
+      "text": "Not the tree."
+    },
+    {
+      "start": 48.342687500000004,
+      "end": 49.2026875,
+      "text": "Not the neighborhood."
+    },
+    {
+      "start": 49.2026875,
+      "end": 50.7026875,
+      "text": "Lee struggles because precision doesn't"
+    },
+    {
+      "start": 50.7026875,
+      "end": 52.2026875,
+      "text": "care how inspirational your speech"
+    },
+    {
+      "start": 52.2026875,
+      "end": 53.2026875,
+      "text": "sounds."
+    },
+    {
+      "start": 53.2026875,
+      "end": 54.7426875,
+      "text": "The leaf remains deeply unimpressed"
+    },
+    {
+      "start": 54.7426875,
+      "end": 55.802687500000005,
+      "text": "by his grindset."
+    },
+    {
+      "start": 55.802687500000005,
+      "end": 56.842687500000004,
+      "text": "He stops chasing the biggest"
+    },
+    {
+      "start": 56.842687500000004,
+      "end": 58.4626875,
+      "text": "attack and uses tiny pulls"
+    },
+    {
+      "start": 58.4626875,
+      "end": 60.0626875,
+      "text": "to create openings."
+    },
+    {
+      "start": 60.0626875,
+      "end": 61.2426875,
+      "text": "The punches finally have a"
+    },
+    {
+      "start": 61.2426875,
+      "end": 61.92298880997561,
+      "text": "group chat."
+    },
+    {
+      "start": 61.92298880997561,
+      "end": 63.263000000000005,
+      "text": "When a teammate falls, Lee"
+    },
+    {
+      "start": 63.263000000000005,
+      "end": 64.723,
+      "text": "catches them with controlled force"
+    },
+    {
+      "start": 64.723,
+      "end": 66.023,
+      "text": "instead of flexing."
+    },
+    {
+      "start": 66.023,
+      "end": 67.10300000000001,
+      "text": "That rescue is the actual"
+    },
+    {
+      "start": 67.10300000000001,
+      "end": 68.023,
+      "text": "upgrade here."
+    },
+    {
+      "start": 68.023,
+      "end": 69.543,
+      "text": "Guy cries with pride."
+    },
+    {
+      "start": 69.543,
+      "end": 70.683,
+      "text": "Lee cries too."
+    },
+    {
+      "start": 70.683,
+      "end": 72.16300000000001,
+      "text": "The leaf floats perfectly."
+    },
+    {
+      "start": 72.16300000000001,
+      "end": 73.303,
+      "text": "Three episodes of training, and"
+    },
+    {
+      "start": 73.303,
+      "end": 74.983,
+      "text": "the final boss was landscaping."
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 9,
+  "review_names_required": true
+}

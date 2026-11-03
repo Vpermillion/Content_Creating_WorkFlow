@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-rock-lee-rinnegan-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "fc3df3e086969ea7cf004b72d6683991059a5a5091b012a7023b67e0ac807081",
+  "result_branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Sound cue falls outside the video"
+}
