@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-zoro-perfect-directions-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "e5a8916197cc19b2522c4bfd7627b32418bf87ffe600059a4faf97d55e7090ca",
+  "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Rewrite the script; requested length needs excessive speech retiming"
+}
