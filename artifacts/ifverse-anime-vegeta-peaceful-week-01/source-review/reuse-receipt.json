@@ -1,0 +1,12 @@
+{
+  "branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01",
+  "commit": "50b1e82dce21302c8ac5a5ebc4747c0bdeabebcc",
+  "reused_source_keys": [
+    "vegeta",
+    "train",
+    "bulma",
+    "trunks",
+    "goku"
+  ],
+  "new_source_searches_avoided": 5
+}

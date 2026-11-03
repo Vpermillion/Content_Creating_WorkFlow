@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-vegeta-peaceful-week-01",
+  "script_sha256": "1d1e920eca0ac5219244d5107a0e1a4603ae7c3407bfdfe344cd2291467a673a",
+  "catalog": "assets/sfx/catalog.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "normal Tuesday activities",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "bass_impact",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "an enemy combatant",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "error_buzz",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "Historic scenes",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "reward_ping",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "absolutely horrible phrasing",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "cartoon_boing",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    }
+  ],
+  "narration_sha256": "5cd56713f3478a51a61033dbd59ed345c34638f53759e075b78b207b503cc05d",
+  "narration_binding": "Final waveform generated/reused for the matching ordered script checksum"
+}
