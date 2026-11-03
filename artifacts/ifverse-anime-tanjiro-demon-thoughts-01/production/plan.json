@@ -1,0 +1,776 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-tanjiro-demon-thoughts-01",
+  "title": "What if Tanjiro could hear demons' thoughts?",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "assets": [
+    {
+      "id": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro",
+      "file": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro.mp4",
+      "type": "video",
+      "query": "Tanjiro Kamado thinking",
+      "source_url": "https://tenor.com/view/demon-slayer-muichiro-nezuko-tanjiro-hmm-gif-3820576342094348835",
+      "download_url": "https://media.tenor.com/NQVp8NvLgiMAAAPo/demon-slayer-muichiro.mp4",
+      "sha256": "86467a11a28a9603e6ffe9c7d4352519423f1aa15220b9d9d39bcd58dc455c68",
+      "duration": 11.92,
+      "dimensions": [
+        498,
+        282
+      ],
+      "description": "a group of anime characters are sitting on a mat",
+      "publisher": "PackerMen",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "16059279966248489419",
+          "title": "a cartoon character is standing in front of a koi fish tank",
+          "source_url": "https://tenor.com/view/tanjiro-kimetsu-no-yaiba-demon-slayer-gif-24921395",
+          "download_url": "https://media.tenor.com/3t4GCyjJ0csAAAPo/tanjiro-kimetsu-no-yaiba.mp4",
+          "duration": 2.2,
+          "width": 640,
+          "height": 360,
+          "publisher": "Tyron01",
+          "provider": "tenor"
+        },
+        {
+          "id": "8089577275271024896",
+          "title": "a close up of a person 's face with red eyes and a white mouth",
+          "source_url": "https://tenor.com/view/tanjiro-tanjiro-kamado-demon-slayer-demon-slayer-tanjiro-anime-stare-gif-8089577275271024896",
+          "download_url": "https://media.tenor.com/cEPzq-OaEQAAAAPo/tanjiro-tanjiro-kamado.mp4",
+          "duration": 4.6,
+          "width": 498,
+          "height": 280,
+          "publisher": "Jacobar",
+          "provider": "tenor"
+        },
+        {
+          "id": "14366124176054044116",
+          "title": "two anime characters are laying on the floor and one of them says how old do you think you are ?",
+          "source_url": "https://tenor.com/view/hotaru-haganezuka-blacksmith-demon-slayer-black-blade-trifle-gif-21203462",
+          "download_url": "https://media.tenor.com/x1650rjaRdQAAAPo/hotaru-haganezuka-blacksmith.mp4",
+          "duration": 3.2,
+          "width": 640,
+          "height": 386,
+          "publisher": "iAmDuckie",
+          "provider": "tenor"
+        },
+        {
+          "id": "3820576342094348835",
+          "title": "a group of anime characters are sitting on a mat",
+          "source_url": "https://tenor.com/view/demon-slayer-muichiro-nezuko-tanjiro-hmm-gif-3820576342094348835",
+          "download_url": "https://media.tenor.com/NQVp8NvLgiMAAAPo/demon-slayer-muichiro.mp4",
+          "duration": 11.9,
+          "width": 498,
+          "height": 282,
+          "publisher": "PackerMen",
+          "provider": "tenor"
+        },
+        {
+          "id": "13930943307149716749",
+          "title": "a close up of a boy with a knife in his mouth .",
+          "source_url": "https://tenor.com/view/demon-slayer-gif-21985266",
+          "download_url": "https://media.tenor.com/wVSnIOjDrQ0AAAPo/demon-slayer.mp4",
+          "duration": 4.7,
+          "width": 640,
+          "height": 360,
+          "publisher": "Withson",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "tanjiro",
+      "visual_intent": "Tanjiro listening and thinking"
+    },
+    {
+      "id": "ifverse-anime-tanjiro-demon-thoughts-01-fight",
+      "file": "ifverse-anime-tanjiro-demon-thoughts-01-fight.mp4",
+      "type": "video",
+      "query": "Tanjiro Demon Slayer sword fight",
+      "source_url": "https://tenor.com/view/kimetsu-no-yaiba-tanjiro-episode19-flame-hinokami-kagura-gif-14756167",
+      "download_url": "https://media.tenor.com/uVt8qLpJIosAAAPo/kimetsu-no-yaiba-tanjiro.mp4",
+      "sha256": "8929bbe17d31c9881caec4927d6629e7ab3701ad29cd8b8c09556cab51abb959",
+      "duration": 5.5,
+      "dimensions": [
+        640,
+        336
+      ],
+      "description": "a cartoon character is running through a flame",
+      "publisher": "GMB1590",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "9268490811721620763",
+          "title": "a close up of a demon slayer character with a fire coming out of his mouth",
+          "source_url": "https://tenor.com/view/anime-hinokami-kagura-tanjiro-sword-style-fire-style-gif-9268490811721620763",
+          "download_url": "https://media.tenor.com/gKBLSWSjnRsAAAPo/anime-hinokami-kagura.mp4",
+          "duration": 2,
+          "width": 498,
+          "height": 282,
+          "publisher": "mastermo",
+          "provider": "tenor"
+        },
+        {
+          "id": "3459645933100248007",
+          "title": "a cartoon of a man with red hair and a fire coming out of his mouth",
+          "source_url": "https://tenor.com/view/demon-slayer-kny-anime-fire-tanjiro-gif-16404193",
+          "download_url": "https://media.tenor.com/MAMhpWsQq8cAAAPo/demon-slayer-kny.mp4",
+          "duration": 3,
+          "width": 640,
+          "height": 360,
+          "publisher": "L_OSSOME",
+          "provider": "tenor"
+        },
+        {
+          "id": "11712980470818867807",
+          "title": "a gif of a person holding a sword with the words make a gif.com below it",
+          "source_url": "https://tenor.com/view/gif-ninja-fight-fight-in-shadow-gif-11712980470818867807",
+          "download_url": "https://media.tenor.com/oozdriA_Cl8AAAPo/gif-ninja-fight.mp4",
+          "duration": 10.1,
+          "width": 480,
+          "height": 270,
+          "publisher": "ohtik00764",
+          "provider": "tenor"
+        },
+        {
+          "id": "12763843601090184191",
+          "title": "Ez GIF",
+          "source_url": "https://tenor.com/view/ez-gif-25568337",
+          "download_url": "https://media.tenor.com/sSJIISOfg_8AAAPo/ez.mp4",
+          "duration": 1.1,
+          "width": 640,
+          "height": 356,
+          "publisher": "dert1",
+          "provider": "tenor"
+        },
+        {
+          "id": "13356406184019042955",
+          "title": "a cartoon character is running through a flame",
+          "source_url": "https://tenor.com/view/kimetsu-no-yaiba-tanjiro-episode19-flame-hinokami-kagura-gif-14756167",
+          "download_url": "https://media.tenor.com/uVt8qLpJIosAAAPo/kimetsu-no-yaiba-tanjiro.mp4",
+          "duration": 5.5,
+          "width": 640,
+          "height": 336,
+          "publisher": "GMB1590",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "fight",
+      "visual_intent": "Tanjiro protecting people in battle"
+    },
+    {
+      "id": "ifverse-anime-tanjiro-demon-thoughts-01-nezuko",
+      "file": "ifverse-anime-tanjiro-demon-thoughts-01-nezuko.mp4",
+      "type": "video",
+      "query": "Nezuko Kamado Demon Slayer",
+      "source_url": "https://tenor.com/view/roseylemon-nezuko-nezuko-kamado-tanjirou-tanjirou-kamado-gif-16301745553804762310",
+      "download_url": "https://media.tenor.com/4jtvNflWHMYAAAPo/roseylemon-nezuko.mp4",
+      "sha256": "c787de2b4db78c2598ee352108851657bf72618cb5e9ff59f8107d29407249dd",
+      "duration": 5.12,
+      "dimensions": [
+        498,
+        280
+      ],
+      "description": "a little girl with a bow in her hair is being held up by a man",
+      "publisher": "roseylemon",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "16301745553804762310",
+          "title": "a little girl with a bow in her hair is being held up by a man",
+          "source_url": "https://tenor.com/view/roseylemon-nezuko-nezuko-kamado-tanjirou-tanjirou-kamado-gif-16301745553804762310",
+          "download_url": "https://media.tenor.com/4jtvNflWHMYAAAPo/roseylemon-nezuko.mp4",
+          "duration": 5.1,
+          "width": 498,
+          "height": 280,
+          "publisher": "roseylemon",
+          "provider": "tenor"
+        },
+        {
+          "id": "587996263567087862",
+          "title": "a boy and a girl are standing next to each other in a forest",
+          "source_url": "https://tenor.com/view/demon-slayer-demon-slayer-s3-demon-slayer-season-3-kimetsu-no-yaiba-kimetsu-no-yaiba-s3-gif-587996263567087862",
+          "download_url": "https://media.tenor.com/CCj7fIMsWPYAAAPo/demon-slayer-demon-slayer-s3.mp4",
+          "duration": 4.9,
+          "width": 498,
+          "height": 282,
+          "publisher": "Moars",
+          "provider": "tenor"
+        },
+        {
+          "id": "12766658425091910243",
+          "title": "a girl with a mask on her face is standing in the dark .",
+          "source_url": "https://tenor.com/view/nezuka-demon-slayer-demon-slayer-memes-kick-axe-kick-gif-12766658425091910243",
+          "download_url": "https://media.tenor.com/sSxIMmxZ6mMAAAPo/nezuka-demon-slayer.mp4",
+          "duration": 5.1,
+          "width": 376,
+          "height": 282,
+          "publisher": "cronaandragnarok",
+          "provider": "tenor"
+        },
+        {
+          "id": "2356627549508292588",
+          "title": "a close up of a girl with red eyes and a horn on her head",
+          "source_url": "https://tenor.com/view/demon-slayer-demon-slayer-s3-demon-slayer-season-3-kimetsu-no-yaiba-kimetsu-no-yaiba-s3-gif-2356627549508292588",
+          "download_url": "https://media.tenor.com/ILRsRTRXT-wAAAPo/demon-slayer-demon-slayer-s3.mp4",
+          "duration": 2.3,
+          "width": 498,
+          "height": 282,
+          "publisher": "Moars",
+          "provider": "tenor"
+        },
+        {
+          "id": "13849205931738553820",
+          "title": "a close up of a girl with red eyes and purple hair",
+          "source_url": "https://tenor.com/view/demon-slayer-demon-slayer-season-2-demon-slayer-s2-kimetsu-no-yaiba-kimetsu-no-yaiba-s2-gif-13849205931738553820",
+          "download_url": "https://media.tenor.com/wDJDay6CXdwAAAPo/demon-slayer-demon-slayer-season-2.mp4",
+          "duration": 3.5,
+          "width": 498,
+          "height": 282,
+          "publisher": "Moars",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "nezuko",
+      "visual_intent": "Nezuko as Tanjiro family and empathy context"
+    },
+    {
+      "id": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu",
+      "file": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu.mp4",
+      "type": "video",
+      "query": "Zenitsu Demon Slayer scared",
+      "source_url": "https://tenor.com/view/zenitsu-zenitsu-agatsuma-kimetsu-kimetsu-no-yaiba-demon-slayer-gif-21548151",
+      "download_url": "https://media.tenor.com/Bnut8u5_IZ8AAAPo/zenitsu-zenitsu-agatsuma.mp4",
+      "sha256": "14f66190f1f86db1d2f1d0b54d2e88b9a7c61527e5ad27e06911431be9990323",
+      "duration": 2.466667,
+      "dimensions": [
+        458,
+        640
+      ],
+      "description": "a close up of a cartoon character with a surprised face .",
+      "publisher": "crishulse",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "11614559232316866487",
+          "title": "a close up of a person 's face with their tongue hanging out",
+          "source_url": "https://tenor.com/view/demon-slayer-kimetsu-no-yaiba-zenitsu-demon-slayer-zenitsu-surprise-gif-11614559232316866487",
+          "download_url": "https://media.tenor.com/oS80FdD6_7cAAAPo/demon-slayer-kimetsu-no-yaiba.mp4",
+          "duration": 1.9,
+          "width": 498,
+          "height": 280,
+          "publisher": "Jacobar",
+          "provider": "tenor"
+        },
+        {
+          "id": "2082106266527672637",
+          "title": "a cartoon character with a surprised look on his face is holding a piece of cake",
+          "source_url": "https://tenor.com/view/zenitsu-demon-slayer-gif-2082106266527672637",
+          "download_url": "https://media.tenor.com/HOUgnjD_KT0AAAPo/zenitsu-demon-slayer.mp4",
+          "duration": 1.4,
+          "width": 498,
+          "height": 498,
+          "publisher": "Ilovesillycats",
+          "provider": "tenor"
+        },
+        {
+          "id": "6063233828992172981",
+          "title": "a yellow haired anime character is crying with his hands on his chest",
+          "source_url": "https://tenor.com/view/aaa-gif-6063233828992172981",
+          "download_url": "https://media.tenor.com/VCTvCwc1w7UAAAPo/aaa.mp4",
+          "duration": 0.8,
+          "width": 498,
+          "height": 280,
+          "publisher": "dfariadg",
+          "provider": "tenor"
+        },
+        {
+          "id": "467158245257978271",
+          "title": "a close up of a cartoon character with a surprised face .",
+          "source_url": "https://tenor.com/view/zenitsu-zenitsu-agatsuma-kimetsu-kimetsu-no-yaiba-demon-slayer-gif-21548151",
+          "download_url": "https://media.tenor.com/Bnut8u5_IZ8AAAPo/zenitsu-zenitsu-agatsuma.mp4",
+          "duration": 2.5,
+          "width": 458,
+          "height": 640,
+          "publisher": "crishulse",
+          "provider": "tenor"
+        },
+        {
+          "id": "4421499921498595590",
+          "title": "a group of anime characters standing next to each other with a pig in the background",
+          "source_url": "https://tenor.com/view/zenitsu-zenitsu-agatsuma-kimetsu-kimetsu-no-yaiba-demon-slayer-gif-21548144",
+          "download_url": "https://media.tenor.com/PVxSwKNXYQYAAAPo/zenitsu-zenitsu-agatsuma.mp4",
+          "duration": 1.1,
+          "width": 562,
+          "height": 640,
+          "publisher": "crishulse",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "zenitsu",
+      "visual_intent": "Zenitsu reacting to frightening circumstances"
+    }
+  ],
+  "scenes": [
+    {
+      "text": "What if Tanjiro could hear demons' thoughts? The universe added notifications with no mute button available.",
+      "label": "THE WORST GROUP CHAT",
+      "start": 0.0,
+      "end": 4.959765297569153,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro listening and thinking; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "This is an invented ability. Understanding suffering might help him protect people.",
+      "label": "A FAN MADE EXTRA ABILITY",
+      "start": 4.959765297569153,
+      "end": 8.862810841017044,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-nezuko",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Nezuko as Tanjiro family and empathy context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Instead, fear and memories arrive together. Welcome to a cursed open-plan office. Terrible acoustics.",
+      "label": "TOO MUCH INFORMATION",
+      "start": 8.862810841017044,
+      "end": 13.754400670578374,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro listening and thinking; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Zenitsu asks if it helps, screams. Outstanding. His own emergency broadcast system.",
+      "label": "ZENITSU WOULD LIKE TO DECLINE",
+      "start": 13.754400670578374,
+      "end": 18.15171835708298,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Zenitsu reacting to frightening circumstances; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Zenitsu reacting to frightening circumstances; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "A demon thinks it means no harm. Reassuring, except hearing a thought doesn't make it reliable.",
+      "label": "A DANGEROUS ASSUMPTION",
+      "start": 18.15171835708298,
+      "end": 22.702430846605196,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-fight",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro protecting people in battle; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Frightened people can hurt others. Confident memories can mislead. Empathy still needs evidence and practical boundaries.",
+      "label": "EMPATHY NEEDS EVIDENCE",
+      "start": 22.702430846605196,
+      "end": 28.565521095278008,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro listening and thinking; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Nezuko reminds him why he cares. Someone can deserve compassion without everybody else surrendering their safety.",
+      "label": "REMEMBER THE PERSON",
+      "start": 28.565521095278008,
+      "end": 34.00251466890193,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-nezuko",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Nezuko as Tanjiro family and empathy context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-nezuko",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Nezuko as Tanjiro family and empathy context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "He protects bystanders first, then listens. He installed a firewall on that enormous heart.",
+      "label": "PROTECT FIRST LISTEN TOO",
+      "start": 34.00251466890193,
+      "end": 38.280525286392844,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-fight",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro protecting people in battle; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "A hidden memory suggests a missing person's location. He checks instead of trusting blindly. The ability helps.",
+      "label": "USE THE DETAIL",
+      "start": 38.280525286392844,
+      "end": 43.75160659402068,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro listening and thinking; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Zenitsu asks if Tanjiro can mute him. Different species, brother. Your volume is a local government issue.",
+      "label": "THE COMPLAINT DEPARTMENT",
+      "start": 43.75160659402068,
+      "end": 49.10338083263481,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Zenitsu reacting to frightening circumstances; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Zenitsu reacting to frightening circumstances; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Zenitsu reacting to frightening circumstances; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Understanding doesn't promise agreement or painless solutions. The new ability changes his choices, not every consequence outside.",
+      "label": "NO PERFECT EASY ENDING",
+      "start": 49.10338083263481,
+      "end": 55.494830958368254,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-fight",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro protecting people in battle; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-fight",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro protecting people in battle; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Tanjiro keeps his kindness and learns restraint. The upgrade wasn't hearing everything. It was knowing when to listen.",
+      "label": "KEEP THE HEART ADD SETTINGS",
+      "start": 55.494830958368254,
+      "end": 61.0,
+      "shots": [
+        {
+          "asset": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Tanjiro listening and thinking; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    }
+  ],
+  "video_only": true,
+  "single_pass": true,
+  "enhancement": "anime-light",
+  "source_credit": "IFVERSE ANIME / FAN-MADE WHAT-IF",
+  "publishing_authorized": false,
+  "narration_sha256": "f79d9e1497c3c5e142e2b8f6fa02fc817d48edf738bc4e0ae80d5b66c6b3868d",
+  "caption_segments": [
+    {
+      "start": 0,
+      "end": 1.02,
+      "text": "What if Tanjiro could hear"
+    },
+    {
+      "start": 1.02,
+      "end": 2.18,
+      "text": "demons' thoughts?"
+    },
+    {
+      "start": 2.18,
+      "end": 3.68,
+      "text": "The universe added notifications with"
+    },
+    {
+      "start": 3.68,
+      "end": 5.1,
+      "text": "no mute button available."
+    },
+    {
+      "start": 5.1,
+      "end": 6.68,
+      "text": "This is an invented ability."
+    },
+    {
+      "start": 6.68,
+      "end": 8.08,
+      "text": "Understanding suffering might help him"
+    },
+    {
+      "start": 8.08,
+      "end": 9.06,
+      "text": "protect people."
+    },
+    {
+      "start": 9.06,
+      "end": 10.0,
+      "text": "Instead, fear and memories arrive"
+    },
+    {
+      "start": 10.0,
+      "end": 10.9,
+      "text": "together."
+    },
+    {
+      "start": 10.9,
+      "end": 11.82,
+      "text": "Welcome to a cursed open"
+    },
+    {
+      "start": 11.82,
+      "end": 12.84,
+      "text": "-plan office."
+    },
+    {
+      "start": 12.84,
+      "end": 13.86,
+      "text": "Terrible acoustics."
+    },
+    {
+      "start": 13.86,
+      "end": 14.94,
+      "text": "Zenitsu asks if it helps,"
+    },
+    {
+      "start": 14.94,
+      "end": 15.6,
+      "text": "screams."
+    },
+    {
+      "start": 15.6,
+      "end": 16.44,
+      "text": "Outstanding."
+    },
+    {
+      "start": 16.44,
+      "end": 18.24,
+      "text": "His own emergency broadcast system."
+    },
+    {
+      "start": 18.24,
+      "end": 18.94,
+      "text": "A demon thinks it means"
+    },
+    {
+      "start": 18.94,
+      "end": 20.06,
+      "text": "no harm."
+    },
+    {
+      "start": 20.06,
+      "end": 21.56,
+      "text": "Reassuring, except hearing a thought"
+    },
+    {
+      "start": 21.56,
+      "end": 22.702430846605196,
+      "text": "doesn't make it reliable."
+    },
+    {
+      "start": 22.702430846605196,
+      "end": 24.3424375,
+      "text": "Frightened people can hurt others."
+    },
+    {
+      "start": 24.3424375,
+      "end": 26.1624375,
+      "text": "Confident memories can mislead."
+    },
+    {
+      "start": 26.1624375,
+      "end": 27.4824375,
+      "text": "Empathy still needs evidence and"
+    },
+    {
+      "start": 27.4824375,
+      "end": 28.6224375,
+      "text": "practical boundaries."
+    },
+    {
+      "start": 28.6224375,
+      "end": 29.8424375,
+      "text": "Nezuko reminds him why he"
+    },
+    {
+      "start": 29.8424375,
+      "end": 30.6424375,
+      "text": "cares."
+    },
+    {
+      "start": 30.6424375,
+      "end": 32.1024375,
+      "text": "Someone can deserve compassion without"
+    },
+    {
+      "start": 32.1024375,
+      "end": 34.0424375,
+      "text": "everybody else surrendering their safety."
+    },
+    {
+      "start": 34.0424375,
+      "end": 35.5424375,
+      "text": "He protects bystanders first, then"
+    },
+    {
+      "start": 35.5424375,
+      "end": 36.7024375,
+      "text": "listens."
+    },
+    {
+      "start": 36.7024375,
+      "end": 37.4224375,
+      "text": "He installed a firewall on"
+    },
+    {
+      "start": 37.4224375,
+      "end": 38.382437499999995,
+      "text": "that enormous heart."
+    },
+    {
+      "start": 38.382437499999995,
+      "end": 39.5024375,
+      "text": "A hidden memory suggests a"
+    },
+    {
+      "start": 39.5024375,
+      "end": 41.0024375,
+      "text": "missing person's location."
+    },
+    {
+      "start": 41.0024375,
+      "end": 42.0024375,
+      "text": "He checks instead of trusting"
+    },
+    {
+      "start": 42.0024375,
+      "end": 42.902437500000005,
+      "text": "blindly."
+    },
+    {
+      "start": 42.902437500000005,
+      "end": 43.75160659402068,
+      "text": "The ability helps."
+    },
+    {
+      "start": 43.75160659402068,
+      "end": 45.251625,
+      "text": "Zenitsu asks if Tanjiro can"
+    },
+    {
+      "start": 45.251625,
+      "end": 46.191625,
+      "text": "mute him."
+    },
+    {
+      "start": 46.191625,
+      "end": 47.331624999999995,
+      "text": "Different species, brother."
+    },
+    {
+      "start": 47.331624999999995,
+      "end": 48.171625,
+      "text": "Your volume is a local"
+    },
+    {
+      "start": 48.171625,
+      "end": 49.411625,
+      "text": "government issue."
+    },
+    {
+      "start": 49.411625,
+      "end": 50.811625,
+      "text": "Understanding doesn't promise agreement or"
+    },
+    {
+      "start": 50.811625,
+      "end": 52.251625,
+      "text": "painless solutions."
+    },
+    {
+      "start": 52.251625,
+      "end": 53.271625,
+      "text": "The new ability changes his"
+    },
+    {
+      "start": 53.271625,
+      "end": 55.511624999999995,
+      "text": "choices, not every consequence outside."
+    },
+    {
+      "start": 55.511624999999995,
+      "end": 56.951625,
+      "text": "Tanjiro keeps his kindness and"
+    },
+    {
+      "start": 56.951625,
+      "end": 58.211625,
+      "text": "learns restraint."
+    },
+    {
+      "start": 58.211625,
+      "end": 59.871624999999995,
+      "text": "The upgrade wasn't hearing everything."
+    },
+    {
+      "start": 59.871624999999995,
+      "end": 60.971625,
+      "text": "It was knowing when to listen."
+    }
+  ]
+}

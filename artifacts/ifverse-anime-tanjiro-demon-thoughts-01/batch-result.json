@@ -1,0 +1,45 @@
+{
+  "id": "ifverse-anime-tanjiro-demon-thoughts-01",
+  "batch_id": "ifverse-anime-ten-61s-20261103-01",
+  "status": "success",
+  "script_sha256": "ffa0c94df15acca3d6f6a1f7c1be949ca41d1a28376bb301cc7300d2e5849d19",
+  "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-r2",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "video": "production/sound-effects/video-sfx.mp4",
+  "video_sha256": "cfdee66e22a2034cc127082fe52cd2dfa3c65f17081bc4af05380a679d563828",
+  "duration_seconds": 61.0,
+  "frame_size": [
+    720,
+    1280
+  ],
+  "source_count": 4,
+  "source_use_status": "unverified",
+  "sound_catalog": "assets/sfx/catalog.json",
+  "sound_rights": "documented_public_domain",
+  "technical_receipt": "production/result.json",
+  "audiovisual_editorial_review": "pending",
+  "metadata": {
+    "title": "What if Tanjiro could hear demons' thoughts?",
+    "description": "Tanjiro gains hypothetical access to demon thoughts and learns that empathy is useful but thoughts do not guarantee honesty or harmlessness.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #DemonSlayer\n\nIllustrative clip sources:\nhttps://tenor.com/view/demon-slayer-muichiro-nezuko-tanjiro-hmm-gif-3820576342094348835\nhttps://tenor.com/view/kimetsu-no-yaiba-tanjiro-episode19-flame-hinokami-kagura-gif-14756167\nhttps://tenor.com/view/roseylemon-nezuko-nezuko-kamado-tanjirou-tanjirou-kamado-gif-16301745553804762310\nhttps://tenor.com/view/zenitsu-zenitsu-agatsuma-kimetsu-kimetsu-no-yaiba-demon-slayer-gif-21548151",
+    "tags": [
+      "anime what if",
+      "Demon Slayer",
+      "Tanjiro",
+      "Nezuko",
+      "Zenitsu",
+      "Ifverse Anime"
+    ],
+    "hashtags": [
+      "Shorts",
+      "Anime",
+      "WhatIf",
+      "DemonSlayer"
+    ],
+    "categoryId": "24",
+    "defaultLanguage": "en",
+    "defaultAudioLanguage": "en"
+  },
+  "posting_packet": "post-settings.json",
+  "music_embedded": false
+}

@@ -1,0 +1,79 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.02,Caption,,0,0,0,,What if Tanjiro could hear
+Dialogue: 0,0:00:01.02,0:00:02.18,Caption,,0,0,0,,demons' thoughts?
+Dialogue: 0,0:00:02.18,0:00:03.68,Caption,,0,0,0,,The universe added notifications\Nwith
+Dialogue: 0,0:00:03.68,0:00:05.10,Caption,,0,0,0,,no mute button available.
+Dialogue: 0,0:00:05.10,0:00:06.68,Caption,,0,0,0,,This is an invented ability.
+Dialogue: 0,0:00:06.68,0:00:08.08,Caption,,0,0,0,,Understanding suffering might\Nhelp him
+Dialogue: 0,0:00:08.08,0:00:09.06,Caption,,0,0,0,,protect people.
+Dialogue: 0,0:00:09.06,0:00:10.00,Caption,,0,0,0,,Instead, fear and memories\Narrive
+Dialogue: 0,0:00:10.00,0:00:10.90,Caption,,0,0,0,,together.
+Dialogue: 0,0:00:10.90,0:00:11.82,Caption,,0,0,0,,Welcome to a cursed open
+Dialogue: 0,0:00:11.82,0:00:12.84,Caption,,0,0,0,,-plan office.
+Dialogue: 0,0:00:12.84,0:00:13.86,Caption,,0,0,0,,Terrible acoustics.
+Dialogue: 0,0:00:13.86,0:00:14.94,Caption,,0,0,0,,Zenitsu asks if it helps,
+Dialogue: 0,0:00:14.94,0:00:15.60,Caption,,0,0,0,,screams.
+Dialogue: 0,0:00:15.60,0:00:16.44,Caption,,0,0,0,,Outstanding.
+Dialogue: 0,0:00:16.44,0:00:18.24,Caption,,0,0,0,,His own emergency broadcast\Nsystem.
+Dialogue: 0,0:00:18.24,0:00:18.94,Caption,,0,0,0,,A demon thinks it means
+Dialogue: 0,0:00:18.94,0:00:20.06,Caption,,0,0,0,,no harm.
+Dialogue: 0,0:00:20.06,0:00:21.56,Caption,,0,0,0,,Reassuring, except hearing a\Nthought
+Dialogue: 0,0:00:21.56,0:00:22.70,Caption,,0,0,0,,doesn't make it reliable.
+Dialogue: 0,0:00:22.70,0:00:24.34,Caption,,0,0,0,,Frightened people can hurt\Nothers.
+Dialogue: 0,0:00:24.34,0:00:26.16,Caption,,0,0,0,,Confident memories can mislead.
+Dialogue: 0,0:00:26.16,0:00:27.48,Caption,,0,0,0,,Empathy still needs evidence and
+Dialogue: 0,0:00:27.48,0:00:28.62,Caption,,0,0,0,,practical boundaries.
+Dialogue: 0,0:00:28.62,0:00:29.84,Caption,,0,0,0,,Nezuko reminds him why he
+Dialogue: 0,0:00:29.84,0:00:30.64,Caption,,0,0,0,,cares.
+Dialogue: 0,0:00:30.64,0:00:32.10,Caption,,0,0,0,,Someone can deserve compassion\Nwithout
+Dialogue: 0,0:00:32.10,0:00:34.04,Caption,,0,0,0,,everybody else surrendering\Ntheir safety.
+Dialogue: 0,0:00:34.04,0:00:35.54,Caption,,0,0,0,,He protects bystanders first,\Nthen
+Dialogue: 0,0:00:35.54,0:00:36.70,Caption,,0,0,0,,listens.
+Dialogue: 0,0:00:36.70,0:00:37.42,Caption,,0,0,0,,He installed a firewall on
+Dialogue: 0,0:00:37.42,0:00:38.38,Caption,,0,0,0,,that enormous heart.
+Dialogue: 0,0:00:38.38,0:00:39.50,Caption,,0,0,0,,A hidden memory suggests a
+Dialogue: 0,0:00:39.50,0:00:41.00,Caption,,0,0,0,,missing person's location.
+Dialogue: 0,0:00:41.00,0:00:42.00,Caption,,0,0,0,,He checks instead of trusting
+Dialogue: 0,0:00:42.00,0:00:42.90,Caption,,0,0,0,,blindly.
+Dialogue: 0,0:00:42.90,0:00:43.75,Caption,,0,0,0,,The ability helps.
+Dialogue: 0,0:00:43.75,0:00:45.25,Caption,,0,0,0,,Zenitsu asks if Tanjiro can
+Dialogue: 0,0:00:45.25,0:00:46.19,Caption,,0,0,0,,mute him.
+Dialogue: 0,0:00:46.19,0:00:47.33,Caption,,0,0,0,,Different species, brother.
+Dialogue: 0,0:00:47.33,0:00:48.17,Caption,,0,0,0,,Your volume is a local
+Dialogue: 0,0:00:48.17,0:00:49.41,Caption,,0,0,0,,government issue.
+Dialogue: 0,0:00:49.41,0:00:50.81,Caption,,0,0,0,,Understanding doesn't promise\Nagreement or
+Dialogue: 0,0:00:50.81,0:00:52.25,Caption,,0,0,0,,painless solutions.
+Dialogue: 0,0:00:52.25,0:00:53.27,Caption,,0,0,0,,The new ability changes his
+Dialogue: 0,0:00:53.27,0:00:55.51,Caption,,0,0,0,,choices, not every consequence\Noutside.
+Dialogue: 0,0:00:55.51,0:00:56.95,Caption,,0,0,0,,Tanjiro keeps his kindness and
+Dialogue: 0,0:00:56.95,0:00:58.21,Caption,,0,0,0,,learns restraint.
+Dialogue: 0,0:00:58.21,0:00:59.87,Caption,,0,0,0,,The upgrade wasn't hearing\Neverything.
+Dialogue: 0,0:00:59.87,0:01:00.97,Caption,,0,0,0,,It was knowing when to listen.
+Dialogue: 1,0:00:00.00,0:00:04.96,Heading,,0,0,0,,THE WORST GROUP CHAT
+Dialogue: 1,0:00:04.96,0:00:08.86,Heading,,0,0,0,,A FAN MADE EXTRA ABILITY
+Dialogue: 1,0:00:08.86,0:00:13.75,Heading,,0,0,0,,TOO MUCH INFORMATION
+Dialogue: 1,0:00:13.75,0:00:18.15,Heading,,0,0,0,,ZENITSU WOULD LIKE TO DECLINE
+Dialogue: 1,0:00:18.15,0:00:22.70,Heading,,0,0,0,,A DANGEROUS ASSUMPTION
+Dialogue: 1,0:00:22.70,0:00:28.57,Heading,,0,0,0,,EMPATHY NEEDS EVIDENCE
+Dialogue: 1,0:00:28.57,0:00:34.00,Heading,,0,0,0,,REMEMBER THE PERSON
+Dialogue: 1,0:00:34.00,0:00:38.28,Heading,,0,0,0,,PROTECT FIRST LISTEN TOO
+Dialogue: 1,0:00:38.28,0:00:43.75,Heading,,0,0,0,,USE THE DETAIL
+Dialogue: 1,0:00:43.75,0:00:49.10,Heading,,0,0,0,,THE COMPLAINT DEPARTMENT
+Dialogue: 1,0:00:49.10,0:00:55.49,Heading,,0,0,0,,NO PERFECT EASY ENDING
+Dialogue: 1,0:00:55.49,0:01:01.00,Heading,,0,0,0,,KEEP THE HEART ADD SETTINGS
+Dialogue: 1,0:00:00.00,0:01:01.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:01.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF

@@ -1,0 +1,101 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "tts_speed": 1.18,
+  "device": "cpu",
+  "new_test_version": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.959765297569153,
+      "text": "What if Tanjiro could hear demons' thoughts? The universe added notifications with no mute button available.",
+      "label": "THE WORST GROUP CHAT"
+    },
+    {
+      "start": 4.959765297569153,
+      "end": 8.862810841017044,
+      "text": "This is an invented ability. Understanding suffering might help him protect people.",
+      "label": "A FAN MADE EXTRA ABILITY"
+    },
+    {
+      "start": 8.862810841017044,
+      "end": 13.754400670578374,
+      "text": "Instead, fear and memories arrive together. Welcome to a cursed open-plan office. Terrible acoustics.",
+      "label": "TOO MUCH INFORMATION"
+    },
+    {
+      "start": 13.754400670578374,
+      "end": 18.15171835708298,
+      "text": "Zenitsu asks if it helps, screams. Outstanding. His own emergency broadcast system.",
+      "label": "ZENITSU WOULD LIKE TO DECLINE"
+    },
+    {
+      "start": 18.15171835708298,
+      "end": 22.702430846605196,
+      "text": "A demon thinks it means no harm. Reassuring, except hearing a thought doesn't make it reliable.",
+      "label": "A DANGEROUS ASSUMPTION"
+    },
+    {
+      "start": 22.702430846605196,
+      "end": 28.565521095278008,
+      "text": "Frightened people can hurt others. Confident memories can mislead. Empathy still needs evidence and practical boundaries.",
+      "label": "EMPATHY NEEDS EVIDENCE"
+    },
+    {
+      "start": 28.565521095278008,
+      "end": 34.00251466890193,
+      "text": "Nezuko reminds him why he cares. Someone can deserve compassion without everybody else surrendering their safety.",
+      "label": "REMEMBER THE PERSON"
+    },
+    {
+      "start": 34.00251466890193,
+      "end": 38.280525286392844,
+      "text": "He protects bystanders first, then listens. He installed a firewall on that enormous heart.",
+      "label": "PROTECT FIRST LISTEN TOO"
+    },
+    {
+      "start": 38.280525286392844,
+      "end": 43.75160659402068,
+      "text": "A hidden memory suggests a missing person's location. He checks instead of trusting blindly. The ability helps.",
+      "label": "USE THE DETAIL"
+    },
+    {
+      "start": 43.75160659402068,
+      "end": 49.10338083263481,
+      "text": "Zenitsu asks if Tanjiro can mute him. Different species, brother. Your volume is a local government issue.",
+      "label": "THE COMPLAINT DEPARTMENT"
+    },
+    {
+      "start": 49.10338083263481,
+      "end": 55.494830958368254,
+      "text": "Understanding doesn't promise agreement or painless solutions. The new ability changes his choices, not every consequence outside.",
+      "label": "NO PERFECT EASY ENDING"
+    },
+    {
+      "start": 55.494830958368254,
+      "end": 61.0,
+      "text": "Tanjiro keeps his kindness and learns restraint. The upgrade wasn't hearing everything. It was knowing when to listen.",
+      "label": "KEEP THE HEART ADD SETTINGS"
+    }
+  ],
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  },
+  "duration_adjustment": {
+    "original_seconds": 76.352,
+    "target_seconds": 61,
+    "actual_seconds": 61.0,
+    "tempo": 1.251672131147541,
+    "original_sha256": "6bf80e7d1c3b6e370fa2f744da852e2bc88f22ece04daf651000f484483d6ba9",
+    "pitch_preserved": true
+  },
+  "sha256": "f79d9e1497c3c5e142e2b8f6fa02fc817d48edf738bc4e0ae80d5b66c6b3868d"
+}

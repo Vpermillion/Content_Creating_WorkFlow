@@ -1,0 +1,1384 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "f79d9e1497c3c5e142e2b8f6fa02fc817d48edf738bc4e0ae80d5b66c6b3868d",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.1,
+      "probability": 5.515158409252763e-05
+    },
+    {
+      "word": "if",
+      "start": 0.1,
+      "end": 0.18,
+      "probability": 0.9802122116088867
+    },
+    {
+      "word": "Tanjiro",
+      "start": 0.18,
+      "end": 0.7,
+      "probability": 0.6722523321708044
+    },
+    {
+      "word": "could",
+      "start": 0.7,
+      "end": 0.88,
+      "probability": 0.9451587200164795
+    },
+    {
+      "word": "hear",
+      "start": 0.88,
+      "end": 1.02,
+      "probability": 0.9897616505622864
+    },
+    {
+      "word": "demons'",
+      "start": 1.02,
+      "end": 1.44,
+      "probability": 0.11271874606609344
+    },
+    {
+      "word": "thoughts?",
+      "start": 1.44,
+      "end": 2.18,
+      "probability": 0.9950513243675232
+    },
+    {
+      "word": "The",
+      "start": 2.18,
+      "end": 2.2,
+      "probability": 0.8622731566429138
+    },
+    {
+      "word": "universe",
+      "start": 2.2,
+      "end": 2.38,
+      "probability": 0.9400088787078857
+    },
+    {
+      "word": "added",
+      "start": 2.38,
+      "end": 2.74,
+      "probability": 0.9926615953445435
+    },
+    {
+      "word": "notifications",
+      "start": 2.74,
+      "end": 3.24,
+      "probability": 0.9654073715209961
+    },
+    {
+      "word": "with",
+      "start": 3.24,
+      "end": 3.68,
+      "probability": 0.9494673013687134
+    },
+    {
+      "word": "no",
+      "start": 3.68,
+      "end": 3.88,
+      "probability": 0.9571180939674377
+    },
+    {
+      "word": "mute",
+      "start": 3.88,
+      "end": 4.1,
+      "probability": 0.9407228231430054
+    },
+    {
+      "word": "button",
+      "start": 4.1,
+      "end": 4.36,
+      "probability": 0.9822826981544495
+    },
+    {
+      "word": "available.",
+      "start": 4.36,
+      "end": 5.1,
+      "probability": 0.9969923496246338
+    },
+    {
+      "word": "This",
+      "start": 5.1,
+      "end": 5.1,
+      "probability": 0.9375717043876648
+    },
+    {
+      "word": "is",
+      "start": 5.1,
+      "end": 5.24,
+      "probability": 0.9676861763000488
+    },
+    {
+      "word": "an",
+      "start": 5.24,
+      "end": 5.4,
+      "probability": 0.9939711689949036
+    },
+    {
+      "word": "invented",
+      "start": 5.4,
+      "end": 5.74,
+      "probability": 0.8393754363059998
+    },
+    {
+      "word": "ability.",
+      "start": 5.74,
+      "end": 6.68,
+      "probability": 0.9872309565544128
+    },
+    {
+      "word": "Understanding",
+      "start": 6.68,
+      "end": 6.9,
+      "probability": 0.9723635911941528
+    },
+    {
+      "word": "suffering",
+      "start": 6.9,
+      "end": 7.42,
+      "probability": 0.9074889421463013
+    },
+    {
+      "word": "might",
+      "start": 7.42,
+      "end": 7.72,
+      "probability": 0.9936655163764954
+    },
+    {
+      "word": "help",
+      "start": 7.72,
+      "end": 7.94,
+      "probability": 0.9994891881942749
+    },
+    {
+      "word": "him",
+      "start": 7.94,
+      "end": 8.08,
+      "probability": 0.9965630173683167
+    },
+    {
+      "word": "protect",
+      "start": 8.08,
+      "end": 8.3,
+      "probability": 0.9906517267227173
+    },
+    {
+      "word": "people.",
+      "start": 8.3,
+      "end": 9.06,
+      "probability": 0.9982417821884155
+    },
+    {
+      "word": "Instead,",
+      "start": 9.06,
+      "end": 9.08,
+      "probability": 0.9956924319267273
+    },
+    {
+      "word": "fear",
+      "start": 9.08,
+      "end": 9.36,
+      "probability": 0.9974561333656311
+    },
+    {
+      "word": "and",
+      "start": 9.36,
+      "end": 9.52,
+      "probability": 0.9950451850891113
+    },
+    {
+      "word": "memories",
+      "start": 9.52,
+      "end": 9.74,
+      "probability": 0.9916050434112549
+    },
+    {
+      "word": "arrive",
+      "start": 9.74,
+      "end": 10.0,
+      "probability": 0.9491326212882996
+    },
+    {
+      "word": "together.",
+      "start": 10.0,
+      "end": 10.9,
+      "probability": 0.9975733160972595
+    },
+    {
+      "word": "Welcome",
+      "start": 10.9,
+      "end": 11.08,
+      "probability": 0.9323606491088867
+    },
+    {
+      "word": "to",
+      "start": 11.08,
+      "end": 11.26,
+      "probability": 0.9983609318733215
+    },
+    {
+      "word": "a",
+      "start": 11.26,
+      "end": 11.36,
+      "probability": 0.9690704345703125
+    },
+    {
+      "word": "cursed",
+      "start": 11.36,
+      "end": 11.58,
+      "probability": 0.9641880989074707
+    },
+    {
+      "word": "open",
+      "start": 11.58,
+      "end": 11.82,
+      "probability": 0.9029682874679565
+    },
+    {
+      "word": "-plan",
+      "start": 11.82,
+      "end": 12.04,
+      "probability": 0.6000572144985199
+    },
+    {
+      "word": "office.",
+      "start": 12.04,
+      "end": 12.84,
+      "probability": 0.9968181848526001
+    },
+    {
+      "word": "Terrible",
+      "start": 12.84,
+      "end": 13.06,
+      "probability": 0.9765141010284424
+    },
+    {
+      "word": "acoustics.",
+      "start": 13.06,
+      "end": 13.86,
+      "probability": 0.9864275654157003
+    },
+    {
+      "word": "Zenitsu",
+      "start": 13.86,
+      "end": 13.94,
+      "probability": 0.5773110464215279
+    },
+    {
+      "word": "asks",
+      "start": 13.94,
+      "end": 14.28,
+      "probability": 0.9918590188026428
+    },
+    {
+      "word": "if",
+      "start": 14.28,
+      "end": 14.52,
+      "probability": 0.9785229563713074
+    },
+    {
+      "word": "it",
+      "start": 14.52,
+      "end": 14.58,
+      "probability": 0.9966790676116943
+    },
+    {
+      "word": "helps,",
+      "start": 14.58,
+      "end": 14.94,
+      "probability": 0.9759373664855957
+    },
+    {
+      "word": "screams.",
+      "start": 14.94,
+      "end": 15.6,
+      "probability": 0.7807636857032776
+    },
+    {
+      "word": "Outstanding.",
+      "start": 15.6,
+      "end": 16.44,
+      "probability": 0.9787880480289459
+    },
+    {
+      "word": "His",
+      "start": 16.44,
+      "end": 16.5,
+      "probability": 0.99114990234375
+    },
+    {
+      "word": "own",
+      "start": 16.5,
+      "end": 16.66,
+      "probability": 0.9943116903305054
+    },
+    {
+      "word": "emergency",
+      "start": 16.66,
+      "end": 17.12,
+      "probability": 0.9602325558662415
+    },
+    {
+      "word": "broadcast",
+      "start": 17.12,
+      "end": 17.52,
+      "probability": 0.9661899209022522
+    },
+    {
+      "word": "system.",
+      "start": 17.52,
+      "end": 18.24,
+      "probability": 0.9960557222366333
+    },
+    {
+      "word": "A",
+      "start": 18.24,
+      "end": 18.26,
+      "probability": 0.9362326264381409
+    },
+    {
+      "word": "demon",
+      "start": 18.26,
+      "end": 18.42,
+      "probability": 0.9905305504798889
+    },
+    {
+      "word": "thinks",
+      "start": 18.42,
+      "end": 18.7,
+      "probability": 0.9900506138801575
+    },
+    {
+      "word": "it",
+      "start": 18.7,
+      "end": 18.82,
+      "probability": 0.9884853363037109
+    },
+    {
+      "word": "means",
+      "start": 18.82,
+      "end": 18.94,
+      "probability": 0.9929856657981873
+    },
+    {
+      "word": "no",
+      "start": 18.94,
+      "end": 19.22,
+      "probability": 0.8584743738174438
+    },
+    {
+      "word": "harm.",
+      "start": 19.22,
+      "end": 20.06,
+      "probability": 0.9995574355125427
+    },
+    {
+      "word": "Reassuring,",
+      "start": 20.06,
+      "end": 20.7,
+      "probability": 0.8853789965311686
+    },
+    {
+      "word": "except",
+      "start": 20.7,
+      "end": 20.84,
+      "probability": 0.9437755942344666
+    },
+    {
+      "word": "hearing",
+      "start": 20.84,
+      "end": 21.18,
+      "probability": 0.9926592707633972
+    },
+    {
+      "word": "a",
+      "start": 21.18,
+      "end": 21.34,
+      "probability": 0.9891560077667236
+    },
+    {
+      "word": "thought",
+      "start": 21.34,
+      "end": 21.56,
+      "probability": 0.9897668957710266
+    },
+    {
+      "word": "doesn't",
+      "start": 21.56,
+      "end": 21.9,
+      "probability": 0.9904142022132874
+    },
+    {
+      "word": "make",
+      "start": 21.9,
+      "end": 22.02,
+      "probability": 0.998052716255188
+    },
+    {
+      "word": "it",
+      "start": 22.02,
+      "end": 22.12,
+      "probability": 0.9967363476753235
+    },
+    {
+      "word": "reliable.",
+      "start": 22.12,
+      "end": 22.702430846605196,
+      "probability": 0.9905023574829102
+    },
+    {
+      "word": "Frightened",
+      "start": 22.702430846605196,
+      "end": 23.0224375,
+      "probability": 0.4291283755146651
+    },
+    {
+      "word": "people",
+      "start": 23.0224375,
+      "end": 23.2024375,
+      "probability": 0.6229829788208008
+    },
+    {
+      "word": "can",
+      "start": 23.2024375,
+      "end": 23.4224375,
+      "probability": 0.9857831001281738
+    },
+    {
+      "word": "hurt",
+      "start": 23.4224375,
+      "end": 23.6224375,
+      "probability": 0.9932019114494324
+    },
+    {
+      "word": "others.",
+      "start": 23.6224375,
+      "end": 24.3424375,
+      "probability": 0.9877790808677673
+    },
+    {
+      "word": "Confident",
+      "start": 24.3424375,
+      "end": 24.7024375,
+      "probability": 0.832621842622757
+    },
+    {
+      "word": "memories",
+      "start": 24.7024375,
+      "end": 25.0024375,
+      "probability": 0.9719456434249878
+    },
+    {
+      "word": "can",
+      "start": 25.0024375,
+      "end": 25.3024375,
+      "probability": 0.9896865487098694
+    },
+    {
+      "word": "mislead.",
+      "start": 25.3024375,
+      "end": 26.1624375,
+      "probability": 0.9914506077766418
+    },
+    {
+      "word": "Empathy",
+      "start": 26.1624375,
+      "end": 26.402437499999998,
+      "probability": 0.9574052095413208
+    },
+    {
+      "word": "still",
+      "start": 26.402437499999998,
+      "end": 26.6624375,
+      "probability": 0.9963924288749695
+    },
+    {
+      "word": "needs",
+      "start": 26.6624375,
+      "end": 26.8824375,
+      "probability": 0.9959906935691833
+    },
+    {
+      "word": "evidence",
+      "start": 26.8824375,
+      "end": 27.1824375,
+      "probability": 0.9874483942985535
+    },
+    {
+      "word": "and",
+      "start": 27.1824375,
+      "end": 27.4824375,
+      "probability": 0.9504356980323792
+    },
+    {
+      "word": "practical",
+      "start": 27.4824375,
+      "end": 27.7624375,
+      "probability": 0.9938861727714539
+    },
+    {
+      "word": "boundaries.",
+      "start": 27.7624375,
+      "end": 28.6224375,
+      "probability": 0.9929208159446716
+    },
+    {
+      "word": "Nezuko",
+      "start": 28.6224375,
+      "end": 28.8224375,
+      "probability": 0.6074494086205959
+    },
+    {
+      "word": "reminds",
+      "start": 28.8224375,
+      "end": 29.222437499999998,
+      "probability": 0.9921914935112
+    },
+    {
+      "word": "him",
+      "start": 29.222437499999998,
+      "end": 29.5024375,
+      "probability": 0.9856695532798767
+    },
+    {
+      "word": "why",
+      "start": 29.5024375,
+      "end": 29.702437500000002,
+      "probability": 0.9929513335227966
+    },
+    {
+      "word": "he",
+      "start": 29.702437500000002,
+      "end": 29.8424375,
+      "probability": 0.996245801448822
+    },
+    {
+      "word": "cares.",
+      "start": 29.8424375,
+      "end": 30.6424375,
+      "probability": 0.9926087260246277
+    },
+    {
+      "word": "Someone",
+      "start": 30.6424375,
+      "end": 30.8424375,
+      "probability": 0.9509470462799072
+    },
+    {
+      "word": "can",
+      "start": 30.8424375,
+      "end": 31.0624375,
+      "probability": 0.9965716600418091
+    },
+    {
+      "word": "deserve",
+      "start": 31.0624375,
+      "end": 31.3424375,
+      "probability": 0.9627781510353088
+    },
+    {
+      "word": "compassion",
+      "start": 31.3424375,
+      "end": 31.7624375,
+      "probability": 0.9942360520362854
+    },
+    {
+      "word": "without",
+      "start": 31.7624375,
+      "end": 32.1024375,
+      "probability": 0.9705520868301392
+    },
+    {
+      "word": "everybody",
+      "start": 32.1024375,
+      "end": 32.5224375,
+      "probability": 0.9587106704711914
+    },
+    {
+      "word": "else",
+      "start": 32.5224375,
+      "end": 32.8624375,
+      "probability": 0.992192804813385
+    },
+    {
+      "word": "surrendering",
+      "start": 32.8624375,
+      "end": 33.3824375,
+      "probability": 0.9904724657535553
+    },
+    {
+      "word": "their",
+      "start": 33.3824375,
+      "end": 33.4824375,
+      "probability": 0.9941571950912476
+    },
+    {
+      "word": "safety.",
+      "start": 33.4824375,
+      "end": 34.0424375,
+      "probability": 0.996366024017334
+    },
+    {
+      "word": "He",
+      "start": 34.0424375,
+      "end": 34.0624375,
+      "probability": 0.964372992515564
+    },
+    {
+      "word": "protects",
+      "start": 34.0624375,
+      "end": 34.262437500000004,
+      "probability": 0.9961888194084167
+    },
+    {
+      "word": "bystanders",
+      "start": 34.262437500000004,
+      "end": 34.5424375,
+      "probability": 0.13066427409648895
+    },
+    {
+      "word": "first,",
+      "start": 34.5424375,
+      "end": 35.5224375,
+      "probability": 0.9939078092575073
+    },
+    {
+      "word": "then",
+      "start": 35.5224375,
+      "end": 35.5424375,
+      "probability": 0.9859189987182617
+    },
+    {
+      "word": "listens.",
+      "start": 35.5424375,
+      "end": 36.7024375,
+      "probability": 0.996157705783844
+    },
+    {
+      "word": "He",
+      "start": 36.7024375,
+      "end": 36.7024375,
+      "probability": 0.9804444313049316
+    },
+    {
+      "word": "installed",
+      "start": 36.7024375,
+      "end": 36.7024375,
+      "probability": 0.9631244540214539
+    },
+    {
+      "word": "a",
+      "start": 36.7024375,
+      "end": 36.802437499999996,
+      "probability": 0.9942812919616699
+    },
+    {
+      "word": "firewall",
+      "start": 36.802437499999996,
+      "end": 37.1024375,
+      "probability": 0.8360876441001892
+    },
+    {
+      "word": "on",
+      "start": 37.1024375,
+      "end": 37.4224375,
+      "probability": 0.9913588762283325
+    },
+    {
+      "word": "that",
+      "start": 37.4224375,
+      "end": 37.5024375,
+      "probability": 0.976527214050293
+    },
+    {
+      "word": "enormous",
+      "start": 37.5024375,
+      "end": 37.6424375,
+      "probability": 0.9922588467597961
+    },
+    {
+      "word": "heart.",
+      "start": 37.6424375,
+      "end": 38.382437499999995,
+      "probability": 0.9851232171058655
+    },
+    {
+      "word": "A",
+      "start": 38.382437499999995,
+      "end": 38.382437499999995,
+      "probability": 0.9877297282218933
+    },
+    {
+      "word": "hidden",
+      "start": 38.382437499999995,
+      "end": 38.522437499999995,
+      "probability": 0.9929134249687195
+    },
+    {
+      "word": "memory",
+      "start": 38.522437499999995,
+      "end": 38.8624375,
+      "probability": 0.9782012701034546
+    },
+    {
+      "word": "suggests",
+      "start": 38.8624375,
+      "end": 39.162437499999996,
+      "probability": 0.9860536456108093
+    },
+    {
+      "word": "a",
+      "start": 39.162437499999996,
+      "end": 39.5024375,
+      "probability": 0.9926706552505493
+    },
+    {
+      "word": "missing",
+      "start": 39.5024375,
+      "end": 39.6424375,
+      "probability": 0.9950500130653381
+    },
+    {
+      "word": "person's",
+      "start": 39.6424375,
+      "end": 40.0024375,
+      "probability": 0.7412899285554886
+    },
+    {
+      "word": "location.",
+      "start": 40.0024375,
+      "end": 41.0024375,
+      "probability": 0.9977906942367554
+    },
+    {
+      "word": "He",
+      "start": 41.0024375,
+      "end": 41.0424375,
+      "probability": 0.9879440069198608
+    },
+    {
+      "word": "checks",
+      "start": 41.0424375,
+      "end": 41.2224375,
+      "probability": 0.996861457824707
+    },
+    {
+      "word": "instead",
+      "start": 41.2224375,
+      "end": 41.522437499999995,
+      "probability": 0.9824955463409424
+    },
+    {
+      "word": "of",
+      "start": 41.522437499999995,
+      "end": 41.7024375,
+      "probability": 0.9986039996147156
+    },
+    {
+      "word": "trusting",
+      "start": 41.7024375,
+      "end": 42.0024375,
+      "probability": 0.9887567162513733
+    },
+    {
+      "word": "blindly.",
+      "start": 42.0024375,
+      "end": 42.902437500000005,
+      "probability": 0.9858006834983826
+    },
+    {
+      "word": "The",
+      "start": 42.902437500000005,
+      "end": 42.9424375,
+      "probability": 0.9788287281990051
+    },
+    {
+      "word": "ability",
+      "start": 42.9424375,
+      "end": 43.122437500000004,
+      "probability": 0.9802246689796448
+    },
+    {
+      "word": "helps.",
+      "start": 43.122437500000004,
+      "end": 43.75160659402068,
+      "probability": 0.9955322742462158
+    },
+    {
+      "word": "Zenitsu",
+      "start": 43.75160659402068,
+      "end": 43.971624999999996,
+      "probability": 0.4136213530900932
+    },
+    {
+      "word": "asks",
+      "start": 43.971624999999996,
+      "end": 44.331624999999995,
+      "probability": 0.958605170249939
+    },
+    {
+      "word": "if",
+      "start": 44.331624999999995,
+      "end": 44.591625,
+      "probability": 0.9852285385131836
+    },
+    {
+      "word": "Tanjiro",
+      "start": 44.591625,
+      "end": 45.051625,
+      "probability": 0.6691411261757215
+    },
+    {
+      "word": "can",
+      "start": 45.051625,
+      "end": 45.251625,
+      "probability": 0.9846449494361877
+    },
+    {
+      "word": "mute",
+      "start": 45.251625,
+      "end": 45.431625,
+      "probability": 0.9719507098197937
+    },
+    {
+      "word": "him.",
+      "start": 45.431625,
+      "end": 46.191625,
+      "probability": 0.9972941279411316
+    },
+    {
+      "word": "Different",
+      "start": 46.191625,
+      "end": 46.191625,
+      "probability": 0.808643102645874
+    },
+    {
+      "word": "species,",
+      "start": 46.191625,
+      "end": 46.671625,
+      "probability": 0.9855270385742188
+    },
+    {
+      "word": "brother.",
+      "start": 46.671625,
+      "end": 47.331624999999995,
+      "probability": 0.9544409513473511
+    },
+    {
+      "word": "Your",
+      "start": 47.331624999999995,
+      "end": 47.371624999999995,
+      "probability": 0.9778978228569031
+    },
+    {
+      "word": "volume",
+      "start": 47.371624999999995,
+      "end": 47.591625,
+      "probability": 0.9829591512680054
+    },
+    {
+      "word": "is",
+      "start": 47.591625,
+      "end": 47.931625,
+      "probability": 0.9977082014083862
+    },
+    {
+      "word": "a",
+      "start": 47.931625,
+      "end": 47.991625,
+      "probability": 0.9938570857048035
+    },
+    {
+      "word": "local",
+      "start": 47.991625,
+      "end": 48.171625,
+      "probability": 0.9935943484306335
+    },
+    {
+      "word": "government",
+      "start": 48.171625,
+      "end": 48.591625,
+      "probability": 0.9815930724143982
+    },
+    {
+      "word": "issue.",
+      "start": 48.591625,
+      "end": 49.411625,
+      "probability": 0.994714081287384
+    },
+    {
+      "word": "Understanding",
+      "start": 49.411625,
+      "end": 49.411625,
+      "probability": 0.9906836748123169
+    },
+    {
+      "word": "doesn't",
+      "start": 49.411625,
+      "end": 49.951625,
+      "probability": 0.9948661923408508
+    },
+    {
+      "word": "promise",
+      "start": 49.951625,
+      "end": 50.171625,
+      "probability": 0.9959450364112854
+    },
+    {
+      "word": "agreement",
+      "start": 50.171625,
+      "end": 50.551625,
+      "probability": 0.9958590865135193
+    },
+    {
+      "word": "or",
+      "start": 50.551625,
+      "end": 50.811625,
+      "probability": 0.9261978268623352
+    },
+    {
+      "word": "painless",
+      "start": 50.811625,
+      "end": 51.311625,
+      "probability": 0.7915007770061493
+    },
+    {
+      "word": "solutions.",
+      "start": 51.311625,
+      "end": 52.251625,
+      "probability": 0.9938462376594543
+    },
+    {
+      "word": "The",
+      "start": 52.251625,
+      "end": 52.291624999999996,
+      "probability": 0.9872815012931824
+    },
+    {
+      "word": "new",
+      "start": 52.291624999999996,
+      "end": 52.351625,
+      "probability": 0.9923526644706726
+    },
+    {
+      "word": "ability",
+      "start": 52.351625,
+      "end": 52.691625,
+      "probability": 0.9887086749076843
+    },
+    {
+      "word": "changes",
+      "start": 52.691625,
+      "end": 53.011624999999995,
+      "probability": 0.9982603192329407
+    },
+    {
+      "word": "his",
+      "start": 53.011624999999995,
+      "end": 53.271625,
+      "probability": 0.8964231610298157
+    },
+    {
+      "word": "choices,",
+      "start": 53.271625,
+      "end": 53.971624999999996,
+      "probability": 0.9967503547668457
+    },
+    {
+      "word": "not",
+      "start": 53.971624999999996,
+      "end": 54.131625,
+      "probability": 0.9963486194610596
+    },
+    {
+      "word": "every",
+      "start": 54.131625,
+      "end": 54.291624999999996,
+      "probability": 0.997219443321228
+    },
+    {
+      "word": "consequence",
+      "start": 54.291624999999996,
+      "end": 54.731625,
+      "probability": 0.9978824257850647
+    },
+    {
+      "word": "outside.",
+      "start": 54.731625,
+      "end": 55.511624999999995,
+      "probability": 0.9962555170059204
+    },
+    {
+      "word": "Tanjiro",
+      "start": 55.511624999999995,
+      "end": 55.931625,
+      "probability": 0.9868176579475403
+    },
+    {
+      "word": "keeps",
+      "start": 55.931625,
+      "end": 56.171625,
+      "probability": 0.9944883584976196
+    },
+    {
+      "word": "his",
+      "start": 56.171625,
+      "end": 56.371624999999995,
+      "probability": 0.9914364218711853
+    },
+    {
+      "word": "kindness",
+      "start": 56.371624999999995,
+      "end": 56.591625,
+      "probability": 0.9925345182418823
+    },
+    {
+      "word": "and",
+      "start": 56.591625,
+      "end": 56.951625,
+      "probability": 0.9842547178268433
+    },
+    {
+      "word": "learns",
+      "start": 56.951625,
+      "end": 57.151624999999996,
+      "probability": 0.9970141649246216
+    },
+    {
+      "word": "restraint.",
+      "start": 57.151624999999996,
+      "end": 58.211625,
+      "probability": 0.9786967039108276
+    },
+    {
+      "word": "The",
+      "start": 58.211625,
+      "end": 58.231625,
+      "probability": 0.9935979843139648
+    },
+    {
+      "word": "upgrade",
+      "start": 58.231625,
+      "end": 58.451625,
+      "probability": 0.9865113496780396
+    },
+    {
+      "word": "wasn't",
+      "start": 58.451625,
+      "end": 58.871624999999995,
+      "probability": 0.9959710240364075
+    },
+    {
+      "word": "hearing",
+      "start": 58.871624999999995,
+      "end": 58.991625,
+      "probability": 0.9966613054275513
+    },
+    {
+      "word": "everything.",
+      "start": 58.991625,
+      "end": 59.871624999999995,
+      "probability": 0.9898091554641724
+    },
+    {
+      "word": "It",
+      "start": 59.871624999999995,
+      "end": 59.931625,
+      "probability": 0.9950734972953796
+    },
+    {
+      "word": "was",
+      "start": 59.931625,
+      "end": 59.991625,
+      "probability": 0.9974960684776306
+    },
+    {
+      "word": "knowing",
+      "start": 59.991625,
+      "end": 60.171625,
+      "probability": 0.9893248677253723
+    },
+    {
+      "word": "when",
+      "start": 60.171625,
+      "end": 60.431625,
+      "probability": 0.9991777539253235
+    },
+    {
+      "word": "to",
+      "start": 60.431625,
+      "end": 60.571625,
+      "probability": 0.998246431350708
+    },
+    {
+      "word": "listen.",
+      "start": 60.571625,
+      "end": 60.971625,
+      "probability": 0.9991381168365479
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 1.02,
+      "text": "What if Tanjiro could hear"
+    },
+    {
+      "start": 1.02,
+      "end": 2.18,
+      "text": "demons' thoughts?"
+    },
+    {
+      "start": 2.18,
+      "end": 3.68,
+      "text": "The universe added notifications with"
+    },
+    {
+      "start": 3.68,
+      "end": 5.1,
+      "text": "no mute button available."
+    },
+    {
+      "start": 5.1,
+      "end": 6.68,
+      "text": "This is an invented ability."
+    },
+    {
+      "start": 6.68,
+      "end": 8.08,
+      "text": "Understanding suffering might help him"
+    },
+    {
+      "start": 8.08,
+      "end": 9.06,
+      "text": "protect people."
+    },
+    {
+      "start": 9.06,
+      "end": 10.0,
+      "text": "Instead, fear and memories arrive"
+    },
+    {
+      "start": 10.0,
+      "end": 10.9,
+      "text": "together."
+    },
+    {
+      "start": 10.9,
+      "end": 11.82,
+      "text": "Welcome to a cursed open"
+    },
+    {
+      "start": 11.82,
+      "end": 12.84,
+      "text": "-plan office."
+    },
+    {
+      "start": 12.84,
+      "end": 13.86,
+      "text": "Terrible acoustics."
+    },
+    {
+      "start": 13.86,
+      "end": 14.94,
+      "text": "Zenitsu asks if it helps,"
+    },
+    {
+      "start": 14.94,
+      "end": 15.6,
+      "text": "screams."
+    },
+    {
+      "start": 15.6,
+      "end": 16.44,
+      "text": "Outstanding."
+    },
+    {
+      "start": 16.44,
+      "end": 18.24,
+      "text": "His own emergency broadcast system."
+    },
+    {
+      "start": 18.24,
+      "end": 18.94,
+      "text": "A demon thinks it means"
+    },
+    {
+      "start": 18.94,
+      "end": 20.06,
+      "text": "no harm."
+    },
+    {
+      "start": 20.06,
+      "end": 21.56,
+      "text": "Reassuring, except hearing a thought"
+    },
+    {
+      "start": 21.56,
+      "end": 22.702430846605196,
+      "text": "doesn't make it reliable."
+    },
+    {
+      "start": 22.702430846605196,
+      "end": 24.3424375,
+      "text": "Frightened people can hurt others."
+    },
+    {
+      "start": 24.3424375,
+      "end": 26.1624375,
+      "text": "Confident memories can mislead."
+    },
+    {
+      "start": 26.1624375,
+      "end": 27.4824375,
+      "text": "Empathy still needs evidence and"
+    },
+    {
+      "start": 27.4824375,
+      "end": 28.6224375,
+      "text": "practical boundaries."
+    },
+    {
+      "start": 28.6224375,
+      "end": 29.8424375,
+      "text": "Nezuko reminds him why he"
+    },
+    {
+      "start": 29.8424375,
+      "end": 30.6424375,
+      "text": "cares."
+    },
+    {
+      "start": 30.6424375,
+      "end": 32.1024375,
+      "text": "Someone can deserve compassion without"
+    },
+    {
+      "start": 32.1024375,
+      "end": 34.0424375,
+      "text": "everybody else surrendering their safety."
+    },
+    {
+      "start": 34.0424375,
+      "end": 35.5424375,
+      "text": "He protects bystanders first, then"
+    },
+    {
+      "start": 35.5424375,
+      "end": 36.7024375,
+      "text": "listens."
+    },
+    {
+      "start": 36.7024375,
+      "end": 37.4224375,
+      "text": "He installed a firewall on"
+    },
+    {
+      "start": 37.4224375,
+      "end": 38.382437499999995,
+      "text": "that enormous heart."
+    },
+    {
+      "start": 38.382437499999995,
+      "end": 39.5024375,
+      "text": "A hidden memory suggests a"
+    },
+    {
+      "start": 39.5024375,
+      "end": 41.0024375,
+      "text": "missing person's location."
+    },
+    {
+      "start": 41.0024375,
+      "end": 42.0024375,
+      "text": "He checks instead of trusting"
+    },
+    {
+      "start": 42.0024375,
+      "end": 42.902437500000005,
+      "text": "blindly."
+    },
+    {
+      "start": 42.902437500000005,
+      "end": 43.75160659402068,
+      "text": "The ability helps."
+    },
+    {
+      "start": 43.75160659402068,
+      "end": 45.251625,
+      "text": "Zenitsu asks if Tanjiro can"
+    },
+    {
+      "start": 45.251625,
+      "end": 46.191625,
+      "text": "mute him."
+    },
+    {
+      "start": 46.191625,
+      "end": 47.331624999999995,
+      "text": "Different species, brother."
+    },
+    {
+      "start": 47.331624999999995,
+      "end": 48.171625,
+      "text": "Your volume is a local"
+    },
+    {
+      "start": 48.171625,
+      "end": 49.411625,
+      "text": "government issue."
+    },
+    {
+      "start": 49.411625,
+      "end": 50.811625,
+      "text": "Understanding doesn't promise agreement or"
+    },
+    {
+      "start": 50.811625,
+      "end": 52.251625,
+      "text": "painless solutions."
+    },
+    {
+      "start": 52.251625,
+      "end": 53.271625,
+      "text": "The new ability changes his"
+    },
+    {
+      "start": 53.271625,
+      "end": 55.511624999999995,
+      "text": "choices, not every consequence outside."
+    },
+    {
+      "start": 55.511624999999995,
+      "end": 56.951625,
+      "text": "Tanjiro keeps his kindness and"
+    },
+    {
+      "start": 56.951625,
+      "end": 58.211625,
+      "text": "learns restraint."
+    },
+    {
+      "start": 58.211625,
+      "end": 59.871624999999995,
+      "text": "The upgrade wasn't hearing everything."
+    },
+    {
+      "start": 59.871624999999995,
+      "end": 60.971625,
+      "text": "It was knowing when to listen."
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 6,
+  "review_names_required": true
+}

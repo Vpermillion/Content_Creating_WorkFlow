@@ -1,0 +1,11 @@
+{
+  "branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01",
+  "commit": "271fc524f4fd0c8d937f141a34cb7b0c3b829d29",
+  "reused_source_keys": [
+    "tanjiro",
+    "fight",
+    "nezuko",
+    "zenitsu"
+  ],
+  "new_source_searches_avoided": 4
+}
