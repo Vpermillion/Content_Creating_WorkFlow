@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "checked_date_utc": "2026-11-03",
+  "method": "Verified HTTPS using inherited managed proxy/CA; HTMLParser extraction of article text; no login or channel access",
+  "earlier_attempts": "Official Help reads were previously blocked by destination policy; support.google.com is now enforced in the runtime allowlist and these fetches succeeded",
+  "scope": "Public policy reference verification only; no channel assessment, rights clearance, legal ruling or monetization guarantee",
+  "sources": [
+    {
+      "article_id": "1311392",
+      "reference_label": "YouTube channel monetization policies",
+      "url": "https://support.google.com/youtube/answer/1311392?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "b798503f389a7d667c1b1f11a1878ad2a429eaf672ad1ee7613f2e7742e881ef",
+      "extracted_text_bytes": 24398
+    },
+    {
+      "article_id": "72851",
+      "reference_label": "YouTube Partner Program overview and eligibility",
+      "url": "https://support.google.com/youtube/answer/72851?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "4a6ec6ae6c5eb340ee307e23a4cf7c9cdf77bdfd5d9521c20604eb7b1ca8e6df",
+      "extracted_text_bytes": 10184
+    },
+    {
+      "article_id": "13429240",
+      "reference_label": "Expanded YouTube Partner Program",
+      "url": "https://support.google.com/youtube/answer/13429240?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "971f1e58e6435cc79405363eb22ddbe17d54cba5cc2de575df3ad1d022772062",
+      "extracted_text_bytes": 7446
+    },
+    {
+      "article_id": "6162278",
+      "reference_label": "Advertiser-friendly content guidelines",
+      "url": "https://support.google.com/youtube/answer/6162278?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "e44f00f2a832f3d1766b3e0cb10d51e8cb81d3a516945a45b87312ae70077137",
+      "extracted_text_bytes": 81095
+    },
+    {
+      "article_id": "9528076",
+      "reference_label": "Determining if your content is made for kids",
+      "url": "https://support.google.com/youtube/answer/9528076?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "53cb5f7a311edd05c8ceb1b8a4d129752c1b06d76c22e19ff68a22529670cf0a",
+      "extracted_text_bytes": 6422
+    },
+    {
+      "article_id": "6013276",
+      "reference_label": "Learn about Content ID claims",
+      "url": "https://support.google.com/youtube/answer/6013276?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "e9f402d521cbe4f277b2b1a1299ea48dec037c0400e7591c12e94c87228bd00f",
+      "extracted_text_bytes": 8146
+    },
+    {
+      "article_id": "14328491",
+      "reference_label": "Disclosing use of GenAI content",
+      "url": "https://support.google.com/youtube/answer/14328491?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "bf2be30ac0f97209b383e396e097a7a5f1c19db1502d328325d57d1f7e9e7a11",
+      "extracted_text_bytes": 6168
+    },
+    {
+      "article_id": "1727191",
+      "reference_label": "Monetization is disabled for my channel",
+      "url": "https://support.google.com/youtube/answer/1727191?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "371eba1b29a37e2be7a69932d2b4b9debbb7403f975a707d22fb73fa02e30338",
+      "extracted_text_bytes": 6880
+    },
+    {
+      "article_id": "9235997",
+      "reference_label": "My channel is approved to monetize FAQs",
+      "url": "https://support.google.com/youtube/answer/9235997?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "a51dd01bf00ba0d5468a8c13e47e5364525db24ed9e9ae4212ddcba8d5964749",
+      "extracted_text_bytes": 2943
+    },
+    {
+      "article_id": "2802032",
+      "reference_label": "Community Guidelines strike basics",
+      "url": "https://support.google.com/youtube/answer/2802032?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "91c40af7668e31372b45217477283bc0d42b91690a4b2d8d2ec37289536072e0",
+      "extracted_text_bytes": 5654
+    },
+    {
+      "article_id": "9564590",
+      "reference_label": "Appeal a YouTube Partner Program suspension or application rejection",
+      "url": "https://support.google.com/youtube/answer/9564590?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "460034a34ca1c7495d2f37e8bdd5e60bb03f5df4f5593122a8a119852bdcab7b",
+      "extracted_text_bytes": 5046
+    },
+    {
+      "article_id": "9783148",
+      "reference_label": "Fair use on YouTube",
+      "url": "https://support.google.com/youtube/answer/9783148?hl=en",
+      "http_status": 200,
+      "extracted_text_sha256": "aa1fad5bdb39feb1216a0321ade774013171e9a9b5494618f5d947505f89d726",
+      "extracted_text_bytes": 6832
+    }
+  ],
+  "unused_fetches": [
+    {
+      "url": "https://support.google.com/youtube/answer/9235999?hl=en",
+      "http_status": 404,
+      "used_as_evidence": false
+    }
+  ]
+}

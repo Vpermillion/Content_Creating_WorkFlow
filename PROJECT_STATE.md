@@ -1,5 +1,11 @@
 # Project state — 2026-10-26
 
+## Official policy verification follow-up — 2026-11-03
+
+The owner supplied two further texts asking for deeper monetization requirements. Public YouTube Help access is now active and twelve official articles were fetched successfully. Read `docs/POLICY_FACT_CHECK.md`, `docs/MONETIZATION_REVIEW.md` and `docs/youtube-policy-verification.json`; earlier blocked-fetch notes below are history. Verified distinctions cover channel-level substantive variation, reused content versus copyright, claims versus strikes, audience factors for anime, contextual profanity rules, current general YPP tiers, unsupported shadow-ban claims and notice-specific appeal routes. In an appeal, do not follow the pasted delete-first advice: the official appeal page says not to delete videos before submitting. No actual notice/channel metrics were supplied.
+
+Keep Michael, the roast style and automation. Next: use the editorial brief to develop distinct episodes, document an actual rights/use basis for every visual/audio source, review the finished audiovisual file and proposed catalog, then verify real channel eligibility when needed. Ten footage assets and three recordings in the Goku demo still have unresolved rights; no editorial approval or YouTube decision was invented. This follow-up changes documentation/audit metadata only, with publishing disabled and saved media untouched. It adds no executable approval gate.
+
 ## Monetization preparation concern — 2026-11-03
 
 The owner supplied an AI overview about low-effort channels and clarified there is no actual YouTube rejection notice being addressed. Added MONETIZATION_REVIEW and an episode editorial-brief template, preserving Michael/v2 humor and the existing automation. Corrected the human-voice mandate, fixed safe-clip-duration/scanner-evasion claims, assumed trailer/raw-source permission and unsupported 2027 threshold prediction. The current Goku test has original script/commentary evidence but ten footage assets and three community sound recordings with unverified source-use rights, no recorded full human listening/editorial approval and no verified channel Earn eligibility. Its evidence audit is saved with the test. It is a technical demonstration, not certified monetization-ready content.

@@ -13,7 +13,7 @@ Primary references:
 - [Altered/synthetic content disclosure](https://support.google.com/youtube/answer/14328491?hl=en)
 - [Fair use on YouTube](https://support.google.com/youtube/answer/9783148?hl=en)
 
-**Live-verification status, 2026-11-03:** direct requests to the official Help host were blocked by this machine's network allowlist; Google returned a script-only search interstitial rather than usable policy text. A saved additive environment draft includes `support.google.com`, preserving the five existing custom domains and package preset. It requires the user-facing settings save/publication step and is not live merely because the draft was saved. Re-fetch the official pages after activation and verify the channel's Earn tab before recording current eligibility numbers. The guidance below distinguishes established policy concepts and conservative project standards from any claim of a fresh official-page verification.
+**Live-verification status, 2026-11-03:** after the environment settings change became active, twelve relevant official Help pages returned HTTP 200 with readable article text. Earlier allowlist denials are historical, not the current access state. See [the detailed fact check](POLICY_FACT_CHECK.md) and [source receipts](youtube-policy-verification.json) for current eligibility, audience, language, claims/strikes, recommendation and appeal distinctions. Actual channel Earn status, source-use clearance and YouTube approval remain unverified. The fetched pages do not establish the pasted February 2027 threshold prediction.
 
 Corrections to the supplied overview:
 

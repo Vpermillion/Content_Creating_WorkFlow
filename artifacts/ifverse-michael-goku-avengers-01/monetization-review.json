@@ -124,6 +124,9 @@
   "monetization_guaranteed": false,
   "publishing_enabled": false,
   "future_2027_threshold_claim": "unverified_do_not_treat_as_official",
-  "official_live_policy_fetch": "blocked_support.google.com_not_yet_in_active_runtime_allowlist",
-  "instructions": "docs/MONETIZATION_REVIEW.md"
+  "official_live_policy_fetch": "succeeded_2026-11-03_twelve_public_help_articles_after_allowlist_activation",
+  "instructions": "docs/MONETIZATION_REVIEW.md",
+  "official_live_policy_fetch_history": "blocked_support.google.com_not_yet_in_active_runtime_allowlist",
+  "official_policy_verification_receipt": "docs/youtube-policy-verification.json",
+  "policy_followup": "docs/POLICY_FACT_CHECK.md; public reference verification does not change unresolved rights, missing editorial approval or unverified actual channel eligibility"
 }
