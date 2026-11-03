@@ -1,0 +1,74 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.04,Caption,,0,0,0,,What if Shikamaru got one
+Dialogue: 0,0:00:01.04,0:00:02.48,Caption,,0,0,0,,day to fix Konoha?
+Dialogue: 0,0:00:02.48,0:00:04.68,Caption,,0,0,0,,His opponent is administrative\Nincompetence.
+Dialogue: 0,0:00:04.68,0:00:05.88,Caption,,0,0,0,,Naruto's desk is buried in
+Dialogue: 0,0:00:05.88,0:00:06.74,Caption,,0,0,0,,requests.
+Dialogue: 0,0:00:06.74,0:00:08.18,Caption,,0,0,0,,My guy, that's not leadership.
+Dialogue: 0,0:00:08.18,0:00:09.34,Caption,,0,0,0,,That's indoor composting.
+Dialogue: 0,0:00:09.34,0:00:10.56,Caption,,0,0,0,,Instead of bigger jutsu, he
+Dialogue: 0,0:00:10.56,0:00:11.70,Caption,,0,0,0,,asks why teams use one
+Dialogue: 0,0:00:11.70,0:00:12.48,Caption,,0,0,0,,gate together.
+Dialogue: 0,0:00:12.48,0:00:14.26,Caption,,0,0,0,,Nobody coordinates departures.
+Dialogue: 0,0:00:14.26,0:00:15.28,Caption,,0,0,0,,A whole ninja village got
+Dialogue: 0,0:00:15.28,0:00:16.70,Caption,,0,0,0,,outplayed by a calendar with
+Dialogue: 0,0:00:16.70,0:00:17.90,Caption,,0,0,0,,serious trust issues.
+Dialogue: 0,0:00:17.90,0:00:19.24,Caption,,0,0,0,,He staggers departures and keeps
+Dialogue: 0,0:00:19.24,0:00:20.62,Caption,,0,0,0,,a reserve squad.
+Dialogue: 0,0:00:20.62,0:00:22.54,Caption,,0,0,0,,Emergencies finally stop\Nborrowing people
+Dialogue: 0,0:00:22.54,0:00:23.79,Caption,,0,0,0,,from other emergencies.
+Dialogue: 0,0:00:23.79,0:00:25.37,Caption,,0,0,0,,Next, hospital supplies need\Napproval
+Dialogue: 0,0:00:25.37,0:00:27.31,Caption,,0,0,0,,from somebody waiting for\Nmedicine.
+Dialogue: 0,0:00:27.31,0:00:28.21,Caption,,0,0,0,,Beautiful.
+Dialogue: 0,0:00:28.21,0:00:29.67,Caption,,0,0,0,,Bureaucracy learned recursion.
+Dialogue: 0,0:00:29.67,0:00:30.73,Caption,,0,0,0,,A clear supply route fixes
+Dialogue: 0,0:00:30.73,0:00:31.73,Caption,,0,0,0,,the delay.
+Dialogue: 0,0:00:31.73,0:00:33.15,Caption,,0,0,0,,Fewer injured people wait while
+Dialogue: 0,0:00:33.15,0:00:35.05,Caption,,0,0,0,,paperwork auditions for main\Ncharacter.
+Dialogue: 0,0:00:35.05,0:00:36.93,Caption,,0,0,0,,Somebody says this looks boring.
+Dialogue: 0,0:00:36.93,0:00:38.17,Caption,,0,0,0,,Motherflicker, we're building a\Nfunctioning
+Dialogue: 0,0:00:38.17,0:00:39.63,Caption,,0,0,0,,village, not a trailer with
+Dialogue: 0,0:00:39.63,0:00:40.47,Caption,,0,0,0,,explosions.
+Dialogue: 0,0:00:40.47,0:00:41.95,Caption,,0,0,0,,But plans don't explain\Neverybody's
+Dialogue: 0,0:00:41.95,0:00:42.81,Caption,,0,0,0,,needs.
+Dialogue: 0,0:00:42.81,0:00:44.13,Caption,,0,0,0,,Shikamaru has to listen instead
+Dialogue: 0,0:00:44.13,0:00:45.70,Caption,,0,0,0,,of treating people like puzzles.
+Dialogue: 0,0:00:45.70,0:00:46.78,Caption,,0,0,0,,He changes the system after
+Dialogue: 0,0:00:46.78,0:00:47.78,Caption,,0,0,0,,hearing them.
+Dialogue: 0,0:00:47.78,0:00:49.72,Caption,,0,0,0,,Smart doesn't mean automatically\Ncorrect.
+Dialogue: 0,0:00:49.72,0:00:51.56,Caption,,0,0,0,,By afternoon, things run\Nsmoother.
+Dialogue: 0,0:00:51.56,0:00:52.46,Caption,,0,0,0,,He uses the saved time
+Dialogue: 0,0:00:52.46,0:00:53.34,Caption,,0,0,0,,for a nap.
+Dialogue: 0,0:00:53.34,0:00:54.88,Caption,,0,0,0,,A coherent political platform.
+Dialogue: 0,0:00:54.88,0:00:56.96,Caption,,0,0,0,,Naruto requests the secret\Ntechnique.
+Dialogue: 0,0:00:56.96,0:00:58.64,Caption,,0,0,0,,Shikamaru hands him a schedule.
+Dialogue: 0,0:00:58.64,0:01:00.08,Caption,,0,0,0,,Decades training assassins, and\Nthey
+Dialogue: 0,0:01:00.08,0:01:00.98,Caption,,0,0,0,,forgot appointments.
+Dialogue: 1,0:00:00.00,0:00:04.58,Heading,,0,0,0,,ONE DAY NO GIANT LASERS
+Dialogue: 1,0:00:04.58,0:00:09.29,Heading,,0,0,0,,THE DESK IS A CRIME SCENE
+Dialogue: 1,0:00:09.29,0:00:12.41,Heading,,0,0,0,,FIRST THE BORING QUESTIONS
+Dialogue: 1,0:00:12.41,0:00:17.83,Heading,,0,0,0,,THE BOTTLENECK
+Dialogue: 1,0:00:17.83,0:00:23.79,Heading,,0,0,0,,MOVE THE MISSIONS
+Dialogue: 1,0:00:23.79,0:00:29.58,Heading,,0,0,0,,THE HOSPITAL IS NEXT
+Dialogue: 1,0:00:29.58,0:00:35.01,Heading,,0,0,0,,FIX THE ROUTE
+Dialogue: 1,0:00:35.01,0:00:40.42,Heading,,0,0,0,,THE COMPLAINT ARRIVES
+Dialogue: 1,0:00:40.42,0:00:45.70,Heading,,0,0,0,,THE REAL LIMIT
+Dialogue: 1,0:00:45.70,0:00:49.67,Heading,,0,0,0,,A LEADER HAS TO LISTEN
+Dialogue: 1,0:00:49.67,0:00:54.87,Heading,,0,0,0,,THE AFTERNOON GAMBIT
+Dialogue: 1,0:00:54.87,0:01:01.00,Heading,,0,0,0,,THE EXPENSIVE PART
+Dialogue: 1,0:00:00.00,0:01:01.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:01.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF

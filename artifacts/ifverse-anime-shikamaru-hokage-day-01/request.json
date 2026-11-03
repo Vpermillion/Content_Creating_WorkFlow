@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-shikamaru-hokage-day-01",
+  "channel": "ifverse_anime",
+  "voice": "am_michael",
+  "script": "pilots/ifverse-anime-shikamaru-hokage-day-01.json",
+  "edit_plan": "edits/ifverse-anime-shikamaru-hokage-day-01.json",
+  "sound_effects_plan": "edits/ifverse-anime-shikamaru-hokage-day-01-sfx.json",
+  "caption_mode": "script_alignment",
+  "caption_model": "base.en",
+  "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-r2",
+  "publishing_enabled": false
+}

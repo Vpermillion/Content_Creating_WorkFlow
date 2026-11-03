@@ -1,0 +1,1329 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "e33300d9eabb1747973d94cf5cbdac24d84cf08908b92f9b35e3b53ebb618758",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.12,
+      "probability": 5.029194289818406e-05
+    },
+    {
+      "word": "if",
+      "start": 0.12,
+      "end": 0.2,
+      "probability": 0.9830769896507263
+    },
+    {
+      "word": "Shikamaru",
+      "start": 0.2,
+      "end": 0.5,
+      "probability": 0.5006060923139254
+    },
+    {
+      "word": "got",
+      "start": 0.5,
+      "end": 0.86,
+      "probability": 0.9978616833686829
+    },
+    {
+      "word": "one",
+      "start": 0.86,
+      "end": 1.04,
+      "probability": 0.973726749420166
+    },
+    {
+      "word": "day",
+      "start": 1.04,
+      "end": 1.24,
+      "probability": 0.997003972530365
+    },
+    {
+      "word": "to",
+      "start": 1.24,
+      "end": 1.38,
+      "probability": 0.9948768019676208
+    },
+    {
+      "word": "fix",
+      "start": 1.38,
+      "end": 1.56,
+      "probability": 0.9951247572898865
+    },
+    {
+      "word": "Konoha?",
+      "start": 1.56,
+      "end": 2.48,
+      "probability": 0.12285343930125237
+    },
+    {
+      "word": "His",
+      "start": 2.48,
+      "end": 2.5,
+      "probability": 0.9446967840194702
+    },
+    {
+      "word": "opponent",
+      "start": 2.5,
+      "end": 2.78,
+      "probability": 0.9930263757705688
+    },
+    {
+      "word": "is",
+      "start": 2.78,
+      "end": 3.08,
+      "probability": 0.9944624304771423
+    },
+    {
+      "word": "administrative",
+      "start": 3.08,
+      "end": 3.68,
+      "probability": 0.9087100028991699
+    },
+    {
+      "word": "incompetence.",
+      "start": 3.68,
+      "end": 4.68,
+      "probability": 0.9520422220230103
+    },
+    {
+      "word": "Naruto's",
+      "start": 4.68,
+      "end": 5.08,
+      "probability": 0.8025524616241455
+    },
+    {
+      "word": "desk",
+      "start": 5.08,
+      "end": 5.24,
+      "probability": 0.9916126728057861
+    },
+    {
+      "word": "is",
+      "start": 5.24,
+      "end": 5.44,
+      "probability": 0.9989431500434875
+    },
+    {
+      "word": "buried",
+      "start": 5.44,
+      "end": 5.74,
+      "probability": 0.9962587356567383
+    },
+    {
+      "word": "in",
+      "start": 5.74,
+      "end": 5.88,
+      "probability": 0.9849215149879456
+    },
+    {
+      "word": "requests.",
+      "start": 5.88,
+      "end": 6.74,
+      "probability": 0.9916821718215942
+    },
+    {
+      "word": "My",
+      "start": 6.74,
+      "end": 6.78,
+      "probability": 0.6102656722068787
+    },
+    {
+      "word": "guy,",
+      "start": 6.78,
+      "end": 7.14,
+      "probability": 0.9745716452598572
+    },
+    {
+      "word": "that's",
+      "start": 7.14,
+      "end": 7.34,
+      "probability": 0.9941806197166443
+    },
+    {
+      "word": "not",
+      "start": 7.34,
+      "end": 7.46,
+      "probability": 0.9975274205207825
+    },
+    {
+      "word": "leadership.",
+      "start": 7.46,
+      "end": 8.18,
+      "probability": 0.9981339573860168
+    },
+    {
+      "word": "That's",
+      "start": 8.18,
+      "end": 8.36,
+      "probability": 0.9960481822490692
+    },
+    {
+      "word": "indoor",
+      "start": 8.36,
+      "end": 8.48,
+      "probability": 0.9744769930839539
+    },
+    {
+      "word": "composting.",
+      "start": 8.48,
+      "end": 9.34,
+      "probability": 0.9463838040828705
+    },
+    {
+      "word": "Instead",
+      "start": 9.34,
+      "end": 9.46,
+      "probability": 0.9918208122253418
+    },
+    {
+      "word": "of",
+      "start": 9.46,
+      "end": 9.58,
+      "probability": 0.99906986951828
+    },
+    {
+      "word": "bigger",
+      "start": 9.58,
+      "end": 9.7,
+      "probability": 0.9650550484657288
+    },
+    {
+      "word": "jutsu,",
+      "start": 9.7,
+      "end": 10.48,
+      "probability": 0.5680250823497772
+    },
+    {
+      "word": "he",
+      "start": 10.48,
+      "end": 10.56,
+      "probability": 0.9833881855010986
+    },
+    {
+      "word": "asks",
+      "start": 10.56,
+      "end": 10.8,
+      "probability": 0.9855347871780396
+    },
+    {
+      "word": "why",
+      "start": 10.8,
+      "end": 11.0,
+      "probability": 0.9797533750534058
+    },
+    {
+      "word": "teams",
+      "start": 11.0,
+      "end": 11.24,
+      "probability": 0.9624270796775818
+    },
+    {
+      "word": "use",
+      "start": 11.24,
+      "end": 11.52,
+      "probability": 0.9903117418289185
+    },
+    {
+      "word": "one",
+      "start": 11.52,
+      "end": 11.7,
+      "probability": 0.9571258425712585
+    },
+    {
+      "word": "gate",
+      "start": 11.7,
+      "end": 11.88,
+      "probability": 0.9561002254486084
+    },
+    {
+      "word": "together.",
+      "start": 11.88,
+      "end": 12.48,
+      "probability": 0.9962589740753174
+    },
+    {
+      "word": "Nobody",
+      "start": 12.48,
+      "end": 12.68,
+      "probability": 0.9811402559280396
+    },
+    {
+      "word": "coordinates",
+      "start": 12.68,
+      "end": 13.18,
+      "probability": 0.9622226357460022
+    },
+    {
+      "word": "departures.",
+      "start": 13.18,
+      "end": 14.26,
+      "probability": 0.9692250490188599
+    },
+    {
+      "word": "A",
+      "start": 14.26,
+      "end": 14.34,
+      "probability": 0.9901338219642639
+    },
+    {
+      "word": "whole",
+      "start": 14.34,
+      "end": 14.5,
+      "probability": 0.9855863451957703
+    },
+    {
+      "word": "ninja",
+      "start": 14.5,
+      "end": 14.68,
+      "probability": 0.9471832513809204
+    },
+    {
+      "word": "village",
+      "start": 14.68,
+      "end": 15.0,
+      "probability": 0.9969131946563721
+    },
+    {
+      "word": "got",
+      "start": 15.0,
+      "end": 15.28,
+      "probability": 0.994227409362793
+    },
+    {
+      "word": "outplayed",
+      "start": 15.28,
+      "end": 15.6,
+      "probability": 0.9561718106269836
+    },
+    {
+      "word": "by",
+      "start": 15.6,
+      "end": 15.86,
+      "probability": 0.9967339038848877
+    },
+    {
+      "word": "a",
+      "start": 15.86,
+      "end": 15.94,
+      "probability": 0.9974802136421204
+    },
+    {
+      "word": "calendar",
+      "start": 15.94,
+      "end": 16.24,
+      "probability": 0.9291998147964478
+    },
+    {
+      "word": "with",
+      "start": 16.24,
+      "end": 16.7,
+      "probability": 0.9431712031364441
+    },
+    {
+      "word": "serious",
+      "start": 16.7,
+      "end": 17.0,
+      "probability": 0.998830258846283
+    },
+    {
+      "word": "trust",
+      "start": 17.0,
+      "end": 17.3,
+      "probability": 0.9714277386665344
+    },
+    {
+      "word": "issues.",
+      "start": 17.3,
+      "end": 17.9,
+      "probability": 0.9919054508209229
+    },
+    {
+      "word": "He",
+      "start": 17.9,
+      "end": 17.9,
+      "probability": 0.9855160117149353
+    },
+    {
+      "word": "staggers",
+      "start": 17.9,
+      "end": 18.24,
+      "probability": 0.966940313577652
+    },
+    {
+      "word": "departures",
+      "start": 18.24,
+      "end": 18.46,
+      "probability": 0.9763281941413879
+    },
+    {
+      "word": "and",
+      "start": 18.46,
+      "end": 19.08,
+      "probability": 0.907019317150116
+    },
+    {
+      "word": "keeps",
+      "start": 19.08,
+      "end": 19.24,
+      "probability": 0.997876763343811
+    },
+    {
+      "word": "a",
+      "start": 19.24,
+      "end": 19.42,
+      "probability": 0.9898202419281006
+    },
+    {
+      "word": "reserve",
+      "start": 19.42,
+      "end": 19.52,
+      "probability": 0.7368928790092468
+    },
+    {
+      "word": "squad.",
+      "start": 19.52,
+      "end": 20.62,
+      "probability": 0.9451547861099243
+    },
+    {
+      "word": "Emergencies",
+      "start": 20.62,
+      "end": 20.98,
+      "probability": 0.9668388664722443
+    },
+    {
+      "word": "finally",
+      "start": 20.98,
+      "end": 21.46,
+      "probability": 0.9758381247520447
+    },
+    {
+      "word": "stop",
+      "start": 21.46,
+      "end": 21.88,
+      "probability": 0.9507459998130798
+    },
+    {
+      "word": "borrowing",
+      "start": 21.88,
+      "end": 22.2,
+      "probability": 0.9919711351394653
+    },
+    {
+      "word": "people",
+      "start": 22.2,
+      "end": 22.54,
+      "probability": 0.9986259937286377
+    },
+    {
+      "word": "from",
+      "start": 22.54,
+      "end": 22.8,
+      "probability": 0.9980862140655518
+    },
+    {
+      "word": "other",
+      "start": 22.8,
+      "end": 23.0,
+      "probability": 0.998522937297821
+    },
+    {
+      "word": "emergencies.",
+      "start": 23.0,
+      "end": 23.789999893794644,
+      "probability": 0.9837357401847839
+    },
+    {
+      "word": "Next,",
+      "start": 23.789999893794644,
+      "end": 24.150000000000002,
+      "probability": 0.00010725959145929664
+    },
+    {
+      "word": "hospital",
+      "start": 24.150000000000002,
+      "end": 24.41,
+      "probability": 0.8700225949287415
+    },
+    {
+      "word": "supplies",
+      "start": 24.41,
+      "end": 24.89,
+      "probability": 0.9966970682144165
+    },
+    {
+      "word": "need",
+      "start": 24.89,
+      "end": 25.11,
+      "probability": 0.9893298745155334
+    },
+    {
+      "word": "approval",
+      "start": 25.11,
+      "end": 25.37,
+      "probability": 0.9968183040618896
+    },
+    {
+      "word": "from",
+      "start": 25.37,
+      "end": 25.71,
+      "probability": 0.993586003780365
+    },
+    {
+      "word": "somebody",
+      "start": 25.71,
+      "end": 25.990000000000002,
+      "probability": 0.9711651802062988
+    },
+    {
+      "word": "waiting",
+      "start": 25.990000000000002,
+      "end": 26.29,
+      "probability": 0.9953314661979675
+    },
+    {
+      "word": "for",
+      "start": 26.29,
+      "end": 26.53,
+      "probability": 0.9978072047233582
+    },
+    {
+      "word": "medicine.",
+      "start": 26.53,
+      "end": 27.310000000000002,
+      "probability": 0.9952501058578491
+    },
+    {
+      "word": "Beautiful.",
+      "start": 27.310000000000002,
+      "end": 28.21,
+      "probability": 0.05561114475131035
+    },
+    {
+      "word": "Bureaucracy",
+      "start": 28.21,
+      "end": 28.67,
+      "probability": 0.8656936883926392
+    },
+    {
+      "word": "learned",
+      "start": 28.67,
+      "end": 28.87,
+      "probability": 0.8772504925727844
+    },
+    {
+      "word": "recursion.",
+      "start": 28.87,
+      "end": 29.67,
+      "probability": 0.9849778711795807
+    },
+    {
+      "word": "A",
+      "start": 29.67,
+      "end": 29.67,
+      "probability": 0.8539389967918396
+    },
+    {
+      "word": "clear",
+      "start": 29.67,
+      "end": 29.830000000000002,
+      "probability": 0.98466956615448
+    },
+    {
+      "word": "supply",
+      "start": 29.830000000000002,
+      "end": 30.07,
+      "probability": 0.9746845364570618
+    },
+    {
+      "word": "route",
+      "start": 30.07,
+      "end": 30.41,
+      "probability": 0.9917625188827515
+    },
+    {
+      "word": "fixes",
+      "start": 30.41,
+      "end": 30.73,
+      "probability": 0.996687114238739
+    },
+    {
+      "word": "the",
+      "start": 30.73,
+      "end": 30.95,
+      "probability": 0.9986037611961365
+    },
+    {
+      "word": "delay.",
+      "start": 30.95,
+      "end": 31.73,
+      "probability": 0.9977884292602539
+    },
+    {
+      "word": "Fewer",
+      "start": 31.73,
+      "end": 31.990000000000002,
+      "probability": 0.7797442078590393
+    },
+    {
+      "word": "injured",
+      "start": 31.990000000000002,
+      "end": 32.19,
+      "probability": 0.8990423083305359
+    },
+    {
+      "word": "people",
+      "start": 32.19,
+      "end": 32.55,
+      "probability": 0.9985234141349792
+    },
+    {
+      "word": "wait",
+      "start": 32.55,
+      "end": 32.81,
+      "probability": 0.9913491606712341
+    },
+    {
+      "word": "while",
+      "start": 32.81,
+      "end": 33.15,
+      "probability": 0.8031343817710876
+    },
+    {
+      "word": "paperwork",
+      "start": 33.15,
+      "end": 33.43,
+      "probability": 0.9710611701011658
+    },
+    {
+      "word": "auditions",
+      "start": 33.43,
+      "end": 34.01,
+      "probability": 0.9989360570907593
+    },
+    {
+      "word": "for",
+      "start": 34.01,
+      "end": 34.27,
+      "probability": 0.9538253545761108
+    },
+    {
+      "word": "main",
+      "start": 34.27,
+      "end": 34.39,
+      "probability": 0.9765547513961792
+    },
+    {
+      "word": "character.",
+      "start": 34.39,
+      "end": 35.05,
+      "probability": 0.9952568411827087
+    },
+    {
+      "word": "Somebody",
+      "start": 35.05,
+      "end": 35.19,
+      "probability": 0.6491363644599915
+    },
+    {
+      "word": "says",
+      "start": 35.19,
+      "end": 35.53,
+      "probability": 0.9862313866615295
+    },
+    {
+      "word": "this",
+      "start": 35.53,
+      "end": 35.75,
+      "probability": 0.9858028888702393
+    },
+    {
+      "word": "looks",
+      "start": 35.75,
+      "end": 35.89,
+      "probability": 0.9955151677131653
+    },
+    {
+      "word": "boring.",
+      "start": 35.89,
+      "end": 36.93,
+      "probability": 0.9990494847297668
+    },
+    {
+      "word": "Motherflicker,",
+      "start": 36.93,
+      "end": 37.51,
+      "probability": 0.5186130851507187
+    },
+    {
+      "word": "we're",
+      "start": 37.51,
+      "end": 37.53,
+      "probability": 0.9501186907291412
+    },
+    {
+      "word": "building",
+      "start": 37.53,
+      "end": 37.79,
+      "probability": 0.9987950325012207
+    },
+    {
+      "word": "a",
+      "start": 37.79,
+      "end": 37.93,
+      "probability": 0.9988831877708435
+    },
+    {
+      "word": "functioning",
+      "start": 37.93,
+      "end": 38.17,
+      "probability": 0.9987075328826904
+    },
+    {
+      "word": "village,",
+      "start": 38.17,
+      "end": 38.89,
+      "probability": 0.9968501925468445
+    },
+    {
+      "word": "not",
+      "start": 38.89,
+      "end": 39.05,
+      "probability": 0.9971766471862793
+    },
+    {
+      "word": "a",
+      "start": 39.05,
+      "end": 39.13,
+      "probability": 0.9950425624847412
+    },
+    {
+      "word": "trailer",
+      "start": 39.13,
+      "end": 39.370000000000005,
+      "probability": 0.994022786617279
+    },
+    {
+      "word": "with",
+      "start": 39.370000000000005,
+      "end": 39.629999999999995,
+      "probability": 0.9930207133293152
+    },
+    {
+      "word": "explosions.",
+      "start": 39.629999999999995,
+      "end": 40.47,
+      "probability": 0.9960424900054932
+    },
+    {
+      "word": "But",
+      "start": 40.47,
+      "end": 40.49,
+      "probability": 0.8036902546882629
+    },
+    {
+      "word": "plans",
+      "start": 40.49,
+      "end": 40.69,
+      "probability": 0.9882305860519409
+    },
+    {
+      "word": "don't",
+      "start": 40.69,
+      "end": 41.010000000000005,
+      "probability": 0.9981680810451508
+    },
+    {
+      "word": "explain",
+      "start": 41.010000000000005,
+      "end": 41.269999999999996,
+      "probability": 0.9974818825721741
+    },
+    {
+      "word": "everybody's",
+      "start": 41.269999999999996,
+      "end": 41.95,
+      "probability": 0.9883313179016113
+    },
+    {
+      "word": "needs.",
+      "start": 41.95,
+      "end": 42.81,
+      "probability": 0.9912748336791992
+    },
+    {
+      "word": "Shikamaru",
+      "start": 42.81,
+      "end": 42.97,
+      "probability": 0.5079465458790461
+    },
+    {
+      "word": "has",
+      "start": 42.97,
+      "end": 43.370000000000005,
+      "probability": 0.9952551126480103
+    },
+    {
+      "word": "to",
+      "start": 43.370000000000005,
+      "end": 43.510000000000005,
+      "probability": 0.9980467557907104
+    },
+    {
+      "word": "listen",
+      "start": 43.510000000000005,
+      "end": 43.730000000000004,
+      "probability": 0.9989519119262695
+    },
+    {
+      "word": "instead",
+      "start": 43.730000000000004,
+      "end": 44.129999999999995,
+      "probability": 0.8005078434944153
+    },
+    {
+      "word": "of",
+      "start": 44.129999999999995,
+      "end": 44.31,
+      "probability": 0.9975067973136902
+    },
+    {
+      "word": "treating",
+      "start": 44.31,
+      "end": 44.510000000000005,
+      "probability": 0.9968649744987488
+    },
+    {
+      "word": "people",
+      "start": 44.510000000000005,
+      "end": 44.870000000000005,
+      "probability": 0.9993225336074829
+    },
+    {
+      "word": "like",
+      "start": 44.870000000000005,
+      "end": 45.11,
+      "probability": 0.9935322999954224
+    },
+    {
+      "word": "puzzles.",
+      "start": 45.11,
+      "end": 45.69771408170663,
+      "probability": 0.9952680468559265
+    },
+    {
+      "word": "He",
+      "start": 45.69771408170663,
+      "end": 45.7576875,
+      "probability": 8.027727744774893e-05
+    },
+    {
+      "word": "changes",
+      "start": 45.7576875,
+      "end": 46.0776875,
+      "probability": 0.8067590594291687
+    },
+    {
+      "word": "the",
+      "start": 46.0776875,
+      "end": 46.2576875,
+      "probability": 0.9660764336585999
+    },
+    {
+      "word": "system",
+      "start": 46.2576875,
+      "end": 46.5576875,
+      "probability": 0.9970834851264954
+    },
+    {
+      "word": "after",
+      "start": 46.5576875,
+      "end": 46.7776875,
+      "probability": 0.9904237389564514
+    },
+    {
+      "word": "hearing",
+      "start": 46.7776875,
+      "end": 47.1176875,
+      "probability": 0.9978553652763367
+    },
+    {
+      "word": "them.",
+      "start": 47.1176875,
+      "end": 47.7776875,
+      "probability": 0.9964532852172852
+    },
+    {
+      "word": "Smart",
+      "start": 47.7776875,
+      "end": 47.997687500000005,
+      "probability": 0.7994797229766846
+    },
+    {
+      "word": "doesn't",
+      "start": 47.997687500000005,
+      "end": 48.357687500000004,
+      "probability": 0.9922127723693848
+    },
+    {
+      "word": "mean",
+      "start": 48.357687500000004,
+      "end": 48.497687500000005,
+      "probability": 0.9933444261550903
+    },
+    {
+      "word": "automatically",
+      "start": 48.497687500000005,
+      "end": 48.7976875,
+      "probability": 0.8973768353462219
+    },
+    {
+      "word": "correct.",
+      "start": 48.7976875,
+      "end": 49.717687500000004,
+      "probability": 0.9877185821533203
+    },
+    {
+      "word": "By",
+      "start": 49.717687500000004,
+      "end": 49.7376875,
+      "probability": 0.9438944458961487
+    },
+    {
+      "word": "afternoon,",
+      "start": 49.7376875,
+      "end": 50.357687500000004,
+      "probability": 0.9732646346092224
+    },
+    {
+      "word": "things",
+      "start": 50.357687500000004,
+      "end": 50.497687500000005,
+      "probability": 0.9880926012992859
+    },
+    {
+      "word": "run",
+      "start": 50.497687500000005,
+      "end": 50.6976875,
+      "probability": 0.989782989025116
+    },
+    {
+      "word": "smoother.",
+      "start": 50.6976875,
+      "end": 51.5576875,
+      "probability": 0.9962822794914246
+    },
+    {
+      "word": "He",
+      "start": 51.5576875,
+      "end": 51.6176875,
+      "probability": 0.8568941950798035
+    },
+    {
+      "word": "uses",
+      "start": 51.6176875,
+      "end": 51.7776875,
+      "probability": 0.9977512955665588
+    },
+    {
+      "word": "the",
+      "start": 51.7776875,
+      "end": 51.957687500000006,
+      "probability": 0.9698961973190308
+    },
+    {
+      "word": "saved",
+      "start": 51.957687500000006,
+      "end": 52.1976875,
+      "probability": 0.05687948688864708
+    },
+    {
+      "word": "time",
+      "start": 52.1976875,
+      "end": 52.457687500000006,
+      "probability": 0.9976711869239807
+    },
+    {
+      "word": "for",
+      "start": 52.457687500000006,
+      "end": 52.717687500000004,
+      "probability": 0.9961152076721191
+    },
+    {
+      "word": "a",
+      "start": 52.717687500000004,
+      "end": 52.7776875,
+      "probability": 0.9938585162162781
+    },
+    {
+      "word": "nap.",
+      "start": 52.7776875,
+      "end": 53.3376875,
+      "probability": 0.9517742395401001
+    },
+    {
+      "word": "A",
+      "start": 53.3376875,
+      "end": 53.3976875,
+      "probability": 0.9867873191833496
+    },
+    {
+      "word": "coherent",
+      "start": 53.3976875,
+      "end": 53.717687500000004,
+      "probability": 0.9967424273490906
+    },
+    {
+      "word": "political",
+      "start": 53.717687500000004,
+      "end": 54.037687500000004,
+      "probability": 0.9896612167358398
+    },
+    {
+      "word": "platform.",
+      "start": 54.037687500000004,
+      "end": 54.8776875,
+      "probability": 0.99809330701828
+    },
+    {
+      "word": "Naruto",
+      "start": 54.8776875,
+      "end": 54.9976875,
+      "probability": 0.49486085772514343
+    },
+    {
+      "word": "requests",
+      "start": 54.9976875,
+      "end": 55.597687500000006,
+      "probability": 0.9895904660224915
+    },
+    {
+      "word": "the",
+      "start": 55.597687500000006,
+      "end": 55.857687500000004,
+      "probability": 0.988353431224823
+    },
+    {
+      "word": "secret",
+      "start": 55.857687500000004,
+      "end": 56.097687500000006,
+      "probability": 0.978358805179596
+    },
+    {
+      "word": "technique.",
+      "start": 56.097687500000006,
+      "end": 56.957687500000006,
+      "probability": 0.9958187937736511
+    },
+    {
+      "word": "Shikamaru",
+      "start": 56.957687500000006,
+      "end": 57.2376875,
+      "probability": 0.5735286548733711
+    },
+    {
+      "word": "hands",
+      "start": 57.2376875,
+      "end": 57.6376875,
+      "probability": 0.9748287200927734
+    },
+    {
+      "word": "him",
+      "start": 57.6376875,
+      "end": 57.7776875,
+      "probability": 0.9970033764839172
+    },
+    {
+      "word": "a",
+      "start": 57.7776875,
+      "end": 57.8376875,
+      "probability": 0.997878909111023
+    },
+    {
+      "word": "schedule.",
+      "start": 57.8376875,
+      "end": 58.6376875,
+      "probability": 0.9930087327957153
+    },
+    {
+      "word": "Decades",
+      "start": 58.6376875,
+      "end": 58.957687500000006,
+      "probability": 0.9669069945812225
+    },
+    {
+      "word": "training",
+      "start": 58.957687500000006,
+      "end": 59.177687500000005,
+      "probability": 0.9926009774208069
+    },
+    {
+      "word": "assassins,",
+      "start": 59.177687500000005,
+      "end": 59.957687500000006,
+      "probability": 0.9835982918739319
+    },
+    {
+      "word": "and",
+      "start": 59.957687500000006,
+      "end": 59.9776875,
+      "probability": 0.9703003168106079
+    },
+    {
+      "word": "they",
+      "start": 59.9776875,
+      "end": 60.0776875,
+      "probability": 0.9937562942504883
+    },
+    {
+      "word": "forgot",
+      "start": 60.0776875,
+      "end": 60.2776875,
+      "probability": 0.9827039837837219
+    },
+    {
+      "word": "appointments.",
+      "start": 60.2776875,
+      "end": 60.9776875,
+      "probability": 0.9910908937454224
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 1.04,
+      "text": "What if Shikamaru got one"
+    },
+    {
+      "start": 1.04,
+      "end": 2.48,
+      "text": "day to fix Konoha?"
+    },
+    {
+      "start": 2.48,
+      "end": 4.68,
+      "text": "His opponent is administrative incompetence."
+    },
+    {
+      "start": 4.68,
+      "end": 5.88,
+      "text": "Naruto's desk is buried in"
+    },
+    {
+      "start": 5.88,
+      "end": 6.74,
+      "text": "requests."
+    },
+    {
+      "start": 6.74,
+      "end": 8.18,
+      "text": "My guy, that's not leadership."
+    },
+    {
+      "start": 8.18,
+      "end": 9.34,
+      "text": "That's indoor composting."
+    },
+    {
+      "start": 9.34,
+      "end": 10.56,
+      "text": "Instead of bigger jutsu, he"
+    },
+    {
+      "start": 10.56,
+      "end": 11.7,
+      "text": "asks why teams use one"
+    },
+    {
+      "start": 11.7,
+      "end": 12.48,
+      "text": "gate together."
+    },
+    {
+      "start": 12.48,
+      "end": 14.26,
+      "text": "Nobody coordinates departures."
+    },
+    {
+      "start": 14.26,
+      "end": 15.28,
+      "text": "A whole ninja village got"
+    },
+    {
+      "start": 15.28,
+      "end": 16.7,
+      "text": "outplayed by a calendar with"
+    },
+    {
+      "start": 16.7,
+      "end": 17.9,
+      "text": "serious trust issues."
+    },
+    {
+      "start": 17.9,
+      "end": 19.24,
+      "text": "He staggers departures and keeps"
+    },
+    {
+      "start": 19.24,
+      "end": 20.62,
+      "text": "a reserve squad."
+    },
+    {
+      "start": 20.62,
+      "end": 22.54,
+      "text": "Emergencies finally stop borrowing people"
+    },
+    {
+      "start": 22.54,
+      "end": 23.789999893794644,
+      "text": "from other emergencies."
+    },
+    {
+      "start": 23.789999893794644,
+      "end": 25.37,
+      "text": "Next, hospital supplies need approval"
+    },
+    {
+      "start": 25.37,
+      "end": 27.310000000000002,
+      "text": "from somebody waiting for medicine."
+    },
+    {
+      "start": 27.310000000000002,
+      "end": 28.21,
+      "text": "Beautiful."
+    },
+    {
+      "start": 28.21,
+      "end": 29.67,
+      "text": "Bureaucracy learned recursion."
+    },
+    {
+      "start": 29.67,
+      "end": 30.73,
+      "text": "A clear supply route fixes"
+    },
+    {
+      "start": 30.73,
+      "end": 31.73,
+      "text": "the delay."
+    },
+    {
+      "start": 31.73,
+      "end": 33.15,
+      "text": "Fewer injured people wait while"
+    },
+    {
+      "start": 33.15,
+      "end": 35.05,
+      "text": "paperwork auditions for main character."
+    },
+    {
+      "start": 35.05,
+      "end": 36.93,
+      "text": "Somebody says this looks boring."
+    },
+    {
+      "start": 36.93,
+      "end": 38.17,
+      "text": "Motherflicker, we're building a functioning"
+    },
+    {
+      "start": 38.17,
+      "end": 39.629999999999995,
+      "text": "village, not a trailer with"
+    },
+    {
+      "start": 39.629999999999995,
+      "end": 40.47,
+      "text": "explosions."
+    },
+    {
+      "start": 40.47,
+      "end": 41.95,
+      "text": "But plans don't explain everybody's"
+    },
+    {
+      "start": 41.95,
+      "end": 42.81,
+      "text": "needs."
+    },
+    {
+      "start": 42.81,
+      "end": 44.129999999999995,
+      "text": "Shikamaru has to listen instead"
+    },
+    {
+      "start": 44.129999999999995,
+      "end": 45.69771408170663,
+      "text": "of treating people like puzzles."
+    },
+    {
+      "start": 45.69771408170663,
+      "end": 46.7776875,
+      "text": "He changes the system after"
+    },
+    {
+      "start": 46.7776875,
+      "end": 47.7776875,
+      "text": "hearing them."
+    },
+    {
+      "start": 47.7776875,
+      "end": 49.717687500000004,
+      "text": "Smart doesn't mean automatically correct."
+    },
+    {
+      "start": 49.717687500000004,
+      "end": 51.5576875,
+      "text": "By afternoon, things run smoother."
+    },
+    {
+      "start": 51.5576875,
+      "end": 52.457687500000006,
+      "text": "He uses the saved time"
+    },
+    {
+      "start": 52.457687500000006,
+      "end": 53.3376875,
+      "text": "for a nap."
+    },
+    {
+      "start": 53.3376875,
+      "end": 54.8776875,
+      "text": "A coherent political platform."
+    },
+    {
+      "start": 54.8776875,
+      "end": 56.957687500000006,
+      "text": "Naruto requests the secret technique."
+    },
+    {
+      "start": 56.957687500000006,
+      "end": 58.6376875,
+      "text": "Shikamaru hands him a schedule."
+    },
+    {
+      "start": 58.6376875,
+      "end": 60.0776875,
+      "text": "Decades training assassins, and they"
+    },
+    {
+      "start": 60.0776875,
+      "end": 60.9776875,
+      "text": "forgot appointments."
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 2,
+  "review_names_required": true
+}

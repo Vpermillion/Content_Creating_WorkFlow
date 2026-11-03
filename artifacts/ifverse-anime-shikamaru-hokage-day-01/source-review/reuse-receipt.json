@@ -1,0 +1,11 @@
+{
+  "branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01",
+  "commit": "42287e7c2ec5d1f765d000eb1e84162864bd55fa",
+  "reused_source_keys": [
+    "shika",
+    "naruto",
+    "village",
+    "tsunade"
+  ],
+  "new_source_searches_avoided": 4
+}

@@ -1,0 +1,90 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.610666666666667,
+      "text": "What if Shikamaru got one day to fix Konoha? His opponent is administrative incompetence.",
+      "label": "ONE DAY NO GIANT LASERS"
+    },
+    {
+      "start": 5.610666666666667,
+      "end": 11.370666666666667,
+      "text": "Naruto's desk is buried in requests. My guy, that's not leadership. That's indoor composting.",
+      "label": "THE DESK IS A CRIME SCENE"
+    },
+    {
+      "start": 11.370666666666667,
+      "end": 15.189333333333334,
+      "text": "Instead of bigger jutsu, he asks why teams use one gate together.",
+      "label": "FIRST THE BORING QUESTIONS"
+    },
+    {
+      "start": 15.189333333333334,
+      "end": 21.824,
+      "text": "Nobody coordinates departures. A whole ninja village got outplayed by a calendar with serious trust issues.",
+      "label": "THE BOTTLENECK"
+    },
+    {
+      "start": 21.824,
+      "end": 29.12,
+      "text": "He staggers departures and keeps a reserve squad. Emergencies finally stop borrowing people from other emergencies.",
+      "label": "MOVE THE MISSIONS"
+    },
+    {
+      "start": 29.12,
+      "end": 36.202666666666666,
+      "text": "Next, hospital supplies need approval from somebody waiting for medicine. Beautiful. Bureaucracy learned recursion.",
+      "label": "THE HOSPITAL IS NEXT"
+    },
+    {
+      "start": 36.202666666666666,
+      "end": 42.858666666666664,
+      "text": "A clear supply route fixes the delay. Fewer injured people wait while paperwork auditions for main character.",
+      "label": "FIX THE ROUTE"
+    },
+    {
+      "start": 42.858666666666664,
+      "end": 49.472,
+      "text": "Somebody says this looks boring. Motherflicker, we're building a functioning village, not a trailer with explosions.",
+      "label": "THE COMPLAINT ARRIVES"
+    },
+    {
+      "start": 49.472,
+      "end": 55.936,
+      "text": "But plans don't explain everybody's needs. Shikamaru has to listen instead of treating people like puzzles.",
+      "label": "THE REAL LIMIT"
+    },
+    {
+      "start": 55.936,
+      "end": 60.8,
+      "text": "He changes the system after hearing them. Smart doesn't mean automatically correct.",
+      "label": "A LEADER HAS TO LISTEN"
+    },
+    {
+      "start": 60.8,
+      "end": 67.15733333333333,
+      "text": "By afternoon, things run smoother. He uses the saved time for a nap. A coherent political platform.",
+      "label": "THE AFTERNOON GAMBIT"
+    },
+    {
+      "start": 67.15733333333333,
+      "end": 74.66666666666667,
+      "text": "Naruto requests the secret technique. Shikamaru hands him a schedule. Decades training assassins, and they forgot appointments.",
+      "label": "THE EXPENSIVE PART"
+    }
+  ],
+  "sha256": "22f711384b020178eee1c3d20a869c20ba8f08579bce7d957a8ac3775729c682",
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  }
+}

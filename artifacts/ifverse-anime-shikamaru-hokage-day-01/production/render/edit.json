@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "shots": [
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-shika",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Shikamaru considering a tactical problem; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-000.mp4",
+      "start": 0.0,
+      "end": 4.583714265251276,
+      "frames": 138
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-naruto",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Naruto or Hokage office illustrating leadership workload; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-001.mp4",
+      "start": 4.583714265251276,
+      "end": 9.289428529957908,
+      "frames": 141
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-shika",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Shikamaru considering a tactical problem; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-002.mp4",
+      "start": 9.289428529957908,
+      "end": 12.409142801744897,
+      "frames": 93
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-village",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Konoha streets and village context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-003.mp4",
+      "start": 12.409142801744897,
+      "end": 17.829428491832907,
+      "frames": 163
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-shika",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Shikamaru considering a tactical problem; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-004.mp4",
+      "start": 17.829428491832907,
+      "end": 23.789999893794644,
+      "frames": 179
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-tsunade",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Tsunade reacting as village leadership; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-005.mp4",
+      "start": 23.789999893794644,
+      "end": 25.718761789946004,
+      "frames": 58
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-tsunade",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Tsunade reacting as village leadership; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-006.mp4",
+      "start": 25.718761789946004,
+      "end": 27.64752368609736,
+      "frames": 57
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-tsunade",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Tsunade reacting as village leadership; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-007.mp4",
+      "start": 27.64752368609736,
+      "end": 29.576285582248723,
+      "frames": 58
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-village",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Konoha streets and village context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-008.mp4",
+      "start": 29.576285582248723,
+      "end": 35.01399984368749,
+      "frames": 163
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-naruto",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Naruto or Hokage office illustrating leadership workload; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-009.mp4",
+      "start": 35.01399984368749,
+      "end": 40.416856962424745,
+      "frames": 163
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-shika",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Shikamaru considering a tactical problem; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-010.mp4",
+      "start": 40.416856962424745,
+      "end": 45.69771408170663,
+      "frames": 158
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-village",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Konoha streets and village context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-011.mp4",
+      "start": 45.69771408170663,
+      "end": 49.671428349681115,
+      "frames": 119
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-shika",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Shikamaru considering a tactical problem; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-012.mp4",
+      "start": 49.671428349681115,
+      "end": 54.865142612209176,
+      "frames": 156
+    },
+    {
+      "asset": "ifverse-anime-shikamaru-hokage-day-01-naruto",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Naruto or Hokage office illustrating leadership workload; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-013.mp4",
+      "start": 54.865142612209176,
+      "end": 61.0,
+      "frames": 184
+    }
+  ],
+  "assets": [
+    {
+      "id": "ifverse-anime-shikamaru-hokage-day-01-shika",
+      "file": "ifverse-anime-shikamaru-hokage-day-01-shika.mp4",
+      "type": "video",
+      "query": "Shikamaru Nara thinking",
+      "source_url": "https://tenor.com/view/shikamaru-nara-edits-gif-22430172",
+      "download_url": "https://media.tenor.com/OjNg-lMqUM4AAAPo/shikamaru-nara.mp4",
+      "sha256": "e50f852023a1e1083d09e56e094f837614bcdc5d5820640d7835e140a1e09ddd",
+      "duration": 14.0,
+      "dimensions": [
+        358,
+        640
+      ],
+      "description": "a close up of a man 's face with a green jacket and a ponytail .",
+      "publisher": "ravan4u",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "7948959519950174064",
+          "title": "a close up of a person 's face with a tear coming out of their eye .",
+          "source_url": "https://tenor.com/view/shikamaru-nara-naruto-anime-gif-12823988",
+          "download_url": "https://media.tenor.com/blBgkWiW93AAAAPo/shikamaru-nara-naruto.mp4",
+          "duration": 5.5,
+          "width": 420,
+          "height": 206,
+          "publisher": "GriningSins",
+          "provider": "tenor"
+        },
+        {
+          "id": "14714714313695665196",
+          "title": "a cartoon character with a mask on his face and a headband with a circle on it",
+          "source_url": "https://tenor.com/view/naruto-shippuden-kakashi-hatake-hokage-copy-ninja-serious-face-gif-16457521",
+          "download_url": "https://media.tenor.com/zDUqtNcvnCwAAAPo/naruto-shippuden-kakashi-hatake.mp4",
+          "duration": 2.9,
+          "width": 640,
+          "height": 360,
+          "publisher": "knucklehead_ninja",
+          "provider": "tenor"
+        },
+        {
+          "id": "15926615790212277591",
+          "title": "a cartoon character is scratching his head while wearing a green vest .",
+          "source_url": "https://tenor.com/view/naruto-shikamaru-nara-disappointed-gif-7943820",
+          "download_url": "https://media.tenor.com/3Qa0ram65VcAAAPo/naruto-shikamaru-nara.mp4",
+          "duration": 2.8,
+          "width": 312,
+          "height": 300,
+          "publisher": "cali7",
+          "provider": "tenor"
+        },
+        {
+          "id": "4193802306265436366",
+          "title": "a close up of a man 's face with a green jacket and a ponytail .",
+          "source_url": "https://tenor.com/view/shikamaru-nara-edits-gif-22430172",
+          "download_url": "https://media.tenor.com/OjNg-lMqUM4AAAPo/shikamaru-nara.mp4",
+          "duration": 14,
+          "width": 358,
+          "height": 640,
+          "publisher": "ravan4u",
+          "provider": "tenor"
+        },
+        {
+          "id": "1601657443363086287",
+          "title": "a cartoon character is standing with his arms crossed and the words `` i 'll do it later '' .",
+          "source_url": "https://tenor.com/view/ill-do-it-later-ill-do-it-shikamaru-shikamaru-nara-naruto-gif-25052833",
+          "download_url": "https://media.tenor.com/Fjo69XOEX88AAAPo/ill-do-it-later-ill-do-it.mp4",
+          "duration": 2.2,
+          "width": 640,
+          "height": 356,
+          "publisher": "CallmeCobra",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "shika",
+      "visual_intent": "Shikamaru considering a tactical problem"
+    },
+    {
+      "id": "ifverse-anime-shikamaru-hokage-day-01-naruto",
+      "file": "ifverse-anime-shikamaru-hokage-day-01-naruto.mp4",
+      "type": "video",
+      "query": "Naruto Hokage paperwork",
+      "source_url": "https://tenor.com/view/naruto-naruto-shippuden-boruto-boruto-naruto-next-generations-naruto-baryon-mode-gif-20972266",
+      "download_url": "https://media.tenor.com/jYm_OiLFOtoAAAPo/naruto-naruto-shippuden.mp4",
+      "sha256": "f20e25684bf2e8c7620bf367ea15128787f151c94e42a5e5ce712f971d64c214",
+      "duration": 7.26,
+      "dimensions": [
+        522,
+        640
+      ],
+      "description": "a drawing of a cartoon character with the letters psn below it",
+      "publisher": "Spideyneighberood",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "16324290663889232005",
+          "title": "a stack of books on a table with one that says ' diary '",
+          "source_url": "https://tenor.com/view/obito-kakashi-naruto-shippuden-obito-uchiha-kakashi-hatake-gif-16324290663889232005",
+          "download_url": "https://media.tenor.com/4ouH3ndX4IUAAAPo/obito-kakashi.mp4",
+          "duration": 3.7,
+          "width": 480,
+          "height": 270,
+          "publisher": "obitoslove",
+          "provider": "tenor"
+        },
+        {
+          "id": "11080592608247756724",
+          "title": "a cartoon shrimp sits in front of a computer",
+          "source_url": "https://tenor.com/view/homework-research-writing-a-paper-crying-stressed-gif-15387168",
+          "download_url": "https://media.tenor.com/mcYsRQttN7QAAAPo/homework-research.mp4",
+          "duration": 1.1,
+          "width": 640,
+          "height": 640,
+          "publisher": "pikaole",
+          "provider": "tenor"
+        },
+        {
+          "id": "7807267538057241717",
+          "title": "a woman sitting at a desk with the words \" i gots pepework tu du \" on the bottom",
+          "source_url": "https://tenor.com/view/paperwork-banbert-gif-21066695",
+          "download_url": "https://media.tenor.com/bFj8dhBXJHUAAAPo/paperwork-banbert.mp4",
+          "duration": 3.8,
+          "width": 640,
+          "height": 356,
+          "publisher": "TwistR",
+          "provider": "tenor"
+        },
+        {
+          "id": "4660252389760927978",
+          "title": "a cartoon drawing of a ninja with a huge red tail",
+          "source_url": "https://tenor.com/view/naruto-shippuden-naruto-vs-isshiki-isshiki-otsutsuki-kurama-death-naruto-kurama-mode-gif-23459013",
+          "download_url": "https://media.tenor.com/QKyK239diOoAAAPo/naruto-shippuden-naruto-vs-isshiki.mp4",
+          "duration": 5.9,
+          "width": 640,
+          "height": 522,
+          "publisher": "Spideyneighberood",
+          "provider": "tenor"
+        },
+        {
+          "id": "10198893087569558234",
+          "title": "a drawing of a cartoon character with the letters psn below it",
+          "source_url": "https://tenor.com/view/naruto-naruto-shippuden-boruto-boruto-naruto-next-generations-naruto-baryon-mode-gif-20972266",
+          "download_url": "https://media.tenor.com/jYm_OiLFOtoAAAPo/naruto-naruto-shippuden.mp4",
+          "duration": 7.3,
+          "width": 522,
+          "height": 640,
+          "publisher": "Spideyneighberood",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "naruto",
+      "visual_intent": "Naruto or Hokage office illustrating leadership workload"
+    },
+    {
+      "id": "ifverse-anime-shikamaru-hokage-day-01-village",
+      "file": "ifverse-anime-shikamaru-hokage-day-01-village.mp4",
+      "type": "video",
+      "query": "Konoha village Naruto",
+      "source_url": "https://tenor.com/view/naruto-naruto-shippuden-pain-arc-pains-assault-arc-pain-gif-6480818146581278146",
+      "download_url": "https://media.tenor.com/WfB9xHjh7cIAAAPo/naruto-naruto-shippuden.mp4",
+      "sha256": "722a04566e152d13966a50bb8c1b11c288439d7465f21da2580334a4d58a5133",
+      "duration": 8.925583,
+      "dimensions": [
+        498,
+        282
+      ],
+      "description": "a man in an akatsuki cloak is flying through the air over a city",
+      "publisher": "Moars",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "358372160293803227",
+          "title": "a cartoon drawing of a city with mountains in the background and a statue in the middle",
+          "source_url": "https://tenor.com/view/naruto-hokage-mountain-monument-rock-gif-26792923",
+          "download_url": "https://media.tenor.com/BPkxlL-zlNsAAAPo/naruto-hokage.mp4",
+          "duration": 5.8,
+          "width": 640,
+          "height": 358,
+          "publisher": "sugarbunnycult",
+          "provider": "tenor"
+        },
+        {
+          "id": "16307195045620919164",
+          "title": "a black and white drawing of a man in a cape standing on top of a large building",
+          "source_url": "https://tenor.com/view/sasuke-uchiha-leaf-village-konoha-return-gif-16307195045620919164",
+          "download_url": "https://media.tenor.com/4k7Lfqk-q3wAAAPo/sasuke-uchiha.mp4",
+          "duration": 2.7,
+          "width": 498,
+          "height": 358,
+          "publisher": "HalJordan2814",
+          "provider": "tenor"
+        },
+        {
+          "id": "6480818146581278146",
+          "title": "a man in an akatsuki cloak is flying through the air over a city",
+          "source_url": "https://tenor.com/view/naruto-naruto-shippuden-pain-arc-pains-assault-arc-pain-gif-6480818146581278146",
+          "download_url": "https://media.tenor.com/WfB9xHjh7cIAAAPo/naruto-naruto-shippuden.mp4",
+          "duration": 8.9,
+          "width": 498,
+          "height": 282,
+          "publisher": "Moars",
+          "provider": "tenor"
+        },
+        {
+          "id": "8912352478181288081",
+          "title": "a group of anime characters posing for a picture",
+          "source_url": "https://tenor.com/view/naruto-sakura-sasuke-team-7-naruto-uzumaki-gif-8912352478181288081",
+          "download_url": "https://media.tenor.com/e68JW_cRaJEAAAPo/naruto-sakura.mp4",
+          "duration": 9,
+          "width": 282,
+          "height": 498,
+          "publisher": "mrvectorpath",
+          "provider": "tenor"
+        },
+        {
+          "id": "16688770309148504167",
+          "title": "Boruto Uzumaki Boruto Timeskip GIF",
+          "source_url": "https://tenor.com/view/boruto-uzumaki-boruto-boruto-timeskip-naruto-series-naruto-characters-gif-16688770309148504167",
+          "download_url": "https://media.tenor.com/55psLN7h8GcAAAPo/boruto-uzumaki-boruto.mp4",
+          "duration": 1.4,
+          "width": 498,
+          "height": 498,
+          "publisher": "IDLEGLANCE",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "village",
+      "visual_intent": "Konoha streets and village context"
+    },
+    {
+      "id": "ifverse-anime-shikamaru-hokage-day-01-tsunade",
+      "file": "ifverse-anime-shikamaru-hokage-day-01-tsunade.mp4",
+      "type": "video",
+      "query": "Tsunade Naruto reaction",
+      "source_url": "https://tenor.com/view/tsunade-senju-kawaii-oppai-106-gif-26780727",
+      "download_url": "https://media.tenor.com/lapLXh8X52wAAAPo/tsunade-senju.mp4",
+      "sha256": "ec7966ae0b6ee4909df6116c80bce13a269ce7786e94699547669d98265a2ce8",
+      "duration": 2.88,
+      "dimensions": [
+        640,
+        358
+      ],
+      "description": "a cartoon character with blonde hair and a blue eye",
+      "publisher": "farhaan_144",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "10784515125312743276",
+          "title": "a cartoon character with blonde hair and a blue eye",
+          "source_url": "https://tenor.com/view/tsunade-senju-kawaii-oppai-106-gif-26780727",
+          "download_url": "https://media.tenor.com/lapLXh8X52wAAAPo/tsunade-senju.mp4",
+          "duration": 2.9,
+          "width": 640,
+          "height": 358,
+          "publisher": "farhaan_144",
+          "provider": "tenor"
+        },
+        {
+          "id": "5293981705958801198",
+          "title": "a woman with a blue diamond on her forehead looks angry",
+          "source_url": "https://tenor.com/view/tsunade-senju-tsunade-chakra-oppai-naruto-gif-26745133",
+          "download_url": "https://media.tenor.com/SXgAUBcXPy4AAAPo/tsunade-senju-tsunade.mp4",
+          "duration": 2.8,
+          "width": 640,
+          "height": 358,
+          "publisher": "farhaan_144",
+          "provider": "tenor"
+        },
+        {
+          "id": "5856900085556659391",
+          "title": "a close up of a woman 's face with the words thenarutofan.com below her",
+          "source_url": "https://tenor.com/view/tsunade-senju-happy-anime-naruto-gif-13788602",
+          "download_url": "https://media.tenor.com/UUfjmLyPRL8AAAPo/tsunade-senju-happy.mp4",
+          "duration": 1.4,
+          "width": 500,
+          "height": 500,
+          "publisher": "TsunadeSenju76",
+          "provider": "tenor"
+        },
+        {
+          "id": "15056354745636707566",
+          "title": "a woman with blonde hair and a blue spot on her forehead is sitting in a chair",
+          "source_url": "https://tenor.com/view/tsunade-senju-wondering-thinking-gif-13788628",
+          "download_url": "https://media.tenor.com/0PLq3oHxXO4AAAPo/tsunade-senju-wondering.mp4",
+          "duration": 1.5,
+          "width": 500,
+          "height": 300,
+          "publisher": "TsunadeSenju76",
+          "provider": "tenor"
+        },
+        {
+          "id": "9378529411076560998",
+          "title": "a woman with blonde hair and a red wristband is standing in front of a mountain",
+          "source_url": "https://tenor.com/view/samui-naruto-gif-25793378",
+          "download_url": "https://media.tenor.com/gic6z07FmGYAAAPo/samui-naruto.mp4",
+          "duration": 1.6,
+          "width": 588,
+          "height": 640,
+          "publisher": "darkmagiciangirl1998",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "tsunade",
+      "visual_intent": "Tsunade reacting as village leadership"
+    }
+  ],
+  "narration_sha256": "e33300d9eabb1747973d94cf5cbdac24d84cf08908b92f9b35e3b53ebb618758"
+}
