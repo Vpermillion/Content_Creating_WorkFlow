@@ -82,10 +82,10 @@
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
         }
       ],
-      "video_sha256": "c44dd81bebda09a96fd294500607d8640022757f35a992c5dd33aa2d572d685a",
+      "video_sha256": "b5e909f2e6f9ce9e0ff15ebb26bfe6a72cda9f7f76b50de25b80cc6ecbcd3dda",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r2",
-      "result_commit": "0c6f0ceb2221288ee9967ed67d9f9d8d967d7c71",
+      "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r3",
+      "result_commit": "941e648fe9c6557e96883980e0744cd451d7f682",
       "publication_clearance": "not_established",
       "result_receipt": "artifacts/ifverse-anime-naruto-clone-strike-01/batch-result.json"
     },
@@ -286,10 +286,10 @@
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
         }
       ],
-      "video_sha256": "7eca4eb3278b5143e2199c19e6bb625b0e5683f6b374e5897a872cc663a19734",
+      "video_sha256": "e9dda17c548dc60c8ccee03eeac0e135b5559230eb7809eea9011b551476eadd",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r2",
-      "result_commit": "915081581a0cecb3ae3f9c56c87a4bc1111c0680",
+      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r3",
+      "result_commit": "85d32f7e0c10d3d2d1686a11857f932ce37d89b0",
       "publication_clearance": "not_established",
       "result_receipt": "artifacts/ifverse-anime-vegeta-peaceful-week-01/batch-result.json"
     },
@@ -354,10 +354,10 @@
           "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
         }
       ],
-      "video_sha256": "15f06323fb729d2e35e1ce0d085688f744ae4830299fa254f44b88a292fa348c",
+      "video_sha256": "2036c520d7f1bb272b32f2f2f36ea0d55db85676c99b032f81e0756b6a38ba2c",
       "duration_seconds": 61.0,
-      "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r2",
-      "result_commit": "7ff6789bd2d0239522fb3e196360f23f9cd9d13c",
+      "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r3",
+      "result_commit": "2a17c45aad30a9b04b961217972228101a3fa626",
       "publication_clearance": "not_established",
       "result_receipt": "artifacts/ifverse-anime-gojo-no-powers-day-01/batch-result.json"
     },
