@@ -1,0 +1,79 @@
+{
+  "id": "ifverse-anime-light-explains-every-name-01",
+  "batch_id": "ifverse-anime-ten-61s-20261103-01",
+  "status": "success",
+  "script_sha256": "17c8667a0acff83d83bd133e78c2852857971168de1b8cd187c6945398291ef0",
+  "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-dubbingai-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "video": "production/sound-effects-dubbingai/video-sfx.mp4",
+  "video_sha256": "624cc8677638b278a0c62f2bbd1a3fbf33e87b6e4fcf3a232011cafa1a597d4c",
+  "duration_seconds": 61.0,
+  "frame_size": [
+    720,
+    1280
+  ],
+  "source_count": 4,
+  "source_use_status": "unverified",
+  "sound_catalog": "assets/sfx/dubbingai-bank.json",
+  "sound_rights": "community_excerpt_rights_unverified",
+  "technical_receipt": "production/result.json",
+  "audiovisual_editorial_review": "pending",
+  "metadata": {
+    "title": "What if Light had to explain EVERY name to L?",
+    "description": "A supernatural rule forces Light to defend each proposed notebook entry to L before it can take effect.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #DeathNote\n\nIllustrative clip sources:\nhttps://tenor.com/view/death-note-light-yagami-l-death-note-l-death-note-meme-gif-10906403005566039796\nhttps://tenor.com/view/l-l-lawliet-death-note-confused-thinking-gif-11490947184345386785\nhttps://tenor.com/view/death-note-anime-ryuk-shinigami-apple-gif-22100243\nhttps://tenor.com/view/fairysoobs-death-note-gif-22234436",
+    "tags": [
+      "anime what if",
+      "Death Note",
+      "Light",
+      "L",
+      "Ryuk",
+      "Ifverse Anime"
+    ],
+    "hashtags": [
+      "Shorts",
+      "Anime",
+      "WhatIf",
+      "DeathNote"
+    ],
+    "categoryId": "24",
+    "defaultLanguage": "en",
+    "defaultAudioLanguage": "en"
+  },
+  "posting_packet": "post-settings.json",
+  "music_embedded": false,
+  "sound_repair_source": {
+    "id": "ifverse-anime-light-explains-every-name-01",
+    "topic_key": "light-explains-every-name",
+    "title": "What if Light had to explain EVERY name to L?",
+    "premise": "A supernatural rule forces Light to defend each proposed notebook entry to L before it can take effect.",
+    "franchise": "Death Note",
+    "characters": [
+      "Light",
+      "L",
+      "Ryuk"
+    ],
+    "aliases": [],
+    "distinctive_development": "Forced justification exposes missing evidence and arrogance; accusation becomes investigation; L challenges selective justice; satire ends on documentation.",
+    "script_sha256": "17c8667a0acff83d83bd133e78c2852857971168de1b8cd187c6945398291ef0",
+    "batch_id": "ifverse-anime-ten-61s-20261103-01",
+    "state": "rendered",
+    "video_id": null,
+    "youtube_url": null,
+    "reserved_at": "2026-11-03T02:44:44.879310+00:00",
+    "versions": [
+      {
+        "batch_id": "ifverse-anime-ten-20261103-01",
+        "script_sha256": "1530d0428739ebe8c837c7e8d2763c93960741c13264af3a97e46ec7cf86999c",
+        "state": "reserved",
+        "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+      }
+    ],
+    "video_sha256": "156b2f1fab574b1ed6989d6f11721793d97ccdff3ff6e796fbe1ed14dd83bc6a",
+    "duration_seconds": 61.0,
+    "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-r2",
+    "result_commit": "f2a0eadd6dc8f5601138d15410449804fb905cd8",
+    "publication_clearance": "not_established",
+    "result_receipt": "artifacts/ifverse-anime-light-explains-every-name-01/batch-result.json"
+  }
+}
