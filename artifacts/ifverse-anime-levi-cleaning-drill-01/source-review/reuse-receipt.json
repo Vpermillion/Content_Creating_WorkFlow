@@ -1,0 +1,11 @@
+{
+  "branch": "codex/results/ifverse-anime-levi-cleaning-drill-01",
+  "commit": "1b868b3598ed6c4d3a07ce6fdb77b93a29da3f92",
+  "reused_source_keys": [
+    "levi",
+    "gear",
+    "armin",
+    "eren"
+  ],
+  "new_source_searches_avoided": 4
+}

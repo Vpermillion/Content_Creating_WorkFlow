@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-levi-cleaning-drill-01",
+  "script_sha256": "00eb69ed18a4bd745285aa49b2eea13181b1ef60d6b1bd3d891322a2a2d219c0",
+  "catalog": "assets/sfx/catalog.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "bucket beside him",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "bass_impact",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "replacement safety equipment",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "error_buzz",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "squad's problem",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "reward_ping",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "aggressive eye contact",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "cartoon_boing",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    }
+  ],
+  "narration_sha256": "caf19df8df84377c3a2756b83191b655388295a5e2506619db7b6b3b88318d1d",
+  "narration_binding": "Final waveform generated/reused for the matching ordered script checksum"
+}

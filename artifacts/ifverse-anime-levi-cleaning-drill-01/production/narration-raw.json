@@ -1,0 +1,90 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.141333333333334,
+      "text": "What if Levi turned cleaning day into a survival drill? The furious man has concerns.",
+      "label": "THE MOP IS NOT OPTIONAL"
+    },
+    {
+      "start": 5.141333333333334,
+      "end": 11.349333333333334,
+      "text": "Eren complains about wasted time. Bro wants heroic action but cannot locate the bucket beside him.",
+      "label": "EREN HAS OPINIONS"
+    },
+    {
+      "start": 11.349333333333334,
+      "end": 15.765333333333333,
+      "text": "Levi checks a dirty strap and finds wear. This isn't about shiny furniture.",
+      "label": "THE INSPECTION"
+    },
+    {
+      "start": 15.765333333333333,
+      "end": 22.613333333333333,
+      "text": "A frayed line doesn't care about freedom speeches. Main character energy makes terrible replacement safety equipment.",
+      "label": "GEAR DOES NOT CARE ABOUT AURA"
+    },
+    {
+      "start": 22.613333333333333,
+      "end": 27.136,
+      "text": "Armin understands. Cleaning makes them inspect parts and explain their findings.",
+      "label": "ARMIN CONNECTS THE DOTS"
+    },
+    {
+      "start": 27.136,
+      "end": 33.856,
+      "text": "Levi moves the supplies. Find replacements. Communicate. Welcome to logistics with aggressive eye contact.",
+      "label": "THE SECOND TEST"
+    },
+    {
+      "start": 33.856,
+      "end": 39.68,
+      "text": "Eren volunteers to carry everything. My guy, one mistake becomes the whole squad's problem.",
+      "label": "THE LOUD SOLUTION FAILS"
+    },
+    {
+      "start": 39.68,
+      "end": 46.4,
+      "text": "They distribute essentials and check each other's gear. Not flashy. Neither is surviving because somebody checked a buckle.",
+      "label": "SPLIT THE LOAD"
+    },
+    {
+      "start": 46.4,
+      "end": 52.672,
+      "text": "This doesn't guarantee safety. It removes avoidable failures. Those are different claims, and Armin knows it.",
+      "label": "NO MAGIC INVINCIBILITY"
+    },
+    {
+      "start": 52.672,
+      "end": 57.792,
+      "text": "The lesson is attention. Find the boring detail before a crisis makes it exciting.",
+      "label": "THE ACTUAL LESSON"
+    },
+    {
+      "start": 57.792,
+      "end": 64.32,
+      "text": "Eren finally cleans properly. The bucket receives more character development than half the speeches in that room.",
+      "label": "THE BUCKET GETS ITS ARC"
+    },
+    {
+      "start": 64.32,
+      "end": 72.34133333333334,
+      "text": "Levi spots one speck. Everybody freezes. They survived the drill. Unfortunately, their supervisor has just discovered overtime.",
+      "label": "INSPECTION CONTINUES"
+    }
+  ],
+  "sha256": "7ed3abb2c10b15d1b6bb3e192d551cc423533ab126b38cc8e7fbee4de52a1537",
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  }
+}
