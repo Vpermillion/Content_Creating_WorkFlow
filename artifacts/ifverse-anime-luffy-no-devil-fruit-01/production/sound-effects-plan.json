@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-luffy-no-devil-fruit-01",
+  "script_sha256": "cadb1dc56b75716ee65fa7846b42fa65fe3f2fbd96158199b4c9f92329bd325f",
+  "catalog": "assets/sfx/catalog.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "childproofing on the plot",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "bass_impact",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "Be serious",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "error_buzz",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "single brain cell",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "reward_ping",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    },
+    {
+      "anchor": {
+        "phrase": "second rescue objective",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "cartoon_boing",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Punctuate the specific scripted joke without covering the next phrase."
+    }
+  ],
+  "narration_sha256": "2ccd7bac0d0275779b7fb254cc1f3d9aee3932912ee14556637e03c7fa69af3f",
+  "narration_binding": "Final waveform generated/reused for the matching ordered script checksum"
+}

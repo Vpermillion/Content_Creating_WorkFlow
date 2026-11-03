@@ -1,0 +1,90 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.464,
+      "text": "What if Luffy never ate a Devil Fruit? Same pirate dream. Dramatically fewer elastic escape plans.",
+      "label": "NO RUBBER STILL LOUD"
+    },
+    {
+      "start": 6.464,
+      "end": 12.266666666666667,
+      "text": "In this timeline, Shanks keeps the fruit away. Somebody finally installed childproofing on the plot.",
+      "label": "ONE STOLEN SNACK CHANGES THINGS"
+    },
+    {
+      "start": 12.266666666666667,
+      "end": 19.413333333333334,
+      "text": "Luffy keeps swimming. Useful, honestly. Revolutionary technology called not immediately drowning after you leave.",
+      "label": "SWIMMING IS BACK"
+    },
+    {
+      "start": 19.413333333333334,
+      "end": 24.384,
+      "text": "But his body isn't rubber. Bullets won't bounce because he's built different. Be serious.",
+      "label": "THE PUNCH PROBLEM"
+    },
+    {
+      "start": 24.384,
+      "end": 29.696,
+      "text": "He needs different training, defense, and discipline. Shanks isn't issuing a victory certificate.",
+      "label": "A DIFFERENT TRAINING PATH"
+    },
+    {
+      "start": 29.696,
+      "end": 36.906666666666666,
+      "text": "The crew matters more. Zoro covers combat while somebody explains that cannons aren't just motivational obstacles.",
+      "label": "THE CREW IS NOT OPTIONAL"
+    },
+    {
+      "start": 36.906666666666666,
+      "end": 42.26133333333333,
+      "text": "Luffy still leaps toward danger. We removed the fruit, not his adventurous single brain cell.",
+      "label": "THE SAME AWFUL INSTINCTS"
+    },
+    {
+      "start": 42.26133333333333,
+      "end": 48.81066666666667,
+      "text": "Positioning and tools become essential. A rope extends your reach without a supernatural childhood accident.",
+      "label": "BORROW A TOOL BRO"
+    },
+    {
+      "start": 48.81066666666667,
+      "end": 54.848,
+      "text": "Then a crewmate falls overboard. Luffy can finally help instead of becoming the second rescue objective.",
+      "label": "THE RESCUE REVERSAL"
+    },
+    {
+      "start": 54.848,
+      "end": 61.397333333333336,
+      "text": "The trade? Extraordinary flexibility disappears, but an ordinary ability changes how he protects friends.",
+      "label": "POWER IS NOT PERSONALITY"
+    },
+    {
+      "start": 61.397333333333336,
+      "end": 68.8,
+      "text": "Some battles become harder or unwinnable. Plot armor isn't a documented training program. Please show your sources.",
+      "label": "NO FREE WIN STAMP"
+    },
+    {
+      "start": 68.8,
+      "end": 75.75466666666667,
+      "text": "The dream survives. The crew matters more. And the captain's relationship with water stops being legally binding beef.",
+      "label": "THE DREAM SURVIVES"
+    }
+  ],
+  "sha256": "25a29290560e89884939667ea6196ff58f36553f92450d4dbe39d36039f50645",
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  }
+}

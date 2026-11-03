@@ -1,0 +1,11 @@
+{
+  "branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01",
+  "commit": "f7ba7c8812eaa91843593b2a2abdc6ba9ae7bda1",
+  "reused_source_keys": [
+    "luffy",
+    "fight",
+    "shanks",
+    "crew"
+  ],
+  "new_source_searches_avoided": 4
+}

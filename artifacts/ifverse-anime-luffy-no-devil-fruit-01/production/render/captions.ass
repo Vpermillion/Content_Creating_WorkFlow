@@ -1,0 +1,76 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.82,Caption,,0,0,0,,What if Luffy never ate
+Dialogue: 0,0:00:00.82,0:00:01.82,Caption,,0,0,0,,a Devil Fruit?
+Dialogue: 0,0:00:01.82,0:00:03.20,Caption,,0,0,0,,Same pirate dream.
+Dialogue: 0,0:00:03.20,0:00:05.24,Caption,,0,0,0,,Dramatically fewer elastic\Nescape plans.
+Dialogue: 0,0:00:05.24,0:00:06.48,Caption,,0,0,0,,In this timeline, Shanks keeps
+Dialogue: 0,0:00:06.48,0:00:07.72,Caption,,0,0,0,,the fruit away.
+Dialogue: 0,0:00:07.72,0:00:09.40,Caption,,0,0,0,,Somebody finally installed\Nchildproofing on
+Dialogue: 0,0:00:09.40,0:00:10.08,Caption,,0,0,0,,the plot.
+Dialogue: 0,0:00:10.08,0:00:11.16,Caption,,0,0,0,,Luffy keeps swimming.
+Dialogue: 0,0:00:11.16,0:00:12.80,Caption,,0,0,0,,Useful, honestly.
+Dialogue: 0,0:00:12.80,0:00:14.28,Caption,,0,0,0,,Revolutionary technology called\Nnot immediately
+Dialogue: 0,0:00:14.28,0:00:15.68,Caption,,0,0,0,,drowning after you leave.
+Dialogue: 0,0:00:15.68,0:00:17.18,Caption,,0,0,0,,But his body isn't rubber.
+Dialogue: 0,0:00:17.18,0:00:18.18,Caption,,0,0,0,,Bullets won't bounce because\Nhe's
+Dialogue: 0,0:00:18.18,0:00:19.00,Caption,,0,0,0,,built different.
+Dialogue: 0,0:00:19.00,0:00:19.70,Caption,,0,0,0,,Be serious.
+Dialogue: 0,0:00:19.70,0:00:21.22,Caption,,0,0,0,,He needs different training,\Ndefense,
+Dialogue: 0,0:00:21.22,0:00:22.14,Caption,,0,0,0,,and discipline.
+Dialogue: 0,0:00:22.14,0:00:23.16,Caption,,0,0,0,,Shanks isn't issuing a victory
+Dialogue: 0,0:00:23.16,0:00:23.91,Caption,,0,0,0,,certificate.
+Dialogue: 0,0:00:23.91,0:00:25.25,Caption,,0,0,0,,The crew matters more.
+Dialogue: 0,0:00:25.25,0:00:26.65,Caption,,0,0,0,,Zoro covers combat while\Nsomebody
+Dialogue: 0,0:00:26.65,0:00:28.23,Caption,,0,0,0,,explains that cannons aren't\Njust
+Dialogue: 0,0:00:28.23,0:00:29.75,Caption,,0,0,0,,motivational obstacles.
+Dialogue: 0,0:00:29.75,0:00:31.47,Caption,,0,0,0,,Luffy still leaps toward danger.
+Dialogue: 0,0:00:31.47,0:00:32.45,Caption,,0,0,0,,We removed the fruit, not
+Dialogue: 0,0:00:32.45,0:00:34.09,Caption,,0,0,0,,his adventurous single brain\Ncell.
+Dialogue: 0,0:00:34.09,0:00:36.21,Caption,,0,0,0,,Positioning and tools become\Nessential.
+Dialogue: 0,0:00:36.21,0:00:37.19,Caption,,0,0,0,,A rope extends your reach
+Dialogue: 0,0:00:37.19,0:00:39.37,Caption,,0,0,0,,without a supernatural childhood\Naccident.
+Dialogue: 0,0:00:39.37,0:00:41.19,Caption,,0,0,0,,Then a crewmate falls overboard.
+Dialogue: 0,0:00:41.19,0:00:42.31,Caption,,0,0,0,,Luffy can finally help instead
+Dialogue: 0,0:00:42.31,0:00:43.51,Caption,,0,0,0,,of becoming the second rescue
+Dialogue: 0,0:00:43.51,0:00:44.17,Caption,,0,0,0,,objective.
+Dialogue: 0,0:00:44.17,0:00:44.89,Caption,,0,0,0,,The trade?
+Dialogue: 0,0:00:44.89,0:00:46.99,Caption,,0,0,0,,Extraordinary flexibility\Ndisappears, but an
+Dialogue: 0,0:00:46.99,0:00:48.57,Caption,,0,0,0,,ordinary ability changes how he
+Dialogue: 0,0:00:48.57,0:00:49.49,Caption,,0,0,0,,protects friends.
+Dialogue: 0,0:00:49.49,0:00:50.79,Caption,,0,0,0,,Some battles become harder or
+Dialogue: 0,0:00:50.79,0:00:51.71,Caption,,0,0,0,,unwinnable.
+Dialogue: 0,0:00:51.71,0:00:52.93,Caption,,0,0,0,,Plot armor isn't a documented
+Dialogue: 0,0:00:52.93,0:00:54.21,Caption,,0,0,0,,training program.
+Dialogue: 0,0:00:54.21,0:00:55.45,Caption,,0,0,0,,Please show your sources.
+Dialogue: 0,0:00:55.45,0:00:56.55,Caption,,0,0,0,,The dream survives.
+Dialogue: 0,0:00:56.55,0:00:57.83,Caption,,0,0,0,,The crew matters more.
+Dialogue: 0,0:00:57.83,0:00:58.97,Caption,,0,0,0,,And the captain's relationship\Nwith
+Dialogue: 0,0:00:58.97,0:01:00.97,Caption,,0,0,0,,water stops being legally\Nbinding beef.
+Dialogue: 1,0:00:00.00,0:00:05.21,Heading,,0,0,0,,NO RUBBER STILL LOUD
+Dialogue: 1,0:00:05.21,0:00:09.88,Heading,,0,0,0,,ONE STOLEN SNACK CHANGES THINGS
+Dialogue: 1,0:00:09.88,0:00:15.63,Heading,,0,0,0,,SWIMMING IS BACK
+Dialogue: 1,0:00:15.63,0:00:19.63,Heading,,0,0,0,,THE PUNCH PROBLEM
+Dialogue: 1,0:00:19.63,0:00:23.91,Heading,,0,0,0,,A DIFFERENT TRAINING PATH
+Dialogue: 1,0:00:23.91,0:00:29.72,Heading,,0,0,0,,THE CREW IS NOT OPTIONAL
+Dialogue: 1,0:00:29.72,0:00:34.03,Heading,,0,0,0,,THE SAME AWFUL INSTINCTS
+Dialogue: 1,0:00:34.03,0:00:39.30,Heading,,0,0,0,,BORROW A TOOL BRO
+Dialogue: 1,0:00:39.30,0:00:44.17,Heading,,0,0,0,,THE RESCUE REVERSAL
+Dialogue: 1,0:00:44.17,0:00:49.44,Heading,,0,0,0,,POWER IS NOT PERSONALITY
+Dialogue: 1,0:00:49.44,0:00:55.40,Heading,,0,0,0,,NO FREE WIN STAMP
+Dialogue: 1,0:00:55.40,0:01:01.00,Heading,,0,0,0,,THE DREAM SURVIVES
+Dialogue: 1,0:00:00.00,0:01:01.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:01.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF

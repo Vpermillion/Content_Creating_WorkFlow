@@ -1,0 +1,1351 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "2ccd7bac0d0275779b7fb254cc1f3d9aee3932912ee14556637e03c7fa69af3f",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.1,
+      "probability": 9.670738654676825e-05
+    },
+    {
+      "word": "if",
+      "start": 0.1,
+      "end": 0.18,
+      "probability": 0.9751705527305603
+    },
+    {
+      "word": "Luffy",
+      "start": 0.18,
+      "end": 0.32,
+      "probability": 0.13018392026424408
+    },
+    {
+      "word": "never",
+      "start": 0.32,
+      "end": 0.54,
+      "probability": 0.9971984624862671
+    },
+    {
+      "word": "ate",
+      "start": 0.54,
+      "end": 0.82,
+      "probability": 0.9947813153266907
+    },
+    {
+      "word": "a",
+      "start": 0.82,
+      "end": 0.92,
+      "probability": 0.9953359961509705
+    },
+    {
+      "word": "Devil",
+      "start": 0.92,
+      "end": 1.14,
+      "probability": 0.12343209981918335
+    },
+    {
+      "word": "Fruit?",
+      "start": 1.14,
+      "end": 1.82,
+      "probability": 0.3614417016506195
+    },
+    {
+      "word": "Same",
+      "start": 1.82,
+      "end": 2.0,
+      "probability": 0.9654631614685059
+    },
+    {
+      "word": "pirate",
+      "start": 2.0,
+      "end": 2.32,
+      "probability": 0.9302676916122437
+    },
+    {
+      "word": "dream.",
+      "start": 2.32,
+      "end": 3.2,
+      "probability": 0.9910330176353455
+    },
+    {
+      "word": "Dramatically",
+      "start": 3.2,
+      "end": 3.46,
+      "probability": 0.980732798576355
+    },
+    {
+      "word": "fewer",
+      "start": 3.46,
+      "end": 3.74,
+      "probability": 0.9712802767753601
+    },
+    {
+      "word": "elastic",
+      "start": 3.74,
+      "end": 4.14,
+      "probability": 0.952545702457428
+    },
+    {
+      "word": "escape",
+      "start": 4.14,
+      "end": 4.52,
+      "probability": 0.7771150469779968
+    },
+    {
+      "word": "plans.",
+      "start": 4.52,
+      "end": 5.24,
+      "probability": 0.986769437789917
+    },
+    {
+      "word": "In",
+      "start": 5.24,
+      "end": 5.24,
+      "probability": 0.9848143458366394
+    },
+    {
+      "word": "this",
+      "start": 5.24,
+      "end": 5.36,
+      "probability": 0.9913922548294067
+    },
+    {
+      "word": "timeline,",
+      "start": 5.36,
+      "end": 6.1,
+      "probability": 0.9689639806747437
+    },
+    {
+      "word": "Shanks",
+      "start": 6.1,
+      "end": 6.24,
+      "probability": 0.8092504143714905
+    },
+    {
+      "word": "keeps",
+      "start": 6.24,
+      "end": 6.48,
+      "probability": 0.9925225377082825
+    },
+    {
+      "word": "the",
+      "start": 6.48,
+      "end": 6.6,
+      "probability": 0.9890007972717285
+    },
+    {
+      "word": "fruit",
+      "start": 6.6,
+      "end": 6.72,
+      "probability": 0.9847159385681152
+    },
+    {
+      "word": "away.",
+      "start": 6.72,
+      "end": 7.72,
+      "probability": 0.9971587657928467
+    },
+    {
+      "word": "Somebody",
+      "start": 7.72,
+      "end": 7.72,
+      "probability": 0.9836000204086304
+    },
+    {
+      "word": "finally",
+      "start": 7.72,
+      "end": 8.02,
+      "probability": 0.9869689345359802
+    },
+    {
+      "word": "installed",
+      "start": 8.02,
+      "end": 8.5,
+      "probability": 0.9727943539619446
+    },
+    {
+      "word": "childproofing",
+      "start": 8.5,
+      "end": 9.3,
+      "probability": 0.7459656397501627
+    },
+    {
+      "word": "on",
+      "start": 9.3,
+      "end": 9.4,
+      "probability": 0.9974830746650696
+    },
+    {
+      "word": "the",
+      "start": 9.4,
+      "end": 9.48,
+      "probability": 0.9975766539573669
+    },
+    {
+      "word": "plot.",
+      "start": 9.48,
+      "end": 10.08,
+      "probability": 0.9893691539764404
+    },
+    {
+      "word": "Luffy",
+      "start": 10.08,
+      "end": 10.08,
+      "probability": 0.6026818752288818
+    },
+    {
+      "word": "keeps",
+      "start": 10.08,
+      "end": 10.26,
+      "probability": 0.9934837222099304
+    },
+    {
+      "word": "swimming.",
+      "start": 10.26,
+      "end": 11.16,
+      "probability": 0.996188223361969
+    },
+    {
+      "word": "Useful,",
+      "start": 11.16,
+      "end": 11.52,
+      "probability": 0.9762431979179382
+    },
+    {
+      "word": "honestly.",
+      "start": 11.52,
+      "end": 12.8,
+      "probability": 0.9888625741004944
+    },
+    {
+      "word": "Revolutionary",
+      "start": 12.8,
+      "end": 12.8,
+      "probability": 0.9698323011398315
+    },
+    {
+      "word": "technology",
+      "start": 12.8,
+      "end": 13.36,
+      "probability": 0.973962128162384
+    },
+    {
+      "word": "called",
+      "start": 13.36,
+      "end": 13.68,
+      "probability": 0.9871822595596313
+    },
+    {
+      "word": "not",
+      "start": 13.68,
+      "end": 13.94,
+      "probability": 0.7913729548454285
+    },
+    {
+      "word": "immediately",
+      "start": 13.94,
+      "end": 14.28,
+      "probability": 0.96219801902771
+    },
+    {
+      "word": "drowning",
+      "start": 14.28,
+      "end": 14.62,
+      "probability": 0.9915836453437805
+    },
+    {
+      "word": "after",
+      "start": 14.62,
+      "end": 15.04,
+      "probability": 0.9965752959251404
+    },
+    {
+      "word": "you",
+      "start": 15.04,
+      "end": 15.2,
+      "probability": 0.9876967072486877
+    },
+    {
+      "word": "leave.",
+      "start": 15.2,
+      "end": 15.68,
+      "probability": 0.9979616403579712
+    },
+    {
+      "word": "But",
+      "start": 15.68,
+      "end": 15.7,
+      "probability": 0.9920597076416016
+    },
+    {
+      "word": "his",
+      "start": 15.7,
+      "end": 15.76,
+      "probability": 0.9863961935043335
+    },
+    {
+      "word": "body",
+      "start": 15.76,
+      "end": 16.0,
+      "probability": 0.9989489912986755
+    },
+    {
+      "word": "isn't",
+      "start": 16.0,
+      "end": 16.4,
+      "probability": 0.9933134019374847
+    },
+    {
+      "word": "rubber.",
+      "start": 16.4,
+      "end": 17.18,
+      "probability": 0.9880926012992859
+    },
+    {
+      "word": "Bullets",
+      "start": 17.18,
+      "end": 17.18,
+      "probability": 0.9221852421760559
+    },
+    {
+      "word": "won't",
+      "start": 17.18,
+      "end": 17.52,
+      "probability": 0.9971318244934082
+    },
+    {
+      "word": "bounce",
+      "start": 17.52,
+      "end": 17.7,
+      "probability": 0.9960299134254456
+    },
+    {
+      "word": "because",
+      "start": 17.7,
+      "end": 17.96,
+      "probability": 0.9567570686340332
+    },
+    {
+      "word": "he's",
+      "start": 17.96,
+      "end": 18.18,
+      "probability": 0.9855513274669647
+    },
+    {
+      "word": "built",
+      "start": 18.18,
+      "end": 18.36,
+      "probability": 0.9925359487533569
+    },
+    {
+      "word": "different.",
+      "start": 18.36,
+      "end": 19.0,
+      "probability": 0.9935106635093689
+    },
+    {
+      "word": "Be",
+      "start": 19.0,
+      "end": 19.02,
+      "probability": 0.984623908996582
+    },
+    {
+      "word": "serious.",
+      "start": 19.02,
+      "end": 19.7,
+      "probability": 0.9977820515632629
+    },
+    {
+      "word": "He",
+      "start": 19.7,
+      "end": 19.7,
+      "probability": 0.9949806332588196
+    },
+    {
+      "word": "needs",
+      "start": 19.7,
+      "end": 19.88,
+      "probability": 0.9961807727813721
+    },
+    {
+      "word": "different",
+      "start": 19.88,
+      "end": 20.06,
+      "probability": 0.9965625405311584
+    },
+    {
+      "word": "training,",
+      "start": 20.06,
+      "end": 20.8,
+      "probability": 0.999624490737915
+    },
+    {
+      "word": "defense,",
+      "start": 20.8,
+      "end": 21.22,
+      "probability": 0.9559859037399292
+    },
+    {
+      "word": "and",
+      "start": 21.22,
+      "end": 21.24,
+      "probability": 0.9980779886245728
+    },
+    {
+      "word": "discipline.",
+      "start": 21.24,
+      "end": 22.14,
+      "probability": 0.9993574023246765
+    },
+    {
+      "word": "Shanks",
+      "start": 22.14,
+      "end": 22.28,
+      "probability": 0.9851386845111847
+    },
+    {
+      "word": "isn't",
+      "start": 22.28,
+      "end": 22.56,
+      "probability": 0.6213419213891029
+    },
+    {
+      "word": "issuing",
+      "start": 22.56,
+      "end": 22.82,
+      "probability": 0.9958627223968506
+    },
+    {
+      "word": "a",
+      "start": 22.82,
+      "end": 23.02,
+      "probability": 0.9977715611457825
+    },
+    {
+      "word": "victory",
+      "start": 23.02,
+      "end": 23.16,
+      "probability": 0.8964999914169312
+    },
+    {
+      "word": "certificate.",
+      "start": 23.16,
+      "end": 23.91213732085972,
+      "probability": 0.9950881600379944
+    },
+    {
+      "word": "The",
+      "start": 23.91213732085972,
+      "end": 23.972125000000002,
+      "probability": 0.00011636089766398072
+    },
+    {
+      "word": "crew",
+      "start": 23.972125000000002,
+      "end": 24.132125000000002,
+      "probability": 0.9585880637168884
+    },
+    {
+      "word": "matters",
+      "start": 24.132125000000002,
+      "end": 24.392125,
+      "probability": 0.9889639616012573
+    },
+    {
+      "word": "more.",
+      "start": 24.392125,
+      "end": 25.252125,
+      "probability": 0.997520387172699
+    },
+    {
+      "word": "Zoro",
+      "start": 25.252125,
+      "end": 25.392125,
+      "probability": 0.1421440690755844
+    },
+    {
+      "word": "covers",
+      "start": 25.392125,
+      "end": 25.812125,
+      "probability": 0.9849243760108948
+    },
+    {
+      "word": "combat",
+      "start": 25.812125,
+      "end": 26.012125,
+      "probability": 0.9932112097740173
+    },
+    {
+      "word": "while",
+      "start": 26.012125,
+      "end": 26.412125,
+      "probability": 0.8980007171630859
+    },
+    {
+      "word": "somebody",
+      "start": 26.412125,
+      "end": 26.652125,
+      "probability": 0.9746755957603455
+    },
+    {
+      "word": "explains",
+      "start": 26.652125,
+      "end": 27.192125,
+      "probability": 0.9957062602043152
+    },
+    {
+      "word": "that",
+      "start": 27.192125,
+      "end": 27.432125,
+      "probability": 0.9935064315795898
+    },
+    {
+      "word": "cannons",
+      "start": 27.432125,
+      "end": 27.672125,
+      "probability": 0.847957193851471
+    },
+    {
+      "word": "aren't",
+      "start": 27.672125,
+      "end": 28.092125000000003,
+      "probability": 0.9880489706993103
+    },
+    {
+      "word": "just",
+      "start": 28.092125000000003,
+      "end": 28.232125,
+      "probability": 0.9965469241142273
+    },
+    {
+      "word": "motivational",
+      "start": 28.232125,
+      "end": 28.572125,
+      "probability": 0.9643503427505493
+    },
+    {
+      "word": "obstacles.",
+      "start": 28.572125,
+      "end": 29.752125,
+      "probability": 0.9978631138801575
+    },
+    {
+      "word": "Luffy",
+      "start": 29.752125,
+      "end": 29.852125,
+      "probability": 0.12573732435703278
+    },
+    {
+      "word": "still",
+      "start": 29.852125,
+      "end": 30.172125,
+      "probability": 0.9947183728218079
+    },
+    {
+      "word": "leaps",
+      "start": 30.172125,
+      "end": 30.312125,
+      "probability": 0.9928684830665588
+    },
+    {
+      "word": "toward",
+      "start": 30.312125,
+      "end": 30.592125000000003,
+      "probability": 0.8830766081809998
+    },
+    {
+      "word": "danger.",
+      "start": 30.592125000000003,
+      "end": 31.472125000000002,
+      "probability": 0.9971029162406921
+    },
+    {
+      "word": "We",
+      "start": 31.472125000000002,
+      "end": 31.492125,
+      "probability": 0.9714980721473694
+    },
+    {
+      "word": "removed",
+      "start": 31.492125,
+      "end": 31.692125,
+      "probability": 0.022218236699700356
+    },
+    {
+      "word": "the",
+      "start": 31.692125,
+      "end": 31.912125000000003,
+      "probability": 0.9922658801078796
+    },
+    {
+      "word": "fruit,",
+      "start": 31.912125000000003,
+      "end": 32.392125,
+      "probability": 0.9899118542671204
+    },
+    {
+      "word": "not",
+      "start": 32.392125,
+      "end": 32.452125,
+      "probability": 0.9948963522911072
+    },
+    {
+      "word": "his",
+      "start": 32.452125,
+      "end": 32.592125,
+      "probability": 0.9935884475708008
+    },
+    {
+      "word": "adventurous",
+      "start": 32.592125,
+      "end": 32.992125,
+      "probability": 0.9706929326057434
+    },
+    {
+      "word": "single",
+      "start": 32.992125,
+      "end": 33.272125,
+      "probability": 0.9601749777793884
+    },
+    {
+      "word": "brain",
+      "start": 33.272125,
+      "end": 33.552125000000004,
+      "probability": 0.6560369729995728
+    },
+    {
+      "word": "cell.",
+      "start": 33.552125000000004,
+      "end": 34.092125,
+      "probability": 0.9466130137443542
+    },
+    {
+      "word": "Positioning",
+      "start": 34.092125,
+      "end": 34.472125000000005,
+      "probability": 0.9856167733669281
+    },
+    {
+      "word": "and",
+      "start": 34.472125000000005,
+      "end": 34.572125,
+      "probability": 0.9625117778778076
+    },
+    {
+      "word": "tools",
+      "start": 34.572125,
+      "end": 34.812125,
+      "probability": 0.9960688352584839
+    },
+    {
+      "word": "become",
+      "start": 34.812125,
+      "end": 35.152125,
+      "probability": 0.9894333481788635
+    },
+    {
+      "word": "essential.",
+      "start": 35.152125,
+      "end": 36.212125,
+      "probability": 0.9968724846839905
+    },
+    {
+      "word": "A",
+      "start": 36.212125,
+      "end": 36.212125,
+      "probability": 0.8208069205284119
+    },
+    {
+      "word": "rope",
+      "start": 36.212125,
+      "end": 36.392125,
+      "probability": 0.9791210889816284
+    },
+    {
+      "word": "extends",
+      "start": 36.392125,
+      "end": 36.712125,
+      "probability": 0.992460310459137
+    },
+    {
+      "word": "your",
+      "start": 36.712125,
+      "end": 36.972125000000005,
+      "probability": 0.9914950132369995
+    },
+    {
+      "word": "reach",
+      "start": 36.972125000000005,
+      "end": 37.192125000000004,
+      "probability": 0.999009370803833
+    },
+    {
+      "word": "without",
+      "start": 37.192125000000004,
+      "end": 37.552125000000004,
+      "probability": 0.963670015335083
+    },
+    {
+      "word": "a",
+      "start": 37.552125000000004,
+      "end": 37.732125,
+      "probability": 0.9980283379554749
+    },
+    {
+      "word": "supernatural",
+      "start": 37.732125,
+      "end": 38.032125,
+      "probability": 0.9885226488113403
+    },
+    {
+      "word": "childhood",
+      "start": 38.032125,
+      "end": 38.752125,
+      "probability": 0.9834629893302917
+    },
+    {
+      "word": "accident.",
+      "start": 38.752125,
+      "end": 39.372125,
+      "probability": 0.9966050386428833
+    },
+    {
+      "word": "Then",
+      "start": 39.372125,
+      "end": 39.392125,
+      "probability": 0.9809939861297607
+    },
+    {
+      "word": "a",
+      "start": 39.392125,
+      "end": 39.472125000000005,
+      "probability": 0.9187381863594055
+    },
+    {
+      "word": "crewmate",
+      "start": 39.472125000000005,
+      "end": 39.812125,
+      "probability": 0.9634249806404114
+    },
+    {
+      "word": "falls",
+      "start": 39.812125,
+      "end": 40.012125,
+      "probability": 0.9985589385032654
+    },
+    {
+      "word": "overboard.",
+      "start": 40.012125,
+      "end": 41.192125000000004,
+      "probability": 0.9948957562446594
+    },
+    {
+      "word": "Luffy",
+      "start": 41.192125000000004,
+      "end": 41.252125,
+      "probability": 0.6828262209892273
+    },
+    {
+      "word": "can",
+      "start": 41.252125,
+      "end": 41.492125,
+      "probability": 0.9971333742141724
+    },
+    {
+      "word": "finally",
+      "start": 41.492125,
+      "end": 41.792125,
+      "probability": 0.997511625289917
+    },
+    {
+      "word": "help",
+      "start": 41.792125,
+      "end": 42.092124999999996,
+      "probability": 0.9987043142318726
+    },
+    {
+      "word": "instead",
+      "start": 42.092124999999996,
+      "end": 42.312125,
+      "probability": 0.9238996505737305
+    },
+    {
+      "word": "of",
+      "start": 42.312125,
+      "end": 42.512125,
+      "probability": 0.9992964267730713
+    },
+    {
+      "word": "becoming",
+      "start": 42.512125,
+      "end": 42.712125,
+      "probability": 0.9961842894554138
+    },
+    {
+      "word": "the",
+      "start": 42.712125,
+      "end": 42.912125,
+      "probability": 0.993740975856781
+    },
+    {
+      "word": "second",
+      "start": 42.912125,
+      "end": 43.172125,
+      "probability": 0.9823653101921082
+    },
+    {
+      "word": "rescue",
+      "start": 43.172125,
+      "end": 43.512125,
+      "probability": 0.9950903654098511
+    },
+    {
+      "word": "objective.",
+      "start": 43.512125,
+      "end": 44.16530535339823,
+      "probability": 0.9725838899612427
+    },
+    {
+      "word": "The",
+      "start": 44.16530535339823,
+      "end": 44.2253125,
+      "probability": 7.582662510685623e-05
+    },
+    {
+      "word": "trade?",
+      "start": 44.2253125,
+      "end": 44.8853125,
+      "probability": 0.38299474120140076
+    },
+    {
+      "word": "Extraordinary",
+      "start": 44.8853125,
+      "end": 45.4053125,
+      "probability": 0.9647461175918579
+    },
+    {
+      "word": "flexibility",
+      "start": 45.4053125,
+      "end": 45.6253125,
+      "probability": 0.9779461622238159
+    },
+    {
+      "word": "disappears,",
+      "start": 45.6253125,
+      "end": 46.8453125,
+      "probability": 0.992392897605896
+    },
+    {
+      "word": "but",
+      "start": 46.8453125,
+      "end": 46.9053125,
+      "probability": 0.9810042977333069
+    },
+    {
+      "word": "an",
+      "start": 46.9053125,
+      "end": 46.9853125,
+      "probability": 0.9920915365219116
+    },
+    {
+      "word": "ordinary",
+      "start": 46.9853125,
+      "end": 47.3453125,
+      "probability": 0.9902040958404541
+    },
+    {
+      "word": "ability",
+      "start": 47.3453125,
+      "end": 47.7853125,
+      "probability": 0.9823789000511169
+    },
+    {
+      "word": "changes",
+      "start": 47.7853125,
+      "end": 48.0453125,
+      "probability": 0.998318076133728
+    },
+    {
+      "word": "how",
+      "start": 48.0453125,
+      "end": 48.425312500000004,
+      "probability": 0.9961256384849548
+    },
+    {
+      "word": "he",
+      "start": 48.425312500000004,
+      "end": 48.5653125,
+      "probability": 0.9938995838165283
+    },
+    {
+      "word": "protects",
+      "start": 48.5653125,
+      "end": 48.7253125,
+      "probability": 0.9973069429397583
+    },
+    {
+      "word": "friends.",
+      "start": 48.7253125,
+      "end": 49.4853125,
+      "probability": 0.9945555925369263
+    },
+    {
+      "word": "Some",
+      "start": 49.4853125,
+      "end": 49.5853125,
+      "probability": 0.9398243427276611
+    },
+    {
+      "word": "battles",
+      "start": 49.5853125,
+      "end": 49.8653125,
+      "probability": 0.9981776475906372
+    },
+    {
+      "word": "become",
+      "start": 49.8653125,
+      "end": 50.0853125,
+      "probability": 0.9963202476501465
+    },
+    {
+      "word": "harder",
+      "start": 50.0853125,
+      "end": 50.5053125,
+      "probability": 0.9944401979446411
+    },
+    {
+      "word": "or",
+      "start": 50.5053125,
+      "end": 50.7853125,
+      "probability": 0.992052435874939
+    },
+    {
+      "word": "unwinnable.",
+      "start": 50.7853125,
+      "end": 51.7053125,
+      "probability": 0.9854533672332764
+    },
+    {
+      "word": "Plot",
+      "start": 51.7053125,
+      "end": 51.8853125,
+      "probability": 0.9509049654006958
+    },
+    {
+      "word": "armor",
+      "start": 51.8853125,
+      "end": 52.1853125,
+      "probability": 0.4780799150466919
+    },
+    {
+      "word": "isn't",
+      "start": 52.1853125,
+      "end": 52.5453125,
+      "probability": 0.5811221227049828
+    },
+    {
+      "word": "a",
+      "start": 52.5453125,
+      "end": 52.6053125,
+      "probability": 0.9978123903274536
+    },
+    {
+      "word": "documented",
+      "start": 52.6053125,
+      "end": 52.925312500000004,
+      "probability": 0.9825968146324158
+    },
+    {
+      "word": "training",
+      "start": 52.925312500000004,
+      "end": 53.3053125,
+      "probability": 0.9981959462165833
+    },
+    {
+      "word": "program.",
+      "start": 53.3053125,
+      "end": 54.2053125,
+      "probability": 0.962509274482727
+    },
+    {
+      "word": "Please",
+      "start": 54.2053125,
+      "end": 54.3453125,
+      "probability": 0.9925131797790527
+    },
+    {
+      "word": "show",
+      "start": 54.3453125,
+      "end": 54.6253125,
+      "probability": 0.990490198135376
+    },
+    {
+      "word": "your",
+      "start": 54.6253125,
+      "end": 54.7653125,
+      "probability": 0.9956240057945251
+    },
+    {
+      "word": "sources.",
+      "start": 54.7653125,
+      "end": 55.4453125,
+      "probability": 0.9959725737571716
+    },
+    {
+      "word": "The",
+      "start": 55.4453125,
+      "end": 55.4453125,
+      "probability": 0.9667737483978271
+    },
+    {
+      "word": "dream",
+      "start": 55.4453125,
+      "end": 55.6053125,
+      "probability": 0.9853866100311279
+    },
+    {
+      "word": "survives.",
+      "start": 55.6053125,
+      "end": 56.5453125,
+      "probability": 0.9997071623802185
+    },
+    {
+      "word": "The",
+      "start": 56.5453125,
+      "end": 56.565312500000005,
+      "probability": 0.9803000688552856
+    },
+    {
+      "word": "crew",
+      "start": 56.565312500000005,
+      "end": 56.7053125,
+      "probability": 0.9950879216194153
+    },
+    {
+      "word": "matters",
+      "start": 56.7053125,
+      "end": 56.965312499999996,
+      "probability": 0.994904637336731
+    },
+    {
+      "word": "more.",
+      "start": 56.965312499999996,
+      "end": 57.8253125,
+      "probability": 0.9987780451774597
+    },
+    {
+      "word": "And",
+      "start": 57.8253125,
+      "end": 57.8253125,
+      "probability": 0.9683599472045898
+    },
+    {
+      "word": "the",
+      "start": 57.8253125,
+      "end": 57.8853125,
+      "probability": 0.9542583227157593
+    },
+    {
+      "word": "captain's",
+      "start": 57.8853125,
+      "end": 58.2853125,
+      "probability": 0.9304636716842651
+    },
+    {
+      "word": "relationship",
+      "start": 58.2853125,
+      "end": 58.7853125,
+      "probability": 0.996329128742218
+    },
+    {
+      "word": "with",
+      "start": 58.7853125,
+      "end": 58.965312499999996,
+      "probability": 0.9977982044219971
+    },
+    {
+      "word": "water",
+      "start": 58.965312499999996,
+      "end": 59.1453125,
+      "probability": 0.9772049784660339
+    },
+    {
+      "word": "stops",
+      "start": 59.1453125,
+      "end": 59.465312499999996,
+      "probability": 0.9890466332435608
+    },
+    {
+      "word": "being",
+      "start": 59.465312499999996,
+      "end": 59.7653125,
+      "probability": 0.9931421279907227
+    },
+    {
+      "word": "legally",
+      "start": 59.7653125,
+      "end": 60.0453125,
+      "probability": 0.997899055480957
+    },
+    {
+      "word": "binding",
+      "start": 60.0453125,
+      "end": 60.3853125,
+      "probability": 0.955138087272644
+    },
+    {
+      "word": "beef.",
+      "start": 60.3853125,
+      "end": 60.965312499999996,
+      "probability": 0.9704763293266296
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 0.82,
+      "text": "What if Luffy never ate"
+    },
+    {
+      "start": 0.82,
+      "end": 1.82,
+      "text": "a Devil Fruit?"
+    },
+    {
+      "start": 1.82,
+      "end": 3.2,
+      "text": "Same pirate dream."
+    },
+    {
+      "start": 3.2,
+      "end": 5.24,
+      "text": "Dramatically fewer elastic escape plans."
+    },
+    {
+      "start": 5.24,
+      "end": 6.48,
+      "text": "In this timeline, Shanks keeps"
+    },
+    {
+      "start": 6.48,
+      "end": 7.72,
+      "text": "the fruit away."
+    },
+    {
+      "start": 7.72,
+      "end": 9.4,
+      "text": "Somebody finally installed childproofing on"
+    },
+    {
+      "start": 9.4,
+      "end": 10.08,
+      "text": "the plot."
+    },
+    {
+      "start": 10.08,
+      "end": 11.16,
+      "text": "Luffy keeps swimming."
+    },
+    {
+      "start": 11.16,
+      "end": 12.8,
+      "text": "Useful, honestly."
+    },
+    {
+      "start": 12.8,
+      "end": 14.28,
+      "text": "Revolutionary technology called not immediately"
+    },
+    {
+      "start": 14.28,
+      "end": 15.68,
+      "text": "drowning after you leave."
+    },
+    {
+      "start": 15.68,
+      "end": 17.18,
+      "text": "But his body isn't rubber."
+    },
+    {
+      "start": 17.18,
+      "end": 18.18,
+      "text": "Bullets won't bounce because he's"
+    },
+    {
+      "start": 18.18,
+      "end": 19.0,
+      "text": "built different."
+    },
+    {
+      "start": 19.0,
+      "end": 19.7,
+      "text": "Be serious."
+    },
+    {
+      "start": 19.7,
+      "end": 21.22,
+      "text": "He needs different training, defense,"
+    },
+    {
+      "start": 21.22,
+      "end": 22.14,
+      "text": "and discipline."
+    },
+    {
+      "start": 22.14,
+      "end": 23.16,
+      "text": "Shanks isn't issuing a victory"
+    },
+    {
+      "start": 23.16,
+      "end": 23.91213732085972,
+      "text": "certificate."
+    },
+    {
+      "start": 23.91213732085972,
+      "end": 25.252125,
+      "text": "The crew matters more."
+    },
+    {
+      "start": 25.252125,
+      "end": 26.652125,
+      "text": "Zoro covers combat while somebody"
+    },
+    {
+      "start": 26.652125,
+      "end": 28.232125,
+      "text": "explains that cannons aren't just"
+    },
+    {
+      "start": 28.232125,
+      "end": 29.752125,
+      "text": "motivational obstacles."
+    },
+    {
+      "start": 29.752125,
+      "end": 31.472125000000002,
+      "text": "Luffy still leaps toward danger."
+    },
+    {
+      "start": 31.472125000000002,
+      "end": 32.452125,
+      "text": "We removed the fruit, not"
+    },
+    {
+      "start": 32.452125,
+      "end": 34.092125,
+      "text": "his adventurous single brain cell."
+    },
+    {
+      "start": 34.092125,
+      "end": 36.212125,
+      "text": "Positioning and tools become essential."
+    },
+    {
+      "start": 36.212125,
+      "end": 37.192125000000004,
+      "text": "A rope extends your reach"
+    },
+    {
+      "start": 37.192125000000004,
+      "end": 39.372125,
+      "text": "without a supernatural childhood accident."
+    },
+    {
+      "start": 39.372125,
+      "end": 41.192125000000004,
+      "text": "Then a crewmate falls overboard."
+    },
+    {
+      "start": 41.192125000000004,
+      "end": 42.312125,
+      "text": "Luffy can finally help instead"
+    },
+    {
+      "start": 42.312125,
+      "end": 43.512125,
+      "text": "of becoming the second rescue"
+    },
+    {
+      "start": 43.512125,
+      "end": 44.16530535339823,
+      "text": "objective."
+    },
+    {
+      "start": 44.16530535339823,
+      "end": 44.8853125,
+      "text": "The trade?"
+    },
+    {
+      "start": 44.8853125,
+      "end": 46.9853125,
+      "text": "Extraordinary flexibility disappears, but an"
+    },
+    {
+      "start": 46.9853125,
+      "end": 48.5653125,
+      "text": "ordinary ability changes how he"
+    },
+    {
+      "start": 48.5653125,
+      "end": 49.4853125,
+      "text": "protects friends."
+    },
+    {
+      "start": 49.4853125,
+      "end": 50.7853125,
+      "text": "Some battles become harder or"
+    },
+    {
+      "start": 50.7853125,
+      "end": 51.7053125,
+      "text": "unwinnable."
+    },
+    {
+      "start": 51.7053125,
+      "end": 52.925312500000004,
+      "text": "Plot armor isn't a documented"
+    },
+    {
+      "start": 52.925312500000004,
+      "end": 54.2053125,
+      "text": "training program."
+    },
+    {
+      "start": 54.2053125,
+      "end": 55.4453125,
+      "text": "Please show your sources."
+    },
+    {
+      "start": 55.4453125,
+      "end": 56.5453125,
+      "text": "The dream survives."
+    },
+    {
+      "start": 56.5453125,
+      "end": 57.8253125,
+      "text": "The crew matters more."
+    },
+    {
+      "start": 57.8253125,
+      "end": 58.965312499999996,
+      "text": "And the captain's relationship with"
+    },
+    {
+      "start": 58.965312499999996,
+      "end": 60.965312499999996,
+      "text": "water stops being legally binding beef."
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 9,
+  "review_names_required": true
+}
