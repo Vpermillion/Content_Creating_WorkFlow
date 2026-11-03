@@ -1,0 +1,45 @@
+{
+  "status": "success",
+  "id": "ifverse-anime-gojo-no-powers-day-01",
+  "video": "sound-effects/video-sfx.mp4",
+  "duration_seconds": 61.0,
+  "timings": {
+    "footage_seconds": 0.003,
+    "narration_seconds": 59.159,
+    "captioning_seconds": 3.625,
+    "render_and_decode_seconds": 40.673,
+    "sound_effects_seconds": 4.863,
+    "pipeline_seconds": 109.732
+  },
+  "voice": {
+    "provider": "kokoro-onnx",
+    "voice": "am_michael",
+    "device": "cpu",
+    "reused_verified_audio": false
+  },
+  "captions": {
+    "engine": "faster-whisper",
+    "model": "base.en",
+    "compute_type": "int8",
+    "recognition_mode": "script_alignment",
+    "phrases": 49,
+    "script_token_agreement": null,
+    "reused_verified_timing": false
+  },
+  "footage": "Traced moving clips with per-scene narration reasons and recorded source provenance",
+  "edit_plan": "edits/ifverse-anime-gojo-no-powers-day-01.json",
+  "script": "pilots/ifverse-anime-gojo-no-powers-day-01.json",
+  "script_style": "ifverse-playful-roast-v2",
+  "sound_effects": {
+    "count": 4,
+    "receipt": "sound-effects/sound-effects.json",
+    "plan": "edits/ifverse-anime-gojo-no-powers-day-01-sfx.json"
+  },
+  "explicit_beat_timing": false,
+  "publishing_enabled": false,
+  "github_run_id": "41590682683",
+  "limitations": [
+    "Fan-made hypothetical review draft; source reuse permissions unverified",
+    "Pronunciation, character names and full audiovisual review remain required"
+  ]
+}

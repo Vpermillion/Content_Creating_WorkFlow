@@ -1,0 +1,11 @@
+{
+  "branch": "codex/results/ifverse-anime-gojo-no-powers-day-01",
+  "commit": "a1b8ff8e07ad57dfe5bef195b856435eae137086",
+  "reused_source_keys": [
+    "gojo",
+    "fight",
+    "yuji",
+    "megumi"
+  ],
+  "new_source_searches_avoided": 4
+}

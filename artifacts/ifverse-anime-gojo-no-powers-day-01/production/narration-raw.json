@@ -1,0 +1,90 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.546666666666667,
+      "text": "What if Gojo lost his powers for a day? The confidence stays. The backup plan has vanished.",
+      "label": "THE CONFIDENCE STILL WORKS"
+    },
+    {
+      "start": 5.546666666666667,
+      "end": 11.498666666666667,
+      "text": "This hypothetical disables his technique for twenty-four hours. No upgrade. Use the syllabus.",
+      "label": "ONE INVENTED BAD DAY"
+    },
+    {
+      "start": 11.498666666666667,
+      "end": 17.578666666666667,
+      "text": "Yuji suggests hiding him. Gojo calls it a lesson. My guy, impressive rebrand for embarrassment.",
+      "label": "YUJI GETS WORRIED"
+    },
+    {
+      "start": 17.578666666666667,
+      "end": 23.232,
+      "text": "Megumi asks who knows he's vulnerable. Announcing it? A beautifully stupid marketing campaign.",
+      "label": "MEGUMI READS THE ROOM"
+    },
+    {
+      "start": 23.232,
+      "end": 30.101333333333333,
+      "text": "Gojo keeps experience and judgment. We removed a technique, not his brain. No personality factory reset.",
+      "label": "POWER IS NOT ALL HE KNOWS"
+    },
+    {
+      "start": 30.101333333333333,
+      "end": 36.778666666666666,
+      "text": "They change the objective. Evacuate people, limit exposure, avoid direct fights. Reach tomorrow intact.",
+      "label": "CHANGE THE OBJECTIVE"
+    },
+    {
+      "start": 36.778666666666666,
+      "end": 44.224,
+      "text": "Yuji wants to rescue everyone alone. Strong instincts, brother. Terrible delivery policy for handing yourself to enemies.",
+      "label": "NO HEROIC DETOUR"
+    },
+    {
+      "start": 44.224,
+      "end": 48.61866666666667,
+      "text": "A threat appears. Instead of overpowering it, they use a decoy and escape route.",
+      "label": "THE WRONG BATTLE"
+    },
+    {
+      "start": 48.61866666666667,
+      "end": 55.95733333333333,
+      "text": "Megumi handles the route. Yuji moves people. Gojo calls timing. Students become participants, not spectators.",
+      "label": "THE PLAN NEEDS EVERYBODY"
+    },
+    {
+      "start": 55.95733333333333,
+      "end": 64.40533333333333,
+      "text": "Gojo must trust his teaching. Incredible. Education has reached its terrifying practical application. Somebody check the syllabus.",
+      "label": "THE TEACHER HAS TO TRUST"
+    },
+    {
+      "start": 64.40533333333333,
+      "end": 70.80533333333334,
+      "text": "The powers return tomorrow. The lesson remains: your team shouldn't collapse because its strongest member struggles.",
+      "label": "THE CLOCK IS NOT THE STORY"
+    },
+    {
+      "start": 70.80533333333334,
+      "end": 78.336,
+      "text": "Gojo claims everything was intentional. Megumi requests the lesson plan. The receipts have entered the domain, undefeated.",
+      "label": "THE DEBRIEF IS COOKED"
+    }
+  ],
+  "sha256": "06437041ee2bff5e3250b708dc8d87082263dce8a68022ee444c15f114dca62c",
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  }
+}

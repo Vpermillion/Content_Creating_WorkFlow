@@ -1,0 +1,45 @@
+{
+  "id": "ifverse-anime-gojo-no-powers-day-01",
+  "batch_id": "ifverse-anime-ten-61s-20261103-01",
+  "status": "success",
+  "script_sha256": "5d15923cac847eab6ca2da142a47d55a06f2335de92013f85b752e03e3c8f9d6",
+  "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r2",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "video": "production/sound-effects/video-sfx.mp4",
+  "video_sha256": "15f06323fb729d2e35e1ce0d085688f744ae4830299fa254f44b88a292fa348c",
+  "duration_seconds": 61.0,
+  "frame_size": [
+    720,
+    1280
+  ],
+  "source_count": 4,
+  "source_use_status": "unverified",
+  "sound_catalog": "assets/sfx/catalog.json",
+  "sound_rights": "documented_public_domain",
+  "technical_receipt": "production/result.json",
+  "audiovisual_editorial_review": "pending",
+  "metadata": {
+    "title": "What if Gojo lost his powers for 24 hours?",
+    "description": "Gojo temporarily loses his technique and must protect students through planning, restraint and collaboration.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #JujutsuKaisen\n\nIllustrative clip sources:\nhttps://tenor.com/view/gojo-satoru-throughout-the-heaven-and-the-earth-peggle-peggle-extreme-grandmaster-jujutsu-kaisen-gif-1857550460083667057\nhttps://tenor.com/view/gojo-satoru-satoru-gojo-gojo-satoru-infinito-gif-4116424331080566890\nhttps://tenor.com/view/yuji-yuji-itadori-jujutsu-kaisen-anime-jjk-gif-6463768782008108386\nhttps://tenor.com/view/megumi-megumi-fushiguro-jujutsu-kaisen-anime-megumi-domain-gif-14646960972427729715",
+    "tags": [
+      "anime what if",
+      "Jujutsu Kaisen",
+      "Gojo",
+      "Yuji",
+      "Megumi",
+      "Ifverse Anime"
+    ],
+    "hashtags": [
+      "Shorts",
+      "Anime",
+      "WhatIf",
+      "JujutsuKaisen"
+    ],
+    "categoryId": "24",
+    "defaultLanguage": "en",
+    "defaultAudioLanguage": "en"
+  },
+  "posting_packet": "post-settings.json",
+  "music_embedded": false
+}

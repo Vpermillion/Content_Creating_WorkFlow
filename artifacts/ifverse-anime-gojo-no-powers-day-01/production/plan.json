@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-gojo-no-powers-day-01",
+  "title": "What if Gojo lost his powers for 24 hours?",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "assets": [
+    {
+      "id": "ifverse-anime-gojo-no-powers-day-01-gojo",
+      "file": "ifverse-anime-gojo-no-powers-day-01-gojo.mp4",
+      "type": "video",
+      "query": "gojo Jujutsu Kaisen",
+      "source_url": "https://tenor.com/view/gojo-satoru-throughout-the-heaven-and-the-earth-peggle-peggle-extreme-grandmaster-jujutsu-kaisen-gif-1857550460083667057",
+      "download_url": "https://media.tenor.com/GcdYTT2mgHEAAAPo/gojo-satoru-throughout-the-heaven-and-the-earth.mp4",
+      "sha256": "63a55225b7a4b8e18b501dd392f0c1deb3de29742f689673960c833ed48647a5",
+      "duration": 3.066667,
+      "dimensions": [
+        490,
+        498
+      ],
+      "description": "throughout the heaven and the earth , i alone am the pegge extreme grandmaster",
+      "publisher": "Volcarona",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "11287500380443491570",
+          "title": "a picture of a person with the words satoru de dess on the bottom",
+          "source_url": "https://tenor.com/view/noyikees-gojo-de-dess-jjk-kaisen-jujutsu-gif-11287500380443491570",
+          "download_url": "https://media.tenor.com/nKVBytJrvPIAAAPo/noyikees-gojo-de-dess.mp4",
+          "duration": 1.5,
+          "width": 420,
+          "height": 420,
+          "publisher": "noyikees",
+          "provider": "tenor"
+        },
+        {
+          "id": "1857550460083667057",
+          "title": "throughout the heaven and the earth , i alone am the pegge extreme grandmaster",
+          "source_url": "https://tenor.com/view/gojo-satoru-throughout-the-heaven-and-the-earth-peggle-peggle-extreme-grandmaster-jujutsu-kaisen-gif-1857550460083667057",
+          "download_url": "https://media.tenor.com/GcdYTT2mgHEAAAPo/gojo-satoru-throughout-the-heaven-and-the-earth.mp4",
+          "duration": 3.1,
+          "width": 490,
+          "height": 498,
+          "publisher": "Volcarona",
+          "provider": "tenor"
+        },
+        {
+          "id": "10838541118104997373",
+          "title": "a close up of a person 's face with a finger on their mouth",
+          "source_url": "https://tenor.com/view/jujutsu-kaisen-gif-10838541118104997373",
+          "download_url": "https://media.tenor.com/lmo7uMwdDf0AAAPo/jujutsu-kaisen.mp4",
+          "duration": 2.4,
+          "width": 286,
+          "height": 248,
+          "publisher": "divine_theone1299",
+          "provider": "tenor"
+        },
+        {
+          "id": "10808109453165886668",
+          "title": "a boy and a girl are jumping in the air with their mouths open",
+          "source_url": "https://tenor.com/view/jjk-gif-10808109453165886668",
+          "download_url": "https://media.tenor.com/lf4eSKl-fMwAAAPo/jjk.mp4",
+          "duration": 2,
+          "width": 300,
+          "height": 254,
+          "publisher": "tsaichenlo",
+          "provider": "tenor"
+        },
+        {
+          "id": "11521518074048623413",
+          "title": "a group of three anime characters are standing next to each other and hugging each other .",
+          "source_url": "https://tenor.com/view/jjk-gif-11521518074048623413",
+          "download_url": "https://media.tenor.com/n-SnpQzpMzUAAAPo/jjk.mp4",
+          "duration": 2,
+          "width": 300,
+          "height": 300,
+          "publisher": "tsaichenlo",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "gojo",
+      "visual_intent": "Gojo introducing his usual confidence"
+    },
+    {
+      "id": "ifverse-anime-gojo-no-powers-day-01-fight",
+      "file": "ifverse-anime-gojo-no-powers-day-01-fight.mp4",
+      "type": "video",
+      "query": "Gojo Satoru fighting",
+      "source_url": "https://tenor.com/view/gojo-satoru-satoru-gojo-gojo-satoru-infinito-gif-4116424331080566890",
+      "download_url": "https://media.tenor.com/OSB6Ho7VCGoAAAPo/gojo-satoru.mp4",
+      "sha256": "72a2832588a67b88182fba24ff0e9e7e8189a4283ce86dff4439b85c9722ca79",
+      "duration": 12.5,
+      "dimensions": [
+        498,
+        280
+      ],
+      "description": "a man with white hair and blue eyes stands in front of a blue background",
+      "publisher": "korbynr3",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "4116424331080566890",
+          "title": "a man with white hair and blue eyes stands in front of a blue background",
+          "source_url": "https://tenor.com/view/gojo-satoru-satoru-gojo-gojo-satoru-infinito-gif-4116424331080566890",
+          "download_url": "https://media.tenor.com/OSB6Ho7VCGoAAAPo/gojo-satoru.mp4",
+          "duration": 12.5,
+          "width": 498,
+          "height": 280,
+          "publisher": "korbynr3",
+          "provider": "tenor"
+        },
+        {
+          "id": "5972378822302122662",
+          "title": "a cartoon character with white hair and a purple jacket is smiling",
+          "source_url": "https://tenor.com/view/gojo-gojo-satoru-six-eyes-ryomen-sukuna-jujutsu-kaisen-gif-25895356",
+          "download_url": "https://media.tenor.com/UuIm5VdiQqYAAAPo/gojo-gojo-satoru.mp4",
+          "duration": 5.2,
+          "width": 640,
+          "height": 358,
+          "publisher": "farhaan_144",
+          "provider": "tenor"
+        },
+        {
+          "id": "12123678041941552660",
+          "title": "a close up of a person 's face with a blue eye",
+          "source_url": "https://tenor.com/view/jjk-jujutsu-kaisen-jjk-fight-jjk-fighting-gojo-gif-12123678041941552660",
+          "download_url": "https://media.tenor.com/qD_08fUhLhQAAAPo/jjk-jujutsu-kaisen.mp4",
+          "duration": 8.1,
+          "width": 498,
+          "height": 282,
+          "publisher": "fwkuraa",
+          "provider": "tenor"
+        },
+        {
+          "id": "5089180142196311856",
+          "title": "a man is flying through the air while another man is standing next to him .",
+          "source_url": "https://tenor.com/view/jujutsu-kaisen0-battle-miguel-satoru-gojo-gif-24241459",
+          "download_url": "https://media.tenor.com/RqBmYC2VRzAAAAPo/jujutsu-kaisen0-battle.mp4",
+          "duration": 1.7,
+          "width": 640,
+          "height": 260,
+          "publisher": "ViniKazutora12345",
+          "provider": "tenor"
+        },
+        {
+          "id": "13988535588711555864",
+          "title": "a person is holding a purple object in their hand and says `` im sorry '' .",
+          "source_url": "https://tenor.com/view/gojo-satoru-gojo-hollow-purple-jujutsu-kaisen-blue-gif-13988535588711555864",
+          "download_url": "https://media.tenor.com/wiFDAOUP4xgAAAPo/gojo-satoru-gojo.mp4",
+          "duration": 3.5,
+          "width": 498,
+          "height": 280,
+          "publisher": "SuperSeinor",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "fight",
+      "visual_intent": "Gojo combat footage contrasted with the hypothetical loss of technique"
+    },
+    {
+      "id": "ifverse-anime-gojo-no-powers-day-01-yuji",
+      "file": "ifverse-anime-gojo-no-powers-day-01-yuji.mp4",
+      "type": "video",
+      "query": "Yuji Itadori Jujutsu Kaisen",
+      "source_url": "https://tenor.com/view/yuji-yuji-itadori-jujutsu-kaisen-anime-jjk-gif-6463768782008108386",
+      "download_url": "https://media.tenor.com/WbPrdfHaRWIAAAPo/yuji-yuji-itadori.mp4",
+      "sha256": "e4707a469720050b068250fe48e483ee7e5787fa9784afbb5c69d6293bea2586",
+      "duration": 3.5,
+      "dimensions": [
+        498,
+        282
+      ],
+      "description": "a close up of a person 's face with the letter u visible",
+      "publisher": "Bombgirl",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "9010668351949436561",
+          "title": "a drawing of a man with a scarf around his neck looking up",
+          "source_url": "https://tenor.com/view/yuji-itadori-yuji-jjk-jujutsu-kaisen-jjk-season-3-gif-9010668351949436561",
+          "download_url": "https://media.tenor.com/fQxTICLM9pEAAAPo/yuji-itadori-yuji.mp4",
+          "duration": 1.8,
+          "width": 498,
+          "height": 282,
+          "publisher": "Kaiizoku",
+          "provider": "tenor"
+        },
+        {
+          "id": "17122118985426987880",
+          "title": "a black and white drawing of a person with the word dismantle on the bottom right",
+          "source_url": "https://tenor.com/view/jujutsu-kaisen-yuji-itadori-yuji-dismantle-kai-gif-17122118985426987880",
+          "download_url": "https://media.tenor.com/7Z38gBhY62gAAAPo/jujutsu-kaisen-yuji-itadori.mp4",
+          "duration": 1,
+          "width": 280,
+          "height": 498,
+          "publisher": "odenishot",
+          "provider": "tenor"
+        },
+        {
+          "id": "6463768782008108386",
+          "title": "a close up of a person 's face with the letter u visible",
+          "source_url": "https://tenor.com/view/yuji-yuji-itadori-jujutsu-kaisen-anime-jjk-gif-6463768782008108386",
+          "download_url": "https://media.tenor.com/WbPrdfHaRWIAAAPo/yuji-yuji-itadori.mp4",
+          "duration": 3.5,
+          "width": 498,
+          "height": 282,
+          "publisher": "Bombgirl",
+          "provider": "tenor"
+        },
+        {
+          "id": "319993225928870118",
+          "title": "two anime characters are running down a street in a city .",
+          "source_url": "https://tenor.com/view/fastest-man-trackstar-maze-runner-yuta-running-yuji-running-gif-319993225928870118",
+          "download_url": "https://media.tenor.com/BHDYJMIFiOYAAAPo/fastest-man-trackstar.mp4",
+          "duration": 2.3,
+          "width": 498,
+          "height": 316,
+          "publisher": "fewrken",
+          "provider": "tenor"
+        },
+        {
+          "id": "8353111279813501302",
+          "title": "a cartoon of a man sitting in a chair with the word waiting on the bottom",
+          "source_url": "https://tenor.com/view/jujutsu-kaisen-yuji-itadori-yuji-sitting-looking-gif-8353111279813501302",
+          "download_url": "https://media.tenor.com/c-w2c8qXoXYAAAPo/jujutsu-kaisen-yuji-itadori.mp4",
+          "duration": 1,
+          "width": 498,
+          "height": 498,
+          "publisher": "The1trueKingZ",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "yuji",
+      "visual_intent": "Yuji reacting as a student"
+    },
+    {
+      "id": "ifverse-anime-gojo-no-powers-day-01-megumi",
+      "file": "ifverse-anime-gojo-no-powers-day-01-megumi.mp4",
+      "type": "video",
+      "query": "Megumi Fushiguro Jujutsu Kaisen",
+      "source_url": "https://tenor.com/view/megumi-megumi-fushiguro-jujutsu-kaisen-anime-megumi-domain-gif-14646960972427729715",
+      "download_url": "https://media.tenor.com/y0R1ZsiQmzMAAAPo/megumi-megumi-fushiguro.mp4",
+      "sha256": "23c5883d66fcd2ec341516883009a6f3638a29799b9cc97fad8982b9f6edf5a5",
+      "duration": 5.18,
+      "dimensions": [
+        498,
+        282
+      ],
+      "description": "a drawing of a person with a hood on",
+      "publisher": "Bombgirl",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "13442577090323049758",
+          "title": "a picture of a man with a caption that says \" dad can u pay child support or atleast come home \"",
+          "source_url": "https://tenor.com/view/megumi-toji-meme-gif-13442577090323049758",
+          "download_url": "https://media.tenor.com/uo2gpE6CbR4AAAPo/megumi-toji-meme.mp4",
+          "duration": 1,
+          "width": 498,
+          "height": 398,
+          "publisher": "ZeninToji404",
+          "provider": "tenor"
+        },
+        {
+          "id": "9253375260037249450",
+          "title": "a person below gets free megumi with an arrow pointing to the right",
+          "source_url": "https://tenor.com/view/person-below-gets-person-below-jujutsu-kaisen-megumi-gif-9253375260037249450",
+          "download_url": "https://media.tenor.com/gGqXxcPoeaoAAAPo/person-below-gets-person-below.mp4",
+          "duration": 1,
+          "width": 498,
+          "height": 498,
+          "publisher": "zionthesigma",
+          "provider": "tenor"
+        },
+        {
+          "id": "14261368992786989181",
+          "title": "a man in a black sweater is standing in a dark room",
+          "source_url": "https://tenor.com/view/jujutsu-kaisen-jjk-megumi-fushiguro-gif-14261368992786989181",
+          "download_url": "https://media.tenor.com/xeqPifnWwH0AAAPo/jujutsu-kaisen-jjk.mp4",
+          "duration": 1.9,
+          "width": 498,
+          "height": 282,
+          "publisher": "MouriKogoro96",
+          "provider": "tenor"
+        },
+        {
+          "id": "14646960972427729715",
+          "title": "a drawing of a person with a hood on",
+          "source_url": "https://tenor.com/view/megumi-megumi-fushiguro-jujutsu-kaisen-anime-megumi-domain-gif-14646960972427729715",
+          "download_url": "https://media.tenor.com/y0R1ZsiQmzMAAAPo/megumi-megumi-fushiguro.mp4",
+          "duration": 5.2,
+          "width": 498,
+          "height": 282,
+          "publisher": "Bombgirl",
+          "provider": "tenor"
+        },
+        {
+          "id": "10153370017491438364",
+          "title": "a close up of a person 's face with a very angry look on their face",
+          "source_url": "https://tenor.com/view/megumi-gif-10153370017491438364",
+          "download_url": "https://media.tenor.com/jOgEPG2tyxwAAAPo/megumi.mp4",
+          "duration": 2.8,
+          "width": 498,
+          "height": 342,
+          "publisher": "joshvibinq",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "megumi",
+      "visual_intent": "Megumi thinking through a plan"
+    }
+  ],
+  "scenes": [
+    {
+      "text": "What if Gojo lost his powers for a day? The confidence stays. The backup plan has vanished.",
+      "label": "THE CONFIDENCE STILL WORKS",
+      "start": 0.0,
+      "end": 4.319172113289761,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "This hypothetical disables his technique for twenty-four hours. No upgrade. Use the syllabus.",
+      "label": "ONE INVENTED BAD DAY",
+      "start": 4.319172113289761,
+      "end": 8.953976034858389,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-fight",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo combat footage contrasted with the hypothetical loss of technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Yuji suggests hiding him. Gojo calls it a lesson. My guy, impressive rebrand for embarrassment.",
+      "label": "YUJI GETS WORRIED",
+      "start": 8.953976034858389,
+      "end": 13.688453159041396,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-yuji",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-yuji",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Megumi asks who knows he's vulnerable. Announcing it? A beautifully stupid marketing campaign.",
+      "label": "MEGUMI READS THE ROOM",
+      "start": 13.688453159041396,
+      "end": 18.090686274509803,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-megumi",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Megumi thinking through a plan; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Gojo keeps experience and judgment. We removed a technique, not his brain. No personality factory reset.",
+      "label": "POWER IS NOT ALL HE KNOWS",
+      "start": 18.090686274509803,
+      "end": 23.439814814814817,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "They change the objective. Evacuate people, limit exposure, avoid direct fights. Reach tomorrow intact.",
+      "label": "CHANGE THE OBJECTIVE",
+      "start": 23.439814814814817,
+      "end": 28.63943355119826,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-megumi",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Megumi thinking through a plan; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-megumi",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Megumi thinking through a plan; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Yuji wants to rescue everyone alone. Strong instincts, brother. Terrible delivery policy for handing yourself to enemies.",
+      "label": "NO HEROIC DETOUR",
+      "start": 28.63943355119826,
+      "end": 34.43709150326797,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-yuji",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-yuji",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "A threat appears. Instead of overpowering it, they use a decoy and escape route.",
+      "label": "THE WRONG BATTLE",
+      "start": 34.43709150326797,
+      "end": 37.859204793028326,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-fight",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo combat footage contrasted with the hypothetical loss of technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Megumi handles the route. Yuji moves people. Gojo calls timing. Students become participants, not spectators.",
+      "label": "THE PLAN NEEDS EVERYBODY",
+      "start": 37.859204793028326,
+      "end": 43.57380174291939,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-megumi",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Megumi thinking through a plan; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-megumi",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Megumi thinking through a plan; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Gojo must trust his teaching. Incredible. Education has reached its terrifying practical application. Somebody check the syllabus.",
+      "label": "THE TEACHER HAS TO TRUST",
+      "start": 43.57380174291939,
+      "end": 50.15223311546841,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "The powers return tomorrow. The lesson remains: your team shouldn't collapse because its strongest member struggles.",
+      "label": "THE CLOCK IS NOT THE STORY",
+      "start": 50.15223311546841,
+      "end": 55.13589324618737,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-yuji",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-yuji",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Gojo claims everything was intentional. Megumi requests the lesson plan. The receipts have entered the domain, undefeated.",
+      "label": "THE DEBRIEF IS COOKED",
+      "start": 55.13589324618737,
+      "end": 61.0,
+      "shots": [
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    }
+  ],
+  "video_only": true,
+  "single_pass": true,
+  "enhancement": "anime-light",
+  "source_credit": "IFVERSE ANIME / FAN-MADE WHAT-IF",
+  "publishing_authorized": false,
+  "narration_sha256": "9419ae67a2c91e36e4d03bfb37bf9dbcf7e36295527e5c4856ad3f5342cd1f27",
+  "caption_segments": [
+    {
+      "start": 0,
+      "end": 0.96,
+      "text": "What if Gojo lost his"
+    },
+    {
+      "start": 0.96,
+      "end": 1.98,
+      "text": "powers for a day?"
+    },
+    {
+      "start": 1.98,
+      "end": 3.16,
+      "text": "The confidence stays."
+    },
+    {
+      "start": 3.16,
+      "end": 4.4,
+      "text": "The backup plan has vanished."
+    },
+    {
+      "start": 4.4,
+      "end": 5.72,
+      "text": "This hypothetical disables his technique"
+    },
+    {
+      "start": 5.72,
+      "end": 7.3,
+      "text": "for twenty -four hours."
+    },
+    {
+      "start": 7.3,
+      "end": 8.14,
+      "text": "No upgrade."
+    },
+    {
+      "start": 8.14,
+      "end": 9.04,
+      "text": "Use the syllabus."
+    },
+    {
+      "start": 9.04,
+      "end": 10.44,
+      "text": "Yuji suggests hiding him."
+    },
+    {
+      "start": 10.44,
+      "end": 11.74,
+      "text": "Gojo calls it a lesson."
+    },
+    {
+      "start": 11.74,
+      "end": 13.12,
+      "text": "My guy, impressive rebrand for"
+    },
+    {
+      "start": 13.12,
+      "end": 13.78,
+      "text": "embarrassment."
+    },
+    {
+      "start": 13.78,
+      "end": 14.76,
+      "text": "Megumi asks who knows he's"
+    },
+    {
+      "start": 14.76,
+      "end": 15.56,
+      "text": "vulnerable."
+    },
+    {
+      "start": 15.56,
+      "end": 16.32,
+      "text": "Announcing it?"
+    },
+    {
+      "start": 16.32,
+      "end": 18.12,
+      "text": "A beautifully stupid marketing campaign."
+    },
+    {
+      "start": 18.12,
+      "end": 20.1,
+      "text": "Gojo keeps experience and judgment."
+    },
+    {
+      "start": 20.1,
+      "end": 21.16,
+      "text": "We removed a technique, not"
+    },
+    {
+      "start": 21.16,
+      "end": 21.96,
+      "text": "his brain."
+    },
+    {
+      "start": 21.96,
+      "end": 23.439814814814817,
+      "text": "No personality factory reset."
+    },
+    {
+      "start": 23.439814814814817,
+      "end": 24.6798125,
+      "text": "They change the objective."
+    },
+    {
+      "start": 24.6798125,
+      "end": 26.4198125,
+      "text": "Evacuate people, limit exposure, avoid"
+    },
+    {
+      "start": 26.4198125,
+      "end": 27.5198125,
+      "text": "direct fights."
+    },
+    {
+      "start": 27.5198125,
+      "end": 28.6998125,
+      "text": "Reach tomorrow intact."
+    },
+    {
+      "start": 28.6998125,
+      "end": 29.7798125,
+      "text": "Yuji wants to rescue everyone"
+    },
+    {
+      "start": 29.7798125,
+      "end": 30.5998125,
+      "text": "alone."
+    },
+    {
+      "start": 30.5998125,
+      "end": 32.0398125,
+      "text": "Strong instincts, brother."
+    },
+    {
+      "start": 32.0398125,
+      "end": 33.399812499999996,
+      "text": "Terrible delivery policy for handing"
+    },
+    {
+      "start": 33.399812499999996,
+      "end": 34.5398125,
+      "text": "yourself to enemies."
+    },
+    {
+      "start": 34.5398125,
+      "end": 35.4398125,
+      "text": "A threat appears."
+    },
+    {
+      "start": 35.4398125,
+      "end": 36.4598125,
+      "text": "Instead of overpowering it, they"
+    },
+    {
+      "start": 36.4598125,
+      "end": 37.9398125,
+      "text": "use a decoy and escape route."
+    },
+    {
+      "start": 37.9398125,
+      "end": 39.2798125,
+      "text": "Megumi handles the route."
+    },
+    {
+      "start": 39.2798125,
+      "end": 40.399812499999996,
+      "text": "Yuji moves people."
+    },
+    {
+      "start": 40.399812499999996,
+      "end": 41.8798125,
+      "text": "Gojo calls timing."
+    },
+    {
+      "start": 41.8798125,
+      "end": 43.57380174291939,
+      "text": "Students become participants, not spectators."
+    },
+    {
+      "start": 43.57380174291939,
+      "end": 45.4538125,
+      "text": "Gojo must trust his teaching."
+    },
+    {
+      "start": 45.4538125,
+      "end": 46.3538125,
+      "text": "Incredible."
+    },
+    {
+      "start": 46.3538125,
+      "end": 47.3538125,
+      "text": "Education has reached its terrifying"
+    },
+    {
+      "start": 47.3538125,
+      "end": 48.933812499999995,
+      "text": "practical application."
+    },
+    {
+      "start": 48.933812499999995,
+      "end": 50.19381249999999,
+      "text": "Somebody check the syllabus."
+    },
+    {
+      "start": 50.19381249999999,
+      "end": 51.69381249999999,
+      "text": "The powers return tomorrow."
+    },
+    {
+      "start": 51.69381249999999,
+      "end": 53.0138125,
+      "text": "The lesson remains: your team"
+    },
+    {
+      "start": 53.0138125,
+      "end": 54.2338125,
+      "text": "shouldn't collapse because its strongest"
+    },
+    {
+      "start": 54.2338125,
+      "end": 55.1538125,
+      "text": "member struggles."
+    },
+    {
+      "start": 55.1538125,
+      "end": 57.3138125,
+      "text": "Gojo claims everything was intentional."
+    },
+    {
+      "start": 57.3138125,
+      "end": 59.033812499999996,
+      "text": "Megumi requests the lesson plan."
+    },
+    {
+      "start": 59.033812499999996,
+      "end": 59.83381249999999,
+      "text": "The receipts have entered the"
+    },
+    {
+      "start": 59.83381249999999,
+      "end": 60.973812499999994,
+      "text": "domain, undefeated."
+    }
+  ]
+}

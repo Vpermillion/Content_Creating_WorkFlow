@@ -1,0 +1,1373 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "9419ae67a2c91e36e4d03bfb37bf9dbcf7e36295527e5c4856ad3f5342cd1f27",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.1,
+      "probability": 0.00010189564636675641
+    },
+    {
+      "word": "if",
+      "start": 0.1,
+      "end": 0.18,
+      "probability": 0.9665927290916443
+    },
+    {
+      "word": "Gojo",
+      "start": 0.18,
+      "end": 0.54,
+      "probability": 0.7775059342384338
+    },
+    {
+      "word": "lost",
+      "start": 0.54,
+      "end": 0.76,
+      "probability": 0.9847367405891418
+    },
+    {
+      "word": "his",
+      "start": 0.76,
+      "end": 0.96,
+      "probability": 0.9972418546676636
+    },
+    {
+      "word": "powers",
+      "start": 0.96,
+      "end": 1.22,
+      "probability": 0.9732072949409485
+    },
+    {
+      "word": "for",
+      "start": 1.22,
+      "end": 1.44,
+      "probability": 0.9970483183860779
+    },
+    {
+      "word": "a",
+      "start": 1.44,
+      "end": 1.5,
+      "probability": 0.995704710483551
+    },
+    {
+      "word": "day?",
+      "start": 1.5,
+      "end": 1.98,
+      "probability": 0.9983469247817993
+    },
+    {
+      "word": "The",
+      "start": 1.98,
+      "end": 2.0,
+      "probability": 0.9249975681304932
+    },
+    {
+      "word": "confidence",
+      "start": 2.0,
+      "end": 2.28,
+      "probability": 0.7307991981506348
+    },
+    {
+      "word": "stays.",
+      "start": 2.28,
+      "end": 3.16,
+      "probability": 0.9791466593742371
+    },
+    {
+      "word": "The",
+      "start": 3.16,
+      "end": 3.16,
+      "probability": 0.9469951391220093
+    },
+    {
+      "word": "backup",
+      "start": 3.16,
+      "end": 3.32,
+      "probability": 0.9193686246871948
+    },
+    {
+      "word": "plan",
+      "start": 3.32,
+      "end": 3.66,
+      "probability": 0.9984409213066101
+    },
+    {
+      "word": "has",
+      "start": 3.66,
+      "end": 3.8,
+      "probability": 0.9696282744407654
+    },
+    {
+      "word": "vanished.",
+      "start": 3.8,
+      "end": 4.4,
+      "probability": 0.99872225522995
+    },
+    {
+      "word": "This",
+      "start": 4.4,
+      "end": 4.4,
+      "probability": 0.9072067737579346
+    },
+    {
+      "word": "hypothetical",
+      "start": 4.4,
+      "end": 4.7,
+      "probability": 0.990757167339325
+    },
+    {
+      "word": "disables",
+      "start": 4.7,
+      "end": 5.36,
+      "probability": 0.9435989260673523
+    },
+    {
+      "word": "his",
+      "start": 5.36,
+      "end": 5.54,
+      "probability": 0.9925049543380737
+    },
+    {
+      "word": "technique",
+      "start": 5.54,
+      "end": 5.72,
+      "probability": 0.9878628253936768
+    },
+    {
+      "word": "for",
+      "start": 5.72,
+      "end": 6.02,
+      "probability": 0.9967793822288513
+    },
+    {
+      "word": "twenty",
+      "start": 6.02,
+      "end": 6.16,
+      "probability": 0.04294400289654732
+    },
+    {
+      "word": "-four",
+      "start": 6.16,
+      "end": 6.42,
+      "probability": 0.8612146377563477
+    },
+    {
+      "word": "hours.",
+      "start": 6.42,
+      "end": 7.3,
+      "probability": 0.9954156875610352
+    },
+    {
+      "word": "No",
+      "start": 7.3,
+      "end": 7.32,
+      "probability": 0.9725174903869629
+    },
+    {
+      "word": "upgrade.",
+      "start": 7.32,
+      "end": 8.14,
+      "probability": 0.9737627506256104
+    },
+    {
+      "word": "Use",
+      "start": 8.14,
+      "end": 8.16,
+      "probability": 0.9303528070449829
+    },
+    {
+      "word": "the",
+      "start": 8.16,
+      "end": 8.38,
+      "probability": 0.9915213584899902
+    },
+    {
+      "word": "syllabus.",
+      "start": 8.38,
+      "end": 9.04,
+      "probability": 0.9792262017726898
+    },
+    {
+      "word": "Yuji",
+      "start": 9.04,
+      "end": 9.18,
+      "probability": 0.5387370437383652
+    },
+    {
+      "word": "suggests",
+      "start": 9.18,
+      "end": 9.4,
+      "probability": 0.9630970358848572
+    },
+    {
+      "word": "hiding",
+      "start": 9.4,
+      "end": 9.8,
+      "probability": 0.9723466634750366
+    },
+    {
+      "word": "him.",
+      "start": 9.8,
+      "end": 10.44,
+      "probability": 0.9946624636650085
+    },
+    {
+      "word": "Gojo",
+      "start": 10.44,
+      "end": 10.64,
+      "probability": 0.9897266328334808
+    },
+    {
+      "word": "calls",
+      "start": 10.64,
+      "end": 10.86,
+      "probability": 0.9995036125183105
+    },
+    {
+      "word": "it",
+      "start": 10.86,
+      "end": 11.02,
+      "probability": 0.9973087310791016
+    },
+    {
+      "word": "a",
+      "start": 11.02,
+      "end": 11.06,
+      "probability": 0.9943141341209412
+    },
+    {
+      "word": "lesson.",
+      "start": 11.06,
+      "end": 11.74,
+      "probability": 0.9801530838012695
+    },
+    {
+      "word": "My",
+      "start": 11.74,
+      "end": 11.76,
+      "probability": 0.7998096942901611
+    },
+    {
+      "word": "guy,",
+      "start": 11.76,
+      "end": 12.18,
+      "probability": 0.9537783861160278
+    },
+    {
+      "word": "impressive",
+      "start": 12.18,
+      "end": 12.46,
+      "probability": 0.9371095299720764
+    },
+    {
+      "word": "rebrand",
+      "start": 12.46,
+      "end": 12.88,
+      "probability": 0.7975390255451202
+    },
+    {
+      "word": "for",
+      "start": 12.88,
+      "end": 13.12,
+      "probability": 0.9817777872085571
+    },
+    {
+      "word": "embarrassment.",
+      "start": 13.12,
+      "end": 13.78,
+      "probability": 0.995964765548706
+    },
+    {
+      "word": "Megumi",
+      "start": 13.78,
+      "end": 13.92,
+      "probability": 0.7409924566745758
+    },
+    {
+      "word": "asks",
+      "start": 13.92,
+      "end": 14.18,
+      "probability": 0.9918751120567322
+    },
+    {
+      "word": "who",
+      "start": 14.18,
+      "end": 14.4,
+      "probability": 0.879003643989563
+    },
+    {
+      "word": "knows",
+      "start": 14.4,
+      "end": 14.52,
+      "probability": 0.9906649589538574
+    },
+    {
+      "word": "he's",
+      "start": 14.52,
+      "end": 14.76,
+      "probability": 0.9363867044448853
+    },
+    {
+      "word": "vulnerable.",
+      "start": 14.76,
+      "end": 15.56,
+      "probability": 0.9975564479827881
+    },
+    {
+      "word": "Announcing",
+      "start": 15.56,
+      "end": 15.78,
+      "probability": 0.9630622267723083
+    },
+    {
+      "word": "it?",
+      "start": 15.78,
+      "end": 16.32,
+      "probability": 0.9990360736846924
+    },
+    {
+      "word": "A",
+      "start": 16.32,
+      "end": 16.34,
+      "probability": 0.9816086888313293
+    },
+    {
+      "word": "beautifully",
+      "start": 16.34,
+      "end": 16.56,
+      "probability": 0.9732670187950134
+    },
+    {
+      "word": "stupid",
+      "start": 16.56,
+      "end": 17.0,
+      "probability": 0.9551582932472229
+    },
+    {
+      "word": "marketing",
+      "start": 17.0,
+      "end": 17.3,
+      "probability": 0.9954928159713745
+    },
+    {
+      "word": "campaign.",
+      "start": 17.3,
+      "end": 18.12,
+      "probability": 0.9969454407691956
+    },
+    {
+      "word": "Gojo",
+      "start": 18.12,
+      "end": 18.32,
+      "probability": 0.9858025312423706
+    },
+    {
+      "word": "keeps",
+      "start": 18.32,
+      "end": 18.56,
+      "probability": 0.9969923496246338
+    },
+    {
+      "word": "experience",
+      "start": 18.56,
+      "end": 18.92,
+      "probability": 0.9720643162727356
+    },
+    {
+      "word": "and",
+      "start": 18.92,
+      "end": 19.32,
+      "probability": 0.7895000576972961
+    },
+    {
+      "word": "judgment.",
+      "start": 19.32,
+      "end": 20.1,
+      "probability": 0.8377628922462463
+    },
+    {
+      "word": "We",
+      "start": 20.1,
+      "end": 20.12,
+      "probability": 0.9886165261268616
+    },
+    {
+      "word": "removed",
+      "start": 20.12,
+      "end": 20.3,
+      "probability": 0.8684111833572388
+    },
+    {
+      "word": "a",
+      "start": 20.3,
+      "end": 20.5,
+      "probability": 0.8873682618141174
+    },
+    {
+      "word": "technique,",
+      "start": 20.5,
+      "end": 21.08,
+      "probability": 0.998119056224823
+    },
+    {
+      "word": "not",
+      "start": 21.08,
+      "end": 21.16,
+      "probability": 0.9978760480880737
+    },
+    {
+      "word": "his",
+      "start": 21.16,
+      "end": 21.28,
+      "probability": 0.9945847392082214
+    },
+    {
+      "word": "brain.",
+      "start": 21.28,
+      "end": 21.96,
+      "probability": 0.9960231781005859
+    },
+    {
+      "word": "No",
+      "start": 21.96,
+      "end": 22.08,
+      "probability": 0.9943623542785645
+    },
+    {
+      "word": "personality",
+      "start": 22.08,
+      "end": 22.32,
+      "probability": 0.991015613079071
+    },
+    {
+      "word": "factory",
+      "start": 22.32,
+      "end": 22.94,
+      "probability": 0.9375206828117371
+    },
+    {
+      "word": "reset.",
+      "start": 22.94,
+      "end": 23.439814814814817,
+      "probability": 0.9734643697738647
+    },
+    {
+      "word": "They",
+      "start": 23.439814814814817,
+      "end": 23.4798125,
+      "probability": 0.00011448237637523562
+    },
+    {
+      "word": "change",
+      "start": 23.4798125,
+      "end": 23.6798125,
+      "probability": 0.15402336418628693
+    },
+    {
+      "word": "the",
+      "start": 23.6798125,
+      "end": 23.8998125,
+      "probability": 0.9711518883705139
+    },
+    {
+      "word": "objective.",
+      "start": 23.8998125,
+      "end": 24.6798125,
+      "probability": 0.9790953397750854
+    },
+    {
+      "word": "Evacuate",
+      "start": 24.6798125,
+      "end": 24.9998125,
+      "probability": 0.9717992146809896
+    },
+    {
+      "word": "people,",
+      "start": 24.9998125,
+      "end": 25.459812499999998,
+      "probability": 0.9958533048629761
+    },
+    {
+      "word": "limit",
+      "start": 25.459812499999998,
+      "end": 25.619812500000002,
+      "probability": 0.9579671621322632
+    },
+    {
+      "word": "exposure,",
+      "start": 25.619812500000002,
+      "end": 26.1998125,
+      "probability": 0.9956329464912415
+    },
+    {
+      "word": "avoid",
+      "start": 26.1998125,
+      "end": 26.4198125,
+      "probability": 0.9888665080070496
+    },
+    {
+      "word": "direct",
+      "start": 26.4198125,
+      "end": 26.6998125,
+      "probability": 0.9984917640686035
+    },
+    {
+      "word": "fights.",
+      "start": 26.6998125,
+      "end": 27.5198125,
+      "probability": 0.9975035786628723
+    },
+    {
+      "word": "Reach",
+      "start": 27.5198125,
+      "end": 27.5798125,
+      "probability": 0.9911559820175171
+    },
+    {
+      "word": "tomorrow",
+      "start": 27.5798125,
+      "end": 27.8998125,
+      "probability": 0.9577743411064148
+    },
+    {
+      "word": "intact.",
+      "start": 27.8998125,
+      "end": 28.6998125,
+      "probability": 0.4602607786655426
+    },
+    {
+      "word": "Yuji",
+      "start": 28.6998125,
+      "end": 28.8598125,
+      "probability": 0.5579841732978821
+    },
+    {
+      "word": "wants",
+      "start": 28.8598125,
+      "end": 29.0198125,
+      "probability": 0.9925697445869446
+    },
+    {
+      "word": "to",
+      "start": 29.0198125,
+      "end": 29.1598125,
+      "probability": 0.9973313808441162
+    },
+    {
+      "word": "rescue",
+      "start": 29.1598125,
+      "end": 29.3398125,
+      "probability": 0.9993045330047607
+    },
+    {
+      "word": "everyone",
+      "start": 29.3398125,
+      "end": 29.7798125,
+      "probability": 0.9975601434707642
+    },
+    {
+      "word": "alone.",
+      "start": 29.7798125,
+      "end": 30.5998125,
+      "probability": 0.9973262548446655
+    },
+    {
+      "word": "Strong",
+      "start": 30.5998125,
+      "end": 30.7798125,
+      "probability": 0.9671874046325684
+    },
+    {
+      "word": "instincts,",
+      "start": 30.7798125,
+      "end": 31.2998125,
+      "probability": 0.937598466873169
+    },
+    {
+      "word": "brother.",
+      "start": 31.2998125,
+      "end": 32.0398125,
+      "probability": 0.9577831029891968
+    },
+    {
+      "word": "Terrible",
+      "start": 32.0398125,
+      "end": 32.2598125,
+      "probability": 0.9721183776855469
+    },
+    {
+      "word": "delivery",
+      "start": 32.2598125,
+      "end": 32.5198125,
+      "probability": 0.9789092540740967
+    },
+    {
+      "word": "policy",
+      "start": 32.5198125,
+      "end": 32.9598125,
+      "probability": 0.9951714873313904
+    },
+    {
+      "word": "for",
+      "start": 32.9598125,
+      "end": 33.1998125,
+      "probability": 0.9836276769638062
+    },
+    {
+      "word": "handing",
+      "start": 33.1998125,
+      "end": 33.399812499999996,
+      "probability": 0.9865108728408813
+    },
+    {
+      "word": "yourself",
+      "start": 33.399812499999996,
+      "end": 33.6798125,
+      "probability": 0.9825339913368225
+    },
+    {
+      "word": "to",
+      "start": 33.6798125,
+      "end": 33.9398125,
+      "probability": 0.9868966937065125
+    },
+    {
+      "word": "enemies.",
+      "start": 33.9398125,
+      "end": 34.5398125,
+      "probability": 0.9969626069068909
+    },
+    {
+      "word": "A",
+      "start": 34.5398125,
+      "end": 34.5398125,
+      "probability": 0.9916423559188843
+    },
+    {
+      "word": "threat",
+      "start": 34.5398125,
+      "end": 34.6798125,
+      "probability": 0.9812801480293274
+    },
+    {
+      "word": "appears.",
+      "start": 34.6798125,
+      "end": 35.4398125,
+      "probability": 0.9961023330688477
+    },
+    {
+      "word": "Instead",
+      "start": 35.4398125,
+      "end": 35.5398125,
+      "probability": 0.9966098666191101
+    },
+    {
+      "word": "of",
+      "start": 35.5398125,
+      "end": 35.6798125,
+      "probability": 0.9989380240440369
+    },
+    {
+      "word": "overpowering",
+      "start": 35.6798125,
+      "end": 36.1798125,
+      "probability": 0.9944149553775787
+    },
+    {
+      "word": "it,",
+      "start": 36.1798125,
+      "end": 36.359812500000004,
+      "probability": 0.9951353669166565
+    },
+    {
+      "word": "they",
+      "start": 36.359812500000004,
+      "end": 36.4598125,
+      "probability": 0.9918237328529358
+    },
+    {
+      "word": "use",
+      "start": 36.4598125,
+      "end": 36.5998125,
+      "probability": 0.9950618147850037
+    },
+    {
+      "word": "a",
+      "start": 36.5998125,
+      "end": 36.7198125,
+      "probability": 0.9852806925773621
+    },
+    {
+      "word": "decoy",
+      "start": 36.7198125,
+      "end": 37.0398125,
+      "probability": 0.9765485227108002
+    },
+    {
+      "word": "and",
+      "start": 37.0398125,
+      "end": 37.1798125,
+      "probability": 0.9878865480422974
+    },
+    {
+      "word": "escape",
+      "start": 37.1798125,
+      "end": 37.4398125,
+      "probability": 0.996616780757904
+    },
+    {
+      "word": "route.",
+      "start": 37.4398125,
+      "end": 37.9398125,
+      "probability": 0.978401243686676
+    },
+    {
+      "word": "Megumi",
+      "start": 37.9398125,
+      "end": 38.0998125,
+      "probability": 0.8441962003707886
+    },
+    {
+      "word": "handles",
+      "start": 38.0998125,
+      "end": 38.4198125,
+      "probability": 0.992317795753479
+    },
+    {
+      "word": "the",
+      "start": 38.4198125,
+      "end": 38.6198125,
+      "probability": 0.995042085647583
+    },
+    {
+      "word": "route.",
+      "start": 38.6198125,
+      "end": 39.2798125,
+      "probability": 0.9945653676986694
+    },
+    {
+      "word": "Yuji",
+      "start": 39.2798125,
+      "end": 39.4198125,
+      "probability": 0.9938526153564453
+    },
+    {
+      "word": "moves",
+      "start": 39.4198125,
+      "end": 39.619812499999995,
+      "probability": 0.9931097030639648
+    },
+    {
+      "word": "people.",
+      "start": 39.619812499999995,
+      "end": 40.399812499999996,
+      "probability": 0.9766512513160706
+    },
+    {
+      "word": "Gojo",
+      "start": 40.399812499999996,
+      "end": 40.5798125,
+      "probability": 0.9046265184879303
+    },
+    {
+      "word": "calls",
+      "start": 40.5798125,
+      "end": 40.8798125,
+      "probability": 0.9985713958740234
+    },
+    {
+      "word": "timing.",
+      "start": 40.8798125,
+      "end": 41.8798125,
+      "probability": 0.9708226919174194
+    },
+    {
+      "word": "Students",
+      "start": 41.8798125,
+      "end": 41.8798125,
+      "probability": 0.9923126101493835
+    },
+    {
+      "word": "become",
+      "start": 41.8798125,
+      "end": 42.1798125,
+      "probability": 0.9965062141418457
+    },
+    {
+      "word": "participants,",
+      "start": 42.1798125,
+      "end": 42.859812500000004,
+      "probability": 0.9896219968795776
+    },
+    {
+      "word": "not",
+      "start": 42.859812500000004,
+      "end": 42.899812499999996,
+      "probability": 0.9932951331138611
+    },
+    {
+      "word": "spectators.",
+      "start": 42.899812499999996,
+      "end": 43.57380174291939,
+      "probability": 0.9952438473701477
+    },
+    {
+      "word": "Gojo",
+      "start": 43.57380174291939,
+      "end": 43.8738125,
+      "probability": 0.25660817944844894
+    },
+    {
+      "word": "must",
+      "start": 43.8738125,
+      "end": 44.1338125,
+      "probability": 0.8761128783226013
+    },
+    {
+      "word": "trust",
+      "start": 44.1338125,
+      "end": 44.33381249999999,
+      "probability": 0.9930545687675476
+    },
+    {
+      "word": "his",
+      "start": 44.33381249999999,
+      "end": 44.533812499999996,
+      "probability": 0.9857709407806396
+    },
+    {
+      "word": "teaching.",
+      "start": 44.533812499999996,
+      "end": 45.4538125,
+      "probability": 0.990392804145813
+    },
+    {
+      "word": "Incredible.",
+      "start": 45.4538125,
+      "end": 46.3538125,
+      "probability": 0.6100011467933655
+    },
+    {
+      "word": "Education",
+      "start": 46.3538125,
+      "end": 46.3538125,
+      "probability": 0.9473587870597839
+    },
+    {
+      "word": "has",
+      "start": 46.3538125,
+      "end": 46.5938125,
+      "probability": 0.9963990449905396
+    },
+    {
+      "word": "reached",
+      "start": 46.5938125,
+      "end": 46.793812499999994,
+      "probability": 0.9966590404510498
+    },
+    {
+      "word": "its",
+      "start": 46.793812499999994,
+      "end": 47.033812499999996,
+      "probability": 0.9488749504089355
+    },
+    {
+      "word": "terrifying",
+      "start": 47.033812499999996,
+      "end": 47.3538125,
+      "probability": 0.9968648552894592
+    },
+    {
+      "word": "practical",
+      "start": 47.3538125,
+      "end": 47.9538125,
+      "probability": 0.9115880131721497
+    },
+    {
+      "word": "application.",
+      "start": 47.9538125,
+      "end": 48.933812499999995,
+      "probability": 0.9955152869224548
+    },
+    {
+      "word": "Somebody",
+      "start": 48.933812499999995,
+      "end": 49.19381249999999,
+      "probability": 0.9591748118400574
+    },
+    {
+      "word": "check",
+      "start": 49.19381249999999,
+      "end": 49.433812499999995,
+      "probability": 0.7510454058647156
+    },
+    {
+      "word": "the",
+      "start": 49.433812499999995,
+      "end": 49.5938125,
+      "probability": 0.9870437979698181
+    },
+    {
+      "word": "syllabus.",
+      "start": 49.5938125,
+      "end": 50.19381249999999,
+      "probability": 0.9976001977920532
+    },
+    {
+      "word": "The",
+      "start": 50.19381249999999,
+      "end": 50.19381249999999,
+      "probability": 0.8351502418518066
+    },
+    {
+      "word": "powers",
+      "start": 50.19381249999999,
+      "end": 50.433812499999995,
+      "probability": 0.7387450933456421
+    },
+    {
+      "word": "return",
+      "start": 50.433812499999995,
+      "end": 50.753812499999995,
+      "probability": 0.759803295135498
+    },
+    {
+      "word": "tomorrow.",
+      "start": 50.753812499999995,
+      "end": 51.69381249999999,
+      "probability": 0.9859031438827515
+    },
+    {
+      "word": "The",
+      "start": 51.69381249999999,
+      "end": 51.7338125,
+      "probability": 0.9174787402153015
+    },
+    {
+      "word": "lesson",
+      "start": 51.7338125,
+      "end": 51.893812499999996,
+      "probability": 0.99858558177948
+    },
+    {
+      "word": "remains:",
+      "start": 51.893812499999996,
+      "end": 52.6538125,
+      "probability": 0.9988879561424255
+    },
+    {
+      "word": "your",
+      "start": 52.6538125,
+      "end": 52.793812499999994,
+      "probability": 0.4192922115325928
+    },
+    {
+      "word": "team",
+      "start": 52.793812499999994,
+      "end": 53.0138125,
+      "probability": 0.9831114411354065
+    },
+    {
+      "word": "shouldn't",
+      "start": 53.0138125,
+      "end": 53.2738125,
+      "probability": 0.9819796979427338
+    },
+    {
+      "word": "collapse",
+      "start": 53.2738125,
+      "end": 53.4538125,
+      "probability": 0.9977986216545105
+    },
+    {
+      "word": "because",
+      "start": 53.4538125,
+      "end": 53.8138125,
+      "probability": 0.9898262023925781
+    },
+    {
+      "word": "its",
+      "start": 53.8138125,
+      "end": 53.9538125,
+      "probability": 0.829186201095581
+    },
+    {
+      "word": "strongest",
+      "start": 53.9538125,
+      "end": 54.2338125,
+      "probability": 0.99793541431427
+    },
+    {
+      "word": "member",
+      "start": 54.2338125,
+      "end": 54.533812499999996,
+      "probability": 0.9862397313117981
+    },
+    {
+      "word": "struggles.",
+      "start": 54.533812499999996,
+      "end": 55.1538125,
+      "probability": 0.9963240623474121
+    },
+    {
+      "word": "Gojo",
+      "start": 55.1538125,
+      "end": 55.393812499999996,
+      "probability": 0.8421544134616852
+    },
+    {
+      "word": "claims",
+      "start": 55.393812499999996,
+      "end": 55.6738125,
+      "probability": 0.9980847835540771
+    },
+    {
+      "word": "everything",
+      "start": 55.6738125,
+      "end": 55.973812499999994,
+      "probability": 0.9888942837715149
+    },
+    {
+      "word": "was",
+      "start": 55.973812499999994,
+      "end": 56.293812499999994,
+      "probability": 0.9952439665794373
+    },
+    {
+      "word": "intentional.",
+      "start": 56.293812499999994,
+      "end": 57.3138125,
+      "probability": 0.9989197254180908
+    },
+    {
+      "word": "Megumi",
+      "start": 57.3138125,
+      "end": 57.473812499999994,
+      "probability": 0.8949641287326813
+    },
+    {
+      "word": "requests",
+      "start": 57.473812499999994,
+      "end": 57.793812499999994,
+      "probability": 0.9938321113586426
+    },
+    {
+      "word": "the",
+      "start": 57.793812499999994,
+      "end": 58.073812499999995,
+      "probability": 0.9883692264556885
+    },
+    {
+      "word": "lesson",
+      "start": 58.073812499999995,
+      "end": 58.253812499999995,
+      "probability": 0.9936338663101196
+    },
+    {
+      "word": "plan.",
+      "start": 58.253812499999995,
+      "end": 59.033812499999996,
+      "probability": 0.9953625202178955
+    },
+    {
+      "word": "The",
+      "start": 59.033812499999996,
+      "end": 59.0538125,
+      "probability": 0.9719955325126648
+    },
+    {
+      "word": "receipts",
+      "start": 59.0538125,
+      "end": 59.2338125,
+      "probability": 0.9721408486366272
+    },
+    {
+      "word": "have",
+      "start": 59.2338125,
+      "end": 59.473812499999994,
+      "probability": 0.9934096336364746
+    },
+    {
+      "word": "entered",
+      "start": 59.473812499999994,
+      "end": 59.6738125,
+      "probability": 0.9980776309967041
+    },
+    {
+      "word": "the",
+      "start": 59.6738125,
+      "end": 59.83381249999999,
+      "probability": 0.9989456534385681
+    },
+    {
+      "word": "domain,",
+      "start": 59.83381249999999,
+      "end": 60.41381249999999,
+      "probability": 0.9847283959388733
+    },
+    {
+      "word": "undefeated.",
+      "start": 60.41381249999999,
+      "end": 60.973812499999994,
+      "probability": 0.8942211270332336
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 0.96,
+      "text": "What if Gojo lost his"
+    },
+    {
+      "start": 0.96,
+      "end": 1.98,
+      "text": "powers for a day?"
+    },
+    {
+      "start": 1.98,
+      "end": 3.16,
+      "text": "The confidence stays."
+    },
+    {
+      "start": 3.16,
+      "end": 4.4,
+      "text": "The backup plan has vanished."
+    },
+    {
+      "start": 4.4,
+      "end": 5.72,
+      "text": "This hypothetical disables his technique"
+    },
+    {
+      "start": 5.72,
+      "end": 7.3,
+      "text": "for twenty -four hours."
+    },
+    {
+      "start": 7.3,
+      "end": 8.14,
+      "text": "No upgrade."
+    },
+    {
+      "start": 8.14,
+      "end": 9.04,
+      "text": "Use the syllabus."
+    },
+    {
+      "start": 9.04,
+      "end": 10.44,
+      "text": "Yuji suggests hiding him."
+    },
+    {
+      "start": 10.44,
+      "end": 11.74,
+      "text": "Gojo calls it a lesson."
+    },
+    {
+      "start": 11.74,
+      "end": 13.12,
+      "text": "My guy, impressive rebrand for"
+    },
+    {
+      "start": 13.12,
+      "end": 13.78,
+      "text": "embarrassment."
+    },
+    {
+      "start": 13.78,
+      "end": 14.76,
+      "text": "Megumi asks who knows he's"
+    },
+    {
+      "start": 14.76,
+      "end": 15.56,
+      "text": "vulnerable."
+    },
+    {
+      "start": 15.56,
+      "end": 16.32,
+      "text": "Announcing it?"
+    },
+    {
+      "start": 16.32,
+      "end": 18.12,
+      "text": "A beautifully stupid marketing campaign."
+    },
+    {
+      "start": 18.12,
+      "end": 20.1,
+      "text": "Gojo keeps experience and judgment."
+    },
+    {
+      "start": 20.1,
+      "end": 21.16,
+      "text": "We removed a technique, not"
+    },
+    {
+      "start": 21.16,
+      "end": 21.96,
+      "text": "his brain."
+    },
+    {
+      "start": 21.96,
+      "end": 23.439814814814817,
+      "text": "No personality factory reset."
+    },
+    {
+      "start": 23.439814814814817,
+      "end": 24.6798125,
+      "text": "They change the objective."
+    },
+    {
+      "start": 24.6798125,
+      "end": 26.4198125,
+      "text": "Evacuate people, limit exposure, avoid"
+    },
+    {
+      "start": 26.4198125,
+      "end": 27.5198125,
+      "text": "direct fights."
+    },
+    {
+      "start": 27.5198125,
+      "end": 28.6998125,
+      "text": "Reach tomorrow intact."
+    },
+    {
+      "start": 28.6998125,
+      "end": 29.7798125,
+      "text": "Yuji wants to rescue everyone"
+    },
+    {
+      "start": 29.7798125,
+      "end": 30.5998125,
+      "text": "alone."
+    },
+    {
+      "start": 30.5998125,
+      "end": 32.0398125,
+      "text": "Strong instincts, brother."
+    },
+    {
+      "start": 32.0398125,
+      "end": 33.399812499999996,
+      "text": "Terrible delivery policy for handing"
+    },
+    {
+      "start": 33.399812499999996,
+      "end": 34.5398125,
+      "text": "yourself to enemies."
+    },
+    {
+      "start": 34.5398125,
+      "end": 35.4398125,
+      "text": "A threat appears."
+    },
+    {
+      "start": 35.4398125,
+      "end": 36.4598125,
+      "text": "Instead of overpowering it, they"
+    },
+    {
+      "start": 36.4598125,
+      "end": 37.9398125,
+      "text": "use a decoy and escape route."
+    },
+    {
+      "start": 37.9398125,
+      "end": 39.2798125,
+      "text": "Megumi handles the route."
+    },
+    {
+      "start": 39.2798125,
+      "end": 40.399812499999996,
+      "text": "Yuji moves people."
+    },
+    {
+      "start": 40.399812499999996,
+      "end": 41.8798125,
+      "text": "Gojo calls timing."
+    },
+    {
+      "start": 41.8798125,
+      "end": 43.57380174291939,
+      "text": "Students become participants, not spectators."
+    },
+    {
+      "start": 43.57380174291939,
+      "end": 45.4538125,
+      "text": "Gojo must trust his teaching."
+    },
+    {
+      "start": 45.4538125,
+      "end": 46.3538125,
+      "text": "Incredible."
+    },
+    {
+      "start": 46.3538125,
+      "end": 47.3538125,
+      "text": "Education has reached its terrifying"
+    },
+    {
+      "start": 47.3538125,
+      "end": 48.933812499999995,
+      "text": "practical application."
+    },
+    {
+      "start": 48.933812499999995,
+      "end": 50.19381249999999,
+      "text": "Somebody check the syllabus."
+    },
+    {
+      "start": 50.19381249999999,
+      "end": 51.69381249999999,
+      "text": "The powers return tomorrow."
+    },
+    {
+      "start": 51.69381249999999,
+      "end": 53.0138125,
+      "text": "The lesson remains: your team"
+    },
+    {
+      "start": 53.0138125,
+      "end": 54.2338125,
+      "text": "shouldn't collapse because its strongest"
+    },
+    {
+      "start": 54.2338125,
+      "end": 55.1538125,
+      "text": "member struggles."
+    },
+    {
+      "start": 55.1538125,
+      "end": 57.3138125,
+      "text": "Gojo claims everything was intentional."
+    },
+    {
+      "start": 57.3138125,
+      "end": 59.033812499999996,
+      "text": "Megumi requests the lesson plan."
+    },
+    {
+      "start": 59.033812499999996,
+      "end": 59.83381249999999,
+      "text": "The receipts have entered the"
+    },
+    {
+      "start": 59.83381249999999,
+      "end": 60.973812499999994,
+      "text": "domain, undefeated."
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 6,
+  "review_names_required": true
+}
