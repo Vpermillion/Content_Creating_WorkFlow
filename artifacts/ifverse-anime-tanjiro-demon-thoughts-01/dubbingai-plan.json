@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "narration_sha256": "f79d9e1497c3c5e142e2b8f6fa02fc817d48edf738bc4e0ae80d5b66c6b3868d",
+  "catalog": "assets/sfx/dubbingai-bank.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "no mute button available",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "No-mute-button premise roast"
+    },
+    {
+      "anchor": {
+        "phrase": "Terrible acoustics",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Terrible-acoustics disbelief"
+    },
+    {
+      "anchor": {
+        "phrase": "enormous heart",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Enormous-heart contrast lands"
+    },
+    {
+      "anchor": {
+        "phrase": "local government issue",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Local-government escalation reaction"
+    }
+  ]
+}
