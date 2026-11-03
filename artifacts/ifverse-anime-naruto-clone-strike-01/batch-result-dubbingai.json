@@ -1,0 +1,77 @@
+{
+  "id": "ifverse-anime-naruto-clone-strike-01",
+  "batch_id": "ifverse-anime-61s-visual-repair-02",
+  "status": "success",
+  "script_sha256": "355cfa475e6b5bc6141a195e49d96b6ee74ff5e269758fad2e60fabf85ea0d78",
+  "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-dubbingai-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "video": "production/sound-effects-dubbingai/video-sfx.mp4",
+  "video_sha256": "8c606b713bd4ed3346e131a8e4dc81232ebf7e7750d5a26db94bd681f766556e",
+  "duration_seconds": 61.0,
+  "frame_size": [
+    720,
+    1280
+  ],
+  "source_count": 3,
+  "source_use_status": "unverified",
+  "sound_catalog": "assets/sfx/dubbingai-bank.json",
+  "sound_rights": "community_excerpt_rights_unverified",
+  "technical_receipt": "production/result.json",
+  "audiovisual_editorial_review": "pending",
+  "metadata": {
+    "title": "What if Naruto's shadow clones went on strike?",
+    "description": "Naruto must negotiate with his own shadow clones instead of treating them as disposable labor.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #Naruto\n\nIllustrative clip sources:\nhttps://tenor.com/view/naruto-gif-13232538898744112705\nhttps://tenor.com/view/naruto-naruto-uzumaki-road-to-naruto-naruto-kurama-naruto-nine-tails-gif-18197618730835120377\nhttps://tenor.com/view/kakashi-gif-19074601",
+    "tags": [
+      "anime what if",
+      "Naruto",
+      "Naruto",
+      "Kakashi",
+      "Ifverse Anime"
+    ],
+    "hashtags": [
+      "Shorts",
+      "Anime",
+      "WhatIf",
+      "Naruto"
+    ],
+    "categoryId": "24",
+    "defaultLanguage": "en",
+    "defaultAudioLanguage": "en"
+  },
+  "posting_packet": "post-settings.json",
+  "music_embedded": false,
+  "sound_repair_source": {
+    "id": "ifverse-anime-naruto-clone-strike-01",
+    "topic_key": "naruto-clone-strike",
+    "title": "What if Naruto's shadow clones went on strike?",
+    "premise": "Naruto must negotiate with his own shadow clones instead of treating them as disposable labor.",
+    "franchise": "Naruto",
+    "characters": [
+      "Naruto",
+      "Kakashi"
+    ],
+    "aliases": [],
+    "distinctive_development": "Work stoppage interrupts missions; clones share his exhaustion and grievances; negotiation changes tactical training; the original joins his own strike.",
+    "script_sha256": "355cfa475e6b5bc6141a195e49d96b6ee74ff5e269758fad2e60fabf85ea0d78",
+    "batch_id": "ifverse-anime-ten-61s-20261103-01",
+    "state": "rendered",
+    "video_id": null,
+    "youtube_url": null,
+    "reserved_at": "2026-11-03T02:44:44.869812+00:00",
+    "versions": [
+      {
+        "batch_id": "ifverse-anime-ten-20261103-01",
+        "script_sha256": "f75e3004f87643ec42bce41867cb51e9ba10a74b2f36c7a97914e8a5b656edfa",
+        "state": "reserved",
+        "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+      }
+    ],
+    "video_sha256": "b5e909f2e6f9ce9e0ff15ebb26bfe6a72cda9f7f76b50de25b80cc6ecbcd3dda",
+    "duration_seconds": 61.0,
+    "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r3",
+    "result_commit": "941e648fe9c6557e96883980e0744cd451d7f682",
+    "publication_clearance": "not_established",
+    "result_receipt": "artifacts/ifverse-anime-naruto-clone-strike-01/batch-result.json"
+  }
+}

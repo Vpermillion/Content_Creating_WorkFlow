@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "narration_sha256": "4221a2c3bf5398423290257ec39799062965ebb806dffc6b4a62f04571a7097f",
+  "catalog": "assets/sfx/dubbingai-bank.json",
+  "cues": [
+    {
+      "anchor": {
+        "phrase": "unpaid staff",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "The unpaid-staff roast lands"
+    },
+    {
+      "anchor": {
+        "phrase": "one exhausted teenager",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Exhausted-teenager productivity plan fails"
+    },
+    {
+      "anchor": {
+        "phrase": "lunch schedule attached",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_vine_boom",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Lunch-schedule bureaucracy is the reveal"
+    },
+    {
+      "anchor": {
+        "phrase": "His entire forehead",
+        "edge": "end"
+      },
+      "offset_seconds": 0.03,
+      "effect": "dubbingai_faaah",
+      "peak_dbfs": -17,
+      "max_seconds": 0.75,
+      "reason": "Forehead payoff invites disbelief"
+    }
+  ]
+}
