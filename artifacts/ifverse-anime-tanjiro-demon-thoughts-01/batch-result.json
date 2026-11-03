@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-tanjiro-demon-thoughts-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "71c86bf02878b6fc96835486660a1fad77ac96c4c5db38fe14d5e4263044f5c4",
+  "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Rewrite the script; requested length needs excessive speech retiming"
+}

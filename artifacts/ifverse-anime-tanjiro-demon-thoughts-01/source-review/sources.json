@@ -1,0 +1,326 @@
+{
+  "episode_id": "ifverse-anime-tanjiro-demon-thoughts-01",
+  "results": [
+    {
+      "asset": {
+        "id": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro",
+        "file": "ifverse-anime-tanjiro-demon-thoughts-01-tanjiro.mp4",
+        "type": "video",
+        "query": "Tanjiro Kamado thinking",
+        "source_url": "https://tenor.com/view/demon-slayer-muichiro-nezuko-tanjiro-hmm-gif-3820576342094348835",
+        "download_url": "https://media.tenor.com/NQVp8NvLgiMAAAPo/demon-slayer-muichiro.mp4",
+        "sha256": "86467a11a28a9603e6ffe9c7d4352519423f1aa15220b9d9d39bcd58dc455c68",
+        "duration": 11.92,
+        "dimensions": [
+          498,
+          282
+        ],
+        "description": "a group of anime characters are sitting on a mat",
+        "publisher": "PackerMen",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "16059279966248489419",
+            "title": "a cartoon character is standing in front of a koi fish tank",
+            "source_url": "https://tenor.com/view/tanjiro-kimetsu-no-yaiba-demon-slayer-gif-24921395",
+            "download_url": "https://media.tenor.com/3t4GCyjJ0csAAAPo/tanjiro-kimetsu-no-yaiba.mp4",
+            "duration": 2.2,
+            "width": 640,
+            "height": 360,
+            "publisher": "Tyron01",
+            "provider": "tenor"
+          },
+          {
+            "id": "8089577275271024896",
+            "title": "a close up of a person 's face with red eyes and a white mouth",
+            "source_url": "https://tenor.com/view/tanjiro-tanjiro-kamado-demon-slayer-demon-slayer-tanjiro-anime-stare-gif-8089577275271024896",
+            "download_url": "https://media.tenor.com/cEPzq-OaEQAAAAPo/tanjiro-tanjiro-kamado.mp4",
+            "duration": 4.6,
+            "width": 498,
+            "height": 280,
+            "publisher": "Jacobar",
+            "provider": "tenor"
+          },
+          {
+            "id": "14366124176054044116",
+            "title": "two anime characters are laying on the floor and one of them says how old do you think you are ?",
+            "source_url": "https://tenor.com/view/hotaru-haganezuka-blacksmith-demon-slayer-black-blade-trifle-gif-21203462",
+            "download_url": "https://media.tenor.com/x1650rjaRdQAAAPo/hotaru-haganezuka-blacksmith.mp4",
+            "duration": 3.2,
+            "width": 640,
+            "height": 386,
+            "publisher": "iAmDuckie",
+            "provider": "tenor"
+          },
+          {
+            "id": "3820576342094348835",
+            "title": "a group of anime characters are sitting on a mat",
+            "source_url": "https://tenor.com/view/demon-slayer-muichiro-nezuko-tanjiro-hmm-gif-3820576342094348835",
+            "download_url": "https://media.tenor.com/NQVp8NvLgiMAAAPo/demon-slayer-muichiro.mp4",
+            "duration": 11.9,
+            "width": 498,
+            "height": 282,
+            "publisher": "PackerMen",
+            "provider": "tenor"
+          },
+          {
+            "id": "13930943307149716749",
+            "title": "a close up of a boy with a knife in his mouth .",
+            "source_url": "https://tenor.com/view/demon-slayer-gif-21985266",
+            "download_url": "https://media.tenor.com/wVSnIOjDrQ0AAAPo/demon-slayer.mp4",
+            "duration": 4.7,
+            "width": 640,
+            "height": 360,
+            "publisher": "Withson",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "tanjiro",
+        "visual_intent": "Tanjiro listening and thinking"
+      },
+      "attempts": []
+    },
+    {
+      "asset": {
+        "id": "ifverse-anime-tanjiro-demon-thoughts-01-fight",
+        "file": "ifverse-anime-tanjiro-demon-thoughts-01-fight.mp4",
+        "type": "video",
+        "query": "Tanjiro Demon Slayer sword fight",
+        "source_url": "https://tenor.com/view/kimetsu-no-yaiba-tanjiro-episode19-flame-hinokami-kagura-gif-14756167",
+        "download_url": "https://media.tenor.com/uVt8qLpJIosAAAPo/kimetsu-no-yaiba-tanjiro.mp4",
+        "sha256": "8929bbe17d31c9881caec4927d6629e7ab3701ad29cd8b8c09556cab51abb959",
+        "duration": 5.5,
+        "dimensions": [
+          640,
+          336
+        ],
+        "description": "a cartoon character is running through a flame",
+        "publisher": "GMB1590",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "9268490811721620763",
+            "title": "a close up of a demon slayer character with a fire coming out of his mouth",
+            "source_url": "https://tenor.com/view/anime-hinokami-kagura-tanjiro-sword-style-fire-style-gif-9268490811721620763",
+            "download_url": "https://media.tenor.com/gKBLSWSjnRsAAAPo/anime-hinokami-kagura.mp4",
+            "duration": 2,
+            "width": 498,
+            "height": 282,
+            "publisher": "mastermo",
+            "provider": "tenor"
+          },
+          {
+            "id": "3459645933100248007",
+            "title": "a cartoon of a man with red hair and a fire coming out of his mouth",
+            "source_url": "https://tenor.com/view/demon-slayer-kny-anime-fire-tanjiro-gif-16404193",
+            "download_url": "https://media.tenor.com/MAMhpWsQq8cAAAPo/demon-slayer-kny.mp4",
+            "duration": 3,
+            "width": 640,
+            "height": 360,
+            "publisher": "L_OSSOME",
+            "provider": "tenor"
+          },
+          {
+            "id": "11712980470818867807",
+            "title": "a gif of a person holding a sword with the words make a gif.com below it",
+            "source_url": "https://tenor.com/view/gif-ninja-fight-fight-in-shadow-gif-11712980470818867807",
+            "download_url": "https://media.tenor.com/oozdriA_Cl8AAAPo/gif-ninja-fight.mp4",
+            "duration": 10.1,
+            "width": 480,
+            "height": 270,
+            "publisher": "ohtik00764",
+            "provider": "tenor"
+          },
+          {
+            "id": "12763843601090184191",
+            "title": "Ez GIF",
+            "source_url": "https://tenor.com/view/ez-gif-25568337",
+            "download_url": "https://media.tenor.com/sSJIISOfg_8AAAPo/ez.mp4",
+            "duration": 1.1,
+            "width": 640,
+            "height": 356,
+            "publisher": "dert1",
+            "provider": "tenor"
+          },
+          {
+            "id": "13356406184019042955",
+            "title": "a cartoon character is running through a flame",
+            "source_url": "https://tenor.com/view/kimetsu-no-yaiba-tanjiro-episode19-flame-hinokami-kagura-gif-14756167",
+            "download_url": "https://media.tenor.com/uVt8qLpJIosAAAPo/kimetsu-no-yaiba-tanjiro.mp4",
+            "duration": 5.5,
+            "width": 640,
+            "height": 336,
+            "publisher": "GMB1590",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "fight",
+        "visual_intent": "Tanjiro protecting people in battle"
+      },
+      "attempts": []
+    },
+    {
+      "asset": {
+        "id": "ifverse-anime-tanjiro-demon-thoughts-01-nezuko",
+        "file": "ifverse-anime-tanjiro-demon-thoughts-01-nezuko.mp4",
+        "type": "video",
+        "query": "Nezuko Kamado Demon Slayer",
+        "source_url": "https://tenor.com/view/roseylemon-nezuko-nezuko-kamado-tanjirou-tanjirou-kamado-gif-16301745553804762310",
+        "download_url": "https://media.tenor.com/4jtvNflWHMYAAAPo/roseylemon-nezuko.mp4",
+        "sha256": "c787de2b4db78c2598ee352108851657bf72618cb5e9ff59f8107d29407249dd",
+        "duration": 5.12,
+        "dimensions": [
+          498,
+          280
+        ],
+        "description": "a little girl with a bow in her hair is being held up by a man",
+        "publisher": "roseylemon",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "16301745553804762310",
+            "title": "a little girl with a bow in her hair is being held up by a man",
+            "source_url": "https://tenor.com/view/roseylemon-nezuko-nezuko-kamado-tanjirou-tanjirou-kamado-gif-16301745553804762310",
+            "download_url": "https://media.tenor.com/4jtvNflWHMYAAAPo/roseylemon-nezuko.mp4",
+            "duration": 5.1,
+            "width": 498,
+            "height": 280,
+            "publisher": "roseylemon",
+            "provider": "tenor"
+          },
+          {
+            "id": "587996263567087862",
+            "title": "a boy and a girl are standing next to each other in a forest",
+            "source_url": "https://tenor.com/view/demon-slayer-demon-slayer-s3-demon-slayer-season-3-kimetsu-no-yaiba-kimetsu-no-yaiba-s3-gif-587996263567087862",
+            "download_url": "https://media.tenor.com/CCj7fIMsWPYAAAPo/demon-slayer-demon-slayer-s3.mp4",
+            "duration": 4.9,
+            "width": 498,
+            "height": 282,
+            "publisher": "Moars",
+            "provider": "tenor"
+          },
+          {
+            "id": "12766658425091910243",
+            "title": "a girl with a mask on her face is standing in the dark .",
+            "source_url": "https://tenor.com/view/nezuka-demon-slayer-demon-slayer-memes-kick-axe-kick-gif-12766658425091910243",
+            "download_url": "https://media.tenor.com/sSxIMmxZ6mMAAAPo/nezuka-demon-slayer.mp4",
+            "duration": 5.1,
+            "width": 376,
+            "height": 282,
+            "publisher": "cronaandragnarok",
+            "provider": "tenor"
+          },
+          {
+            "id": "2356627549508292588",
+            "title": "a close up of a girl with red eyes and a horn on her head",
+            "source_url": "https://tenor.com/view/demon-slayer-demon-slayer-s3-demon-slayer-season-3-kimetsu-no-yaiba-kimetsu-no-yaiba-s3-gif-2356627549508292588",
+            "download_url": "https://media.tenor.com/ILRsRTRXT-wAAAPo/demon-slayer-demon-slayer-s3.mp4",
+            "duration": 2.3,
+            "width": 498,
+            "height": 282,
+            "publisher": "Moars",
+            "provider": "tenor"
+          },
+          {
+            "id": "13849205931738553820",
+            "title": "a close up of a girl with red eyes and purple hair",
+            "source_url": "https://tenor.com/view/demon-slayer-demon-slayer-season-2-demon-slayer-s2-kimetsu-no-yaiba-kimetsu-no-yaiba-s2-gif-13849205931738553820",
+            "download_url": "https://media.tenor.com/wDJDay6CXdwAAAPo/demon-slayer-demon-slayer-season-2.mp4",
+            "duration": 3.5,
+            "width": 498,
+            "height": 282,
+            "publisher": "Moars",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "nezuko",
+        "visual_intent": "Nezuko as Tanjiro family and empathy context"
+      },
+      "attempts": []
+    },
+    {
+      "asset": {
+        "id": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu",
+        "file": "ifverse-anime-tanjiro-demon-thoughts-01-zenitsu.mp4",
+        "type": "video",
+        "query": "Zenitsu Demon Slayer scared",
+        "source_url": "https://tenor.com/view/zenitsu-zenitsu-agatsuma-kimetsu-kimetsu-no-yaiba-demon-slayer-gif-21548151",
+        "download_url": "https://media.tenor.com/Bnut8u5_IZ8AAAPo/zenitsu-zenitsu-agatsuma.mp4",
+        "sha256": "14f66190f1f86db1d2f1d0b54d2e88b9a7c61527e5ad27e06911431be9990323",
+        "duration": 2.466667,
+        "dimensions": [
+          458,
+          640
+        ],
+        "description": "a close up of a cartoon character with a surprised face .",
+        "publisher": "crishulse",
+        "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+        "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+        "candidates": [
+          {
+            "id": "11614559232316866487",
+            "title": "a close up of a person 's face with their tongue hanging out",
+            "source_url": "https://tenor.com/view/demon-slayer-kimetsu-no-yaiba-zenitsu-demon-slayer-zenitsu-surprise-gif-11614559232316866487",
+            "download_url": "https://media.tenor.com/oS80FdD6_7cAAAPo/demon-slayer-kimetsu-no-yaiba.mp4",
+            "duration": 1.9,
+            "width": 498,
+            "height": 280,
+            "publisher": "Jacobar",
+            "provider": "tenor"
+          },
+          {
+            "id": "2082106266527672637",
+            "title": "a cartoon character with a surprised look on his face is holding a piece of cake",
+            "source_url": "https://tenor.com/view/zenitsu-demon-slayer-gif-2082106266527672637",
+            "download_url": "https://media.tenor.com/HOUgnjD_KT0AAAPo/zenitsu-demon-slayer.mp4",
+            "duration": 1.4,
+            "width": 498,
+            "height": 498,
+            "publisher": "Ilovesillycats",
+            "provider": "tenor"
+          },
+          {
+            "id": "6063233828992172981",
+            "title": "a yellow haired anime character is crying with his hands on his chest",
+            "source_url": "https://tenor.com/view/aaa-gif-6063233828992172981",
+            "download_url": "https://media.tenor.com/VCTvCwc1w7UAAAPo/aaa.mp4",
+            "duration": 0.8,
+            "width": 498,
+            "height": 280,
+            "publisher": "dfariadg",
+            "provider": "tenor"
+          },
+          {
+            "id": "467158245257978271",
+            "title": "a close up of a cartoon character with a surprised face .",
+            "source_url": "https://tenor.com/view/zenitsu-zenitsu-agatsuma-kimetsu-kimetsu-no-yaiba-demon-slayer-gif-21548151",
+            "download_url": "https://media.tenor.com/Bnut8u5_IZ8AAAPo/zenitsu-zenitsu-agatsuma.mp4",
+            "duration": 2.5,
+            "width": 458,
+            "height": 640,
+            "publisher": "crishulse",
+            "provider": "tenor"
+          },
+          {
+            "id": "4421499921498595590",
+            "title": "a group of anime characters standing next to each other with a pig in the background",
+            "source_url": "https://tenor.com/view/zenitsu-zenitsu-agatsuma-kimetsu-kimetsu-no-yaiba-demon-slayer-gif-21548144",
+            "download_url": "https://media.tenor.com/PVxSwKNXYQYAAAPo/zenitsu-zenitsu-agatsuma.mp4",
+            "duration": 1.1,
+            "width": 562,
+            "height": 640,
+            "publisher": "crishulse",
+            "provider": "tenor"
+          }
+        ],
+        "source_key": "zenitsu",
+        "visual_intent": "Zenitsu reacting to frightening circumstances"
+      },
+      "attempts": []
+    }
+  ],
+  "rights_status": "unverified_publicly_posted_excerpts"
+}
