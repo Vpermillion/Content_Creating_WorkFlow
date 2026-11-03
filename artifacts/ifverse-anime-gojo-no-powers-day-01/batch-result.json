@@ -1,0 +1,11 @@
+{
+  "id": "ifverse-anime-gojo-no-powers-day-01",
+  "batch_id": "ifverse-anime-ten-20261103-01",
+  "status": "failed",
+  "script_sha256": "ab1cef406e6cea07578200283fa4f292bbd51154651a200fb69e3c102dbcf604",
+  "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "error_type": "ValueError",
+  "error": "Rewrite the script; requested length needs excessive speech retiming"
+}
