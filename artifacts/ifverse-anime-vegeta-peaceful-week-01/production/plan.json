@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-vegeta-peaceful-week-01",
+  "title": "What if Vegeta had one peaceful week?",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "assets": [
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+      "file": "ifverse-anime-vegeta-peaceful-week-01-vegeta.mp4",
+      "type": "video",
+      "query": "Vegeta Dragon Ball angry",
+      "source_url": "https://tenor.com/view/that%27s-my-bulma-remaster-remake-vegeta-dbs-gif-4027124219711535825",
+      "download_url": "https://media.tenor.com/N-M4JCZHOtEAAAPo/that%27s-my-bulma-remaster.mp4",
+      "sha256": "67176a50af31ce9af27de82767d8a951ab6105147bca6ad0add10b0fd553dd5a",
+      "duration": 2.127125,
+      "dimensions": [
+        444,
+        498
+      ],
+      "description": "a close up of a person 's face with a hand on it",
+      "publisher": "VegYT",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "17695378321758353219",
+          "title": "a cartoon character from dragon ball z is flying through the air with his arms outstretched .",
+          "source_url": "https://tenor.com/view/vegeta-super-saiyan-dbz-dragon-ball-gif-17695378321758353219",
+          "download_url": "https://media.tenor.com/9ZKc1FqN90MAAAPo/vegeta-super-saiyan.mp4",
+          "duration": 1.8,
+          "width": 384,
+          "height": 216,
+          "publisher": "tokyoboy",
+          "provider": "tenor"
+        },
+        {
+          "id": "13655241837524526274",
+          "title": "a cartoon drawing of a man in a blue and yellow outfit",
+          "source_url": "https://tenor.com/view/lr-teq-vegeta-giant-ape-furious-last-resort-overwhelming-combat-final-bullet-attack-hyper-explosive-wave-gif-13655241837524526274",
+          "download_url": "https://media.tenor.com/vYEqGkezpMIAAAPo/lr-teq-vegeta-giant-ape-furious-last-resort.mp4",
+          "duration": 0.8,
+          "width": 374,
+          "height": 498,
+          "publisher": "Lance57",
+          "provider": "tenor"
+        },
+        {
+          "id": "4943456234092085584",
+          "title": "a close up of a cartoon character 's face with a very angry expression",
+          "source_url": "https://tenor.com/view/dragon-ball-z-dokkan-battle-gif-4943456234092085584",
+          "download_url": "https://media.tenor.com/RJqvQNu_wVAAAAPo/dragon-ball.mp4",
+          "duration": 2.2,
+          "width": 498,
+          "height": 374,
+          "publisher": "proton10mg",
+          "provider": "tenor"
+        },
+        {
+          "id": "10978505005508510858",
+          "title": "a cartoon drawing of a man with a blue shirt",
+          "source_url": "https://tenor.com/view/dragon-ball-z-dokkan-battle-gif-10978505005508510858",
+          "download_url": "https://media.tenor.com/mFt8IsouxIoAAAPo/dragon-ball.mp4",
+          "duration": 0.7,
+          "width": 498,
+          "height": 374,
+          "publisher": "proton10mg",
+          "provider": "tenor"
+        },
+        {
+          "id": "4027124219711535825",
+          "title": "a close up of a person 's face with a hand on it",
+          "source_url": "https://tenor.com/view/that%27s-my-bulma-remaster-remake-vegeta-dbs-gif-4027124219711535825",
+          "download_url": "https://media.tenor.com/N-M4JCZHOtEAAAPo/that%27s-my-bulma-remaster.mp4",
+          "duration": 2.1,
+          "width": 444,
+          "height": 498,
+          "publisher": "VegYT",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "vegeta",
+      "visual_intent": "Vegeta reacting with pride"
+    },
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01-train",
+      "file": "ifverse-anime-vegeta-peaceful-week-01-train.mp4",
+      "type": "video",
+      "query": "Vegeta gravity training",
+      "source_url": "https://tenor.com/view/vegeta-push-ups-one-finger-one-hand-push-up-one-finger-push-up-gravity-gif-18222610528316135644",
+      "download_url": "https://media.tenor.com/_OO3ulyTmNwAAAPo/vegeta-push-ups-one-finger.mp4",
+      "sha256": "7e38f8007cdc39c4b1e11c78f1b89a820947368f587f50cf6c8529e301c4efb3",
+      "duration": 4.533333,
+      "dimensions": [
+        498,
+        374
+      ],
+      "description": "a drawing of a person with a bandage around their head",
+      "publisher": "StrongestBubble",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "4037900047730293356",
+          "title": "a cartoon character is standing in front of a red pillar",
+          "source_url": "https://tenor.com/view/vegeta-gif-21635922",
+          "download_url": "https://media.tenor.com/OAmAsx9_OmwAAAPo/vegeta.mp4",
+          "duration": 1.2,
+          "width": 640,
+          "height": 476,
+          "publisher": "PrinceVegeta62",
+          "provider": "tenor"
+        },
+        {
+          "id": "11429158708441970776",
+          "title": "a cartoon character with a bandage on his head is standing in a room .",
+          "source_url": "https://tenor.com/view/vegeta-training-punch-dragon-ball-gif-15914284",
+          "download_url": "https://media.tenor.com/npyHSoI--FgAAAPo/vegeta-training.mp4",
+          "duration": 2.3,
+          "width": 640,
+          "height": 352,
+          "publisher": "Spiderbat36",
+          "provider": "tenor"
+        },
+        {
+          "id": "18222610528316135644",
+          "title": "a drawing of a person with a bandage around their head",
+          "source_url": "https://tenor.com/view/vegeta-push-ups-one-finger-one-hand-push-up-one-finger-push-up-gravity-gif-18222610528316135644",
+          "download_url": "https://media.tenor.com/_OO3ulyTmNwAAAPo/vegeta-push-ups-one-finger.mp4",
+          "duration": 4.5,
+          "width": 498,
+          "height": 374,
+          "publisher": "StrongestBubble",
+          "provider": "tenor"
+        },
+        {
+          "id": "9678019585917017874",
+          "title": "a cartoon of a man doing a handstand in a boxing ring",
+          "source_url": "https://tenor.com/view/vegeta-training-dragon-ball-z-gravity-training-anime-gif-26624125",
+          "download_url": "https://media.tenor.com/hk87iXvbXxIAAAPo/vegeta-training.mp4",
+          "duration": 4,
+          "width": 640,
+          "height": 480,
+          "publisher": "CrazyCrispGifs",
+          "provider": "tenor"
+        },
+        {
+          "id": "14734458587088602125",
+          "title": "a picture of a person with the words add 4 above them",
+          "source_url": "https://tenor.com/view/add-4-mge-gif-14734458587088602125",
+          "download_url": "https://media.tenor.com/zHtQBLkexA0AAAPo/add-4-mge.mp4",
+          "duration": 1.2,
+          "width": 498,
+          "height": 450,
+          "publisher": "nillionare",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "train",
+      "visual_intent": "Vegeta choosing intense training"
+    },
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01-bulma",
+      "file": "ifverse-anime-vegeta-peaceful-week-01-bulma.mp4",
+      "type": "video",
+      "query": "Bulma reaction Dragon Ball",
+      "source_url": "https://tenor.com/view/bulma-dragon-ball-cepillando-los-dientes-chica-pijama-gif-3594875758800956848",
+      "download_url": "https://media.tenor.com/MeOQdMb-bbAAAAPo/bulma-dragon-ball.mp4",
+      "sha256": "e8b3c6ca715a766d9f276de4c95fd9511f8cfdfd30933a8db89d5500776ae366",
+      "duration": 3.733333,
+      "dimensions": [
+        498,
+        352
+      ],
+      "description": "a girl in a pink shirt with a star on it is brushing her teeth in front of a mirror",
+      "publisher": "sharonm_",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "7335337155041430079",
+          "title": "a close up of a cartoon character with the words that 's on the bottom right",
+          "source_url": "https://tenor.com/view/vegeta-dragonball-z-super-saiyan-that%27s-my-bulma-reaction-gif-7335337155041430079",
+          "download_url": "https://media.tenor.com/ZcxaRzn4Cj8AAAPo/vegeta-dragonball-z.mp4",
+          "duration": 7.6,
+          "width": 498,
+          "height": 374,
+          "publisher": "Shadowpants",
+          "provider": "tenor"
+        },
+        {
+          "id": "9896230952102234795",
+          "title": "a girl with blue hair and a red jacket making a heart with her hands",
+          "source_url": "https://tenor.com/view/reaction-love-happy-anime-heart-gif-26618208",
+          "download_url": "https://media.tenor.com/iVZ5nlNHiqsAAAPo/reaction-love.mp4",
+          "duration": 2,
+          "width": 508,
+          "height": 640,
+          "publisher": "Baiamonte",
+          "provider": "tenor"
+        },
+        {
+          "id": "5857587510326388985",
+          "title": "a girl with blue hair is wearing a yellow jacket and orange boots",
+          "source_url": "https://tenor.com/view/terima-kasih-gif-5857587510326388985",
+          "download_url": "https://media.tenor.com/UUpUzknE6PkAAAPo/terima-kasih.mp4",
+          "duration": 1,
+          "width": 220,
+          "height": 498,
+          "publisher": "Maspaijo",
+          "provider": "tenor"
+        },
+        {
+          "id": "17012378070340029992",
+          "title": "a man is standing next to a cartoon character wearing a capsule corporation t-shirt",
+          "source_url": "https://tenor.com/view/bulma-dragon-ball-mr-popo-turn-around-screaming-gif-17012378070340029992",
+          "download_url": "https://media.tenor.com/7BgbuDNDTigAAAPo/bulma-dragon-ball.mp4",
+          "duration": 2.1,
+          "width": 400,
+          "height": 300,
+          "publisher": "nanokawrence",
+          "provider": "tenor"
+        },
+        {
+          "id": "3594875758800956848",
+          "title": "a girl in a pink shirt with a star on it is brushing her teeth in front of a mirror",
+          "source_url": "https://tenor.com/view/bulma-dragon-ball-cepillando-los-dientes-chica-pijama-gif-3594875758800956848",
+          "download_url": "https://media.tenor.com/MeOQdMb-bbAAAAPo/bulma-dragon-ball.mp4",
+          "duration": 3.7,
+          "width": 498,
+          "height": 352,
+          "publisher": "sharonm_",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "bulma",
+      "visual_intent": "Bulma and family context"
+    },
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01-trunks",
+      "file": "ifverse-anime-vegeta-peaceful-week-01-trunks.mp4",
+      "type": "video",
+      "query": "Vegeta Trunks family",
+      "source_url": "https://tenor.com/view/vegeta-bulma-trunks-family-family-day-gif-13281431",
+      "download_url": "https://media.tenor.com/ExgKbDWBw7wAAAPo/vegeta-bulma.mp4",
+      "sha256": "12130dd348cf39f221f579fcad8cc3b215dfa653749f09eb9b401143e4618ea4",
+      "duration": 5.68,
+      "dimensions": [
+        640,
+        358
+      ],
+      "description": "a group of cartoon characters eating ice cream in a store",
+      "publisher": "jaysondez",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "11272496428276097915",
+          "title": "a cartoon of a man carrying a baby and a woman standing next to him",
+          "source_url": "https://tenor.com/view/family-man-gif-24055148",
+          "download_url": "https://media.tenor.com/nG_zxvtBo3sAAAPo/family-man.mp4",
+          "duration": 2.2,
+          "width": 640,
+          "height": 462,
+          "publisher": "edeboo",
+          "provider": "tenor"
+        },
+        {
+          "id": "1375861146032128956",
+          "title": "a group of cartoon characters eating ice cream in a store",
+          "source_url": "https://tenor.com/view/vegeta-bulma-trunks-family-family-day-gif-13281431",
+          "download_url": "https://media.tenor.com/ExgKbDWBw7wAAAPo/vegeta-bulma.mp4",
+          "duration": 5.7,
+          "width": 640,
+          "height": 358,
+          "publisher": "jaysondez",
+          "provider": "tenor"
+        },
+        {
+          "id": "2139030369579283964",
+          "title": "a cartoon of a man standing next to a boy with blonde hair",
+          "source_url": "https://tenor.com/view/int-majin-vegeta-brief-paternal-moment-vegetas-resolve-final-impact-final-explosion-gif-2139030369579283964",
+          "download_url": "https://media.tenor.com/Ha9cyb6LtfwAAAPo/int-majin-vegeta-brief-paternal-moment.mp4",
+          "duration": 2.3,
+          "width": 374,
+          "height": 498,
+          "publisher": "Lance57",
+          "provider": "tenor"
+        },
+        {
+          "id": "17485139691029580305",
+          "title": "a group of dragon ball characters are standing together on a blue background",
+          "source_url": "https://tenor.com/view/dragon-ball-dragon-team-goku-dragonball-dbz-gif-17485139691029580305",
+          "download_url": "https://media.tenor.com/8qex6KPmyhEAAAPo/dragon-ball-dragon-team.mp4",
+          "duration": 2.2,
+          "width": 480,
+          "height": 270,
+          "publisher": "LuiShirosagii",
+          "provider": "tenor"
+        },
+        {
+          "id": "6276899642502418748",
+          "title": "a cartoon of piccolo and vegeta from dragon ball",
+          "source_url": "https://tenor.com/view/vegeta-goku-songoku-songohan-gohan-gif-16504982",
+          "download_url": "https://media.tenor.com/VxwG9-oiETwAAAPo/vegeta-goku.mp4",
+          "duration": 5.7,
+          "width": 640,
+          "height": 378,
+          "publisher": "jaysondez",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "trunks",
+      "visual_intent": "Vegeta interacting around family"
+    },
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01-goku",
+      "file": "ifverse-anime-vegeta-peaceful-week-01-goku.mp4",
+      "type": "video",
+      "query": "Goku Dragon Ball smiling",
+      "source_url": "https://tenor.com/view/goku-dragon-ball-smile-turn-serious-dragonball-gif-17475896124570291416",
+      "download_url": "https://media.tenor.com/8oba7xyjTNgAAAPo/goku-dragon-ball.mp4",
+      "sha256": "349091fae2b66cbbf0f829a548577f923be1f4c009efa74318d7caf5e94b0412",
+      "duration": 2.0,
+      "dimensions": [
+        480,
+        270
+      ],
+      "description": "a close up of a cartoon character 's face with a blue sky in the background",
+      "publisher": "LuiShirosagii",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "14465376940269128437",
+          "title": "a close up of a cartoon character 's face with a blue sky in the background",
+          "source_url": "https://tenor.com/view/goku-son-goku-super-saiyan-goku-super-saiyan-3-ssj3-gif-14465376940269128437",
+          "download_url": "https://media.tenor.com/yL9Xr7LeSvUAAAPo/goku-son-goku.mp4",
+          "duration": 0.8,
+          "width": 480,
+          "height": 260,
+          "publisher": "PastaObesity",
+          "provider": "tenor"
+        },
+        {
+          "id": "10510702430466503019",
+          "title": "a close up of a cartoon character 's face with a surprised expression",
+          "source_url": "https://tenor.com/view/goku-kids-smile-gif-10510702430466503019",
+          "download_url": "https://media.tenor.com/kd2ELCPKcWsAAAPo/goku-kids-smile.mp4",
+          "duration": 1.4,
+          "width": 498,
+          "height": 116,
+          "publisher": "abullbaba1234",
+          "provider": "tenor"
+        },
+        {
+          "id": "17475896124570291416",
+          "title": "a close up of a cartoon character 's face with a blue sky in the background",
+          "source_url": "https://tenor.com/view/goku-dragon-ball-smile-turn-serious-dragonball-gif-17475896124570291416",
+          "download_url": "https://media.tenor.com/8oba7xyjTNgAAAPo/goku-dragon-ball.mp4",
+          "duration": 2,
+          "width": 480,
+          "height": 270,
+          "publisher": "LuiShirosagii",
+          "provider": "tenor"
+        },
+        {
+          "id": "11011439799098299241",
+          "title": "a close up of a cartoon character 's face with a white background .",
+          "source_url": "https://tenor.com/view/trolldudes-goku-sticker-gif-11011439799098299241",
+          "download_url": "https://media.tenor.com/mNB-J_raU2kAAAPo/trolldudes-goku-sticker.mp4",
+          "duration": 2.1,
+          "width": 400,
+          "height": 110,
+          "publisher": "Crimby",
+          "provider": "tenor"
+        },
+        {
+          "id": "1178938287696363924",
+          "title": "a close up of a cartoon character with the female rose written on the bottom right",
+          "source_url": "https://tenor.com/view/goku-black-goku-black-smile-smiling-dragon-ball-super-dbs-gif-1178938287696363924",
+          "download_url": "https://media.tenor.com/EFxuIFo_wZQAAAPo/goku-black-goku-black-smile.mp4",
+          "duration": 1.6,
+          "width": 498,
+          "height": 284,
+          "publisher": "The_Female_Rose",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "goku",
+      "visual_intent": "Goku as Vegeta rivalry trigger"
+    }
+  ],
+  "scenes": [
+    {
+      "text": "What if Vegeta got one peaceful week? No invasion. A prince underqualified for normal Tuesday activities.",
+      "label": "NO VILLAIN JUST FEELINGS",
+      "start": 0.0,
+      "end": 5.438957475994513,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "He begins by training harder. Naturally. Bro treats relaxation like a security vulnerability in his system.",
+      "label": "DAY ONE OF RELAXING",
+      "start": 5.438957475994513,
+      "end": 10.710562414266118,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-train",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta choosing intense training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-train",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta choosing intense training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Bulma requests family time. Vegeta asks for the objective. Sir, the objective is being present.",
+      "label": "BULMA SETS THE CHALLENGE",
+      "start": 10.710562414266118,
+      "end": 15.54705075445816,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-bulma",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Bulma and family context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-bulma",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Bulma and family context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Trunks shows him a drawing. Vegeta corrects his stance. My guy, that's artwork, not an enemy combatant.",
+      "label": "NOT EVERYTHING IS A DRILL",
+      "start": 15.54705075445816,
+      "end": 20.46721536351166,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-trunks",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Without a threat, strength needs another purpose. Can he enjoy people he protects?",
+      "label": "WHAT IS STRENGTH FOR",
+      "start": 20.46721536351166,
+      "end": 24.04855967078189,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Goku visits. Vegeta immediately suspects secret training. A friendly hello triggers a competitive investigation.",
+      "label": "THE RIVALRY NOTIFICATION",
+      "start": 24.04855967078189,
+      "end": 29.671604938271603,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "He wants gravity training again. Instead, he promises a short session and leaves on time.",
+      "label": "PUT THE GRAVITY DOWN",
+      "start": 29.671604938271603,
+      "end": 33.80521262002743,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-train",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta choosing intense training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Bulma is shocked. A grown man correctly estimated his arrival time. Historic scenes at Capsule Corporation today.",
+      "label": "A RARE CONFIRMED WIN",
+      "start": 33.80521262002743,
+      "end": 39.813168724279834,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-bulma",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Bulma and family context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-bulma",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Bulma and family context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "He listens to Trunks explain the drawing. It's their family. Nobody's fighting. Vegeta needs a moment.",
+      "label": "THE SMALL MOMENT",
+      "start": 39.813168724279834,
+      "end": 44.59945130315501,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-trunks",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "He keeps his pride, but stops dodging tender conversations. An actual emotional upgrade.",
+      "label": "KEEP THE PRIDE LOSE THE EXCUSE",
+      "start": 44.59945130315501,
+      "end": 49.03429355281207,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "Goku asks if peace made him soft. Vegeta schedules tomorrow's beating. Healthy boundaries, absolutely horrible phrasing.",
+      "label": "THE FLEX STILL EXISTS",
+      "start": 49.03429355281207,
+      "end": 55.34348422496571,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    },
+    {
+      "text": "No new transformation appears. He still grows. Motherflicker, the breakthrough was dinner together and one sincere compliment.",
+      "label": "A DIFFERENT KIND OF POWER",
+      "start": 55.34348422496571,
+      "end": 61.0,
+      "shots": [
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-trunks",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "asset": "ifverse-anime-vegeta-peaceful-week-01-trunks",
+          "fit": "contain",
+          "trim_start": 0,
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ]
+    }
+  ],
+  "video_only": true,
+  "single_pass": true,
+  "enhancement": "anime-light",
+  "source_credit": "IFVERSE ANIME / FAN-MADE WHAT-IF",
+  "publishing_authorized": false,
+  "narration_sha256": "5cd56713f3478a51a61033dbd59ed345c34638f53759e075b78b207b503cc05d",
+  "caption_segments": [
+    {
+      "start": 0,
+      "end": 0.86,
+      "text": "What if Vegeta got one"
+    },
+    {
+      "start": 0.86,
+      "end": 1.92,
+      "text": "peaceful week?"
+    },
+    {
+      "start": 1.92,
+      "end": 2.92,
+      "text": "No invasion."
+    },
+    {
+      "start": 2.92,
+      "end": 4.3,
+      "text": "A prince underqualified for normal"
+    },
+    {
+      "start": 4.3,
+      "end": 5.5,
+      "text": "Tuesday activities."
+    },
+    {
+      "start": 5.5,
+      "end": 7.9,
+      "text": "He begins by training harder. Naturally."
+    },
+    {
+      "start": 7.9,
+      "end": 9.08,
+      "text": "Bro treats relaxation like a"
+    },
+    {
+      "start": 9.08,
+      "end": 10.82,
+      "text": "security vulnerability in his system."
+    },
+    {
+      "start": 10.82,
+      "end": 12.48,
+      "text": "Bulma requests family time."
+    },
+    {
+      "start": 12.48,
+      "end": 13.96,
+      "text": "Vegeta asks for the objective."
+    },
+    {
+      "start": 13.96,
+      "end": 15.64,
+      "text": "Sir, the objective is being present."
+    },
+    {
+      "start": 15.64,
+      "end": 17.1,
+      "text": "Trunks shows him a drawing."
+    },
+    {
+      "start": 17.1,
+      "end": 18.32,
+      "text": "Vegeta corrects his stance."
+    },
+    {
+      "start": 18.32,
+      "end": 19.52,
+      "text": "My guy, that's artwork, not"
+    },
+    {
+      "start": 19.52,
+      "end": 20.46721536351166,
+      "text": "an enemy combatant."
+    },
+    {
+      "start": 20.46721536351166,
+      "end": 21.6471875,
+      "text": "Without a threat, strength needs"
+    },
+    {
+      "start": 21.6471875,
+      "end": 22.6871875,
+      "text": "another purpose."
+    },
+    {
+      "start": 22.6871875,
+      "end": 24.0871875,
+      "text": "Can he enjoy people he protects?"
+    },
+    {
+      "start": 24.0871875,
+      "end": 25.0271875,
+      "text": "Goku visits."
+    },
+    {
+      "start": 25.0271875,
+      "end": 27.3271875,
+      "text": "Vegeta immediately suspects secret training."
+    },
+    {
+      "start": 27.3271875,
+      "end": 28.4271875,
+      "text": "A friendly hello triggers a"
+    },
+    {
+      "start": 28.4271875,
+      "end": 29.7071875,
+      "text": "competitive investigation."
+    },
+    {
+      "start": 29.7071875,
+      "end": 31.167187499999997,
+      "text": "He wants gravity training again."
+    },
+    {
+      "start": 31.167187499999997,
+      "end": 32.4671875,
+      "text": "Instead, he promises a short"
+    },
+    {
+      "start": 32.4671875,
+      "end": 33.8671875,
+      "text": "session and leaves on time."
+    },
+    {
+      "start": 33.8671875,
+      "end": 34.9671875,
+      "text": "Bulma is shocked."
+    },
+    {
+      "start": 34.9671875,
+      "end": 36.2271875,
+      "text": "A grown man correctly estimated"
+    },
+    {
+      "start": 36.2271875,
+      "end": 37.6871875,
+      "text": "his arrival time."
+    },
+    {
+      "start": 37.6871875,
+      "end": 39.107187499999995,
+      "text": "Historic scenes at Capsule Corporation"
+    },
+    {
+      "start": 39.107187499999995,
+      "end": 39.813168724279834,
+      "text": "today."
+    },
+    {
+      "start": 39.813168724279834,
+      "end": 40.8331875,
+      "text": "He listens to Trunks explain"
+    },
+    {
+      "start": 40.8331875,
+      "end": 41.6731875,
+      "text": "the drawing."
+    },
+    {
+      "start": 41.6731875,
+      "end": 42.5931875,
+      "text": "It's their family."
+    },
+    {
+      "start": 42.5931875,
+      "end": 43.5931875,
+      "text": "Nobody's fighting."
+    },
+    {
+      "start": 43.5931875,
+      "end": 44.6731875,
+      "text": "Vegeta needs a moment."
+    },
+    {
+      "start": 44.6731875,
+      "end": 45.4731875,
+      "text": "He keeps his pride, but"
+    },
+    {
+      "start": 45.4731875,
+      "end": 47.5331875,
+      "text": "stops dodging tender conversations."
+    },
+    {
+      "start": 47.5331875,
+      "end": 49.0531875,
+      "text": "An actual emotional upgrade."
+    },
+    {
+      "start": 49.0531875,
+      "end": 50.1531875,
+      "text": "Goku asks if peace made"
+    },
+    {
+      "start": 50.1531875,
+      "end": 51.0131875,
+      "text": "him soft."
+    },
+    {
+      "start": 51.0131875,
+      "end": 53.1331875,
+      "text": "Vegeta schedules tomorrow's beating."
+    },
+    {
+      "start": 53.1331875,
+      "end": 55.4331875,
+      "text": "Healthy boundaries, absolutely horrible phrasing."
+    },
+    {
+      "start": 55.4331875,
+      "end": 56.973187499999995,
+      "text": "No new transformation appears."
+    },
+    {
+      "start": 56.973187499999995,
+      "end": 58.1531875,
+      "text": "He still grows."
+    },
+    {
+      "start": 58.1531875,
+      "end": 59.2731875,
+      "text": "Motherflicker, the breakthrough was dinner"
+    },
+    {
+      "start": 59.2731875,
+      "end": 60.973187499999995,
+      "text": "together and one sincere compliment."
+    }
+  ]
+}

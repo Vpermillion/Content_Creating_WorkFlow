@@ -1,0 +1,13 @@
+{
+  "branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r2",
+  "commit": "915081581a0cecb3ae3f9c56c87a4bc1111c0680",
+  "reused_source_keys": [
+    "vegeta",
+    "train",
+    "trunks",
+    "goku"
+  ],
+  "new_source_searches_avoided": 4,
+  "reuse_narration_from": "artifacts/.retained-batch-voices/ifverse-anime-vegeta-peaceful-week-01",
+  "reuse_transcription_from": "artifacts/.retained-batch-voices/ifverse-anime-vegeta-peaceful-week-01"
+}

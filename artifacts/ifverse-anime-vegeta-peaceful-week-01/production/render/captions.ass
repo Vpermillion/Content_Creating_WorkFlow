@@ -1,0 +1,75 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.86,Caption,,0,0,0,,What if Vegeta got one
+Dialogue: 0,0:00:00.86,0:00:01.92,Caption,,0,0,0,,peaceful week?
+Dialogue: 0,0:00:01.92,0:00:02.92,Caption,,0,0,0,,No invasion.
+Dialogue: 0,0:00:02.92,0:00:04.30,Caption,,0,0,0,,A prince underqualified for\Nnormal
+Dialogue: 0,0:00:04.30,0:00:05.50,Caption,,0,0,0,,Tuesday activities.
+Dialogue: 0,0:00:05.50,0:00:07.90,Caption,,0,0,0,,He begins by training harder.\NNaturally.
+Dialogue: 0,0:00:07.90,0:00:09.08,Caption,,0,0,0,,Bro treats relaxation like a
+Dialogue: 0,0:00:09.08,0:00:10.82,Caption,,0,0,0,,security vulnerability in his\Nsystem.
+Dialogue: 0,0:00:10.82,0:00:12.48,Caption,,0,0,0,,Bulma requests family time.
+Dialogue: 0,0:00:12.48,0:00:13.96,Caption,,0,0,0,,Vegeta asks for the objective.
+Dialogue: 0,0:00:13.96,0:00:15.64,Caption,,0,0,0,,Sir, the objective is being\Npresent.
+Dialogue: 0,0:00:15.64,0:00:17.10,Caption,,0,0,0,,Trunks shows him a drawing.
+Dialogue: 0,0:00:17.10,0:00:18.32,Caption,,0,0,0,,Vegeta corrects his stance.
+Dialogue: 0,0:00:18.32,0:00:19.52,Caption,,0,0,0,,My guy, that's artwork, not
+Dialogue: 0,0:00:19.52,0:00:20.47,Caption,,0,0,0,,an enemy combatant.
+Dialogue: 0,0:00:20.47,0:00:21.65,Caption,,0,0,0,,Without a threat, strength needs
+Dialogue: 0,0:00:21.65,0:00:22.69,Caption,,0,0,0,,another purpose.
+Dialogue: 0,0:00:22.69,0:00:24.09,Caption,,0,0,0,,Can he enjoy people he protects?
+Dialogue: 0,0:00:24.09,0:00:25.03,Caption,,0,0,0,,Goku visits.
+Dialogue: 0,0:00:25.03,0:00:27.33,Caption,,0,0,0,,Vegeta immediately suspects\Nsecret training.
+Dialogue: 0,0:00:27.33,0:00:28.43,Caption,,0,0,0,,A friendly hello triggers a
+Dialogue: 0,0:00:28.43,0:00:29.71,Caption,,0,0,0,,competitive investigation.
+Dialogue: 0,0:00:29.71,0:00:31.17,Caption,,0,0,0,,He wants gravity training again.
+Dialogue: 0,0:00:31.17,0:00:32.47,Caption,,0,0,0,,Instead, he promises a short
+Dialogue: 0,0:00:32.47,0:00:33.87,Caption,,0,0,0,,session and leaves on time.
+Dialogue: 0,0:00:33.87,0:00:34.97,Caption,,0,0,0,,Bulma is shocked.
+Dialogue: 0,0:00:34.97,0:00:36.23,Caption,,0,0,0,,A grown man correctly estimated
+Dialogue: 0,0:00:36.23,0:00:37.69,Caption,,0,0,0,,his arrival time.
+Dialogue: 0,0:00:37.69,0:00:39.11,Caption,,0,0,0,,Historic scenes at Capsule\NCorporation
+Dialogue: 0,0:00:39.11,0:00:39.81,Caption,,0,0,0,,today.
+Dialogue: 0,0:00:39.81,0:00:40.83,Caption,,0,0,0,,He listens to Trunks explain
+Dialogue: 0,0:00:40.83,0:00:41.67,Caption,,0,0,0,,the drawing.
+Dialogue: 0,0:00:41.67,0:00:42.59,Caption,,0,0,0,,It's their family.
+Dialogue: 0,0:00:42.59,0:00:43.59,Caption,,0,0,0,,Nobody's fighting.
+Dialogue: 0,0:00:43.59,0:00:44.67,Caption,,0,0,0,,Vegeta needs a moment.
+Dialogue: 0,0:00:44.67,0:00:45.47,Caption,,0,0,0,,He keeps his pride, but
+Dialogue: 0,0:00:45.47,0:00:47.53,Caption,,0,0,0,,stops dodging tender\Nconversations.
+Dialogue: 0,0:00:47.53,0:00:49.05,Caption,,0,0,0,,An actual emotional upgrade.
+Dialogue: 0,0:00:49.05,0:00:50.15,Caption,,0,0,0,,Goku asks if peace made
+Dialogue: 0,0:00:50.15,0:00:51.01,Caption,,0,0,0,,him soft.
+Dialogue: 0,0:00:51.01,0:00:53.13,Caption,,0,0,0,,Vegeta schedules tomorrow's\Nbeating.
+Dialogue: 0,0:00:53.13,0:00:55.43,Caption,,0,0,0,,Healthy boundaries, absolutely\Nhorrible phrasing.
+Dialogue: 0,0:00:55.43,0:00:56.97,Caption,,0,0,0,,No new transformation appears.
+Dialogue: 0,0:00:56.97,0:00:58.15,Caption,,0,0,0,,He still grows.
+Dialogue: 0,0:00:58.15,0:00:59.27,Caption,,0,0,0,,Motherflicker, the breakthrough\Nwas dinner
+Dialogue: 0,0:00:59.27,0:01:00.97,Caption,,0,0,0,,together and one sincere\Ncompliment.
+Dialogue: 1,0:00:00.00,0:00:05.44,Heading,,0,0,0,,NO VILLAIN JUST FEELINGS
+Dialogue: 1,0:00:05.44,0:00:10.71,Heading,,0,0,0,,DAY ONE OF RELAXING
+Dialogue: 1,0:00:10.71,0:00:15.55,Heading,,0,0,0,,BULMA SETS THE CHALLENGE
+Dialogue: 1,0:00:15.55,0:00:20.47,Heading,,0,0,0,,NOT EVERYTHING IS A DRILL
+Dialogue: 1,0:00:20.47,0:00:24.05,Heading,,0,0,0,,WHAT IS STRENGTH FOR
+Dialogue: 1,0:00:24.05,0:00:29.67,Heading,,0,0,0,,THE RIVALRY NOTIFICATION
+Dialogue: 1,0:00:29.67,0:00:33.81,Heading,,0,0,0,,PUT THE GRAVITY DOWN
+Dialogue: 1,0:00:33.81,0:00:39.81,Heading,,0,0,0,,A RARE CONFIRMED WIN
+Dialogue: 1,0:00:39.81,0:00:44.60,Heading,,0,0,0,,THE SMALL MOMENT
+Dialogue: 1,0:00:44.60,0:00:49.03,Heading,,0,0,0,,KEEP THE PRIDE LOSE THE EXCUSE
+Dialogue: 1,0:00:49.03,0:00:55.34,Heading,,0,0,0,,THE FLEX STILL EXISTS
+Dialogue: 1,0:00:55.34,0:01:01.00,Heading,,0,0,0,,A DIFFERENT KIND OF POWER
+Dialogue: 1,0:00:00.00,0:01:01.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:01.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF
