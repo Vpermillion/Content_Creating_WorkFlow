@@ -1,8 +1,10 @@
 # Start here: Ifverse project handoff
 
+**Current batch:** ten rendered **61-second anime Shorts**, with per-video posting details and persistent topic history. [Open the batch index](docs/BATCH_61S.md) · [Automation/setup](docs/AUTOMATION.md) · [Taken/reserved topics](channels/ifverse_anime-topics.json). Read the registry before choosing a premise. The owner authorized these ten posts and accepts GitHub delivery if the upload connection is unavailable; optional piano will be added by the owner in YouTube. Current connection status and selected cut versions are in CURRENT.
+
 **Monetization goal:** produce distinct original comedy/commentary with editorial and source-use review. The saved videos are technical demonstrations, not certified monetization-ready uploads. Read [the review standard](docs/MONETIZATION_REVIEW.md) and [episode brief](prompts/editorial-brief.md). Michael and the working production tools remain the chosen setup.
 
-**Current voice and test:** the owner chose `am_michael`. The new **60-second Goku/Avengers roast** uses fresh footage, denser v2 jokes and actual Vine Boom/faaah/Rizz recordings. [Watch the new test](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-michael-goku-avengers-01/artifacts/ifverse-michael-goku-avengers-01/sound-effects/video-sfx.mp4) · [CURRENT](docs/CURRENT.md) · [voice options](docs/VOICE_OPTIONS.md).
+**Earlier voice-selection test:** the owner chose `am_michael`. The new **60-second Goku/Avengers roast** uses fresh footage, denser v2 jokes and actual Vine Boom/faaah/Rizz recordings. [Watch the new test](https://github.com/Vpermillion/Content_Creating_WorkFlow/blob/codex/results/ifverse-michael-goku-avengers-01/artifacts/ifverse-michael-goku-avengers-01/sound-effects/video-sfx.mp4) · [CURRENT](docs/CURRENT.md) · [voice options](docs/VOICE_OPTIONS.md).
 
 **Script tone:** follow [the owner-approved style addon](prompts/script-style.md): frequent creative roasts, playful trash talk, Gen Z/millennial slang and streetwise banter throughout the narration, with varied comparisons and callbacks. Swearing remains occasional and light. This applies to both English channels. Sound design now supports described downloadable effects on specific joke/reaction anchors; see [SOUND_EFFECTS](docs/SOUND_EFFECTS.md).
 
@@ -32,7 +34,7 @@ Current scope is two English channels: `ifverse_anime` and `ifverse_hollywood`. 
 
 ## What already works
 
-**Latest completed review:** a new **60-second Goku/Avengers roast with `am_michael`**, 26 shots from ten new footage sources, 48 captions and 11 actual DubbingAI sound cues. Hosted run `41468364961`, result `codex/results/ifverse-michael-goku-avengers-01`. New voice and caption alignment were generated; all 80 local tests, final technical checks and every shot sample passed review. CURRENT links the video and exact receipts; earlier Heart/Naruto tests are preserved.
+**Earlier completed voice-selection review:** a **60-second Goku/Avengers roast with `am_michael`**, 26 shots from ten new footage sources, 48 captions and 11 actual DubbingAI sound cues. Hosted run `41468364961`, result `codex/results/ifverse-michael-goku-avengers-01`. New voice and caption alignment were generated; all 80 local tests, final technical checks and every shot sample passed review. CURRENT links the video and exact receipts; earlier Heart/Naruto tests are preserved.
 
 - `whatif/media_tools.py`: Tenor/optional YouTube discovery, bounded verified downloads, labeled clip bank, cache reuse, short JSON results and mild FFmpeg enhancement.
 - `whatif/media_edit.py`: selected moving clips, ordered single-pass H.264/AAC rendering, source trimming, full-frame containment, subtitles, complete stream/decode validation, and explicit per-shot narration-beat boundaries. Legacy equal scene splits remain supported.

@@ -1,0 +1,603 @@
+{
+  "schema_version": 1,
+  "id": "ifverse-anime-61s-visual-repair-02",
+  "channel": "ifverse_anime",
+  "voice": "am_michael",
+  "target_duration_seconds": 61,
+  "minimum_duration_seconds": 60,
+  "episodes": [
+    {
+      "id": "ifverse-anime-naruto-clone-strike-01",
+      "topic_key": "naruto-clone-strike",
+      "title": "What if Naruto's shadow clones went on strike?",
+      "franchise": "Naruto",
+      "characters": [
+        "Naruto",
+        "Kakashi"
+      ],
+      "premise": "Naruto must negotiate with his own shadow clones instead of treating them as disposable labor.",
+      "distinctive_development": "Work stoppage interrupts missions; clones share his exhaustion and grievances; negotiation changes tactical training; the original joins his own strike.",
+      "sources": [
+        {
+          "id": "ifverse-anime-naruto-clone-strike-01-clones",
+          "key": "clones",
+          "query": "Naruto shadow clone jutsu",
+          "required_terms": [
+            "naruto",
+            "clone"
+          ],
+          "visual_intent": "Naruto multiplying through shadow clone technique"
+        },
+        {
+          "id": "ifverse-anime-naruto-clone-strike-01-naruto",
+          "key": "naruto",
+          "query": "Naruto Uzumaki angry reaction",
+          "required_terms": [
+            "naruto"
+          ],
+          "visual_intent": "Naruto reacting to a disagreement"
+        },
+        {
+          "id": "ifverse-anime-naruto-clone-strike-01-kakashi",
+          "key": "kakashi",
+          "query": "Kakashi reading book",
+          "required_terms": [
+            "kakashi"
+          ],
+          "visual_intent": "Kakashi observing training"
+        }
+      ],
+      "scenes": [
+        {
+          "source": "clones",
+          "label": "THE CLONES HAVE DEMANDS",
+          "text": "What if Naruto's shadow clones went on strike? Bro got canceled by his own unpaid staff.",
+          "match_reason": "Naruto multiplying through shadow clone technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "clones",
+          "label": "TWO HUNDRED IDENTICAL COMPLAINTS",
+          "text": "Two hundred Narutos cross their arms. Same face, same trauma. Terrifying customer service.",
+          "match_reason": "Naruto multiplying through shadow clone technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "naruto",
+          "label": "THE ORIGINAL IS CONFUSED",
+          "text": "He says, we're the same person. Exactly, boss. We know you'll volunteer us.",
+          "match_reason": "Naruto reacting to a disagreement; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "clones",
+          "label": "TRAINING IS NOW DELAYED",
+          "text": "Training stops. Missions fall behind. Konoha discovers its productivity plan was one exhausted teenager .",
+          "match_reason": "Reviewed Naruto clone-technique footage illustrates the training/scouting narration; replaces a mislabeled Sasuke clip while retaining exact speech and timing."
+        },
+        {
+          "source": "kakashi",
+          "label": "MANAGEMENT HAS LOGGED OFF",
+          "text": "Kakashi looks up. He's never seen a meeting this orange.",
+          "match_reason": "Kakashi observing training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "clones",
+          "label": "MEMORIES COME BACK TOO",
+          "text": "The clones explain that their painful memories return to Naruto. He's exploiting himself with extra steps.",
+          "match_reason": "Naruto multiplying through shadow clone technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "naruto",
+          "label": "AN ACTUAL CONCESSION",
+          "text": "He proposes shorter rotations and actual breaks. Character development gets a lunch schedule attached.",
+          "match_reason": "Naruto reacting to a disagreement; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "clones",
+          "label": "SMALLER SQUAD SMARTER PLAN",
+          "text": "Smaller squads test strategies before everyone commits. Fewer bodies, better information. An actual tactical upgrade appears.",
+          "match_reason": "Reviewed Naruto clone-technique footage illustrates the training/scouting narration; replaces a mislabeled Sasuke clip while retaining exact speech and timing."
+        },
+        {
+          "source": "clones",
+          "label": "THEY STILL SHARE CHAKRA",
+          "text": "They still split his chakra. This union negotiates breaks, not a physics refund. Please stay serious.",
+          "match_reason": "Naruto multiplying through shadow clone technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "kakashi",
+          "label": "THE ENEMY MEETS A TEAM",
+          "text": "Opponents now face coordinated scouts and decoys instead of orange dudes arguing over who gets punched.",
+          "match_reason": "Kakashi observing training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "naruto",
+          "label": "WHO APPROVED THE LEADER",
+          "text": "One clone asks who elected the original leader. Mother father. His entire forehead just lost confidence.",
+          "match_reason": "Naruto reacting to a disagreement; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "clones",
+          "label": "THE BOSS JOINS THE PICKET",
+          "text": "Naruto joins the strike. Everyone demands ramen. Unfortunately, their revolutionary movement still shares exactly one wallet.",
+          "match_reason": "Naruto multiplying through shadow clone technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ],
+      "cues": [
+        {
+          "scene": 0,
+          "phrase": "unpaid staff",
+          "effect": "bass_impact"
+        },
+        {
+          "scene": 3,
+          "phrase": "one exhausted teenager",
+          "effect": "error_buzz"
+        },
+        {
+          "scene": 6,
+          "phrase": "lunch schedule attached",
+          "effect": "reward_ping"
+        },
+        {
+          "scene": 10,
+          "phrase": "His entire forehead",
+          "effect": "cartoon_boing"
+        }
+      ],
+      "reuse_result": {
+        "branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r2",
+        "commit": "0c6f0ceb2221288ee9967ed67d9f9d8d967d7c71",
+        "script_sha256": "355cfa475e6b5bc6141a195e49d96b6ee74ff5e269758fad2e60fabf85ea0d78"
+      },
+      "posting": {
+        "title": "What if Naruto's shadow clones went on strike?",
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "Naruto"
+        ],
+        "tags": [
+          "anime what if",
+          "Naruto",
+          "Naruto",
+          "Kakashi",
+          "Ifverse Anime"
+        ],
+        "description": "Naruto must negotiate with his own shadow clones instead of treating them as disposable labor.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #Naruto",
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en",
+        "requested_privacy": "public",
+        "audience_proposal": "not_made_for_kids",
+        "audience_basis": "Teen/adult-oriented hypothetical character commentary; review actual imagery and all audience factors, not animation alone",
+        "synthetic_disclosure_proposal": false,
+        "synthetic_disclosure_basis": "Generic synthetic narrator and commentary over stylized fictional excerpts; no cloned real-person voice or newly fabricated realistic event; confirm actual upload criteria",
+        "music": {
+          "embedded": false,
+          "owner_will_add_in_youtube": true,
+          "requested_track": "Meaningful Love - Silo",
+          "optional_not_a_publication_blocker": true,
+          "permitted_length": "Check available allowance in YouTube; no universal 60-second license assumed"
+        },
+        "metadata_review": "draft_complete_text_checked_actual_audiovisual_and_source_use_review_pending"
+      }
+    },
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01",
+      "topic_key": "vegeta-peaceful-week",
+      "title": "What if Vegeta had one peaceful week?",
+      "franchise": "Dragon Ball",
+      "characters": [
+        "Vegeta",
+        "Bulma",
+        "Goku",
+        "Trunks"
+      ],
+      "premise": "Vegeta gets a week without a world-ending enemy and must decide what his strength is for when nobody needs defeating.",
+      "distinctive_development": "Compulsive training meets family time; rivalry habit interrupts peace; he learns intentional restraint while retaining competitive personality.",
+      "sources": [
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-vegeta",
+          "key": "vegeta",
+          "query": "Vegeta Dragon Ball angry",
+          "required_terms": [
+            "vegeta"
+          ],
+          "visual_intent": "Vegeta reacting with pride"
+        },
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-train",
+          "key": "train",
+          "query": "Vegeta gravity training",
+          "required_terms": [
+            "vegeta"
+          ],
+          "visual_intent": "Vegeta choosing intense training"
+        },
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-bulma",
+          "key": "bulma",
+          "query": "Bulma reaction Dragon Ball",
+          "required_terms": [
+            "bulma"
+          ],
+          "visual_intent": "Bulma and family context",
+          "reject_terms": [
+            "trunks",
+            "nsfw",
+            "sexy"
+          ]
+        },
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-trunks",
+          "key": "trunks",
+          "query": "Vegeta Trunks family",
+          "required_terms": [
+            "vegeta",
+            "trunks"
+          ],
+          "visual_intent": "Vegeta interacting around family"
+        },
+        {
+          "id": "ifverse-anime-vegeta-peaceful-week-01-goku",
+          "key": "goku",
+          "query": "Goku Dragon Ball smiling",
+          "required_terms": [
+            "goku"
+          ],
+          "visual_intent": "Goku as Vegeta rivalry trigger"
+        }
+      ],
+      "scenes": [
+        {
+          "source": "vegeta",
+          "label": "NO VILLAIN JUST FEELINGS",
+          "text": "What if Vegeta got one peaceful week? No invasion. A prince underqualified for normal Tuesday activities.",
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "train",
+          "label": "DAY ONE OF RELAXING",
+          "text": "He begins by training harder. Naturally. Bro treats relaxation like a security vulnerability in his system.",
+          "match_reason": "Vegeta choosing intense training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "bulma",
+          "label": "BULMA SETS THE CHALLENGE",
+          "text": "Bulma requests family time. Vegeta asks for the objective. Sir, the objective is being present.",
+          "match_reason": "Bulma and family context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "trunks",
+          "label": "NOT EVERYTHING IS A DRILL",
+          "text": "Trunks shows him a drawing. Vegeta corrects his stance. My guy, that's artwork, not an enemy combatant.",
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "vegeta",
+          "label": "WHAT IS STRENGTH FOR",
+          "text": "Without a threat, strength needs another purpose. Can he enjoy people he protects?",
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "goku",
+          "label": "THE RIVALRY NOTIFICATION",
+          "text": "Goku visits. Vegeta immediately suspects secret training. A friendly hello triggers a competitive investigation.",
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "train",
+          "label": "PUT THE GRAVITY DOWN",
+          "text": "He wants gravity training again. Instead, he promises a short session and leaves on time.",
+          "match_reason": "Vegeta choosing intense training; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "bulma",
+          "label": "A RARE CONFIRMED WIN",
+          "text": "Bulma is shocked. A grown man correctly estimated his arrival time. Historic scenes at Capsule Corporation today.",
+          "match_reason": "Bulma and family context; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "trunks",
+          "label": "THE SMALL MOMENT",
+          "text": "He listens to Trunks explain the drawing. It's their family. Nobody's fighting. Vegeta needs a moment.",
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "vegeta",
+          "label": "KEEP THE PRIDE LOSE THE EXCUSE",
+          "text": "He keeps his pride, but stops dodging tender conversations. An actual emotional upgrade.",
+          "match_reason": "Vegeta reacting with pride; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "goku",
+          "label": "THE FLEX STILL EXISTS",
+          "text": "Goku asks if peace made him soft. Vegeta schedules tomorrow's beating. Healthy boundaries, absolutely horrible phrasing.",
+          "match_reason": "Goku as Vegeta rivalry trigger; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "trunks",
+          "label": "A DIFFERENT KIND OF POWER",
+          "text": "No new transformation appears. He still grows. Motherflicker, the breakthrough was dinner together and one sincere compliment.",
+          "match_reason": "Vegeta interacting around family; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ],
+      "cues": [
+        {
+          "scene": 0,
+          "phrase": "normal Tuesday activities",
+          "effect": "bass_impact"
+        },
+        {
+          "scene": 3,
+          "phrase": "an enemy combatant",
+          "effect": "error_buzz"
+        },
+        {
+          "scene": 7,
+          "phrase": "Historic scenes",
+          "effect": "reward_ping"
+        },
+        {
+          "scene": 10,
+          "phrase": "absolutely horrible phrasing",
+          "effect": "cartoon_boing"
+        }
+      ],
+      "reuse_result": {
+        "branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r2",
+        "commit": "915081581a0cecb3ae3f9c56c87a4bc1111c0680",
+        "script_sha256": "1d1e920eca0ac5219244d5107a0e1a4603ae7c3407bfdfe344cd2291467a673a"
+      },
+      "posting": {
+        "title": "What if Vegeta had one peaceful week?",
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "DragonBall"
+        ],
+        "tags": [
+          "anime what if",
+          "Dragon Ball",
+          "Vegeta",
+          "Bulma",
+          "Goku",
+          "Trunks",
+          "Ifverse Anime"
+        ],
+        "description": "Vegeta gets a week without a world-ending enemy and must decide what his strength is for when nobody needs defeating.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #DragonBall",
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en",
+        "requested_privacy": "public",
+        "audience_proposal": "not_made_for_kids",
+        "audience_basis": "Teen/adult-oriented hypothetical character commentary; review actual imagery and all audience factors, not animation alone",
+        "synthetic_disclosure_proposal": false,
+        "synthetic_disclosure_basis": "Generic synthetic narrator and commentary over stylized fictional excerpts; no cloned real-person voice or newly fabricated realistic event; confirm actual upload criteria",
+        "music": {
+          "embedded": false,
+          "owner_will_add_in_youtube": true,
+          "requested_track": "Meaningful Love - Silo",
+          "optional_not_a_publication_blocker": true,
+          "permitted_length": "Check available allowance in YouTube; no universal 60-second license assumed"
+        },
+        "metadata_review": "draft_complete_text_checked_actual_audiovisual_and_source_use_review_pending"
+      },
+      "exclude_retained_sources": [
+        "bulma"
+      ]
+    },
+    {
+      "id": "ifverse-anime-gojo-no-powers-day-01",
+      "topic_key": "gojo-no-powers-day",
+      "title": "What if Gojo lost his powers for 24 hours?",
+      "franchise": "Jujutsu Kaisen",
+      "characters": [
+        "Gojo",
+        "Yuji",
+        "Megumi"
+      ],
+      "premise": "Gojo temporarily loses his technique and must protect students through planning, restraint and collaboration.",
+      "distinctive_development": "An invented one-day limit removes usual tools; students disagree about rescue; decoy and evacuation replace overpowering; weakness reveals teaching habits.",
+      "sources": [
+        {
+          "id": "ifverse-anime-gojo-no-powers-day-01-gojo",
+          "key": "gojo",
+          "query": "Gojo Satoru smile blindfold anime",
+          "required_terms": [
+            "gojo"
+          ],
+          "visual_intent": "Gojo introducing his usual confidence",
+          "reject_terms": [
+            "peggle",
+            "grandmaster",
+            "meme",
+            "text",
+            "shitpost"
+          ]
+        },
+        {
+          "id": "ifverse-anime-gojo-no-powers-day-01-fight",
+          "key": "fight",
+          "query": "Gojo Satoru fighting",
+          "required_terms": [
+            "gojo"
+          ],
+          "visual_intent": "Gojo combat footage contrasted with the hypothetical loss of technique"
+        },
+        {
+          "id": "ifverse-anime-gojo-no-powers-day-01-yuji",
+          "key": "yuji",
+          "query": "Yuji Itadori Jujutsu Kaisen",
+          "required_terms": [
+            "yuji",
+            "itadori"
+          ],
+          "visual_intent": "Yuji reacting as a student"
+        },
+        {
+          "id": "ifverse-anime-gojo-no-powers-day-01-megumi",
+          "key": "megumi",
+          "query": "Megumi Fushiguro Jujutsu Kaisen",
+          "required_terms": [
+            "megumi",
+            "fushiguro"
+          ],
+          "visual_intent": "Megumi thinking through a plan"
+        }
+      ],
+      "scenes": [
+        {
+          "source": "gojo",
+          "label": "THE CONFIDENCE STILL WORKS",
+          "text": "What if Gojo lost his powers for a day? The confidence stays. The backup plan has vanished.",
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "fight",
+          "label": "ONE INVENTED BAD DAY",
+          "text": "This hypothetical disables his technique for twenty-four hours. No upgrade. Use the syllabus.",
+          "match_reason": "Gojo combat footage contrasted with the hypothetical loss of technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "yuji",
+          "label": "YUJI GETS WORRIED",
+          "text": "Yuji suggests hiding him. Gojo calls it a lesson. My guy, impressive rebrand for embarrassment.",
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "megumi",
+          "label": "MEGUMI READS THE ROOM",
+          "text": "Megumi asks who knows he's vulnerable. Announcing it? A beautifully stupid marketing campaign.",
+          "match_reason": "Megumi thinking through a plan; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "gojo",
+          "label": "POWER IS NOT ALL HE KNOWS",
+          "text": "Gojo keeps experience and judgment. We removed a technique, not his brain. No personality factory reset.",
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "megumi",
+          "label": "CHANGE THE OBJECTIVE",
+          "text": "They change the objective. Evacuate people, limit exposure, avoid direct fights. Reach tomorrow intact.",
+          "match_reason": "Megumi thinking through a plan; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "yuji",
+          "label": "NO HEROIC DETOUR",
+          "text": "Yuji wants to rescue everyone alone. Strong instincts, brother. Terrible delivery policy for handing yourself to enemies.",
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "fight",
+          "label": "THE WRONG BATTLE",
+          "text": "A threat appears. Instead of overpowering it, they use a decoy and escape route.",
+          "match_reason": "Gojo combat footage contrasted with the hypothetical loss of technique; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "megumi",
+          "label": "THE PLAN NEEDS EVERYBODY",
+          "text": "Megumi handles the route. Yuji moves people. Gojo calls timing. Students become participants, not spectators.",
+          "match_reason": "Megumi thinking through a plan; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "gojo",
+          "label": "THE TEACHER HAS TO TRUST",
+          "text": "Gojo must trust his teaching. Incredible. Education has reached its terrifying practical application. Somebody check the syllabus.",
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "yuji",
+          "label": "THE CLOCK IS NOT THE STORY",
+          "text": "The powers return tomorrow. The lesson remains: your team shouldn't collapse because its strongest member struggles.",
+          "match_reason": "Yuji reacting as a student; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        },
+        {
+          "source": "gojo",
+          "label": "THE DEBRIEF IS COOKED",
+          "text": "Gojo claims everything was intentional. Megumi requests the lesson plan. The receipts have entered the domain, undefeated.",
+          "match_reason": "Gojo introducing his usual confidence; illustrates this narrated character/action in an invented scenario, not a literal canon event."
+        }
+      ],
+      "cues": [
+        {
+          "scene": 0,
+          "phrase": "backup plan has vanished",
+          "effect": "bass_impact"
+        },
+        {
+          "scene": 3,
+          "phrase": "stupid marketing campaign",
+          "effect": "error_buzz"
+        },
+        {
+          "scene": 4,
+          "phrase": "No personality factory reset",
+          "effect": "reward_ping"
+        },
+        {
+          "scene": 9,
+          "phrase": "terrifying practical application",
+          "effect": "cartoon_boing"
+        }
+      ],
+      "reuse_result": {
+        "branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r2",
+        "commit": "7ff6789bd2d0239522fb3e196360f23f9cd9d13c",
+        "script_sha256": "5d15923cac847eab6ca2da142a47d55a06f2335de92013f85b752e03e3c8f9d6"
+      },
+      "posting": {
+        "title": "What if Gojo lost his powers for 24 hours?",
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "JujutsuKaisen"
+        ],
+        "tags": [
+          "anime what if",
+          "Jujutsu Kaisen",
+          "Gojo",
+          "Yuji",
+          "Megumi",
+          "Ifverse Anime"
+        ],
+        "description": "Gojo temporarily loses his technique and must protect students through planning, restraint and collaboration.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #JujutsuKaisen",
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en",
+        "requested_privacy": "public",
+        "audience_proposal": "not_made_for_kids",
+        "audience_basis": "Teen/adult-oriented hypothetical character commentary; review actual imagery and all audience factors, not animation alone",
+        "synthetic_disclosure_proposal": false,
+        "synthetic_disclosure_basis": "Generic synthetic narrator and commentary over stylized fictional excerpts; no cloned real-person voice or newly fabricated realistic event; confirm actual upload criteria",
+        "music": {
+          "embedded": false,
+          "owner_will_add_in_youtube": true,
+          "requested_track": "Meaningful Love - Silo",
+          "optional_not_a_publication_blocker": true,
+          "permitted_length": "Check available allowance in YouTube; no universal 60-second license assumed"
+        },
+        "metadata_review": "draft_complete_text_checked_actual_audiovisual_and_source_use_review_pending"
+      },
+      "exclude_retained_sources": [
+        "gojo"
+      ]
+    }
+  ],
+  "publishing_authorization": {
+    "source": "Owner explicitly requested these ten Shorts be posted to ifverse_anime in this chat",
+    "scope": "Only these ten completed videos on the verified ifverse_anime channel; no recurring schedule",
+    "upload_connection_status": "not_configured_owner_confirmed_no_auto_posting_yet",
+    "requested_privacy": "public"
+  },
+  "publication_clearance": "not_established_source_use_and_audiovisual_review_pending",
+  "attempt": 3,
+  "duration_mode": "fixed",
+  "posting_note": "Owner will handle requested piano in YouTube. If API posting is unavailable, prepare completed videos and posting packets in GitHub; do not wait for owner at keyboard.",
+  "goal_batch": "batch-requests/ifverse-anime-ten-61s-20261103-01.json",
+  "revision_reason": "Fix one wrong-character Naruto training clip, a mislabeled Bulma clip, and unrelated burned-in Gojo meme text; reuse all verified Michael speech/caption timing.",
+  "retry_reason": "Prior repair outputs existed as Actions artifacts but result-branch preservation collided with the temporary retained-voice input folder; keep the existing 61-second speech/captions and use a separate temporary input path."
+}

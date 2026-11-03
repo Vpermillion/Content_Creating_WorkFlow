@@ -1,0 +1,477 @@
+{
+  "id": "ifverse-anime-ten-61s-20261103-01",
+  "results": [
+    {
+      "id": "ifverse-anime-naruto-clone-strike-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "355cfa475e6b5bc6141a195e49d96b6ee74ff5e269758fad2e60fabf85ea0d78",
+      "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "c44dd81bebda09a96fd294500607d8640022757f35a992c5dd33aa2d572d685a",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Naruto's shadow clones went on strike?",
+        "description": "Naruto must negotiate with his own shadow clones instead of treating them as disposable labor.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #Naruto\n\nIllustrative clip sources:\nhttps://tenor.com/view/naruto-gif-13232538898744112705\nhttps://tenor.com/view/naruto-naruto-uzumaki-road-to-naruto-naruto-kurama-naruto-nine-tails-gif-18197618730835120377\nhttps://tenor.com/view/kakashi-gif-19074601\nhttps://tenor.com/view/naruto-sasuke-rasengan-chidori-kakashi-gif-26864192",
+        "tags": [
+          "anime what if",
+          "Naruto",
+          "Naruto",
+          "Kakashi",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "Naruto"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r2",
+      "commit": "0c6f0ceb2221288ee9967ed67d9f9d8d967d7c71"
+    },
+    {
+      "id": "ifverse-anime-rock-lee-rinnegan-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "eafa14c24d15f109513c2d3b2518174fbccd4fd8388fdb3783676e65ed8fb4e8",
+      "result_branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "ab8e54a5f51aef9ea5de7b77c711be01e0f3278c361d600e0bd5985553fbb4e8",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Rock Lee woke up with the Rinnegan?",
+        "description": "Rock Lee receives unfamiliar ocular powers but discovers that discipline and restraint matter more than collecting abilities.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #Naruto\n\nIllustrative clip sources:\nhttps://tenor.com/view/rock-lee-eight-gates-naruto-8gates-super-saiyan-gif-26469465\nhttps://tenor.com/view/rinnegan-gif-18927417\nhttps://tenor.com/view/naruto-might-mightguy-guy-guysensei-gif-23170358\nhttps://tenor.com/view/rock-lee-weights-naruto-chunin-exams-flex-gif-26433140",
+        "tags": [
+          "anime what if",
+          "Naruto",
+          "Rock Lee",
+          "Might Guy",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "Naruto"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01-r2",
+      "commit": "60b330056bc653801955ae86944136ea2d1e2c36"
+    },
+    {
+      "id": "ifverse-anime-shikamaru-hokage-day-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "7234d1dda3323003eaf9c87cd104418eacfd2981f495bda12f91dda288375622",
+      "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "766b2bbcc1903af2918d7e06524ad5b4c5fc96edd8c35b47c01dcaac9797ab1c",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Shikamaru had ONE day to fix Konoha?",
+        "description": "Shikamaru runs the village for one day and solves mundane bottlenecks instead of searching for a flashy new attack.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #Naruto\n\nIllustrative clip sources:\nhttps://tenor.com/view/shikamaru-nara-edits-gif-22430172\nhttps://tenor.com/view/naruto-naruto-shippuden-boruto-boruto-naruto-next-generations-naruto-baryon-mode-gif-20972266\nhttps://tenor.com/view/naruto-naruto-shippuden-pain-arc-pains-assault-arc-pain-gif-6480818146581278146\nhttps://tenor.com/view/tsunade-senju-kawaii-oppai-106-gif-26780727",
+        "tags": [
+          "anime what if",
+          "Naruto",
+          "Shikamaru",
+          "Naruto",
+          "Tsunade",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "Naruto"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-r2",
+      "commit": "e4c31c237fc6fe4ac4f55d76b0c9083af0a49fe2"
+    },
+    {
+      "id": "ifverse-anime-luffy-no-devil-fruit-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "cadb1dc56b75716ee65fa7846b42fa65fe3f2fbd96158199b4c9f92329bd325f",
+      "result_branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "05546741701689ff2293d36c27b40c75e7e2b2406b7729a26888f940548b3ae0",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Luffy NEVER ate a Devil Fruit?",
+        "description": "Luffy pursues his pirate dream without rubber powers and must learn rescue, crew dependence and a different fighting style.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #OnePiece\n\nIllustrative clip sources:\nhttps://tenor.com/view/fishman-island-one-piece-fishman-island-remaster-remake-luffy-gif-3425504524357020716\nhttps://tenor.com/view/one-piece-gear-5-luffy-gear-5-wano-onigashima-gif-8575780076367530452\nhttps://tenor.com/view/one-piece-shanks-drunk-drink-dinking-gif-17749943144744004110\nhttps://tenor.com/view/one-piece-anime-one-piece-movie-8-op-movie-8-episode-of-alabasta-gif-17265479806595391214",
+        "tags": [
+          "anime what if",
+          "One Piece",
+          "Luffy",
+          "Shanks",
+          "Zoro",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "OnePiece"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01-r2",
+      "commit": "cac2626ab6bf06639eee0b8a9d2123601ff723e8"
+    },
+    {
+      "id": "ifverse-anime-zoro-perfect-directions-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "97f8b4ac4f76eba4ab33627fa4f11ad2a235d543a78fc134ad4b147a4edf153d",
+      "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "d1afa559d6ab6fa206f1e3ca4be737e5230837d3a546b93273f761f685404133",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Zoro finally learned directions?",
+        "description": "Zoro stops getting lost, reaches threats before his crew and learns that arriving first can be a tactical disadvantage.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #OnePiece\n\nIllustrative clip sources:\nhttps://tenor.com/view/zoro-lost-zoro-pretty-one-piece-zoro-roronoa-zoro-lorenor-zoro-gif-13363708752174543882\nhttps://tenor.com/view/zoro-one-piece-anime-sword-roronoa-zoro-gif-17930992\nhttps://tenor.com/view/luffy-nami-luffynami-namiluffy-nami-one-piece-gif-27384079\nhttps://tenor.com/view/gear-5-kaido-luffy-gear-5-luffy-gear-5-luffy-gif-7953550598791914729",
+        "tags": [
+          "anime what if",
+          "One Piece",
+          "Zoro",
+          "Luffy",
+          "Nami",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "OnePiece"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-r2",
+      "commit": "e764c72b2da7756c3265ef78ea51d1d60661ff1c"
+    },
+    {
+      "id": "ifverse-anime-light-explains-every-name-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "17c8667a0acff83d83bd133e78c2852857971168de1b8cd187c6945398291ef0",
+      "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "156b2f1fab574b1ed6989d6f11721793d97ccdff3ff6e796fbe1ed14dd83bc6a",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Light had to explain EVERY name to L?",
+        "description": "A supernatural rule forces Light to defend each proposed notebook entry to L before it can take effect.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #DeathNote\n\nIllustrative clip sources:\nhttps://tenor.com/view/death-note-light-yagami-l-death-note-l-death-note-meme-gif-10906403005566039796\nhttps://tenor.com/view/l-l-lawliet-death-note-confused-thinking-gif-11490947184345386785\nhttps://tenor.com/view/death-note-anime-ryuk-shinigami-apple-gif-22100243\nhttps://tenor.com/view/fairysoobs-death-note-gif-22234436",
+        "tags": [
+          "anime what if",
+          "Death Note",
+          "Light",
+          "L",
+          "Ryuk",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "DeathNote"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-light-explains-every-name-01-r2",
+      "commit": "f2a0eadd6dc8f5601138d15410449804fb905cd8"
+    },
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "1d1e920eca0ac5219244d5107a0e1a4603ae7c3407bfdfe344cd2291467a673a",
+      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "7eca4eb3278b5143e2199c19e6bb625b0e5683f6b374e5897a872cc663a19734",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 5,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Vegeta had one peaceful week?",
+        "description": "Vegeta gets a week without a world-ending enemy and must decide what his strength is for when nobody needs defeating.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #DragonBall\n\nIllustrative clip sources:\nhttps://tenor.com/view/that%27s-my-bulma-remaster-remake-vegeta-dbs-gif-4027124219711535825\nhttps://tenor.com/view/vegeta-push-ups-one-finger-one-hand-push-up-one-finger-push-up-gravity-gif-18222610528316135644\nhttps://tenor.com/view/dragon-ball-daima-vegeta-bulma-bath-funny-gif-10513855207912368661\nhttps://tenor.com/view/vegeta-bulma-trunks-family-family-day-gif-13281431\nhttps://tenor.com/view/goku-dragon-ball-smile-turn-serious-dragonball-gif-17475896124570291416",
+        "tags": [
+          "anime what if",
+          "Dragon Ball",
+          "Vegeta",
+          "Bulma",
+          "Goku",
+          "Trunks",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "DragonBall"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r2",
+      "commit": "915081581a0cecb3ae3f9c56c87a4bc1111c0680"
+    },
+    {
+      "id": "ifverse-anime-levi-cleaning-drill-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "00eb69ed18a4bd745285aa49b2eea13181b1ef60d6b1bd3d891322a2a2d219c0",
+      "result_branch": "codex/results/ifverse-anime-levi-cleaning-drill-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "ed0032edfa56259f9baeacef488677f85dbaee870e0056cb7a11eb07c84f8011",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Levi's cleaning day became a survival drill?",
+        "description": "Levi converts an apparently petty cleaning inspection into practical equipment checks and team safety training.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #AttackOnTitan\n\nIllustrative clip sources:\nhttps://tenor.com/view/levi-eren-gif-20481706\nhttps://tenor.com/view/aot-levi-attack-on-titan-levi-ackerman-odm-gear-gif-25312669\nhttps://tenor.com/view/armin-arlert-attack-on-titan-aot-armin-arlert-gif-6201610886096361910\nhttps://tenor.com/view/eren-yeager-eren-fanart-eren-edit-gif-25922154",
+        "tags": [
+          "anime what if",
+          "Attack on Titan",
+          "Levi",
+          "Armin",
+          "Eren",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "AttackOnTitan"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-levi-cleaning-drill-01-r2",
+      "commit": "f3256c656bdd7d8912f2d85a068407055ae84bfb"
+    },
+    {
+      "id": "ifverse-anime-gojo-no-powers-day-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "5d15923cac847eab6ca2da142a47d55a06f2335de92013f85b752e03e3c8f9d6",
+      "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "15f06323fb729d2e35e1ce0d085688f744ae4830299fa254f44b88a292fa348c",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Gojo lost his powers for 24 hours?",
+        "description": "Gojo temporarily loses his technique and must protect students through planning, restraint and collaboration.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #JujutsuKaisen\n\nIllustrative clip sources:\nhttps://tenor.com/view/gojo-satoru-throughout-the-heaven-and-the-earth-peggle-peggle-extreme-grandmaster-jujutsu-kaisen-gif-1857550460083667057\nhttps://tenor.com/view/gojo-satoru-satoru-gojo-gojo-satoru-infinito-gif-4116424331080566890\nhttps://tenor.com/view/yuji-yuji-itadori-jujutsu-kaisen-anime-jjk-gif-6463768782008108386\nhttps://tenor.com/view/megumi-megumi-fushiguro-jujutsu-kaisen-anime-megumi-domain-gif-14646960972427729715",
+        "tags": [
+          "anime what if",
+          "Jujutsu Kaisen",
+          "Gojo",
+          "Yuji",
+          "Megumi",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "JujutsuKaisen"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r2",
+      "commit": "7ff6789bd2d0239522fb3e196360f23f9cd9d13c"
+    },
+    {
+      "id": "ifverse-anime-tanjiro-demon-thoughts-01",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "status": "success",
+      "script_sha256": "ffa0c94df15acca3d6f6a1f7c1be949ca41d1a28376bb301cc7300d2e5849d19",
+      "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-r2",
+      "publication_clearance": "not_established",
+      "uploaded": false,
+      "video": "production/sound-effects/video-sfx.mp4",
+      "video_sha256": "cfdee66e22a2034cc127082fe52cd2dfa3c65f17081bc4af05380a679d563828",
+      "duration_seconds": 61.0,
+      "frame_size": [
+        720,
+        1280
+      ],
+      "source_count": 4,
+      "source_use_status": "unverified",
+      "sound_catalog": "assets/sfx/catalog.json",
+      "sound_rights": "documented_public_domain",
+      "technical_receipt": "production/result.json",
+      "audiovisual_editorial_review": "pending",
+      "metadata": {
+        "title": "What if Tanjiro could hear demons' thoughts?",
+        "description": "Tanjiro gains hypothetical access to demon thoughts and learns that empathy is useful but thoughts do not guarantee honesty or harmlessness.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #DemonSlayer\n\nIllustrative clip sources:\nhttps://tenor.com/view/demon-slayer-muichiro-nezuko-tanjiro-hmm-gif-3820576342094348835\nhttps://tenor.com/view/kimetsu-no-yaiba-tanjiro-episode19-flame-hinokami-kagura-gif-14756167\nhttps://tenor.com/view/roseylemon-nezuko-nezuko-kamado-tanjirou-tanjirou-kamado-gif-16301745553804762310\nhttps://tenor.com/view/zenitsu-zenitsu-agatsuma-kimetsu-kimetsu-no-yaiba-demon-slayer-gif-21548151",
+        "tags": [
+          "anime what if",
+          "Demon Slayer",
+          "Tanjiro",
+          "Nezuko",
+          "Zenitsu",
+          "Ifverse Anime"
+        ],
+        "hashtags": [
+          "Shorts",
+          "Anime",
+          "WhatIf",
+          "DemonSlayer"
+        ],
+        "categoryId": "24",
+        "defaultLanguage": "en",
+        "defaultAudioLanguage": "en"
+      },
+      "posting_packet": "post-settings.json",
+      "music_embedded": false,
+      "branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-r2",
+      "commit": "e70153a984700f566c0099024cccfe94341b5308"
+    }
+  ],
+  "uploaded_by_this_job": false,
+  "publication_clearance": "not_established",
+  "publishing_connection": "not_assessed_by_render_job"
+}

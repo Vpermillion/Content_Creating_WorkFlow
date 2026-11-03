@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "channel": "ifverse_anime",
+  "history_coverage": "Repository demonstrations plus this batch only; live channel catalog import pending upload-capable connection",
+  "duplicate_detection": "Exact topic keys, scripts, titles/aliases and conservative fuzzy wording checks; new agents must also compare premises and development semantically",
+  "topics": [
+    {
+      "id": "historical-naruto-akatsuki",
+      "topic_key": "naruto-joins-akatsuki",
+      "title": "What if Naruto joined the Akatsuki?",
+      "premise": "Naruto joins the Akatsuki and faces their intentions toward Kurama and Konoha",
+      "franchise": "Naruto",
+      "characters": [
+        "Naruto",
+        "Pain",
+        "Akatsuki"
+      ],
+      "aliases": [
+        "Naruto joins Akatsuki",
+        "Naruto becomes an Akatsuki member"
+      ],
+      "distinctive_development": "Earlier Naruto tests and alternate engineering cuts all share this premise",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "publication_clearance": "not_established",
+      "references": [
+        "pilots/ifverse-anime-roast-60-v1.json",
+        "artifacts/ifverse-anime-sfx-review-01/result.json"
+      ]
+    },
+    {
+      "id": "ifverse-michael-goku-avengers-01",
+      "topic_key": "goku-joins-avengers",
+      "title": "What if Goku joined the Avengers? The budget is cooked.",
+      "premise": "Goku joins the Avengers, disrupting their teamwork, food budget and Thanos confrontation",
+      "franchise": "Dragon Ball/Marvel",
+      "characters": [
+        "Goku",
+        "Tony Stark",
+        "Thor",
+        "Captain America",
+        "Hulk",
+        "Thanos"
+      ],
+      "aliases": [
+        "Goku joins the Avengers",
+        "Goku enters the MCU Avengers"
+      ],
+      "distinctive_development": "Food budget and training partner jokes with a grocery-card callback",
+      "state": "rendered",
+      "script_sha256": "9b3e0feda7f6c46a385b44f2c4f9174d5ee5a02e71ee3ec559a29c4ce31cd671",
+      "video_sha256": "570541c183163dec5de432ed488982866c2f549b965ca8a01ea6694131f6106c",
+      "video_id": null,
+      "youtube_url": null,
+      "publication_clearance": "not_established",
+      "result_branch": "codex/results/ifverse-michael-goku-avengers-01"
+    },
+    {
+      "id": "ifverse-anime-naruto-clone-strike-01",
+      "topic_key": "naruto-clone-strike",
+      "title": "What if Naruto's shadow clones went on strike?",
+      "premise": "Naruto must negotiate with his own shadow clones instead of treating them as disposable labor.",
+      "franchise": "Naruto",
+      "characters": [
+        "Naruto",
+        "Kakashi"
+      ],
+      "aliases": [],
+      "distinctive_development": "Work stoppage interrupts missions; clones share his exhaustion and grievances; negotiation changes tactical training; the original joins his own strike.",
+      "script_sha256": "355cfa475e6b5bc6141a195e49d96b6ee74ff5e269758fad2e60fabf85ea0d78",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.869812+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "f75e3004f87643ec42bce41867cb51e9ba10a74b2f36c7a97914e8a5b656edfa",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "b5e909f2e6f9ce9e0ff15ebb26bfe6a72cda9f7f76b50de25b80cc6ecbcd3dda",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-naruto-clone-strike-01-r3",
+      "result_commit": "941e648fe9c6557e96883980e0744cd451d7f682",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-naruto-clone-strike-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-rock-lee-rinnegan-01",
+      "topic_key": "rock-lee-rinnegan",
+      "title": "What if Rock Lee woke up with the Rinnegan?",
+      "premise": "Rock Lee receives unfamiliar ocular powers but discovers that discipline and restraint matter more than collecting abilities.",
+      "franchise": "Naruto",
+      "characters": [
+        "Rock Lee",
+        "Might Guy"
+      ],
+      "aliases": [],
+      "distinctive_development": "Accidental attraction disrupts training; Guy insists on control; Lee practices precision and saves teammates rather than stacking maximal powers.",
+      "script_sha256": "eafa14c24d15f109513c2d3b2518174fbccd4fd8388fdb3783676e65ed8fb4e8",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.872274+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "fc3df3e086969ea7cf004b72d6683991059a5a5091b012a7023b67e0ac807081",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "ab8e54a5f51aef9ea5de7b77c711be01e0f3278c361d600e0bd5985553fbb4e8",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-rock-lee-rinnegan-01-r2",
+      "result_commit": "60b330056bc653801955ae86944136ea2d1e2c36",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-rock-lee-rinnegan-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-shikamaru-hokage-day-01",
+      "topic_key": "shikamaru-hokage-day",
+      "title": "What if Shikamaru had ONE day to fix Konoha?",
+      "premise": "Shikamaru runs the village for one day and solves mundane bottlenecks instead of searching for a flashy new attack.",
+      "franchise": "Naruto",
+      "characters": [
+        "Shikamaru",
+        "Naruto",
+        "Tsunade"
+      ],
+      "aliases": [],
+      "distinctive_development": "Visible crisis becomes logistics problem; assignment timing and supply chains improve; apparent laziness is prevention; leadership also demands listening.",
+      "script_sha256": "7234d1dda3323003eaf9c87cd104418eacfd2981f495bda12f91dda288375622",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.874594+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "adf98bfe2f8ffff3af80b494aa3f5cf2e9038eb64b309efed0b11b41e42709a7",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "766b2bbcc1903af2918d7e06524ad5b4c5fc96edd8c35b47c01dcaac9797ab1c",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-shikamaru-hokage-day-01-r2",
+      "result_commit": "e4c31c237fc6fe4ac4f55d76b0c9083af0a49fe2",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-shikamaru-hokage-day-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-luffy-no-devil-fruit-01",
+      "topic_key": "luffy-no-devil-fruit",
+      "title": "What if Luffy NEVER ate a Devil Fruit?",
+      "premise": "Luffy pursues his pirate dream without rubber powers and must learn rescue, crew dependence and a different fighting style.",
+      "franchise": "One Piece",
+      "characters": [
+        "Luffy",
+        "Shanks",
+        "Zoro"
+      ],
+      "aliases": [],
+      "distinctive_development": "Remove powers without erasing ambition; swimming gives one advantage but fists lose protection; teamwork and equipment become necessary; no automatic victory claim.",
+      "script_sha256": "cadb1dc56b75716ee65fa7846b42fa65fe3f2fbd96158199b4c9f92329bd325f",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.877910+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "1ce562d7bf869a6526ccc51f8fcbfc51ae2f8db6878d71a3d8ba7374839cc73c",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "05546741701689ff2293d36c27b40c75e7e2b2406b7729a26888f940548b3ae0",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-luffy-no-devil-fruit-01-r2",
+      "result_commit": "cac2626ab6bf06639eee0b8a9d2123601ff723e8",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-luffy-no-devil-fruit-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-zoro-perfect-directions-01",
+      "topic_key": "zoro-perfect-directions",
+      "title": "What if Zoro finally learned directions?",
+      "premise": "Zoro stops getting lost, reaches threats before his crew and learns that arriving first can be a tactical disadvantage.",
+      "franchise": "One Piece",
+      "characters": [
+        "Zoro",
+        "Luffy",
+        "Nami"
+      ],
+      "aliases": [],
+      "distinctive_development": "Navigation gag becomes timing problem; early arrival exposes ambush; retreat and rendezvous beat reckless solo fighting; map is a sword joke payoff.",
+      "script_sha256": "97f8b4ac4f76eba4ab33627fa4f11ad2a235d543a78fc134ad4b147a4edf153d",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.878598+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "e5a8916197cc19b2522c4bfd7627b32418bf87ffe600059a4faf97d55e7090ca",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "d1afa559d6ab6fa206f1e3ca4be737e5230837d3a546b93273f761f685404133",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-r2",
+      "result_commit": "e764c72b2da7756c3265ef78ea51d1d60661ff1c",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-zoro-perfect-directions-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-light-explains-every-name-01",
+      "topic_key": "light-explains-every-name",
+      "title": "What if Light had to explain EVERY name to L?",
+      "premise": "A supernatural rule forces Light to defend each proposed notebook entry to L before it can take effect.",
+      "franchise": "Death Note",
+      "characters": [
+        "Light",
+        "L",
+        "Ryuk"
+      ],
+      "aliases": [],
+      "distinctive_development": "Forced justification exposes missing evidence and arrogance; accusation becomes investigation; L challenges selective justice; satire ends on documentation.",
+      "script_sha256": "17c8667a0acff83d83bd133e78c2852857971168de1b8cd187c6945398291ef0",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879310+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "1530d0428739ebe8c837c7e8d2763c93960741c13264af3a97e46ec7cf86999c",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "156b2f1fab574b1ed6989d6f11721793d97ccdff3ff6e796fbe1ed14dd83bc6a",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-light-explains-every-name-01-r2",
+      "result_commit": "f2a0eadd6dc8f5601138d15410449804fb905cd8",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-light-explains-every-name-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-vegeta-peaceful-week-01",
+      "topic_key": "vegeta-peaceful-week",
+      "title": "What if Vegeta had one peaceful week?",
+      "premise": "Vegeta gets a week without a world-ending enemy and must decide what his strength is for when nobody needs defeating.",
+      "franchise": "Dragon Ball",
+      "characters": [
+        "Vegeta",
+        "Bulma",
+        "Goku",
+        "Trunks"
+      ],
+      "aliases": [],
+      "distinctive_development": "Compulsive training meets family time; rivalry habit interrupts peace; he learns intentional restraint while retaining competitive personality.",
+      "script_sha256": "1d1e920eca0ac5219244d5107a0e1a4603ae7c3407bfdfe344cd2291467a673a",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879395+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "2e48e8d704d868d9b1033347b388b99d4eceb6231e051a695ce704026516e215",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "3e07fc6a2fccc37c44547c53e6502df22a4d647942120660d2393219e1c18d2c",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-vegeta-peaceful-week-01-r4",
+      "result_commit": "6fa309c601384ad2a5e14da8da8444248fd197c4",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-vegeta-peaceful-week-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-levi-cleaning-drill-01",
+      "topic_key": "levi-cleaning-drill",
+      "title": "What if Levi's cleaning day became a survival drill?",
+      "premise": "Levi converts an apparently petty cleaning inspection into practical equipment checks and team safety training.",
+      "franchise": "Attack on Titan",
+      "characters": [
+        "Levi",
+        "Armin",
+        "Eren"
+      ],
+      "aliases": [],
+      "distinctive_development": "Complaints about chores reveal frayed gear; checking equipment and communication improve odds without removing the danger; darkest humor stays non-graphic.",
+      "script_sha256": "00eb69ed18a4bd745285aa49b2eea13181b1ef60d6b1bd3d891322a2a2d219c0",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879473+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "0d39e841d2c7c028665f1bd96c5dd8a66fb05efff77465297f09d670813eb79b",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "ed0032edfa56259f9baeacef488677f85dbaee870e0056cb7a11eb07c84f8011",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-levi-cleaning-drill-01-r2",
+      "result_commit": "f3256c656bdd7d8912f2d85a068407055ae84bfb",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-levi-cleaning-drill-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-gojo-no-powers-day-01",
+      "topic_key": "gojo-no-powers-day",
+      "title": "What if Gojo lost his powers for 24 hours?",
+      "premise": "Gojo temporarily loses his technique and must protect students through planning, restraint and collaboration.",
+      "franchise": "Jujutsu Kaisen",
+      "characters": [
+        "Gojo",
+        "Yuji",
+        "Megumi"
+      ],
+      "aliases": [],
+      "distinctive_development": "An invented one-day limit removes usual tools; students disagree about rescue; decoy and evacuation replace overpowering; weakness reveals teaching habits.",
+      "script_sha256": "5d15923cac847eab6ca2da142a47d55a06f2335de92013f85b752e03e3c8f9d6",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879547+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "ab1cef406e6cea07578200283fa4f292bbd51154651a200fb69e3c102dbcf604",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "2036c520d7f1bb272b32f2f2f36ea0d55db85676c99b032f81e0756b6a38ba2c",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-gojo-no-powers-day-01-r3",
+      "result_commit": "2a17c45aad30a9b04b961217972228101a3fa626",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-gojo-no-powers-day-01/batch-result.json"
+    },
+    {
+      "id": "ifverse-anime-tanjiro-demon-thoughts-01",
+      "topic_key": "tanjiro-demon-thoughts",
+      "title": "What if Tanjiro could hear demons' thoughts?",
+      "premise": "Tanjiro gains hypothetical access to demon thoughts and learns that empathy is useful but thoughts do not guarantee honesty or harmlessness.",
+      "franchise": "Demon Slayer",
+      "characters": [
+        "Tanjiro",
+        "Nezuko",
+        "Zenitsu"
+      ],
+      "aliases": [],
+      "distinctive_development": "New information creates sensory overload; a deceptive thought challenges naive trust; corroboration and boundaries allow compassion with protection.",
+      "script_sha256": "ffa0c94df15acca3d6f6a1f7c1be949ca41d1a28376bb301cc7300d2e5849d19",
+      "batch_id": "ifverse-anime-ten-61s-20261103-01",
+      "state": "rendered",
+      "video_id": null,
+      "youtube_url": null,
+      "reserved_at": "2026-11-03T02:44:44.879623+00:00",
+      "versions": [
+        {
+          "batch_id": "ifverse-anime-ten-20261103-01",
+          "script_sha256": "71c86bf02878b6fc96835486660a1fad77ac96c4c5db38fe14d5e4263044f5c4",
+          "state": "reserved",
+          "revision_reason": "Owner requested 61-second final cuts and YouTube-side optional music; shorten narration, preserve earlier attempts and reuse frozen footage"
+        }
+      ],
+      "video_sha256": "cfdee66e22a2034cc127082fe52cd2dfa3c65f17081bc4af05380a679d563828",
+      "duration_seconds": 61.0,
+      "result_branch": "codex/results/ifverse-anime-tanjiro-demon-thoughts-01-r2",
+      "result_commit": "e70153a984700f566c0099024cccfe94341b5308",
+      "publication_clearance": "not_established",
+      "result_receipt": "artifacts/ifverse-anime-tanjiro-demon-thoughts-01/batch-result.json"
+    }
+  ]
+}

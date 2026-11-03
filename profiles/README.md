@@ -1,5 +1,7 @@
 # Channel profiles
 
+Current production: ten rendered 61-second `ifverse_anime` Shorts. See [the batch index](../docs/BATCH_61S.md) and [the persistent topic registry](../channels/ifverse_anime-topics.json). Michael stays selected; optional piano is handled by the owner in YouTube. Specific batch publishing authorization does not create an OAuth connection or approve source use.
+
 `ifverse_anime.json` and `ifverse_hollywood.json` record the user's two confirmed initial channel topics, English language and online-video sourcing requirement. Their `configuration_status` is `planning_only`: they are requirements/configuration records, not connected YouTube accounts or executable production jobs. Null settings are still unconfirmed. They are not job files for `python -m whatif pilots --from-dir`.
 
 `science-provisional.json` is the older runnable demonstration profile. Existing fixture jobs embed their own render profile in `pilots/*.json`; the worker does not currently load these channel files automatically. Adding a profile therefore does not enable search, clip editing, voiceover or publishing.
