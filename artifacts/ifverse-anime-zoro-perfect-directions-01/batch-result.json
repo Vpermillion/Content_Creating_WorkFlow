@@ -1,0 +1,45 @@
+{
+  "id": "ifverse-anime-zoro-perfect-directions-01",
+  "batch_id": "ifverse-anime-ten-61s-20261103-01",
+  "status": "success",
+  "script_sha256": "97f8b4ac4f76eba4ab33627fa4f11ad2a235d543a78fc134ad4b147a4edf153d",
+  "result_branch": "codex/results/ifverse-anime-zoro-perfect-directions-01-r2",
+  "publication_clearance": "not_established",
+  "uploaded": false,
+  "video": "production/sound-effects/video-sfx.mp4",
+  "video_sha256": "d1afa559d6ab6fa206f1e3ca4be737e5230837d3a546b93273f761f685404133",
+  "duration_seconds": 61.0,
+  "frame_size": [
+    720,
+    1280
+  ],
+  "source_count": 4,
+  "source_use_status": "unverified",
+  "sound_catalog": "assets/sfx/catalog.json",
+  "sound_rights": "documented_public_domain",
+  "technical_receipt": "production/result.json",
+  "audiovisual_editorial_review": "pending",
+  "metadata": {
+    "title": "What if Zoro finally learned directions?",
+    "description": "Zoro stops getting lost, reaches threats before his crew and learns that arriving first can be a tactical disadvantage.\n\nOriginal hypothetical comedy and commentary. Fan-made alternate scenario; events and dialogue are invented, not canon. AI-assisted narration: Kokoro am_michael. Sound effects: Brackeys, public domain.\n\n#Shorts #Anime #WhatIf #OnePiece\n\nIllustrative clip sources:\nhttps://tenor.com/view/zoro-lost-zoro-pretty-one-piece-zoro-roronoa-zoro-lorenor-zoro-gif-13363708752174543882\nhttps://tenor.com/view/zoro-one-piece-anime-sword-roronoa-zoro-gif-17930992\nhttps://tenor.com/view/luffy-nami-luffynami-namiluffy-nami-one-piece-gif-27384079\nhttps://tenor.com/view/gear-5-kaido-luffy-gear-5-luffy-gear-5-luffy-gif-7953550598791914729",
+    "tags": [
+      "anime what if",
+      "One Piece",
+      "Zoro",
+      "Luffy",
+      "Nami",
+      "Ifverse Anime"
+    ],
+    "hashtags": [
+      "Shorts",
+      "Anime",
+      "WhatIf",
+      "OnePiece"
+    ],
+    "categoryId": "24",
+    "defaultLanguage": "en",
+    "defaultAudioLanguage": "en"
+  },
+  "posting_packet": "post-settings.json",
+  "music_embedded": false
+}

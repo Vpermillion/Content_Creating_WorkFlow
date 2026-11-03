@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "shots": [
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-zoro",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Zoro in a navigation or confused reaction context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-000.mp4",
+      "start": 0.0,
+      "end": 4.16121135973725,
+      "frames": 125
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-nami",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Nami reacting as navigator; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-001.mp4",
+      "start": 4.16121135973725,
+      "end": 7.034873016237414,
+      "frames": 86
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-nami",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Nami reacting as navigator; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-002.mp4",
+      "start": 7.034873016237414,
+      "end": 9.908534672737577,
+      "frames": 86
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-zoro",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Zoro in a navigation or confused reaction context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-003.mp4",
+      "start": 9.908534672737577,
+      "end": 14.293667719994321,
+      "frames": 132
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-fight",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Zoro facing combat; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-004.mp4",
+      "start": 14.293667719994321,
+      "end": 19.46252667356929,
+      "frames": 155
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-luffy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Luffy and crew movement context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-005.mp4",
+      "start": 19.46252667356929,
+      "end": 24.724686330277382,
+      "frames": 158
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-fight",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Zoro facing combat; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-006.mp4",
+      "start": 24.724686330277382,
+      "end": 28.773936846254887,
+      "frames": 121
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-zoro",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Zoro in a navigation or confused reaction context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-007.mp4",
+      "start": 28.773936846254887,
+      "end": 34.46527973737534,
+      "frames": 171
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-nami",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Nami reacting as navigator; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-008.mp4",
+      "start": 34.46527973737534,
+      "end": 37.04037914384951,
+      "frames": 77
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-nami",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Nami reacting as navigator; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-009.mp4",
+      "start": 37.04037914384951,
+      "end": 39.61547855032369,
+      "frames": 77
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-fight",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Zoro facing combat; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-010.mp4",
+      "start": 39.61547855032369,
+      "end": 44.93361862891165,
+      "frames": 160
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-zoro",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Zoro in a navigation or confused reaction context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-011.mp4",
+      "start": 44.93361862891165,
+      "end": 48.64698661360991,
+      "frames": 111
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-nami",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Nami reacting as navigator; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-012.mp4",
+      "start": 48.64698661360991,
+      "end": 51.6139489732432,
+      "frames": 89
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-nami",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Nami reacting as navigator; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-013.mp4",
+      "start": 51.6139489732432,
+      "end": 54.58091133287648,
+      "frames": 89
+    },
+    {
+      "asset": "ifverse-anime-zoro-perfect-directions-01-luffy",
+      "fit": "contain",
+      "trim_start": 0,
+      "match_reason": "Luffy and crew movement context; illustrates this narrated character/action in an invented scenario, not a literal canon event.",
+      "file": "shot-014.mp4",
+      "start": 54.58091133287648,
+      "end": 61.0,
+      "frames": 193
+    }
+  ],
+  "assets": [
+    {
+      "id": "ifverse-anime-zoro-perfect-directions-01-zoro",
+      "file": "ifverse-anime-zoro-perfect-directions-01-zoro.mp4",
+      "type": "video",
+      "query": "Zoro One Piece lost",
+      "source_url": "https://tenor.com/view/zoro-lost-zoro-pretty-one-piece-zoro-roronoa-zoro-lorenor-zoro-gif-13363708752174543882",
+      "download_url": "https://media.tenor.com/uXVuTl8kdAoAAAPo/zoro-lost-zoro-pretty.mp4",
+      "sha256": "2f5afeef1973af5b4324be54b64087612cb88a73cbac7922e68c73810cf22ae0",
+      "duration": 7.0,
+      "dimensions": [
+        498,
+        282
+      ],
+      "description": "a person walking across a wooden bridge with a sword in their hand",
+      "publisher": "misagoni",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "3423214281123004674",
+          "title": "a cartoon drawing of a man holding a sword in front of a door that says denusuola",
+          "source_url": "https://tenor.com/view/zoro-zoro-lost-lost-one-piece-one-piece-meme-gif-3423214281123004674",
+          "download_url": "https://media.tenor.com/L4GzQHBhgQIAAAPo/zoro-zoro-lost.mp4",
+          "duration": 2.3,
+          "width": 498,
+          "height": 226,
+          "publisher": "MopCat",
+          "provider": "tenor"
+        },
+        {
+          "id": "17429868692042389557",
+          "title": "a man and a woman are running in front of a building and a barrel .",
+          "source_url": "https://tenor.com/view/zoro-lost-gif-22505968",
+          "download_url": "https://media.tenor.com/8eNVOl7jmDUAAAPo/zoro-lost.mp4",
+          "duration": 4.1,
+          "width": 640,
+          "height": 360,
+          "publisher": "xyz1_2_3",
+          "provider": "tenor"
+        },
+        {
+          "id": "13645656992516676088",
+          "title": "a man with green hair is standing in a narrow alleyway with the words oh wait behind him",
+          "source_url": "https://tenor.com/view/zoro-zoro-lost-one-piece-lost-wrong-channel-gif-22000888",
+          "download_url": "https://media.tenor.com/vV8cvKXIGfgAAAPo/zoro-zoro-lost.mp4",
+          "duration": 5.6,
+          "width": 640,
+          "height": 344,
+          "publisher": "YourBoiLink",
+          "provider": "tenor"
+        },
+        {
+          "id": "13363708752174543882",
+          "title": "a person walking across a wooden bridge with a sword in their hand",
+          "source_url": "https://tenor.com/view/zoro-lost-zoro-pretty-one-piece-zoro-roronoa-zoro-lorenor-zoro-gif-13363708752174543882",
+          "download_url": "https://media.tenor.com/uXVuTl8kdAoAAAPo/zoro-lost-zoro-pretty.mp4",
+          "duration": 7,
+          "width": 498,
+          "height": 282,
+          "publisher": "misagoni",
+          "provider": "tenor"
+        },
+        {
+          "id": "2742052604948438742",
+          "title": "a man with green hair is sitting on a couch holding a flower in his hand .",
+          "source_url": "https://tenor.com/view/one-piece-one-piece-zoro-zoro-zoro-eating-one-piece-eating-gif-26290494",
+          "download_url": "https://media.tenor.com/Jg26UPFi3tYAAAPo/one-piece-one-piece-zoro.mp4",
+          "duration": 4.1,
+          "width": 592,
+          "height": 640,
+          "publisher": "yourtinyearthling",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "zoro",
+      "visual_intent": "Zoro in a navigation or confused reaction context"
+    },
+    {
+      "id": "ifverse-anime-zoro-perfect-directions-01-fight",
+      "file": "ifverse-anime-zoro-perfect-directions-01-fight.mp4",
+      "type": "video",
+      "query": "Roronoa Zoro sword fight",
+      "source_url": "https://tenor.com/view/zoro-one-piece-anime-sword-roronoa-zoro-gif-17930992",
+      "download_url": "https://media.tenor.com/Q2NLSwhOjPMAAAPo/zoro-one-piece.mp4",
+      "sha256": "15f0ed4847a0a9e6c037b00248ab18df4daa4ada25609fb8d466157fcad38bb4",
+      "duration": 9.9,
+      "dimensions": [
+        640,
+        640
+      ],
+      "description": "a cartoon of a person holding a sword with the letter i on it",
+      "publisher": "Mike11om",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "1152885157685926175",
+          "title": "a drawing of a man with a sword in his mouth and a blue sky with clouds",
+          "source_url": "https://tenor.com/view/one-piece-z-ambition-roronoa-zoro-zoro-swords-gif-1152885157685926175",
+          "download_url": "https://media.tenor.com/D__e8VKwmR8AAAPo/one-piece-z-ambition.mp4",
+          "duration": 1.8,
+          "width": 498,
+          "height": 280,
+          "publisher": "Telephone2468",
+          "provider": "tenor"
+        },
+        {
+          "id": "16471795142728436132",
+          "title": "a man with green hair is holding a sword in his mouth in a cartoon .",
+          "source_url": "https://tenor.com/view/roronoa-zoro-anime-one-piece-power-gif-17915814",
+          "download_url": "https://media.tenor.com/5JeSaTdVSaQAAAPo/roronoa-zoro-anime.mp4",
+          "duration": 3.8,
+          "width": 640,
+          "height": 360,
+          "publisher": "Roronoa",
+          "provider": "tenor"
+        },
+        {
+          "id": "3250058871733684836",
+          "title": "a man with green hair is holding a large sword in his mouth",
+          "source_url": "https://tenor.com/view/one-piece-ep934-wano-zoro-three-sword-style-gif-17911573",
+          "download_url": "https://media.tenor.com/LRqHUwTLCmQAAAPo/one-piece-ep934.mp4",
+          "duration": 2.7,
+          "width": 640,
+          "height": 362,
+          "publisher": "JosephAyo",
+          "provider": "tenor"
+        },
+        {
+          "id": "4855807608869522675",
+          "title": "a cartoon of a person holding a sword with the letter i on it",
+          "source_url": "https://tenor.com/view/zoro-one-piece-anime-sword-roronoa-zoro-gif-17930992",
+          "download_url": "https://media.tenor.com/Q2NLSwhOjPMAAAPo/zoro-one-piece.mp4",
+          "duration": 9.9,
+          "width": 640,
+          "height": 640,
+          "publisher": "Mike11om",
+          "provider": "tenor"
+        },
+        {
+          "id": "18194938579890108395",
+          "title": "a painting of a purple and white swirl with a blue background",
+          "source_url": "https://tenor.com/view/one-piece-stampede-one-piece-stampede-one-piece-movie-stampede-pirate-festival-gif-18194938579890108395",
+          "download_url": "https://media.tenor.com/_IFoPMxmd-sAAAPo/one-piece-stampede.mp4",
+          "duration": 5.3,
+          "width": 498,
+          "height": 282,
+          "publisher": "Telephone2468",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "fight",
+      "visual_intent": "Zoro facing combat"
+    },
+    {
+      "id": "ifverse-anime-zoro-perfect-directions-01-nami",
+      "file": "ifverse-anime-zoro-perfect-directions-01-nami.mp4",
+      "type": "video",
+      "query": "Nami One Piece angry",
+      "source_url": "https://tenor.com/view/luffy-nami-luffynami-namiluffy-nami-one-piece-gif-27384079",
+      "download_url": "https://media.tenor.com/It6WWKygFj8AAAPo/luffy-nami.mp4",
+      "sha256": "428e1809a344cc52e1c1e9056671c27032fab1da12fa51121f24ade2e9b4e3da",
+      "duration": 3.533333,
+      "dimensions": [
+        640,
+        640
+      ],
+      "description": "a man and a woman are standing next to each other in a cartoon . the man has a long nose .",
+      "publisher": "dazlia",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "5252061969709536728",
+          "title": "a woman in a bikini is holding a man 's arm",
+          "source_url": "https://tenor.com/view/one-piece-anime-usopp-nami-shaking-gif-16667167",
+          "download_url": "https://media.tenor.com/SOMSiOrgFdgAAAPo/one-piece-anime.mp4",
+          "duration": 3.1,
+          "width": 640,
+          "height": 444,
+          "publisher": "Partyfjes05",
+          "provider": "tenor"
+        },
+        {
+          "id": "2512610949716776511",
+          "title": "a man and a woman are standing next to each other in a cartoon . the man has a long nose .",
+          "source_url": "https://tenor.com/view/luffy-nami-luffynami-namiluffy-nami-one-piece-gif-27384079",
+          "download_url": "https://media.tenor.com/It6WWKygFj8AAAPo/luffy-nami.mp4",
+          "duration": 3.5,
+          "width": 640,
+          "height": 640,
+          "publisher": "dazlia",
+          "provider": "tenor"
+        },
+        {
+          "id": "16277667068836889034",
+          "title": "a close up of a person 's mouth with the words i can 't take it anymore written below it",
+          "source_url": "https://tenor.com/view/nami-one-piece-nami-mad-gif-16277667068836889034",
+          "download_url": "https://media.tenor.com/4eXj9NIYwcoAAAPo/nami-one-piece-nami-mad.mp4",
+          "duration": 0.5,
+          "width": 498,
+          "height": 434,
+          "publisher": "BuuKidd",
+          "provider": "tenor"
+        },
+        {
+          "id": "1166472414431255688",
+          "title": "a close up of a cartoon character with orange hair and a necklace",
+          "source_url": "https://tenor.com/view/one-piece-nami-straw-hat-shonen-elbaf-gif-1166472414431255688",
+          "download_url": "https://media.tenor.com/EDAkew53nIgAAAPo/one-piece-nami.mp4",
+          "duration": 3.2,
+          "width": 498,
+          "height": 374,
+          "publisher": "AdrienCortez",
+          "provider": "tenor"
+        },
+        {
+          "id": "17541669374477160986",
+          "title": "a cartoon of a woman standing next to a globe",
+          "source_url": "https://tenor.com/view/nami-nami-one-piece-one-piece-stampede-one-piece-stampede-gif-17541669374477160986",
+          "download_url": "https://media.tenor.com/83CHWzkPUhoAAAPo/nami-nami-one-piece.mp4",
+          "duration": 2.1,
+          "width": 498,
+          "height": 282,
+          "publisher": "Telephone2468",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "nami",
+      "visual_intent": "Nami reacting as navigator"
+    },
+    {
+      "id": "ifverse-anime-zoro-perfect-directions-01-luffy",
+      "file": "ifverse-anime-zoro-perfect-directions-01-luffy.mp4",
+      "type": "video",
+      "query": "Luffy One Piece running",
+      "source_url": "https://tenor.com/view/gear-5-kaido-luffy-gear-5-luffy-gear-5-luffy-gif-7953550598791914729",
+      "download_url": "https://media.tenor.com/bmCwIUAWZOkAAAPo/gear-5-kaido.mp4",
+      "sha256": "7bbbb319829900398ea2a733c410ad269e0ae6c27c949c1e69632ee4c8d375d5",
+      "duration": 7.909091,
+      "dimensions": [
+        498,
+        280
+      ],
+      "description": "a cartoon character with white hair and a purple belt is running",
+      "publisher": "Craztic",
+      "reuse_status": "Publicly posted fictional footage; republication rights unverified; private fan-commentary review",
+      "selection_basis": "Identifying term plus duration/resolution; visual/semantic review still required",
+      "candidates": [
+        {
+          "id": "10268822635026508702",
+          "title": "a cartoon character wearing a straw hat and a shirt that says 56",
+          "source_url": "https://tenor.com/view/luffy-ruffy-one-piece-run-anime-gif-17895261",
+          "download_url": "https://media.tenor.com/joIvx64-654AAAPo/luffy-ruffy.mp4",
+          "duration": 1.3,
+          "width": 640,
+          "height": 640,
+          "publisher": "dtg12live",
+          "provider": "tenor"
+        },
+        {
+          "id": "7857651974926838774",
+          "title": "a cartoon character wearing a straw hat and sandals is running",
+          "source_url": "https://tenor.com/view/luffy-mini-luffy-gear-3rd-3rd-gear-one-piece-gif-7857651974926838774",
+          "download_url": "https://media.tenor.com/bQv81u4pK_YAAAPo/luffy-mini-luffy.mp4",
+          "duration": 0.7,
+          "width": 220,
+          "height": 270,
+          "publisher": "klober_gie",
+          "provider": "tenor"
+        },
+        {
+          "id": "7953550598791914729",
+          "title": "a cartoon character with white hair and a purple belt is running",
+          "source_url": "https://tenor.com/view/gear-5-kaido-luffy-gear-5-luffy-gear-5-luffy-gif-7953550598791914729",
+          "download_url": "https://media.tenor.com/bmCwIUAWZOkAAAPo/gear-5-kaido.mp4",
+          "duration": 7.9,
+          "width": 498,
+          "height": 280,
+          "publisher": "Craztic",
+          "provider": "tenor"
+        },
+        {
+          "id": "16281869091310953643",
+          "title": "monkey d luffy from one piece is holding a flag with his mouth open",
+          "source_url": "https://tenor.com/view/luffy-running-running-away-scared-one-piece-gif-16281869091310953643",
+          "download_url": "https://media.tenor.com/4fTRrGsAZKsAAAPo/luffy-running.mp4",
+          "duration": 2.8,
+          "width": 498,
+          "height": 374,
+          "publisher": "pandaah",
+          "provider": "tenor"
+        },
+        {
+          "id": "228473561261198372",
+          "title": "a man in a red shirt and blue shorts is standing on a dirt road .",
+          "source_url": "https://tenor.com/view/one-piece-meme-luffy-luffy-running-and-falls-hits-the-wall-monkey-d-luffy-one-piece-gif-228473561261198372",
+          "download_url": "https://media.tenor.com/AyuzflOKzCQAAAPo/one-piece-meme-luffy.mp4",
+          "duration": 5.1,
+          "width": 320,
+          "height": 320,
+          "publisher": "kinggu",
+          "provider": "tenor"
+        }
+      ],
+      "source_key": "luffy",
+      "visual_intent": "Luffy and crew movement context"
+    }
+  ],
+  "narration_sha256": "2fbe713efcd353e9671e6dc9eea095c110dfeb13001142f87835cedbf13c623c"
+}

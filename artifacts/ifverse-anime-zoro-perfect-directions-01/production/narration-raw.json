@@ -1,0 +1,90 @@
+{
+  "provider": "kokoro-onnx",
+  "version": "0.6.1",
+  "voice": "am_michael",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.757333333333333,
+      "text": "What if Zoro finally learned directions? A map just felt unfamiliar respect.",
+      "label": "GPS HAS ENTERED THE CHAT"
+    },
+    {
+      "start": 4.757333333333333,
+      "end": 11.328,
+      "text": "Nami tests him. Left means left. Incredible. Bro unlocked a feature available on most shopping carts.",
+      "label": "THE NAVIGATOR IS SUSPICIOUS"
+    },
+    {
+      "start": 11.328,
+      "end": 16.341333333333335,
+      "text": "He reaches the meeting first. Then the enemy base. Then the problem. His crew isn't there.",
+      "label": "ARRIVING BEFORE THE PLOT"
+    },
+    {
+      "start": 16.341333333333335,
+      "end": 22.250666666666667,
+      "text": "Early doesn't mean invincible. He's inside an ambush with three swords and zero emotional support.",
+      "label": "EARLY IS NOT INVINCIBLE"
+    },
+    {
+      "start": 22.250666666666667,
+      "end": 28.266666666666666,
+      "text": "Luffy is still causing trouble elsewhere. We fixed navigation, not the crew's relationship with planning.",
+      "label": "THE CAPTAIN IS STILL THE CAPTAIN"
+    },
+    {
+      "start": 28.266666666666666,
+      "end": 32.896,
+      "text": "Zoro spots extra guards. This time he knows how far away his backup is.",
+      "label": "SOMETHING IS WRONG HERE"
+    },
+    {
+      "start": 32.896,
+      "end": 39.40266666666667,
+      "text": "So he retreats and marks the approach. Character development arrives wearing earrings and refusing eye contact.",
+      "label": "THE SMART MOVE IS BACKWARD"
+    },
+    {
+      "start": 39.40266666666667,
+      "end": 45.29066666666667,
+      "text": "He warns Nami. They pick a better route and arrive together. The enemies lose their easiest advantage.",
+      "label": "A RENDEZVOUS FOR ONCE"
+    },
+    {
+      "start": 45.29066666666667,
+      "end": 51.370666666666665,
+      "text": "Now he fights with cover instead of auditioning for a cautionary flashback. Timing beats stubbornness here.",
+      "label": "THE REAL UPGRADE"
+    },
+    {
+      "start": 51.370666666666665,
+      "end": 55.616,
+      "text": "He still argues with instructions. His complaints reach the correct address.",
+      "label": "THE JOKE CHANGES SHAPE"
+    },
+    {
+      "start": 55.616,
+      "end": 62.4,
+      "text": "Nami buys a compass. Zoro asks if it comes in sword form. Navigation needs a damage stat, apparently.",
+      "label": "SWORDS HAVE OPTIONS"
+    },
+    {
+      "start": 62.4,
+      "end": 69.73866666666666,
+      "text": "They finally travel together. Luffy points toward the wrong island. Excellent. The navigation disease found another host.",
+      "label": "THE FINAL TURN"
+    }
+  ],
+  "sha256": "478f9746b338fe98f61d125279132a6cf282d34b1b101240ba9b6ce7a936940b",
+  "model_files": {
+    "kokoro-v1.0.onnx": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5"
+    },
+    "voices-v1.0.bin": {
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  }
+}

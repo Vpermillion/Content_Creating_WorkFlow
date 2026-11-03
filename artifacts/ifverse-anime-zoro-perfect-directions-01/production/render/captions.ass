@@ -1,0 +1,77 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,36.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,2,48,48,175,1
+Style: Heading,DejaVu Sans,32.0,&H0057B4FF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,8,48,48,135,1
+Style: Brand,DejaVu Sans,22.0,&H00FFFFFF,&H000000FF,&H00111111,&H80000000,1,0,0,0,100,100,0,0,1,2,1,7,48,48,62,1
+Style: Credit,DejaVu Sans,15.0,&H00CCCCCC,&H000000FF,&H00111111,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,48,48,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.18,Caption,,0,0,0,,What if Zoro finally learned
+Dialogue: 0,0:00:01.18,0:00:02.20,Caption,,0,0,0,,directions?
+Dialogue: 0,0:00:02.20,0:00:03.20,Caption,,0,0,0,,A map just felt unfamiliar
+Dialogue: 0,0:00:03.20,0:00:04.28,Caption,,0,0,0,,respect.
+Dialogue: 0,0:00:04.28,0:00:05.26,Caption,,0,0,0,,Nami tests him.
+Dialogue: 0,0:00:05.26,0:00:06.50,Caption,,0,0,0,,Left means left.
+Dialogue: 0,0:00:06.50,0:00:07.26,Caption,,0,0,0,,Incredible.
+Dialogue: 0,0:00:07.26,0:00:08.42,Caption,,0,0,0,,Bro unlocked a feature available
+Dialogue: 0,0:00:08.42,0:00:09.98,Caption,,0,0,0,,on most shopping carts.
+Dialogue: 0,0:00:09.98,0:00:11.44,Caption,,0,0,0,,He reaches the meeting first.
+Dialogue: 0,0:00:11.44,0:00:12.58,Caption,,0,0,0,,Then the enemy base.
+Dialogue: 0,0:00:12.58,0:00:13.32,Caption,,0,0,0,,Then the problem.
+Dialogue: 0,0:00:13.32,0:00:14.50,Caption,,0,0,0,,His crew isn't there.
+Dialogue: 0,0:00:14.50,0:00:16.02,Caption,,0,0,0,,Early doesn't mean invincible.
+Dialogue: 0,0:00:16.02,0:00:17.12,Caption,,0,0,0,,He's inside an ambush with
+Dialogue: 0,0:00:17.12,0:00:18.64,Caption,,0,0,0,,three swords and zero emotional
+Dialogue: 0,0:00:18.64,0:00:19.46,Caption,,0,0,0,,support.
+Dialogue: 0,0:00:19.46,0:00:20.60,Caption,,0,0,0,,Luffy is still causing trouble
+Dialogue: 0,0:00:20.60,0:00:21.66,Caption,,0,0,0,,elsewhere.
+Dialogue: 0,0:00:21.66,0:00:23.10,Caption,,0,0,0,,We fixed navigation, not the
+Dialogue: 0,0:00:23.10,0:00:24.82,Caption,,0,0,0,,crew's relationship with\Nplanning.
+Dialogue: 0,0:00:24.82,0:00:26.56,Caption,,0,0,0,,Zoro spots extra guards.
+Dialogue: 0,0:00:26.56,0:00:27.36,Caption,,0,0,0,,This time he knows how
+Dialogue: 0,0:00:27.36,0:00:28.84,Caption,,0,0,0,,far away his backup is.
+Dialogue: 0,0:00:28.84,0:00:29.72,Caption,,0,0,0,,So he retreats and marks
+Dialogue: 0,0:00:29.72,0:00:31.00,Caption,,0,0,0,,the approach.
+Dialogue: 0,0:00:31.00,0:00:32.86,Caption,,0,0,0,,Character development arrives\Nwearing earrings
+Dialogue: 0,0:00:32.86,0:00:34.54,Caption,,0,0,0,,and refusing eye contact.
+Dialogue: 0,0:00:34.54,0:00:36.28,Caption,,0,0,0,,He warns Nami. They pick a\Nbetter route
+Dialogue: 0,0:00:36.28,0:00:37.54,Caption,,0,0,0,,and arrive together.
+Dialogue: 0,0:00:37.54,0:00:38.74,Caption,,0,0,0,,The enemies lose their easiest
+Dialogue: 0,0:00:38.74,0:00:39.62,Caption,,0,0,0,,advantage.
+Dialogue: 0,0:00:39.62,0:00:40.56,Caption,,0,0,0,,Now he fights with cover
+Dialogue: 0,0:00:40.56,0:00:41.94,Caption,,0,0,0,,instead of auditioning for a
+Dialogue: 0,0:00:41.94,0:00:43.46,Caption,,0,0,0,,cautionary flashback.
+Dialogue: 0,0:00:43.46,0:00:45.00,Caption,,0,0,0,,Timing beats stubbornness here.
+Dialogue: 0,0:00:45.00,0:00:46.82,Caption,,0,0,0,,He still argues with\Ninstructions.
+Dialogue: 0,0:00:46.82,0:00:47.98,Caption,,0,0,0,,His complaints reach the correct
+Dialogue: 0,0:00:47.98,0:00:48.70,Caption,,0,0,0,,address.
+Dialogue: 0,0:00:48.70,0:00:50.12,Caption,,0,0,0,,Nami buys a compass.
+Dialogue: 0,0:00:50.12,0:00:51.16,Caption,,0,0,0,,Zoro asks if it comes
+Dialogue: 0,0:00:51.16,0:00:52.40,Caption,,0,0,0,,in sword form.
+Dialogue: 0,0:00:52.40,0:00:54.64,Caption,,0,0,0,,Navigation needs a damage stat,\Napparently.
+Dialogue: 0,0:00:54.64,0:00:56.20,Caption,,0,0,0,,They finally travel together.
+Dialogue: 0,0:00:56.20,0:00:57.22,Caption,,0,0,0,,Luffy points toward the wrong
+Dialogue: 0,0:00:57.22,0:00:58.30,Caption,,0,0,0,,island.
+Dialogue: 0,0:00:58.30,0:00:59.00,Caption,,0,0,0,,Excellent.
+Dialogue: 0,0:00:59.00,0:01:00.98,Caption,,0,0,0,,The navigation disease found\Nanother host.
+Dialogue: 1,0:00:00.00,0:00:04.16,Heading,,0,0,0,,GPS HAS ENTERED THE CHAT
+Dialogue: 1,0:00:04.16,0:00:09.91,Heading,,0,0,0,,THE NAVIGATOR IS SUSPICIOUS
+Dialogue: 1,0:00:09.91,0:00:14.29,Heading,,0,0,0,,ARRIVING BEFORE THE PLOT
+Dialogue: 1,0:00:14.29,0:00:19.46,Heading,,0,0,0,,EARLY IS NOT INVINCIBLE
+Dialogue: 1,0:00:19.46,0:00:24.72,Heading,,0,0,0,,THE CAPTAIN IS STILL THE CAPTAIN
+Dialogue: 1,0:00:24.72,0:00:28.77,Heading,,0,0,0,,SOMETHING IS WRONG HERE
+Dialogue: 1,0:00:28.77,0:00:34.47,Heading,,0,0,0,,THE SMART MOVE IS BACKWARD
+Dialogue: 1,0:00:34.47,0:00:39.62,Heading,,0,0,0,,A RENDEZVOUS FOR ONCE
+Dialogue: 1,0:00:39.62,0:00:44.93,Heading,,0,0,0,,THE REAL UPGRADE
+Dialogue: 1,0:00:44.93,0:00:48.65,Heading,,0,0,0,,THE JOKE CHANGES SHAPE
+Dialogue: 1,0:00:48.65,0:00:54.58,Heading,,0,0,0,,SWORDS HAVE OPTIONS
+Dialogue: 1,0:00:54.58,0:01:01.00,Heading,,0,0,0,,THE FINAL TURN
+Dialogue: 1,0:00:00.00,0:01:01.00,Brand,,0,0,0,,IFVERSE ANIME / FAN WHAT-IF
+Dialogue: 1,0:00:00.00,0:01:01.00,Credit,,0,0,0,,IFVERSE ANIME / FAN-MADE WHAT-IF

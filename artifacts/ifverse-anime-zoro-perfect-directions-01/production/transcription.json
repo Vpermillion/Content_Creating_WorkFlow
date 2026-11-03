@@ -1,0 +1,1356 @@
+{
+  "engine": "faster-whisper",
+  "model": "base.en",
+  "device": "cpu",
+  "compute_type": "int8",
+  "recognition_mode": "script_alignment",
+  "known_script": true,
+  "timing_basis": "Whisper cross-attention DTW alignment to the final waveform; estimated word times",
+  "audio_sha256": "2fbe713efcd353e9671e6dc9eea095c110dfeb13001142f87835cedbf13c623c",
+  "words": [
+    {
+      "word": "What",
+      "start": 0.0,
+      "end": 0.1,
+      "probability": 0.00013592984760180116
+    },
+    {
+      "word": "if",
+      "start": 0.1,
+      "end": 0.2,
+      "probability": 0.9365295171737671
+    },
+    {
+      "word": "Zoro",
+      "start": 0.2,
+      "end": 0.38,
+      "probability": 0.40686121582984924
+    },
+    {
+      "word": "finally",
+      "start": 0.38,
+      "end": 0.86,
+      "probability": 0.9660840034484863
+    },
+    {
+      "word": "learned",
+      "start": 0.86,
+      "end": 1.18,
+      "probability": 0.9229298233985901
+    },
+    {
+      "word": "directions?",
+      "start": 1.18,
+      "end": 2.2,
+      "probability": 0.9834734797477722
+    },
+    {
+      "word": "A",
+      "start": 2.2,
+      "end": 2.2,
+      "probability": 0.9219634532928467
+    },
+    {
+      "word": "map",
+      "start": 2.2,
+      "end": 2.36,
+      "probability": 0.9907410144805908
+    },
+    {
+      "word": "just",
+      "start": 2.36,
+      "end": 2.6,
+      "probability": 0.9969311952590942
+    },
+    {
+      "word": "felt",
+      "start": 2.6,
+      "end": 2.8,
+      "probability": 0.9716532230377197
+    },
+    {
+      "word": "unfamiliar",
+      "start": 2.8,
+      "end": 3.2,
+      "probability": 0.9766426086425781
+    },
+    {
+      "word": "respect.",
+      "start": 3.2,
+      "end": 4.28,
+      "probability": 0.4722388982772827
+    },
+    {
+      "word": "Nami",
+      "start": 4.28,
+      "end": 4.36,
+      "probability": 0.8243150115013123
+    },
+    {
+      "word": "tests",
+      "start": 4.36,
+      "end": 4.6,
+      "probability": 0.9266505837440491
+    },
+    {
+      "word": "him.",
+      "start": 4.6,
+      "end": 5.26,
+      "probability": 0.997156023979187
+    },
+    {
+      "word": "Left",
+      "start": 5.26,
+      "end": 5.3,
+      "probability": 0.9715998768806458
+    },
+    {
+      "word": "means",
+      "start": 5.3,
+      "end": 5.5,
+      "probability": 0.9772865772247314
+    },
+    {
+      "word": "left.",
+      "start": 5.5,
+      "end": 6.5,
+      "probability": 0.9535955190658569
+    },
+    {
+      "word": "Incredible.",
+      "start": 6.5,
+      "end": 7.26,
+      "probability": 0.8797151446342468
+    },
+    {
+      "word": "Bro",
+      "start": 7.26,
+      "end": 7.26,
+      "probability": 0.8633479475975037
+    },
+    {
+      "word": "unlocked",
+      "start": 7.26,
+      "end": 7.54,
+      "probability": 0.6679949164390564
+    },
+    {
+      "word": "a",
+      "start": 7.54,
+      "end": 7.84,
+      "probability": 0.9287747144699097
+    },
+    {
+      "word": "feature",
+      "start": 7.84,
+      "end": 8.1,
+      "probability": 0.9987497329711914
+    },
+    {
+      "word": "available",
+      "start": 8.1,
+      "end": 8.42,
+      "probability": 0.9875909090042114
+    },
+    {
+      "word": "on",
+      "start": 8.42,
+      "end": 8.8,
+      "probability": 0.9954700469970703
+    },
+    {
+      "word": "most",
+      "start": 8.8,
+      "end": 8.96,
+      "probability": 0.9846287965774536
+    },
+    {
+      "word": "shopping",
+      "start": 8.96,
+      "end": 9.2,
+      "probability": 0.9822514653205872
+    },
+    {
+      "word": "carts.",
+      "start": 9.2,
+      "end": 9.98,
+      "probability": 0.9502111077308655
+    },
+    {
+      "word": "He",
+      "start": 9.98,
+      "end": 10.0,
+      "probability": 0.9950482249259949
+    },
+    {
+      "word": "reaches",
+      "start": 10.0,
+      "end": 10.2,
+      "probability": 0.9986082911491394
+    },
+    {
+      "word": "the",
+      "start": 10.2,
+      "end": 10.42,
+      "probability": 0.9966093301773071
+    },
+    {
+      "word": "meeting",
+      "start": 10.42,
+      "end": 10.6,
+      "probability": 0.9970769882202148
+    },
+    {
+      "word": "first.",
+      "start": 10.6,
+      "end": 11.44,
+      "probability": 0.9933225512504578
+    },
+    {
+      "word": "Then",
+      "start": 11.44,
+      "end": 11.46,
+      "probability": 0.9913904666900635
+    },
+    {
+      "word": "the",
+      "start": 11.46,
+      "end": 11.58,
+      "probability": 0.9759197235107422
+    },
+    {
+      "word": "enemy",
+      "start": 11.58,
+      "end": 11.8,
+      "probability": 0.992676317691803
+    },
+    {
+      "word": "base.",
+      "start": 11.8,
+      "end": 12.58,
+      "probability": 0.9956669807434082
+    },
+    {
+      "word": "Then",
+      "start": 12.58,
+      "end": 12.62,
+      "probability": 0.9915754199028015
+    },
+    {
+      "word": "the",
+      "start": 12.62,
+      "end": 12.74,
+      "probability": 0.9930029511451721
+    },
+    {
+      "word": "problem.",
+      "start": 12.74,
+      "end": 13.32,
+      "probability": 0.994529664516449
+    },
+    {
+      "word": "His",
+      "start": 13.32,
+      "end": 13.36,
+      "probability": 0.9839347004890442
+    },
+    {
+      "word": "crew",
+      "start": 13.36,
+      "end": 13.58,
+      "probability": 0.9905961751937866
+    },
+    {
+      "word": "isn't",
+      "start": 13.58,
+      "end": 13.92,
+      "probability": 0.9905591905117035
+    },
+    {
+      "word": "there.",
+      "start": 13.92,
+      "end": 14.5,
+      "probability": 0.9977904558181763
+    },
+    {
+      "word": "Early",
+      "start": 14.5,
+      "end": 14.5,
+      "probability": 0.9817686080932617
+    },
+    {
+      "word": "doesn't",
+      "start": 14.5,
+      "end": 14.8,
+      "probability": 0.9968402981758118
+    },
+    {
+      "word": "mean",
+      "start": 14.8,
+      "end": 14.94,
+      "probability": 0.9963262677192688
+    },
+    {
+      "word": "invincible.",
+      "start": 14.94,
+      "end": 16.02,
+      "probability": 0.9788311123847961
+    },
+    {
+      "word": "He's",
+      "start": 16.02,
+      "end": 16.12,
+      "probability": 0.9757416248321533
+    },
+    {
+      "word": "inside",
+      "start": 16.12,
+      "end": 16.42,
+      "probability": 0.9942964911460876
+    },
+    {
+      "word": "an",
+      "start": 16.42,
+      "end": 16.58,
+      "probability": 0.6562212109565735
+    },
+    {
+      "word": "ambush",
+      "start": 16.58,
+      "end": 16.84,
+      "probability": 0.9924829602241516
+    },
+    {
+      "word": "with",
+      "start": 16.84,
+      "end": 17.12,
+      "probability": 0.9864054322242737
+    },
+    {
+      "word": "three",
+      "start": 17.12,
+      "end": 17.36,
+      "probability": 0.7298753261566162
+    },
+    {
+      "word": "swords",
+      "start": 17.36,
+      "end": 17.64,
+      "probability": 0.9757920503616333
+    },
+    {
+      "word": "and",
+      "start": 17.64,
+      "end": 17.92,
+      "probability": 0.9455241560935974
+    },
+    {
+      "word": "zero",
+      "start": 17.92,
+      "end": 18.24,
+      "probability": 0.9801656007766724
+    },
+    {
+      "word": "emotional",
+      "start": 18.24,
+      "end": 18.64,
+      "probability": 0.9481112957000732
+    },
+    {
+      "word": "support.",
+      "start": 18.64,
+      "end": 19.46252667356929,
+      "probability": 0.9986218214035034
+    },
+    {
+      "word": "Luffy",
+      "start": 19.46252667356929,
+      "end": 19.7025,
+      "probability": 0.3556351374681981
+    },
+    {
+      "word": "is",
+      "start": 19.7025,
+      "end": 19.8425,
+      "probability": 0.9566485285758972
+    },
+    {
+      "word": "still",
+      "start": 19.8425,
+      "end": 20.0025,
+      "probability": 0.9926006197929382
+    },
+    {
+      "word": "causing",
+      "start": 20.0025,
+      "end": 20.3425,
+      "probability": 0.9949634075164795
+    },
+    {
+      "word": "trouble",
+      "start": 20.3425,
+      "end": 20.6025,
+      "probability": 0.9917778968811035
+    },
+    {
+      "word": "elsewhere.",
+      "start": 20.6025,
+      "end": 21.6625,
+      "probability": 0.9766543507575989
+    },
+    {
+      "word": "We",
+      "start": 21.6625,
+      "end": 21.6625,
+      "probability": 0.5232600569725037
+    },
+    {
+      "word": "fixed",
+      "start": 21.6625,
+      "end": 21.8425,
+      "probability": 0.33978429436683655
+    },
+    {
+      "word": "navigation,",
+      "start": 21.8425,
+      "end": 22.9225,
+      "probability": 0.982591450214386
+    },
+    {
+      "word": "not",
+      "start": 22.9225,
+      "end": 22.9825,
+      "probability": 0.9777703881263733
+    },
+    {
+      "word": "the",
+      "start": 22.9825,
+      "end": 23.1025,
+      "probability": 0.9885368347167969
+    },
+    {
+      "word": "crew's",
+      "start": 23.1025,
+      "end": 23.4425,
+      "probability": 0.9143091142177582
+    },
+    {
+      "word": "relationship",
+      "start": 23.4425,
+      "end": 24.0225,
+      "probability": 0.9911063313484192
+    },
+    {
+      "word": "with",
+      "start": 24.0225,
+      "end": 24.1825,
+      "probability": 0.9968574047088623
+    },
+    {
+      "word": "planning.",
+      "start": 24.1825,
+      "end": 24.822499999999998,
+      "probability": 0.980486273765564
+    },
+    {
+      "word": "Zoro",
+      "start": 24.822499999999998,
+      "end": 24.9025,
+      "probability": 0.15075954794883728
+    },
+    {
+      "word": "spots",
+      "start": 24.9025,
+      "end": 25.1825,
+      "probability": 0.8184817433357239
+    },
+    {
+      "word": "extra",
+      "start": 25.1825,
+      "end": 25.5225,
+      "probability": 0.9668307304382324
+    },
+    {
+      "word": "guards.",
+      "start": 25.5225,
+      "end": 26.5625,
+      "probability": 0.9732789993286133
+    },
+    {
+      "word": "This",
+      "start": 26.5625,
+      "end": 26.6025,
+      "probability": 0.9641165137290955
+    },
+    {
+      "word": "time",
+      "start": 26.6025,
+      "end": 26.802500000000002,
+      "probability": 0.9924753308296204
+    },
+    {
+      "word": "he",
+      "start": 26.802500000000002,
+      "end": 26.9625,
+      "probability": 0.8854082822799683
+    },
+    {
+      "word": "knows",
+      "start": 26.9625,
+      "end": 27.1425,
+      "probability": 0.9858058094978333
+    },
+    {
+      "word": "how",
+      "start": 27.1425,
+      "end": 27.3625,
+      "probability": 0.9935547709465027
+    },
+    {
+      "word": "far",
+      "start": 27.3625,
+      "end": 27.6025,
+      "probability": 0.9988746047019958
+    },
+    {
+      "word": "away",
+      "start": 27.6025,
+      "end": 27.8625,
+      "probability": 0.9565113186836243
+    },
+    {
+      "word": "his",
+      "start": 27.8625,
+      "end": 28.0425,
+      "probability": 0.9895238280296326
+    },
+    {
+      "word": "backup",
+      "start": 28.0425,
+      "end": 28.2425,
+      "probability": 0.8894708156585693
+    },
+    {
+      "word": "is.",
+      "start": 28.2425,
+      "end": 28.8425,
+      "probability": 0.9951558113098145
+    },
+    {
+      "word": "So",
+      "start": 28.8425,
+      "end": 28.8825,
+      "probability": 0.9357438087463379
+    },
+    {
+      "word": "he",
+      "start": 28.8825,
+      "end": 28.9625,
+      "probability": 0.8666687607765198
+    },
+    {
+      "word": "retreats",
+      "start": 28.9625,
+      "end": 29.4625,
+      "probability": 0.9805947840213776
+    },
+    {
+      "word": "and",
+      "start": 29.4625,
+      "end": 29.5425,
+      "probability": 0.9840455055236816
+    },
+    {
+      "word": "marks",
+      "start": 29.5425,
+      "end": 29.7225,
+      "probability": 0.9848203063011169
+    },
+    {
+      "word": "the",
+      "start": 29.7225,
+      "end": 29.9225,
+      "probability": 0.9962584972381592
+    },
+    {
+      "word": "approach.",
+      "start": 29.9225,
+      "end": 31.002499999999998,
+      "probability": 0.9895570874214172
+    },
+    {
+      "word": "Character",
+      "start": 31.002499999999998,
+      "end": 31.002499999999998,
+      "probability": 0.9904674887657166
+    },
+    {
+      "word": "development",
+      "start": 31.002499999999998,
+      "end": 31.4225,
+      "probability": 0.9624751210212708
+    },
+    {
+      "word": "arrives",
+      "start": 31.4225,
+      "end": 31.8425,
+      "probability": 0.9795332551002502
+    },
+    {
+      "word": "wearing",
+      "start": 31.8425,
+      "end": 32.3625,
+      "probability": 0.9470293521881104
+    },
+    {
+      "word": "earrings",
+      "start": 32.3625,
+      "end": 32.8625,
+      "probability": 0.9921053051948547
+    },
+    {
+      "word": "and",
+      "start": 32.8625,
+      "end": 33.042500000000004,
+      "probability": 0.9697821736335754
+    },
+    {
+      "word": "refusing",
+      "start": 33.042500000000004,
+      "end": 33.3225,
+      "probability": 0.9808012843132019
+    },
+    {
+      "word": "eye",
+      "start": 33.3225,
+      "end": 33.7225,
+      "probability": 0.9953168630599976
+    },
+    {
+      "word": "contact.",
+      "start": 33.7225,
+      "end": 34.542500000000004,
+      "probability": 0.9924173355102539
+    },
+    {
+      "word": "He",
+      "start": 34.542500000000004,
+      "end": 34.542500000000004,
+      "probability": 0.9593080878257751
+    },
+    {
+      "word": "warns",
+      "start": 34.542500000000004,
+      "end": 34.7425,
+      "probability": 0.9736635684967041
+    },
+    {
+      "word": "Nami.",
+      "start": 34.7425,
+      "end": 35.6425,
+      "probability": 0.6993289291858673
+    },
+    {
+      "word": "They",
+      "start": 35.6425,
+      "end": 35.6625,
+      "probability": 0.9799829721450806
+    },
+    {
+      "word": "pick",
+      "start": 35.6625,
+      "end": 35.7625,
+      "probability": 0.9933998584747314
+    },
+    {
+      "word": "a",
+      "start": 35.7625,
+      "end": 35.8625,
+      "probability": 0.9923096895217896
+    },
+    {
+      "word": "better",
+      "start": 35.8625,
+      "end": 36.0225,
+      "probability": 0.9960054755210876
+    },
+    {
+      "word": "route",
+      "start": 36.0225,
+      "end": 36.2825,
+      "probability": 0.9798627495765686
+    },
+    {
+      "word": "and",
+      "start": 36.2825,
+      "end": 36.4625,
+      "probability": 0.9774936437606812
+    },
+    {
+      "word": "arrive",
+      "start": 36.4625,
+      "end": 36.6625,
+      "probability": 0.9908679723739624
+    },
+    {
+      "word": "together.",
+      "start": 36.6625,
+      "end": 37.542500000000004,
+      "probability": 0.9968715310096741
+    },
+    {
+      "word": "The",
+      "start": 37.542500000000004,
+      "end": 37.5625,
+      "probability": 0.985964298248291
+    },
+    {
+      "word": "enemies",
+      "start": 37.5625,
+      "end": 37.7625,
+      "probability": 0.9772287607192993
+    },
+    {
+      "word": "lose",
+      "start": 37.7625,
+      "end": 38.082499999999996,
+      "probability": 0.985783576965332
+    },
+    {
+      "word": "their",
+      "start": 38.082499999999996,
+      "end": 38.3825,
+      "probability": 0.9949302077293396
+    },
+    {
+      "word": "easiest",
+      "start": 38.3825,
+      "end": 38.7425,
+      "probability": 0.9932611584663391
+    },
+    {
+      "word": "advantage.",
+      "start": 38.7425,
+      "end": 39.61547855032369,
+      "probability": 0.9955148100852966
+    },
+    {
+      "word": "Now",
+      "start": 39.61547855032369,
+      "end": 39.7555,
+      "probability": 0.00013531559670809656
+    },
+    {
+      "word": "he",
+      "start": 39.7555,
+      "end": 39.9155,
+      "probability": 0.8733909130096436
+    },
+    {
+      "word": "fights",
+      "start": 39.9155,
+      "end": 40.0955,
+      "probability": 0.9951856732368469
+    },
+    {
+      "word": "with",
+      "start": 40.0955,
+      "end": 40.3555,
+      "probability": 0.9957486987113953
+    },
+    {
+      "word": "cover",
+      "start": 40.3555,
+      "end": 40.5555,
+      "probability": 0.9521434903144836
+    },
+    {
+      "word": "instead",
+      "start": 40.5555,
+      "end": 40.9955,
+      "probability": 0.8693679571151733
+    },
+    {
+      "word": "of",
+      "start": 40.9955,
+      "end": 41.2355,
+      "probability": 0.9960609078407288
+    },
+    {
+      "word": "auditioning",
+      "start": 41.2355,
+      "end": 41.7155,
+      "probability": 0.9921301603317261
+    },
+    {
+      "word": "for",
+      "start": 41.7155,
+      "end": 41.835499999999996,
+      "probability": 0.9952248334884644
+    },
+    {
+      "word": "a",
+      "start": 41.835499999999996,
+      "end": 41.9355,
+      "probability": 0.9908930063247681
+    },
+    {
+      "word": "cautionary",
+      "start": 41.9355,
+      "end": 42.4555,
+      "probability": 0.9883900880813599
+    },
+    {
+      "word": "flashback.",
+      "start": 42.4555,
+      "end": 43.4555,
+      "probability": 0.9859428405761719
+    },
+    {
+      "word": "Timing",
+      "start": 43.4555,
+      "end": 43.7955,
+      "probability": 0.7627742886543274
+    },
+    {
+      "word": "beats",
+      "start": 43.7955,
+      "end": 43.9555,
+      "probability": 0.9682840704917908
+    },
+    {
+      "word": "stubbornness",
+      "start": 43.9555,
+      "end": 44.5355,
+      "probability": 0.9844923913478851
+    },
+    {
+      "word": "here.",
+      "start": 44.5355,
+      "end": 44.9955,
+      "probability": 0.9925111532211304
+    },
+    {
+      "word": "He",
+      "start": 44.9955,
+      "end": 45.015499999999996,
+      "probability": 0.8246240019798279
+    },
+    {
+      "word": "still",
+      "start": 45.015499999999996,
+      "end": 45.1355,
+      "probability": 0.9954766631126404
+    },
+    {
+      "word": "argues",
+      "start": 45.1355,
+      "end": 45.4355,
+      "probability": 0.997272789478302
+    },
+    {
+      "word": "with",
+      "start": 45.4355,
+      "end": 45.7955,
+      "probability": 0.9979078769683838
+    },
+    {
+      "word": "instructions.",
+      "start": 45.7955,
+      "end": 46.8155,
+      "probability": 0.9777249097824097
+    },
+    {
+      "word": "His",
+      "start": 46.8155,
+      "end": 46.8755,
+      "probability": 0.5354819893836975
+    },
+    {
+      "word": "complaints",
+      "start": 46.8755,
+      "end": 47.195499999999996,
+      "probability": 0.9910428524017334
+    },
+    {
+      "word": "reach",
+      "start": 47.195499999999996,
+      "end": 47.4955,
+      "probability": 0.9909142255783081
+    },
+    {
+      "word": "the",
+      "start": 47.4955,
+      "end": 47.7555,
+      "probability": 0.997490406036377
+    },
+    {
+      "word": "correct",
+      "start": 47.7555,
+      "end": 47.9755,
+      "probability": 0.9935759902000427
+    },
+    {
+      "word": "address.",
+      "start": 47.9755,
+      "end": 48.695499999999996,
+      "probability": 0.9962195754051208
+    },
+    {
+      "word": "Nami",
+      "start": 48.695499999999996,
+      "end": 48.8155,
+      "probability": 0.5554289519786835
+    },
+    {
+      "word": "buys",
+      "start": 48.8155,
+      "end": 49.0955,
+      "probability": 0.9864166975021362
+    },
+    {
+      "word": "a",
+      "start": 49.0955,
+      "end": 49.2955,
+      "probability": 0.9718752503395081
+    },
+    {
+      "word": "compass.",
+      "start": 49.2955,
+      "end": 50.1155,
+      "probability": 0.9932616353034973
+    },
+    {
+      "word": "Zoro",
+      "start": 50.1155,
+      "end": 50.2555,
+      "probability": 0.24704265594482422
+    },
+    {
+      "word": "asks",
+      "start": 50.2555,
+      "end": 50.655499999999996,
+      "probability": 0.9932314157485962
+    },
+    {
+      "word": "if",
+      "start": 50.655499999999996,
+      "end": 50.8955,
+      "probability": 0.9888824820518494
+    },
+    {
+      "word": "it",
+      "start": 50.8955,
+      "end": 50.9555,
+      "probability": 0.9890060424804688
+    },
+    {
+      "word": "comes",
+      "start": 50.9555,
+      "end": 51.155499999999996,
+      "probability": 0.9954493641853333
+    },
+    {
+      "word": "in",
+      "start": 51.155499999999996,
+      "end": 51.3155,
+      "probability": 0.9931419491767883
+    },
+    {
+      "word": "sword",
+      "start": 51.3155,
+      "end": 51.555499999999995,
+      "probability": 0.9114914536476135
+    },
+    {
+      "word": "form.",
+      "start": 51.555499999999995,
+      "end": 52.3955,
+      "probability": 0.9931285381317139
+    },
+    {
+      "word": "Navigation",
+      "start": 52.3955,
+      "end": 52.5755,
+      "probability": 0.9362367987632751
+    },
+    {
+      "word": "needs",
+      "start": 52.5755,
+      "end": 53.0955,
+      "probability": 0.99224454164505
+    },
+    {
+      "word": "a",
+      "start": 53.0955,
+      "end": 53.2355,
+      "probability": 0.9863705635070801
+    },
+    {
+      "word": "damage",
+      "start": 53.2355,
+      "end": 53.555499999999995,
+      "probability": 0.28155696392059326
+    },
+    {
+      "word": "stat,",
+      "start": 53.555499999999995,
+      "end": 53.9955,
+      "probability": 0.9797357320785522
+    },
+    {
+      "word": "apparently.",
+      "start": 53.9955,
+      "end": 54.6355,
+      "probability": 0.9883025288581848
+    },
+    {
+      "word": "They",
+      "start": 54.6355,
+      "end": 54.655499999999996,
+      "probability": 0.9341756701469421
+    },
+    {
+      "word": "finally",
+      "start": 54.655499999999996,
+      "end": 54.915499999999994,
+      "probability": 0.9855498671531677
+    },
+    {
+      "word": "travel",
+      "start": 54.915499999999994,
+      "end": 55.275499999999994,
+      "probability": 0.99411940574646
+    },
+    {
+      "word": "together.",
+      "start": 55.275499999999994,
+      "end": 56.195499999999996,
+      "probability": 0.9986200332641602
+    },
+    {
+      "word": "Luffy",
+      "start": 56.195499999999996,
+      "end": 56.195499999999996,
+      "probability": 0.05111496523022652
+    },
+    {
+      "word": "points",
+      "start": 56.195499999999996,
+      "end": 56.6155,
+      "probability": 0.994413435459137
+    },
+    {
+      "word": "toward",
+      "start": 56.6155,
+      "end": 56.8955,
+      "probability": 0.9309583902359009
+    },
+    {
+      "word": "the",
+      "start": 56.8955,
+      "end": 57.0755,
+      "probability": 0.997014045715332
+    },
+    {
+      "word": "wrong",
+      "start": 57.0755,
+      "end": 57.2155,
+      "probability": 0.9817158579826355
+    },
+    {
+      "word": "island.",
+      "start": 57.2155,
+      "end": 58.2955,
+      "probability": 0.9718709588050842
+    },
+    {
+      "word": "Excellent.",
+      "start": 58.2955,
+      "end": 58.9955,
+      "probability": 0.9408549070358276
+    },
+    {
+      "word": "The",
+      "start": 58.9955,
+      "end": 58.9955,
+      "probability": 0.9643692970275879
+    },
+    {
+      "word": "navigation",
+      "start": 58.9955,
+      "end": 59.2155,
+      "probability": 0.716652512550354
+    },
+    {
+      "word": "disease",
+      "start": 59.2155,
+      "end": 59.8155,
+      "probability": 0.9443744421005249
+    },
+    {
+      "word": "found",
+      "start": 59.8155,
+      "end": 60.1555,
+      "probability": 0.99895179271698
+    },
+    {
+      "word": "another",
+      "start": 60.1555,
+      "end": 60.415499999999994,
+      "probability": 0.996432900428772
+    },
+    {
+      "word": "host.",
+      "start": 60.415499999999994,
+      "end": 60.9755,
+      "probability": 0.9933331608772278
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 1.18,
+      "text": "What if Zoro finally learned"
+    },
+    {
+      "start": 1.18,
+      "end": 2.2,
+      "text": "directions?"
+    },
+    {
+      "start": 2.2,
+      "end": 3.2,
+      "text": "A map just felt unfamiliar"
+    },
+    {
+      "start": 3.2,
+      "end": 4.28,
+      "text": "respect."
+    },
+    {
+      "start": 4.28,
+      "end": 5.26,
+      "text": "Nami tests him."
+    },
+    {
+      "start": 5.26,
+      "end": 6.5,
+      "text": "Left means left."
+    },
+    {
+      "start": 6.5,
+      "end": 7.26,
+      "text": "Incredible."
+    },
+    {
+      "start": 7.26,
+      "end": 8.42,
+      "text": "Bro unlocked a feature available"
+    },
+    {
+      "start": 8.42,
+      "end": 9.98,
+      "text": "on most shopping carts."
+    },
+    {
+      "start": 9.98,
+      "end": 11.44,
+      "text": "He reaches the meeting first."
+    },
+    {
+      "start": 11.44,
+      "end": 12.58,
+      "text": "Then the enemy base."
+    },
+    {
+      "start": 12.58,
+      "end": 13.32,
+      "text": "Then the problem."
+    },
+    {
+      "start": 13.32,
+      "end": 14.5,
+      "text": "His crew isn't there."
+    },
+    {
+      "start": 14.5,
+      "end": 16.02,
+      "text": "Early doesn't mean invincible."
+    },
+    {
+      "start": 16.02,
+      "end": 17.12,
+      "text": "He's inside an ambush with"
+    },
+    {
+      "start": 17.12,
+      "end": 18.64,
+      "text": "three swords and zero emotional"
+    },
+    {
+      "start": 18.64,
+      "end": 19.46252667356929,
+      "text": "support."
+    },
+    {
+      "start": 19.46252667356929,
+      "end": 20.6025,
+      "text": "Luffy is still causing trouble"
+    },
+    {
+      "start": 20.6025,
+      "end": 21.6625,
+      "text": "elsewhere."
+    },
+    {
+      "start": 21.6625,
+      "end": 23.1025,
+      "text": "We fixed navigation, not the"
+    },
+    {
+      "start": 23.1025,
+      "end": 24.822499999999998,
+      "text": "crew's relationship with planning."
+    },
+    {
+      "start": 24.822499999999998,
+      "end": 26.5625,
+      "text": "Zoro spots extra guards."
+    },
+    {
+      "start": 26.5625,
+      "end": 27.3625,
+      "text": "This time he knows how"
+    },
+    {
+      "start": 27.3625,
+      "end": 28.8425,
+      "text": "far away his backup is."
+    },
+    {
+      "start": 28.8425,
+      "end": 29.7225,
+      "text": "So he retreats and marks"
+    },
+    {
+      "start": 29.7225,
+      "end": 31.002499999999998,
+      "text": "the approach."
+    },
+    {
+      "start": 31.002499999999998,
+      "end": 32.8625,
+      "text": "Character development arrives wearing earrings"
+    },
+    {
+      "start": 32.8625,
+      "end": 34.542500000000004,
+      "text": "and refusing eye contact."
+    },
+    {
+      "start": 34.542500000000004,
+      "end": 36.2825,
+      "text": "He warns Nami. They pick a better route"
+    },
+    {
+      "start": 36.2825,
+      "end": 37.542500000000004,
+      "text": "and arrive together."
+    },
+    {
+      "start": 37.542500000000004,
+      "end": 38.7425,
+      "text": "The enemies lose their easiest"
+    },
+    {
+      "start": 38.7425,
+      "end": 39.61547855032369,
+      "text": "advantage."
+    },
+    {
+      "start": 39.61547855032369,
+      "end": 40.5555,
+      "text": "Now he fights with cover"
+    },
+    {
+      "start": 40.5555,
+      "end": 41.9355,
+      "text": "instead of auditioning for a"
+    },
+    {
+      "start": 41.9355,
+      "end": 43.4555,
+      "text": "cautionary flashback."
+    },
+    {
+      "start": 43.4555,
+      "end": 44.9955,
+      "text": "Timing beats stubbornness here."
+    },
+    {
+      "start": 44.9955,
+      "end": 46.8155,
+      "text": "He still argues with instructions."
+    },
+    {
+      "start": 46.8155,
+      "end": 47.9755,
+      "text": "His complaints reach the correct"
+    },
+    {
+      "start": 47.9755,
+      "end": 48.695499999999996,
+      "text": "address."
+    },
+    {
+      "start": 48.695499999999996,
+      "end": 50.1155,
+      "text": "Nami buys a compass."
+    },
+    {
+      "start": 50.1155,
+      "end": 51.155499999999996,
+      "text": "Zoro asks if it comes"
+    },
+    {
+      "start": 51.155499999999996,
+      "end": 52.3955,
+      "text": "in sword form."
+    },
+    {
+      "start": 52.3955,
+      "end": 54.6355,
+      "text": "Navigation needs a damage stat, apparently."
+    },
+    {
+      "start": 54.6355,
+      "end": 56.195499999999996,
+      "text": "They finally travel together."
+    },
+    {
+      "start": 56.195499999999996,
+      "end": 57.2155,
+      "text": "Luffy points toward the wrong"
+    },
+    {
+      "start": 57.2155,
+      "end": 58.2955,
+      "text": "island."
+    },
+    {
+      "start": 58.2955,
+      "end": 58.9955,
+      "text": "Excellent."
+    },
+    {
+      "start": 58.9955,
+      "end": 60.9755,
+      "text": "The navigation disease found another host."
+    }
+  ],
+  "script_token_agreement": null,
+  "independent_recognition_accuracy": null,
+  "zero_duration_words": 8,
+  "review_names_required": true
+}

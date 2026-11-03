@@ -1,0 +1,11 @@
+{
+  "branch": "codex/results/ifverse-anime-zoro-perfect-directions-01",
+  "commit": "aa5cb6a4f3ac4864291801935192d98c9e892653",
+  "reused_source_keys": [
+    "zoro",
+    "fight",
+    "nami",
+    "luffy"
+  ],
+  "new_source_searches_avoided": 4
+}
