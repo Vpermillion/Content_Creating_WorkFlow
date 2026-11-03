@@ -1,9 +1,12 @@
 import copy
+import hashlib
 import json
 from pathlib import Path
 import tempfile
+import shutil
 import unittest
 from unittest.mock import patch
+from unittest.mock import Mock
 
 from scripts import render_anime_batch as batch
 from whatif.topics import topic_record
@@ -39,6 +42,30 @@ class AnimeBatchTests(unittest.TestCase):
             receipt=json.loads((Path(temp)/'sources.json').read_text())
             self.assertEqual(receipt['results'][0]['asset']['id'],'good')
             self.assertEqual(len(receipt['results'][1]['attempts']),2)
+
+    def test_voice_reuse_does_not_precreate_ci_result_destination(self):
+        scenes=[{'text':'An offline generated fixture.'}]
+        from whatif.topics import script_hash
+        sha='a'*40;audio=b'generated fixture bytes'
+        episode={'id':'episode','scenes':scenes,'sources':[],
+                 'reuse_result':{'branch':'codex/results/episode-r2','commit':sha,'script_sha256':script_hash(scenes)}}
+        narration={'voice':'am_michael','segments':scenes,'sha256':hashlib.sha256(audio).hexdigest()}
+        records={'batch-result.json':{'script_sha256':script_hash(scenes)},
+                 'source-review/sources.json':{'results':[]},'production/narration.json':narration,
+                 'production/transcription.json':{}}
+        def command(args,**kwargs):
+            if args[1]=='rev-parse':return sha+'\n'
+            key=args[2].split(':artifacts/episode/',1)[1]
+            return audio if key=='production/narration.wav' else json.dumps(records[key]).encode()
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);out=root/'private/output'
+            with patch.object(batch,'ROOT',root),patch.object(batch.subprocess,'check_output',side_effect=command),patch.object(batch.subprocess,'run',return_value=Mock(returncode=0)):
+                batch.previous_assets(episode,out)
+            target=root/'artifacts/episode'
+            self.assertFalse(target.exists())
+            self.assertEqual((root/'artifacts/.retained-batch-voices/episode/narration.wav').read_bytes(),audio)
+            shutil.copytree(out,target)
+            self.assertTrue((target/'reuse-receipt.json').exists())
 
     def test_invalid_cue_and_already_published_reservation_fail_before_render(self):
         original=self.load_fixture_batch()

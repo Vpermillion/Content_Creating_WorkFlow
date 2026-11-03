@@ -110,7 +110,8 @@ def previous_assets(episode, output):
         narration = json.loads(read('production/narration.json'))
         if narration['voice'] != 'am_michael' or [s['text'] for s in narration['segments']] != [s['text'] for s in episode['scenes']]:
             raise ValueError('Retained voice receipt belongs to different speech')
-        retained = ROOT / 'artifacts' / episode['id'] / 'retained'
+        # Keep input reuse separate from the result destination copied by CI.
+        retained = ROOT / 'artifacts' / '.retained-batch-voices' / episode['id']
         retained.mkdir(parents=True, exist_ok=True)
         for name in ('narration.wav','narration.json','transcription.json'):
             (retained/name).write_bytes(read('production/'+name))
