@@ -51,6 +51,43 @@ python -m whatif.youtube_publish verify --expected-channel-id UCpB_wi5MlernpSJxU
 
 The owner completes Google's consent screen for `@ifverse_anime`. The verify command checks the saved grant against the live YouTube channel endpoint and reports the channel ID. It performs no upload. `status` reports cached identity only. Once verification passes, follow [the Actions configuration](AUTOMATION.md#one-time-upload-connection-setup) to store the connection and journal key as repository secrets. A verified grant is separate from a successful public upload.
 
+## Run the cross-platform scheduler
+
+The optional [publishing command](../scripts/publishing_dashboard.py) hands scheduled jobs to Zernio so it can publish with the PC off. The local HTML dashboard shows connected accounts, due times and provider-reported results. OAuth is completed on the provider consent pages, scheduling is submitted from the CLI, and the HTML is a status view. The existing direct YouTube uploader is available separately. [Provider platform support](https://docs.zernio.com/platforms) · [Provider pricing](https://docs.zernio.com/pricing)
+
+1. From the branch checkout, use Python 3.10 or later with `ffprobe` on PATH. Use one Zernio profile for Ifverse Anime. Provide `ZERNIO_API_KEY` and `ZERNIO_PROFILE_ID` privately in the process environment.
+2. Run `python scripts/publishing_dashboard.py connect PLATFORM`, using `youtube`, `facebook`, `tiktok`, `instagram` or `snapchat`. Open the returned URL privately and authorize the intended account yourself. The URLs are temporary authorization links. Confirm the chosen Page or Public Profile when prompted. Recheck the connections with `python scripts/publishing_dashboard.py accounts`.
+3. Copy the shape below into ignored `private/publishing/reviewed.json`. Bind each target to the verified account ID and username from the account listing. Confirm the exact reviewed media and caption. Facebook Reels and Snapchat Spotlight need a separate export of 60 seconds or less for the current 61-second masters. Save that variant under `artifacts/` and record its SHA-256 in the review. Keep the current master hash from the topic registry. For TikTok, provide a `tiktok` object with creator-selected `privacy_level`, boolean `allow_comment`, `allow_duet` and `allow_stitch`, and `commercialContentType` of `none`, `brand_organic` or `brand_content`. Set `content_preview_confirmed` and `express_consent_given` true only after the owner previews the exact cut and expressly consents to the TikTok upload.
+4. Run `python scripts/publishing_dashboard.py schedule private/publishing/reviewed.json --submit`. One manifest can contain a single job or an array for the same episode and up to five different destinations. The command transfers reviewed media to the provider and schedules each valid destination. A failed destination is reported separately. Use an explicit offset for each scheduled time and leave at least five minutes for processing.
+5. Run `python scripts/publishing_dashboard.py dashboard --refresh` and open the generated `private/publishing/dashboard.html`. Without `--refresh` it renders the local queue without contacting the provider. Verify the actual destination before recording a public receipt in the topic registry.
+
+```json
+{
+  "brand": "ifverse_anime",
+  "episode": "TOPIC_ID",
+  "platform": "facebook",
+  "account_id": "PROVIDER_ACCOUNT_ID",
+  "expected_username": "CONFIRMED_PAGE_USERNAME",
+  "scheduled_for": "2027-01-01T19:00:00+08:00",
+  "video": "artifacts/EPISODE/approved-reel.mp4",
+  "master_sha256": "SELECTED_MASTER_SHA256",
+  "video_sha256": "EXACT_UPLOAD_SHA256",
+  "title": "Reviewed episode title",
+  "caption": "Reviewed caption",
+  "review": {
+    "source_use": "pending",
+    "audiovisual": "pending",
+    "reviewed_by": null,
+    "evidence": null,
+    "approved_video_sha256": null,
+    "audience": null,
+    "synthetic_disclosure": null
+  }
+}
+```
+
+Preserve `private/publishing/posts.sqlite3`. A submission with an uncertain result stays blocked locally. Look up the matching post in the provider queue before doing anything else. A provider status of published is not evidence of public visibility by itself. The current batch still needs owner and source-use review, and no live credentials or uploads were used to test this adapter. Snapchat requires provider beta approval. [Snapchat provider requirements](https://docs.zernio.com/platforms/snapchat)
+
 ## Maintenance in GitHub
 
 Use the [maintenance issue template](../.github/ISSUE_TEMPLATE/platform-maintenance.md) for one account/platform. Update the JSON and this table through a normal commit/PR when evidence changes. Keep account existence, OAuth, integration support and actual publication independent. Each has its own verification date; unknown dates stay null. Do not mark all accounts connected because one platform works.
