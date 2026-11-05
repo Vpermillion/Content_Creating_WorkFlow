@@ -37,11 +37,11 @@ class PublishingDashboardTests(unittest.TestCase):
                          'reviewed_by': 'owner', 'evidence': 'review note', 'synthetic_disclosure': False,
                          'audience': 'not_made_for_kids'}}
         self.provider = Mock()
-        self.provider.accounts.return_value = [{'_id': 'a' * 24, 'platform': 'facebook', 'username': 'ifverse'}]
-        self.provider.upload.return_value = 'https://media.example/clip.mp4'
-        self.provider.api.return_value = {'post': {'_id': 'b' * 24, 'status': 'scheduled',
-                                                   'platforms': [{'platform': 'facebook', 'status': 'pending',
-                                                                  'accountId': 'a' * 24}]}}
+        self.provider.publish.return_value = ('submitted', '12345', None)
+        provider = patch.object(publish.direct, 'client', return_value=self.provider)
+        provider.start()
+        self.addCleanup(provider.stop)
+        self.now = datetime.now(timezone.utc) + timedelta(hours=2)
         self.set_duration(59.9)
 
     def save_topic(self):
@@ -54,47 +54,92 @@ class PublishingDashboardTests(unittest.TestCase):
         patcher.start()
         self.addCleanup(patcher.stop)
 
-    def schedule(self):
-        return publish.schedule(self.db, self.root, self.item, self.provider)
+    def queue(self):
+        return publish.enqueue(self.db, self.root, self.item)
 
-    def test_schedules_reel_and_shows_it_in_dashboard(self):
-        self.assertEqual(self.schedule(), 'b' * 24)
-        endpoint, payload, operation = self.provider.api.call_args.args
-        self.assertEqual(endpoint, 'posts')
-        self.assertTrue(operation)
-        self.assertEqual(payload['platforms'][0]['platformSpecificData']['contentType'], 'reel')
-        self.assertEqual(payload['mediaItems'][0]['url'], 'https://media.example/clip.mp4')
-        out = self.root / 'queue.html'
-        publish.dashboard(self.db, out, self.provider.accounts())
-        html = out.read_text(encoding='utf-8')
-        self.assertIn('scheduled', html)
-        self.assertNotIn('media.example', html)
-        self.assertIn('Snapchat', html)
+    def worker(self):
+        return publish.run_due(self.db, self.root, self.now)
 
-    def test_uncertain_result_blocks_duplicate_submission(self):
-        self.provider.api.side_effect = TimeoutError()
-        with self.assertRaises(TimeoutError):
-            self.schedule()
-        with self.assertRaisesRegex(publish.PublishingError, 'job already exists'):
-            self.schedule()
-        self.provider.upload.assert_called_once()
-        self.provider.api.assert_called_once()
+    def test_future_job_waits_then_submits_once(self):
+        self.assertEqual(self.queue(), 1)
+        self.assertEqual(publish.run_due(self.db, self.root, datetime.now(timezone.utc)), [])
+        self.assertEqual(self.worker()[0]['status'], 'submitted')
+        self.assertEqual(self.worker(), [])
+        self.provider.publish.assert_called_once()
+        self.provider.verify.assert_called_once_with(self.item['account_id'])
+        with self.assertRaisesRegex(publish.PublishingError, 'already has a job'):
+            self.queue()
 
-    def test_sixty_one_second_reel_never_uploads(self):
+    def test_uncertain_post_is_never_automatically_retried(self):
+        self.queue()
+        self.provider.publish.side_effect = TimeoutError()
+        self.assertEqual(self.worker()[0]['status'], 'needs_reconciliation')
+        self.assertEqual(self.worker(), [])
+        self.provider.publish.assert_called_once()
+
+    def test_sixty_one_second_facebook_reel_never_uploads(self):
+        self.queue()
         self.set_duration(61)
-        with self.assertRaisesRegex(publish.PublishingError, '60 second'):
-            self.schedule()
-        self.provider.upload.assert_not_called()
+        self.assertEqual(self.worker()[0]['status'], 'awaiting_setup_or_review')
+        self.provider.publish.assert_not_called()
 
-    def test_pending_owner_decision_never_uploads(self):
+    def test_review_is_rechecked_at_dispatch(self):
+        self.queue()
         self.topic['owner_topic_choice']['status'] = 'pending_owner_choice'
         self.save_topic()
-        with self.assertRaisesRegex(publish.PublishingError, 'owner decision'):
-            self.schedule()
-        self.provider.upload.assert_not_called()
+        self.assertEqual(self.worker()[0]['status'], 'awaiting_setup_or_review')
+        self.provider.publish.assert_not_called()
 
-    def test_wrong_account_never_uploads(self):
-        self.item['expected_username'] = 'different'
-        with self.assertRaisesRegex(publish.PublishingError, 'Connected account'):
-            self.schedule()
-        self.provider.upload.assert_not_called()
+    def test_tiktok_appears_as_manual_in_dashboard(self):
+        self.item['platform'] = 'tiktok'
+        self.queue()
+        self.assertEqual(self.worker()[0]['status'], 'manual_action_required')
+        out = self.root / 'dashboard.html'
+        publish.dashboard(self.db, out, None)
+        self.assertIn('Open TikTok Studio', out.read_text(encoding='utf-8'))
+        self.provider.publish.assert_not_called()
+
+    def test_instagram_resumes_processing_container(self):
+        self.item['platform'] = 'instagram'
+        self.queue()
+        self.provider.publish.return_value = ('processing', '12345', None)
+        self.provider.finish_instagram.return_value = ('submitted', '67890', None)
+        self.assertEqual(self.worker()[0]['status'], 'processing')
+        self.assertEqual(self.worker()[0]['status'], 'submitted')
+        self.assertEqual(self.provider.finish_instagram.call_args.args[0], '12345')
+        self.provider.publish.assert_called_once()
+
+    def test_provider_status_supplies_post_link(self):
+        self.queue()
+        self.worker()
+        self.provider.status.return_value = ('published', '/reel/12345')
+        publish.refresh(self.db)
+        row = self.db.execute('SELECT status, url FROM posts').fetchone()
+        self.assertEqual(tuple(row), ('published', 'https://www.facebook.com/reel/12345'))
+
+
+class DirectClientsTests(unittest.TestCase):
+    def test_facebook_upload_stays_on_meta_and_uses_same_video_id(self):
+        with patch.dict(publish.os.environ, {'IFVERSE_FB_PAGE_ID': '42', 'IFVERSE_FB_PAGE_TOKEN': 'fixture',
+                                           'IFVERSE_META_GRAPH_VERSION': 'v25.0'}):
+            client = publish.direct.Meta('facebook')
+        checkpoint = Mock()
+        with patch.object(publish.direct, 'request', side_effect=[
+                {'id': '42', 'name': 'Ifverse'},
+                {'video_id': '12345', 'upload_url': 'https://rupload.facebook.com/video-upload/v25.0/12345'},
+                {'success': True}, {'success': True}]) as request:
+            self.assertEqual(client.verify('42'), 'Ifverse')
+            self.assertEqual(client.publish({'title': 'Title', 'caption': 'Caption'}, b'video', checkpoint),
+                             ('submitted', '12345', None))
+        self.assertEqual(request.call_args_list[2].args[2], b'video')
+        self.assertIn(b'video_id=12345', request.call_args_list[3].args[2])
+        checkpoint.assert_called_with('finishing_video_id', '12345')
+
+    def test_rejects_foreign_upload_host_before_sending_credentials(self):
+        with patch.dict(publish.os.environ, {'IFVERSE_FB_PAGE_ID': '42', 'IFVERSE_FB_PAGE_TOKEN': 'fixture',
+                                           'IFVERSE_META_GRAPH_VERSION': 'v25.0'}):
+            client = publish.direct.Meta('facebook')
+        with patch.object(publish.direct, 'request') as request:
+            with self.assertRaisesRegex(publish.PublishingError, 'Unexpected Meta upload URL'):
+                client.upload_bytes('https://untrusted.example/video-upload/12345', '12345', b'video', 'video-upload')
+            request.assert_not_called()
