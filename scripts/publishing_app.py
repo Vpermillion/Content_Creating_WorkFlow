@@ -1,6 +1,5 @@
 """Local Ifverse controls for OAuth, reviewed schedules and publishing status."""
 from concurrent.futures import ThreadPoolExecutor
-import json
 import os
 from pathlib import Path
 import subprocess
@@ -19,13 +18,18 @@ def build(root):
     panel = ttk.Frame(root, padding=22)
     panel.pack(fill='both', expand=True)
     ttk.Label(panel, text='Ifverse Publishing', font=('Segoe UI', 22, 'bold')).pack(anchor='w')
-    ttk.Label(panel, text='Connect your channels, submit a reviewed schedule and track each destination.').pack(anchor='w', pady=(4, 18))
+    ttk.Label(panel, text='Verify channels, queue reviewed schedules and track each destination.').pack(anchor='w', pady=(4, 18))
 
     toolbar = ttk.Frame(panel)
     toolbar.pack(fill='x')
     platform = tk.StringVar(value=publishing.PLATFORMS[0])
     destination = ttk.Combobox(toolbar, state='readonly', values=publishing.PLATFORMS, textvariable=platform, width=13)
     destination.pack(side='left', padx=(0, 8))
+    account = tk.StringVar()
+    ttk.Label(toolbar, text='Account ID').pack(side='left', padx=(0, 5))
+    ttk.Entry(toolbar, textvariable=account, width=26).pack(side='left', padx=(0, 8))
+    actions = ttk.Frame(panel)
+    actions.pack(fill='x', pady=(10, 0))
     status = tk.StringVar(value='Ready')
     ttk.Label(panel, textvariable=status).pack(anchor='w', pady=(12, 6))
     console = tk.Text(panel, height=18, wrap='word', state='disabled', font=('Consolas', 10))
@@ -70,45 +74,29 @@ def build(root):
 
         root.after(100, receive)
 
-    def open_consent(url, _warnings):
-        if publishing.https(url):
-            webbrowser.open(url)
-            show('Complete provider consent in Chrome, then select Check accounts.')
-        else:
-            show('No valid provider consent URL was returned.')
-
-    def accounts(text, _warnings):
-        rows = json.loads(text)
-        lines = ['Connected accounts for the configured publishing profile', '']
-        for destination in publishing.PLATFORMS:
-            matches = [row for row in rows if row['platform'] == destination]
-            label = ', '.join(f"{row['username']}  •  {row['_id']}" for row in matches)
-            lines.append(f'{destination.title():12} {label or "No active connection"}')
-        show('\n'.join(lines))
-
     def schedule():
         path = filedialog.askopenfilename(title='Choose the reviewed publishing manifest',
                                           filetypes=[('JSON manifest', '*.json')], parent=root)
         if not path:
             return
         approved = messagebox.askyesno('Submit reviewed schedule',
-            'Send the reviewed videos and captions in this manifest to Zernio for scheduled publication?',
+            'Queue these reviewed destinations? The repository worker will publish supported jobs when due.',
             parent=root)
         if approved:
-            run(['schedule', path, '--submit'])
+            run(['queue', path])
 
     def open_dashboard(path, warnings):
         webbrowser.open(Path(path).as_uri())
         show(warnings or 'Opened the dashboard with the latest provider status.')
 
     for label, action in (
-        ('Connect', lambda: run(['connect', platform.get()], open_consent)),
-        ('Check accounts', lambda: run(['accounts'], accounts)),
-        ('Submit schedule', schedule),
+        ('Check account', lambda: run(['verify', platform.get(), account.get()])),
+        ('Queue reviewed manifest', schedule),
+        ('Run due jobs', lambda: run(['run-due'])),
         ('Open live status', lambda: run(['dashboard', '--refresh'], open_dashboard)),
         ('Open local queue', lambda: run(['dashboard'], open_dashboard)),
     ):
-        button = ttk.Button(toolbar, text=label, command=action)
+        button = ttk.Button(actions, text=label, command=action)
         button.pack(side='left', padx=(0, 7))
         buttons.append(button)
 
@@ -117,8 +105,8 @@ def build(root):
         root.destroy()
 
     root.protocol('WM_DELETE_WINDOW', close)
-    show('Choose a destination and select Connect. Complete the provider consent screen to grant access.\n\n'
-         'Submit a reviewed JSON manifest to schedule a video. Open the local queue any time.')
+    show('Configure direct platform credentials privately using the repository setup guide. Select a destination and enter its ID to check access.\n\n'
+         'Queue a reviewed JSON manifest to schedule a video. Use Run due jobs or start the watch worker.')
 
 
 if __name__ == '__main__':
