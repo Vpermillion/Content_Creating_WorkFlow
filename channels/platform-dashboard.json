@@ -8,10 +8,10 @@
     {
       "brand": "ifverse_anime",
       "platform": "youtube",
-      "account_existence": "unverified",
-      "public_handle": null,
-      "public_account_id": null,
-      "account_verified_at": null,
+      "account_existence": "verified",
+      "public_handle": "@ifverse_anime",
+      "public_account_id": "UCpB_wi5MlernpSJxUf7zWcw",
+      "account_verified_at": "2026-11-05",
       "oauth_connection": "not_verified",
       "oauth_verified_at": null,
       "integration_support": "upload_code_exists_live_path_unverified",
@@ -19,8 +19,6 @@
       "last_publication_verified_at": null,
       "publication_receipts": [],
       "pending_tasks": [
-        "Owner creates or confirms account privately",
-        "Record public handle and stable ID with verification date",
         "Connect OAuth privately and verify correct account/scopes",
         "Approve topic, script, audiovisual and source use",
         "Verify platform integration and upload settings before any posting"
@@ -45,7 +43,12 @@
         "Connect OAuth privately and verify correct account/scopes",
         "Approve topic, script, audiovisual and source use",
         "Verify platform integration and upload settings before any posting"
-      ]
+      ],
+      "browser_observation": {
+        "public_handle": "@ifverse_anime",
+        "observed_on": "2026-11-05",
+        "evidence": "Chrome tab title"
+      }
     },
     {
       "brand": "ifverse_anime",
@@ -215,5 +218,19 @@
         "Verify platform integration and upload settings before any posting"
       ]
     }
-  ]
+  ],
+  "browser_inventory": {
+    "observed_on": "2026-11-05",
+    "source": "Local Google Chrome tab strip",
+    "required_destinations": [
+      "youtube",
+      "facebook",
+      "tiktok",
+      "instagram",
+      "snapchat"
+    ],
+    "duplicate_tabs": {
+      "snapchat": 3
+    }
+  }
 }
