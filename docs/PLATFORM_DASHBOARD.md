@@ -2,15 +2,15 @@
 
 [Editable status data](../channels/platform-dashboard.json) · [Topic choices](TOPIC_REVIEW_BOARD.md) · [Current batch](BATCH_61S.md)
 
-The local Chrome check verified the YouTube account shown below. OAuth connections and public posts still need provider verification. YouTube upload code exists; its presence does not establish a connected account or a successful upload. Other publishing integrations are not established.
+The local Chrome check verified the YouTube account shown below. OAuth connections and public posts still need provider verification. YouTube upload code exists; its presence does not establish a connected account or a successful upload. The repository has direct Meta and Snap adapters with live verification pending.
 
 | Brand | Platform | Account exists | Public handle / ID | OAuth | Integration | Publishing |
 | --- | --- | --- | --- | --- | --- | --- |
 | ifverse_anime | YouTube | Verified in Chrome | `@ifverse_anime` / `UCpB_wi5MlernpSJxUf7zWcw` | Unverified | Upload code; live path unverified | Blocked |
-| ifverse_anime | TikTok | Control unverified | `@ifverse_anime` (visible tab) | Unverified | Not established | Blocked |
-| ifverse_anime | Instagram | Unverified | Unknown | Unverified | Not established | Blocked |
-| ifverse_anime | Facebook | Unverified | Unknown | Unverified | Not established | Blocked |
-| ifverse_anime | Snapchat | Unverified | Unknown | Unverified | Not established | Blocked |
+| ifverse_anime | TikTok | Control unverified | `@ifverse_anime` (visible tab) | Unverified | Manual Studio step | Owner action required |
+| ifverse_anime | Instagram | Unverified | Unknown | Unverified | Direct adapter; live test pending | Blocked |
+| ifverse_anime | Facebook | Unverified | Unknown | Unverified | Direct adapter; live test pending | Blocked |
+| ifverse_anime | Snapchat | Unverified | Unknown | Unverified | Direct adapter; allowlisting required | Blocked |
 | ifverse_hollywood | YouTube | Unverified | Unknown | Unverified | Upload code; brand setup pending | Blocked |
 | ifverse_hollywood | TikTok | Unverified | Unknown | Unverified | Not established | Blocked |
 | ifverse_hollywood | Instagram | Unverified | Unknown | Unverified | Not established | Blocked |
@@ -34,10 +34,10 @@ Each destination needs its own verified account identity and publishing authoriz
 | Destination | Authorization to verify |
 | --- | --- |
 | YouTube Shorts | Enable YouTube Data API v3 in the owner's Google Cloud project, create a Desktop OAuth client and grant `youtube.readonly` and `youtube.upload` for the verified `@ifverse_anime` channel. [Google OAuth guide](https://developers.google.com/youtube/data/guides/auth/installed-apps) |
-| Facebook Reels | Identify the intended Facebook Page and authorize Reel publishing to that Page through Meta or an approved publisher. Verify the Page ID. [Meta Reels publishing](https://developers.facebook.com/docs/video-api/guides/reels-publishing/) |
+| Facebook Reels | Identify the intended Facebook Page and authorize Reel publishing to that Page through Meta. Verify the Page ID. [Meta Reels publishing](https://developers.facebook.com/docs/video-api/guides/reels-publishing/) |
 | Instagram Reels | Confirm the intended professional account. With Instagram Login, authorize `instagram_business_basic` and `instagram_business_content_publish`. Verify the returned Instagram account ID. [Meta Instagram API](https://developers.facebook.com/docs/instagram-platform/content-publishing/) |
-| TikTok | Use an audited publishing integration that supports creator consent. TikTok's Direct Post guidelines rule out a private utility for accounts managed by its own team. [TikTok Direct Post guidelines](https://developers.tiktok.com/docs/en/content-sharing-guidelines) |
-| Snapchat Spotlight | Authorize publishing to the intended Public Profile through an allowlisted app or approved partner. Verify the profile ID and posting access. [Snap Public Profile setup](https://developers.snap.com/marketing-api/Public-Profile-API/GetStarted) |
+| TikTok | Use TikTok Studio for this private workflow. TikTok's Direct Post guidelines rule out a private utility for accounts managed by its own team. [TikTok Direct Post guidelines](https://developers.tiktok.com/docs/en/content-sharing-guidelines) |
+| Snapchat Spotlight | Authorize publishing to the intended Public Profile through an allowlisted app. Verify the profile ID and posting access. [Snap Public Profile setup](https://developers.snap.com/marketing-api/Public-Profile-API/GetStarted) |
 
 ### Connect and verify YouTube
 
@@ -51,23 +51,28 @@ python -m whatif.youtube_publish verify --expected-channel-id UCpB_wi5MlernpSJxU
 
 The owner completes Google's consent screen for `@ifverse_anime`. The verify command checks the saved grant against the live YouTube channel endpoint and reports the channel ID. It performs no upload. `status` reports cached identity only. Once verification passes, follow [the Actions configuration](AUTOMATION.md#one-time-upload-connection-setup) to store the connection and journal key as repository secrets. A verified grant is separate from a successful public upload.
 
-## Run the cross-platform scheduler
+## Run the repository-owned queue
 
-The optional [publishing command](../scripts/publishing_dashboard.py) hands scheduled jobs to Zernio so it can publish with the PC off. The local HTML dashboard shows connected accounts, due times and provider-reported results. Open the desktop control panel with `python scripts/publishing_app.py` to start OAuth in your browser, check accounts, select a reviewed manifest, and open the dashboard. The CLI commands below provide the same operations for automation. The existing direct YouTube uploader is available separately. [Provider platform support](https://docs.zernio.com/platforms) · [Provider pricing](https://docs.zernio.com/pricing)
+Run `python scripts/publishing_app.py` for the desktop controls. Use Python 3.10 or later with Tk and `ffprobe`. The [queue worker](../scripts/publishing_dashboard.py) runs on a machine you control and sends uploads directly to each platform. There is no publishing service subscription. The existing YouTube uploader requires a Linux environment with POSIX permissions and an authenticated checkout.
 
-1. From the branch checkout, use Python 3.10 or later with `ffprobe` on PATH. Use one Zernio profile for Ifverse Anime. Provide `ZERNIO_API_KEY` and `ZERNIO_PROFILE_ID` privately in the process environment.
-2. Run `python scripts/publishing_dashboard.py connect PLATFORM`, using `youtube`, `facebook`, `tiktok`, `instagram` or `snapchat`. Open the returned URL privately and authorize the intended account yourself. The URLs are temporary authorization links. Confirm the chosen Page or Public Profile when prompted. Recheck the connections with `python scripts/publishing_dashboard.py accounts`.
-3. Copy the shape below into ignored `private/publishing/reviewed.json`. Bind each target to the verified account ID and username from the account listing. Confirm the exact reviewed media and caption. Facebook Reels and Snapchat Spotlight need a separate export of 60 seconds or less for the current 61-second masters. Save that variant under `artifacts/` and record its SHA-256 in the review. Keep the current master hash from the topic registry. For TikTok, provide a `tiktok` object with creator-selected `privacy_level`, boolean `allow_comment`, `allow_duet` and `allow_stitch`, and `commercialContentType` of `none`, `brand_organic` or `brand_content`. Set `content_preview_confirmed` and `express_consent_given` true only after the owner previews the exact cut and expressly consents to the TikTok upload.
-4. Run `python scripts/publishing_dashboard.py schedule private/publishing/reviewed.json --submit`. One manifest can contain a single job or an array for the same episode and up to five different destinations. The command transfers reviewed media to the provider and schedules each valid destination. A failed destination is reported separately. Use an explicit offset for each scheduled time and leave at least five minutes for processing.
-5. Run `python scripts/publishing_dashboard.py dashboard --refresh` and open the generated `private/publishing/dashboard.html`. Without `--refresh` it renders the local queue without contacting the provider. Verify the actual destination before recording a public receipt in the topic registry.
+| Destination | Queue behavior | Private setup |
+| --- | --- | --- |
+| YouTube Shorts | Calls the existing reviewed batch uploader for one episode and uses its resumable journal and receipt. | Set `IFVERSE_ANIME_CHANNEL_ID` and complete the direct YouTube connection above. |
+| Facebook Reels | Verifies the intended Page, uploads the reviewed MP4 directly to Meta and checks the Reel status. | Set `IFVERSE_FB_PAGE_ID`, `IFVERSE_FB_PAGE_TOKEN` and the app's `IFVERSE_META_GRAPH_VERSION`. Grant Page publishing access. |
+| Instagram Reels | Verifies the professional account, uploads the MP4 to Meta's resumable container and publishes once processing finishes. | Set `IFVERSE_IG_ID`, `IFVERSE_IG_TOKEN` and `IFVERSE_META_GRAPH_VERSION`. Use Instagram Login with the publishing grant. |
+| Snapchat Spotlight | Encrypts the MP4, uploads it directly to Snap and tracks the Spotlight through moderation. | Install `cryptography`. Obtain app allowlisting and profile publishing access, then supply `IFVERSE_SNAP_PROFILE_ID` and a valid `IFVERSE_SNAP_ACCESS_TOKEN`. |
+| TikTok | Shows a manual action and opens TikTok Studio at the scheduled step. | Complete the post in TikTok Studio. TikTok excludes private utilities for accounts your team manages from Direct Post. |
+
+Keep tokens in the worker's private environment. Meta and Snap credentials come from the owner-controlled developer apps. Keep tokens current according to each provider's expiry and renewal rules. The repository checks the supplied account before writing. Use **Check account** or `python scripts/publishing_dashboard.py verify PLATFORM ACCOUNT_ID`. The Facebook and Snapchat destinations need separately reviewed vertical exports of 60 seconds or less from the 61-second masters. [Meta Facebook Reels API](https://www.postman.com/meta/facebook/documentation/r56bjfd/facebook-api) · [Meta Instagram Content Publishing](https://developers.facebook.com/docs/instagram-platform/content-publishing/) · [Snap Public Profile setup](https://developers.snap.com/marketing-api/Public-Profile-API/GetStarted) · [TikTok guidelines](https://developers.tiktok.com/docs/en/content-sharing-guidelines)
+
+Put one destination or an array of up to five distinct destinations for one episode in an ignored `private/publishing/reviewed.json`. This example is a shape only. Use the actual owner decision, exact artifact hashes and review evidence before queueing.
 
 ```json
 {
   "brand": "ifverse_anime",
   "episode": "TOPIC_ID",
   "platform": "facebook",
-  "account_id": "PROVIDER_ACCOUNT_ID",
-  "expected_username": "CONFIRMED_PAGE_USERNAME",
+  "account_id": "CONFIRMED_PAGE_ID",
   "scheduled_for": "2027-01-01T19:00:00+08:00",
   "video": "artifacts/EPISODE/approved-reel.mp4",
   "master_sha256": "SELECTED_MASTER_SHA256",
@@ -86,7 +91,17 @@ The optional [publishing command](../scripts/publishing_dashboard.py) hands sche
 }
 ```
 
-Preserve `private/publishing/posts.sqlite3`. A submission with an uncertain result stays blocked locally. Look up the matching post in the provider queue before doing anything else. A provider status of published is not evidence of public visibility by itself. The current batch still needs owner and source-use review, and no live credentials or uploads were used to test this adapter. Snapchat requires provider beta approval. [Snapchat provider requirements](https://docs.zernio.com/platforms/snapchat)
+For a YouTube job use the same `brand`, `episode`, `platform`, `account_id` and `scheduled_for` fields. Supply `request` and `request_sha256` for a local one-episode reviewed manifest under `publish-requests/`. Leave the request uncommitted when using this queue so the separate push-triggered YouTube workflow does not also dispatch it.
+
+```sh
+python scripts/publishing_dashboard.py queue private/publishing/reviewed.json
+python scripts/publishing_dashboard.py watch
+python scripts/publishing_dashboard.py dashboard --refresh
+```
+
+The watch worker checks for due jobs once a minute and catches up when restarted. Keep the host awake while it runs. `run-due` handles one pass for an existing local scheduler. `dashboard` writes the local HTML view to `private/publishing/dashboard.html`. The desktop app can queue work and run one pass. Its window does not start a background worker automatically.
+
+Preserve `private/publishing/direct-posts.sqlite3`. If a send is interrupted after the worker claims it, verify the result in the platform's dashboard using the saved resource ID before attempting another upload. Jobs marked `working` or `needs_reconciliation` are held for that check. Provider acknowledgement alone is not public visibility. No live connection or upload was used in testing.
 
 ## Maintenance in GitHub
 
