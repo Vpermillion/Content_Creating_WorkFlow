@@ -260,10 +260,16 @@ def main():
     sub = p.add_subparsers(dest='operation', required=True)
     c = sub.add_parser('connect'); c.add_argument('--client-secrets', required=True); c.add_argument('--expected-channel-id', required=True)
     sub.add_parser('status')
+    verify = sub.add_parser('verify', help='Check the saved upload authorization without posting')
+    verify.add_argument('--expected-channel-id', required=True)
     args = p.parse_args(); store = yt.ConnectionStore(args.credentials_dir)
     try:
         if args.operation == 'connect':
             result = connect(store, args.client_secrets, args.expected_channel_id)
+        elif args.operation == 'verify':
+            with verified_session(store, args.expected_channel_id):
+                result = {'status': 'verified_upload_connection', 'live_checked': True,
+                          'channel_id': args.expected_channel_id, 'handle': '@ifverse_anime'}
         else:
             result = {'connections': store.cached(), 'live_checked': False,
                       'note': 'Cached identity only; publisher verifies scopes/channel at upload time'}
