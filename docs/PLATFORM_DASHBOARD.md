@@ -1,5 +1,7 @@
 # Platform maintenance dashboard
 
+[Multi-account publishing and GitHub Actions setup](SOCIAL_PUBLISHING.md) covers account aliases, private grants and hosted YouTube/Instagram jobs. The account picker and local queue use those aliases for new multi-account jobs. The single-account commands below remain available for existing jobs.
+
 [Editable status data](../channels/platform-dashboard.json) · [Topic choices](TOPIC_REVIEW_BOARD.md) · [Current batch](BATCH_61S.md)
 
 The local Chrome check verified the YouTube account shown below. OAuth connections and public posts still need provider verification. YouTube upload code exists; its presence does not establish a connected account or a successful upload. The repository has direct Meta and Snap adapters with live verification pending.

@@ -1,0 +1,28 @@
+name: Ifverse reviewed social publishing
+on:
+  push:
+    branches: [codex/ifverse-workflow]
+    paths: ['social-publish-requests/*.json']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install publishing dependencies
+        run: |
+          if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          python -m pip install --disable-pip-version-check -r requirements-youtube.txt
+      - name: Publish to the reviewed account
+        env:
+          PUSH_BEFORE: ${{ github.event.before }}
+          IFVERSE_PUBLISH_ACCOUNTS: ${{ secrets.IFVERSE_PUBLISH_ACCOUNTS }}
+        run: python -m scripts.publish_social --push-before "$PUSH_BEFORE" --publish

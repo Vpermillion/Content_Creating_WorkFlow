@@ -1,3 +1,7 @@
+## Multi-account publishing — 2026-11-11
+
+The draft adds named platform accounts and a GitHub Actions workflow for reviewed YouTube Shorts and Instagram Reels. See [account setup and request format](SOCIAL_PUBLISHING.md). Live consent, Actions secret setup and provider verification remain pending.
+
 ## Direct publishing implementation — 2026-11-05
 
 The [publishing dashboard](PLATFORM_DASHBOARD.md) documents the repository-owned queue and desktop controls for all five Chrome destinations. The worker uses direct YouTube, Meta and Snapchat integrations. TikTok stays in the queue as a manual Studio step. The worker is available but has not been enabled. Owner review, platform OAuth and a live verification pass remain pending. Snapchat also requires app allowlisting.

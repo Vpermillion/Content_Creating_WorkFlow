@@ -22,12 +22,11 @@ def build(root):
 
     toolbar = ttk.Frame(panel)
     toolbar.pack(fill='x')
-    platform = tk.StringVar(value=publishing.PLATFORMS[0])
-    destination = ttk.Combobox(toolbar, state='readonly', values=publishing.PLATFORMS, textvariable=platform, width=13)
+    aliases = tuple(sorted(publishing.accounts.registry(publishing.ROOT)))
+    account = tk.StringVar(value=aliases[0] if aliases else '')
+    ttk.Label(toolbar, text='Publishing account').pack(side='left', padx=(0, 5))
+    destination = ttk.Combobox(toolbar, state='readonly', values=aliases, textvariable=account, width=34)
     destination.pack(side='left', padx=(0, 8))
-    account = tk.StringVar()
-    ttk.Label(toolbar, text='Account ID').pack(side='left', padx=(0, 5))
-    ttk.Entry(toolbar, textvariable=account, width=26).pack(side='left', padx=(0, 8))
     actions = ttk.Frame(panel)
     actions.pack(fill='x', pady=(10, 0))
     status = tk.StringVar(value='Ready')
@@ -90,7 +89,7 @@ def build(root):
         show(warnings or 'Opened the dashboard with the latest provider status.')
 
     for label, action in (
-        ('Check account', lambda: run(['verify', platform.get(), account.get()])),
+        ('Check account', lambda: run(['verify-account', account.get()])),
         ('Queue reviewed manifest', schedule),
         ('Run due jobs', lambda: run(['run-due'])),
         ('Open live status', lambda: run(['dashboard', '--refresh'], open_dashboard)),
@@ -105,7 +104,7 @@ def build(root):
         root.destroy()
 
     root.protocol('WM_DELETE_WINDOW', close)
-    show('Configure direct platform credentials privately using the repository setup guide. Select a destination and enter its ID to check access.\n\n'
+    show('Register platform accounts in channels/publishing-accounts.json and configure their grants privately. Select an account to check access.\n\n'
          'Queue a reviewed JSON manifest to schedule a video. Use Run due jobs or start the watch worker.')
 
 

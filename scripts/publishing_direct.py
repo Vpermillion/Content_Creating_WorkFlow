@@ -42,15 +42,20 @@ def numeric_id(value):
 
 
 class Meta:
-    def __init__(self, platform):
+    def __init__(self, platform, account=None, config=None):
         prefix = 'IFVERSE_FB_PAGE' if platform == 'facebook' else 'IFVERSE_IG'
-        self.account = numeric_id(os.environ.get(prefix + '_ID'))
-        self.token = os.environ.get(prefix + '_TOKEN')
-        version = os.environ.get('IFVERSE_META_GRAPH_VERSION', '')
-        require(self.token and re.fullmatch(r'v[0-9]+\.[0-9]+', version),
+        if config is None:
+            account = os.environ.get(prefix + '_ID')
+            config = {'token': os.environ.get(prefix + '_TOKEN'),
+                      'graph_version': os.environ.get('IFVERSE_META_GRAPH_VERSION', '')}
+        self.account = numeric_id(account)
+        self.token = config.get('token')
+        version = config.get('graph_version', '')
+        require(isinstance(self.token, str) and self.token and re.fullmatch(r'v[0-9]+\.[0-9]+', version),
                 'Configure the Meta token and Graph API version privately')
         self.facebook = platform == 'facebook'
-        host = 'graph.facebook.com' if self.facebook else 'graph.instagram.com'
+        self.page = numeric_id(config['page_id']) if 'page_id' in config else None
+        host = 'graph.facebook.com' if self.facebook or self.page else 'graph.instagram.com'
         self.base = f'https://{host}/{version}/'
 
     def graph(self, path, *, fields=None, **form):
@@ -60,6 +65,12 @@ class Meta:
 
     def verify(self, expected):
         require(expected == self.account, 'Configured Meta account differs from the reviewed destination')
+        if self.page:
+            data = self.graph('me', fields='id,instagram_business_account{id,username}')
+            profile = data.get('instagram_business_account', {})
+            require(str(data.get('id')) == self.page and str(profile.get('id')) == expected,
+                    'Meta Page token does not identify the intended linked Instagram account')
+            return profile.get('username') or expected
         data = self.graph('me', fields='id,name' if self.facebook else 'user_id,username')
         require(str(data.get('id') if self.facebook else data.get('user_id')) == expected,
                 'Meta token does not identify the intended account')
@@ -133,9 +144,12 @@ def multipart(fields, data=None):
 
 
 class Snap:
-    def __init__(self):
-        self.account = str(UUID(os.environ.get('IFVERSE_SNAP_PROFILE_ID', '')))
-        self.token = os.environ.get('IFVERSE_SNAP_ACCESS_TOKEN')
+    def __init__(self, account=None, config=None):
+        if config is None:
+            account = os.environ.get('IFVERSE_SNAP_PROFILE_ID', '')
+            config = {'token': os.environ.get('IFVERSE_SNAP_ACCESS_TOKEN')}
+        self.account = str(UUID(account))
+        self.token = config.get('token')
         require(self.token, 'Configure the allowlisted Snapchat access token privately')
         self.path = f'/v1/public_profiles/{self.account}'
 
@@ -193,5 +207,5 @@ def spotlight_id(value):
     return value
 
 
-def client(platform):
-    return Snap() if platform == 'snapchat' else Meta(platform)
+def client(platform, account=None, config=None):
+    return Snap(account, config) if platform == 'snapchat' else Meta(platform, account, config)

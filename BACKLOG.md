@@ -1,3 +1,7 @@
+## Multi-account publishing — 2026-11-11
+
+Pending live setup: authorize each selected account, set the Actions secret, install the draft workflow on the implementation branch and verify one owner-reviewed destination. [Setup guide](docs/SOCIAL_PUBLISHING.md).
+
 ## Direct publishing implementation — 2026-11-05
 
 The [publishing dashboard](docs/PLATFORM_DASHBOARD.md) documents the repository-owned queue and desktop controls for all five Chrome destinations. The worker uses direct YouTube, Meta and Snapchat integrations. TikTok stays in the queue as a manual Studio step. The worker is available but has not been enabled. Owner review, platform OAuth and a live verification pass remain pending. Snapchat also requires app allowlisting.

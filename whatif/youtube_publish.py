@@ -43,12 +43,22 @@ def require_upload_scope(credentials):
         raise UploadError('Read-only consent cannot upload; grant youtube.readonly and youtube.upload')
 
 
-def connect(store, client_file, expected_id):
+def upload_channel(credentials, session_factory, expected_id, expected_handle):
+    channels = yt.owned_channels(credentials, session_factory)
+    if len(channels) != 1:
+        raise UploadError('Authorize exactly one intended YouTube channel for this upload connection')
+    channel = yt.select_channel(channels, expected_id=expected_id)
+    if expected_handle and yt.normalized_handle(channel.get('handle')) != yt.normalized_handle(expected_handle):
+        raise UploadError('The authorized YouTube handle differs from the intended handle')
+    return channel
+
+
+def connect(store, client_file, expected_id, connection='ifverse-anime', expected_handle='@ifverse_anime'):
     yt.require_channel_id(expected_id)
     config = yt.client_config(client_file)
     Flow, _, _, Session = yt.sdk()
-    with store.lock('ifverse-anime'):
-        if store.path('ifverse-anime').exists():
+    with store.lock(connection):
+        if store.path(connection).exists():
             raise UploadError('Connection exists; preserve it and verify it before reconnecting')
         flow = Flow.from_client_config(config, scopes=[yt.READ_SCOPE, UPLOAD_SCOPE], autogenerate_code_verifier=True)
         credentials = flow.run_local_server(host='127.0.0.1', port=8765, open_browser=False,
@@ -56,31 +66,29 @@ def connect(store, client_file, expected_id):
             authorization_prompt_message='Open this Google consent URL on the machine running this command:\n{url}',
             success_message='Consent received. Return to the terminal.')
         require_upload_scope(credentials)
-        channel = yt.select_channel(yt.owned_channels(credentials, Session), expected_id=expected_id)
-        if yt.normalized_handle(channel.get('handle', '')) != 'ifverse_anime' or not credentials.refresh_token:
-            raise UploadError('Expected ifverse_anime with offline authorization; nothing saved')
-        record = {'schema_version': 1, 'connection': 'ifverse-anime', 'channel': channel,
+        channel = upload_channel(credentials, Session, expected_id, expected_handle)
+        if not credentials.refresh_token:
+            raise UploadError('Offline authorization is required; nothing saved')
+        record = {'schema_version': 1, 'connection': connection, 'channel': channel,
                   'verified_at': yt.now(), 'credentials': json.loads(credentials.to_json())}
-        store.save('ifverse-anime', record)
+        store.save(connection, record)
     return {'status': 'upload_connection_saved', 'channel_id': channel['id'], 'handle': channel['handle']}
 
 
-def verified_session(store, expected_id):
+def verified_session(store, expected_id, connection='ifverse-anime', expected_handle='@ifverse_anime'):
     yt.require_channel_id(expected_id)
     _, Credentials, Request, Session = yt.sdk()
-    with store.lock('ifverse-anime'):
-        record = store.load('ifverse-anime')
+    with store.lock(connection):
+        record = store.load(connection)
         if record['channel']['id'] != expected_id:
             raise UploadError('Saved connection belongs to a different channel')
         credentials = Credentials.from_authorized_user_info(record['credentials'])
         require_upload_scope(credentials)
         if not credentials.valid:
             credentials.refresh(Request())
-        channel = yt.select_channel(yt.owned_channels(credentials, Session), expected_id=expected_id)
-        if yt.normalized_handle(channel.get('handle', '')) != 'ifverse_anime':
-            raise UploadError('Verified channel is not @ifverse_anime')
+        channel = upload_channel(credentials, Session, expected_id, expected_handle)
         record.update(channel=channel, verified_at=yt.now(), credentials=json.loads(credentials.to_json()))
-        store.save('ifverse-anime', record)
+        store.save(connection, record)
     return Session(credentials)
 
 
@@ -257,19 +265,22 @@ def acknowledged(response, total):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--credentials-dir', default='private/youtube-publish')
+    p.add_argument('--connection', default='ifverse-anime')
+    p.add_argument('--expected-handle')
     sub = p.add_subparsers(dest='operation', required=True)
     c = sub.add_parser('connect'); c.add_argument('--client-secrets', required=True); c.add_argument('--expected-channel-id', required=True)
     sub.add_parser('status')
     verify = sub.add_parser('verify', help='Check the saved upload authorization without posting')
     verify.add_argument('--expected-channel-id', required=True)
     args = p.parse_args(); store = yt.ConnectionStore(args.credentials_dir)
+    handle = args.expected_handle or ('@ifverse_anime' if args.connection == 'ifverse-anime' else None)
     try:
         if args.operation == 'connect':
-            result = connect(store, args.client_secrets, args.expected_channel_id)
+            result = connect(store, args.client_secrets, args.expected_channel_id, args.connection, handle)
         elif args.operation == 'verify':
-            with verified_session(store, args.expected_channel_id):
+            with verified_session(store, args.expected_channel_id, args.connection, handle):
                 result = {'status': 'verified_upload_connection', 'live_checked': True,
-                          'channel_id': args.expected_channel_id, 'handle': '@ifverse_anime'}
+                          'channel_id': args.expected_channel_id, 'handle': handle}
         else:
             result = {'connections': store.cached(), 'live_checked': False,
                       'note': 'Cached identity only; publisher verifies scopes/channel at upload time'}
