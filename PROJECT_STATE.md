@@ -1,3 +1,11 @@
+## Multi-account publishing — 2026-11-11
+
+The desktop queue supports multiple named accounts per platform. The draft hosted workflow runs a reviewed request for YouTube or Instagram once installed on the implementation branch. [Setup and status](docs/SOCIAL_PUBLISHING.md).
+
+## Direct publishing implementation — 2026-11-05
+
+The [publishing dashboard](docs/PLATFORM_DASHBOARD.md) documents the repository-owned queue and desktop controls for all five Chrome destinations. The worker uses direct YouTube, Meta and Snapchat integrations. TikTok stays in the queue as a manual Studio step. The worker is available but has not been enabled. Owner review, platform OAuth and a live verification pass remain pending. Snapchat also requires app allowlisting.
+
 ## Current repair checkpoint — 2026-11-03
 
 The ten 61-second anime Shorts now have **sound-only DubbingAI corrections**. [Batch videos and posting packets](docs/BATCH_61S.md) · [Topic review board](docs/TOPIC_REVIEW_BOARD.md) · [Platform dashboard](docs/PLATFORM_DASHBOARD.md) · [Repair handoff and validation](docs/SOUND_REPAIR_HANDOFF.md).

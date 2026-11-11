@@ -19,6 +19,8 @@ jobs:
             timeout 120 sudo apt-get update
             timeout 120 sudo apt-get install -y ffmpeg fonts-dejavu-core
           fi
+      - name: Install test dependencies
+        run: python -m pip install numpy==2.3.5 -r requirements-youtube-publish.txt
       - run: python -m unittest discover -s tests -v
 # This tests software using short fixtures. It is not a recurring production-video job.
 
