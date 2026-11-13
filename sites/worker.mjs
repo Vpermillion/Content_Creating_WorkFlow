@@ -33,9 +33,10 @@ const PUBLISH = { readOnlyHint: false, destructiveHint: true, idempotentHint: tr
 const tools = [
   tool('ifverse_media_prepare', 'Run the existing reviewed media job without publishing.', object({ request_id: requestId }), WRITE),
   tool('ifverse_media_status', 'Read the media job status and prepared media hash.', object({ request_id: requestId }), READ),
-  tool('ifverse_media_import', 'Stage a selected render from the private Ifverse GitHub repo. The topic registry supplies the pinned commit and media hash. This does not render or publish.', object({
+  tool('ifverse_media_import', 'Stage a selected render from the private Ifverse GitHub repo. For a Facebook Reel or feed image, create a separate export and show it for review. This does not publish.', object({
     brand, episode: requestId,
-  }), WRITE),
+    export: choices('Optional export type.', ['master', 'facebook_reel', 'jpeg']),
+  }, ['brand', 'episode']), WRITE),
   tool('ifverse_accounts', 'List intended destinations and supported formats.', object({}), READ),
   tool('ifverse_connect', 'Start browser consent or TikTok Studio confirmation. Give the user the returned link. Enter credentials only in private settings.', object({
     account: alias, method: choices('Optional TikTok connection method. Use Studio for private workflows.', ['studio', 'oauth']),

@@ -2,6 +2,8 @@ import json
 import hashlib
 import io
 from pathlib import Path
+import shutil
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import Mock, patch
@@ -10,6 +12,28 @@ from whatif.publishing_jobs import MediaJobs
 
 
 class MediaJobTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which('ffmpeg') and shutil.which('ffprobe'), 'FFmpeg tools are required')
+    def test_pinned_master_can_produce_a_reviewable_reel_and_image(self):
+        from whatif import media
+        from whatif.publishing_service import Drafts
+
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            source = root/'fixture.mp4'
+            subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-f', 'lavfi', '-i',
+                            'color=red:s=180x320:r=12', '-f', 'lavfi', '-i', 'anullsrc',
+                            '-t', '4', '-c:v', 'libx264', '-threads:v', '1', '-c:a', 'aac', str(source)], check=True)
+            drafts = Drafts(root/'private', root, Mock())
+            master = drafts.put_media(source.read_bytes())
+            jobs = MediaJobs(root, root/'private', drafts)
+            self.addCleanup(jobs.executor.shutdown)
+            image = jobs.export_media(master, 'jpeg')
+            reel = jobs.export_media(master, 'facebook_reel')
+            self.assertEqual(len({master, image, reel}), 3)
+            frame = media.probe(drafts.media(image))['streams'][0]
+            self.assertEqual((frame['codec_name'], frame['width'], frame['height']), ('mjpeg', 720, 900))
+            self.assertLessEqual(float(media.probe(drafts.media(reel))['format']['duration']), 60)
+
     def test_import_uses_pinned_private_result_and_checks_hash(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

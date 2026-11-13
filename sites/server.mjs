@@ -13,7 +13,7 @@ const tools = [
   'Run one existing checked-in review request through the established media renderer. Owner topic/script choice is required. '
   +'Does not publish. Poll media status; never submit a different job to retry an uncertain job.'],
  ['ifverse_media_status','/jobs/get',{request_id:z.string()},true,'Retrieve durable media job status and its prepared media hash.'],
- ['ifverse_media_import','/jobs/import',{brand:z.string(),episode:z.string()},false,'Stage a pinned private Ifverse render by episode. This does not publish.'],
+ ['ifverse_media_import','/jobs/import',{brand:z.string(),episode:z.string(),export:z.enum(['master','facebook_reel','jpeg']).optional()},false,'Stage a pinned private Ifverse render or separate Facebook Reel or image export. This does not publish.'],
  ['ifverse_accounts','/accounts',{},true,'List intended destinations and supported formats; entries are not proof of consent.'],
  ['ifverse_connect','/connect',{account:z.string(),method:z.enum(['studio','oauth']).optional()},false,'Start browser consent or Studio account confirmation. Return the link to the owner.'],
  ['ifverse_verify','/verify',{account:z.string()},true,'Read-only check of the authorized provider ID and handle or Page.'],

@@ -9,6 +9,8 @@ import json
 import os
 from pathlib import Path
 import re
+import subprocess
+from tempfile import TemporaryDirectory
 from urllib.parse import quote, urlencode
 from urllib.request import Request, build_opener
 
@@ -71,8 +73,9 @@ class MediaJobs:
         require(path.is_file(), 'Media job not found')
         return json.loads(path.read_text())
 
-    def import_result(self, brand, episode):
+    def import_result(self, brand, episode, export='master'):
         self.path(episode)
+        require(export in ('master', 'facebook_reel', 'jpeg'), 'Choose a supported media export')
         require(isinstance(brand, str) and BRAND.fullmatch(brand), 'Choose a registered brand')
         registry = json.loads((self.root / 'channels' / (brand + '-topics.json')).read_text(encoding='utf-8'))
         matches = [row for row in registry['topics'] if row['id'] == episode]
@@ -97,6 +100,30 @@ class MediaJobs:
             require(len(data) <= 100 * 1024 * 1024 and hashlib.sha256(data).hexdigest() == checksum,
                     'GitHub media did not match the selected render')
             self.drafts.put_media(data)
-        return {'status': 'prepared', 'episode': episode, 'media_sha256': checksum,
-                'manifest': {'brand': brand, 'episode': episode, 'master_sha256': checksum, 'video_sha256': checksum},
-                'preview_url': self.drafts.adapter.media_url(checksum)}
+        output_sha = checksum if export == 'master' else self.export_media(checksum, export)
+        return {'status': 'prepared', 'episode': episode, 'export': export, 'media_sha256': output_sha,
+                'manifest': {'brand': brand, 'episode': episode, 'master_sha256': checksum, 'video_sha256': output_sha},
+                'preview_url': self.drafts.adapter.media_url(output_sha)}
+
+    def export_media(self, checksum, export):
+        source = self.drafts.media(checksum)
+        with source.open('rb') as stream:
+            require(hashlib.file_digest(stream, 'sha256').hexdigest() == checksum, 'The selected master changed')
+        with TemporaryDirectory(dir=self.directory) as directory:
+            if export == 'jpeg':
+                path = Path(directory) / 'frame.jpg'
+                args = ['-ss', '1', '-i', str(source), '-frames:v', '1', '-vf',
+                        'scale=720:900:force_original_aspect_ratio=increase,crop=720:900', '-q:v', '2']
+            else:
+                path = Path(directory) / 'facebook.mp4'
+                args = ['-i', str(source), '-t', '59.9', '-map', '0:v:0', '-map', '0:a:0',
+                        '-c:v', 'libx264', '-threads:v', '1', '-pix_fmt', 'yuv420p', '-c:a', 'aac',
+                        '-movflags', '+faststart']
+            try:
+                subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-xerror', *args, str(path)],
+                               capture_output=True, check=True, timeout=180)
+                require(path.is_file() and 0 < path.stat().st_size <= 100 * 1024 * 1024,
+                        'The export was missing or exceeded the media limit')
+                return self.drafts.put_media(path.read_bytes())
+            except (OSError, subprocess.SubprocessError):
+                raise ValueError('Could not prepare the selected export') from None
