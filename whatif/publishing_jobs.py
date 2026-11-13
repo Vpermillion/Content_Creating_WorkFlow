@@ -6,10 +6,14 @@ validation still run. Production output lives on the private service volume.
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
+from urllib.parse import quote, urlencode
+from urllib.request import Request, build_opener
 
-from scripts.publishing_direct import require
+from scripts.publishing_accounts import BRAND
+from scripts.publishing_direct import NoRedirect, require
 from . import youtube
 
 
@@ -66,3 +70,33 @@ class MediaJobs:
         path = self.path(request_id)
         require(path.is_file(), 'Media job not found')
         return json.loads(path.read_text())
+
+    def import_result(self, brand, episode):
+        self.path(episode)
+        require(isinstance(brand, str) and BRAND.fullmatch(brand), 'Choose a registered brand')
+        registry = json.loads((self.root / 'channels' / (brand + '-topics.json')).read_text(encoding='utf-8'))
+        matches = [row for row in registry['topics'] if row['id'] == episode]
+        require(len(matches) == 1, 'Choose one registered episode')
+        topic = matches[0]
+        path, commit, checksum = (topic.get(field) for field in ('video_path', 'result_commit', 'video_sha256'))
+        require(isinstance(commit, str) and re.fullmatch('[0-9a-f]{40}', commit)
+                and isinstance(checksum, str) and re.fullmatch('[0-9a-f]{64}', checksum)
+                and isinstance(path, str) and re.fullmatch(r'(?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_.-]+\.mp4', path),
+                'The episode needs a selected, pinned MP4 from the topic registry')
+        if not self.drafts.media(checksum).is_file():
+            token = os.getenv('IFVERSE_GITHUB_READ_TOKEN')
+            require(token, 'Set a read-only GitHub repo token in the hosting settings')
+            name = quote(f'artifacts/{episode}/{path}', safe='/')
+            url = 'https://api.github.com/repos/Vpermillion/Content_Creating_WorkFlow/contents/' + name
+            request = Request(url + '?' + urlencode({'ref': commit}), headers={
+                'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github.raw+json',
+                'User-Agent': 'Ifverse-publishing',
+            })
+            with build_opener(NoRedirect()).open(request, timeout=35) as response:
+                data = response.read(100 * 1024 * 1024 + 1)
+            require(len(data) <= 100 * 1024 * 1024 and hashlib.sha256(data).hexdigest() == checksum,
+                    'GitHub media did not match the selected render')
+            self.drafts.put_media(data)
+        return {'status': 'prepared', 'episode': episode, 'media_sha256': checksum,
+                'manifest': {'brand': brand, 'episode': episode, 'master_sha256': checksum, 'video_sha256': checksum},
+                'preview_url': self.drafts.adapter.media_url(checksum)}

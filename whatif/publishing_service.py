@@ -165,7 +165,7 @@ class Drafts:
             for alias in destinations:
                 row = rows[alias]
                 state = next(r for r in self.get(draft)['deliveries'] if r['alias'] == alias)
-                if state['status'] == 'published':
+                if state['status'] in ('published', 'action_required'):
                     continue
                 from scripts import publishing_dashboard as queue
                 try:

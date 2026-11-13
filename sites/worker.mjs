@@ -33,6 +33,9 @@ const PUBLISH = { readOnlyHint: false, destructiveHint: true, idempotentHint: tr
 const tools = [
   tool('ifverse_media_prepare', 'Run the existing reviewed media job without publishing.', object({ request_id: requestId }), WRITE),
   tool('ifverse_media_status', 'Read the media job status and prepared media hash.', object({ request_id: requestId }), READ),
+  tool('ifverse_media_import', 'Stage a selected render from the private Ifverse GitHub repo. The topic registry supplies the pinned commit and media hash. This does not render or publish.', object({
+    brand, episode: requestId,
+  }), WRITE),
   tool('ifverse_accounts', 'List intended destinations and supported formats.', object({}), READ),
   tool('ifverse_connect', 'Start browser consent or TikTok Studio confirmation. Give the user the returned link. Enter credentials only in private settings.', object({
     account: alias, method: choices('Optional TikTok connection method. Use Studio for private workflows.', ['studio', 'oauth']),
@@ -55,6 +58,7 @@ const tools = [
 const toolsByName = new Map(tools.map((item) => [item.name, item]));
 const routes = new Map([
   ['ifverse_media_prepare', '/jobs/prepare'], ['ifverse_media_status', '/jobs/get'],
+  ['ifverse_media_import', '/jobs/import'],
   ['ifverse_accounts', '/accounts'], ['ifverse_connect', '/connect'], ['ifverse_verify', '/verify'],
   ['ifverse_prepare', '/drafts/create'], ['ifverse_preview', '/drafts/get'],
   ['ifverse_publish', '/drafts/publish'], ['ifverse_verify_tiktok', '/tiktok/verify'],

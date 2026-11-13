@@ -13,8 +13,9 @@ const tools = [
   'Run one existing checked-in review request through the established media renderer. Owner topic/script choice is required. '
   +'Does not publish. Poll media status; never submit a different job to retry an uncertain job.'],
  ['ifverse_media_status','/jobs/get',{request_id:z.string()},true,'Retrieve durable media job status and its prepared media hash.'],
+ ['ifverse_media_import','/jobs/import',{brand:z.string(),episode:z.string()},false,'Stage a pinned private Ifverse render by episode. This does not publish.'],
  ['ifverse_accounts','/accounts',{},true,'List intended destinations and supported formats; entries are not proof of consent.'],
- ['ifverse_connect','/connect',{account:z.string()},false,'Start hosted browser consent. Return the authorization link to the owner; never ask for secrets in chat.'],
+ ['ifverse_connect','/connect',{account:z.string(),method:z.enum(['studio','oauth']).optional()},false,'Start browser consent or Studio account confirmation. Return the link to the owner.'],
  ['ifverse_verify','/verify',{account:z.string()},true,'Read-only check of the authorized provider ID and handle or Page.'],
  ['ifverse_prepare','/drafts/create',{brand:z.string(),destinations:z.array(destination)},false,
   'Save a durable immutable draft from already prepared and reviewed media jobs. Does not publish.'],
@@ -36,7 +37,7 @@ app.post('/mcp', async (req,res) => {
   if (!backend?.startsWith('https://') || !process.env.IFVERSE_API_TOKEN) return res.sendStatus(503);
   const server = new McpServer({name:'Ifverse',version:'1.0.0'});
   for (const [name,path,inputSchema,readOnlyHint,description] of tools) {
-    server.registerTool(name,{description,inputSchema,annotations:{readOnlyHint,destructiveHint:false,
+    server.registerTool(name,{description,inputSchema,annotations:{readOnlyHint,destructiveHint:name==='ifverse_publish',
       idempotentHint:name==='ifverse_publish',openWorldHint:true}},async args => {
       try {
         const response = await fetch(new URL(path,backend),{method:'POST',redirect:'error',

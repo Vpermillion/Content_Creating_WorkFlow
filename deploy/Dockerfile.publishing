@@ -16,4 +16,4 @@ COPY --chown=publisher:publisher edits ./edits
 COPY --chown=publisher:publisher assets ./assets
 ENV IFVERSE_ROOT=/app IFVERSE_STATE=/state/private PORT=8080
 EXPOSE 8080
-CMD ["sh", "-ec", "install -d -m 0700 -o publisher -g publisher \"$IFVERSE_STATE\"; exec setpriv --reuid=10001 --regid=10001 --init-groups python -m whatif.publishing_api"]
+CMD ["sh", "-ec", "chgrp publisher /state; chmod 0710 /state; install -d -m 0700 -o publisher -g publisher \"$IFVERSE_STATE\"; exec setpriv --reuid=publisher --regid=publisher --init-groups python -m whatif.publishing_api"]

@@ -119,6 +119,8 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                     result = jobs.submit(args['request_id'])
                 elif self.path == '/jobs/get':
                     result = jobs.get(args['request_id'])
+                elif self.path == '/jobs/import':
+                    result = jobs.import_result(args['brand'], args['episode'])
                 elif self.path == '/accounts':
                     result = {'accounts': accounts.registry(drafts.root), 'formats': FORMATS,
                               'instagram_carousel': 'Supported by Meta; unavailable through this integration'}

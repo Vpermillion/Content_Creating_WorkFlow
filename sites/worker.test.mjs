@@ -24,7 +24,7 @@ test('native Sites discovery exposes tools and gates calls to the authenticated 
   });
   const call = (name, args, identity) => rpc('tools/call', { name, arguments: args }, identity);
   const listed = await rpc('tools/list', {}, {});
-  assert.equal(listed.result.tools.length, 9);
+  assert.equal(listed.result.tools.length, 10);
   assert.equal(listed.result.tools.find(t => t.name === 'ifverse_publish').annotations.destructiveHint, true);
   assert.equal((await call('ifverse_accounts', {}, {})).status, 403);
   assert.equal((await call('ifverse_accounts', {}, { ...owner, 'oai-authenticated-user-email': 'other@example.test' })).status, 403);
