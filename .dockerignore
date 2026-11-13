@@ -9,3 +9,7 @@ attachments
 private
 client_secret*.json
 youtube-token*.json
+
+**/node_modules
+*.sqlite*
+*.db

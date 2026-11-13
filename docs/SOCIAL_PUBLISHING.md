@@ -1,3 +1,5 @@
+For Chrome-only ChatGPT use, follow [the hosted setup](CHATGPT_PUBLISHING.md). The desktop/loopback instructions below remain the legacy path. Never process the same account/job through both queues.
+
 # Ifverse multi-account publishing
 
 The repository registry maps each alias to one brand, platform and provider account ID. The desktop dashboard and local queue support multiple accounts on the same platform. GitHub Actions handles one due YouTube Short or Instagram Reel per reviewed request. The production workflows still create the videos and result branches.

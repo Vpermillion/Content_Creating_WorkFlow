@@ -1,3 +1,11 @@
+## ChatGPT publishing implementation — 2026-11-13
+
+Branch `codex/ifverse-chatgpt-publishing` builds on PR #3 head `cf4be82` / `codex/chrome-publishing-inventory`, whose parent history includes current workflow `de64824`. PR merge ref confirms workflow as base. The older portable branch is not the implementation base. See [Chrome setup, callable tools and limits](docs/CHATGPT_PUBLISHING.md).
+
+Added private durable immutable drafts/media/receipts, exact destination-subset approval, per-account retry/reconciliation, hosted web OAuth, media-job bridge and an authenticated MCP wrapper. Reuses registry, renderer, review gates, Meta clients and original-session YouTube uploader. TikTok uses Studio action-required handoff plus authorized ownership query; no Direct Post. Carousel is documented supported by Meta but rejected as unwired here. No provider grant, Sites entitlement, deployment or public post is verified. No public publication was performed or authorized by this code task.
+
+Validation pending final CI receipt; all publishing tests use mocks. Existing rendered batch, narration, review decisions and historical results are preserved. Next: finish software CI, deploy privately if owner selects a host, complete provider consent and verify exact accounts, retrieve a draft from a fresh chat, then await approval of that specific preview before public writes. Do not run the old social queue and hosted queue for the same account/job.
+
 ## Multi-account publishing — 2026-11-11
 
 The desktop queue supports multiple named accounts per platform. The draft hosted workflow runs a reviewed request for YouTube or Instagram once installed on the implementation branch. [Setup and status](docs/SOCIAL_PUBLISHING.md).
