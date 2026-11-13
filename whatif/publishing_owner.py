@@ -8,6 +8,27 @@ from scripts.publishing_direct import require
 from . import hosted_tiktok, youtube
 
 
+def accounts_page(drafts):
+    from .publishing_service import FORMATS
+
+    origin = escape(drafts.adapter.origin)
+    forms = []
+    registry = accounts.registry(drafts.root)
+    for alias, row in registry.items():
+        if row['platform'] not in FORMATS:
+            continue
+        label = escape(row.get('handle') or row['account_id'])
+        forms.append(f'<li><form method="post" action="/owner/accounts"><strong>{label}</strong> '
+                     f'({escape(row["platform"])}, {escape(alias)}) '
+                     f'<input type="hidden" name="account" value="{escape(alias, quote=True)}">'
+                     '<button name="action" value="connect">Connect</button> '
+                     '<button name="action" value="verify">Verify</button></form></li>')
+    return ('<!doctype html><html lang="en"><meta charset="utf-8"><title>Ifverse accounts</title>'
+            '<h1>Ifverse accounts</h1><p>OAuth redirect URL for Google and Meta</p>'
+            f'<p><code>{origin}/oauth/callback</code></p><ul>{"".join(forms)}</ul>'
+            '<p>Add additional destinations to the repository registry before connecting them.</p>')
+
+
 def studio_binding(drafts, alias):
     row = accounts.registry(drafts.root).get(alias)
     require(row and row['platform'] == 'tiktok' and row.get('handle'), 'Register the intended TikTok handle')

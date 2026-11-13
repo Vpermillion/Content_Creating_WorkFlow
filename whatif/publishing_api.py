@@ -26,6 +26,13 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
     from .publishing_jobs import MediaJobs
     jobs = MediaJobs(drafts.root, drafts.directory, drafts)
 
+    def connect(account, method='studio'):
+        row = accounts.registry(drafts.root)[account]
+        if row['platform'] == 'tiktok' and method == 'studio':
+            return {'status': 'studio_confirmation_required', 'handle': row['handle'],
+                    'operator_url': publishing_owner.studio_link(drafts.adapter.origin, account)}
+        return oauth.begin(account)
+
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
             pass
@@ -67,6 +74,16 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
             require(0 < size <= 16_000, 'Invalid browser form length')
             form = {key: values[0] for key, values in parse_qs(self.rfile.read(size).decode(),
                     keep_blank_values=True, max_num_fields=12).items()}
+            if self.path == '/owner/accounts':
+                account = form['account']
+                row = accounts.registry(drafts.root)[account]
+                if form.get('action') == 'verify':
+                    result = drafts.adapter.verify({**row, 'account': account})
+                    return self.reply(200, result)
+                require(form.get('action') == 'connect', 'Choose Connect or Verify')
+                result = connect(account)
+                location = result.get('authorization_url') or result['operator_url']
+                return self.reply(303, b'', 'text/plain', headers={'Location': location})
             result = publishing_owner.handle_form(drafts, form)
             self.reply(200, result.encode(), 'text/plain; charset=utf-8')
 
@@ -76,6 +93,11 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                 query = parse_qs(parsed.query, max_num_fields=16)
                 if parsed.path == '/health':
                     return self.reply(200, {'status': 'ready'})
+                if parsed.path == '/owner/accounts':
+                    if self.owner():
+                        page = publishing_owner.accounts_page(drafts)
+                        return self.reply(200, page.encode(), 'text/html; charset=utf-8')
+                    return
                 if parsed.path == '/owner/studio':
                     if self.owner():
                         page = publishing_owner.page(drafts, query['account'][0], query.get('draft', [''])[0])
@@ -100,10 +122,12 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                 return self.reply(400, {'error': 'Request failed; reconnect or inspect private operation state'})
 
         def do_POST(self):
-            if self.path == '/owner/studio':
+            if self.path in ('/owner/studio', '/owner/accounts'):
                 try:
                     return self.browser_form()
                 except Exception:
+                    if self.path == '/owner/accounts':
+                        return self.reply(400, {'error': 'Account operation failed. Check the registered destination and provider settings, then return to /owner/accounts.'})
                     return self.reply(400, {'error': 'Could not verify. Check the handle, public video, reviewed caption and media.'})
             if not hmac.compare_digest(self.headers.get('Authorization', ''), 'Bearer ' + token):
                 return self.reply(401, {'error': 'Unauthorized'})
@@ -125,12 +149,7 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                     result = {'accounts': accounts.registry(drafts.root), 'formats': FORMATS,
                               'instagram_carousel': 'Supported by Meta; unavailable through this integration'}
                 elif self.path == '/connect':
-                    row = accounts.registry(drafts.root)[args['account']]
-                    if row['platform'] == 'tiktok' and args.get('method', 'studio') == 'studio':
-                        result = {'status': 'studio_confirmation_required', 'handle': row['handle'],
-                                  'operator_url': publishing_owner.studio_link(drafts.adapter.origin, args['account'])}
-                    else:
-                        result = oauth.begin(args['account'])
+                    result = connect(args['account'], args.get('method', 'studio'))
                 elif self.path == '/verify':
                     row = accounts.registry(drafts.root)[args['account']]
                     result = drafts.adapter.verify({**row, 'account': args['account']})
@@ -173,7 +192,7 @@ def main():
     directory = Path(os.environ['IFVERSE_STATE']).resolve()
     directory.mkdir(mode=0o700, parents=True, exist_ok=True)
     token, key = os.environ['IFVERSE_API_TOKEN'], os.environ['IFVERSE_MEDIA_KEY']
-    origin = os.environ['IFVERSE_PUBLIC_ORIGIN']
+    origin = os.getenv('IFVERSE_PUBLIC_ORIGIN') or os.getenv('RENDER_EXTERNAL_URL', '')
     parsed = urlsplit(origin)
     require(parsed.scheme == 'https' and parsed.hostname and not (
         parsed.username or parsed.password or parsed.path not in ('', '/') or parsed.query or parsed.fragment),

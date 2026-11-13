@@ -5,6 +5,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from threading import Thread
 import unittest
+from unittest.mock import Mock
 from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -25,7 +26,8 @@ class StudioBrowserTests(unittest.TestCase):
             origin = 'https://example.test'
             publisher = Publishers(root, root / 'private', origin, key)
             drafts = Drafts(publisher.state, root, publisher)
-            http = server(drafts, None, token, key, ('127.0.0.1', 0), owner_password=password)
+            oauth = Mock()
+            http = server(drafts, oauth, token, key, ('127.0.0.1', 0), owner_password=password)
             thread = Thread(target=http.serve_forever)
             thread.start()
             self.addCleanup(http.server_close)
@@ -45,6 +47,12 @@ class StudioBrowserTests(unittest.TestCase):
                             'application/x-www-form-urlencoded', form_origin)
 
             account = {'account':'tt','observed_handle':'@fictional'}
+            with self.assertRaises(HTTPError) as failure:
+                urlopen(Request(base + '/owner/accounts', headers={'Authorization':'Bearer '+token}), timeout=4)
+            self.assertEqual(failure.exception.code, 401)
+            request = Request(base + '/owner/accounts', headers={'Authorization':owner})
+            with urlopen(request, timeout=4) as response:
+                self.assertIn(b'https://example.test/oauth/callback', response.read())
             with self.assertRaises(HTTPError) as failure:
                 form('Bearer '+token, account)
             self.assertEqual(failure.exception.code, 401)
