@@ -1,3 +1,5 @@
+import { accountCallback, accountTool } from './accounts.mjs';
+
 const VERSION = '2026-07-28';
 const MAX_BODY_BYTES = 128 * 1024;
 const MAX_RESULT_BYTES = 512 * 1024;
@@ -38,10 +40,13 @@ const tools = [
     export: choices('Optional export type.', ['master', 'facebook_reel', 'jpeg']),
   }, ['brand', 'episode']), WRITE),
   tool('ifverse_accounts', 'List intended destinations and supported formats.', object({}), READ),
-  tool('ifverse_connect', 'Start browser consent or TikTok Studio confirmation. Give the user the returned link. Enter credentials only in private settings.', object({
-    account: alias, method: choices('Optional TikTok connection method. Use Studio for private workflows.', ['studio', 'oauth']),
+  tool('ifverse_connect', 'Open provider consent to connect an Ifverse account. The callback checks the account and saves the connection automatically. If TikTok Login Kit is unavailable, return the Studio link.', object({
+    account: alias,
+    method: choices('Optional TikTok method. Choose OAuth for an approved Login Kit app, or Studio for manual publishing.', ['studio', 'oauth']),
+    page_id: string('The intended Facebook Page ID, required when connecting Facebook.', 32, { pattern: '^[0-9]+$' }),
+    handle: string('The intended TikTok handle, required for TikTok OAuth.', 25, { pattern: '^@?[a-zA-Z0-9_.]+$' }),
   }, ['account']), WRITE),
-  tool('ifverse_verify', 'Check the connected provider identity or recorded Studio confirmation without publishing.', object({ account: alias }), READ),
+  tool('ifverse_verify', 'Check a saved provider connection when troubleshooting. A new connection is checked automatically during consent.', object({ account: alias }), READ),
   tool('ifverse_prepare', 'Save a draft with exact media, platform captions, and accounts. Show its preview and ID before asking for approval.', object({
     brand, destinations: array(destination, 'The selected destination accounts and formats.', 4),
   }), WRITE),
@@ -58,6 +63,7 @@ const tools = [
   }), WRITE),
 ];
 const toolsByName = new Map(tools.map((item) => [item.name, item]));
+const accountTools = new Set(['ifverse_accounts', 'ifverse_connect', 'ifverse_verify']);
 const routes = new Map([
   ['ifverse_media_prepare', '/jobs/prepare'], ['ifverse_media_status', '/jobs/get'],
   ['ifverse_media_import', '/jobs/import'],
@@ -130,6 +136,11 @@ function toolError(id, message) {
   return reply(id, { result: { isError: true, content: [{ type: 'text', text: message }] } });
 }
 
+function toolResult(id, result) {
+  return reply(id, { result: { content: [{ type: 'text', text: JSON.stringify(result) }],
+    structuredContent: isObject(result) ? result : { result } } });
+}
+
 function isOwner(request, env) {
   const owner = env.IFVERSE_SITE_OWNER_EMAIL?.trim().toLowerCase();
   return owner && request.headers.get('oai-authenticated-user-id')
@@ -162,8 +173,7 @@ async function callBackend(id, operation, args, env) {
       const message = typeof result?.error === 'string' ? result.error : 'The publishing service rejected the request.';
       return toolError(id, message.slice(0, 1000));
     }
-    return reply(id, { result: { content: [{ type: 'text', text: JSON.stringify(result) }],
-      structuredContent: isObject(result) ? result : { result } } });
+    return toolResult(id, result);
   } catch {
     return toolError(id, 'The private publishing service did not respond. Check the draft status before repeating a write.');
   }
@@ -207,6 +217,10 @@ async function mcp(request, env) {
   if (!descriptor || (headerName && headerName !== descriptor.name) || !valid(args, descriptor.inputSchema)) {
     return rpcError(id, -32602, 'Unknown tool or invalid tool arguments.');
   }
+  if (env.DB && accountTools.has(descriptor.name)) {
+    const result = await accountTool(request, env, request.headers.get('oai-authenticated-user-id'), descriptor.name, args);
+    return result.error ? toolError(id, result.error) : toolResult(id, result);
+  }
   return callBackend(id, descriptor.name, args, env);
 }
 
@@ -216,8 +230,15 @@ export default {
     if (path === '/' && request.method === 'GET') {
       return new Response('Ifverse Publishing. Open the private Ifverse Publishing app in ChatGPT to use its publishing tools.');
     }
+    if (path === '/oauth/callback' && request.method === 'GET' && env.DB) {
+      if (!isOwner(request, env)) return new Response('Sign in as the Site owner to connect an account.', {
+        status: 403, headers: { 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' },
+      });
+      return accountCallback(request, env, request.headers.get('oai-authenticated-user-id'));
+    }
     if (path !== '/mcp') return new Response('Not found.', { status: 404 });
     if (request.method !== 'POST') return new Response('Method not allowed.', { status: 405, headers: { Allow: 'POST' } });
     return mcp(request, env);
   },
 };
+
