@@ -33,6 +33,6 @@ test('MCP denies anonymous access and exposes callable publishing tools', async 
     assert.equal(publish.annotations.readOnlyHint,false);
     assert.ok(publish.inputSchema.required.includes('snapshot_hash'));
     assert.ok(publish.inputSchema.required.includes('destinations'));
-    assert.equal(result.result.tools.length,10);
+    assert.equal(result.result.tools.length,11);
   } finally { child.kill(); await once(child,'exit'); }
 });

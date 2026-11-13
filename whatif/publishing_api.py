@@ -138,6 +138,8 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                     result = drafts.create(args['brand'], args['destinations'])
                 elif self.path == '/drafts/get':
                     result = drafts.get(args['draft_id'])
+                elif self.path == '/drafts/status':
+                    result = drafts.refresh(args['draft_id'])
                 elif self.path == '/drafts/publish':
                     result = drafts.publish(args['draft_id'], args['snapshot_hash'], args['destinations'], args['approved'])
                 elif self.path == '/tiktok/verify':

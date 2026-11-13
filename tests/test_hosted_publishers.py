@@ -41,6 +41,17 @@ class HostedTests(unittest.TestCase):
         self.assertEqual(result['status'],'published')
         provider.status.assert_called_once_with('456'); provider.publish.assert_not_called()
 
+    def test_processing_status_reads_existing_instagram_container_without_publishing(self):
+        provider = Mock()
+        provider.graph.return_value = {'status_code':'FINISHED'}
+        with patch.object(self.publishers,'config',return_value={}), \
+                patch('scripts.publishing_direct.client',return_value=provider):
+            result = self.publishers.read_status(self.row, {'status':'processing','receipt':{'provider_id':'456'}})
+        self.assertEqual(result['provider_status'], 'FINISHED')
+        provider.graph.assert_called_once_with('456', fields='status_code')
+        provider.finish_instagram.assert_not_called()
+        provider.publish.assert_not_called()
+
     def test_tiktok_query_requires_owner_and_matching_id(self):
         row={**self.row,'platform':'tiktok','caption':'Reviewed caption'}
         handoff={'handed_off_at':'2026-11-12T00:00:00+00:00'}

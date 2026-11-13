@@ -21,6 +21,8 @@ const tools = [
   'Save a durable immutable draft from already prepared and reviewed media jobs. Does not publish.'],
  ['ifverse_preview','/drafts/get',{draft_id:z.string()},true,
   'Retrieve a draft across chats. Show every destination, caption, media preview, hash and current delivery status.'],
+ ['ifverse_status','/drafts/status',{draft_id:z.string()},true,
+  'Refresh actual publication status using read-only provider checks. Does not upload, resume, or publish.'],
  ['ifverse_publish','/drafts/publish',{draft_id:z.string(),snapshot_hash:z.string(),destinations:z.array(z.string()),approved:z.boolean()},false,
   'Public write. Only after explicit owner approval of this exact preview. Post it is approval only when the draft and destinations are clear. '
   +'Select exactly the requested subset. Instagram only means only its alias. Never infer approval while preparing. '

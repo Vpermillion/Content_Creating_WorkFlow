@@ -46,6 +46,7 @@ const tools = [
     brand, destinations: array(destination, 'The selected destination accounts and formats.', 4),
   }), WRITE),
   tool('ifverse_preview', 'Retrieve a saved draft from any chat with preview, snapshot hash, and actual delivery status.', object({ draft_id: draftId }), READ),
+  tool('ifverse_status', 'Refresh saved publication receipts using read-only provider checks. Does not upload, resume, or publish.', object({ draft_id: draftId }), READ),
   tool('ifverse_publish', 'Only call after explicit user approval of the shown draft and exact destinations. For Instagram only, send only that alias. Retry only the requested destination. TikTok returns a Studio handoff.', object({
     draft_id: draftId, snapshot_hash: sha,
     destinations: { ...array(alias, 'Only aliases explicitly approved for this operation.', 4), uniqueItems: true },
@@ -62,6 +63,7 @@ const routes = new Map([
   ['ifverse_media_import', '/jobs/import'],
   ['ifverse_accounts', '/accounts'], ['ifverse_connect', '/connect'], ['ifverse_verify', '/verify'],
   ['ifverse_prepare', '/drafts/create'], ['ifverse_preview', '/drafts/get'],
+  ['ifverse_status', '/drafts/status'],
   ['ifverse_publish', '/drafts/publish'], ['ifverse_verify_tiktok', '/tiktok/verify'],
 ]);
 

@@ -196,6 +196,37 @@ class Publishers:
         # In particular media_publish may have succeeded but lost its response.
         return {**receipt, 'status': 'needs_reconciliation'}
 
+    def read_status(self, row, state):
+        """Check existing provider resources without resuming a write."""
+        receipt = state['receipt']
+        provider_id = receipt.get('provider_id')
+        phase, resource = receipt.get('checkpoint'), receipt.get('checkpoint_id')
+        if row['platform'] == 'tiktok':
+            return None
+        if row['platform'] == 'youtube':
+            if not provider_id:
+                return None
+            with self.session(row) as session:
+                current = yp.verify_uploaded(session, {'video_id': provider_id, 'verified_channel_id': row['account_id'],
+                    'url': 'https://www.youtube.com/shorts/' + provider_id})
+            status = 'published' if current['publicly_posted'] else 'submitted'
+            if current['provider_upload_status'] in ('deleted', 'failed', 'rejected'):
+                status = 'failed'
+            return {'status': status, 'provider_id': provider_id,
+                    'url': current['url'] if status == 'published' else None,
+                    'provider_upload_status': current['provider_upload_status']}
+        provider = direct.client(row['platform'], row['account_id'], self.config(row))
+        provider.verify(row['account_id'])
+        if row['platform'] == 'instagram' and phase == 'publishing_container_id':
+            if provider.graph(resource, fields='status_code').get('status_code') == 'PUBLISHED':
+                return {'status': 'published', 'provider_id': None, 'url': None}
+            return None
+        if row['platform'] == 'instagram' and state['status'] == 'processing':
+            code = provider.graph(provider_id, fields='status_code').get('status_code')
+            return {**receipt, 'status': 'processing', 'provider_status': code}
+        known_id = provider_id or (resource if row['platform'] == 'facebook' and phase == 'finishing_video_id' else None)
+        return self.meta_status(provider, known_id, row) if known_id else None
+
     def verify_tiktok_video(self, row, video_id, handoff):
         direct.require(row['platform'] == 'tiktok' and isinstance(video_id, str)
                        and video_id.isdigit() and len(video_id) <= 30, 'Invalid TikTok video ID')

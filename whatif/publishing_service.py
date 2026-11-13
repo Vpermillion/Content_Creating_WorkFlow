@@ -151,6 +151,23 @@ class Drafts:
             db.execute('UPDATE deliveries SET status=?,receipt=? WHERE draft=? AND alias=?',
                        ('published', canonical(receipt), draft, alias))
 
+    def refresh(self, draft):
+        with youtube.file_lock(self.directory / '.publish.lock'):
+            preview = self.get(draft)
+            rows = {r['account']: r for r in preview['destinations']}
+            for state in preview['deliveries']:
+                if state['status'] not in ('submitted', 'processing', 'needs_reconciliation'):
+                    continue
+                row = rows[state['alias']]
+                try:
+                    accounts.resolve(self.root, row)
+                    result = self.adapter.read_status(row, state)
+                except Exception:
+                    continue  # Keep the existing receipt when a provider read fails.
+                if result:
+                    self.save(draft, state['alias'], result['status'], {**state['receipt'], **result})
+            return self.get(draft)
+
     def publish(self, draft, snapshot_hash, destinations, approved):
         require(approved is True, 'Explicit owner approval of this exact preview is required')
         preview = self.get(draft)
