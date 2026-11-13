@@ -4,10 +4,11 @@ import hmac
 import json
 import os
 import time
+from datetime import datetime, timezone
 from urllib.parse import urlencode
 
 from scripts import publishing_accounts as accounts, publishing_direct as direct
-from . import media, youtube, youtube_publish as yp
+from . import hosted_tiktok, media, youtube, youtube_publish as yp
 
 
 def tiktok_request(url, token, body=None):
@@ -18,6 +19,15 @@ def tiktok_request(url, token, body=None):
         result = json.loads(response.read(1_000_000))
     direct.require(result.get('error', {}).get('code') == 'ok', 'TikTok request did not succeed')
     return result
+
+
+def verify_youtube_handle(session, row):
+    if row.get('handle'):
+        result = session.get(youtube.CHANNELS_URL, params={'part': 'snippet', 'forHandle': row['handle']},
+                             timeout=25, allow_redirects=False)
+        direct.require(result.status_code == 200, 'YouTube handle lookup failed')
+        direct.require([channel.get('id') for channel in result.json().get('items', [])] == [row['account_id']],
+                       'The YouTube handle differs from the authorized channel')
 
 
 class Publishers:
@@ -35,10 +45,18 @@ class Publishers:
 
     def verify(self, row):
         if row['platform'] == 'youtube':
-            with self.session(row):
+            with self.session(row) as session:
+                verify_youtube_handle(session, row)
                 return {'account_id': row['account_id'], 'handle': row.get('handle'), 'verified': True}
-        config = self.config(row)
         if row['platform'] == 'tiktok':
+            confirmed = self.state / 'grants' / (row['account'] + '.studio.json')
+            if confirmed.is_file():
+                proof = json.loads(confirmed.read_text())
+                direct.require(proof['account_id'] == row['account_id']
+                               and proof['handle'] == hosted_tiktok.normalize_handle(row['handle']),
+                               'TikTok Studio confirmation differs from the registered account')
+                return {**proof, 'verified': True}
+            config = self.config(row)
             result = tiktok_request('https://open.tiktokapis.com/v2/user/info/?fields=open_id,display_name,username',
                                     config['token'])
             user = result['data']['user']
@@ -47,6 +65,7 @@ class Publishers:
                 'TikTok account mismatch')
             handle = user['username']
         else:
+            config = self.config(row)
             handle = direct.client(row['platform'], row['account_id'], config).verify(row['account_id'])
             if row['platform'] == 'instagram' and row.get('handle'):
                 direct.require(handle.lstrip('@').casefold() == row['handle'].lstrip('@').casefold(),
@@ -63,15 +82,16 @@ class Publishers:
         info = media.probe(path)
         video = next((s for s in info['streams'] if s['codec_type'] == 'video'), {})
         if row['format'] in ('jpeg', 'feed'):
-            direct.require(video.get('codec_name') == 'mjpeg' and info['format'].get('nb_streams') == 1,
-                           'Instagram feed requires one JPEG image')
+            direct.require(video.get('codec_name') == 'mjpeg' and int(info['format'].get('nb_streams', 0)) == 1,
+                           'A photo feed post requires one JPEG image')
             ratio = video.get('width', 0) / max(video.get('height', 0), 1)
             direct.require(0.8 <= ratio <= 1.91, 'JPEG aspect ratio must be 4:5 through 1.91:1')
         else:
             duration = float(info['format'].get('duration', 0))
             high = 60 if row['platform'] == 'facebook' else 180
             direct.require(3 <= duration <= high and video.get('width', 0) >= 540
-                and video['width'] * 16 == video['height'] * 9
+                and (video['width'] * 16 == video['height'] * 9
+                     or row['platform'] == 'youtube' and video['width'] == video['height'])
                 and any(s['codec_type'] == 'audio' for s in info['streams']), 'Invalid vertical video export')
         media.command(['ffmpeg', '-nostdin', '-v', 'error', '-xerror', '-i', str(path), '-f', 'null', '-'])
 
@@ -101,6 +121,8 @@ class Publishers:
     @staticmethod
     def result(value):
         status, resource, url = value
+        if url and url.startswith('/') and not url.startswith('//'):
+            url = 'https://www.facebook.com' + url
         return {'status': status, 'provider_id': resource, 'url': url if status == 'published' else None}
 
     def youtube(self, row, path, draft):
@@ -123,8 +145,9 @@ class Publishers:
         return {'status': 'action_required', 'target': row['handle'], 'account_id': row['account_id'],
                 'studio_url': 'https://www.tiktok.com/tiktokstudio/upload',
                 'media_url': self.media_url(row['media_sha256']), 'media_sha256': row['media_sha256'],
-                'caption': row['caption'], 'instructions': 'Confirm this target in Studio, upload the exact download, '
-                'paste this caption, review and publish. Supply the resulting video ID for ownership verification.'}
+                'caption': row['caption'], 'handed_off_at': datetime.now(timezone.utc).isoformat(),
+                'instructions': 'Confirm this target in Studio, upload the exact download, paste this caption, '
+                'review visibility and publish. Open the resulting public post and use the browser verification link.'}
 
     def meta_status(self, provider, resource, row):
         if row['format'] == 'feed':
@@ -147,7 +170,9 @@ class Publishers:
         if row['platform'] == 'youtube':
             return self.youtube(row, path, draft)
         if row['platform'] == 'tiktok':
-            return self.handoff(row)
+            receipt = state['receipt']
+            return {**receipt, 'status': 'action_required', 'media_url': self.media_url(row['media_sha256'])} if (
+                receipt.get('handed_off_at')) else self.handoff(row)
         provider = direct.client(row['platform'], row['account_id'], self.config(row))
         receipt = state['receipt']
         if receipt.get('provider_id'):
@@ -163,21 +188,19 @@ class Publishers:
             if status == 'FINISHED':
                 return self.result(provider.finish_instagram(resource,
                     lambda phase, value: checkpoint({'checkpoint': phase, 'checkpoint_id': value})))
+        if phase == 'publishing_container_id':
+            if provider.graph(resource, fields='status_code').get('status_code') == 'PUBLISHED':
+                return {'status': 'published', 'provider_id': None, 'url': None}
         if phase in ('video_id', 'finishing_video_id'):
             return self.meta_status(provider, resource, row)
         # In particular media_publish may have succeeded but lost its response.
         return {**receipt, 'status': 'needs_reconciliation'}
 
-    def verify_tiktok_video(self, row, video_id):
+    def verify_tiktok_video(self, row, video_id, handoff):
         direct.require(row['platform'] == 'tiktok' and isinstance(video_id, str)
                        and video_id.isdigit() and len(video_id) <= 30, 'Invalid TikTok video ID')
-        self.verify(row)
-        result = tiktok_request('https://open.tiktokapis.com/v2/video/query/?fields=id,share_url',
-            self.config(row)['token'], json.dumps({'filters': {'video_ids': [video_id]}}).encode())
-        videos = result.get('data', {}).get('videos', [])
-        direct.require(len(videos) == 1 and videos[0]['id'] == video_id, 'Ownership not verified')
-        # Query is scoped to the authorized owner; oEmbed is deliberately never used.
-        url = videos[0]['share_url']
-        direct.require(url.startswith('https://www.tiktok.com/@' + row['handle'].lstrip('@') + '/video/' + video_id),
-                       'Unexpected TikTok share URL')
-        return {'status': 'published', 'provider_id': video_id, 'url': url}
+        url = f'https://www.tiktok.com/{hosted_tiktok.normalize_handle(row["handle"])}/video/{video_id}'
+        result = hosted_tiktok.verify_publication(row, url, handed_off_at=handoff['handed_off_at'],
+                                                  access_token=self.config(row)['token'], open_id=row['account_id'])
+        direct.require(result['status'] == 'published', 'TikTok could not verify the reviewed publication')
+        return result

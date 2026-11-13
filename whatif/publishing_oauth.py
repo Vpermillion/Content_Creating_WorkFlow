@@ -10,7 +10,13 @@ from urllib.request import Request, build_opener
 
 from scripts import publishing_accounts as accounts, publishing_direct as direct
 from . import youtube, youtube_publish as yp
-from .hosted_publishers import tiktok_request
+from .hosted_publishers import tiktok_request, verify_youtube_handle
+
+
+META_SCOPES = {
+    'instagram': 'pages_show_list,pages_read_engagement,instagram_basic,instagram_content_publish',
+    'facebook': 'pages_show_list,pages_read_engagement,pages_manage_posts',
+}
 
 
 class OAuth:
@@ -43,7 +49,11 @@ class OAuth:
             version = config['graph_version']
             direct.require(__import__('re').fullmatch(r'v[0-9]+\.[0-9]+', version), 'Invalid Graph version')
             url = f'https://www.facebook.com/{version}/dialog/oauth'
-            query.update(scope='pages_show_list,pages_read_engagement,pages_manage_posts,instagram_basic,instagram_content_publish')
+            if config.get('login_config_id'):
+                direct.numeric_id(config['login_config_id'])
+                query.update(config_id=config['login_config_id'], override_default_response_type='true')
+            else:
+                query.update(scope=META_SCOPES[platform])
         elif platform == 'tiktok':
             url = 'https://www.tiktok.com/v2/auth/authorize/'
             query.pop('client_id')
@@ -80,6 +90,8 @@ class OAuth:
                 yp.require_upload_scope(credentials)
                 direct.require(credentials.refresh_token, 'Offline access is required')
                 channel = yp.upload_channel(credentials, AuthorizedSession, row['account_id'], row.get('handle'))
+                with AuthorizedSession(credentials) as session:
+                    verify_youtube_handle(session, row)
                 store = youtube.ConnectionStore(self.directory / 'youtube')
                 with store.lock(alias):
                     store.save(alias, {'schema_version': 1, 'connection': alias, 'channel': channel,
@@ -120,11 +132,22 @@ class OAuth:
             direct.require(token.get('open_id') == row['account_id'], 'Wrong TikTok owner')
             return {'token': token['access_token'], 'refresh_token': token.get('refresh_token'),
                     'expires_at': time.time() + token.get('expires_in', 0)}
-        pages = direct.request('https://graph.facebook.com/' + config['graph_version'] +
-            '/me/accounts?fields=id,access_token,instagram_business_account{id,username}', token['access_token'])
-        matches = [p for p in pages.get('data', []) if
-                   (p['id'] == row['account_id'] if platform == 'facebook' else
-                    p.get('instagram_business_account', {}).get('id') == row['account_id'])]
+        base = 'https://graph.facebook.com/' + config['graph_version']
+        fields = 'id,access_token' + (',instagram_business_account{id,username}' if platform == 'instagram' else '')
+        params = {'fields': fields, 'limit': 100}
+        matches, seen = [], set()
+        while True:
+            pages = direct.request(base + '/me/accounts?' + urlencode(params), token['access_token'])
+            matches.extend(p for p in pages.get('data', []) if (
+                p.get('id') == row['account_id'] if platform == 'facebook' else
+                (p.get('instagram_business_account') or {}).get('id') == row['account_id']))
+            paging = pages.get('paging', {})
+            if not paging.get('next'):
+                break
+            after = paging.get('cursors', {}).get('after')
+            direct.require(after and after not in seen and len(seen) < 20, 'Meta account selection could not be completed')
+            seen.add(after)
+            params['after'] = after
         direct.require(len(matches) == 1, 'Intended Page or linked professional account is not in the grant')
         grant = {'token': matches[0]['access_token'], 'graph_version': config['graph_version']}
         if platform == 'instagram':

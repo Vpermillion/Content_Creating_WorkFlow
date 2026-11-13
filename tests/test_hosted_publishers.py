@@ -23,6 +23,12 @@ class HostedTests(unittest.TestCase):
             result=self.publishers.reconcile(self.row,None,'draft',{'status':'needs_reconciliation',
                 'receipt':{'checkpoint':'publishing_container_id','checkpoint_id':'123'}},Mock())
         self.assertEqual(result['status'],'needs_reconciliation')
+        provider.graph.return_value = {'status_code': 'PUBLISHED'}
+        with patch.object(self.publishers,'validate_media'), patch.object(self.publishers,'config',return_value={}), \
+                patch('scripts.publishing_direct.client',return_value=provider):
+            result=self.publishers.reconcile(self.row,None,'draft',{'status':'needs_reconciliation',
+                'receipt':{'checkpoint':'publishing_container_id','checkpoint_id':'123'}},Mock())
+        self.assertEqual(result, {'status':'published','provider_id':None,'url':None})
         provider.publish.assert_not_called(); provider.finish_instagram.assert_not_called()
 
     def test_uncertain_facebook_finish_only_reads_status(self):
@@ -36,16 +42,20 @@ class HostedTests(unittest.TestCase):
         provider.status.assert_called_once_with('456'); provider.publish.assert_not_called()
 
     def test_tiktok_query_requires_owner_and_matching_id(self):
-        row={**self.row,'platform':'tiktok'}
-        with patch.object(self.publishers,'verify'), patch.object(self.publishers,'config',return_value={'token':'fixture'}), \
-                patch('whatif.hosted_publishers.tiktok_request') as request:
-            request.return_value={'data':{'videos':[]}}
-            with self.assertRaises(ValueError): self.publishers.verify_tiktok_video(row,'456')
-            request.return_value={'data':{'videos':[{'id':'456','share_url':'https://www.tiktok.com/@wrong/video/456'}]}}
-            with self.assertRaises(ValueError): self.publishers.verify_tiktok_video(row,'456')
-            request.return_value={'data':{'videos':[{'id':'456','share_url':'https://www.tiktok.com/@fictional/video/456'}]}}
-            self.assertEqual(self.publishers.verify_tiktok_video(row,'456')['status'],'published')
-            self.assertIn('/video/query/',request.call_args.args[0])
+        row={**self.row,'platform':'tiktok','caption':'Reviewed caption'}
+        handoff={'handed_off_at':'2026-11-12T00:00:00+00:00'}
+        user={'user':{'open_id':'123','username':'fictional'}}
+        video={'id':'456','share_url':'https://www.tiktok.com/@fictional/video/456',
+               'video_description':'Reviewed caption','create_time':1794531000}
+        with patch.object(self.publishers,'config',return_value={'token':'fixture'}), \
+                patch('whatif.hosted_tiktok._display_request') as request:
+            for wrong in ([], [{**video,'share_url':'https://www.tiktok.com/@wrong/video/456'}],
+                          [{**video,'video_description':'different'}]):
+                request.side_effect=[user, {'videos':wrong}]
+                with self.assertRaises(ValueError): self.publishers.verify_tiktok_video(row,'456',handoff)
+            request.side_effect=[user, {'videos':[video]}]
+            self.assertEqual(self.publishers.verify_tiktok_video(row,'456',handoff)['status'],'published')
+            self.assertEqual(request.call_args.args[0], 'video/query/')
 
     def test_tiktok_studio_never_reports_published(self):
         row={**self.row,'platform':'tiktok','media_sha256':'a'*64,'caption':'exact reviewed caption'}

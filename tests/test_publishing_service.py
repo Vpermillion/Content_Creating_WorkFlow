@@ -1,5 +1,7 @@
 import json
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -61,6 +63,11 @@ class DraftTests(unittest.TestCase):
     def test_retrieve_fresh_session_and_exact_subset(self):
         fresh = Drafts(self.root / 'private', self.root, self.adapter)
         self.assertEqual(fresh.get(self.preview['draft_id']), self.preview)
+        code = ('import json,sys; from whatif.publishing_service import Drafts; '
+                'print(json.dumps(Drafts(sys.argv[1],sys.argv[2],None).get(sys.argv[3])))')
+        restored = json.loads(subprocess.check_output(
+            [sys.executable, '-c', code, str(self.root / 'private'), str(self.root), self.preview['draft_id']]))
+        self.assertEqual(restored, self.preview)
         self.publish(['ig'])
         self.assertEqual(self.adapter.starts, ['ig'])
         self.publish(['ig'])
@@ -95,8 +102,10 @@ class DraftTests(unittest.TestCase):
     def test_duplicate_draft_cannot_bypass_destination_operation(self):
         second = self.service.create('ifverse_anime', self.rows)
         self.publish(['ig'])
-        with self.assertRaises(ValueError):
-            self.service.publish(second['draft_id'],second['snapshot_hash'],['ig'],True)
+        result = self.service.publish(second['draft_id'],second['snapshot_hash'],['ig'],True)
+        receipt = next(r for r in result['deliveries'] if r['alias']=='ig')
+        self.assertEqual(receipt['status'], 'duplicate_operation')
+        self.assertEqual(receipt['receipt']['original_draft_id'], self.preview['draft_id'])
         self.assertEqual(self.adapter.starts,['ig'])
 
     def test_changed_binding_and_media_fail_closed(self):
@@ -104,6 +113,7 @@ class DraftTests(unittest.TestCase):
         registry = json.loads(path.read_text())
         registry['ig']['account_id'] = '999'
         path.write_text(json.dumps(registry))
-        with self.assertRaises(ValueError):
-            self.publish(['ig'])
-        self.assertFalse(self.adapter.starts)
+        result = self.publish(['ig','fb'])
+        self.assertEqual({r['alias']:r['status'] for r in result['deliveries']},
+                         {'ig':'blocked_review','fb':'published','yt':'draft'})
+        self.assertEqual(self.adapter.starts, ['fb'])

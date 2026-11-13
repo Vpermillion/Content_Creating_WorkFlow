@@ -43,7 +43,9 @@ class Drafts:
                 draft TEXT, alias TEXT, status TEXT NOT NULL, receipt TEXT NOT NULL,
                 PRIMARY KEY(draft,alias));
                 CREATE TABLE IF NOT EXISTS operations (
-                identity TEXT PRIMARY KEY, draft TEXT NOT NULL);''')
+                identity TEXT PRIMARY KEY, draft TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS tiktok_posts (
+                provider_id TEXT PRIMARY KEY, draft TEXT NOT NULL, alias TEXT NOT NULL);''')
         os.chmod(self.path, 0o600)
 
     @contextmanager
@@ -137,6 +139,18 @@ class Drafts:
             db.execute('UPDATE deliveries SET status=?,receipt=? WHERE draft=? AND alias=?',
                        (status, canonical(receipt), draft, alias))
 
+    def confirm_tiktok(self, draft, alias, receipt):
+        with self.db() as db:
+            db.execute('BEGIN IMMEDIATE')
+            row = db.execute('SELECT status FROM deliveries WHERE draft=? AND alias=?', (draft, alias)).fetchone()
+            require(row is not None and row['status'] == 'action_required', 'A pending TikTok handoff is required')
+            try:
+                db.execute('INSERT INTO tiktok_posts VALUES (?,?,?)', (receipt['provider_id'], draft, alias))
+            except sqlite3.IntegrityError:
+                raise ValueError('This TikTok post is already attached to a receipt') from None
+            db.execute('UPDATE deliveries SET status=?,receipt=? WHERE draft=? AND alias=?',
+                       ('published', canonical(receipt), draft, alias))
+
     def publish(self, draft, snapshot_hash, destinations, approved):
         require(approved is True, 'Explicit owner approval of this exact preview is required')
         preview = self.get(draft)
@@ -153,25 +167,35 @@ class Drafts:
                 state = next(r for r in self.get(draft)['deliveries'] if r['alias'] == alias)
                 if state['status'] == 'published':
                     continue
-                require(accounts.resolve(self.root, row) == {k: row[k] for k in
-                        accounts.registry(self.root)[alias]}, 'Account binding changed since preview')
                 from scripts import publishing_dashboard as queue
-                queue.load_review(self.root, row['manifest'])
+                try:
+                    require(accounts.resolve(self.root, row) == {k: row[k] for k in
+                            accounts.registry(self.root)[alias]}, 'Account binding changed since preview')
+                    queue.load_review(self.root, row['manifest'])
+                except (ValueError, KeyError, OSError):
+                    status = 'blocked_review' if state['status'] in ('draft', 'awaiting_consent', 'blocked_review') else state['status']
+                    self.save(draft, alias, status, {**state['receipt'], 'verification': 'check_review_or_account_binding'})
+                    continue
                 identity = fingerprint({k: row[k] for k in ('brand', 'platform', 'account_id')} |
                     {'episode': row['manifest']['episode']})
                 with self.db() as db:
                     db.execute('INSERT OR IGNORE INTO operations VALUES (?,?)', (identity, draft))
                     owner = db.execute('SELECT draft FROM operations WHERE identity=?', (identity,)).fetchone()['draft']
-                require(owner == draft, 'This media job destination belongs to another draft; retrieve that original draft')
+                if owner != draft:
+                    self.save(draft, alias, 'duplicate_operation', {'original_draft_id': owner})
+                    continue
                 try:
                     self.adapter.verify(row)  # always read-only, including refresh/identity checks
                 except Exception:
-                    if state['status'] in ('draft', 'awaiting_consent'):
+                    if state['status'] in ('draft', 'awaiting_consent', 'blocked_review'):
                         self.save(draft, alias, 'awaiting_consent', {})
+                    else:
+                        self.save(draft, alias, state['status'],
+                                  {**state['receipt'], 'verification': 'reconnect_required'})
                     continue
                 checkpoint = lambda value, a=alias: self.save(draft, a, 'working', value)
                 try:
-                    if state['status'] in ('draft', 'awaiting_consent'):
+                    if state['status'] in ('draft', 'awaiting_consent', 'blocked_review'):
                         checkpoint({})  # durable intent before the first provider mutation
                         result = self.adapter.start(row, self.media(row['media_sha256']), draft, checkpoint)
                     else:

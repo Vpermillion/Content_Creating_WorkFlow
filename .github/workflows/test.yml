@@ -5,7 +5,7 @@ on:
     branches: [codex/ifverse-chatgpt-publishing]
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -34,14 +34,24 @@ jobs:
         working-directory: sites
       - name: MCP protocol test
         id: mcp
-        run: npm test
+        run: npm test && npm run build
         working-directory: sites
-      - name: Preserve CI result for Git-only review
-        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/codex/ifverse-chatgpt-publishing'
-        env:
-          CI_RESULT: ${{ job.status }}
-          PYTHON_RESULT: ${{ steps.python.outcome }}
-          MCP_RESULT: ${{ steps.mcp.outcome }}
-        run: python scripts/record_publishing_ci.py
+      - name: Hosted container startup
+        if: github.event_name == 'pull_request'
+        run: |
+          docker build -f deploy/Dockerfile.publishing -t ifverse-publishing:ci .
+          docker run --name ifverse-ci --network none -d \
+            -e IFVERSE_PUBLIC_ORIGIN=https://example.invalid \
+            -e IFVERSE_API_TOKEN=fictional-ci-api-token-00000000000000000000 \
+            -e IFVERSE_MEDIA_KEY=fictional-ci-media-key-00000000000000000000 \
+            --tmpfs /state ifverse-publishing:ci
+          trap 'docker logs ifverse-ci; docker rm -f ifverse-ci' EXIT
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            if docker exec ifverse-ci python -c 'import json,urllib.request; assert json.load(urllib.request.urlopen("http://127.0.0.1:8080/health",timeout=2)) == {"status":"ready"}'; then
+              exit 0
+            fi
+            sleep 1
+          done
+          exit 1
 # This tests software using short fixtures. It is not a recurring production-video job.
 
