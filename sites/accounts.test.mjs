@@ -52,7 +52,7 @@ function fixture(t) {
     return worker.fetch(new Request(origin + '/oauth/callback?' + new URLSearchParams({ state, code: 'fixture-code' }),
       { headers: identity }), env);
   }
-  return { db, tool, connect, callback };
+  return { db, env, tool, connect, callback };
 }
 
 test('provider consent checks the destination and persists a private grant without a separate verify action', async t => {
@@ -102,3 +102,42 @@ test('wrong account and expired or reused state cannot create a connection', asy
   assert.equal(studio.structuredContent.status, 'studio_handoff');
 });
 
+test('dashboard starts owner consent and the publisher receives only the selected access grant', async t => {
+  const f = fixture(t);
+  f.env.IFVERSE_BACKEND_URL = 'https://publisher.example.test';
+  f.env.IFVERSE_BACKEND_TOKEN = 'private-publisher-test';
+  const calls = [];
+  t.mock.method(globalThis, 'fetch', async (url, options) => {
+    if (url === 'https://oauth2.googleapis.com/token') {
+      return Response.json({ access_token: 'test-access', refresh_token: 'test-refresh', scope: scopes, expires_in: 3600 });
+    }
+    if (String(url).startsWith(f.env.IFVERSE_BACKEND_URL)) {
+      calls.push({ url: String(url), auth: options.headers.Authorization, body: JSON.parse(options.body) });
+      return Response.json({ deliveries: [{ alias: 'ifverse-anime', status: 'submitted' }] });
+    }
+    return Response.json({ items: [{ id: channelId, snippet: { title: 'Ifverse' } }] });
+  });
+  const page = await worker.fetch(new Request(origin, { headers: owner }), f.env);
+  const html = await page.text();
+  assert.match(html, /Connect YouTube/);
+  assert.match(html, /Instagram/);
+  assert.match(html, /Facebook/);
+  assert.match(html, /Open TikTok Studio/);
+  const form = host => worker.fetch(new Request(origin + '/oauth/connect', {
+    method: 'POST', headers: { ...owner, Origin: host },
+    body: new URLSearchParams({ account: 'ifverse-anime' }),
+  }), f.env);
+  assert.equal((await form('https://other.example.test')).status, 403);
+  const start = await form(origin);
+  assert.equal(start.status, 303);
+  const state = new URL(start.headers.get('Location')).searchParams.get('state');
+  assert.equal((await f.callback(state)).status, 200);
+  const args = { draft_id: 'd'.repeat(32), snapshot_hash: 'a'.repeat(64), destinations: ['ifverse-anime'], approved: true };
+  const result = await f.tool('ifverse_publish', args);
+  assert.equal(result.structuredContent.deliveries[0].status, 'submitted');
+  assert.doesNotMatch(JSON.stringify(result), /test-access|test-refresh|private-publisher-test/);
+  assert.deepEqual(calls, [{ url: f.env.IFVERSE_BACKEND_URL + '/broker/drafts/publish',
+    auth: 'Bearer private-publisher-test', body: { ...args, account_grants: {
+      'ifverse-anime': { platform: 'youtube', account_id: channelId, token: 'test-access' },
+    } } }]);
+});

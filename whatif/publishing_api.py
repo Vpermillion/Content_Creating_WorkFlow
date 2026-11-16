@@ -33,6 +33,30 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                     'operator_url': publishing_owner.studio_link(drafts.adapter.origin, account)}
         return oauth.begin(account)
 
+    def verify_tiktok(args):
+        preview = drafts.get(args['draft_id'])
+        require(preview['snapshot_hash'] == args['snapshot_hash'], 'Wrong snapshot')
+        row = next(r for r in preview['destinations'] if r['account'] == args['account'])
+        state = next(r for r in preview['deliveries'] if r['alias'] == args['account'])
+        require(state['status'] == 'action_required', 'A reviewed Studio handoff is required')
+        result = drafts.adapter.verify_tiktok_video(row, args['video_id'], state['receipt'])
+        drafts.confirm_tiktok(args['draft_id'], args['account'], result)
+        return result
+
+    def broker_operation(path, args):
+        grants = args['account_grants']
+        with drafts.adapter.broker_grants(grants):
+            if path == '/broker/drafts/publish':
+                require(grants.keys() <= set(args['destinations']), 'Unexpected grant for this operation')
+                return drafts.publish(args['draft_id'], args['snapshot_hash'], args['destinations'], args['approved'])
+            if path == '/broker/drafts/status':
+                preview = drafts.get(args['draft_id'])
+                require(grants.keys() <= {item['account'] for item in preview['destinations']},
+                        'Unexpected grant for this draft')
+                return drafts.refresh(args['draft_id'])
+            require(grants.keys() <= {args['account']}, 'Unexpected grant for this operation')
+            return verify_tiktok(args)
+
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
             pass
@@ -162,13 +186,9 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                 elif self.path == '/drafts/publish':
                     result = drafts.publish(args['draft_id'], args['snapshot_hash'], args['destinations'], args['approved'])
                 elif self.path == '/tiktok/verify':
-                    preview = drafts.get(args['draft_id'])
-                    require(preview['snapshot_hash'] == args['snapshot_hash'], 'Wrong snapshot')
-                    row = next(r for r in preview['destinations'] if r['account'] == args['account'])
-                    state = next(r for r in preview['deliveries'] if r['alias'] == args['account'])
-                    require(state['status'] == 'action_required', 'A reviewed Studio handoff is required')
-                    result = drafts.adapter.verify_tiktok_video(row, args['video_id'], state['receipt'])
-                    drafts.confirm_tiktok(args['draft_id'], args['account'], result)
+                    result = verify_tiktok(args)
+                elif self.path in ('/broker/drafts/publish', '/broker/drafts/status', '/broker/tiktok/verify'):
+                    result = broker_operation(self.path, args)
                 else:
                     return self.reply(404, {'error': 'Not found'})
                 for row in result.get('destinations', []):

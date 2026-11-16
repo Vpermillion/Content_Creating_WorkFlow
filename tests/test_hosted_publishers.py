@@ -16,6 +16,24 @@ class HostedTests(unittest.TestCase):
 
     def tearDown(self): self.temp.cleanup()
 
+    def test_broker_grant_is_bound_to_destination_and_cleared_after_operation(self):
+        binding = {'brand': 'ifverse_anime', 'platform': 'instagram', 'account_id': '123'}
+        grant = {'platform': 'instagram', 'account_id': '123', 'token': 'fixture-broker',
+                 'page_id': '789', 'graph_version': 'v25.0'}
+        with patch('scripts.publishing_accounts.registry', return_value={'ig': binding}), \
+                patch('scripts.publishing_accounts.grant', return_value={'token': 'fixture-local'}) as legacy:
+            with self.publishers.broker_grants({'ig': grant}):
+                self.assertEqual(self.publishers.config(self.row)['token'], 'fixture-broker')
+                with self.assertRaises(ValueError):
+                    self.publishers.config({**self.row, 'account_id': '456'})
+            with self.publishers.broker_grants({}):
+                with self.assertRaises(ValueError):
+                    self.publishers.config(self.row)
+            with self.assertRaises(ValueError), self.publishers.broker_grants({'ig': {**grant, 'refresh': 'unused'}}):
+                self.fail('A refresh token must stay in the Site')
+            legacy.assert_not_called()
+            self.assertEqual(self.publishers.config(self.row)['token'], 'fixture-local')
+
     def test_uncertain_media_publish_never_republishes_container(self):
         provider=Mock()
         with patch.object(self.publishers,'validate_media'), patch.object(self.publishers,'config',return_value={}), \

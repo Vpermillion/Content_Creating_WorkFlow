@@ -12,7 +12,7 @@ const accounts = {
   'ifverse-anime': { platform: 'youtube', account_id: 'UCpB_wi5MlernpSJxUf7zWcw', handle: '@ifverse_anime' },
   'ifverse-instagram': { platform: 'instagram', handle: '@ifverse_anime' },
   'ifverse-facebook': { platform: 'facebook' },
-  'ifverse-tiktok': { platform: 'tiktok' },
+  'ifverse-tiktok': { platform: 'tiktok', handle: '@ifverse_anime' },
 };
 const formats = { youtube: ['short'], instagram: ['reel', 'jpeg'], facebook: ['reel', 'feed'], tiktok: ['studio'] };
 const encoder = new TextEncoder();
@@ -60,15 +60,17 @@ function urlWith(base, query) {
   return base + '?' + new URLSearchParams(query);
 }
 
-function targetFor(account, args) {
+function targetFor(account, args, env) {
   const row = Object.hasOwn(accounts, account) ? accounts[account] : null;
   requireValue(row, 'Choose an Ifverse account alias from the account list.');
   if (row.platform === 'facebook') {
-    requireValue(/^[0-9]{1,32}$/.test(args.page_id || ''), 'Use the intended Facebook Page ID when connecting Facebook.');
-    return { ...row, account_id: args.page_id };
+    const pageId = env.IFVERSE_FACEBOOK_PAGE_ID || args.page_id || '';
+    requireValue(/^[0-9]{1,32}$/.test(pageId), 'Set the intended Facebook Page ID before connecting Facebook.');
+    requireValue(!args.page_id || args.page_id === pageId, 'Select the configured Ifverse Facebook Page.');
+    return { ...row, account_id: pageId };
   }
   if (row.platform === 'tiktok') {
-    const name = (args.handle || '').replace(/^@/, '');
+    const name = (args.handle || row.handle).replace(/^@/, '');
     requireValue(/^[a-zA-Z0-9_.]{1,24}$/.test(name), 'Use the intended TikTok @handle when connecting TikTok.');
     return { ...row, handle: '@' + name };
   }
@@ -219,7 +221,7 @@ async function begin(request, env, owner, args) {
     (!args.method && !JSON.parse(env.IFVERSE_OAUTH_CONFIG || '{}').tiktok))) {
     return { account: args.account, status: 'studio_handoff', studio_url: studioUrl };
   }
-  const target = targetFor(args.account, args);
+  const target = targetFor(args.account, args, env);
   const config = oauthSettings(env, target.platform);
   await keyFor(env);
   const state = base64(crypto.getRandomValues(new Uint8Array(32)));
@@ -260,18 +262,18 @@ function publicAccount(account, row) {
   };
 }
 
-async function verify(env, owner, account) {
+async function activeGrant(env, owner, account, minimumLifetime) {
   requireValue(Object.hasOwn(accounts, account), 'Choose an Ifverse account alias from the account list.');
   const row = await env.DB.prepare('SELECT * FROM account_connections WHERE owner_id = ? AND account = ?')
     .bind(owner, account).first();
-  if (!row) return publicAccount(account);
+  if (!row) return null;
   const platform = accounts[account].platform;
   const config = oauthSettings(env, platform);
   const key = await keyFor(env);
   let grant = await decryptGrant(key, owner, account, row.grant);
   requireValue(grant.client === config.client_id, 'The provider app changed. Reconnect this account.');
   let expiresAt = row.expires_at;
-  if (expiresAt && expiresAt < Date.now() + 60_000) {
+  if (expiresAt && expiresAt < Date.now() + minimumLifetime) {
     const youtube = platform === 'youtube';
     const form = { client_secret: config.client_secret, refresh_token: grant.refresh, grant_type: 'refresh_token',
       [youtube ? 'client_id' : 'client_key']: config.client_id };
@@ -285,10 +287,51 @@ async function verify(env, owner, account) {
     ).bind(await encryptGrant(key, owner, account, grant), expiresAt, owner, account, row.grant).run();
     requireValue(update.meta.changes === 1, 'The connection changed while it was checked. Check it again.');
   }
+  return { row: { ...row, expires_at: expiresAt }, grant, config, platform };
+}
+
+async function verify(env, owner, account) {
+  const connection = await activeGrant(env, owner, account, 60_000);
+  if (!connection) return publicAccount(account);
+  const { row, grant, config, platform } = connection;
   if (platform === 'youtube') await youtubeIdentity(grant.token, accounts[account]);
   else if (platform === 'tiktok') await tiktokIdentity(grant.token, row.handle, row.provider_id);
   else await metaIdentity(platform, 'https://graph.facebook.com/' + config.graph_version, row.provider_id, grant.token, row.handle);
-  return { ...publicAccount(account, { ...row, expires_at: expiresAt }), verified: true };
+  return { ...publicAccount(account, row), verified: true };
+}
+
+// Only used for server-to-server requests to the configured publishing service.
+export async function publishingGrants(env, owner, aliases) {
+  const grants = {};
+  for (const alias of new Set(aliases)) {
+    if (!Object.hasOwn(accounts, alias)) continue;
+    let connection;
+    try {
+      connection = await activeGrant(env, owner, alias, 15 * 60_000);
+    } catch (error) {
+      if (!(error instanceof AccountError)) throw error;
+      continue;
+    }
+    if (!connection) continue;
+    const { row, grant, config, platform } = connection;
+    if (platform === 'facebook' && env.IFVERSE_FACEBOOK_PAGE_ID && row.provider_id !== env.IFVERSE_FACEBOOK_PAGE_ID) continue;
+    grants[alias] = { platform, account_id: row.provider_id, token: grant.token,
+      ...(platform in metaScopes ? { graph_version: config.graph_version,
+        ...(platform === 'instagram' ? { page_id: grant.page_id } : {}) } : {}) };
+  }
+  return grants;
+}
+
+function connectionSetup(env, platform) {
+  try {
+    oauthSettings(env, platform);
+  } catch (error) {
+    return error instanceof AccountError ? error.message : 'Check the private OAuth client settings.';
+  }
+  if (platform === 'facebook' && !/^[0-9]{1,32}$/.test(env.IFVERSE_FACEBOOK_PAGE_ID || '')) {
+    return 'Set the intended Facebook Page ID in the private Site settings.';
+  }
+  return null;
 }
 
 export async function accountTool(request, env, owner, name, args) {
@@ -299,7 +342,10 @@ export async function accountTool(request, env, owner, name, args) {
       .bind(owner).all();
     const records = new Map(saved.results.map(row => [row.account, row]));
     return {
-      accounts: Object.fromEntries(Object.keys(accounts).map(account => [account, publicAccount(account, records.get(account))])),
+      accounts: Object.fromEntries(Object.keys(accounts).map(account => {
+        const item = publicAccount(account, records.get(account));
+        return [account, { ...item, setup_required: connectionSetup(env, item.platform) }];
+      })),
       formats,
       callback_url: callbackUrl(request, env),
     };
@@ -309,7 +355,7 @@ export async function accountTool(request, env, owner, name, args) {
 }
 
 function browserResult(message, status) {
-  return new Response(message + '\n\nReturn to Ifverse Publishing in ChatGPT.', {
+  return new Response(message + '\n\nReturn to the Ifverse Publishing account dashboard.', {
     status, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store',
       'Referrer-Policy': 'no-referrer', 'Content-Security-Policy': "default-src 'none'; frame-ancestors 'none'" },
   });
@@ -347,4 +393,3 @@ export async function accountCallback(request, env, owner) {
     return browserResult(error instanceof AccountError ? error.message : 'Account connection could not be completed. Start again in ChatGPT.', 400);
   }
 }
-

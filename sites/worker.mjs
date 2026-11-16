@@ -1,4 +1,4 @@
-import { accountCallback, accountTool } from './accounts.mjs';
+import { accountCallback, accountTool, publishingGrants } from './accounts.mjs';
 
 const VERSION = '2026-07-28';
 const MAX_BODY_BYTES = 128 * 1024;
@@ -39,12 +39,12 @@ const tools = [
     brand, episode: requestId,
     export: choices('Optional export type.', ['master', 'facebook_reel', 'jpeg']),
   }, ['brand', 'episode']), WRITE),
-  tool('ifverse_accounts', 'List intended destinations and supported formats.', object({}), READ),
+  tool('ifverse_accounts', 'List Ifverse destinations, saved connections, and OAuth setup requirements.', object({}), READ),
   tool('ifverse_connect', 'Open provider consent to connect an Ifverse account. The callback checks the account and saves the connection automatically. If TikTok Login Kit is unavailable, return the Studio link.', object({
     account: alias,
     method: choices('Optional TikTok method. Choose OAuth for an approved Login Kit app, or Studio for manual publishing.', ['studio', 'oauth']),
-    page_id: string('The intended Facebook Page ID, required when connecting Facebook.', 32, { pattern: '^[0-9]+$' }),
-    handle: string('The intended TikTok handle, required for TikTok OAuth.', 25, { pattern: '^@?[a-zA-Z0-9_.]+$' }),
+    page_id: string('The intended Facebook Page ID if it is not configured on the Site.', 32, { pattern: '^[0-9]+$' }),
+    handle: string('Optional TikTok handle. Defaults to @ifverse_anime.', 25, { pattern: '^@?[a-zA-Z0-9_.]+$' }),
   }, ['account']), WRITE),
   tool('ifverse_verify', 'Check a saved provider connection when troubleshooting. A new connection is checked automatically during consent.', object({ account: alias }), READ),
   tool('ifverse_prepare', 'Save a draft with exact media, platform captions, and accounts. Show its preview and ID before asking for approval.', object({
@@ -64,6 +64,7 @@ const tools = [
 ];
 const toolsByName = new Map(tools.map((item) => [item.name, item]));
 const accountTools = new Set(['ifverse_accounts', 'ifverse_connect', 'ifverse_verify']);
+const brokered = new Set(['ifverse_publish', 'ifverse_status', 'ifverse_verify_tiktok']);
 const routes = new Map([
   ['ifverse_media_prepare', '/jobs/prepare'], ['ifverse_media_status', '/jobs/get'],
   ['ifverse_media_import', '/jobs/import'],
@@ -101,8 +102,8 @@ function valid(value, schema) {
   }
 }
 
-async function readJson(message, limit) {
-  if (Number(message.headers.get('content-length')) > limit || !message.body) throw new Error('Invalid JSON body.');
+async function readBody(message, limit) {
+  if (Number(message.headers.get('content-length')) > limit || !message.body) throw new Error('Invalid request body.');
   const reader = message.body.getReader();
   const decoder = new TextDecoder('utf-8', { fatal: true });
   let bytes = 0;
@@ -114,14 +115,18 @@ async function readJson(message, limit) {
       bytes += value.byteLength;
       if (bytes > limit) {
         await reader.cancel();
-        throw new Error('JSON body exceeds the size limit.');
+        throw new Error('Body exceeds the size limit.');
       }
       text += decoder.decode(value, { stream: true });
     }
-    return JSON.parse(text + decoder.decode());
+    return text + decoder.decode();
   } finally {
     reader.releaseLock();
   }
+}
+
+async function readJson(message, limit) {
+  return JSON.parse(await readBody(message, limit));
 }
 
 function reply(id, result, status = 200) {
@@ -147,6 +152,78 @@ function isOwner(request, env) {
     && request.headers.get('oai-authenticated-user-email')?.trim().toLowerCase() === owner;
 }
 
+function accountPage(html, status = 200) {
+  return new Response(html, {
+    status,
+    headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store',
+      'Referrer-Policy': 'no-referrer',
+      'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'" },
+  });
+}
+
+const escapeHtml = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+
+const labels = { youtube: 'YouTube', instagram: 'Instagram', facebook: 'Facebook', tiktok: 'TikTok' };
+
+async function accountDashboard(request, env, owner) {
+  const result = await accountTool(request, env, owner, 'ifverse_accounts', {});
+  if (result.error) return accountPage('Account status is unavailable. Try again.', 503);
+  const cards = Object.values(result.accounts).map(item => {
+    const name = labels[item.platform];
+    const status = { connected: 'Connected', refresh_due: 'Token refresh due', not_connected: 'Awaiting consent' }[item.status];
+    const target = item.handle || item.display_name || item.account_id;
+    const action = item.setup_required
+      ? '<p class="setup">' + escapeHtml(item.setup_required) + '</p>'
+      : '<form method="post" action="/oauth/connect"><input type="hidden" name="account" value="' +
+        escapeHtml(item.account) + '"><button>' +
+        (item.status === 'not_connected' ? 'Connect ' : 'Reconnect ') + name + '</button></form>';
+    const studio = item.platform === 'tiktok'
+      ? '<p><a href="https://www.tiktok.com/tiktokstudio/upload">Open TikTok Studio for manual publishing</a></p>' : '';
+    return '<section><h2>' + name + '</h2><p>' + escapeHtml(status) +
+      (target ? ' · ' + escapeHtml(target) : '') + '</p>' + action + studio + '</section>';
+  }).join('');
+  return accountPage(`<!doctype html><html lang="en"><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ifverse Publishing</title>
+    <style>
+      :root{color-scheme:dark;background:#13151c;color:#edf0ff;font:1rem/1.5 "DM Sans",system-ui,sans-serif}
+      main{margin:clamp(1.25rem,6vw,5rem) auto;padding:0 1.25rem;max-width:56rem}
+      .accounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1rem}
+      section{border:1px solid #3b4053;border-radius:.8rem;background:#1c1f2b;padding:1.25rem}
+      h2,p{margin:.25rem 0 .85rem}h2{font-size:1.25rem}p{color:#c1c7df}
+      button{border:0;border-radius:.45rem;background:#bfc6ff;color:#171a3c;font:inherit;font-weight:700;padding:.6rem 1rem;cursor:pointer}
+      button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px}a{color:#bfc6ff}
+      .setup{font-size:.94rem}
+    </style>
+    <main><h1>Ifverse Publishing</h1><div class="accounts">${cards}</div></main></html>`);
+}
+
+async function connectAccount(request, env, account) {
+  const site = new URL(env.IFVERSE_SITE_ORIGIN || request.url);
+  if (!isOwner(request, env) || request.headers.get('Origin') !== site.origin) {
+    return accountPage('Sign in as the Ifverse Site owner and start from the account page.', 403);
+  }
+  if (!account) {
+    const type = request.headers.get('Content-Type')?.split(';')[0];
+    if (type !== 'application/x-www-form-urlencoded') return accountPage('Use the account dashboard.', 415);
+    try {
+      const form = new URLSearchParams(await readBody(request, 256));
+      account = form.get('account');
+    } catch {
+      return accountPage('Use the account dashboard.', 400);
+    }
+  }
+  const result = await accountTool(request, env, request.headers.get('oai-authenticated-user-id'),
+    'ifverse_connect', { account, ...(account === 'ifverse-tiktok' ? { method: 'oauth' } : {}) });
+  if (result.authorization_url) {
+    return new Response(null, { status: 303, headers: { Location: result.authorization_url,
+      'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' } });
+  }
+  return accountPage('<p>' + escapeHtml(result.error || 'Consent could not start.') +
+    '</p><p><a href="/">Back to accounts</a></p>', 400);
+}
+
 function backendUrl(value, route) {
   const base = new URL(value);
   if (base.protocol !== 'https:' || base.username || base.password || base.pathname !== '/' || base.search || base.hash) {
@@ -155,22 +232,45 @@ function backendUrl(value, route) {
   return new URL(route, base);
 }
 
-async function callBackend(id, operation, args, env) {
+async function fetchBackend(env, route, args) {
+  return fetch(backendUrl(env.IFVERSE_BACKEND_URL, route), {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.IFVERSE_BACKEND_TOKEN}`, 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(args),
+    redirect: 'error',
+    signal: AbortSignal.timeout(25_000),
+  });
+}
+
+async function brokerAliases(env, operation, args) {
+  if (operation === 'ifverse_publish') return args.destinations;
+  if (operation === 'ifverse_verify_tiktok') return [args.account];
+  const response = await fetchBackend(env, '/drafts/get', { draft_id: args.draft_id });
+  if (!response.ok) throw new Error('Draft unavailable.');
+  const draft = await readJson(response, MAX_RESULT_BYTES);
+  return draft.deliveries.filter(item => ['submitted', 'processing', 'needs_reconciliation'].includes(item.status))
+    .map(item => item.alias);
+}
+
+async function callBackend(id, operation, args, env, owner) {
   const token = env.IFVERSE_BACKEND_TOKEN;
   if (!env.IFVERSE_BACKEND_URL || !token) return toolError(id, 'The private publishing service has not been configured.');
   try {
-    const response = await fetch(backendUrl(env.IFVERSE_BACKEND_URL, routes.get(operation)), {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(args),
-      redirect: 'error',
-      signal: AbortSignal.timeout(25_000),
-    });
+    const useBroker = env.DB && brokered.has(operation);
+    let route = routes.get(operation);
+    if (useBroker) {
+      const aliases = await brokerAliases(env, operation, args);
+      args = { ...args, account_grants: await publishingGrants(env, owner, aliases) };
+      route = '/broker' + route;
+    }
+    const response = await fetchBackend(env, route, args);
     if (response.status === 401 || response.status === 403) return toolError(id, 'The private publishing service rejected its Site credential.');
     if (response.status >= 500 || response.redirected) throw new Error('Backend unavailable.');
     const result = await readJson(response, MAX_RESULT_BYTES);
     if (!response.ok) {
-      const message = typeof result?.error === 'string' ? result.error : 'The publishing service rejected the request.';
+      const message = useBroker
+        ? 'The publishing service rejected the broker request. Check the deployed publisher version and account registry.'
+        : typeof result?.error === 'string' ? result.error : 'The publishing service rejected the request.';
       return toolError(id, message.slice(0, 1000));
     }
     return toolResult(id, result);
@@ -221,14 +321,18 @@ async function mcp(request, env) {
     const result = await accountTool(request, env, request.headers.get('oai-authenticated-user-id'), descriptor.name, args);
     return result.error ? toolError(id, result.error) : toolResult(id, result);
   }
-  return callBackend(id, descriptor.name, args, env);
+  return callBackend(id, descriptor.name, args, env, request.headers.get('oai-authenticated-user-id'));
 }
 
 export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
     if (path === '/' && request.method === 'GET') {
-      return new Response('Ifverse Publishing. Open the private Ifverse Publishing app in ChatGPT to use its publishing tools.');
+      if (!isOwner(request, env)) return accountPage('Sign in as the Ifverse Site owner.', 403);
+      return accountDashboard(request, env, request.headers.get('oai-authenticated-user-id'));
+    }
+    if (request.method === 'POST' && env.DB && ['/oauth/connect', '/oauth/connect/youtube'].includes(path)) {
+      return connectAccount(request, env, path.endsWith('/youtube') ? 'ifverse-anime' : undefined);
     }
     if (path === '/oauth/callback' && request.method === 'GET' && env.DB) {
       if (!isOwner(request, env)) return new Response('Sign in as the Site owner to connect an account.', {
@@ -241,4 +345,3 @@ export default {
     return mcp(request, env);
   },
 };
-

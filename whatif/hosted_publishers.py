@@ -1,8 +1,11 @@
 """Adapters for the durable owner-only publishing API; secrets stay on its volume."""
+from contextlib import contextmanager
+from contextvars import ContextVar
 import hashlib
 import hmac
 import json
 import os
+import re
 import time
 from datetime import datetime, timezone
 from urllib.parse import urlencode
@@ -34,12 +37,59 @@ class Publishers:
     def __init__(self, root, state, public_origin, signing_key):
         self.root, self.state = root, state
         self.origin, self.key = public_origin.rstrip('/'), signing_key
+        self._operation_grants = ContextVar('ifverse_operation_grants', default=None)
+
+    @contextmanager
+    def broker_grants(self, grants):
+        direct.require(isinstance(grants, dict) and len(grants) <= 4, 'Invalid broker grants')
+        bindings = accounts.registry(self.root)
+        for alias, grant in grants.items():
+            binding = bindings.get(alias)
+            direct.require(binding and isinstance(grant, dict)
+                           and grant.get('platform') == binding['platform']
+                           and grant.get('account_id') == binding['account_id'], 'Broker grant destination mismatch')
+            token = grant.get('token')
+            direct.require(isinstance(token, str) and 0 < len(token) <= 8000
+                           and all('!' <= char <= '~' for char in token), 'Invalid provider token')
+            fields = {'platform', 'account_id', 'token'}
+            if binding['platform'] in ('facebook', 'instagram'):
+                version = grant.get('graph_version')
+                direct.require(isinstance(version, str) and re.fullmatch(r'v[0-9]+\.[0-9]+', version),
+                               'Invalid broker Graph API version')
+                fields.add('graph_version')
+                if binding['platform'] == 'instagram':
+                    direct.numeric_id(grant.get('page_id'))
+                    fields.add('page_id')
+            direct.require(grant.keys() == fields, 'Unexpected broker grant fields')
+        context = self._operation_grants.set(grants)
+        try:
+            yield
+        finally:
+            self._operation_grants.reset(context)
+
+    def operation_grant(self, row):
+        grants = self._operation_grants.get()
+        if grants is None:
+            return None
+        grant = grants.get(row['account'])
+        direct.require(grant and grant['platform'] == row['platform'] and grant['account_id'] == row['account_id'],
+                       'Connect the reviewed account in Ifverse Publishing')
+        return grant
 
     def config(self, row):
+        grant = self.operation_grant(row)
+        if grant is not None:
+            return grant
         path = self.state / 'grants' / (row['account'] + '.json')
         return json.loads(path.read_text()) if path.exists() else accounts.grant(self.root, row['account'])
 
     def session(self, row):
+        grant = self.operation_grant(row)
+        if grant is not None:
+            _, Credentials, _, Session = youtube.sdk()
+            credentials = Credentials(token=grant['token'])
+            yp.upload_channel(credentials, Session, row['account_id'], row.get('handle'))
+            return Session(credentials)
         return yp.verified_session(youtube.ConnectionStore(self.state / 'youtube'), row['account_id'],
                                    row['account'], row.get('handle'))
 
