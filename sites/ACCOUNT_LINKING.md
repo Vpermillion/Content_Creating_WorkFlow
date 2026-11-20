@@ -1,56 +1,35 @@
 # Link Ifverse accounts
 
-Open the private [Ifverse Publishing Site](https://ifverse-publishing.idealcoyote1.chatgpt.site) with the ChatGPT account configured as its owner. Choose **Connect**, select the provider account, and approve access. The callback verifies the intended destination and saves an encrypted connection automatically. `ifverse_accounts` reports the same saved connections; use `ifverse_verify` to recheck one when troubleshooting.
+Open [Ifverse Accounts](https://ifverse-publishing.idealcoyote1.chatgpt.site/) as the Site owner. Select the platform's **Add account** button, choose the provider login, and approve access. If several channels, Pages, or profiles are available, select the one to save. Repeat to add another account. Choosing a destination again updates its existing connection.
 
-## Three independent identities
+The GitHub login manages source code. The ChatGPT login opens the private dashboard. Each social login grants access to its own channel, Page, or profile. The emails can all differ.
 
-| Identity | Used for |
+Use **Publishing workflow** to reconnect an existing preset Ifverse destination. For a new connection, `ifverse_accounts` returns the saved alias and exact provider ID. Use `ifverse_verify` to recheck a connection.
+
+## Provider setup
+
+Configure each provider app once and register the exact HTTPS `/oauth/callback` URL returned by `ifverse_accounts`. Account holders use the provider's sign-in screen. Provider app review, eligible accounts, test-user restrictions, and two-factor authentication still apply.
+
+| Private Site setting | Purpose |
 | --- | --- |
-| GitHub repository access | Reading source and pinned render results; maintaining code and workflow requests |
-| ChatGPT Site owner | Calling the private tools, opening the dashboard and completing the Site callback |
-| Social provider account | Granting access to the intended YouTube channel, Instagram profile, Facebook Page or TikTok identity |
+| `IFVERSE_SITE_OWNER_EMAIL` | ChatGPT account allowed to manage connections |
+| `IFVERSE_SITE_ORIGIN` | Canonical HTTPS dashboard URL |
+| `IFVERSE_ACCOUNT_KEY` | Stable 32-byte base64url key used to encrypt grants |
+| `IFVERSE_OAUTH_CONFIG` | Provider clients keyed by `youtube`, `meta`, and `tiktok`, with `client_id` and `client_secret` |
+| `IFVERSE_FACEBOOK_PAGE_ID` | Exact Page ID for the preset Ifverse Facebook destination |
 
-The login emails can differ. `sites/worker.mjs` compares the authenticated ChatGPT email with `IFVERSE_SITE_OWNER_EMAIL` and requires an authenticated user ID. It does not compare social-account email with the GitHub or ChatGPT email.
+Meta also needs a supported `graph_version` and may need `login_config_id`. The Instagram flow uses a Facebook Page linked to a professional Instagram profile. TikTok linking needs an eligible Login Kit and Display API app. TikTok publishing opens Studio.
 
-**Owner-check 403:** inspect the configured owner setting and the authenticated identity supplied to the Site. The error happens before channel lookup; it does not reveal whether a channel is connected. Connections and pending consent sessions are partitioned by Site user ID. Changing the owner email alone does not migrate another user's connections.
+Keep the `DB` binding, account key, and existing database across deployments. The schema is in `drizzle/0000_account_connections.sql`. OAuth sessions and saved connections are scoped to the authenticated Site user ID. Changing the owner email alone does not migrate connections.
 
-## Configure the Site
+## GitHub Pages entry point
 
-| Setting | Purpose |
-| --- | --- |
-| `IFVERSE_SITE_OWNER_EMAIL` | ChatGPT account allowed to use the Site |
-| `IFVERSE_SITE_ORIGIN` | Canonical HTTPS Site origin used to build the callback |
-| `IFVERSE_ACCOUNT_KEY` | Stable 32-byte base64url key used to encrypt saved grants |
-| `IFVERSE_OAUTH_CONFIG` | Provider clients: `youtube`, `meta` and/or `tiktok`, each with `client_id` and `client_secret` |
-| `IFVERSE_FACEBOOK_PAGE_ID` | Exact intended Page ID; required for the dashboard's Facebook button |
-| `IFVERSE_BACKEND_URL` | Private publisher's HTTPS origin |
-| `IFVERSE_BACKEND_TOKEN` | Credential matching the publisher's `IFVERSE_API_TOKEN` |
+Enable **GitHub Actions** under **Settings → Pages** on an eligible GitHub plan. Once the workflow is on the default branch, run **Deploy Ifverse account entry** in Actions. It publishes `sites/pages/`, which opens the private dashboard. The dashboard handles provider callbacks and encrypted token storage.
 
-The Meta client also needs `graph_version` and optionally `login_config_id`. Keep client secrets and the storage key in private Site settings. The Site uses the `DB` database binding declared in `.openai/hosting.json`; apply `drizzle/0000_account_connections.sql` and retain that database/key across deployments. `build.mjs` packages the native Worker and account module.
+## Publishing workflow
 
-Register the exact Site `/oauth/callback` URL with each provider app. `ifverse_accounts` returns it after owner access succeeds. This hosted flow uses registered web callbacks; it does not require WSL or the desktop loopback CLI.
+Deploy the matching `whatif.publishing_api` build using `deploy/Dockerfile.publishing` on a private HTTPS origin with persistent state. Configure `IFVERSE_BACKEND_URL` and `IFVERSE_BACKEND_TOKEN` in the Site, with the token matching the publisher's `IFVERSE_API_TOKEN`. Backend settings include `IFVERSE_STATE`, `IFVERSE_MEDIA_KEY`, and `IFVERSE_PUBLIC_ORIGIN`.
 
-## Destination checks and limits
+Register each new account's saved alias and provider ID in [the publishing registry](../channels/publishing-accounts.json) before creating drafts for it. The checked-in registry currently contains only the preset Ifverse YouTube channel. Linking an account leaves the registry and draft approval under your control. For approved operations, the Site refreshes and sends only the selected access grants to the authenticated backend. Refresh tokens and client secrets stay in the Site.
 
-| Alias | Current target | Consent behavior |
-| --- | --- | --- |
-| `ifverse-anime` | YouTube `UCpB_wi5MlernpSJxUf7zWcw`, `@ifverse_anime` | Checks channel ID and handle; requests read/upload and offline access |
-| `ifverse-instagram` | Instagram `@ifverse_anime` | Checks the professional profile linked to an authorized Facebook Page |
-| `ifverse-facebook` | Configured Page ID | Binds that exact authorized Page |
-| `ifverse-tiktok` | `@ifverse_anime`, or the handle supplied to `ifverse_connect` | OAuth checks identity/profile/video access; `method=studio` returns a manual handoff |
-
-The Site's target map is in `accounts.mjs`. It currently exposes one alias per platform, not an arbitrary channel picker. Different provider login accounts can authorize these destinations. Changing or adding YouTube/Instagram targets requires a deliberate target-map update as well as backend registration.
-
-Provider app setup and applicable permissions must be available. TikTok OAuth requires an eligible Login Kit/Display setup; Studio does not create an OAuth connection. TikTok publication remains a Studio handoff.
-
-## Connect the publisher
-
-Deploy the matching `whatif.publishing_api` version on an HTTPS host with persistent private state. `deploy/Dockerfile.publishing` is the supplied container. Backend settings include `IFVERSE_STATE`, `IFVERSE_API_TOKEN`, `IFVERSE_MEDIA_KEY` and `IFVERSE_PUBLIC_ORIGIN`; keep the API and media-signing keys independent. The optional browser owner forms use a separate `IFVERSE_OWNER_PASSWORD`.
-
-Set the Site's backend origin/token to match. For approved publishing, status checks and TikTok Display verification, the Site refreshes selected grants and sends their access tokens to authenticated `/broker/*` routes. Refresh tokens and provider client secrets remain in the Site. The backend validates each account against the registry/draft and uses the access grants for that request.
-
-Register exact receiving IDs in [`channels/publishing-accounts.json`](../channels/publishing-accounts.json) before creating drafts. **The checked-in registry currently contains only YouTube.** Instagram, Facebook and TikTok need their own bindings; Site consent does not automatically write them into Git.
-
-For existing private render import, configure `IFVERSE_GITHUB_READ_TOKEN` on the backend with Contents read access to this repository. See [ChatGPT publishing](../docs/CHATGPT_PUBLISHING.md) for the draft/media contract.
-
-The separate Actions/desktop queue uses its own credentials, described in [SOCIAL_PUBLISHING.md](../docs/SOCIAL_PUBLISHING.md). Select one publishing queue per account/episode; there is no automatic cross-queue migration.
+For private render import, give `IFVERSE_GITHUB_READ_TOKEN` Contents read access on the repository. See [ChatGPT publishing](../docs/CHATGPT_PUBLISHING.md) for draft and media operations. The separate Actions queue uses [its own credentials](../docs/SOCIAL_PUBLISHING.md).

@@ -10,7 +10,7 @@ Use `codex/ifverse-chatgpt-publishing` for the integrated Site/publisher. [PR #4
 | --- | --- |
 | Media | Ten 61-second anime cuts with sound-only repairs are saved; [batch index](BATCH_61S.md) selects the versions |
 | Style | English, `am_michael`, frequent varied roasts and occasional mild/clean swearing; [style prompt](../prompts/script-style.md) |
-| Site linking | HTTPS consent callback verifies the destination and saves encrypted grants, partitioned by authenticated Site user ID |
+| Site linking | The private dashboard can save multiple authorized accounts per platform. The callback verifies the selected destination and stores its grant by Site owner and provider identity. Preset publishing destinations continue to work. |
 | Publisher bridge | Implemented: the Site refreshes and passes selected access grants to authenticated backend broker routes |
 | Backend destinations | Checked-in registry contains only `ifverse-anime`, YouTube ID `UCpB_wi5MlernpSJxUf7zWcw`; Meta and TikTok IDs still need registration |
 | TikTok | OAuth/profile verification is available; publication is a Studio handoff |
@@ -19,6 +19,8 @@ Use `codex/ifverse-chatgpt-publishing` for the integrated Site/publisher. [PR #4
 The bridge is already implemented. Older statements that Site connections cannot reach the publisher are superseded by the November 16 source. The separate GitHub Actions queue continues to use its own secret contract.
 
 ## Live setup and verification
+
+Use **Add account** to choose another provider login or destination. The GitHub Pages entry point opens the private account manager. See [setup and deployment](../sites/ACCOUNT_LINKING.md).
 
 The Site is reachable at [Ifverse Publishing](https://ifverse-publishing.idealcoyote1.chatgpt.site). On 2026-11-20 its configured owner setting was aligned with the confirmed ChatGPT Site owner and saved version 4 was redeployed with runtime environment revision 4. Deployment succeeded and the live `ifverse_accounts` call now succeeds; the earlier owner-check 403 is resolved.
 

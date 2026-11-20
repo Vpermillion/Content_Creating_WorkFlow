@@ -1,4 +1,4 @@
-import { accountCallback, accountTool, publishingGrants } from './accounts.mjs';
+import { accountCallback, accountTool, publishingGrants, selectAccount } from './accounts.mjs';
 
 const VERSION = '2026-07-28';
 const MAX_BODY_BYTES = 128 * 1024;
@@ -41,7 +41,8 @@ const tools = [
   }, ['brand', 'episode']), WRITE),
   tool('ifverse_accounts', 'List Ifverse destinations, saved connections, and OAuth setup requirements.', object({}), READ),
   tool('ifverse_connect', 'Open provider consent to connect an Ifverse account. The callback checks the account and saves the connection automatically. If TikTok Login Kit is unavailable, return the Studio link.', object({
-    account: alias,
+    account: string('A platform (youtube, instagram, facebook, tiktok) for any account, or a preset Ifverse destination alias.',
+      40, { pattern: '^[a-z0-9][a-z0-9-]{0,39}$' }),
     method: choices('Optional TikTok method. Choose OAuth for an approved Login Kit app, or Studio for manual publishing.', ['studio', 'oauth']),
     page_id: string('The intended Facebook Page ID if it is not configured on the Site.', 32, { pattern: '^[0-9]+$' }),
     handle: string('Optional TikTok handle. Defaults to @ifverse_anime.', 25, { pattern: '^@?[a-zA-Z0-9_.]+$' }),
@@ -171,39 +172,59 @@ async function accountDashboard(request, env, owner) {
   const result = await accountTool(request, env, owner, 'ifverse_accounts', {});
   if (result.error) return accountPage('Account status is unavailable. Try again.', 503);
   const nonce = crypto.randomUUID();
-  const cards = Object.values(result.accounts).map(item => {
+  const accounts = Object.values(result.accounts);
+  const connectForm = (account, label) =>
+    '<form method="post" action="/oauth/connect"><input type="hidden" name="account" value="' +
+    escapeHtml(account) + '"><button>' + escapeHtml(label) +
+    '</button><p class="connection-status" role="status"></p></form>';
+  const statusFor = item => ({
+    connected: 'Connected', refresh_due: 'Refresh due', not_connected: 'Ready to connect',
+  })[item.status];
+  const platforms = Object.entries(result.platforms).map(([platform, setup]) => {
+    const name = labels[platform];
+    const connected = accounts.filter(item => item.platform === platform && !item.workflow_destination);
+    const list = connected.length ? '<ul>' + connected.map(item =>
+      '<li><strong>' + escapeHtml(item.display_name || item.handle || item.account_id) + '</strong><small>' +
+      escapeHtml([item.handle || item.account_id, statusFor(item)].join(' · ')) + '</small></li>').join('') + '</ul>' : '';
+    const action = setup ? '<p class="setup">Provider setup required</p>' : connectForm(platform, 'Add ' + name + ' account');
+    return '<section><h3>' + name + '</h3>' + list + action + '</section>';
+  }).join('');
+  const workflow = accounts.filter(item => item.workflow_destination).map(item => {
     const name = labels[item.platform];
-    const status = item.setup_required && item.status === 'not_connected' ? 'Setup required' : {
-      connected: 'Connected', refresh_due: 'Token refresh due', not_connected: 'Ready to connect',
-    }[item.status];
+    const status = item.setup_required && item.status === 'not_connected' ? 'Setup required' : statusFor(item);
     const target = item.handle || item.display_name || item.account_id;
     const action = item.setup_required
       ? '<p class="setup">' + escapeHtml(item.setup_required) + '</p>'
-      : '<form method="post" action="/oauth/connect"><input type="hidden" name="account" value="' +
-        escapeHtml(item.account) + '"><button>' +
-        (item.status === 'not_connected' ? 'Connect ' : 'Reconnect ') + name +
-        '</button><p class="connection-status" role="status"></p></form>';
+      : connectForm(item.account, (item.status === 'not_connected' ? 'Connect ' : 'Reconnect ') + name);
     const studio = item.platform === 'tiktok'
       ? '<p><a href="https://www.tiktok.com/tiktokstudio/upload">Open TikTok Studio for manual publishing</a></p>' : '';
-    return '<section><h2>' + name + '</h2><p>' + escapeHtml(status) +
+    return '<section><h3>' + name + '</h3><p>' + escapeHtml(status) +
       (target ? ' · ' + escapeHtml(target) : '') + '</p>' + action + studio + '</section>';
   }).join('');
   return accountPage(`<!doctype html><html lang="en"><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ifverse Publishing</title>
+    <title>Ifverse Accounts</title>
     <style>
       :root{color-scheme:dark;background:#13151c;color:#edf0ff;font:1rem/1.5 "DM Sans",system-ui,sans-serif}
       main{margin:clamp(1.25rem,6vw,5rem) auto;padding:0 1.25rem;max-width:56rem}
       .accounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1rem}
       section{border:1px solid #3b4053;border-radius:.8rem;background:#1c1f2b;padding:1.25rem}
-      h2,p{margin:.25rem 0 .85rem}h2{font-size:1.25rem}p{color:#c1c7df}
+      h2{margin:1.8rem 0 .65rem;font-size:1.25rem}
+      h3,p{margin:.25rem 0 .85rem}h3{font-size:1.1rem}p,small{color:#c1c7df}
+      ul{list-style:none;padding:0;margin:.5rem 0 1rem}li{padding:.55rem 0;border-bottom:1px solid #3b4053}
+      li small{display:block}li,small{overflow-wrap:anywhere}
       button{border:0;border-radius:.45rem;background:#bfc6ff;color:#171a3c;font:inherit;font-weight:700;padding:.6rem 1rem;cursor:pointer}
       button:disabled{opacity:.65;cursor:wait}
       button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px}a{color:#bfc6ff}
       .setup{font-size:.94rem}
       .connection-status{margin-top:.75rem}.connection-status:empty{margin:0}
     </style>
-    <main><h1>Ifverse Publishing</h1><div class="accounts">${cards}</div></main>
+    <main><h1>Ifverse Accounts</h1>
+      <p>Choose a platform, approve access, and pick the channel, Page, or profile to save. Each platform can store multiple accounts.</p>
+      <div class="accounts">${platforms}</div>
+      <h2>Publishing workflow</h2><p>These destinations are used for reviewed posts.</p>
+      <div class="accounts">${workflow}</div>
+    </main>
     <script nonce="${nonce}">
       for (const form of document.querySelectorAll('form[action="/oauth/connect"]')) {
         const button = form.querySelector('button');
@@ -268,6 +289,22 @@ async function connectAccount(request, env, account) {
       escapeHtml(result.authorization_url) + '">Continue to provider</a></p><p><a href="/">Back to accounts</a></p>');
   }
   return fail(result.error || 'Consent could not start.', 400);
+}
+
+async function selectDestination(request, env) {
+  const site = new URL(env.IFVERSE_SITE_ORIGIN || request.url);
+  if (!isOwner(request, env) || request.headers.get('Origin') !== site.origin) {
+    return accountPage('<p>Sign in as the Ifverse Site owner and start from the account page.</p>', 403);
+  }
+  if (request.headers.get('Content-Type')?.split(';')[0] !== 'application/x-www-form-urlencoded') {
+    return accountPage('<p>Choose an account from the list.</p>', 415);
+  }
+  try {
+    const form = new URLSearchParams(await readBody(request, 256));
+    return await selectAccount(env, request.headers.get('oai-authenticated-user-id'), form.get('selection'), form.get('choice'));
+  } catch {
+    return accountPage('<p>Choose an account from the list.</p><p><a href="/">Back to accounts</a></p>', 400);
+  }
 }
 
 function backendUrl(value, route) {
@@ -380,6 +417,7 @@ export default {
     if (request.method === 'POST' && env.DB && ['/oauth/connect', '/oauth/connect/youtube'].includes(path)) {
       return connectAccount(request, env, path.endsWith('/youtube') ? 'ifverse-anime' : undefined);
     }
+    if (path === '/oauth/select' && request.method === 'POST' && env.DB) return selectDestination(request, env);
     if (path === '/oauth/callback' && request.method === 'GET' && env.DB) {
       if (!isOwner(request, env)) return new Response('Sign in as the Site owner to connect an account.', {
         status: 403, headers: { 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' },

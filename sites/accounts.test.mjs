@@ -160,3 +160,128 @@ test('one-click dashboard starts consent, survives phone verification and return
       'ifverse-anime': { platform: 'youtube', account_id: channelId, token: 'test-access' },
     } } }]);
 });
+
+async function startPlatform(f, account) {
+  const result = await worker.fetch(new Request(origin + '/oauth/connect', {
+    method: 'POST', headers: { ...owner, Origin: origin, Accept: 'application/json' },
+    body: new URLSearchParams({ account }),
+  }), f.env);
+  assert.equal(result.status, 200);
+  return new URL((await result.json()).authorization_url);
+}
+
+function select(f, selection, choice, headers = {}) {
+  return worker.fetch(new Request(origin + '/oauth/select', {
+    method: 'POST', headers: { ...owner, Origin: origin, ...headers },
+    body: new URLSearchParams({ selection, choice }),
+  }), f.env);
+}
+
+test('one provider login can add more than one channel with isolated, stable connections', async t => {
+  const f = fixture(t);
+  const channelA = 'UC' + 'a'.repeat(22);
+  const channelB = 'UC' + 'b'.repeat(22);
+  const rows = () => f.db.prepare('SELECT * FROM account_connections ORDER BY provider_id').all();
+  t.mock.method(globalThis, 'fetch', async url => {
+    const endpoint = new URL(url);
+    if (endpoint.hostname === 'oauth2.googleapis.com') {
+      return Response.json({ access_token: 'private-access', refresh_token: 'private-refresh', scope: scopes, expires_in: 3600 });
+    }
+    assert.equal(endpoint.searchParams.get('mine'), 'true');
+    return Response.json(endpoint.searchParams.has('pageToken')
+      ? { items: [{ id: channelB, snippet: { title: '<Second>', customUrl: '@second' } }] }
+      : { items: [{ id: channelA, snippet: { title: 'First', customUrl: '@first' } }], nextPageToken: 'next' });
+  });
+  async function chooser() {
+    const authorize = await startPlatform(f, 'youtube');
+    assert.equal(authorize.searchParams.get('prompt'), 'consent select_account');
+    const response = await f.callback(authorize.searchParams.get('state'));
+    assert.equal(response.status, 200);
+    const page = await response.text();
+    assert.match(page, /Choose an account/);
+    assert.match(page, /&lt;Second&gt;/);
+    assert.doesNotMatch(page, /private-access|private-refresh|<Second>/);
+    return page.match(/name="selection" value="([^"]+)"/)[1];
+  }
+  const selection = await chooser();
+  assert.equal(rows().length, 0);
+  assert.doesNotMatch(f.db.prepare('SELECT target FROM oauth_sessions').get().target, /private-access|private-refresh/);
+  assert.equal((await select(f, selection, '0', { Origin: 'https://elsewhere.example' })).status, 403);
+  assert.equal((await select(f, selection, '0', { 'oai-authenticated-user-id': 'elsewhere' })).status, 400);
+  assert.equal((await select(f, selection, '50')).status, 400);
+  assert.equal((await select(f, selection, '0')).status, 303);
+  assert.equal((await select(f, selection, '1')).status, 400);
+  assert.deepEqual(rows().map(row => row.provider_id), [channelA]);
+  assert.equal((await select(f, await chooser(), '1')).status, 303);
+  assert.deepEqual(rows().map(row => row.provider_id), [channelA, channelB]);
+  assert.equal((await select(f, await chooser(), '0')).status, 303);
+  assert.equal(rows().length, 2);
+  const accounts = (await f.tool('ifverse_accounts', {})).structuredContent.accounts;
+  assert.equal(accounts['ifverse-anime'].status, 'not_connected');
+  for (const row of rows()) {
+    assert.equal(accounts[row.account].workflow_destination, false);
+    assert.equal(accounts[row.account].account_id, row.provider_id);
+    assert.equal((await f.tool('ifverse_verify', { account: row.account })).structuredContent.verified, true);
+  }
+  const dashboard = await (await worker.fetch(new Request(origin, { headers: owner }), f.env)).text();
+  assert.match(dashboard, /Add YouTube account/);
+  assert.match(dashboard, /@first · Connected/);
+  assert.match(dashboard, /@second · Connected/);
+});
+
+test('Facebook and Instagram derive authorized destinations without a configured Page ID', async t => {
+  const f = fixture(t);
+  f.env.IFVERSE_OAUTH_CONFIG = JSON.stringify({ meta: { client_id: 'meta-client', client_secret: 'fixture', graph_version: 'v25.0' } });
+  t.mock.method(globalThis, 'fetch', async (url, options) => {
+    const endpoint = new URL(url);
+    assert.equal(endpoint.hostname, 'graph.facebook.com');
+    if (endpoint.pathname.endsWith('/oauth/access_token')) return Response.json({ access_token: 'person-token' });
+    if (endpoint.pathname.endsWith('/me/permissions')) return Response.json({
+      data: ['pages_show_list', 'pages_read_engagement', 'pages_manage_posts', 'instagram_basic', 'instagram_content_publish']
+        .map(permission => ({ permission, status: 'granted' })),
+    });
+    if (endpoint.pathname.endsWith('/me/accounts')) return Response.json({ data: [
+      { id: '101', name: 'First Page', access_token: 'first-token', instagram_business_account: { id: '301', username: 'instagram_first' } },
+      { id: '102', name: 'Second Page', access_token: 'second-token' },
+    ] });
+    if (endpoint.pathname.endsWith('/301')) {
+      assert.equal(options.headers.Authorization, 'Bearer first-token');
+      return Response.json({ id: '301', username: 'instagram_first' });
+    }
+    assert.equal(endpoint.pathname, '/v25.0/102');
+    assert.equal(options.headers.Authorization, 'Bearer second-token');
+    return Response.json({ id: '102', name: 'Second Page' });
+  });
+  const instagram = await startPlatform(f, 'instagram');
+  assert.equal((await f.callback(instagram.searchParams.get('state'))).status, 303);
+  const facebook = await startPlatform(f, 'facebook');
+  const page = await (await f.callback(facebook.searchParams.get('state'))).text();
+  assert.match(page, /Second Page/);
+  assert.doesNotMatch(page, /first-token|second-token/);
+  const selection = page.match(/name="selection" value="([^"]+)"/)[1];
+  assert.equal((await select(f, selection, '1')).status, 303);
+  const linked = f.db.prepare('SELECT account, provider_id, handle FROM account_connections ORDER BY account').all();
+  assert.deepEqual(linked.map(item => [item.account.split('-')[0], item.provider_id, item.handle]),
+    [['facebook', '102', ''], ['instagram', '301', '@instagram_first']]);
+});
+
+test('TikTok saves the consented account without a preset handle', async t => {
+  const f = fixture(t);
+  f.env.IFVERSE_OAUTH_CONFIG = JSON.stringify({ tiktok: { client_id: 'tiktok-client', client_secret: 'fixture' } });
+  t.mock.method(globalThis, 'fetch', async url => {
+    const endpoint = new URL(url);
+    assert.equal(endpoint.hostname, 'open.tiktokapis.com');
+    if (endpoint.pathname.includes('/oauth/token/')) return Response.json({
+      access_token: 'private-access', refresh_token: 'private-refresh', scope: 'user.info.basic,user.info.profile,video.list',
+      open_id: 'stable-tiktok-id', expires_in: 3600,
+    });
+    return Response.json({ data: { user: { open_id: 'stable-tiktok-id', username: 'different_account' } } });
+  });
+  const authorize = await startPlatform(f, 'tiktok');
+  assert.equal(authorize.searchParams.get('client_key'), 'tiktok-client');
+  assert.equal((await f.callback(authorize.searchParams.get('state'))).status, 303);
+  const row = f.db.prepare('SELECT account, provider_id, handle FROM account_connections').get();
+  assert.match(row.account, /^tiktok-/);
+  assert.equal(row.provider_id, 'stable-tiktok-id');
+  assert.equal(row.handle, '@different_account');
+});

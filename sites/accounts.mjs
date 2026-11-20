@@ -18,6 +18,11 @@ const formats = { youtube: ['short'], instagram: ['reel', 'jpeg'], facebook: ['r
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 const stateLifetime = 30 * 60;
+const selectionLifetime = 10 * 60 * 1000;
+const selectionAccount = 'choose-destination';
+const platforms = Object.keys(formats);
+const savedAccount = /^(youtube|instagram|facebook|tiktok)-[0-9a-f]{24}$/;
+const platformFor = account => Object.hasOwn(accounts, account) ? accounts[account].platform : savedAccount.exec(account)?.[1];
 
 class AccountError extends Error {}
 
@@ -27,7 +32,11 @@ function requireValue(value, message) {
 }
 
 function base64(bytes) {
-  return btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '');
+  let binary = '';
+  for (let offset = 0; offset < bytes.length; offset += 16_384) {
+    binary += String.fromCharCode(...bytes.subarray(offset, offset + 16_384));
+  }
+  return btoa(binary).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '');
 }
 
 function unbase64(value) {
@@ -61,6 +70,7 @@ function urlWith(base, query) {
 }
 
 function targetFor(account, args, env) {
+  if (platforms.includes(account)) return { platform: account };
   const row = Object.hasOwn(accounts, account) ? accounts[account] : null;
   requireValue(row, 'Choose an Ifverse account alias from the account list.');
   if (row.platform === 'facebook') {
@@ -141,21 +151,43 @@ const handleKey = value => String(value || '').replace(/^@/, '').toLowerCase();
 const hasScopes = (scope, needed) => needed.every(item => String(scope || '').split(/[ ,]+/).includes(item));
 const expiry = seconds => Number.isFinite(Number(seconds)) && Number(seconds) > 0 ? Date.now() + Number(seconds) * 1000 : null;
 
+async function youtubeChannels(token) {
+  const endpoint = 'https://www.googleapis.com/youtube/v3/channels';
+  const params = { part: 'snippet', mine: 'true', maxResults: '50' };
+  const channels = new Map();
+  const seen = new Set();
+  do {
+    const result = await providerJson(urlWith(endpoint, params), { token });
+    for (const item of result.items || []) {
+      if (!/^UC[A-Za-z0-9_-]{22}$/.test(item.id)) continue;
+      const handle = item.snippet?.customUrl?.startsWith('@') ? item.snippet.customUrl : '';
+      channels.set(item.id, { id: item.id, handle, name: item.snippet?.title || handle || item.id });
+    }
+    params.pageToken = result.nextPageToken;
+    if (params.pageToken) {
+      requireValue(!seen.has(params.pageToken) && seen.size < 10, 'YouTube could not finish listing the authorized channels.');
+      seen.add(params.pageToken);
+    }
+  } while (params.pageToken);
+  return [...channels.values()];
+}
+
 async function youtubeIdentity(token, target) {
-  const result = await providerJson('https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true&maxResults=50', { token });
-  const match = result.items?.find(item => item.id === target.account_id);
-  requireValue(match, 'Google authorized a different YouTube channel. Choose @ifverse_anime during consent.');
+  const match = (await youtubeChannels(token)).find(item => item.id === target.account_id);
+  const mismatch = target.handle ? 'Google authorized a different YouTube channel. Choose @ifverse_anime during consent.'
+    : 'Google authorized a different YouTube channel. Reconnect this channel.';
+  requireValue(match, mismatch);
+  if (!target.handle) return match;
   const handleMatch = await providerJson(urlWith('https://www.googleapis.com/youtube/v3/channels',
     { part: 'id', forHandle: target.handle }), { token });
-  requireValue(handleMatch.items?.length === 1 && handleMatch.items[0].id === match.id,
-    'Google authorized a different YouTube channel. Choose @ifverse_anime during consent.');
-  return { id: match.id, handle: target.handle, name: match.snippet?.title || target.handle };
+  requireValue(handleMatch.items?.length === 1 && handleMatch.items[0].id === match.id, mismatch);
+  return { ...match, handle: target.handle };
 }
 
 async function metaIdentity(platform, base, id, token, expectedHandle) {
   const fields = platform === 'instagram' ? 'id,username' : 'id,name';
   const result = await providerJson(urlWith(base + '/' + id, { fields }), { token });
-  requireValue(result.id === id && (platform !== 'instagram' || handleKey(result.username) === handleKey(expectedHandle)),
+  requireValue(result.id === id && (!expectedHandle || platform !== 'instagram' || handleKey(result.username) === handleKey(expectedHandle)),
     'Meta returned a different account. Check the Page and its linked Instagram profile.');
   return { id, handle: result.username ? '@' + result.username : '', name: result.name || result.username || '' };
 }
@@ -163,13 +195,13 @@ async function metaIdentity(platform, base, id, token, expectedHandle) {
 async function tiktokIdentity(token, handle, expectedId) {
   const response = await providerJson('https://open.tiktokapis.com/v2/user/info/?fields=open_id,username,display_name', { token });
   const user = response.data?.user;
-  requireValue(user?.open_id === expectedId && handleKey(user.username) === handleKey(handle),
+  requireValue(user?.open_id === expectedId && (!handle || handleKey(user.username) === handleKey(handle)),
     'TikTok authorized a different account. Choose the requested handle during consent.');
-  return { id: user.open_id, handle: '@' + user.username, name: user.display_name || user.username };
+  return { id: user.open_id, handle: user.username ? '@' + user.username : '', name: user.display_name || user.username || user.open_id };
 }
 
-async function metaPage(base, platform, target, token) {
-  const fields = platform === 'instagram' ? 'id,access_token,instagram_business_account{id,username}' : 'id,access_token';
+async function metaPages(base, platform, target, token) {
+  const fields = platform === 'instagram' ? 'id,access_token,instagram_business_account{id,username}' : 'id,name,access_token';
   const params = { fields, limit: '100' };
   const matches = new Map();
   const seen = new Set();
@@ -177,8 +209,8 @@ async function metaPage(base, platform, target, token) {
     const result = await providerJson(urlWith(base + '/me/accounts', params), { token });
     for (const page of result.data || []) {
       const instagram = page.instagram_business_account;
-      const matchesTarget = platform === 'facebook' ? page.id === target.account_id
-        : instagram?.id && handleKey(instagram.username) === handleKey(target.handle);
+      const matchesTarget = platform === 'facebook' ? !target.account_id || page.id === target.account_id
+        : /^[0-9]+$/.test(instagram?.id || '') && (!target.handle || handleKey(instagram.username) === handleKey(target.handle));
       if (matchesTarget && /^[0-9]+$/.test(page.id) && page.access_token) matches.set(page.id, page);
     }
     if (!result.paging?.next) break;
@@ -187,8 +219,7 @@ async function metaPage(base, platform, target, token) {
     seen.add(after);
     params.after = after;
   }
-  requireValue(matches.size === 1, 'Consent did not include the intended Facebook Page or its linked Instagram profile.');
-  return matches.values().next().value;
+  return [...matches.values()];
 }
 
 async function exchange(target, config, code, redirect, verifier) {
@@ -199,17 +230,20 @@ async function exchange(target, config, code, redirect, verifier) {
     const result = await providerJson(googleToken, { form: { ...client, ...common, code_verifier: verifier } });
     requireValue(result.access_token && result.refresh_token && hasScopes(result.scope, googleScopes),
       'Google consent must include YouTube access, upload permission, and offline access.');
-    return { identity: await youtubeIdentity(result.access_token, target),
+    const channels = target.account_id ? [await youtubeIdentity(result.access_token, target)]
+      : await youtubeChannels(result.access_token);
+    requireValue(channels.length, 'Google did not authorize a YouTube channel. Choose an account with a channel.');
+    return channels.map(identity => ({ identity,
       grant: { token: result.access_token, refresh: result.refresh_token, client: config.client_id },
-      expiresAt: expiry(result.expires_in) };
+      expiresAt: expiry(result.expires_in) }));
   }
   if (platform === 'tiktok') {
     const result = await providerJson(tiktokToken, { form: { ...common, client_key: config.client_id, client_secret: config.client_secret } });
     requireValue(result.access_token && result.refresh_token && result.open_id && hasScopes(result.scope, tiktokScopes),
       'TikTok consent must include profile and video access.');
-    return { identity: await tiktokIdentity(result.access_token, target.handle, result.open_id),
+    return [{ identity: await tiktokIdentity(result.access_token, target.handle, result.open_id),
       grant: { token: result.access_token, refresh: result.refresh_token, client: config.client_id },
-      expiresAt: expiry(result.expires_in) };
+      expiresAt: expiry(result.expires_in) }];
   }
   const base = 'https://graph.facebook.com/' + config.graph_version;
   const endpoint = base + '/oauth/access_token';
@@ -222,11 +256,22 @@ async function exchange(target, config, code, redirect, verifier) {
   const granted = new Set((permissions.data || []).filter(item => item.status === 'granted').map(item => item.permission));
   requireValue(metaScopes[platform].split(',').every(scope => granted.has(scope)),
     'Meta consent did not include the permissions required for this destination.');
-  const page = await metaPage(base, platform, target, durable.access_token);
-  const id = platform === 'facebook' ? page.id : page.instagram_business_account.id;
-  requireValue(/^[0-9]+$/.test(id), 'Meta did not return a valid account ID.');
-  const identity = await metaIdentity(platform, base, id, page.access_token, target.handle);
-  return { identity, grant: { token: page.access_token, client: config.client_id, page_id: page.id }, expiresAt: null };
+  const pages = await metaPages(base, platform, target, durable.access_token);
+  const pinned = Boolean(target.account_id || target.handle);
+  requireValue(pinned ? pages.length === 1 : pages.length > 0,
+    pinned ? 'Consent did not include the intended Facebook Page or its linked Instagram profile.'
+      : platform === 'instagram' ? 'Choose a Facebook Page linked to an Instagram professional account.'
+        : 'Consent did not include a Facebook Page you manage.');
+  const candidates = new Map();
+  for (const page of pages) {
+    const instagram = page.instagram_business_account;
+    const id = platform === 'facebook' ? page.id : instagram.id;
+    const identity = pinned ? await metaIdentity(platform, base, id, page.access_token, target.handle)
+      : { id, handle: instagram?.username ? '@' + instagram.username : '', name: page.name || instagram?.username || id };
+    candidates.set(id, { identity, grant: { token: page.access_token, client: config.client_id, page_id: page.id },
+      expiresAt: null });
+  }
+  return [...candidates.values()];
 }
 
 async function begin(request, env, owner, args) {
@@ -265,9 +310,10 @@ async function begin(request, env, owner, args) {
 }
 
 function publicAccount(account, row) {
-  const { platform, account_id, handle } = accounts[account];
+  const { account_id, handle } = Object.hasOwn(accounts, account) ? accounts[account] : {};
+  const platform = platformFor(account);
   return {
-    account, platform, brand, account_id: row?.provider_id || account_id || null,
+    account, platform, brand, workflow_destination: Object.hasOwn(accounts, account), account_id: row?.provider_id || account_id || null,
     handle: row?.handle || handle || null, display_name: row?.display_name || null,
     status: !row ? 'not_connected' : row.expires_at && row.expires_at <= Date.now() ? 'refresh_due' : 'connected',
     connected_at: row ? new Date(row.connected_at).toISOString() : null,
@@ -276,11 +322,10 @@ function publicAccount(account, row) {
 }
 
 async function activeGrant(env, owner, account, minimumLifetime) {
-  requireValue(Object.hasOwn(accounts, account), 'Choose an Ifverse account alias from the account list.');
+  const platform = requireValue(platformFor(account), 'Choose an Ifverse account alias from the account list.');
   const row = await env.DB.prepare('SELECT * FROM account_connections WHERE owner_id = ? AND account = ?')
     .bind(owner, account).first();
   if (!row) return null;
-  const platform = accounts[account].platform;
   const config = oauthSettings(env, platform);
   const key = await keyFor(env);
   let grant = await decryptGrant(key, owner, account, row.grant);
@@ -307,9 +352,10 @@ async function verify(env, owner, account) {
   const connection = await activeGrant(env, owner, account, 60_000);
   if (!connection) return publicAccount(account);
   const { row, grant, config, platform } = connection;
-  if (platform === 'youtube') await youtubeIdentity(grant.token, accounts[account]);
-  else if (platform === 'tiktok') await tiktokIdentity(grant.token, row.handle, row.provider_id);
-  else await metaIdentity(platform, 'https://graph.facebook.com/' + config.graph_version, row.provider_id, grant.token, row.handle);
+  const pinned = Object.hasOwn(accounts, account);
+  if (platform === 'youtube') await youtubeIdentity(grant.token, pinned ? accounts[account] : { account_id: row.provider_id });
+  else if (platform === 'tiktok') await tiktokIdentity(grant.token, pinned ? row.handle : '', row.provider_id);
+  else await metaIdentity(platform, 'https://graph.facebook.com/' + config.graph_version, row.provider_id, grant.token, pinned ? row.handle : '');
   return { ...publicAccount(account, row), verified: true };
 }
 
@@ -317,7 +363,7 @@ async function verify(env, owner, account) {
 export async function publishingGrants(env, owner, aliases) {
   const grants = {};
   for (const alias of new Set(aliases)) {
-    if (!Object.hasOwn(accounts, alias)) continue;
+    if (!platformFor(alias)) continue;
     let connection;
     try {
       connection = await activeGrant(env, owner, alias, 15 * 60_000);
@@ -327,7 +373,7 @@ export async function publishingGrants(env, owner, aliases) {
     }
     if (!connection) continue;
     const { row, grant, config, platform } = connection;
-    if (platform === 'facebook' && env.IFVERSE_FACEBOOK_PAGE_ID && row.provider_id !== env.IFVERSE_FACEBOOK_PAGE_ID) continue;
+    if (alias === 'ifverse-facebook' && env.IFVERSE_FACEBOOK_PAGE_ID && row.provider_id !== env.IFVERSE_FACEBOOK_PAGE_ID) continue;
     grants[alias] = { platform, account_id: row.provider_id, token: grant.token,
       ...(platform in metaScopes ? { graph_version: config.graph_version,
         ...(platform === 'instagram' ? { page_id: grant.page_id } : {}) } : {}) };
@@ -335,13 +381,14 @@ export async function publishingGrants(env, owner, aliases) {
   return grants;
 }
 
-function connectionSetup(env, platform) {
+function connectionSetup(env, platform, pinned = false) {
   try {
     oauthSettings(env, platform);
+    requireValue(/^[A-Za-z0-9_-]{43}$/.test(env.IFVERSE_ACCOUNT_KEY || ''), 'Account storage needs setup.');
   } catch (error) {
     return error instanceof AccountError ? error.message : 'Check the private OAuth client settings.';
   }
-  if (platform === 'facebook' && !/^[0-9]{1,32}$/.test(env.IFVERSE_FACEBOOK_PAGE_ID || '')) {
+  if (pinned && platform === 'facebook' && !/^[0-9]{1,32}$/.test(env.IFVERSE_FACEBOOK_PAGE_ID || '')) {
     return 'Set the intended Facebook Page ID in the private Site settings.';
   }
   return null;
@@ -355,10 +402,12 @@ export async function accountTool(request, env, owner, name, args) {
       .bind(owner).all();
     const records = new Map(saved.results.map(row => [row.account, row]));
     return {
-      accounts: Object.fromEntries(Object.keys(accounts).map(account => {
-        const item = publicAccount(account, records.get(account));
-        return [account, { ...item, setup_required: connectionSetup(env, item.platform) }];
-      })),
+      accounts: Object.fromEntries([...Object.keys(accounts), ...[...records.keys()].filter(account => savedAccount.test(account))]
+        .map(account => {
+          const item = publicAccount(account, records.get(account));
+          return [account, { ...item, setup_required: connectionSetup(env, item.platform, item.workflow_destination) }];
+        })),
+      platforms: Object.fromEntries(platforms.map(platform => [platform, connectionSetup(env, platform)])),
       formats,
       callback_url: callbackUrl(request, env),
     };
@@ -383,6 +432,81 @@ function connectionError(message) {
   });
 }
 
+async function saveConnection(env, key, owner, session, { identity, grant, expiresAt }) {
+  const account = session.account;
+  const result = await env.DB.prepare(
+    `INSERT INTO account_connections VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+     ON CONFLICT(owner_id, account) DO UPDATE SET provider_id = excluded.provider_id, handle = excluded.handle,
+     display_name = excluded.display_name, grant = excluded.grant, expires_at = excluded.expires_at,
+     started_at = excluded.started_at, connected_at = excluded.connected_at
+     WHERE excluded.started_at >= account_connections.started_at`,
+  ).bind(owner, account, identity.id, identity.handle, identity.name,
+    await encryptGrant(key, owner, account, grant), expiresAt, session.started_at, Date.now()).run();
+  requireValue(result.meta.changes === 1, 'A newer account connection is already active.');
+  return new Response(null, {
+    status: 303,
+    headers: { Location: '/', 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' },
+  });
+}
+
+async function savePlatformConnection(env, key, owner, platform, startedAt, candidate) {
+  const digest = await crypto.subtle.digest('SHA-256', encoder.encode(candidate.identity.id));
+  const id = [...new Uint8Array(digest).slice(0, 12)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+  const config = oauthSettings(env, platform);
+  requireValue(candidate.grant.client === config.client_id, 'The provider app changed. Start a new connection.');
+  if (platform in metaScopes) {
+    candidate.identity = await metaIdentity(platform, 'https://graph.facebook.com/' + config.graph_version,
+      candidate.identity.id, candidate.grant.token);
+  }
+  return saveConnection(env, key, owner, { account: platform + '-' + id, started_at: startedAt }, candidate);
+}
+
+async function requestSelection(env, key, owner, target, session, candidates) {
+  const selection = base64(crypto.getRandomValues(new Uint8Array(32)));
+  const now = Date.now();
+  const encrypted = await encryptGrant(key, owner, selection, { platform: target.platform, candidates });
+  await env.DB.prepare('INSERT INTO oauth_sessions VALUES (?, ?, ?, ?, ?, ?, ?)')
+    .bind(await hash(selection), owner, selectionAccount, encrypted, '', session.started_at, now + selectionLifetime).run();
+  const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+  const list = candidates.map(({ identity }, index) =>
+    `<li><button name="choice" value="${index}"><strong>${escape(identity.name || identity.id)}</strong>
+      <span>${escape(identity.handle || identity.id)}</span></button></li>`).join('');
+  return new Response(`<!doctype html><html lang="en"><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Choose an account · Ifverse</title>
+    <style>
+      :root{color-scheme:dark;background:#13151c;color:#edf0ff;font:1rem/1.5 system-ui,sans-serif}
+      main{margin:clamp(1.25rem,6vw,5rem) auto;padding:0 1.25rem;max-width:32rem}
+      ul{padding:0;list-style:none}li{margin:.6rem 0}
+      button{width:100%;text-align:left;padding:1rem;border:1px solid #3b4053;border-radius:.6rem;
+        background:#1c1f2b;color:inherit;font:inherit;cursor:pointer}
+      span{display:block;color:#c1c7df;overflow-wrap:anywhere}a{color:#bfc6ff}
+    </style><main><h1>Choose an account</h1>
+    <form method="post" action="/oauth/select"><input type="hidden" name="selection" value="${selection}">
+    <ul>${list}</ul></form><p><a href="/">Cancel</a></p></main></html>`, {
+    headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store',
+      'Referrer-Policy': 'no-referrer', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'" },
+  });
+}
+
+export async function selectAccount(env, owner, selection, choice) {
+  try {
+    requireValue(/^[A-Za-z0-9_-]{43}$/.test(selection || '') && /^[0-9]{1,4}$/.test(choice || ''),
+      'Choose an account from the list.');
+    const sessionKey = [await hash(selection), owner, Date.now(), selectionAccount];
+    const condition = ' WHERE state_hash = ? AND owner_id = ? AND expires_at >= ? AND account = ?';
+    const session = await env.DB.prepare('SELECT * FROM oauth_sessions' + condition).bind(...sessionKey).first();
+    requireValue(session, 'This account selection expired or was already used. Start a new connection.');
+    const key = await keyFor(env);
+    const { platform, candidates } = await decryptGrant(key, owner, selection, session.target);
+    const candidate = requireValue(candidates[Number(choice)], 'Choose an account from the list.');
+    const consumed = await env.DB.prepare('DELETE FROM oauth_sessions' + condition).bind(...sessionKey).run();
+    requireValue(consumed.meta.changes === 1, 'This account selection was already used.');
+    return await savePlatformConnection(env, key, owner, platform, session.started_at, candidate);
+  } catch (error) {
+    return connectionError(error instanceof AccountError ? error.message : 'Could not save the selected account. Start a new connection.');
+  }
+}
+
 export async function accountCallback(request, env, owner) {
   let stage = 'load OAuth session';
   try {
@@ -394,7 +518,8 @@ export async function accountCallback(request, env, owner) {
     const session = await env.DB.prepare(
       'SELECT * FROM oauth_sessions WHERE state_hash = ? AND owner_id = ? AND expires_at >= ?',
     ).bind(...sessionKey).first();
-    requireValue(session, 'This connection link expired or was already used. Open the dashboard to start a fresh connection.');
+    requireValue(session && session.account !== selectionAccount,
+      'This connection link expired or was already used. Open the dashboard to start a fresh connection.');
     stage = 'consume OAuth session';
     const consumed = await env.DB.prepare(
       'DELETE FROM oauth_sessions WHERE state_hash = ? AND owner_id = ? AND expires_at >= ?',
@@ -410,21 +535,11 @@ export async function accountCallback(request, env, owner) {
     const config = oauthSettings(env, target.platform);
     const key = await keyFor(env);
     stage = 'exchange and verify provider authorization';
-    const { identity, grant, expiresAt } = await exchange(target, config, code, callbackUrl(request, env), session.verifier);
+    const candidates = await exchange(target, config, code, callbackUrl(request, env), session.verifier);
     stage = 'save verified connection';
-    const result = await env.DB.prepare(
-      `INSERT INTO account_connections VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-       ON CONFLICT(owner_id, account) DO UPDATE SET provider_id = excluded.provider_id, handle = excluded.handle,
-       display_name = excluded.display_name, grant = excluded.grant, expires_at = excluded.expires_at,
-       started_at = excluded.started_at, connected_at = excluded.connected_at
-       WHERE excluded.started_at >= account_connections.started_at`,
-    ).bind(owner, session.account, identity.id, identity.handle, identity.name,
-      await encryptGrant(key, owner, session.account, grant), expiresAt, session.started_at, Date.now()).run();
-    requireValue(result.meta.changes === 1, 'A newer account connection is already active.');
-    return new Response(null, {
-      status: 303,
-      headers: { Location: '/', 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' },
-    });
+    if (!platforms.includes(session.account)) return await saveConnection(env, key, owner, session, candidates[0]);
+    if (candidates.length === 1) return await savePlatformConnection(env, key, owner, target.platform, session.started_at, candidates[0]);
+    return await requestSelection(env, key, owner, target, session, candidates);
   } catch (error) {
     if (error instanceof AccountError) return connectionError(error.message);
     // Log a fixed stage label only. Provider bodies and OAuth parameters can contain credentials.
