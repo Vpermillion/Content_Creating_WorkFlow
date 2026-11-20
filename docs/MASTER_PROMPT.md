@@ -1,3 +1,5 @@
+> Historical record. Read [CURRENT.md](CURRENT.md) for active status and [START_HERE.md](../START_HERE.md) for current task guidance. Earlier branch pointers, runtime checks and action requests below describe their recorded sessions.
+
 > Historical original brief. Current instructions are in `START_HERE.md`, `docs/CURRENT.md` and `docs/IFVERSE_BRIEF.md` on `codex/ifverse-workflow`. Two English channels and the tested one-job workflow take priority over earlier topic/account examples.
 
 # Independent “What If?” Video Workspace
@@ -270,3 +272,4 @@ These explain provider-specific statements; verify current versions during setup
 - [Pexels license](https://www.pexels.com/license/)
 - [TikTok Content Sharing Guidelines](https://developers.tiktok.com/docs/en/content-sharing-guidelines)
 - [YouTube channel monetization policies](https://support.google.com/youtube/answer/1311392?hl=en)
+

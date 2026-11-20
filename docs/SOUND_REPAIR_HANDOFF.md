@@ -1,3 +1,5 @@
+> Historical record. Read [CURRENT.md](CURRENT.md) for active status and [START_HERE.md](../START_HERE.md) for current task guidance. Earlier branch pointers, runtime checks and action requests below describe their recorded sessions.
+
 # Sound repair handoff — 2026-11-03
 
 Implementation stays on `codex/ifverse-workflow`. The default branch mirrors navigation/handoff documents only. The initial remote checkpoints were implementation `9ab4220e2743b69cc707efc8448e235196872f29` and default `edec52af0b1efd22d39b27ad211f2748cd03ba7b`. The initial checkout was clean on local `work` at `6641117`; no reset, clean, worktree or merge was used.
@@ -30,3 +32,4 @@ Final required regression suite: **112 passed**. [Actual checks and earlier reso
 Read [the topic board](TOPIC_REVIEW_BOARD.md). Choose a concrete fork/timeline; all three proposals remain proposed. Record the actual decision reference and reviewed script hash only after that owner decision. Do not approve the board yourself. Existing ten repaired files remain drafts, with unresolved story reviews.
 
 Read [the platform dashboard](PLATFORM_DASHBOARD.md). The owner privately creates/confirms accounts and connects credentials later. All ten brand/platform rows have unverified account existence and OAuth; YouTube code exists, other publishing integrations are not established. No public posting, new account, scheduler or recurring job was performed or enabled. Keep all passwords/OAuth material out of Git, issues and chat. Only actual provider receipts may advance publication state.
+

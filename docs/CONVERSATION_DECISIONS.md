@@ -1,3 +1,5 @@
+> Historical record. Read [CURRENT.md](CURRENT.md) for active status and [START_HERE.md](../START_HERE.md) for current task guidance. Earlier branch pointers, runtime checks and action requests below describe their recorded sessions.
+
 # Final agreement from the shared conversation
 
 Read from the user-supplied `Automated-Video-Workflow-Complete.pdf`: 38 pages, with a guide, 134 chronological messages and a source/link register. The final agreement is in messages 130–134 (pages 32–34). Earlier proposals are historical; the current user's two English channels, `ifverse_anime` and `ifverse_hollywood`, take priority over the older three-channel and seven-account plans.
@@ -27,3 +29,4 @@ The assistant cannot read or promise a reduction in the user's ChatGPT allowance
 The workspace must survive an assistant/account change: save non-secret instructions, branch/checkpoint, commands, completed work and exact next actions; preserve private state separately from Git. Planned channel names and local OAuth tests do not prove live account access. The PDF does not establish successful channel binding or public publishing. Old authentication links are not current credentials, and historical consent does not establish new access.
 
 The raw PDF/transcript contains account information and must not be committed. This summary deliberately excludes account identifiers, credentials and authorization-link values. This review did not merge branches, run a production job, connect accounts or publish anything.
+

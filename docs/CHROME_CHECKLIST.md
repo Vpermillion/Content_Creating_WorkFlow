@@ -1,5 +1,7 @@
-# Connect Ifverse accounts in Chrome
+# Browser setup
 
-Open the private [Ifverse Publishing Site](https://ifverse-publishing.idealcoyote1.chatgpt.site) and follow the [account linking guide](../sites/ACCOUNT_LINKING.md). The Site handles provider consent, checks the destination automatically, and stores the connection. There is no Render setup or second Verify click.
+1. Open [Ifverse Publishing](https://ifverse-publishing.idealcoyote1.chatgpt.site) with the configured ChatGPT owner account.
+2. Follow [account linking](../sites/ACCOUNT_LINKING.md) to configure provider clients, connect destinations and register exact IDs.
+3. Configure the matching private publisher, then use [ChatGPT publishing](CHATGPT_PUBLISHING.md) to import media and retrieve a draft.
 
-The existing GitHub publishing jobs still use their configured repository secrets. The Site's draft, media, and publishing tools still require a backend or a GitHub Actions integration that can use the Site's connections.
+The hosted flow works through browser consent without a local loopback command. The Site checks and saves the connection automatically; a separate Verify click is only for troubleshooting. Channel logins may differ from the ChatGPT and GitHub logins.

@@ -1,6 +1,6 @@
 # Finite speech generation on Kaggle
 
-**Status: notebook and transfer contract implemented; no Kaggle run submitted.** No Kaggle connector, CLI or credential binding is verified in this environment. The local sample uses FFmpeg/libflite, not Kokoro or a GPU.
+**Optional legacy route:** the notebook and transfer contract are implemented; a Kaggle run is not established by the saved records. The current anime renderer uses Kokoro on the production runtime without requiring Kaggle. The older science sample uses FFmpeg/libflite. See [CURRENT.md](../docs/CURRENT.md) for active scope.
 
 1. Create new, approved prepared jobs before generating local narration. Export a batch with stable content versions:
 
@@ -27,3 +27,4 @@
 Automated authenticated submission, bounded status polling, exact remote run identity and retrieval remain integration work; the manual handoff avoids claiming these calls succeeded. Future polling should cap attempts/time and back off on quota errors. Preserve queued jobs on unavailable GPU/credentials. Never keep an idle notebook alive as a speech API or automatically purchase fallback compute.
 
 For manual audio without Kaggle, use the same output contract against a locally exported input batch. Supply actual WAV hashes and segment timings derived from audio/alignment. Do not manufacture word timings from character counts.
+

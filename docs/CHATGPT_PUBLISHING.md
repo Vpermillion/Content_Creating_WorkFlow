@@ -1,24 +1,42 @@
-# Ifverse from ChatGPT — Chrome on Windows
+# Publish Ifverse from ChatGPT
 
-Use the [Chrome checklist](CHROME_CHECKLIST.md) to connect accounts through the private Ifverse Publishing Site. The Site checks the selected provider identity during consent and stores the grant in its private database. Provider client settings and grants belong in private runtime storage.
+Use [account linking](../sites/ACCOUNT_LINKING.md) for the Site, provider consent and backend configuration. This guide describes the current native Worker plus private Python publisher. `sites/server.mjs` is an alternative Express MCP wrapper; the native build packages `worker.mjs`.
 
-## Existing publishing API
+The implemented path is: Site account consent → encrypted grant storage → selected access grants sent to the private publisher → reviewed draft delivery. Site connections are used through the broker routes. The standalone Actions/desktop queue has a separate credential contract.
 
-The operations below document the existing Python publishing API. They require a separately running backend with its own durable state and credentials. The live Site's account connections are currently stored separately from that API and the existing GitHub publishing jobs. Account consent by itself does not enable posting from ChatGPT.
+## Tools
 
-## Callable contract and media reuse
+| Tool | Behavior |
+| --- | --- |
+| `ifverse_accounts`, `ifverse_connect`, `ifverse_verify` | Inspect setup/saved connections, begin consent, or recheck a destination |
+| `ifverse_media_prepare`, `ifverse_media_status` | Run/get one existing checked-in review request through the bounded renderer |
+| `ifverse_media_import` | Stage a pinned render from the private repository, optionally exporting a separate Facebook Reel or JPEG |
+| `ifverse_prepare` | Save an immutable draft with exact media, account aliases, titles and captions |
+| `ifverse_preview` | Retrieve that draft, its snapshot hash and delivery receipts across sessions |
+| `ifverse_publish` | Publish only the approved destination subset of the reviewed snapshot |
+| `ifverse_status` | Refresh known delivery state through read-only provider checks |
+| `ifverse_verify_tiktok` | Verify a post after its Studio handoff using eligible Display access |
 
-`ifverse_media_prepare(request_id)` runs one existing `review-requests/ID.json` through `scripts/render_test_video.run`, preserving owner-topic/script checks, footage cache, narration, captions, editing and final-media receipts. Poll `ifverse_media_status`. Repeated calls return the original durable job and do not rerender. A crash leaves its job held for inspection. New free-form story intake still requires the existing script/shot-plan/topic-choice process; this change does not pretend the renderer can turn an arbitrary sentence into reviewed footage. No new production render was authorized or run during implementation.
+## Media and drafts
 
-For an existing render already recorded in the private GitHub topic registry, call `ifverse_media_import(brand,episode)`. It imports the MP4 at the recorded commit and checks its SHA-256. Use `export=facebook_reel` to prepare a separate cut within the repository's 60-second Facebook Reel limit, or `export=jpeg` to prepare a cropped frame for a feed post. Review the resulting export and its own hash. To enable import in Chrome, open [fine-grained GitHub tokens](https://github.com/settings/personal-access-tokens/new), select `Vpermillion` as resource owner and only `Content_Creating_WorkFlow`, grant **Repository permissions → Contents → Read-only**, and save the token directly as `IFVERSE_GITHUB_READ_TOKEN` in the host environment. For media stored outside the existing Git results, the hosted producer can send authenticated binary `POST /media` server to server. The container includes renderer dependencies. Real rendering on the deployed host still needs verification.
+`ifverse_media_prepare(request_id)` runs an existing `review-requests/ID.json` with its current topic/script checks. Poll status. Repeated calls return the original durable job; they do not silently rerender. Free-form creative input still needs a prepared script and shot plan.
 
-`ifverse_prepare(brand,destinations)` saves an immutable draft. Each destination has `account`, `format`, `title`, `caption`, `media_sha256` and the existing media job `manifest` containing at least `brand`, `episode`, `master_sha256`, `video_sha256`, and actual `review` evidence when ready. Account/platform IDs are taken from the registry, never caller-supplied overrides. Current topic master and actual media bytes are checked. Existing review gates run again before publishing; pending editorial/source-use/topic choice remains blocked. Do not fabricate an approved review to make a draft publishable.
+`ifverse_media_import(brand, episode)` fetches the topic registry's selected MP4 at its exact result commit and verifies SHA-256. The backend needs private repository read access. `export=facebook_reel` produces a separate cut within the repository's current 60-second validation limit; `export=jpeg` prepares a cropped frame. Those are implementation limits, not a statement of current platform-wide limits. Review the exported file and its own hash.
 
-`ifverse_preview(draft_id)` retrieves the exact saved destinations, captions, temporary media preview URLs, snapshot hash and per-destination receipts from any fresh session. Use `ifverse_status(draft_id)` to refresh known processing states through read-only provider checks. Show the preview to the owner. Prepare a new draft for changed captions or media. A second draft cannot bypass a reserved media-job/account publication operation.
+For media outside the recorded Git results, an authenticated producer can send binary `POST /media` to the backend. Rendering on the intended deployed host still needs runtime verification.
 
-`ifverse_publish(draft_id,snapshot_hash,destinations,approved=true)` is called only after the owner's explicit approval of the shown snapshot. “Post it” approves that exact clear draft/destination set; “Post it on Instagram only” selects only its Instagram alias. Ambiguous drafts or destinations require clarification. The trusted owner-only MCP caller carries the actual conversational approval; the backend cannot independently prove a phrase was spoken. Never equate preparation, a registry row or a technical test with approval.
+`ifverse_prepare(brand, destinations)` takes registered account aliases, format, title, caption, `media_sha256` and the existing media manifest. The manifest binds `brand`, `episode`, `master_sha256` and `video_sha256`; actual review evidence is checked before publishing. Provider IDs come from the registry. Site consent alone neither registers those IDs nor approves a post.
 
-Successful destinations are skipped permanently. Each provider call is preceded by durable intent; checkpoints survive failures. Grant expiry before a write yields `awaiting_consent`. Uncertain Meta writes yield `needs_reconciliation`; provider IDs are read back, a finished unposted container may be continued, but an uncertain `media_publish` is held rather than repeated. `submitted/processing` is not `published`. Confirmed public URLs are returned only with provider confirmation. TikTok Studio remains `action_required` until browser or Display API verification. Ask for a retry of one destination and pass exactly that alias.
+## Review and delivery
 
-YouTube reuses `youtube_publish.upload`, saving the original private resumable session before chunks and probing that same session after uncertain completion. Lost initiation or unavailable sessions are held, never replaced with a fresh insert. See [official resumable protocol](https://developers.google.com/youtube/data/guides/using_resumable_upload_protocol). YouTube journals and OAuth tokens live only on the private volume. The historic local/GitHub social workers must not also process the same production account/job: choose this hosted path as its sole queue and reconcile/migrate old receipts first. Cross-queue state migration is not automatic.
+Show `ifverse_preview(draft_id)` with the exact destinations, copy, media and snapshot hash. An explicit “post it” applies to that clear draft and destination set. “Instagram only” selects only its alias. Changed media or copy needs a new draft.
 
+Call `ifverse_publish(draft_id, snapshot_hash, destinations, approved=true)` for the selected subset. The backend checks account binding, media and review evidence again. The trusted owner-only caller conveys conversational approval; the backend does not independently read the conversation.
+
+Successful destinations are skipped on retry. Each destination retains its own receipt and durable intent. `submitted` or `processing` is not `published`. A failed read keeps the last receipt; an uncertain write requires reconciliation. YouTube resumes/probes its original upload session. Meta retains provider/container state. A second draft cannot bypass an already reserved account/episode operation.
+
+TikTok returns `action_required` with a Studio handoff. After manual posting, eligible Display verification or the backend's authenticated browser verification form records the matching post. Studio handoff alone is not a publication receipt.
+
+## Before live use
+
+Check Site ownership, provider setup, exact backend registry IDs, matching backend deployment and private state. Retrieve a draft from a fresh session and verify the intended account. Use one queue per account/episode and reconcile any older delivery state before switching routes. See [CURRENT.md](CURRENT.md) for checks actually observed.

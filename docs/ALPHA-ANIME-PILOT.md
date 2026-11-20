@@ -1,3 +1,5 @@
+> Historical record. Read [CURRENT.md](CURRENT.md) for active status and [START_HERE.md](../START_HERE.md) for current task guidance. Earlier branch pointers, runtime checks and action requests below describe their recorded sessions.
+
 # First Ifverse anime sample
 
 [Watch the 47-second storyboard draft](https://chatgpt.com/library?file_id=libfile_9922c2295e588191b8a12be471c82e88&account_id=personal)
@@ -38,3 +40,4 @@ The finished video persists at the link above. Code and manifests do not by them
 The first render had an invalid final scene clip even though FFmpeg returned zero, leaving an audio-only tail. The earlier validation checked container duration, audio and decoding but not video-track coverage. The underlying transient failure was not identified. The renderer now allocates frames from cumulative audio boundaries, probes each clip, and checks video/audio track durations. The corrected output has 1409 video frames at 30 fps (46.966667 seconds), matching 46.975 seconds of audio within one frame. The final frame was inspected. Rebuild used an explicit reason and retained narration. Resume subsequently retained video/audio hashes and timestamps.
 
 All 27 tests passed, including corrupt-clip and missing-tail regressions. Frame sampling and automated decoding do not constitute a complete visual/listening review. Generic publication drafts still contain the pipeline's Science hashtags; configure appropriate anime metadata before any delivery. Public posting remains disabled.
+

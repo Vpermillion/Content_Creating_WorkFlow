@@ -1,3 +1,5 @@
+> Historical record. Read [CURRENT.md](CURRENT.md) for active status and [START_HERE.md](../START_HERE.md) for current task guidance. Earlier branch pointers, runtime checks and action requests below describe their recorded sessions.
+
 # Requested anime test video
 
 User requested an actual test video after the full conversation review. This run reuses the established Naruto story and traced moving-footage plan on `codex/youtube-oauth`. It is a new review version; it does not overwrite the historical cut or claim arbitrary-story semantic footage discovery.
@@ -56,3 +58,4 @@ Download copy: `/workspace/Ifverse_Anime_Script_Matched.mp4`; editable subtitles
 - **80 local regression tests passed** on the current source plus selected changes; hosted full regression gates passed before rendering. Complete final decode, audio/video coverage, full script caption text, exact voice/receipt hashes, all 11 source fingerprints/anchor times and measured effect energy, unchanged SFX-stage picture stream and PCM differences restricted to cue windows were reverified locally. Decoded audio sample peak **-1.727 dBFS**. Full listening, pronunciation/editorial/source-use approval remains separate.
 - Final MP4 SHA-256 `570541c183163dec5de432ed488982866c2f549b965ca8a01ea6694131f6106c`; 15,079,115 bytes. Delivered `/workspace/Ifverse_Michael_Goku_Avengers_Test.mp4`, matching `.srt`, and `/workspace/Ifverse_Michael_Goku_Avengers_Script.md`. Use `sound-effects/video-sfx.mp4` from the result; `render/video.mp4` is the clean comparison.
 - Fresh-production media timings: `{"captioning_seconds": 5.631, "footage_seconds": 0.359, "narration_seconds": 64.543, "pipeline_seconds": 125.327, "render_and_decode_seconds": 47.353, "sound_effects_seconds": 5.756}`. Total 125.327 seconds includes new CPU TTS, alignment, rendering and SFX, but excludes source-preparation jobs, queueing and dependency setup. Do not compare this as though it reused old speech. No YouTube upload or continuous production deployment occurred.
+

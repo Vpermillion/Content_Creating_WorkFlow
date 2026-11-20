@@ -1,11 +1,11 @@
 # Channel profiles
 
-Current production: ten rendered 61-second `ifverse_anime` Shorts. See [the batch index](../docs/BATCH_61S.md) and [the persistent topic registry](../channels/ifverse_anime-topics.json). Michael stays selected; optional piano is handled by the owner in YouTube. Specific batch publishing authorization does not create an OAuth connection or approve source use.
+`ifverse_anime.json` and `ifverse_hollywood.json` record brand requirements and content defaults. They do not store OAuth grants or establish live account access. The review runner validates its request directly; a profile's provisional preset is not the saved batch's duration contract.
 
-`ifverse_anime.json` and `ifverse_hollywood.json` record the user's two confirmed initial channel topics, English language and online-video sourcing requirement. Their `configuration_status` is `planning_only`: they are requirements/configuration records, not connected YouTube accounts or executable production jobs. Null settings are still unconfirmed. They are not job files for `python -m whatif pilots --from-dir`.
+- Both brands use English and the owner-selected `am_michael` voice with [the shared script style](../prompts/script-style.md).
+- Anime has a working prepared-plan renderer and [ten saved 61-second cuts](../docs/BATCH_61S.md).
+- Hollywood remains a confirmed brand whose dedicated rendering/branding path needs validation.
+- Publishing bindings live in [the destination registry](../channels/publishing-accounts.json); live setup is described in [account linking](../sites/ACCOUNT_LINKING.md).
+- Source/editorial fields describe review metadata. They do not certify monetization or substitute for the publisher's actual media/review checks.
 
-`science-provisional.json` is the older runnable demonstration profile. Existing fixture jobs embed their own render profile in `pilots/*.json`; the worker does not currently load these channel files automatically. Adding a profile therefore does not enable search, clip editing, voiceover or publishing.
-
-See [the current Ifverse brief](../docs/IFVERSE_BRIEF.md) for the intended production flow and the branch audit. Current online footage tools and the review workflow live on `codex/ifverse-workflow`, developed from `codex/youtube-oauth` beyond the older `codex/portable-workspace` snapshot. The owner-selected English voice is now `am_michael`, tested on the Goku/Avengers example; earlier `af_heart` Naruto versions remain preserved. A Hollywood-branded channel render has not yet been completed. Reuse those tools; do not rebuild them because this older checkout lacks them. The proposed vertical preset is inherited from the demo and can change after channel-format selection. Evaluate an English production narrator and channel-aware branding. Never put account tokens in these files.
-
-The monetization_review fields record an editorial/business review requirement and unknown eligibility/clearance. They do not implement automatic YPP certification or a new executable publishing gate. Current source rights remain unresolved; see [the house review standard](../docs/MONETIZATION_REVIEW.md).
+`science-provisional.json` belongs to the older runnable science demonstration. See [the product brief](../docs/IFVERSE_BRIEF.md) for current scope.

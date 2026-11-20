@@ -1,6 +1,6 @@
-For Chrome-only ChatGPT use, follow [the hosted setup](CHATGPT_PUBLISHING.md). The desktop/loopback instructions below remain the legacy path. Never process the same account/job through both queues.
+# Standalone multi-account publishing
 
-# Ifverse multi-account publishing
+For ChatGPT/browser linking, use [the hosted setup](../sites/ACCOUNT_LINKING.md). This guide covers the separate Actions/desktop queue, whose credentials and receipts are independent of the Site. Select one queue per account/episode.
 
 The repository registry maps each alias to one brand, platform and provider account ID. The desktop dashboard and local queue support multiple accounts on the same platform. GitHub Actions handles one due YouTube Short or Instagram Reel per reviewed request. The production workflows still create the videos and result branches.
 
@@ -35,7 +35,7 @@ GitHub calls the APIs using these grants after consent. Provider permissions, ap
 
 ## Submit a reviewed post from GitHub
 
-The workflow runs after it is present on `codex/ifverse-workflow`. The agent reads the account registry and the brand's `channels/<brand>-topics.json`. Commit account bindings and any documented owner review first. After the owner has authorized the exact post and the audiovisual and source-use reviews are recorded, commit and push **one new** `social-publish-requests/<request-id>.json` by itself to that branch. Each request selects one account. Submit another push for an additional destination. Use a due time with an explicit UTC offset. Future scheduling is available in the local queue via `python scripts/publishing_app.py` and its watch worker.
+The workflow file is included on the publishing branch, but its push trigger targets `codex/ifverse-workflow`. It must be installed on that branch before request pushes can run it. The agent reads the account registry and the brand's `channels/<brand>-topics.json`. Commit account bindings and any documented owner review first. After the owner has authorized the exact post and the audiovisual and source-use reviews are recorded, commit and push **one new** `social-publish-requests/<request-id>.json` by itself to that branch. Each request selects one account. Submit another push for an additional destination. Use a due time with an explicit UTC offset. Future scheduling is available in the local queue via `python scripts/publishing_app.py` and its watch worker.
 
 | Request field | Value |
 | --- | --- |
@@ -53,3 +53,4 @@ Run `python -m scripts.publish_social --request social-publish-requests/<request
 ## Follow a result
 
 The Actions log reports the provider state and the `codex/social-receipts/<hash>` branch. The branch's `receipt.json` stores account, episode, exact video hash and provider ID or checkpoint. `submitted` and `processing` can be checked by rerunning the same workflow run. An interrupted write leaves a `working` receipt. Inspect the saved checkpoint and the platform's own dashboard before acting on that post. The worker holds an uncertain write rather than submitting a second copy. A provider-confirmed public post is recorded as `published`.
+

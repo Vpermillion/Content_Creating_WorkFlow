@@ -1,3 +1,5 @@
+> Historical record. Read [CURRENT.md](CURRENT.md) for active status and [START_HERE.md](../START_HERE.md) for current task guidance. Earlier branch pointers, runtime checks and action requests below describe their recorded sessions.
+
 # Project decisions and implementation history
 
 This is a safe account-free summary from the original specification, the supplied 38-page/134-message conversation PDF, repository branches and subsequent verified work. The PDF contains account information and is not stored in Git. Historical claims below are identified separately from later live executions.
@@ -85,3 +87,4 @@ The first engineering batch produced one complete 75-second cut; other outcomes 
 No upload connection exists in the current private connection store. The separate resumable uploader and GitHub publication workflow are implemented with channel/scope/hash checks, real review prerequisites, encrypted retry journals and non-secret topic/publication receipts. They have offline/provider and real-media preflight tests, not a live-upload demonstration. Optional setup needs the owner's Google consent, repository upload secrets and verified channel ID. A saved additive cloud network draft adds the three Google OAuth/API hosts; the configuration tool requires settings review/save/publication to activate it. This cannot create credentials. Existing publishing profile flags stay false; the user has already authorized these ten posts, so do not ask redundant posting permission once the actual prerequisites are satisfied.
 
 The delivered files use four described public-domain effects each, matched to actual spoken words. Third-party footage use remains unverified and full listening/editorial approval is not invented; technical success is not source-use clearance or YPP approval. Source/code/results remain on `codex/ifverse-workflow`; the default branch routes new sessions there. No recurring schedule, purchase, account recovery or unrelated upload is authorized.
+
