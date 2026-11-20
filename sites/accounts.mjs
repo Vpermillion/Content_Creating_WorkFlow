@@ -106,17 +106,30 @@ async function decryptGrant(key, owner, account, stored) {
 }
 
 async function providerJson(url, { form, token } = {}) {
-  const response = await fetch(url, {
-    method: form ? 'POST' : 'GET',
-    headers: {
-      Accept: 'application/json',
-      ...(form ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}),
-      ...(token ? { Authorization: 'Bearer ' + token } : {}),
-    },
-    body: form ? new URLSearchParams(form) : undefined,
-    redirect: 'error',
-    signal: AbortSignal.timeout(10_000),
-  });
+  const endpoint = new URL(url);
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 10_000);
+  let response;
+  try {
+    response = await fetch(endpoint.toString(), {
+      method: form ? 'POST' : 'GET',
+      headers: {
+        Accept: 'application/json',
+        ...(form ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}),
+        ...(token ? { Authorization: 'Bearer ' + token } : {}),
+      },
+      body: form ? new URLSearchParams(form).toString() : undefined,
+      redirect: 'manual',
+      signal: controller.signal,
+    });
+  } catch (error) {
+    const reason = controller.signal.aborted ? 'timeout' : error instanceof TypeError ? 'network or runtime error' : 'request error';
+    console.error('Ifverse provider request failed: ' + endpoint.hostname + endpoint.pathname + ' (' + reason + ')');
+    throw new AccountError('Ifverse could not reach the provider. Try connecting again.');
+  } finally {
+    clearTimeout(timeout);
+  }
+  if (!response.ok) console.warn('Ifverse provider returned HTTP ' + response.status + ': ' + endpoint.hostname);
   requireValue(response.ok, 'The provider declined the request. Check the selected account and app permissions.');
   const result = await response.json();
   requireValue(!result.error || result.error.code === 'ok',
@@ -362,23 +375,33 @@ function browserResult(message, status) {
 }
 
 export async function accountCallback(request, env, owner) {
+  let stage = 'load OAuth session';
   try {
     const query = new URL(request.url).searchParams;
     const state = query.get('state');
     requireValue(/^[A-Za-z0-9_-]{43}$/.test(state || '') && query.getAll('state').length === 1,
       'This connection link is invalid. Start again in ChatGPT.');
+    const sessionKey = [await hash(state), owner, Date.now()];
     const session = await env.DB.prepare(
-      'DELETE FROM oauth_sessions WHERE state_hash = ? AND owner_id = ? AND expires_at >= ? RETURNING *',
-    ).bind(await hash(state), owner, Date.now()).first();
+      'SELECT * FROM oauth_sessions WHERE state_hash = ? AND owner_id = ? AND expires_at >= ?',
+    ).bind(...sessionKey).first();
     requireValue(session, 'This connection link expired or was already used. Start again in ChatGPT.');
+    stage = 'consume OAuth session';
+    const consumed = await env.DB.prepare(
+      'DELETE FROM oauth_sessions WHERE state_hash = ? AND owner_id = ? AND expires_at >= ?',
+    ).bind(...sessionKey).run();
+    requireValue(consumed.meta.changes === 1, 'This connection link expired or was already used. Start again in ChatGPT.');
     requireValue(!query.has('error'), 'Account access was declined. Start again when you are ready to connect.');
     const code = query.get('code');
     requireValue(code && code.length <= 4096 && query.getAll('code').length === 1,
       'The provider did not return an authorization code.');
+    stage = 'load provider configuration';
     const target = JSON.parse(session.target);
     const config = oauthSettings(env, target.platform);
     const key = await keyFor(env);
+    stage = 'exchange and verify provider authorization';
     const { identity, grant, expiresAt } = await exchange(target, config, code, callbackUrl(request, env), session.verifier);
+    stage = 'save verified connection';
     const result = await env.DB.prepare(
       `INSERT INTO account_connections VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
        ON CONFLICT(owner_id, account) DO UPDATE SET provider_id = excluded.provider_id, handle = excluded.handle,
@@ -390,6 +413,9 @@ export async function accountCallback(request, env, owner) {
     requireValue(result.meta.changes === 1, 'A newer account connection is already active.');
     return browserResult('Connected ' + (identity.handle || identity.name || identity.id) + ' to Ifverse Publishing.', 200);
   } catch (error) {
-    return browserResult(error instanceof AccountError ? error.message : 'Account connection could not be completed. Start again in ChatGPT.', 400);
+    if (error instanceof AccountError) return browserResult(error.message, 400);
+    // Log a fixed stage label only. Provider bodies and OAuth parameters can contain credentials.
+    console.error('Ifverse OAuth callback failed at ' + stage);
+    return browserResult('Ifverse could not ' + stage + '. Start again in ChatGPT.', 400);
   }
 }

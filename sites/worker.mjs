@@ -156,7 +156,7 @@ function accountPage(html, status = 200) {
   return new Response(html, {
     status,
     headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store',
-      'Referrer-Policy': 'no-referrer',
+      'Referrer-Policy': 'same-origin',
       'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'" },
   });
 }
@@ -217,8 +217,8 @@ async function connectAccount(request, env, account) {
   const result = await accountTool(request, env, request.headers.get('oai-authenticated-user-id'),
     'ifverse_connect', { account, ...(account === 'ifverse-tiktok' ? { method: 'oauth' } : {}) });
   if (result.authorization_url) {
-    return new Response(null, { status: 303, headers: { Location: result.authorization_url,
-      'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' } });
+    return accountPage('<p>Continue to the provider to authorize this connection.</p><p><a rel="noreferrer" href="' +
+      escapeHtml(result.authorization_url) + '">Continue to provider</a></p><p><a href="/">Back to accounts</a></p>');
   }
   return accountPage('<p>' + escapeHtml(result.error || 'Consent could not start.') +
     '</p><p><a href="/">Back to accounts</a></p>', 400);

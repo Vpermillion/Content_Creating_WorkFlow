@@ -61,8 +61,9 @@ test('provider consent checks the destination and persists a private grant witho
   t.mock.method(globalThis, 'fetch', async (url, options) => {
     if (url === 'https://oauth2.googleapis.com/token') {
       exchanges += 1;
-      assert.equal(options.body.get('redirect_uri'), origin + '/oauth/callback');
-      assert.match(options.body.get('code_verifier'), /^[A-Za-z0-9_-]{64}$/);
+      const form = new URLSearchParams(options.body);
+      assert.equal(form.get('redirect_uri'), origin + '/oauth/callback');
+      assert.match(form.get('code_verifier'), /^[A-Za-z0-9_-]{64}$/);
       return Response.json({ access_token: 'test-access', refresh_token: 'test-refresh', scope: scopes, expires_in: 3600 });
     }
     assert.equal(options.headers.Authorization, 'Bearer test-access');
@@ -129,8 +130,11 @@ test('dashboard starts owner consent and the publisher receives only the selecte
   }), f.env);
   assert.equal((await form('https://other.example.test')).status, 403);
   const start = await form(origin);
-  assert.equal(start.status, 303);
-  const state = new URL(start.headers.get('Location')).searchParams.get('state');
+  assert.equal(start.status, 200);
+  const startPage = await start.text();
+  assert.match(startPage, /Continue to provider/);
+  const authorizationUrl = startPage.match(/href="(https:\/\/accounts\.google\.com\/[^"]+)"/)[1].replaceAll('&amp;', '&');
+  const state = new URL(authorizationUrl).searchParams.get('state');
   assert.equal((await f.callback(state)).status, 200);
   const args = { draft_id: 'd'.repeat(32), snapshot_hash: 'a'.repeat(64), destinations: ['ifverse-anime'], approved: true };
   const result = await f.tool('ifverse_publish', args);
