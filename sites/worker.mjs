@@ -152,12 +152,13 @@ function isOwner(request, env) {
     && request.headers.get('oai-authenticated-user-email')?.trim().toLowerCase() === owner;
 }
 
-function accountPage(html, status = 200) {
+function accountPage(html, status = 200, scriptNonce) {
+  const csp = "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'";
   return new Response(html, {
     status,
     headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store',
       'Referrer-Policy': 'same-origin',
-      'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'" },
+      'Content-Security-Policy': scriptNonce ? csp + "; connect-src 'self'; script-src 'nonce-" + scriptNonce + "'" : csp },
   });
 }
 
@@ -169,15 +170,19 @@ const labels = { youtube: 'YouTube', instagram: 'Instagram', facebook: 'Facebook
 async function accountDashboard(request, env, owner) {
   const result = await accountTool(request, env, owner, 'ifverse_accounts', {});
   if (result.error) return accountPage('Account status is unavailable. Try again.', 503);
+  const nonce = crypto.randomUUID();
   const cards = Object.values(result.accounts).map(item => {
     const name = labels[item.platform];
-    const status = { connected: 'Connected', refresh_due: 'Token refresh due', not_connected: 'Awaiting consent' }[item.status];
+    const status = item.setup_required && item.status === 'not_connected' ? 'Setup required' : {
+      connected: 'Connected', refresh_due: 'Token refresh due', not_connected: 'Ready to connect',
+    }[item.status];
     const target = item.handle || item.display_name || item.account_id;
     const action = item.setup_required
       ? '<p class="setup">' + escapeHtml(item.setup_required) + '</p>'
       : '<form method="post" action="/oauth/connect"><input type="hidden" name="account" value="' +
         escapeHtml(item.account) + '"><button>' +
-        (item.status === 'not_connected' ? 'Connect ' : 'Reconnect ') + name + '</button></form>';
+        (item.status === 'not_connected' ? 'Connect ' : 'Reconnect ') + name +
+        '</button><p class="connection-status" role="status"></p></form>';
     const studio = item.platform === 'tiktok'
       ? '<p><a href="https://www.tiktok.com/tiktokstudio/upload">Open TikTok Studio for manual publishing</a></p>' : '';
     return '<section><h2>' + name + '</h2><p>' + escapeHtml(status) +
@@ -193,35 +198,76 @@ async function accountDashboard(request, env, owner) {
       section{border:1px solid #3b4053;border-radius:.8rem;background:#1c1f2b;padding:1.25rem}
       h2,p{margin:.25rem 0 .85rem}h2{font-size:1.25rem}p{color:#c1c7df}
       button{border:0;border-radius:.45rem;background:#bfc6ff;color:#171a3c;font:inherit;font-weight:700;padding:.6rem 1rem;cursor:pointer}
+      button:disabled{opacity:.65;cursor:wait}
       button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px}a{color:#bfc6ff}
       .setup{font-size:.94rem}
+      .connection-status{margin-top:.75rem}.connection-status:empty{margin:0}
     </style>
-    <main><h1>Ifverse Publishing</h1><div class="accounts">${cards}</div></main></html>`);
+    <main><h1>Ifverse Publishing</h1><div class="accounts">${cards}</div></main>
+    <script nonce="${nonce}">
+      for (const form of document.querySelectorAll('form[action="/oauth/connect"]')) {
+        const button = form.querySelector('button');
+        const status = form.querySelector('.connection-status');
+        form.addEventListener('submit', async event => {
+          event.preventDefault();
+          if (button.disabled) return;
+          button.disabled = true;
+          status.textContent = 'Opening provider approval…';
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              headers: { Accept: 'application/json' },
+              body: new URLSearchParams(new FormData(form)),
+            });
+            const result = await response.json();
+            if (response.ok && result.authorization_url) {
+              window.location.assign(result.authorization_url);
+              return;
+            }
+            status.textContent = result.error || 'Could not start the connection. Try again.';
+          } catch {
+            status.textContent = 'Could not reach Ifverse. Refresh and try again.';
+          }
+          button.disabled = false;
+        });
+        window.addEventListener('pageshow', event => {
+          if (!event.persisted) return;
+          button.disabled = false;
+          status.textContent = '';
+        });
+      }
+    </script></html>`, 200, nonce);
 }
 
 async function connectAccount(request, env, account) {
+  const wantsJson = request.headers.get('Accept') === 'application/json';
+  const fail = (message, status) => wantsJson
+    ? Response.json({ error: message }, { status, headers: { 'Cache-Control': 'no-store' } })
+    : accountPage('<p>' + escapeHtml(message) + '</p><p><a href="/">Back to accounts</a></p>', status);
   const site = new URL(env.IFVERSE_SITE_ORIGIN || request.url);
   if (!isOwner(request, env) || request.headers.get('Origin') !== site.origin) {
-    return accountPage('Sign in as the Ifverse Site owner and start from the account page.', 403);
+    return fail('Sign in as the Ifverse Site owner and start from the account page.', 403);
   }
   if (!account) {
     const type = request.headers.get('Content-Type')?.split(';')[0];
-    if (type !== 'application/x-www-form-urlencoded') return accountPage('Use the account dashboard.', 415);
+    if (type !== 'application/x-www-form-urlencoded') return fail('Use the account dashboard.', 415);
     try {
       const form = new URLSearchParams(await readBody(request, 256));
       account = form.get('account');
     } catch {
-      return accountPage('Use the account dashboard.', 400);
+      return fail('Use the account dashboard.', 400);
     }
   }
   const result = await accountTool(request, env, request.headers.get('oai-authenticated-user-id'),
     'ifverse_connect', { account, ...(account === 'ifverse-tiktok' ? { method: 'oauth' } : {}) });
   if (result.authorization_url) {
+    if (wantsJson) return Response.json({ authorization_url: result.authorization_url }, {
+      headers: { 'Cache-Control': 'no-store' },
+    });
     return accountPage('<p>Continue to the provider to authorize this connection.</p><p><a rel="noreferrer" href="' +
       escapeHtml(result.authorization_url) + '">Continue to provider</a></p><p><a href="/">Back to accounts</a></p>');
   }
-  return accountPage('<p>' + escapeHtml(result.error || 'Consent could not start.') +
-    '</p><p><a href="/">Back to accounts</a></p>', 400);
+  return fail(result.error || 'Consent could not start.', 400);
 }
 
 function backendUrl(value, route) {

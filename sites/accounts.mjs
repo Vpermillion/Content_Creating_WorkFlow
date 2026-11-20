@@ -17,7 +17,7 @@ const accounts = {
 const formats = { youtube: ['short'], instagram: ['reel', 'jpeg'], facebook: ['reel', 'feed'], tiktok: ['studio'] };
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
-const stateLifetime = 600;
+const stateLifetime = 30 * 60;
 
 class AccountError extends Error {}
 
@@ -367,10 +367,19 @@ export async function accountTool(request, env, owner, name, args) {
   }
 }
 
-function browserResult(message, status) {
-  return new Response(message + '\n\nReturn to the Ifverse Publishing account dashboard.', {
-    status, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store',
-      'Referrer-Policy': 'no-referrer', 'Content-Security-Policy': "default-src 'none'; frame-ancestors 'none'" },
+function connectionError(message) {
+  const safeMessage = message.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+  return new Response(`<!doctype html><html lang="en"><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connection needs attention · Ifverse</title>
+    <style>
+      :root{color-scheme:dark;background:#13151c;color:#edf0ff;font:1rem/1.5 "DM Sans",system-ui,sans-serif}
+      main{margin:clamp(1.25rem,6vw,5rem) auto;padding:0 1.25rem;max-width:32rem}
+      a{display:inline-block;background:#bfc6ff;color:#171a3c;border-radius:.45rem;padding:.6rem 1rem;font-weight:700}
+    </style>
+    <main><h1>Connection needs attention</h1><p>${safeMessage}</p><a href="/">Back to accounts</a></main></html>`, {
+    status: 400, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store',
+      'Referrer-Policy': 'no-referrer', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'; base-uri 'none'" },
   });
 }
 
@@ -380,17 +389,18 @@ export async function accountCallback(request, env, owner) {
     const query = new URL(request.url).searchParams;
     const state = query.get('state');
     requireValue(/^[A-Za-z0-9_-]{43}$/.test(state || '') && query.getAll('state').length === 1,
-      'This connection link is invalid. Start again in ChatGPT.');
+      'This connection link is invalid. Open the dashboard to start again.');
     const sessionKey = [await hash(state), owner, Date.now()];
     const session = await env.DB.prepare(
       'SELECT * FROM oauth_sessions WHERE state_hash = ? AND owner_id = ? AND expires_at >= ?',
     ).bind(...sessionKey).first();
-    requireValue(session, 'This connection link expired or was already used. Start again in ChatGPT.');
+    requireValue(session, 'This connection link expired or was already used. Open the dashboard to start a fresh connection.');
     stage = 'consume OAuth session';
     const consumed = await env.DB.prepare(
       'DELETE FROM oauth_sessions WHERE state_hash = ? AND owner_id = ? AND expires_at >= ?',
     ).bind(...sessionKey).run();
-    requireValue(consumed.meta.changes === 1, 'This connection link expired or was already used. Start again in ChatGPT.');
+    requireValue(consumed.meta.changes === 1,
+      'This connection link expired or was already used. Open the dashboard to start a fresh connection.');
     requireValue(!query.has('error'), 'Account access was declined. Start again when you are ready to connect.');
     const code = query.get('code');
     requireValue(code && code.length <= 4096 && query.getAll('code').length === 1,
@@ -411,11 +421,14 @@ export async function accountCallback(request, env, owner) {
     ).bind(owner, session.account, identity.id, identity.handle, identity.name,
       await encryptGrant(key, owner, session.account, grant), expiresAt, session.started_at, Date.now()).run();
     requireValue(result.meta.changes === 1, 'A newer account connection is already active.');
-    return browserResult('Connected ' + (identity.handle || identity.name || identity.id) + ' to Ifverse Publishing.', 200);
+    return new Response(null, {
+      status: 303,
+      headers: { Location: '/', 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' },
+    });
   } catch (error) {
-    if (error instanceof AccountError) return browserResult(error.message, 400);
+    if (error instanceof AccountError) return connectionError(error.message);
     // Log a fixed stage label only. Provider bodies and OAuth parameters can contain credentials.
     console.error('Ifverse OAuth callback failed at ' + stage);
-    return browserResult('Ifverse could not ' + stage + '. Start again in ChatGPT.', 400);
+    return connectionError('Ifverse could not ' + stage + '. Open the dashboard to try again.');
   }
 }

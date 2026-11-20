@@ -73,8 +73,8 @@ test('provider consent checks the destination and persists a private grant witho
   assert.equal((await f.callback(state, {})).status, 403);
   assert.equal((await f.callback(state, { ...owner, 'oai-authenticated-user-id': 'other' })).status, 400);
   const linked = await f.callback(state);
-  assert.equal(linked.status, 200);
-  assert.match(await linked.text(), /Connected @ifverse_anime/);
+  assert.equal(linked.status, 303);
+  assert.equal(linked.headers.get('Location'), '/');
   assert.equal((await f.callback(state)).status, 400);
   assert.equal(exchanges, 1);
   const saved = f.db.prepare('SELECT grant FROM account_connections').get();
@@ -97,14 +97,19 @@ test('wrong account and expired or reused state cannot create a connection', asy
   assert.match(await (await f.callback(state)).text(), /already used/);
   const expired = await f.connect();
   f.db.exec('UPDATE oauth_sessions SET expires_at = 0');
-  assert.match(await (await f.callback(expired)).text(), /expired/);
+  const expiredResult = await f.callback(expired);
+  assert.equal(expiredResult.status, 400);
+  const errorPage = await expiredResult.text();
+  assert.match(errorPage, /expired/);
+  assert.ok(errorPage.includes('<a href="/">Back to accounts</a>'));
   assert.equal(f.db.prepare('SELECT count(*) AS total FROM account_connections').get().total, 0);
   const studio = await f.tool('ifverse_connect', { account: 'ifverse-tiktok', method: 'studio' });
   assert.equal(studio.structuredContent.status, 'studio_handoff');
 });
 
-test('dashboard starts owner consent and the publisher receives only the selected access grant', async t => {
+test('one-click dashboard starts consent, survives phone verification and returns to the linked account', async t => {
   const f = fixture(t);
+  t.mock.timers.enable({ apis: ['Date'], now: Date.now() });
   f.env.IFVERSE_BACKEND_URL = 'https://publisher.example.test';
   f.env.IFVERSE_BACKEND_TOKEN = 'private-publisher-test';
   const calls = [];
@@ -124,18 +129,28 @@ test('dashboard starts owner consent and the publisher receives only the selecte
   assert.match(html, /Instagram/);
   assert.match(html, /Facebook/);
   assert.match(html, /Open TikTok Studio/);
-  const form = host => worker.fetch(new Request(origin + '/oauth/connect', {
-    method: 'POST', headers: { ...owner, Origin: host },
+  const nonce = html.match(/<script nonce="([^"]+)">/)[1];
+  assert.ok(page.headers.get('Content-Security-Policy').includes("'nonce-" + nonce + "'"));
+  const form = (host, accept = 'application/json') => worker.fetch(new Request(origin + '/oauth/connect', {
+    method: 'POST', headers: { ...owner, Origin: host, Accept: accept },
     body: new URLSearchParams({ account: 'ifverse-anime' }),
   }), f.env);
-  assert.equal((await form('https://other.example.test')).status, 403);
+  const refused = await form('https://other.example.test');
+  assert.equal(refused.status, 403);
+  assert.match((await refused.json()).error, /start from the account page/);
+  const fallback = await form(origin, 'text/html');
+  assert.match(await fallback.text(), /Continue to provider/);
   const start = await form(origin);
   assert.equal(start.status, 200);
-  const startPage = await start.text();
-  assert.match(startPage, /Continue to provider/);
-  const authorizationUrl = startPage.match(/href="(https:\/\/accounts\.google\.com\/[^"]+)"/)[1].replaceAll('&amp;', '&');
-  const state = new URL(authorizationUrl).searchParams.get('state');
-  assert.equal((await f.callback(state)).status, 200);
+  const authorization = new URL((await start.json()).authorization_url);
+  assert.equal(authorization.origin, 'https://accounts.google.com');
+  const state = authorization.searchParams.get('state');
+  t.mock.timers.tick(12 * 60 * 1000);
+  const callback = await f.callback(state);
+  assert.equal(callback.status, 303);
+  assert.equal(callback.headers.get('Location'), '/');
+  const dashboard = await worker.fetch(new Request(origin, { headers: owner }), f.env);
+  assert.match(await dashboard.text(), /Connected · @ifverse_anime/);
   const args = { draft_id: 'd'.repeat(32), snapshot_hash: 'a'.repeat(64), destinations: ['ifverse-anime'], approved: true };
   const result = await f.tool('ifverse_publish', args);
   assert.equal(result.structuredContent.deliveries[0].status, 'submitted');
