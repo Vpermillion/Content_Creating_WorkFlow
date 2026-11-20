@@ -20,11 +20,13 @@ The bridge is already implemented. Older statements that Site connections cannot
 
 ## Live setup and verification
 
-The Site is reachable at [Ifverse Publishing](https://ifverse-publishing.idealcoyote1.chatgpt.site). A read-only `ifverse_accounts` call in this session returned **403: Only the authenticated Site owner can use publishing tools**. This establishes failure at the owner check; the configured owner email and forwarded authenticated identity have not been inspected. It does not establish whether social grants exist.
+The Site is reachable at [Ifverse Publishing](https://ifverse-publishing.idealcoyote1.chatgpt.site). On 2026-11-20 its configured owner setting was aligned with the confirmed ChatGPT Site owner and saved version 4 was redeployed with runtime environment revision 4. Deployment succeeded and the live `ifverse_accounts` call now succeeds; the earlier owner-check 403 is resolved.
+
+Live account status: all four aliases are `not_connected`. YouTube client setup is present and ready to begin consent. Meta and TikTok clients are not configured, so Instagram/Facebook and TikTok OAuth still require provider setup. No publishing backend origin/token is present in the Site's runtime settings. The cloud-browser check reached ChatGPT consent under a different account from the intended Site owner; consent was not accepted.
 
 GitHub, ChatGPT and channel login accounts may differ. `IFVERSE_SITE_OWNER_EMAIL` is matched to the ChatGPT authenticated email; provider callbacks separately check channel identity. Stored grants and pending OAuth sessions belong to the authenticated Site user ID, so changing the owner email alone does not migrate another user's connections.
 
-Backend deployment/configuration, live provider grants and successful delivery remain unverified in this audit. Follow [account setup](../sites/ACCOUNT_LINKING.md) to inspect them. Repository records and software tests are not live checks.
+Provider grants and successful delivery remain unverified; no social account was linked or post published during this repair. Follow [account setup](../sites/ACCOUNT_LINKING.md) to inspect them. Repository records and software tests are not live checks.
 
 ## Validation and documentation cleanup
 
@@ -34,4 +36,4 @@ Backend deployment/configuration, live provider grants and successful delivery r
 
 ## Continue by task
 
-For access: inspect the Site's configured owner and authenticated identity, then check provider setup and backend registration. For production: reuse saved outputs, choose a genuinely new or explicit revision topic, and use the bounded request process in [AUTOMATION.md](AUTOMATION.md). Review/publication decisions follow the current user request and the actual saved evidence.
+For linking: complete ChatGPT sign-in as the configured Site owner, then connect YouTube. Configure the missing Meta/TikTok clients and backend origin/token before those paths can operate. For production: reuse saved outputs, choose a genuinely new or explicit revision topic, and use the bounded request process in [AUTOMATION.md](AUTOMATION.md). Review/publication decisions follow the current user request and the actual saved evidence.
