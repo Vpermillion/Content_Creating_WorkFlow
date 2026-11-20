@@ -1,6 +1,6 @@
-# Link Ifverse accounts
+# Link social accounts
 
-Open the [Ifverse connection gateway](https://ifverse-publishing.idealcoyote1.chatgpt.site/connect) as the Site owner. Choose a platform, sign in with the social account you want to use, and approve access. If the provider returns several channels, Pages, or profiles, choose the destination to save. The gateway confirms the connection and stays open so you can add another account. Reconnecting the same destination updates its saved connection.
+Open the [connection gateway](https://ifverse-publishing.idealcoyote1.chatgpt.site/connect) as the Site owner. Choose a platform, sign in with the social account you want to use, and approve access. If the provider returns several channels, Pages, or profiles, choose the destination to save. The gateway confirms the connection and stays open so you can add another account. Reconnecting the same destination updates its saved connection.
 
 Your GitHub login manages source code. Your ChatGPT login opens the private gateway. Your social login grants access to the selected channel, Page, or profile. These logins can all use different emails.
 
@@ -8,7 +8,7 @@ The [account manager](https://ifverse-publishing.idealcoyote1.chatgpt.site/) sho
 
 ## Provider setup
 
-The Ifverse administrator configures each provider app once and registers the exact HTTPS `/oauth/callback` URL returned by `ifverse_accounts`. Account holders use the provider's sign-in screen. Provider app review, eligible accounts, test-user restrictions, and two-factor authentication still apply.
+The site administrator configures each provider app once and registers the exact HTTPS `/oauth/callback` URL returned by `ifverse_accounts`. Account holders use the provider's sign-in screen. Provider app review, eligible accounts, test-user restrictions, and two-factor authentication still apply.
 
 | Private Site setting | Purpose |
 | --- | --- |
@@ -16,7 +16,7 @@ The Ifverse administrator configures each provider app once and registers the ex
 | `IFVERSE_SITE_ORIGIN` | Canonical HTTPS dashboard URL |
 | `IFVERSE_ACCOUNT_KEY` | Stable 32-byte base64url key used to encrypt grants |
 | `IFVERSE_OAUTH_CONFIG` | Provider clients keyed by `youtube`, `meta`, and `tiktok`, with `client_id` and `client_secret` |
-| `IFVERSE_FACEBOOK_PAGE_ID` | Exact Page ID for the preset Ifverse Facebook destination |
+| `IFVERSE_FACEBOOK_PAGE_ID` | Exact Page ID for the preset Facebook destination |
 
 Meta also needs a supported `graph_version` and may need `login_config_id`. The Instagram flow uses a Facebook Page linked to a professional Instagram profile. TikTok linking needs an eligible Login Kit and Display API app. TikTok publishing opens Studio.
 
@@ -24,7 +24,7 @@ Keep the `DB` binding, account key, and existing database across deployments. Th
 
 ## GitHub Pages entry point
 
-Enable **GitHub Actions** under **Settings → Pages** on an eligible GitHub plan. Once the workflow is on the default branch, run **Deploy Ifverse account entry** in Actions. It publishes `sites/pages/`, which opens the private dashboard. The dashboard handles provider callbacks and encrypted token storage.
+Enable **GitHub Actions** under **Settings → Pages** on an eligible GitHub plan. Once the workflow is on the default branch, run **Deploy account entry** in Actions. It publishes `sites/pages/`, which opens the private dashboard. The dashboard handles provider callbacks and encrypted token storage.
 
 ## Publishing workflow
 

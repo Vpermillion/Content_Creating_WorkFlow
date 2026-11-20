@@ -214,7 +214,7 @@ test('one provider login can add more than one channel with isolated, stable con
   const landing = selected.headers.get('Location');
   assert.match(landing, /^\/connect\?connected=youtube-[0-9a-f]{24}$/);
   const complete = await worker.fetch(new Request(origin + landing, { headers: owner }), f.env);
-  assert.match(await complete.text(), /@first<\/strong> connected to Ifverse/);
+  assert.match(await complete.text(), /@first<\/strong> connected\./);
   assert.equal((await select(f, selection, '1')).status, 400);
   assert.deepEqual(rows().map(row => row.provider_id), [channelA]);
   assert.equal((await select(f, await chooser(), '1')).status, 303);

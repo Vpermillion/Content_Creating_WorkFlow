@@ -1,4 +1,4 @@
-name: Deploy Ifverse account entry
+name: Deploy account entry
 
 on:
   workflow_dispatch:

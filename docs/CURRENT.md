@@ -20,6 +20,8 @@ The separate GitHub Actions queue continues to use its own secret contract.
 
 ## Live setup and verification
 
+The hosted screen is titled **Social Account Manager**. The Pages entry uses the same title. GitHub Pages is currently disabled on the repository.
+
 Open **Connect accounts** for the hosted gateway. After provider approval, the verified destination appears in the account manager and can be selected for a draft when the publisher is configured. See [setup and deployment](../sites/ACCOUNT_LINKING.md).
 
 The Site is reachable at [Ifverse Publishing](https://ifverse-publishing.idealcoyote1.chatgpt.site). On 2026-11-20 its configured owner setting was aligned with the confirmed ChatGPT Site owner and saved version 4 was redeployed with runtime environment revision 4. Deployment succeeded and the live `ifverse_accounts` call now succeeds; the earlier owner-check 403 is resolved.

@@ -35,13 +35,13 @@ const PUBLISH = { readOnlyHint: false, destructiveHint: true, idempotentHint: tr
 const tools = [
   tool('ifverse_media_prepare', 'Run the existing reviewed media job without publishing.', object({ request_id: requestId }), WRITE),
   tool('ifverse_media_status', 'Read the media job status and prepared media hash.', object({ request_id: requestId }), READ),
-  tool('ifverse_media_import', 'Stage a selected render from the private Ifverse GitHub repo. For a Facebook Reel or feed image, create a separate export and show it for review. This does not publish.', object({
+  tool('ifverse_media_import', 'Stage a selected render from the connected GitHub repo. For a Facebook Reel or feed image, create a separate export and show it for review. This does not publish.', object({
     brand, episode: requestId,
     export: choices('Optional export type.', ['master', 'facebook_reel', 'jpeg']),
   }, ['brand', 'episode']), WRITE),
   tool('ifverse_accounts', 'List saved social accounts, destination aliases, and the hosted connection gateway.', object({}), READ),
   tool('ifverse_connect', 'Open the hosted gateway to pick a social platform, or start provider consent for a selected platform or preset.', object({
-    account: string('A platform (youtube, instagram, facebook, tiktok) for any account, or a preset Ifverse destination alias.',
+    account: string('A platform (youtube, instagram, facebook, tiktok) for any account, or a preset destination alias.',
       40, { pattern: '^[a-z0-9][a-z0-9-]{0,39}$' }),
     method: choices('Optional TikTok method. Choose OAuth for an approved Login Kit app, or Studio for manual publishing.', ['studio', 'oauth']),
     page_id: string('The intended Facebook Page ID if it is not configured on the Site.', 32, { pattern: '^[0-9]+$' }),
@@ -178,9 +178,9 @@ async function accountDashboard(request, env, owner, checkout) {
   const confirmation = checkout && completed
     ? '<div class="notice" role="status"><strong>' +
       escapeHtml(completed.handle || completed.display_name || completed.account_id) +
-      '</strong> connected to Ifverse. Choose a platform to add another account.</div>'
+      '</strong> connected. Choose a platform to add another account.</div>'
     : '';
-  const title = checkout ? 'Connect social accounts' : 'Ifverse Accounts';
+  const title = checkout ? 'Connect social accounts' : 'Social Account Manager';
   const connectForm = (account, label) =>
     '<form method="post" action="/oauth/connect"><input type="hidden" name="account" value="' +
     escapeHtml(account) + '"><button>' + escapeHtml(label) +
@@ -195,7 +195,7 @@ async function accountDashboard(request, env, owner, checkout) {
       '<li><strong>' + escapeHtml(item.display_name || item.handle || item.account_id) + '</strong><small>' +
       escapeHtml([item.handle || item.account_id, statusFor(item)].join(' · ')) + '</small></li>').join('') + '</ul>' : '';
     const action = !checkout ? '' : setup
-      ? '<div class="setup"><strong>Needs setup</strong><p>The Ifverse administrator must enable this provider.</p></div>'
+      ? '<div class="setup"><strong>Needs setup</strong><p>The site administrator must enable this provider.</p></div>'
       : connectForm(platform, 'Connect ' + name);
     return '<section><h3>' + name + '</h3>' + list + action + '</section>';
   }).join('');
@@ -239,7 +239,7 @@ async function accountDashboard(request, env, owner, checkout) {
         : '<a class="primary" href="/connect">Connect accounts</a>'}</header>
       ${checkout
         ? '<p>Choose a platform, switch to the account you want, then approve access. Repeat to add more accounts.</p>'
-        : '<p>Manage the channels, Pages, and profiles linked to Ifverse.</p>'}
+        : '<p>Manage the channels, Pages, and profiles linked to this dashboard.</p>'}
       ${confirmation}
       <div class="accounts">${platforms}</div>
       ${checkout ? '' : (result.publisher_configured ? '' : '<p class="setup">The publishing service needs setup.</p>') +
@@ -267,7 +267,7 @@ async function accountDashboard(request, env, owner, checkout) {
             }
             status.textContent = result.error || 'Could not start the connection. Try again.';
           } catch {
-            status.textContent = 'Could not reach Ifverse. Refresh and try again.';
+            status.textContent = 'Could not reach the account service. Refresh and try again.';
           }
           button.disabled = false;
         });
@@ -287,7 +287,7 @@ async function connectAccount(request, env, account) {
     : accountPage('<p>' + escapeHtml(message) + '</p><p><a href="/">Back to accounts</a></p>', status);
   const site = new URL(env.IFVERSE_SITE_ORIGIN || request.url);
   if (!isOwner(request, env) || request.headers.get('Origin') !== site.origin) {
-    return fail('Sign in as the Ifverse Site owner and start from the account page.', 403);
+    return fail('Sign in as the site owner and start from the account page.', 403);
   }
   if (!account) {
     const type = request.headers.get('Content-Type')?.split(';')[0];
@@ -314,7 +314,7 @@ async function connectAccount(request, env, account) {
 async function selectDestination(request, env) {
   const site = new URL(env.IFVERSE_SITE_ORIGIN || request.url);
   if (!isOwner(request, env) || request.headers.get('Origin') !== site.origin) {
-    return accountPage('<p>Sign in as the Ifverse Site owner and start from the account page.</p>', 403);
+    return accountPage('<p>Sign in as the site owner and start from the account page.</p>', 403);
   }
   if (request.headers.get('Content-Type')?.split(';')[0] !== 'application/x-www-form-urlencoded') {
     return accountPage('<p>Choose an account from the list.</p>', 415);
@@ -368,7 +368,7 @@ async function callBackend(id, operation, args, env, owner) {
       const bindings = await publishingBindings(env, owner, aliases);
       if (brokerDraft) {
         if (aliases.some(item => isGatewayAccount(item) && !Object.hasOwn(bindings, item))) {
-          return toolError(id, 'Connect the selected account in the Ifverse gateway before creating a draft.');
+          return toolError(id, 'Connect the selected account in the connection gateway before creating a draft.');
         }
         args = { ...args, account_bindings: bindings };
       } else {
@@ -442,7 +442,7 @@ export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
     if (['/', '/connect'].includes(path) && request.method === 'GET') {
-      if (!isOwner(request, env)) return accountPage('Sign in as the Ifverse Site owner.', 403);
+      if (!isOwner(request, env)) return accountPage('Sign in as the site owner.', 403);
       return accountDashboard(request, env, request.headers.get('oai-authenticated-user-id'), path === '/connect');
     }
     if (request.method === 'POST' && env.DB && ['/oauth/connect', '/oauth/connect/youtube'].includes(path)) {

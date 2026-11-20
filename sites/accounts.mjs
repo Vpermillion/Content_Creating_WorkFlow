@@ -52,7 +52,7 @@ function oauthSettings(env, platform) {
   const provider = platform in metaScopes ? 'meta' : platform;
   const config = JSON.parse(env.IFVERSE_OAUTH_CONFIG || '{}')[provider];
   requireValue(config?.client_id && config.client_secret,
-    'Add the ' + provider + ' OAuth client in the private Ifverse Site settings.');
+    'Add the ' + provider + ' OAuth client in the private site settings.');
   if (provider === 'meta') {
     requireValue(/^v[0-9]+\.[0-9]+$/.test(config.graph_version), 'Set the supported Meta Graph API version in Site settings.');
     requireValue(!config.login_config_id || /^[0-9]+$/.test(config.login_config_id), 'Check the Meta login configuration ID.');
@@ -73,11 +73,11 @@ function urlWith(base, query) {
 function targetFor(account, args, env) {
   if (platforms.includes(account)) return { platform: account };
   const row = Object.hasOwn(accounts, account) ? accounts[account] : null;
-  requireValue(row, 'Choose an Ifverse account alias from the account list.');
+  requireValue(row, 'Choose an account alias from the account list.');
   if (row.platform === 'facebook') {
     const pageId = env.IFVERSE_FACEBOOK_PAGE_ID || args.page_id || '';
     requireValue(/^[0-9]{1,32}$/.test(pageId), 'Set the intended Facebook Page ID before connecting Facebook.');
-    requireValue(!args.page_id || args.page_id === pageId, 'Select the configured Ifverse Facebook Page.');
+    requireValue(!args.page_id || args.page_id === pageId, 'Select the configured Facebook Page.');
     return { ...row, account_id: pageId };
   }
   if (row.platform === 'tiktok') {
@@ -90,7 +90,7 @@ function targetFor(account, args, env) {
 
 async function keyFor(env) {
   const secret = env.IFVERSE_ACCOUNT_KEY || '';
-  requireValue(/^[A-Za-z0-9_-]{43}$/.test(secret), 'Set the Ifverse account storage key in private Site settings.');
+  requireValue(/^[A-Za-z0-9_-]{43}$/.test(secret), 'Set the account storage key in private Site settings.');
   return crypto.subtle.importKey('raw', unbase64(secret), 'AES-GCM', false, ['encrypt', 'decrypt']);
 }
 
@@ -136,7 +136,7 @@ async function providerJson(url, { form, token } = {}) {
   } catch (error) {
     const reason = controller.signal.aborted ? 'timeout' : error instanceof TypeError ? 'network or runtime error' : 'request error';
     console.error('Ifverse provider request failed: ' + endpoint.hostname + endpoint.pathname + ' (' + reason + ')');
-    throw new AccountError('Ifverse could not reach the provider. Try connecting again.');
+    throw new AccountError('The account service could not reach the provider. Try connecting again.');
   } finally {
     clearTimeout(timeout);
   }
@@ -325,7 +325,7 @@ function publicAccount(account, row) {
 }
 
 async function activeGrant(env, owner, account, minimumLifetime) {
-  const platform = requireValue(platformFor(account), 'Choose an Ifverse account alias from the account list.');
+  const platform = requireValue(platformFor(account), 'Choose an account alias from the account list.');
   const row = await env.DB.prepare('SELECT * FROM account_connections WHERE owner_id = ? AND account = ?')
     .bind(owner, account).first();
   if (!row) return null;
@@ -442,7 +442,7 @@ function connectionError(message) {
   const safeMessage = message.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
   return new Response(`<!doctype html><html lang="en"><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connection needs attention · Ifverse</title>
+    <title>Connection needs attention</title>
     <style>
       :root{color-scheme:dark;background:#13151c;color:#edf0ff;font:1rem/1.5 "DM Sans",system-ui,sans-serif}
       main{margin:clamp(1.25rem,6vw,5rem) auto;padding:0 1.25rem;max-width:32rem}
@@ -495,7 +495,7 @@ async function requestSelection(env, key, owner, target, session, candidates) {
     `<li><button name="choice" value="${index}"><strong>${escape(identity.name || identity.id)}</strong>
       <span>${escape(identity.handle || identity.id)}</span></button></li>`).join('');
   return new Response(`<!doctype html><html lang="en"><meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Choose an account · Ifverse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Choose an account</title>
     <style>
       :root{color-scheme:dark;background:#13151c;color:#edf0ff;font:1rem/1.5 system-ui,sans-serif}
       main{margin:clamp(1.25rem,6vw,5rem) auto;padding:0 1.25rem;max-width:32rem}
@@ -567,6 +567,6 @@ export async function accountCallback(request, env, owner) {
     if (error instanceof AccountError) return connectionError(error.message);
     // Log a fixed stage label only. Provider bodies and OAuth parameters can contain credentials.
     console.error('Ifverse OAuth callback failed at ' + stage);
-    return connectionError('Ifverse could not ' + stage + '. Open the dashboard to try again.');
+    return connectionError('The account service could not ' + stage + '. Open the dashboard to try again.');
   }
 }
