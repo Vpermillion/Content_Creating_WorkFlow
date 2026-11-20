@@ -1,14 +1,14 @@
 # Link Ifverse accounts
 
-Open [Ifverse Accounts](https://ifverse-publishing.idealcoyote1.chatgpt.site/) as the Site owner. Select the platform's **Add account** button, choose the provider login, and approve access. If several channels, Pages, or profiles are available, select the one to save. Repeat to add another account. Choosing a destination again updates its existing connection.
+Open the [Ifverse connection gateway](https://ifverse-publishing.idealcoyote1.chatgpt.site/connect) as the Site owner. Choose a platform, sign in with the social account you want to use, and approve access. If the provider returns several channels, Pages, or profiles, choose the destination to save. The gateway confirms the connection and stays open so you can add another account. Reconnecting the same destination updates its saved connection.
 
-The GitHub login manages source code. The ChatGPT login opens the private dashboard. Each social login grants access to its own channel, Page, or profile. The emails can all differ.
+Your GitHub login manages source code. Your ChatGPT login opens the private gateway. Your social login grants access to the selected channel, Page, or profile. These logins can all use different emails.
 
-Use **Publishing workflow** to reconnect an existing preset Ifverse destination. For a new connection, `ifverse_accounts` returns the saved alias and exact provider ID. Use `ifverse_verify` to recheck a connection.
+The [account manager](https://ifverse-publishing.idealcoyote1.chatgpt.site/) shows saved accounts and preset workflow connections. In ChatGPT, call `ifverse_connect` for the gateway URL, `ifverse_accounts` for destination aliases, and `ifverse_verify` to recheck a connection.
 
 ## Provider setup
 
-Configure each provider app once and register the exact HTTPS `/oauth/callback` URL returned by `ifverse_accounts`. Account holders use the provider's sign-in screen. Provider app review, eligible accounts, test-user restrictions, and two-factor authentication still apply.
+The Ifverse administrator configures each provider app once and registers the exact HTTPS `/oauth/callback` URL returned by `ifverse_accounts`. Account holders use the provider's sign-in screen. Provider app review, eligible accounts, test-user restrictions, and two-factor authentication still apply.
 
 | Private Site setting | Purpose |
 | --- | --- |
@@ -30,6 +30,8 @@ Enable **GitHub Actions** under **Settings → Pages** on an eligible GitHub pla
 
 Deploy the matching `whatif.publishing_api` build using `deploy/Dockerfile.publishing` on a private HTTPS origin with persistent state. Configure `IFVERSE_BACKEND_URL` and `IFVERSE_BACKEND_TOKEN` in the Site, with the token matching the publisher's `IFVERSE_API_TOKEN`. Backend settings include `IFVERSE_STATE`, `IFVERSE_MEDIA_KEY`, and `IFVERSE_PUBLIC_ORIGIN`.
 
-Register each new account's saved alias and provider ID in [the publishing registry](../channels/publishing-accounts.json) before creating drafts for it. The checked-in registry currently contains only the preset Ifverse YouTube channel. Linking an account leaves the registry and draft approval under your control. For approved operations, the Site refreshes and sends only the selected access grants to the authenticated backend. Refresh tokens and client secrets stay in the Site.
+After linking, use the alias returned by `ifverse_accounts` directly in a draft. The authenticated Site sends the verified identity to the publisher when creating the draft and rechecks the binding for publish and status. The draft preview contains the exact destination, media and caption. Publishing still requires approval of that preview. The Site sends only the selected access grants. Refresh tokens and client secrets stay in the Site.
+
+The checked-in [publishing registry](../channels/publishing-accounts.json) serves preset and standalone destinations. Accounts added through the hosted gateway are read from the Site's private database. Deploy the gateway and publisher from the same branch for support for newly linked destinations.
 
 For private render import, give `IFVERSE_GITHUB_READ_TOKEN` Contents read access on the repository. See [ChatGPT publishing](../docs/CHATGPT_PUBLISHING.md) for draft and media operations. The separate Actions queue uses [its own credentials](../docs/SOCIAL_PUBLISHING.md).

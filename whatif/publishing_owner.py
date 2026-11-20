@@ -45,15 +45,21 @@ def pending(drafts, draft_id, alias):
     state = next((r for r in draft['deliveries'] if r['alias'] == alias), None)
     require(row and state and state['status'] == 'action_required' and state['receipt'].get('handed_off_at'),
             'A pending TikTok Studio handoff is required')
-    binding = studio_binding(drafts, alias)
-    require(all(row[key] == binding[key] for key in ('account_id', 'handle')), 'The reviewed account changed')
+    registry = accounts.registry(drafts.root)
+    if alias in registry:
+        drafts.check_binding(row, registry)
+    else:
+        # The handoff was approved for this immutable draft. This form only
+        # records a browser observation of the resulting public post.
+        require(row.get('handle') and alias == accounts.gateway_alias('tiktok', row['account_id']),
+                'The reviewed account changed')
     return row, state
 
 
 def handle_form(drafts, form):
     alias = form['account']
-    row = studio_binding(drafts, alias)
     if not form.get('draft'):
+        row = studio_binding(drafts, alias)
         proof = hosted_tiktok.confirm_studio_account(row['handle'], form['observed_handle'], 'owner')
         folder = drafts.directory / 'grants'
         folder.mkdir(mode=0o700, exist_ok=True)
@@ -71,7 +77,7 @@ def handle_form(drafts, form):
 
 
 def page(drafts, alias, draft_id):
-    row = studio_binding(drafts, alias)
+    row = pending(drafts, draft_id, alias)[0] if draft_id else studio_binding(drafts, alias)
     html = ('<!doctype html><html lang="en"><meta charset="utf-8"><title>Ifverse TikTok Studio</title>'
             '<h1>Ifverse TikTok Studio</h1><p>Expected account <strong>' + escape(row['handle']) + '</strong></p>'
             '<form method="post" action="/owner/studio"><input type="hidden" name="account" value="'
@@ -80,7 +86,6 @@ def page(drafts, alias, draft_id):
         return html + ('<p>Open <a href="https://www.tiktok.com/tiktokstudio/upload" rel="noreferrer">TikTok Studio</a>'
                        ' and check the active handle.</p><label>Handle shown in Studio '
                        '<input name="observed_handle" required></label> <button>Confirm account</button></form>')
-    row, _ = pending(drafts, draft_id, alias)
     url = escape(drafts.adapter.media_url(row['media_sha256']), quote=True)
     return html + ('<input type="hidden" name="draft" value="' + escape(draft_id, quote=True) + '">'
                    '<p>Open the resulting public post in Chrome and compare it with the reviewed export.</p>'

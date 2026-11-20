@@ -10,17 +10,17 @@ Use `codex/ifverse-chatgpt-publishing` for the integrated Site/publisher. [PR #4
 | --- | --- |
 | Media | Ten 61-second anime cuts with sound-only repairs are saved; [batch index](BATCH_61S.md) selects the versions |
 | Style | English, `am_michael`, frequent varied roasts and occasional mild/clean swearing; [style prompt](../prompts/script-style.md) |
-| Site linking | The private dashboard can save multiple authorized accounts per platform. The callback verifies the selected destination and stores its grant by Site owner and provider identity. Preset publishing destinations continue to work. |
-| Publisher bridge | Implemented: the Site refreshes and passes selected access grants to authenticated backend broker routes |
-| Backend destinations | Checked-in registry contains only `ifverse-anime`, YouTube ID `UCpB_wi5MlernpSJxUf7zWcw`; Meta and TikTok IDs still need registration |
+| Site linking | The hosted gateway at `/connect` lets the Site owner link several accounts per platform. The callback verifies each destination and stores its encrypted grant. |
+| Publisher bridge | The Site sends verified owner-scoped bindings for newly linked accounts to the private publisher. The publisher validates the exact destination during draft creation and approved delivery. |
+| Backend destinations | Gateway aliases come from the Site database. The checked-in registry still supplies preset and standalone aliases. |
 | TikTok | OAuth/profile verification is available; publication is a Studio handoff |
 | Generalization | Free-form story-to-footage planning and Hollywood-branded production remain incomplete |
 
-The bridge is already implemented. Older statements that Site connections cannot reach the publisher are superseded by the November 16 source. The separate GitHub Actions queue continues to use its own secret contract.
+The separate GitHub Actions queue continues to use its own secret contract.
 
 ## Live setup and verification
 
-Use **Add account** to choose another provider login or destination. The GitHub Pages entry point opens the private account manager. See [setup and deployment](../sites/ACCOUNT_LINKING.md).
+Open **Connect accounts** for the hosted gateway. After provider approval, the verified destination appears in the account manager and can be selected for a draft when the publisher is configured. See [setup and deployment](../sites/ACCOUNT_LINKING.md).
 
 The Site is reachable at [Ifverse Publishing](https://ifverse-publishing.idealcoyote1.chatgpt.site). On 2026-11-20 its configured owner setting was aligned with the confirmed ChatGPT Site owner and saved version 4 was redeployed with runtime environment revision 4. Deployment succeeded and the live `ifverse_accounts` call now succeeds; the earlier owner-check 403 is resolved.
 
@@ -31,6 +31,8 @@ GitHub, ChatGPT and channel login accounts may differ. `IFVERSE_SITE_OWNER_EMAIL
 Provider grants and successful delivery remain unverified; no social account was linked or post published during this repair. Follow [account setup](../sites/ACCOUNT_LINKING.md) to inspect them. Repository records and software tests are not live checks.
 
 ## Validation and documentation cleanup
+
+- Gateway release checks passed locally. Nine Worker tests covered owner authorization, provider selection, multiple accounts and draft brokering. Fifteen Python publishing tests covered exact destination binding, reviewed approval, duplicate detection and delivery status. Provider calls in these tests were mocked.
 
 - Latest pre-audit source CI: [Software checks](https://github.com/Vpermillion/Content_Creating_WorkFlow/actions/runs/43793049012), passed at `280f00e`.
 - Four focused Site linking/access/broker tests passed locally during the source review; providers were mocked.

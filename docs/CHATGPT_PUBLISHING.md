@@ -2,13 +2,13 @@
 
 Use [account linking](../sites/ACCOUNT_LINKING.md) for the Site, provider consent and backend configuration. This guide describes the current native Worker plus private Python publisher. `sites/server.mjs` is an alternative Express MCP wrapper; the native build packages `worker.mjs`.
 
-The implemented path is: Site account consent → encrypted grant storage → selected access grants sent to the private publisher → reviewed draft delivery. Site connections are used through the broker routes. The standalone Actions/desktop queue has a separate credential contract.
+The hosted gateway saves the verified provider identity and encrypted grant. The private publisher uses that identity in reviewed drafts and receives the selected access grants for approved delivery. Site connections are used through the broker routes. The standalone Actions/desktop queue has a separate credential contract.
 
 ## Tools
 
 | Tool | Behavior |
 | --- | --- |
-| `ifverse_accounts`, `ifverse_connect`, `ifverse_verify` | Inspect setup/saved connections, begin consent, or recheck a destination |
+| `ifverse_accounts`, `ifverse_connect`, `ifverse_verify` | List saved connections, open the hosted gateway, or recheck a destination |
 | `ifverse_media_prepare`, `ifverse_media_status` | Run/get one existing checked-in review request through the bounded renderer |
 | `ifverse_media_import` | Stage a pinned render from the private repository, optionally exporting a separate Facebook Reel or JPEG |
 | `ifverse_prepare` | Save an immutable draft with exact media, account aliases, titles and captions |
@@ -25,7 +25,7 @@ The implemented path is: Site account consent → encrypted grant storage → se
 
 For media outside the recorded Git results, an authenticated producer can send binary `POST /media` to the backend. Rendering on the intended deployed host still needs runtime verification.
 
-`ifverse_prepare(brand, destinations)` takes registered account aliases, format, title, caption, `media_sha256` and the existing media manifest. The manifest binds `brand`, `episode`, `master_sha256` and `video_sha256`; actual review evidence is checked before publishing. Provider IDs come from the registry. Site consent alone neither registers those IDs nor approves a post.
+`ifverse_prepare(brand, destinations)` takes registered account aliases, format, title, caption, `media_sha256` and the existing media manifest. The manifest binds `brand`, `episode`, `master_sha256` and `video_sha256`; actual review evidence is checked before publishing. Use the saved alias from `ifverse_accounts` for a gateway connection. The authenticated Site supplies that exact provider identity to the publisher. Preset aliases come from the checked-in registry. Every post still requires approval of its exact draft.
 
 ## Review and delivery
 

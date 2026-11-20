@@ -1,4 +1,4 @@
-import { accountCallback, accountTool, publishingGrants, selectAccount } from './accounts.mjs';
+import { accountCallback, accountTool, isGatewayAccount, publishingBindings, publishingGrants, selectAccount } from './accounts.mjs';
 
 const VERSION = '2026-07-28';
 const MAX_BODY_BYTES = 128 * 1024;
@@ -39,17 +39,17 @@ const tools = [
     brand, episode: requestId,
     export: choices('Optional export type.', ['master', 'facebook_reel', 'jpeg']),
   }, ['brand', 'episode']), WRITE),
-  tool('ifverse_accounts', 'List Ifverse destinations, saved connections, and OAuth setup requirements.', object({}), READ),
-  tool('ifverse_connect', 'Open provider consent to connect an Ifverse account. The callback checks the account and saves the connection automatically. If TikTok Login Kit is unavailable, return the Studio link.', object({
+  tool('ifverse_accounts', 'List saved social accounts, destination aliases, and the hosted connection gateway.', object({}), READ),
+  tool('ifverse_connect', 'Open the hosted gateway to pick a social platform, or start provider consent for a selected platform or preset.', object({
     account: string('A platform (youtube, instagram, facebook, tiktok) for any account, or a preset Ifverse destination alias.',
       40, { pattern: '^[a-z0-9][a-z0-9-]{0,39}$' }),
     method: choices('Optional TikTok method. Choose OAuth for an approved Login Kit app, or Studio for manual publishing.', ['studio', 'oauth']),
     page_id: string('The intended Facebook Page ID if it is not configured on the Site.', 32, { pattern: '^[0-9]+$' }),
     handle: string('Optional TikTok handle. Defaults to @ifverse_anime.', 25, { pattern: '^@?[a-zA-Z0-9_.]+$' }),
-  }, ['account']), WRITE),
+  }, []), WRITE),
   tool('ifverse_verify', 'Check a saved provider connection when troubleshooting. A new connection is checked automatically during consent.', object({ account: alias }), READ),
   tool('ifverse_prepare', 'Save a draft with exact media, platform captions, and accounts. Show its preview and ID before asking for approval.', object({
-    brand, destinations: array(destination, 'The selected destination accounts and formats.', 4),
+    brand, destinations: array(destination, 'Accounts from ifverse_accounts and the format for each account.', 4),
   }), WRITE),
   tool('ifverse_preview', 'Retrieve a saved draft from any chat with preview, snapshot hash, and actual delivery status.', object({ draft_id: draftId }), READ),
   tool('ifverse_status', 'Refresh saved publication receipts using read-only provider checks. Does not upload, resume, or publish.', object({ draft_id: draftId }), READ),
@@ -168,11 +168,19 @@ const escapeHtml = value => String(value).replaceAll('&', '&amp;').replaceAll('<
 
 const labels = { youtube: 'YouTube', instagram: 'Instagram', facebook: 'Facebook', tiktok: 'TikTok' };
 
-async function accountDashboard(request, env, owner) {
+async function accountDashboard(request, env, owner, checkout) {
   const result = await accountTool(request, env, owner, 'ifverse_accounts', {});
   if (result.error) return accountPage('Account status is unavailable. Try again.', 503);
   const nonce = crypto.randomUUID();
   const accounts = Object.values(result.accounts);
+  const completed = accounts.find(item => item.connected_at &&
+    item.account === new URL(request.url).searchParams.get('connected'));
+  const confirmation = checkout && completed
+    ? '<div class="notice" role="status"><strong>' +
+      escapeHtml(completed.handle || completed.display_name || completed.account_id) +
+      '</strong> connected to Ifverse. Choose a platform to add another account.</div>'
+    : '';
+  const title = checkout ? 'Connect social accounts' : 'Ifverse Accounts';
   const connectForm = (account, label) =>
     '<form method="post" action="/oauth/connect"><input type="hidden" name="account" value="' +
     escapeHtml(account) + '"><button>' + escapeHtml(label) +
@@ -182,14 +190,16 @@ async function accountDashboard(request, env, owner) {
   })[item.status];
   const platforms = Object.entries(result.platforms).map(([platform, setup]) => {
     const name = labels[platform];
-    const connected = accounts.filter(item => item.platform === platform && !item.workflow_destination);
+    const connected = accounts.filter(item => item.platform === platform && !item.preset);
     const list = connected.length ? '<ul>' + connected.map(item =>
       '<li><strong>' + escapeHtml(item.display_name || item.handle || item.account_id) + '</strong><small>' +
       escapeHtml([item.handle || item.account_id, statusFor(item)].join(' · ')) + '</small></li>').join('') + '</ul>' : '';
-    const action = setup ? '<p class="setup">Provider setup required</p>' : connectForm(platform, 'Add ' + name + ' account');
+    const action = !checkout ? '' : setup
+      ? '<div class="setup"><strong>Needs setup</strong><p>The Ifverse administrator must enable this provider.</p></div>'
+      : connectForm(platform, 'Connect ' + name);
     return '<section><h3>' + name + '</h3>' + list + action + '</section>';
   }).join('');
-  const workflow = accounts.filter(item => item.workflow_destination).map(item => {
+  const workflow = accounts.filter(item => item.preset).map(item => {
     const name = labels[item.platform];
     const status = item.setup_required && item.status === 'not_connected' ? 'Setup required' : statusFor(item);
     const target = item.handle || item.display_name || item.account_id;
@@ -203,7 +213,7 @@ async function accountDashboard(request, env, owner) {
   }).join('');
   return accountPage(`<!doctype html><html lang="en"><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ifverse Accounts</title>
+    <title>${title}</title>
     <style>
       :root{color-scheme:dark;background:#13151c;color:#edf0ff;font:1rem/1.5 "DM Sans",system-ui,sans-serif}
       main{margin:clamp(1.25rem,6vw,5rem) auto;padding:0 1.25rem;max-width:56rem}
@@ -216,14 +226,24 @@ async function accountDashboard(request, env, owner) {
       button{border:0;border-radius:.45rem;background:#bfc6ff;color:#171a3c;font:inherit;font-weight:700;padding:.6rem 1rem;cursor:pointer}
       button:disabled{opacity:.65;cursor:wait}
       button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px}a{color:#bfc6ff}
-      .setup{font-size:.94rem}
+      .setup{font-size:.94rem;color:#e8c087}.setup p{margin:.25rem 0 0}
+      header{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:space-between;margin-bottom:1.6rem}
+      header h1{margin:0;line-height:1.15;letter-spacing:-.035em}
+      .primary{display:inline-block;border-radius:.45rem;background:#bfc6ff;color:#171a3c;font-weight:700;
+        padding:.6rem 1rem;text-decoration:none}
+      .notice{margin:1rem 0;padding:.75rem 1rem;border:1px solid #5f8e7a;border-radius:.55rem;background:#183029}
       .connection-status{margin-top:.75rem}.connection-status:empty{margin:0}
     </style>
-    <main><h1>Ifverse Accounts</h1>
-      <p>Choose a platform, approve access, and pick the channel, Page, or profile to save. Each platform can store multiple accounts.</p>
+    <main>
+      <header><h1>${title}</h1>${checkout ? '<a href="/">Back to account manager</a>'
+        : '<a class="primary" href="/connect">Connect accounts</a>'}</header>
+      ${checkout
+        ? '<p>Choose a platform, switch to the account you want, then approve access. Repeat to add more accounts.</p>'
+        : '<p>Manage the channels, Pages, and profiles linked to Ifverse.</p>'}
+      ${confirmation}
       <div class="accounts">${platforms}</div>
-      <h2>Publishing workflow</h2><p>These destinations are used for reviewed posts.</p>
-      <div class="accounts">${workflow}</div>
+      ${checkout ? '' : (result.publisher_configured ? '' : '<p class="setup">The publishing service needs setup.</p>') +
+        '<h2>Preset workflow accounts</h2><div class="accounts">' + workflow + '</div>'}
     </main>
     <script nonce="${nonce}">
       for (const form of document.querySelectorAll('form[action="/oauth/connect"]')) {
@@ -339,11 +359,22 @@ async function callBackend(id, operation, args, env, owner) {
   const token = env.IFVERSE_BACKEND_TOKEN;
   if (!env.IFVERSE_BACKEND_URL || !token) return toolError(id, 'The private publishing service has not been configured.');
   try {
-    const useBroker = env.DB && brokered.has(operation);
+    const brokerDraft = env.DB && operation === 'ifverse_prepare' &&
+      args.destinations.some(item => isGatewayAccount(item.account));
+    const useBroker = env.DB && (brokerDraft || brokered.has(operation));
     let route = routes.get(operation);
     if (useBroker) {
-      const aliases = await brokerAliases(env, operation, args);
-      args = { ...args, account_grants: await publishingGrants(env, owner, aliases) };
+      const aliases = brokerDraft ? args.destinations.map(item => item.account) : await brokerAliases(env, operation, args);
+      const bindings = await publishingBindings(env, owner, aliases);
+      if (brokerDraft) {
+        if (aliases.some(item => isGatewayAccount(item) && !Object.hasOwn(bindings, item))) {
+          return toolError(id, 'Connect the selected account in the Ifverse gateway before creating a draft.');
+        }
+        args = { ...args, account_bindings: bindings };
+      } else {
+        args = { ...args, account_grants: await publishingGrants(env, owner, aliases),
+          ...(Object.keys(bindings).length ? { account_bindings: bindings } : {}) };
+      }
       route = '/broker' + route;
     }
     const response = await fetchBackend(env, route, args);
@@ -352,7 +383,7 @@ async function callBackend(id, operation, args, env, owner) {
     const result = await readJson(response, MAX_RESULT_BYTES);
     if (!response.ok) {
       const message = useBroker
-        ? 'The publishing service rejected the broker request. Check the deployed publisher version and account registry.'
+        ? 'The publishing service rejected the broker request. Check the deployed publisher version and the selected account connection.'
         : typeof result?.error === 'string' ? result.error : 'The publishing service rejected the request.';
       return toolError(id, message.slice(0, 1000));
     }
@@ -410,9 +441,9 @@ async function mcp(request, env) {
 export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
-    if (path === '/' && request.method === 'GET') {
+    if (['/', '/connect'].includes(path) && request.method === 'GET') {
       if (!isOwner(request, env)) return accountPage('Sign in as the Ifverse Site owner.', 403);
-      return accountDashboard(request, env, request.headers.get('oai-authenticated-user-id'));
+      return accountDashboard(request, env, request.headers.get('oai-authenticated-user-id'), path === '/connect');
     }
     if (request.method === 'POST' && env.DB && ['/oauth/connect', '/oauth/connect/youtube'].includes(path)) {
       return connectAccount(request, env, path.endsWith('/youtube') ? 'ifverse-anime' : undefined);

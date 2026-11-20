@@ -209,7 +209,12 @@ test('one provider login can add more than one channel with isolated, stable con
   assert.equal((await select(f, selection, '0', { Origin: 'https://elsewhere.example' })).status, 403);
   assert.equal((await select(f, selection, '0', { 'oai-authenticated-user-id': 'elsewhere' })).status, 400);
   assert.equal((await select(f, selection, '50')).status, 400);
-  assert.equal((await select(f, selection, '0')).status, 303);
+  const selected = await select(f, selection, '0');
+  assert.equal(selected.status, 303);
+  const landing = selected.headers.get('Location');
+  assert.match(landing, /^\/connect\?connected=youtube-[0-9a-f]{24}$/);
+  const complete = await worker.fetch(new Request(origin + landing, { headers: owner }), f.env);
+  assert.match(await complete.text(), /@first<\/strong> connected to Ifverse/);
   assert.equal((await select(f, selection, '1')).status, 400);
   assert.deepEqual(rows().map(row => row.provider_id), [channelA]);
   assert.equal((await select(f, await chooser(), '1')).status, 303);
@@ -219,12 +224,20 @@ test('one provider login can add more than one channel with isolated, stable con
   const accounts = (await f.tool('ifverse_accounts', {})).structuredContent.accounts;
   assert.equal(accounts['ifverse-anime'].status, 'not_connected');
   for (const row of rows()) {
-    assert.equal(accounts[row.account].workflow_destination, false);
+    assert.equal(accounts[row.account].preset, false);
+    assert.equal(accounts[row.account].workflow_destination, true);
     assert.equal(accounts[row.account].account_id, row.provider_id);
     assert.equal((await f.tool('ifverse_verify', { account: row.account })).structuredContent.verified, true);
   }
   const dashboard = await (await worker.fetch(new Request(origin, { headers: owner }), f.env)).text();
-  assert.match(dashboard, /Add YouTube account/);
+  assert.match(dashboard, /href="\/connect">Connect accounts/);
+  const gateway = await worker.fetch(new Request(origin + '/connect', { headers: owner }), f.env);
+  const checkout = await gateway.text();
+  assert.match(checkout, /Connect social accounts/);
+  assert.match(checkout, /name="account" value="youtube"><button>Connect YouTube/);
+  assert.match(checkout, /Instagram[\s\S]*Facebook[\s\S]*TikTok/);
+  assert.equal((await worker.fetch(new Request(origin + '/connect'), f.env)).status, 403);
+  assert.equal((await f.tool('ifverse_connect', {})).structuredContent.gateway_url, origin + '/connect');
   assert.match(dashboard, /@first · Connected/);
   assert.match(dashboard, /@second · Connected/);
 });
@@ -284,4 +297,46 @@ test('TikTok saves the consented account without a preset handle', async t => {
   assert.match(row.account, /^tiktok-/);
   assert.equal(row.provider_id, 'stable-tiktok-id');
   assert.equal(row.handle, '@different_account');
+});
+
+test('gateway accounts become reviewed destinations without a repository edit or exposing a token in the draft', async t => {
+  const f = fixture(t);
+  f.env.IFVERSE_BACKEND_URL = 'https://publisher.example.test';
+  f.env.IFVERSE_BACKEND_TOKEN = 'private-publisher-test';
+  const calls = [];
+  const linkedChannel = 'UC' + 'q'.repeat(22);
+  t.mock.method(globalThis, 'fetch', async (url, options) => {
+    const endpoint = new URL(url);
+    if (endpoint.hostname === 'oauth2.googleapis.com') {
+      return Response.json({ access_token: 'test-access', refresh_token: 'test-refresh', scope: scopes, expires_in: 3600 });
+    }
+    if (endpoint.origin === f.env.IFVERSE_BACKEND_URL) {
+      assert.equal(options.headers.Authorization, 'Bearer private-publisher-test');
+      calls.push([endpoint.pathname, JSON.parse(options.body)]);
+      return Response.json({ draft_id: 'b'.repeat(32), snapshot_hash: 'a'.repeat(64) });
+    }
+    assert.equal(endpoint.searchParams.get('mine'), 'true');
+    return Response.json({ items: [{ id: linkedChannel, snippet: { title: 'Linked', customUrl: '@linked' } }] });
+  });
+
+  const start = await startPlatform(f, 'youtube');
+  assert.equal((await f.callback(start.searchParams.get('state'))).status, 303);
+  const account = f.db.prepare('SELECT account FROM account_connections').get().account;
+  const destination = { account, format: 'short', caption: 'Preview', title: 'Review',
+    media_sha256: 'c'.repeat(64), manifest: {} };
+  const args = { brand: 'ifverse_anime', destinations: [destination] };
+  const bindings = { [account]: { brand: 'ifverse_anime', platform: 'youtube', account_id: linkedChannel, handle: '@linked' } };
+  const fakeDestination = { ...destination, account: 'youtube-' + '0'.repeat(24) };
+  const refused = await f.tool('ifverse_prepare', { ...args, destinations: [fakeDestination] });
+  assert.equal(refused.isError, true);
+  assert.equal(calls.length, 0);
+  const prepared = await f.tool('ifverse_prepare', args);
+  assert.equal(prepared.structuredContent.draft_id, 'b'.repeat(32));
+  assert.deepEqual(calls[0], ['/broker/drafts/create', { ...args, account_bindings: bindings }]);
+  assert.doesNotMatch(JSON.stringify(prepared), /test-access|test-refresh/);
+
+  const publish = { draft_id: 'b'.repeat(32), snapshot_hash: 'a'.repeat(64), destinations: [account], approved: true };
+  await f.tool('ifverse_publish', publish);
+  assert.deepEqual(calls[1], ['/broker/drafts/publish', { ...publish, account_bindings: bindings,
+    account_grants: { [account]: { platform: 'youtube', account_id: linkedChannel, token: 'test-access' } } }]);
 });

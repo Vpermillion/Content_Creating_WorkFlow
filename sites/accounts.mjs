@@ -22,6 +22,7 @@ const selectionLifetime = 10 * 60 * 1000;
 const selectionAccount = 'choose-destination';
 const platforms = Object.keys(formats);
 const savedAccount = /^(youtube|instagram|facebook|tiktok)-[0-9a-f]{24}$/;
+export const isGatewayAccount = account => savedAccount.test(account);
 const platformFor = account => Object.hasOwn(accounts, account) ? accounts[account].platform : savedAccount.exec(account)?.[1];
 
 class AccountError extends Error {}
@@ -294,7 +295,7 @@ async function begin(request, env, owner, args) {
   } else if (target.platform === 'tiktok') {
     authorize = 'https://www.tiktok.com/v2/auth/authorize/';
     delete query.client_id;
-    Object.assign(query, { client_key: config.client_id, scope: tiktokScopes.join(',') });
+    Object.assign(query, { client_key: config.client_id, scope: tiktokScopes.join(','), disable_auto_auth: '1' });
   } else {
     authorize = 'https://www.facebook.com/' + config.graph_version + '/dialog/oauth';
     if (config.login_config_id) Object.assign(query, { config_id: config.login_config_id, override_default_response_type: 'true' });
@@ -310,10 +311,12 @@ async function begin(request, env, owner, args) {
 }
 
 function publicAccount(account, row) {
-  const { account_id, handle } = Object.hasOwn(accounts, account) ? accounts[account] : {};
+  const preset = Object.hasOwn(accounts, account);
+  const { account_id, handle } = preset ? accounts[account] : {};
   const platform = platformFor(account);
   return {
-    account, platform, brand, workflow_destination: Object.hasOwn(accounts, account), account_id: row?.provider_id || account_id || null,
+    account, platform, brand, preset,
+    workflow_destination: preset || Boolean(row && (platform !== 'tiktok' || row.handle)), account_id: row?.provider_id || account_id || null,
     handle: row?.handle || handle || null, display_name: row?.display_name || null,
     status: !row ? 'not_connected' : row.expires_at && row.expires_at <= Date.now() ? 'refresh_due' : 'connected',
     connected_at: row ? new Date(row.connected_at).toISOString() : null,
@@ -359,6 +362,21 @@ async function verify(env, owner, account) {
   return { ...publicAccount(account, row), verified: true };
 }
 
+// Only the Site can attach bindings to authenticated publisher requests.
+export async function publishingBindings(env, owner, aliases) {
+  const selected = [...new Set(aliases)].filter(isGatewayAccount);
+  if (!selected.length) return {};
+  const placeholders = selected.map(() => '?').join(', ');
+  const saved = await env.DB.prepare(
+    'SELECT account, provider_id, handle FROM account_connections WHERE owner_id = ? AND account IN (' + placeholders + ')',
+  ).bind(owner, ...selected).all();
+  return Object.fromEntries(saved.results.map(row => {
+    const platform = platformFor(row.account);
+    return [row.account, { brand, platform, account_id: row.provider_id,
+      ...(row.handle ? { handle: row.handle } : {}) }];
+  }));
+}
+
 // Only used for server-to-server requests to the configured publishing service.
 export async function publishingGrants(env, owner, aliases) {
   const grants = {};
@@ -396,7 +414,9 @@ function connectionSetup(env, platform, pinned = false) {
 
 export async function accountTool(request, env, owner, name, args) {
   try {
-    if (name === 'ifverse_connect') return await begin(request, env, owner, args);
+    const gatewayUrl = new URL('/connect', callbackUrl(request, env)).href;
+    if (name === 'ifverse_connect') return args.account ? await begin(request, env, owner, args)
+      : { status: 'choose_platform', gateway_url: gatewayUrl };
     if (name === 'ifverse_verify') return await verify(env, owner, args.account);
     const saved = await env.DB.prepare('SELECT account, provider_id, handle, display_name, expires_at, connected_at FROM account_connections WHERE owner_id = ?')
       .bind(owner).all();
@@ -405,10 +425,12 @@ export async function accountTool(request, env, owner, name, args) {
       accounts: Object.fromEntries([...Object.keys(accounts), ...[...records.keys()].filter(account => savedAccount.test(account))]
         .map(account => {
           const item = publicAccount(account, records.get(account));
-          return [account, { ...item, setup_required: connectionSetup(env, item.platform, item.workflow_destination) }];
+          return [account, { ...item, setup_required: connectionSetup(env, item.platform, item.preset) }];
         })),
       platforms: Object.fromEntries(platforms.map(platform => [platform, connectionSetup(env, platform)])),
       formats,
+      gateway_url: gatewayUrl,
+      publisher_configured: Boolean(env.IFVERSE_BACKEND_URL && env.IFVERSE_BACKEND_TOKEN),
       callback_url: callbackUrl(request, env),
     };
   } catch (error) {
@@ -445,7 +467,8 @@ async function saveConnection(env, key, owner, session, { identity, grant, expir
   requireValue(result.meta.changes === 1, 'A newer account connection is already active.');
   return new Response(null, {
     status: 303,
-    headers: { Location: '/', 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' },
+    headers: { Location: isGatewayAccount(account) ? '/connect?' + new URLSearchParams({ connected: account }) : '/',
+      'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' },
   });
 }
 
@@ -482,7 +505,7 @@ async function requestSelection(env, key, owner, target, session, candidates) {
       span{display:block;color:#c1c7df;overflow-wrap:anywhere}a{color:#bfc6ff}
     </style><main><h1>Choose an account</h1>
     <form method="post" action="/oauth/select"><input type="hidden" name="selection" value="${selection}">
-    <ul>${list}</ul></form><p><a href="/">Cancel</a></p></main></html>`, {
+    <ul>${list}</ul></form><p><a href="/connect">Cancel</a></p></main></html>`, {
     headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store',
       'Referrer-Policy': 'no-referrer', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'" },
   });

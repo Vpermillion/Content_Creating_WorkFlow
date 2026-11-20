@@ -40,9 +40,9 @@ class Publishers:
         self._operation_grants = ContextVar('ifverse_operation_grants', default=None)
 
     @contextmanager
-    def broker_grants(self, grants):
+    def broker_grants(self, grants, bindings=None):
         direct.require(isinstance(grants, dict) and len(grants) <= 4, 'Invalid broker grants')
-        bindings = accounts.registry(self.root)
+        bindings = accounts.registry(self.root) if bindings is None else bindings
         for alias, grant in grants.items():
             binding = bindings.get(alias)
             direct.require(binding and isinstance(grant, dict)

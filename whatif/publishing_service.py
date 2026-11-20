@@ -79,15 +79,25 @@ class Drafts:
             os.replace(temp, path)
         return sha
 
-    def create(self, brand, destinations):
+    def check_binding(self, row, registry):
+        binding = registry.get(row['account'])
+        require(binding and all(row.get(field) == binding.get(field)
+                                for field in ('brand', 'platform', 'account_id', 'handle')),
+                'The account binding differs from the reviewed destination')
+
+    def create(self, brand, destinations, registry=None):
         require(isinstance(destinations, list) and 0 < len(destinations) <= 4, 'Choose 1–4 destinations')
-        registry = accounts.registry(self.root)
-        rows, seen = [], set()
+        registry = accounts.registry(self.root) if registry is None else registry
+        rows, seen, identities = [], set(), set()
         for source in destinations:
             alias = source['account']
             require(alias in registry and alias not in seen, 'Choose distinct registered account aliases')
             seen.add(alias)
             binding = registry[alias]
+            account_id = binding['account_id']
+            identity = (binding['platform'], account_id.casefold() if binding['platform'] == 'tiktok' else account_id)
+            require(identity not in identities, 'Select each platform account only once')
+            identities.add(identity)
             require(binding['brand'] == brand and binding['platform'] in FORMATS, 'Wrong brand or platform')
             require(source['format'] in FORMATS[binding['platform']], 'Format is not wired')
             require(isinstance(source['caption'], str) and len(source['caption'].encode()) <= (5000 if binding['platform'] == 'youtube' else 2200), 'Caption too long')
@@ -151,7 +161,8 @@ class Drafts:
             db.execute('UPDATE deliveries SET status=?,receipt=? WHERE draft=? AND alias=?',
                        ('published', canonical(receipt), draft, alias))
 
-    def refresh(self, draft):
+    def refresh(self, draft, registry=None):
+        registry = accounts.registry(self.root) if registry is None else registry
         with youtube.file_lock(self.directory / '.publish.lock'):
             preview = self.get(draft)
             rows = {r['account']: r for r in preview['destinations']}
@@ -160,7 +171,7 @@ class Drafts:
                     continue
                 row = rows[state['alias']]
                 try:
-                    accounts.resolve(self.root, row)
+                    self.check_binding(row, registry)
                     result = self.adapter.read_status(row, state)
                 except Exception:
                     continue  # Keep the existing receipt when a provider read fails.
@@ -168,7 +179,7 @@ class Drafts:
                     self.save(draft, state['alias'], result['status'], {**state['receipt'], **result})
             return self.get(draft)
 
-    def publish(self, draft, snapshot_hash, destinations, approved):
+    def publish(self, draft, snapshot_hash, destinations, approved, registry=None):
         require(approved is True, 'Explicit owner approval of this exact preview is required')
         preview = self.get(draft)
         require(snapshot_hash == preview['snapshot_hash'], 'Review the current immutable preview')
@@ -176,6 +187,7 @@ class Drafts:
                 'Select an exact nonempty destination subset')
         rows = {r['account']: r for r in preview['destinations']}
         require(set(destinations) <= rows.keys(), 'Destination not in reviewed draft')
+        registry = accounts.registry(self.root) if registry is None else registry
         # Across processes, hold a file lock through the provider call. Crash releases the lock
         # but leaves working status; retry then reconciles instead of issuing a fresh write.
         with youtube.file_lock(self.directory / '.publish.lock'):
@@ -186,8 +198,7 @@ class Drafts:
                     continue
                 from scripts import publishing_dashboard as queue
                 try:
-                    require(accounts.resolve(self.root, row) == {k: row[k] for k in
-                            accounts.registry(self.root)[alias]}, 'Account binding changed since preview')
+                    self.check_binding(row, registry)
                     queue.load_review(self.root, row['manifest'])
                 except (ValueError, KeyError, OSError):
                     status = 'blocked_review' if state['status'] in ('draft', 'awaiting_consent', 'blocked_review') else state['status']

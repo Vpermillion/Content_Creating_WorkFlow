@@ -3,8 +3,15 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+from threading import Thread
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
+from urllib.error import HTTPError
+from urllib.request import Request, urlopen
+
+from scripts.publishing_accounts import gateway_alias
+from whatif.hosted_publishers import Publishers
+from whatif.publishing_api import server
 
 from whatif.publishing_service import Drafts
 
@@ -117,3 +124,68 @@ class DraftTests(unittest.TestCase):
         self.assertEqual({r['alias']:r['status'] for r in result['deliveries']},
                          {'ig':'blocked_review','fb':'published','yt':'draft'})
         self.assertEqual(self.adapter.starts, ['fb'])
+
+    def test_gateway_draft_and_publish_validate_exact_linked_identity(self):
+        token, key = 'a' * 32, 'b' * 32
+        publisher = Publishers(self.root, self.service.directory, 'https://fixture.example', key)
+        publisher.validate_media = Mock()
+        publisher.verify = Mock(side_effect=publisher.operation_grant)
+        publisher.start = Mock(return_value={'status': 'submitted', 'provider_id': 'post-123'})
+        self.service.adapter = publisher
+        http = server(self.service, Mock(), token, key, ('127.0.0.1', 0))
+        thread = Thread(target=http.serve_forever)
+        thread.start()
+        self.addCleanup(http.server_close)
+        self.addCleanup(thread.join, 5)
+        self.addCleanup(http.shutdown)
+
+        def call(route, args, credential='Bearer ' + token):
+            request = Request(f'http://127.0.0.1:{http.server_port}' + route, data=json.dumps(args).encode(),
+                              headers={'Authorization': credential, 'Content-Type': 'application/json'})
+            with urlopen(request, timeout=4) as response:
+                return json.load(response)
+
+        brand = 'ifverse_anime'
+        account_id = '739'
+        binding = {'brand': brand, 'platform': 'instagram', 'account_id': account_id, 'handle': '@linked'}
+        alias = gateway_alias('instagram', account_id)
+        draft_args = {'brand': brand, 'destinations': [{**self.rows[0], 'account': alias}]}
+        body = {**draft_args, 'account_bindings': {alias: binding}}
+        with self.assertRaises(HTTPError) as unauthenticated:
+            call('/broker/drafts/create', body, credential='')
+        self.assertEqual(unauthenticated.exception.code, 401)
+        with self.assertRaises(HTTPError):
+            call('/drafts/create', body)
+        with self.assertRaises(HTTPError):
+            call('/broker/drafts/create', {**body, 'account_bindings': {alias: {**binding, 'account_id': '999'}}})
+        existing_id = '123'
+        duplicate_alias = gateway_alias('instagram', existing_id)
+        with self.assertRaises(HTTPError):
+            call('/broker/drafts/create', {'brand': brand, 'destinations': [self.rows[0],
+                  {**self.rows[0], 'account': duplicate_alias}],
+                  'account_bindings': {duplicate_alias: {**binding, 'account_id': existing_id}}})
+
+        preview = call('/broker/drafts/create', body)
+        self.assertEqual(preview['destinations'][0]['account_id'], account_id)
+        self.assertEqual(preview['destinations'][0]['handle'], '@linked')
+        approved = {'draft_id': preview['draft_id'], 'snapshot_hash': preview['snapshot_hash'],
+                    'destinations': [alias], 'approved': True}
+        grant = {'platform': 'instagram', 'account_id': account_id, 'token': 'fixture-private-token',
+                 'graph_version': 'v25.0', 'page_id': '988'}
+        request = {**approved, 'account_grants': {alias: grant}, 'account_bindings': {alias: binding}}
+        with self.assertRaises(HTTPError):
+            call('/broker/drafts/publish', {**request, 'approved': False})
+        with self.assertRaises(HTTPError):
+            call('/broker/drafts/publish', {**request, 'account_bindings': {}})
+        with self.assertRaises(HTTPError):
+            call('/broker/drafts/publish', {**request, 'account_grants': {alias: {**grant, 'account_id': '999'}}})
+        publisher.start.assert_not_called()
+        result = call('/broker/drafts/publish', request)
+        self.assertEqual(result['deliveries'][0]['status'], 'submitted')
+        self.assertNotIn(grant['token'], json.dumps(result))
+        publisher.start.assert_called_once()
+        publisher.read_status = Mock(side_effect=lambda row, state: {
+            'status': 'published', 'provider_id': state['receipt']['provider_id']
+        } if publisher.operation_grant(row) else None)
+        status = call('/broker/drafts/status', {**request, 'draft_id': preview['draft_id']})
+        self.assertEqual(status['deliveries'][0]['status'], 'published')

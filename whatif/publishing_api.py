@@ -33,10 +33,11 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                     'operator_url': publishing_owner.studio_link(drafts.adapter.origin, account)}
         return oauth.begin(account)
 
-    def verify_tiktok(args):
+    def verify_tiktok(args, registry=None):
         preview = drafts.get(args['draft_id'])
         require(preview['snapshot_hash'] == args['snapshot_hash'], 'Wrong snapshot')
         row = next(r for r in preview['destinations'] if r['account'] == args['account'])
+        drafts.check_binding(row, accounts.registry(drafts.root) if registry is None else registry)
         state = next(r for r in preview['deliveries'] if r['alias'] == args['account'])
         require(state['status'] == 'action_required', 'A reviewed Studio handoff is required')
         result = drafts.adapter.verify_tiktok_video(row, args['video_id'], state['receipt'])
@@ -44,18 +45,27 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
         return result
 
     def broker_operation(path, args):
+        bindings = args.get('account_bindings', {})
+        registry = accounts.gateway_registry(drafts.root, bindings)
+        if path == '/broker/drafts/create':
+            require(bindings.keys() <= {item['account'] for item in args['destinations']},
+                    'Unexpected gateway destination for this draft')
+            return drafts.create(args['brand'], args['destinations'], registry=registry)
+        if path == '/broker/drafts/publish':
+            selected = set(args['destinations'])
+        elif path == '/broker/drafts/status':
+            selected = {item['account'] for item in drafts.get(args['draft_id'])['destinations']}
+        else:
+            selected = {args['account']}
         grants = args['account_grants']
-        with drafts.adapter.broker_grants(grants):
+        require(bindings.keys() <= selected and grants.keys() <= selected, 'Unexpected account for this operation')
+        with drafts.adapter.broker_grants(grants, registry):
             if path == '/broker/drafts/publish':
-                require(grants.keys() <= set(args['destinations']), 'Unexpected grant for this operation')
-                return drafts.publish(args['draft_id'], args['snapshot_hash'], args['destinations'], args['approved'])
+                return drafts.publish(args['draft_id'], args['snapshot_hash'], args['destinations'], args['approved'],
+                                      registry=registry)
             if path == '/broker/drafts/status':
-                preview = drafts.get(args['draft_id'])
-                require(grants.keys() <= {item['account'] for item in preview['destinations']},
-                        'Unexpected grant for this draft')
-                return drafts.refresh(args['draft_id'])
-            require(grants.keys() <= {args['account']}, 'Unexpected grant for this operation')
-            return verify_tiktok(args)
+                return drafts.refresh(args['draft_id'], registry=registry)
+            return verify_tiktok(args, registry=registry)
 
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
@@ -187,7 +197,8 @@ def server(drafts, oauth, token, signing_key, address=('127.0.0.1', 8080), owner
                     result = drafts.publish(args['draft_id'], args['snapshot_hash'], args['destinations'], args['approved'])
                 elif self.path == '/tiktok/verify':
                     result = verify_tiktok(args)
-                elif self.path in ('/broker/drafts/publish', '/broker/drafts/status', '/broker/tiktok/verify'):
+                elif self.path in ('/broker/drafts/create', '/broker/drafts/publish', '/broker/drafts/status',
+                                   '/broker/tiktok/verify'):
                     result = broker_operation(self.path, args)
                 else:
                     return self.reply(404, {'error': 'Not found'})
