@@ -1,6 +1,7 @@
 const brand = 'ifverse_anime';
 const googleToken = 'https://oauth2.googleapis.com/token';
 const tiktokToken = 'https://open.tiktokapis.com/v2/oauth/token/';
+const instagramGraph = 'https://graph.instagram.com';
 const studioUrl = 'https://www.tiktok.com/tiktokstudio/upload';
 const googleScopes = ['youtube.readonly', 'youtube.upload'].map(scope => 'https://www.googleapis.com/auth/' + scope);
 const metaScopes = {
@@ -8,6 +9,12 @@ const metaScopes = {
   facebook: 'pages_show_list,pages_read_engagement,pages_manage_posts',
 };
 const tiktokScopes = ['user.info.basic', 'user.info.profile', 'video.list'];
+const instagramScopes = ['instagram_business_basic', 'instagram_business_content_publish'];
+const providerSettings = {
+  meta: 'IFVERSE_META_OAUTH_CONFIG',
+  instagram: 'IFVERSE_INSTAGRAM_OAUTH_CONFIG',
+  tiktok: 'IFVERSE_TIKTOK_OAUTH_CONFIG',
+};
 const accounts = {
   'ifverse-anime': { platform: 'youtube', account_id: 'UCpB_wi5MlernpSJxUf7zWcw', handle: '@ifverse_anime' },
   'ifverse-instagram': { platform: 'instagram', handle: '@ifverse_anime' },
@@ -48,14 +55,32 @@ async function hash(value) {
   return base64(new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(value))));
 }
 
-function oauthSettings(env, platform) {
-  const provider = platform in metaScopes ? 'meta' : platform;
-  const config = JSON.parse(env.IFVERSE_OAUTH_CONFIG || '{}')[provider];
+function configuredClient(env, provider) {
+  const settings = env[providerSettings[provider]];
+  return settings ? JSON.parse(settings) : JSON.parse(env.IFVERSE_OAUTH_CONFIG || '{}')[provider];
+}
+
+const defaultClient = platform => Object.hasOwn(metaScopes, platform) ? 'meta' : platform;
+
+function clientFor(env, platform) {
+  return platform === 'instagram' && env.IFVERSE_INSTAGRAM_OAUTH_CONFIG ? 'instagram' : defaultClient(platform);
+}
+
+function oauthSettings(env, platform, provider = clientFor(env, platform)) {
+  const config = configuredClient(env, provider);
   requireValue(config?.client_id && config.client_secret,
     'Add the ' + provider + ' OAuth client in the private site settings.');
-  if (provider === 'meta') {
+  if (provider === 'meta' || provider === 'instagram') {
     requireValue(/^v[0-9]+\.[0-9]+$/.test(config.graph_version), 'Set the supported Meta Graph API version in Site settings.');
-    requireValue(!config.login_config_id || /^[0-9]+$/.test(config.login_config_id), 'Check the Meta login configuration ID.');
+  }
+  if (provider === 'meta') {
+    for (const id of [config.login_config_id, config.facebook_login_config_id, config.instagram_login_config_id]) {
+      requireValue(!id || /^[0-9]+$/.test(id), 'Check the Meta login configuration ID.');
+    }
+  }
+  if (provider === 'tiktok' && config.scopes) {
+    requireValue(Array.isArray(config.scopes) && config.scopes.includes('user.info.basic')
+      && config.scopes.every(scope => tiktokScopes.includes(scope)), 'Check the TikTok Login Kit permissions.');
   }
   return config;
 }
@@ -70,8 +95,17 @@ function urlWith(base, query) {
   return base + '?' + new URLSearchParams(query);
 }
 
-function targetFor(account, args, env) {
+async function targetFor(account, args, env, owner) {
   if (platforms.includes(account)) return { platform: account };
+  if (isGatewayAccount(account)) {
+    const saved = await env.DB.prepare(
+      'SELECT provider_id, grant FROM account_connections WHERE owner_id = ? AND account = ?',
+    ).bind(owner, account).first();
+    requireValue(saved, 'That account is no longer connected. Choose a platform to start again.');
+    const platform = platformFor(account);
+    const grant = platform === 'instagram' ? await decryptGrant(await keyFor(env), owner, account, saved.grant) : {};
+    return { platform, account_id: saved.provider_id, provider: grant.provider || defaultClient(platform) };
+  }
   const row = Object.hasOwn(accounts, account) ? accounts[account] : null;
   requireValue(row, 'Choose an account alias from the account list.');
   if (row.platform === 'facebook') {
@@ -116,20 +150,26 @@ async function decryptGrant(key, owner, account, stored) {
   return JSON.parse(decoder.decode(bytes));
 }
 
-async function providerJson(url, { form, token } = {}) {
+async function providerJson(url, { form, multipart = false, token } = {}) {
   const endpoint = new URL(url);
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 10_000);
-  let response;
+  let response, body;
+  if (multipart) {
+    body = new FormData();
+    for (const [key, value] of Object.entries(form)) body.append(key, value);
+  } else if (form) {
+    body = new URLSearchParams(form).toString();
+  }
   try {
     response = await fetch(endpoint.toString(), {
       method: form ? 'POST' : 'GET',
       headers: {
         Accept: 'application/json',
-        ...(form ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}),
+        ...(form && !multipart ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}),
         ...(token ? { Authorization: 'Bearer ' + token } : {}),
       },
-      body: form ? new URLSearchParams(form).toString() : undefined,
+      body,
       redirect: 'manual',
       signal: controller.signal,
     });
@@ -193,12 +233,25 @@ async function metaIdentity(platform, base, id, token, expectedHandle) {
   return { id, handle: result.username ? '@' + result.username : '', name: result.name || result.username || '' };
 }
 
-async function tiktokIdentity(token, handle, expectedId) {
-  const response = await providerJson('https://open.tiktokapis.com/v2/user/info/?fields=open_id,username,display_name', { token });
+async function tiktokIdentity(token, handle, expectedId, scope) {
+  const fields = hasScopes(scope, ['user.info.profile']) ? 'open_id,username,display_name' : 'open_id,display_name';
+  const response = await providerJson(urlWith('https://open.tiktokapis.com/v2/user/info/', { fields }), { token });
   const user = response.data?.user;
   requireValue(user?.open_id === expectedId && (!handle || handleKey(user.username) === handleKey(handle)),
     'TikTok authorized a different account. Choose the requested handle during consent.');
   return { id: user.open_id, handle: user.username ? '@' + user.username : '', name: user.display_name || user.username || user.open_id };
+}
+
+async function instagramIdentity(config, token, target) {
+  const result = await providerJson(urlWith(instagramGraph + '/' + config.graph_version + '/me',
+    { fields: 'user_id,username' }), { token });
+  const user = result.data?.[0] || result;
+  const id = user.user_id;
+  requireValue(typeof id === 'string' && /^[0-9]{1,32}$/.test(id) && user.username
+    && (!target.account_id || id === target.account_id)
+    && (!target.handle || handleKey(user.username) === handleKey(target.handle)),
+  'Instagram authorized a different or ineligible profile. Choose the intended Business or Creator account.');
+  return { id, handle: '@' + user.username, name: user.username };
 }
 
 async function metaPages(base, platform, target, token) {
@@ -211,7 +264,8 @@ async function metaPages(base, platform, target, token) {
     for (const page of result.data || []) {
       const instagram = page.instagram_business_account;
       const matchesTarget = platform === 'facebook' ? !target.account_id || page.id === target.account_id
-        : /^[0-9]+$/.test(instagram?.id || '') && (!target.handle || handleKey(instagram.username) === handleKey(target.handle));
+        : /^[0-9]+$/.test(instagram?.id || '') && (!target.account_id || instagram.id === target.account_id)
+          && (!target.handle || handleKey(instagram.username) === handleKey(target.handle));
       if (matchesTarget && /^[0-9]+$/.test(page.id) && page.access_token) matches.set(page.id, page);
     }
     if (!result.paging?.next) break;
@@ -240,11 +294,27 @@ async function exchange(target, config, code, redirect, verifier) {
   }
   if (platform === 'tiktok') {
     const result = await providerJson(tiktokToken, { form: { ...common, client_key: config.client_id, client_secret: config.client_secret } });
-    requireValue(result.access_token && result.refresh_token && result.open_id && hasScopes(result.scope, tiktokScopes),
-      'TikTok consent must include profile and video access.');
-    return [{ identity: await tiktokIdentity(result.access_token, target.handle, result.open_id),
-      grant: { token: result.access_token, refresh: result.refresh_token, client: config.client_id },
+    requireValue(result.access_token && result.refresh_token && result.open_id && hasScopes(result.scope, ['user.info.basic']),
+      'TikTok consent must include basic account access.');
+    requireValue(!target.account_id || target.account_id === result.open_id,
+      'TikTok authorized a different account. Choose the account you are reconnecting.');
+    return [{ identity: await tiktokIdentity(result.access_token, target.handle, result.open_id, result.scope),
+      grant: { token: result.access_token, refresh: result.refresh_token, client: config.client_id, scope: result.scope },
       expiresAt: expiry(result.expires_in) }];
+  }
+  if (target.provider === 'instagram') {
+    const result = await providerJson('https://api.instagram.com/oauth/access_token',
+      { form: { ...client, ...common }, multipart: true });
+    const short = result.data?.[0] || result;
+    requireValue(short.access_token && hasScopes(short.permissions, instagramScopes),
+      'Instagram consent must include account and publishing access.');
+    const durable = await providerJson(urlWith(instagramGraph + '/access_token', {
+      grant_type: 'ig_exchange_token', client_secret: config.client_secret, access_token: short.access_token,
+    }));
+    const expiresAt = expiry(durable.expires_in);
+    requireValue(durable.access_token && expiresAt, 'Instagram did not grant long-lived account access.');
+    const identity = await instagramIdentity(config, durable.access_token, target);
+    return [{ identity, grant: { token: durable.access_token, client: config.client_id, provider: 'instagram' }, expiresAt }];
   }
   const base = 'https://graph.facebook.com/' + config.graph_version;
   const endpoint = base + '/oauth/access_token';
@@ -277,11 +347,12 @@ async function exchange(target, config, code, redirect, verifier) {
 
 async function begin(request, env, owner, args) {
   if (args.account === 'ifverse-tiktok' && (args.method === 'studio' ||
-    (!args.method && !JSON.parse(env.IFVERSE_OAUTH_CONFIG || '{}').tiktok))) {
+    (!args.method && !configuredClient(env, 'tiktok')))) {
     return { account: args.account, status: 'studio_handoff', studio_url: studioUrl };
   }
-  const target = targetFor(args.account, args, env);
-  const config = oauthSettings(env, target.platform);
+  const target = await targetFor(args.account, args, env, owner);
+  target.provider ||= clientFor(env, target.platform);
+  const config = oauthSettings(env, target.platform, target.provider);
   await keyFor(env);
   const state = base64(crypto.getRandomValues(new Uint8Array(32)));
   const verifier = base64(crypto.getRandomValues(new Uint8Array(48)));
@@ -295,10 +366,14 @@ async function begin(request, env, owner, args) {
   } else if (target.platform === 'tiktok') {
     authorize = 'https://www.tiktok.com/v2/auth/authorize/';
     delete query.client_id;
-    Object.assign(query, { client_key: config.client_id, scope: tiktokScopes.join(','), disable_auto_auth: '1' });
+    Object.assign(query, { client_key: config.client_id, scope: (config.scopes || tiktokScopes).join(','), disable_auto_auth: '1' });
+  } else if (target.provider === 'instagram') {
+    authorize = 'https://www.instagram.com/oauth/authorize';
+    Object.assign(query, { scope: instagramScopes.join(','), enable_fb_login: '0' });
   } else {
     authorize = 'https://www.facebook.com/' + config.graph_version + '/dialog/oauth';
-    if (config.login_config_id) Object.assign(query, { config_id: config.login_config_id, override_default_response_type: 'true' });
+    const loginConfigId = config[target.platform + '_login_config_id'] || config.login_config_id;
+    if (loginConfigId) Object.assign(query, { config_id: loginConfigId, override_default_response_type: 'true' });
     else query.scope = metaScopes[target.platform];
   }
   const now = Date.now();
@@ -329,19 +404,24 @@ async function activeGrant(env, owner, account, minimumLifetime) {
   const row = await env.DB.prepare('SELECT * FROM account_connections WHERE owner_id = ? AND account = ?')
     .bind(owner, account).first();
   if (!row) return null;
-  const config = oauthSettings(env, platform);
   const key = await keyFor(env);
   let grant = await decryptGrant(key, owner, account, row.grant);
+  const config = oauthSettings(env, platform, grant.provider || defaultClient(platform));
   requireValue(grant.client === config.client_id, 'The provider app changed. Reconnect this account.');
   let expiresAt = row.expires_at;
   if (expiresAt && expiresAt < Date.now() + minimumLifetime) {
     const youtube = platform === 'youtube';
     const form = { client_secret: config.client_secret, refresh_token: grant.refresh, grant_type: 'refresh_token',
       [youtube ? 'client_id' : 'client_key']: config.client_id };
-    const refreshed = await providerJson(youtube ? googleToken : tiktokToken, { form });
+    if (grant.provider === 'instagram') requireValue(expiresAt > Date.now(), 'Instagram access expired. Reconnect this profile.');
+    const refreshed = grant.provider === 'instagram'
+      ? await providerJson(urlWith(instagramGraph + '/refresh_access_token',
+        { grant_type: 'ig_refresh_token', access_token: grant.token }))
+      : await providerJson(youtube ? googleToken : tiktokToken, { form });
     requireValue(refreshed.access_token && (youtube || !refreshed.open_id || refreshed.open_id === row.provider_id),
       'The saved grant expired. Reconnect this account.');
-    grant = { ...grant, token: refreshed.access_token, refresh: refreshed.refresh_token || grant.refresh };
+    grant = { ...grant, token: refreshed.access_token, refresh: refreshed.refresh_token || grant.refresh,
+      ...(platform === 'tiktok' && refreshed.scope ? { scope: refreshed.scope } : {}) };
     expiresAt = expiry(refreshed.expires_in);
     const update = await env.DB.prepare(
       'UPDATE account_connections SET grant = ?, expires_at = ? WHERE owner_id = ? AND account = ? AND grant = ?',
@@ -357,7 +437,9 @@ async function verify(env, owner, account) {
   const { row, grant, config, platform } = connection;
   const pinned = Object.hasOwn(accounts, account);
   if (platform === 'youtube') await youtubeIdentity(grant.token, pinned ? accounts[account] : { account_id: row.provider_id });
-  else if (platform === 'tiktok') await tiktokIdentity(grant.token, pinned ? row.handle : '', row.provider_id);
+  else if (platform === 'tiktok') await tiktokIdentity(grant.token, pinned ? row.handle : '', row.provider_id,
+    grant.scope || tiktokScopes.join(','));
+  else if (grant.provider === 'instagram') await instagramIdentity(config, grant.token, { account_id: row.provider_id });
   else await metaIdentity(platform, 'https://graph.facebook.com/' + config.graph_version, row.provider_id, grant.token, pinned ? row.handle : '');
   return { ...publicAccount(account, row), verified: true };
 }
@@ -394,7 +476,7 @@ export async function publishingGrants(env, owner, aliases) {
     if (alias === 'ifverse-facebook' && env.IFVERSE_FACEBOOK_PAGE_ID && row.provider_id !== env.IFVERSE_FACEBOOK_PAGE_ID) continue;
     grants[alias] = { platform, account_id: row.provider_id, token: grant.token,
       ...(platform in metaScopes ? { graph_version: config.graph_version,
-        ...(platform === 'instagram' ? { page_id: grant.page_id } : {}) } : {}) };
+        ...(platform === 'instagram' && grant.page_id ? { page_id: grant.page_id } : {}) } : {}) };
   }
   return grants;
 }
@@ -412,7 +494,7 @@ function connectionSetup(env, platform, pinned = false) {
   return null;
 }
 
-export async function accountTool(request, env, owner, name, args) {
+export async function accountTool(request, env, owner, name, args, includePresets = true) {
   try {
     const gatewayUrl = new URL('/connect', callbackUrl(request, env)).href;
     if (name === 'ifverse_connect') return args.account ? await begin(request, env, owner, args)
@@ -422,7 +504,7 @@ export async function accountTool(request, env, owner, name, args) {
       .bind(owner).all();
     const records = new Map(saved.results.map(row => [row.account, row]));
     return {
-      accounts: Object.fromEntries([...Object.keys(accounts), ...[...records.keys()].filter(account => savedAccount.test(account))]
+      accounts: Object.fromEntries([...(includePresets ? Object.keys(accounts) : []), ...[...records.keys()].filter(isGatewayAccount)]
         .map(account => {
           const item = publicAccount(account, records.get(account));
           return [account, { ...item, setup_required: connectionSetup(env, item.platform, item.preset) }];
@@ -436,6 +518,12 @@ export async function accountTool(request, env, owner, name, args) {
   } catch (error) {
     return { error: error instanceof AccountError ? error.message : 'The account connection service could not complete the request.' };
   }
+}
+
+export async function removeGatewayAccount(env, owner, account) {
+  requireValue(isGatewayAccount(account), 'Choose a connected account to remove.');
+  const result = await env.DB.prepare('DELETE FROM account_connections WHERE owner_id = ? AND account = ?').bind(owner, account).run();
+  requireValue(result.meta.changes === 1, 'Choose one of your connected accounts.');
 }
 
 function connectionError(message) {
@@ -456,15 +544,24 @@ function connectionError(message) {
 
 async function saveConnection(env, key, owner, session, { identity, grant, expiresAt }) {
   const account = session.account;
-  const result = await env.DB.prepare(
+  const sealed = await encryptGrant(key, owner, account, grant);
+  const now = Date.now();
+  // An in-flight reconnect must not restore a connection removed in the meantime.
+  const result = session.reconnect ? await env.DB.prepare(
+    `UPDATE account_connections SET handle = ?, display_name = ?, grant = ?, expires_at = ?, started_at = ?, connected_at = ?
+     WHERE owner_id = ? AND account = ? AND provider_id = ? AND started_at <= ?`,
+  ).bind(identity.handle, identity.name, sealed, expiresAt, session.started_at, now,
+    owner, account, identity.id, session.started_at).run() : await env.DB.prepare(
     `INSERT INTO account_connections VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT(owner_id, account) DO UPDATE SET provider_id = excluded.provider_id, handle = excluded.handle,
      display_name = excluded.display_name, grant = excluded.grant, expires_at = excluded.expires_at,
      started_at = excluded.started_at, connected_at = excluded.connected_at
      WHERE excluded.started_at >= account_connections.started_at`,
   ).bind(owner, account, identity.id, identity.handle, identity.name,
-    await encryptGrant(key, owner, account, grant), expiresAt, session.started_at, Date.now()).run();
-  requireValue(result.meta.changes === 1, 'A newer account connection is already active.');
+    sealed, expiresAt, session.started_at, now).run();
+  requireValue(result.meta.changes === 1,
+    session.reconnect ? 'The connection was removed or changed. Start from the account dashboard.'
+      : 'A newer account connection is already active.');
   return new Response(null, {
     status: 303,
     headers: { Location: isGatewayAccount(account) ? '/connect?' + new URLSearchParams({ connected: account }) : '/',
@@ -475,9 +572,9 @@ async function saveConnection(env, key, owner, session, { identity, grant, expir
 async function savePlatformConnection(env, key, owner, platform, startedAt, candidate) {
   const digest = await crypto.subtle.digest('SHA-256', encoder.encode(candidate.identity.id));
   const id = [...new Uint8Array(digest).slice(0, 12)].map(byte => byte.toString(16).padStart(2, '0')).join('');
-  const config = oauthSettings(env, platform);
+  const config = oauthSettings(env, platform, candidate.grant.provider || defaultClient(platform));
   requireValue(candidate.grant.client === config.client_id, 'The provider app changed. Start a new connection.');
-  if (platform in metaScopes) {
+  if (platform in metaScopes && candidate.grant.provider !== 'instagram') {
     candidate.identity = await metaIdentity(platform, 'https://graph.facebook.com/' + config.graph_version,
       candidate.identity.id, candidate.grant.token);
   }
@@ -555,12 +652,14 @@ export async function accountCallback(request, env, owner) {
       'The provider did not return an authorization code.');
     stage = 'load provider configuration';
     const target = JSON.parse(session.target);
-    const config = oauthSettings(env, target.platform);
+    const config = oauthSettings(env, target.platform, target.provider || defaultClient(target.platform));
     const key = await keyFor(env);
     stage = 'exchange and verify provider authorization';
     const candidates = await exchange(target, config, code, callbackUrl(request, env), session.verifier);
     stage = 'save verified connection';
-    if (!platforms.includes(session.account)) return await saveConnection(env, key, owner, session, candidates[0]);
+    if (!platforms.includes(session.account)) {
+      return await saveConnection(env, key, owner, { ...session, reconnect: isGatewayAccount(session.account) }, candidates[0]);
+    }
     if (candidates.length === 1) return await savePlatformConnection(env, key, owner, target.platform, session.started_at, candidates[0]);
     return await requestSelection(env, key, owner, target, session, candidates);
   } catch (error) {

@@ -57,8 +57,8 @@ class Publishers:
                 direct.require(isinstance(version, str) and re.fullmatch(r'v[0-9]+\.[0-9]+', version),
                                'Invalid broker Graph API version')
                 fields.add('graph_version')
-                if binding['platform'] == 'instagram':
-                    direct.numeric_id(grant.get('page_id'))
+                if binding['platform'] == 'instagram' and 'page_id' in grant:
+                    direct.numeric_id(grant['page_id'])
                     fields.add('page_id')
             direct.require(grant.keys() == fields, 'Unexpected broker grant fields')
         context = self._operation_grants.set(grants)

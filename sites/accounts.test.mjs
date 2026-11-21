@@ -161,11 +161,15 @@ test('one-click dashboard starts consent, survives phone verification and return
     } } }]);
 });
 
-async function startPlatform(f, account) {
-  const result = await worker.fetch(new Request(origin + '/oauth/connect', {
-    method: 'POST', headers: { ...owner, Origin: origin, Accept: 'application/json' },
+function startConnection(f, account, identity = owner) {
+  return worker.fetch(new Request(origin + '/oauth/connect', {
+    method: 'POST', headers: { ...identity, Origin: origin, Accept: 'application/json' },
     body: new URLSearchParams({ account }),
   }), f.env);
+}
+
+async function startPlatform(f, account, identity = owner) {
+  const result = await startConnection(f, account, identity);
   assert.equal(result.status, 200);
   return new URL((await result.json()).authorization_url);
 }
@@ -230,21 +234,60 @@ test('one provider login can add more than one channel with isolated, stable con
     assert.equal((await f.tool('ifverse_verify', { account: row.account })).structuredContent.verified, true);
   }
   const dashboard = await (await worker.fetch(new Request(origin, { headers: owner }), f.env)).text();
-  assert.match(dashboard, /href="\/connect">Connect accounts/);
+  assert.match(dashboard, /value="youtube"><button>Add another YouTube/);
   const gateway = await worker.fetch(new Request(origin + '/connect', { headers: owner }), f.env);
   const checkout = await gateway.text();
   assert.match(checkout, /Connect social accounts/);
-  assert.match(checkout, /name="account" value="youtube"><button>Connect YouTube/);
+  assert.match(checkout, /name="account" value="youtube"><button>Add another YouTube/);
   assert.match(checkout, /Instagram[\s\S]*Facebook[\s\S]*TikTok/);
-  assert.equal((await worker.fetch(new Request(origin + '/connect'), f.env)).status, 403);
+  assert.equal((await worker.fetch(new Request(origin + '/connect'), f.env)).status, 401);
   assert.equal((await f.tool('ifverse_connect', {})).structuredContent.gateway_url, origin + '/connect');
   assert.match(dashboard, /@first · Connected/);
   assert.match(dashboard, /@second · Connected/);
 });
 
+test('invited account holders can only connect, reconnect and remove their own accounts', async t => {
+  const f = fixture(t);
+  const visitor = { 'oai-authenticated-user-id': 'visitor-id', 'oai-authenticated-user-email': 'visitor@example.test' };
+  let authorizedChannel = channelId;
+  t.mock.method(globalThis, 'fetch', async url => Response.json(url === 'https://oauth2.googleapis.com/token'
+    ? { access_token: 'youtube-access', refresh_token: 'youtube-refresh', scope: scopes, expires_in: 3600 }
+    : { items: [{ id: authorizedChannel, snippet: { title: 'Visitor channel' } }] }));
+  const gateway = identity => worker.fetch(new Request(origin + '/connect', { headers: identity }), f.env);
+  const remove = (account, identity) => worker.fetch(new Request(origin + '/oauth/remove', {
+    method: 'POST', headers: { ...identity, Origin: origin }, body: new URLSearchParams({ account }),
+  }), f.env);
+
+  assert.equal((await startConnection(f, 'ifverse-anime', visitor)).status, 403);
+  const state = (await startPlatform(f, 'youtube', visitor)).searchParams.get('state');
+  assert.equal((await f.callback(state, owner)).status, 400);
+  assert.equal((await f.callback(state, visitor)).status, 303);
+  const saved = f.db.prepare('SELECT account, owner_id FROM account_connections').get();
+  assert.equal(saved.owner_id, 'visitor-id');
+  assert.match(await (await gateway(visitor)).text(), /Visitor channel/);
+  assert.doesNotMatch(await (await gateway(owner)).text(), /Visitor channel/);
+  assert.doesNotMatch((await f.tool('ifverse_accounts', {})).content[0].text, /Visitor channel/);
+  assert.equal((await startConnection(f, saved.account, owner)).status, 400);
+  assert.equal((await remove(saved.account, owner)).status, 400);
+
+  const reconnect = (await startPlatform(f, saved.account, visitor)).searchParams.get('state');
+  authorizedChannel = 'UC' + 'b'.repeat(22);
+  const wrongAccount = await f.callback(reconnect, visitor);
+  assert.equal(wrongAccount.status, 400);
+  assert.match(await wrongAccount.text(), /different YouTube channel/);
+  assert.equal(f.db.prepare('SELECT provider_id FROM account_connections').get().provider_id, channelId);
+
+  authorizedChannel = channelId;
+  const pending = (await startPlatform(f, saved.account, visitor)).searchParams.get('state');
+  assert.equal((await remove(saved.account, visitor)).status, 303);
+  assert.equal((await f.callback(pending, visitor)).status, 400);
+  assert.equal(f.db.prepare('SELECT count(*) AS total FROM account_connections').get().total, 0);
+});
+
 test('Facebook and Instagram derive authorized destinations without a configured Page ID', async t => {
   const f = fixture(t);
-  f.env.IFVERSE_OAUTH_CONFIG = JSON.stringify({ meta: { client_id: 'meta-client', client_secret: 'fixture', graph_version: 'v25.0' } });
+  f.env.IFVERSE_META_OAUTH_CONFIG = JSON.stringify({ client_id: 'meta-client', client_secret: 'fixture',
+    graph_version: 'v25.0', facebook_login_config_id: '123', instagram_login_config_id: '456' });
   t.mock.method(globalThis, 'fetch', async (url, options) => {
     const endpoint = new URL(url);
     assert.equal(endpoint.hostname, 'graph.facebook.com');
@@ -266,8 +309,10 @@ test('Facebook and Instagram derive authorized destinations without a configured
     return Response.json({ id: '102', name: 'Second Page' });
   });
   const instagram = await startPlatform(f, 'instagram');
+  assert.equal(instagram.searchParams.get('config_id'), '456');
   assert.equal((await f.callback(instagram.searchParams.get('state'))).status, 303);
   const facebook = await startPlatform(f, 'facebook');
+  assert.equal(facebook.searchParams.get('config_id'), '123');
   const page = await (await f.callback(facebook.searchParams.get('state'))).text();
   assert.match(page, /Second Page/);
   assert.doesNotMatch(page, /first-token|second-token/);
@@ -276,6 +321,44 @@ test('Facebook and Instagram derive authorized destinations without a configured
   const linked = f.db.prepare('SELECT account, provider_id, handle FROM account_connections ORDER BY account').all();
   assert.deepEqual(linked.map(item => [item.account.split('-')[0], item.provider_id, item.handle]),
     [['facebook', '102', ''], ['instagram', '301', '@instagram_first']]);
+  assert.equal((await f.tool('ifverse_accounts', {})).structuredContent.platforms.youtube, null);
+});
+
+test('Instagram Login verifies a professional profile without a linked Page', async t => {
+  const f = fixture(t);
+  const id = '17845678901234567';
+  const permissions = 'instagram_business_basic,instagram_business_content_publish';
+  f.env.IFVERSE_INSTAGRAM_OAUTH_CONFIG = JSON.stringify({
+    client_id: '1234', client_secret: 'fixture', graph_version: 'v27.0',
+  });
+  t.mock.method(globalThis, 'fetch', async (url, options) => {
+    const u = new URL(url);
+    if (u.hostname === 'api.instagram.com') {
+      assert.equal(u.pathname, '/oauth/access_token');
+      assert.equal(options.body.get('client_id'), '1234');
+      assert.equal(options.body.get('redirect_uri'), origin + '/oauth/callback');
+      return Response.json({ data: [{ access_token: 'ig-short', permissions }] });
+    }
+    assert.equal(u.hostname, 'graph.instagram.com');
+    if (u.pathname === '/access_token') {
+      assert.equal(u.searchParams.get('grant_type'), 'ig_exchange_token');
+      return Response.json({ access_token: 'ig-durable', expires_in: 5184000 });
+    }
+    assert.equal(u.pathname, '/v27.0/me');
+    assert.equal(options.headers.Authorization, 'Bearer ig-durable');
+    return Response.json({ user_id: id, username: 'professional_profile' });
+  });
+  const authorize = await startPlatform(f, 'instagram');
+  assert.equal(authorize.hostname, 'www.instagram.com');
+  assert.equal(authorize.searchParams.get('scope'), permissions);
+  const linked = await f.callback(authorize.searchParams.get('state'));
+  assert.equal(linked.status, 303);
+  const row = f.db.prepare('SELECT account, provider_id, grant FROM account_connections').get();
+  assert.equal(row.provider_id, id);
+  assert.doesNotMatch(row.grant, /ig-durable/);
+  const verification = await f.tool('ifverse_verify', { account: row.account });
+  assert.equal(verification.structuredContent.verified, true);
+  assert.equal(verification.structuredContent.handle, '@professional_profile');
 });
 
 test('TikTok saves the consented account without a preset handle', async t => {

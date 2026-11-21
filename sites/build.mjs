@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readFile } from 'node:fs/promises';
+import { copyFile, cp, mkdir, readFile } from 'node:fs/promises';
 
 const root = new URL('./', import.meta.url);
 const hosting = new URL('.openai/hosting.json', root);
@@ -10,6 +10,6 @@ if (!manifest.capabilities?.includes('mcp') || manifest.static) {
 await mkdir(new URL('dist/.openai/', root), { recursive: true });
 await mkdir(new URL('dist/server/', root), { recursive: true });
 await copyFile(hosting, new URL('dist/.openai/hosting.json', root));
+await cp(new URL('drizzle/', root), new URL('dist/.openai/drizzle/', root), { recursive: true });
 await copyFile(new URL('worker.mjs', root), new URL('dist/server/index.js', root));
 await copyFile(new URL('accounts.mjs', root), new URL('dist/server/accounts.mjs', root));
-

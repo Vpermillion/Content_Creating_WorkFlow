@@ -1,4 +1,7 @@
-import { accountCallback, accountTool, isGatewayAccount, publishingBindings, publishingGrants, selectAccount } from './accounts.mjs';
+import {
+  accountCallback, accountTool, isGatewayAccount, publishingBindings, publishingGrants,
+  removeGatewayAccount, selectAccount,
+} from './accounts.mjs';
 
 const VERSION = '2026-07-28';
 const MAX_BODY_BYTES = 128 * 1024;
@@ -41,7 +44,7 @@ const tools = [
   }, ['brand', 'episode']), WRITE),
   tool('ifverse_accounts', 'List saved social accounts, destination aliases, and the hosted connection gateway.', object({}), READ),
   tool('ifverse_connect', 'Open the hosted gateway to pick a social platform, or start provider consent for a selected platform or preset.', object({
-    account: string('A platform (youtube, instagram, facebook, tiktok) for any account, or a preset destination alias.',
+    account: string('A platform (youtube, instagram, facebook, tiktok) or an exact saved destination alias.',
       40, { pattern: '^[a-z0-9][a-z0-9-]{0,39}$' }),
     method: choices('Optional TikTok method. Choose OAuth for an approved Login Kit app, or Studio for manual publishing.', ['studio', 'oauth']),
     page_id: string('The intended Facebook Page ID if it is not configured on the Site.', 32, { pattern: '^[0-9]+$' }),
@@ -153,6 +156,11 @@ function isOwner(request, env) {
     && request.headers.get('oai-authenticated-user-email')?.trim().toLowerCase() === owner;
 }
 
+function fromAccountPage(request, env) {
+  return request.headers.get('oai-authenticated-user-id') &&
+    request.headers.get('Origin') === new URL(env.IFVERSE_SITE_ORIGIN || request.url).origin;
+}
+
 function accountPage(html, status = 200, scriptNonce) {
   const csp = "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'";
   return new Response(html, {
@@ -169,21 +177,22 @@ const escapeHtml = value => String(value).replaceAll('&', '&amp;').replaceAll('<
 const labels = { youtube: 'YouTube', instagram: 'Instagram', facebook: 'Facebook', tiktok: 'TikTok' };
 
 async function accountDashboard(request, env, owner, checkout) {
-  const result = await accountTool(request, env, owner, 'ifverse_accounts', {});
+  const managesWorkflow = Boolean(isOwner(request, env));
+  const result = await accountTool(request, env, owner, 'ifverse_accounts', {}, managesWorkflow);
   if (result.error) return accountPage('Account status is unavailable. Try again.', 503);
   const nonce = crypto.randomUUID();
   const accounts = Object.values(result.accounts);
-  const completed = accounts.find(item => item.connected_at &&
-    item.account === new URL(request.url).searchParams.get('connected'));
-  const confirmation = checkout && completed
+  const params = new URL(request.url).searchParams;
+  const completed = accounts.find(item => item.connected_at && item.account === params.get('connected'));
+  const confirmation = completed
     ? '<div class="notice" role="status"><strong>' +
       escapeHtml(completed.handle || completed.display_name || completed.account_id) +
-      '</strong> connected. Choose a platform to add another account.</div>'
-    : '';
+      '</strong> connected.</div>'
+    : params.get('removed') === '1' ? '<div class="notice" role="status">Connection removed.</div>' : '';
   const title = checkout ? 'Connect social accounts' : 'Social Account Manager';
-  const connectForm = (account, label) =>
+  const connectForm = (account, label, secondary = false) =>
     '<form method="post" action="/oauth/connect"><input type="hidden" name="account" value="' +
-    escapeHtml(account) + '"><button>' + escapeHtml(label) +
+    escapeHtml(account) + '"><button' + (secondary ? ' class="secondary"' : '') + '>' + escapeHtml(label) +
     '</button><p class="connection-status" role="status"></p></form>';
   const statusFor = item => ({
     connected: 'Connected', refresh_due: 'Refresh due', not_connected: 'Ready to connect',
@@ -191,12 +200,19 @@ async function accountDashboard(request, env, owner, checkout) {
   const platforms = Object.entries(result.platforms).map(([platform, setup]) => {
     const name = labels[platform];
     const connected = accounts.filter(item => item.platform === platform && !item.preset);
-    const list = connected.length ? '<ul>' + connected.map(item =>
-      '<li><strong>' + escapeHtml(item.display_name || item.handle || item.account_id) + '</strong><small>' +
-      escapeHtml([item.handle || item.account_id, statusFor(item)].join(' · ')) + '</small></li>').join('') + '</ul>' : '';
-    const action = !checkout ? '' : setup
-      ? '<div class="setup"><strong>Needs setup</strong><p>The site administrator must enable this provider.</p></div>'
-      : connectForm(platform, 'Connect ' + name);
+    const list = connected.length ? '<ul>' + connected.map(item => {
+      const title = item.display_name || item.handle || item.account_id;
+      const details = [item.handle && item.handle !== title ? item.handle : '', statusFor(item)].filter(Boolean);
+      const remove = '<details><summary>Remove</summary><form method="post" action="/oauth/remove">' +
+        '<input type="hidden" name="account" value="' + escapeHtml(item.account) + '">' +
+        '<button class="secondary" aria-label="Remove ' + escapeHtml(title) + '">Remove connection</button></form></details>';
+      return '<li><strong>' + escapeHtml(title) + '</strong><small>' + escapeHtml(details.join(' · ')) +
+        '</small><div class="row-actions">' + (setup ? '' : connectForm(item.account, 'Reconnect', true)) +
+        remove + '</div></li>';
+    }).join('') + '</ul>' : '';
+    const action = setup
+      ? '<p class="setup">' + (managesWorkflow ? escapeHtml(setup) : 'Connection temporarily unavailable') + '</p>'
+      : connectForm(platform, (connected.length ? 'Add another ' : 'Connect ') + name);
     return '<section><h3>' + name + '</h3>' + list + action + '</section>';
   }).join('');
   const workflow = accounts.filter(item => item.preset).map(item => {
@@ -229,20 +245,17 @@ async function accountDashboard(request, env, owner, checkout) {
       .setup{font-size:.94rem;color:#e8c087}.setup p{margin:.25rem 0 0}
       header{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:space-between;margin-bottom:1.6rem}
       header h1{margin:0;line-height:1.15;letter-spacing:-.035em}
-      .primary{display:inline-block;border-radius:.45rem;background:#bfc6ff;color:#171a3c;font-weight:700;
-        padding:.6rem 1rem;text-decoration:none}
       .notice{margin:1rem 0;padding:.75rem 1rem;border:1px solid #5f8e7a;border-radius:.55rem;background:#183029}
       .connection-status{margin-top:.75rem}.connection-status:empty{margin:0}
+      .row-actions{display:flex;align-items:baseline;gap:.75rem;margin:.45rem 0}
+      .secondary{color:#bfc6ff;background:transparent;border:1px solid #4b5063;padding:.25rem .5rem;font-size:.9rem}
+      summary{cursor:pointer;color:#bfc6ff;font-size:.9rem}details form{margin-top:.45rem}
     </style>
     <main>
-      <header><h1>${title}</h1>${checkout ? '<a href="/">Back to account manager</a>'
-        : '<a class="primary" href="/connect">Connect accounts</a>'}</header>
-      ${checkout
-        ? '<p>Choose a platform, switch to the account you want, then approve access. Repeat to add more accounts.</p>'
-        : '<p>Manage the channels, Pages, and profiles linked to this dashboard.</p>'}
+      <header><h1>${title}</h1>${checkout ? '<a href="/">Account manager</a>' : ''}</header>
       ${confirmation}
       <div class="accounts">${platforms}</div>
-      ${checkout ? '' : (result.publisher_configured ? '' : '<p class="setup">The publishing service needs setup.</p>') +
+      ${checkout || !managesWorkflow ? '' : (result.publisher_configured ? '' : '<p class="setup">Publishing service is offline.</p>') +
         '<h2>Preset workflow accounts</h2><div class="accounts">' + workflow + '</div>'}
     </main>
     <script nonce="${nonce}">
@@ -285,9 +298,8 @@ async function connectAccount(request, env, account) {
   const fail = (message, status) => wantsJson
     ? Response.json({ error: message }, { status, headers: { 'Cache-Control': 'no-store' } })
     : accountPage('<p>' + escapeHtml(message) + '</p><p><a href="/">Back to accounts</a></p>', status);
-  const site = new URL(env.IFVERSE_SITE_ORIGIN || request.url);
-  if (!isOwner(request, env) || request.headers.get('Origin') !== site.origin) {
-    return fail('Sign in as the site owner and start from the account page.', 403);
+  if (!fromAccountPage(request, env)) {
+    return fail('Sign in and start from the account page.', 403);
   }
   if (!account) {
     const type = request.headers.get('Content-Type')?.split(';')[0];
@@ -298,6 +310,9 @@ async function connectAccount(request, env, account) {
     } catch {
       return fail('Use the account dashboard.', 400);
     }
+  }
+  if (!Object.hasOwn(labels, account) && !isGatewayAccount(account) && !isOwner(request, env)) {
+    return fail('Choose a platform or one of your connected accounts.', 403);
   }
   const result = await accountTool(request, env, request.headers.get('oai-authenticated-user-id'),
     'ifverse_connect', { account, ...(account === 'ifverse-tiktok' ? { method: 'oauth' } : {}) });
@@ -312,9 +327,8 @@ async function connectAccount(request, env, account) {
 }
 
 async function selectDestination(request, env) {
-  const site = new URL(env.IFVERSE_SITE_ORIGIN || request.url);
-  if (!isOwner(request, env) || request.headers.get('Origin') !== site.origin) {
-    return accountPage('<p>Sign in as the site owner and start from the account page.</p>', 403);
+  if (!fromAccountPage(request, env)) {
+    return accountPage('<p>Sign in and start from the account page.</p>', 403);
   }
   if (request.headers.get('Content-Type')?.split(';')[0] !== 'application/x-www-form-urlencoded') {
     return accountPage('<p>Choose an account from the list.</p>', 415);
@@ -324,6 +338,20 @@ async function selectDestination(request, env) {
     return await selectAccount(env, request.headers.get('oai-authenticated-user-id'), form.get('selection'), form.get('choice'));
   } catch {
     return accountPage('<p>Choose an account from the list.</p><p><a href="/">Back to accounts</a></p>', 400);
+  }
+}
+
+async function removeDestination(request, env) {
+  if (!fromAccountPage(request, env)) return accountPage('Sign in and start from the account page.', 403);
+  if (request.headers.get('Content-Type')?.split(';')[0] !== 'application/x-www-form-urlencoded') {
+    return accountPage('Choose a connected account to remove.', 415);
+  }
+  try {
+    const form = new URLSearchParams(await readBody(request, 256));
+    await removeGatewayAccount(env, request.headers.get('oai-authenticated-user-id'), form.get('account'));
+    return new Response(null, { status: 303, headers: { Location: '/connect?removed=1', 'Cache-Control': 'no-store' } });
+  } catch {
+    return accountPage('<p>Could not remove that connection.</p><p><a href="/connect">Back to accounts</a></p>', 400);
   }
 }
 
@@ -441,19 +469,22 @@ async function mcp(request, env) {
 export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
+    const identity = request.headers.get('oai-authenticated-user-id');
     if (['/', '/connect'].includes(path) && request.method === 'GET') {
-      if (!isOwner(request, env)) return accountPage('Sign in as the site owner.', 403);
-      return accountDashboard(request, env, request.headers.get('oai-authenticated-user-id'), path === '/connect');
+      if (!identity) return accountPage('<h1>Social Account Manager</h1><a target="_top" href="/signin-with-chatgpt?' +
+        new URLSearchParams({ returnTo: path }) + '">Sign in to connect accounts</a>', 401);
+      return accountDashboard(request, env, identity, path === '/connect');
     }
     if (request.method === 'POST' && env.DB && ['/oauth/connect', '/oauth/connect/youtube'].includes(path)) {
       return connectAccount(request, env, path.endsWith('/youtube') ? 'ifverse-anime' : undefined);
     }
     if (path === '/oauth/select' && request.method === 'POST' && env.DB) return selectDestination(request, env);
+    if (path === '/oauth/remove' && request.method === 'POST' && env.DB) return removeDestination(request, env);
     if (path === '/oauth/callback' && request.method === 'GET' && env.DB) {
-      if (!isOwner(request, env)) return new Response('Sign in as the Site owner to connect an account.', {
+      if (!identity) return new Response('Sign in to connect an account.', {
         status: 403, headers: { 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' },
       });
-      return accountCallback(request, env, request.headers.get('oai-authenticated-user-id'));
+      return accountCallback(request, env, identity);
     }
     if (path !== '/mcp') return new Response('Not found.', { status: 404 });
     if (request.method !== 'POST') return new Response('Method not allowed.', { status: 405, headers: { Allow: 'POST' } });

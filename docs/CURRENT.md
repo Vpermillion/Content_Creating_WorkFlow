@@ -20,21 +20,15 @@ The separate GitHub Actions queue continues to use its own secret contract.
 
 ## Live setup and verification
 
-The hosted screen is titled **Social Account Manager**. The Pages entry uses the same title. GitHub Pages is currently disabled on the repository.
+The [Social Account Manager](https://ifverse-publishing.idealcoyote1.chatgpt.site/connect) was updated on 2026-11-21, Asia/Ulaanbaatar. Connect, reconnect, and remove accounts from the hosted dashboard. The Site owner and any invited signed-in visitors each get a separate account list. The existing ChatGPT publishing workflow is owner-only. GitHub Pages is currently disabled on the repository.
 
-Open **Connect accounts** for the hosted gateway. After provider approval, the verified destination appears in the account manager and can be selected for a draft when the publisher is configured. See [setup and deployment](../sites/ACCOUNT_LINKING.md).
+YouTube verified the two saved channels after refreshing their grants. Facebook and Instagram still require configuration of the existing Meta app and its Site runtime secret. Direct Instagram Login supports professional accounts without a linked Facebook Page when the Instagram OAuth client is configured. TikTok still requires developer registration and Login Kit credentials. The Site has no publishing backend origin or token configured.
 
-The Site is reachable at [Ifverse Publishing](https://ifverse-publishing.idealcoyote1.chatgpt.site). On 2026-11-20 its configured owner setting was aligned with the confirmed ChatGPT Site owner and saved version 4 was redeployed with runtime environment revision 4. Deployment succeeded and the live `ifverse_accounts` call now succeeds; the earlier owner-check 403 is resolved.
-
-Live account status: all four aliases were `not_connected` at the start of the one-click release. YouTube OAuth is configured. Instagram and Facebook require the Meta OAuth client, and TikTok requires a TikTok OAuth client. The Site has no publishing backend origin or token configured. The latest pre-release Google callback came roughly 12 minutes after the connection started, outside the previous 10-minute session window. The dashboard now opens the provider directly, allows 30 minutes for approval, and returns to the dashboard after a verified grant is saved. Live browser testing confirmed the YouTube button opens Google directly. Google device verification remains pending.
-
-GitHub, ChatGPT and channel login accounts may differ. `IFVERSE_SITE_OWNER_EMAIL` is matched to the ChatGPT authenticated email; provider callbacks separately check channel identity. Stored grants and pending OAuth sessions belong to the authenticated Site user ID, so changing the owner email alone does not migrate another user's connections.
-
-Provider grants and successful delivery remain unverified; no social account was linked or post published during this repair. Follow [account setup](../sites/ACCOUNT_LINKING.md) to inspect them. Repository records and software tests are not live checks.
+GitHub, ChatGPT, and social provider logins can use different emails. Each provider callback is tied to the signed-in Site user who started the request. See [account setup](../sites/ACCOUNT_LINKING.md) for runtime settings and the publisher connection.
 
 ## Validation and documentation cleanup
 
-- Gateway release checks passed locally. Nine Worker tests covered owner authorization, provider selection, multiple accounts and draft brokering. Fifteen Python publishing tests covered exact destination binding, reviewed approval, duplicate detection and delivery status. Provider calls in these tests were mocked.
+- Eleven Site tests and fifteen Python publishing tests passed locally. Site tests covered visitor isolation, exact-account reconnects, both Instagram routes, consent, and publishing grant brokering. Provider calls in these tests were mocked. The two YouTube connections were also verified against the live provider.
 
 - Latest pre-audit source CI: [Software checks](https://github.com/Vpermillion/Content_Creating_WorkFlow/actions/runs/43793049012), passed at `280f00e`.
 - Four focused Site linking/access/broker tests passed locally during the source review; providers were mocked.
@@ -42,4 +36,4 @@ Provider grants and successful delivery remain unverified; no social account was
 
 ## Continue by task
 
-For linking: complete ChatGPT sign-in as the configured Site owner, then connect YouTube. Configure the missing Meta/TikTok clients and backend origin/token before those paths can operate. For production: reuse saved outputs, choose a genuinely new or explicit revision topic, and use the bounded request process in [AUTOMATION.md](AUTOMATION.md). Review/publication decisions follow the current user request and the actual saved evidence.
+For linking, sign in to the hosted dashboard and choose a platform. Configure the Meta and TikTok clients to enable their Connect buttons. For production: reuse saved outputs, choose a genuinely new or explicit revision topic, and use the bounded request process in [AUTOMATION.md](AUTOMATION.md). Review/publication decisions follow the current user request and the actual saved evidence.

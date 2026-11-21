@@ -1,8 +1,8 @@
 # Link social accounts
 
-Open the [connection gateway](https://ifverse-publishing.idealcoyote1.chatgpt.site/connect) as the Site owner. Choose a platform, sign in with the social account you want to use, and approve access. If the provider returns several channels, Pages, or profiles, choose the destination to save. The gateway confirms the connection and stays open so you can add another account. Reconnecting the same destination updates its saved connection.
+Open the [connection gateway](https://ifverse-publishing.idealcoyote1.chatgpt.site/connect). Choose a platform, sign in with the social account you want to use, and approve access. The gateway saves a single authorized account and asks you to choose when the provider returns several. Use **Add another** to link more accounts. **Reconnect** updates access for that exact account. **Remove** deletes the saved connection from your dashboard.
 
-Your GitHub login manages source code. Your ChatGPT login opens the private gateway. Your social login grants access to the selected channel, Page, or profile. These logins can all use different emails.
+The private Site admits its owner and any visitors shared through Sites access settings. Each signed-in visitor has a separate account list. Site sign-in and provider sign-in may use different emails. The owner has the preset workflow and ChatGPT publishing tools.
 
 The [account manager](https://ifverse-publishing.idealcoyote1.chatgpt.site/) shows saved accounts and preset workflow connections. In ChatGPT, call `ifverse_connect` for the gateway URL, `ifverse_accounts` for destination aliases, and `ifverse_verify` to recheck a connection.
 
@@ -12,13 +12,16 @@ The site administrator configures each provider app once and registers the exact
 
 | Private Site setting | Purpose |
 | --- | --- |
-| `IFVERSE_SITE_OWNER_EMAIL` | ChatGPT account allowed to manage connections |
+| `IFVERSE_SITE_OWNER_EMAIL` | ChatGPT account that can use the preset workflow and publishing tools |
 | `IFVERSE_SITE_ORIGIN` | Canonical HTTPS dashboard URL |
 | `IFVERSE_ACCOUNT_KEY` | Stable 32-byte base64url key used to encrypt grants |
-| `IFVERSE_OAUTH_CONFIG` | Provider clients keyed by `youtube`, `meta`, and `tiktok`, with `client_id` and `client_secret` |
+| `IFVERSE_OAUTH_CONFIG` | Existing provider clients keyed by `youtube`, `meta`, and `tiktok` |
+| `IFVERSE_META_OAUTH_CONFIG` | Facebook and linked Instagram client with `client_id`, `client_secret`, `graph_version`, and optional `facebook_login_config_id` and `instagram_login_config_id` |
+| `IFVERSE_INSTAGRAM_OAUTH_CONFIG` | Optional direct Instagram client with the Instagram app's `client_id`, `client_secret`, and `graph_version` |
+| `IFVERSE_TIKTOK_OAUTH_CONFIG` | TikTok Login Kit client with `client_id`, `client_secret`, and optional approved `scopes` array |
 | `IFVERSE_FACEBOOK_PAGE_ID` | Exact Page ID for the preset Facebook destination |
 
-Meta also needs a supported `graph_version` and may need `login_config_id`. The Instagram flow uses a Facebook Page linked to a professional Instagram profile. TikTok linking needs an eligible Login Kit and Display API app. TikTok publishing opens Studio.
+The separate provider settings override their matching entries without replacing the saved Google app configuration. Use a Facebook Login for Business user-token configuration for Facebook Pages. For Instagram, configure the direct professional-account login or use the Facebook Page linked to the professional profile. A TikTok Login Kit sandbox can link with `user.info.basic`. Include approved profile and video scopes for handle lookup and video verification. TikTok publishing opens Studio.
 
 Keep the `DB` binding, account key, and existing database across deployments. The schema is in `drizzle/0000_account_connections.sql`. OAuth sessions and saved connections are scoped to the authenticated Site user ID. Changing the owner email alone does not migrate connections.
 
