@@ -1,3 +1,5 @@
+> Historical record. Read [CURRENT.md](CURRENT.md) for active status and [START_HERE.md](../START_HERE.md) for current task guidance. Earlier branch pointers, runtime checks and action requests below describe their recorded sessions.
+
 # Alpha anime connection result — 2026-10-26
 
 ## Autonomous continuation and first anime draft — 2026-10-26
@@ -60,3 +62,4 @@ private/youtube-venv/bin/python -m whatif.youtube check --connection alpha-anime
 The owner completes Google's consent and any identity verification on the familiar browser/device. If rejected, stop and record the specific non-secret result. Do not start a recovery loop or weaken verification. Save the actual channel ID returned by a successful authenticated check, then use that exact ID with the documented `bind --slot alpha-1` command. Only the resulting verified public metadata belongs in the registry; do not fill it from the requested name, a public search, a fixture or an empty response.
 
 Credentials remain in the permission-protected private directory and require a separate encrypted-storage/backup arrangement. The read-only connection does not authorize upload or publication. No public post, channel creation, purchase or new host deployment occurred.
+

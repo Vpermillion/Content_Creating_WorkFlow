@@ -1,0 +1,19 @@
+# syntax=docker/dockerfile:1
+FROM python:3.12-slim
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core espeak-ng util-linux && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY requirements-youtube.txt requirements-youtube-publish.txt requirements-test-video.txt ./
+RUN --mount=type=secret,id=proxy_ca \
+    if [ -f /run/secrets/proxy_ca ]; then export PIP_CERT=/run/secrets/proxy_ca; fi; \
+    pip install --no-cache-dir -r requirements-youtube.txt -r requirements-youtube-publish.txt -r requirements-test-video.txt
+RUN useradd --uid 10001 --create-home publisher && install -d -m 0700 -o publisher -g publisher /state
+COPY --chown=publisher:publisher whatif ./whatif
+COPY --chown=publisher:publisher scripts ./scripts
+COPY --chown=publisher:publisher channels ./channels
+COPY --chown=publisher:publisher review-requests ./review-requests
+COPY --chown=publisher:publisher pilots ./pilots
+COPY --chown=publisher:publisher edits ./edits
+COPY --chown=publisher:publisher assets ./assets
+ENV IFVERSE_ROOT=/app IFVERSE_STATE=/state/private PORT=8080
+EXPOSE 8080
+CMD ["sh", "-ec", "chgrp publisher /state; chmod 0710 /state; install -d -m 0700 -o publisher -g publisher \"$IFVERSE_STATE\"; exec setpriv --reuid=publisher --regid=publisher --init-groups python -m whatif.publishing_api"]

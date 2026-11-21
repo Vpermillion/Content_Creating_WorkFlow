@@ -1,4 +1,6 @@
-# Ifverse batch production and optional YouTube uploads
+# Ifverse batch production and standalone YouTube uploads
+
+For ChatGPT/browser account linking, use [the hosted Site](../sites/ACCOUNT_LINKING.md). The upload connection and Actions settings below belong to the separate standalone uploader.
 
 The owner requested ten creative English `ifverse_anime` Shorts, later specifying **61 seconds**. They authorized posting this batch, clarified that upload automation was not yet implemented, and accepted completed videos in GitHub if posting is unavailable. They will handle optional **Meaningful Love - Silo** music in YouTube. The exported files contain narration and comedy effects, with no piano embedded. No recurring scheduler is authorized.
 
@@ -44,7 +46,7 @@ For GitHub-hosted uploads, configure these **repository Actions settings**, not 
 
 No upload connection or these settings have been verified in this task. Some OAuth test-mode refresh tokens expire, API quotas can interrupt a batch, and some YouTube API projects restrict uploads to private until additional review. Honor actual provider results. Never invent credentials, use another channel, or claim that configured code establishes live access.
 
-For local/cloud API use, `www.googleapis.com`, `oauth2.googleapis.com` and `accounts.google.com` are required destinations. An additive environment draft preserves existing domains and adds these; saving a draft does not activate it. The configuration tool requires Environment settings review/save and publication. GitHub-hosted runners have their own network; changing the cloud allowlist does not create Google consent or GitHub secrets.
+The chosen runtime needs access to `www.googleapis.com`, `oauth2.googleapis.com` and `accounts.google.com`. Verify its current network settings; earlier session-specific draft allowlists are historical. Network access does not create provider consent or repository secrets.
 
 ## Bounded upload request
 
@@ -63,3 +65,4 @@ Uploads use a private resumable journal. A lost response is reconciled through t
 The hosted job preserves journals as **authenticated ciphertext** on `codex/youtube-upload-state`; plaintext session URLs/tokens stay out of Git and artifacts. Non-secret video receipts and merged topic status are written back to `codex/ifverse-workflow` without replacing other topics. This metadata-only commit does not render or upload again. Keep the encryption key and connection out of source control. Local uploads also require preserving private journal storage across sessions.
 
 The upload implementation has offline provider fixtures and a real generated-media preflight test. A live public upload has not been demonstrated without the owner's configured OAuth connection. Check actual receipts before reporting any posts as published.
+

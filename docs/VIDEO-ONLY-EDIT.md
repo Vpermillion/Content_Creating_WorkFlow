@@ -1,3 +1,5 @@
+> Historical record. Read [CURRENT.md](CURRENT.md) for active status and [START_HERE.md](../START_HERE.md) for current task guidance. Earlier branch pointers, runtime checks and action requests below describe their recorded sessions.
+
 # Video-only anime review cut
 
 Recorded 2026-10-27, Asia/Ulaanbaatar. Branch: `codex/youtube-oauth`.
@@ -40,4 +42,5 @@ A frame from the middle of every shot was inspected for framing/captions, includ
 The first multi-file assembly was rejected for a short video track after intermediate corruption. The cause was not established. The single-pass renderer avoids those intermediates and passed complete final-track/decode validation. No invalid file was saved over the user's video.
 
 No public upload, OAuth/channel binding, account recovery, merge or purchase occurred. The owner will explain their connection fix later; preserve that context and continue from the current editorial cut.
+
 

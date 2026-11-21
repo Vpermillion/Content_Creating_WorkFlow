@@ -1,5 +1,7 @@
 # Backups, restore and assistant replacement
 
+This CLI backs up the legacy application store. Site OAuth data and the hosted publisher's private volume have separate storage contracts; see [CONTINUITY.md](CONTINUITY.md). Do not assume an application backup includes them.
+
 Pause workers before a private backup. The command refuses an active lease and uses SQLite's online backup API plus checksummed media files, instead of copying a live WAL database. It excludes neither your job content nor your media: treat the archive as private. It excludes external `.env` files and the n8n volume because those live outside application state.
 
 ```sh
@@ -26,8 +28,9 @@ For n8n: stop that service, securely back up the complete `n8n_data` volume and 
 Replacement-assistant procedure:
 
 1. Authorize access to the same user-owned repository and private state storage. Personal plugin connections may need a manual reconnect.
-2. Read `AGENTS.md`, `PROJECT_STATE.md` and `HANDOFF.md` in the checkout.
+2. Read `START_HERE.md`, `docs/CURRENT.md` and `AGENTS.md` in the checkout.
 3. Restore private application state, or restore the bundled safe demonstration into a fresh directory. Restore n8n separately if needed.
 4. Rediscover tools and credentials by metadata/presence only. Validate the specific operations; do not assume this chat's connections transfer.
 5. Start services using the README, inspect `status`, and resume the named job through the CLI/API.
 6. Update the handoff and preserve the next checkpoint outside chat.
+

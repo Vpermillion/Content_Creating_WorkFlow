@@ -1,4 +1,5 @@
 """Resolve public account bindings and load only the selected private grant."""
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -33,6 +34,33 @@ def registry(root):
         direct.require(identity not in seen, 'A platform account must have one publishing alias')
         seen.add(identity)
     return accounts
+
+
+def gateway_alias(platform, account_id):
+    return platform + '-' + hashlib.sha256(account_id.encode()).hexdigest()[:24]
+
+
+def gateway_registry(root, bindings):
+    """Combine local presets with verified identities supplied by the private gateway."""
+    direct.require(isinstance(bindings, dict) and len(bindings) <= 4, 'Invalid gateway bindings')
+    registered = registry(root)
+    platforms = {'youtube', 'instagram', 'facebook', 'tiktok'}
+    for alias, binding in bindings.items():
+        direct.require(isinstance(binding, dict)
+                       and {'brand', 'platform', 'account_id'} <= binding.keys()
+                       and binding.keys() <= {'brand', 'platform', 'account_id', 'handle'}
+                       and all(isinstance(value, str) for value in binding.values()), 'Invalid gateway binding')
+        platform, account_id = binding['platform'], binding['account_id']
+        handle = binding.get('handle', '')
+        direct.require(platform in platforms and BRAND.fullmatch(binding['brand']) and ACCOUNT.fullmatch(account_id)
+                       and (platform not in ('facebook', 'instagram') or account_id.isascii() and account_id.isdigit())
+                       and (platform != 'youtube' or re.fullmatch(r'UC[A-Za-z0-9_-]{22}', account_id))
+                       and (platform != 'tiktok' or re.fullmatch(r'@[A-Za-z0-9_.]{1,24}', handle))
+                       and len(handle) <= 100 and all(char.isprintable() for char in handle)
+                       and alias == gateway_alias(platform, account_id) and alias not in registered,
+                       'Invalid gateway destination')
+        registered[alias] = binding
+    return registered
 
 
 def resolve(root, item):
